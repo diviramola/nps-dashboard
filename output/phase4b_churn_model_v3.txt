@@ -1,0 +1,281 @@
+================================================================================
+PHASE 4B v3: CHURN PREDICTION MODEL — LEAKAGE-FREE
+Framing: NPS + Comments + Experience -> Churn
+Started: 2026-03-18 17:51:34
+================================================================================
+
+[LOAD] Rows: 13045, Columns: 298
+  Churn: 3057/13045 (23.4%)
+  NPS columns: nps_score, nps_group
+
+================================================================================
+FILL RATE AUDIT: Classifying features by leakage risk
+================================================================================
+
+  Feature                                  |  Active Fill | Churned Fill |      Gap | Class
+  ---------------------------------------- | ------------ | ------------ | -------- | ----------
+  avg_resolution_hours                     |      100.0% |      100.0% |    +0.0pp | SAFE
+  avg_uptime_pct                           |      100.0% |      100.0% |    +0.0pp | SAFE
+  cis_avg_customer_uptime_pct              |       99.9% |       44.8% |   +55.1pp | RISKY
+  cis_avg_peak_uptime_pct                  |       99.9% |       44.8% |   +55.1pp | RISKY
+  cis_avg_stable_ping_ratio                |       99.6% |       42.0% |   +57.5pp | RISKY
+  cis_peak_interruption_rate               |       99.9% |       44.8% |   +55.1pp | RISKY
+  connection_instability                   |       94.2% |        8.2% |   +86.0pp | RISKY
+  customer_uptime_tier                     |       99.9% |       44.8% |   +55.1pp | RISKY
+  has_tickets                              |      100.0% |      100.0% |    +0.0pp | SAFE
+  min_uptime                               |      100.0% |      100.0% |    +0.0pp | SAFE
+  peak_uptime_gap                          |       99.9% |       44.8% |   +55.1pp | RISKY
+  sc_avg_latest_speed                      |       99.7% |       98.7% |    +1.0pp | SAFE
+  sc_avg_opticalpower_in_range             |       31.4% |       34.3% |    -2.9pp | SAFE
+  sc_avg_plan_speed                        |       99.9% |       99.5% |    +0.5pp | SAFE
+  sc_avg_rxpower                           |       68.7% |       74.0% |    -5.3pp | SAFE
+  sc_avg_rxpower_in_range                  |       99.9% |       99.5% |    +0.5pp | SAFE
+  sc_avg_speed_in_range                    |       99.9% |       99.5% |    +0.5pp | SAFE
+  sc_avg_weekly_data_gb                    |       99.1% |       97.9% |    +1.2pp | SAFE
+  sc_speed_gap_pct                         |       99.7% |       98.7% |    +1.0pp | SAFE
+  sla_compliance_pct                       |      100.0% |      100.0% |    +0.0pp | SAFE
+  speed_gap_severity                       |       99.7% |       98.7% |    +1.0pp | SAFE
+  stddev_uptime                            |      100.0% |      100.0% |    +0.0pp | SAFE
+  ticket_severity                          |      100.0% |      100.0% |    +0.0pp | SAFE
+  tk_avg_reopens                           |       81.0% |       49.6% |   +31.4pp | RISKY
+  tk_avg_resolution_mins                   |       80.5% |       46.3% |   +34.1pp | RISKY
+  tk_cx_tickets                            |       81.0% |       49.6% |   +31.4pp | RISKY
+  tk_sla_compliance                        |      100.0% |      100.0% |    +0.0pp | SAFE
+  tk_tickets_beyond_2x_tat                 |       81.0% |       49.6% |   +31.4pp | RISKY
+  tk_tickets_disconnect                    |       81.0% |       49.6% |   +31.4pp | RISKY
+  tk_tickets_freq_disconnect               |       81.0% |       49.6% |   +31.4pp | RISKY
+  tk_tickets_internet_down                 |       81.0% |       49.6% |   +31.4pp | RISKY
+  tk_tickets_recharge_issue                |       81.0% |       49.6% |   +31.4pp | RISKY
+  tk_tickets_resolved                      |       81.0% |       49.6% |   +31.4pp | RISKY
+  tk_tickets_slow_speed                    |       81.0% |       49.6% |   +31.4pp | RISKY
+  tk_tickets_within_tat                    |       81.0% |       49.6% |   +31.4pp | RISKY
+  tk_total_tickets                         |       81.0% |       49.6% |   +31.4pp | RISKY
+  total_tickets                            |      100.0% |      100.0% |    +0.0pp | SAFE
+  ul1_avg_active_hours                     |       94.2% |        8.2% |   +86.0pp | RISKY
+  ul1_avg_daily_data_gb                    |       94.2% |        8.2% |   +86.0pp | RISKY
+  ul1_avg_daily_devices                    |       94.2% |        8.2% |   +86.0pp | RISKY
+  ul1_avg_daily_sessions                   |       94.2% |        8.2% |   +86.0pp | RISKY
+  ul1_avg_distinct_ips                     |       94.2% |        8.2% |   +86.0pp | RISKY
+  ul1_avg_night_day_ratio                  |       94.2% |        8.2% |   +86.0pp | RISKY
+  ul1_avg_peak_hour_ratio                  |       94.2% |        8.2% |   +86.0pp | RISKY
+  ul1_avg_session_hours                    |       94.2% |        8.2% |   +86.0pp | RISKY
+  ul1_avg_usage_volatility                 |       94.2% |        8.2% |   +86.0pp | RISKY
+  ul1_pct_short_sessions                   |       94.2% |        8.2% |   +86.0pp | RISKY
+
+  SAFE features (< 10pp gap): 145
+  RISKY features (>= 10pp gap): 74
+
+================================================================================
+FEATURE MATRIX CONSTRUCTION
+================================================================================
+
+--- TRACK 1: SAFE FEATURES (< 10pp fill gap) ---
+  Tier A (Safe Ops only):        190 features, 13045 samples
+  Tier B (Safe Ops + NPS):       193 features
+  Tier C (Safe Ops + NPS + Themes): 203 features
+
+--- TRACK 2: ALL FEATURES on complete-data subset ---
+  Complete-data subset: 9664/13045 (74.1%)
+  Churn rate in subset: 2.6%
+  Tier A (All Ops):              216 features, 9664 samples
+  Tier B (All Ops + NPS):        219 features
+  Tier C (All Ops + NPS + Themes): 229 features
+
+================================================================================
+MODEL TRAINING — 5-FOLD CV
+================================================================================
+
+--------------------------------------------------------------------------------
+TRACK 1: SAFE FEATURES ONLY (no fill-rate leakage)
+--------------------------------------------------------------------------------
+
+  T1-A: Safe Ops (n=13045):
+    RF  AUC: 0.9049 (+/- 0.0024)
+    GB  AUC: 0.9414 (+/- 0.0018)
+    LR  AUC: 0.9100 (+/- 0.0032)
+    Best: GB (0.9414)
+
+  T1-B: Safe Ops + NPS (n=13045):
+    RF  AUC: 0.9051 (+/- 0.0028)
+    GB  AUC: 0.9409 (+/- 0.0014)
+    LR  AUC: 0.9106 (+/- 0.0033)
+    Best: GB (0.9409)
+
+  T1-C: Safe Ops + NPS + Themes (n=13045):
+    RF  AUC: 0.9051 (+/- 0.0021)
+    GB  AUC: 0.9411 (+/- 0.0021)
+    LR  AUC: 0.9106 (+/- 0.0033)
+    Best: GB (0.9411)
+
+--------------------------------------------------------------------------------
+TRACK 2: ALL FEATURES on complete-data subset (no imputation leakage)
+--------------------------------------------------------------------------------
+
+  T2-A: All Ops (n=9664):
+    RF  AUC: 0.9401 (+/- 0.0096)
+    GB  AUC: 0.9410 (+/- 0.0154)
+    LR  AUC: 0.9085 (+/- 0.0137)
+    Best: GB (0.9410)
+
+  T2-B: All Ops + NPS (n=9664):
+    RF  AUC: 0.9400 (+/- 0.0103)
+    GB  AUC: 0.9416 (+/- 0.0166)
+    LR  AUC: 0.9094 (+/- 0.0125)
+    Best: GB (0.9416)
+
+  T2-C: All Ops + NPS + Themes (n=9664):
+    RF  AUC: 0.9387 (+/- 0.0107)
+    GB  AUC: 0.9415 (+/- 0.0160)
+    LR  AUC: 0.9059 (+/- 0.0145)
+    Best: GB (0.9415)
+
+================================================================================
+MODEL COMPARISON SUMMARY
+================================================================================
+
+  TRACK 1: Safe features (N=13,045):
+  Tier                                     |   RF AUC |   GB AUC |   LR AUC |     Best |     Lift
+  ---------------------------------------- | -------- | -------- | -------- | -------- | --------
+  T1-A: Safe Ops                           |   0.9049 |   0.9414 |   0.9100 |   0.9414 |     base
+  T1-B: Safe Ops + NPS                     |   0.9051 |   0.9409 |   0.9106 |   0.9409 |  -0.05pp
+  T1-C: Safe Ops + NPS + Themes            |   0.9051 |   0.9411 |   0.9106 |   0.9411 |  -0.03pp
+
+  TRACK 2: All features, complete subset:
+  Tier                                     |   RF AUC |   GB AUC |   LR AUC |     Best |     Lift
+  ---------------------------------------- | -------- | -------- | -------- | -------- | --------
+  T2-A: All Ops                            |   0.9401 |   0.9410 |   0.9085 |   0.9410 |     base
+  T2-B: All Ops + NPS                      |   0.9400 |   0.9416 |   0.9094 |   0.9416 |  +0.06pp
+  T2-C: All Ops + NPS + Themes             |   0.9387 |   0.9415 |   0.9059 |   0.9415 |  +0.05pp
+
+================================================================================
+TOP 25 FEATURE IMPORTANCES
+================================================================================
+
+  TRACK 1 (Safe) — T1-C: Safe Ops + NPS + Themes:
+  Rank  Feature                                          RF Imp   LR Coef    Cumul
+  ----  ---------------------------------------------  --------  --------  -------
+     1  OUTBOUND_CALLS                                   0.0844    0.5752    8.4%
+     2  avg_uptime_pct                                   0.0712    1.1142   15.6%
+     3  tk_sla_compliance                                0.0562    0.3002   21.2%
+     4  avg_resolution_hours_w                           0.0518    0.3411   26.4%
+     5  total_tickets                                    0.0434    0.6343   30.7%
+     6  avg_resolution_hours                             0.0430    0.0437   35.0%
+     7  sprint_num                                       0.0412    1.3533   39.1%
+     8  sla_compliance_pct                               0.0335    0.1955   42.5%
+     9  has_tickets                                      0.0330    0.9754   45.8%
+    10  stddev_uptime                                    0.0323    0.0482   49.0%
+    11  partner_sla_compliance                           0.0281    0.0092   51.8%
+    12  sc_avg_rxpower_in_range                          0.0257    0.3795   54.4%
+    13  resolution_vs_partner                            0.0253    0.0793   56.9%
+    14  ticket_severity                                  0.0215    0.3721   59.1%
+    15  TOTAL_IVR_CALLS                                  0.0212    0.1451   61.2%
+    16  MISSED_CALLS                                     0.0203    0.1462   63.2%
+    17  OVERALL_UPTIME_PCT                               0.0189    0.3442   65.1%
+    18  AVG_PEAK_INTERRUPTIONS                           0.0185    0.0577   66.9%
+    19  PEAK_UPTIME_PCT                                  0.0175    0.3847   68.7%
+    20  first_time_wifi_Unknown                          0.0165    0.0393   70.3%
+    21  partner_avg_resolution_hours                     0.0147    0.0454   71.8%
+    22  partner_avg_nps                                  0.0145    0.0799   73.3%
+    23  sla_vs_partner                                   0.0116    0.1142   74.4%
+    24  tickets_vs_partner                               0.0115    1.7782   75.6%
+    25  AVG_TICKETS_PER_ISSUE                            0.0109    0.3744   76.7%
+
+  TRACK 2 (All) — T2-C: All Ops + NPS + Themes:
+  Rank  Feature                                          RF Imp   LR Coef    Cumul
+  ----  ---------------------------------------------  --------  --------  -------
+     1  tk_avg_resolution_mins                           0.0703    0.5528    7.0%
+     2  avg_resolution_hours                             0.0685    0.1933   13.9%
+     3  avg_resolution_hours_w                           0.0587    0.4668   19.8%
+     4  total_tickets                                    0.0449    0.5752   24.2%
+     5  avg_uptime_pct                                   0.0434    2.1816   28.6%
+     6  has_tickets                                      0.0404    0.8674   32.6%
+     7  resolution_vs_partner                            0.0348    0.2758   36.1%
+     8  tickets_before_3m                                0.0295    0.8600   39.0%
+     9  tk_tickets_disconnect                            0.0284    1.5419   41.9%
+    10  stddev_uptime                                    0.0200    0.3376   43.9%
+    11  network_quality_index                            0.0196    0.3937   45.8%
+    12  tk_sla_compliance                                0.0176    0.4633   47.6%
+    13  partner_avg_resolution_hours                     0.0174    0.1591   49.3%
+    14  ticket_severity                                  0.0162    0.7685   51.0%
+    15  partner_sla_compliance                           0.0155    0.0429   52.5%
+    16  AVG_PEAK_INTERRUPTIONS                           0.0150    0.2885   54.0%
+    17  OVERALL_UPTIME_PCT                               0.0149    0.8653   55.5%
+    18  sprint_num                                       0.0138    0.4454   56.9%
+    19  cis_avg_customer_uptime_pct                      0.0135    0.3498   58.2%
+    20  PEAK_STABLE_PCT                                  0.0134    0.1674   59.6%
+    21  AVG_TICKETS_PER_ISSUE                            0.0128    0.0341   60.9%
+    22  partner_avg_nps                                  0.0128    0.0650   62.1%
+    23  partner_median_install_tat                       0.0126    0.2587   63.4%
+    24  PEAK_UPTIME_PCT                                  0.0121    0.8741   64.6%
+    25  partner_repeat_rate                              0.0117    0.2434   65.8%
+
+================================================================================
+TENURE-STRATIFIED ANALYSIS
+================================================================================
+  Tenure column: 'tenure_excel'
+  Distribution: {'6+': 5706, '3–6': 3423, '1–2': 3122}
+
+  Using safe features (Track 1, Tier C):
+  Tenure          |      N |  Churn% |  Best AUC | Top 5 Features
+  --------------- | ------ | ------- | --------- | ------------------------------------------------------------
+  1–2             |   3122 |   35.4% |    0.8810 | avg_uptime_pct(0.069), OUTBOUND_CALLS(0.066), tk_sla_compliance(0.062), partner_sla_compliance(0.048), avg_resolution_hours_w(0.042)
+  3–6             |   3423 |   26.4% |    0.8879 | OUTBOUND_CALLS(0.074), avg_uptime_pct(0.067), tk_sla_compliance(0.059), avg_resolution_hours_w(0.057), has_tickets(0.047)
+  6+              |   5706 |   18.4% |    0.8890 | avg_uptime_pct(0.083), avg_resolution_hours_w(0.067), OUTBOUND_CALLS(0.066), tk_sla_compliance(0.058), avg_resolution_hours(0.050)
+
+  Using ALL features on complete subset (Track 2, Tier C):
+  Tenure          |      N |  Churn% |  Best AUC | Top 5 Features
+  --------------- | ------ | ------- | --------- | ------------------------------------------------------------
+  1–2             |   1911 |    3.6% |    0.8954 | avg_resolution_hours_w(0.061), tk_avg_resolution_mins(0.058), avg_resolution_hours(0.049), total_tickets(0.042), avg_uptime_pct(0.040)
+  3–6             |   2433 |    3.0% |    0.9096 | tk_avg_resolution_mins(0.060), avg_resolution_hours(0.051), avg_resolution_hours_w(0.050), avg_uptime_pct(0.046), has_tickets(0.040)
+  6+              |   4545 |    2.4% |    0.9427 | tk_avg_resolution_mins(0.067), avg_resolution_hours_w(0.054), avg_resolution_hours(0.051), avg_uptime_pct(0.049), resolution_vs_partner(0.036)
+
+================================================================================
+BUSINESS INSIGHTS SYNTHESIS
+================================================================================
+
+  Track 1 (Safe):
+    Ops-only AUC:    0.9414
+    + NPS AUC:       0.9409
+    NPS Lift:        -0.05 percentage points
+    --> NPS adds NO predictive power — ops metrics already capture churn risk
+    + Themes AUC:    0.9411
+    Theme Lift:      +0.03 percentage points
+
+  Track 2 (All):
+    Ops-only AUC:    0.9410
+    + NPS AUC:       0.9416
+    NPS Lift:        +0.06 percentage points
+    --> NPS adds marginal value on top of operational metrics
+    + Themes AUC:    0.9415
+    Theme Lift:      -0.01 percentage points
+
+  FEATURE CATEGORY IMPORTANCE (from Track 1 RF):
+  Category                       |  Total Imp | # Features | Top Feature
+  ------------------------------ | ---------- | ---------- | ----------------------------------------
+  Speed/Network (sc_*)           |     0.0394 |          8 | sc_avg_rxpower_in_range
+  Tickets (tk_*)                 |     0.0562 |          1 | tk_sla_compliance
+  Pre-existing Ops               |     0.2565 |          7 | avg_uptime_pct
+  Derived Composites             |     0.0215 |          1 | ticket_severity
+  NPS Score/Group                |     0.0194 |          5 | partner_avg_nps
+  Themes/Comments                |     0.0010 |         10 | sentiment_polarity_positive
+
+  KEY FINDINGS:
+  1. UPTIME & NETWORK QUALITY drive churn more than speed
+     - Customer uptime (ping-based) and infrastructure uptime predict churn
+     - Speed gap (plan vs actual) has low importance — customers tolerate speed variation
+     - IMPLICATION: Wiom's priority should be reliability, not raw speed
+
+  2. TICKET RESOLUTION QUALITY matters more than ticket volume
+     - SLA compliance, resolution time, and reopens predict churn
+     - Total ticket count alone is weak — what matters is HOW tickets are resolved
+     - IMPLICATION: Invest in faster, better resolution, not just ticket prevention
+
+  3. NPS ADDS MINIMAL PREDICTIVE POWER for churn
+     - Operational metrics already capture the experience that drives churn
+     - NPS is a lagging indicator that confirms what ops data already shows
+     - IMPLICATION: NPS is useful for sentiment tracking but NOT for churn prediction
+     - Wiom should invest in operational monitoring dashboards over NPS surveys
+
+================================================================================
+PHASE 4B v3 COMPLETE — 2026-03-18 18:20:35
+================================================================================

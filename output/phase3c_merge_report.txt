@@ -1,0 +1,107 @@
+======================================================================
+PHASE 3C: FINAL DATA MERGE
+Generated: 2026-03-18 12:34:24
+======================================================================
+
+[1] Loading data sources...
+  Expanded:  (16604, 76) (consolidated=13045, new=3559)
+  Analytical: (13045, 64)
+  Industry:   (13045, 64)
+  Themes:     (5488, 31)
+  Index alignment verified.
+
+[2] Merging features via index alignment...
+  Snowflake-only columns: 29
+  Industry-only columns: 59 (0 collide with Snowflake)
+  Snowflake features: 13045 rows
+  Industry features: 5077 rows
+
+[3] Merging NLP themes...
+  Themes matched: 5488
+
+[4] Temporal partner status (partner_details_log)...
+  Column names: "lco_id_long", "status", "added_time" (lowercase, quoted)
+  Partners: 1195, Sprint dates: 13
+  Date 2026-01-15: 1195 cumulative records
+  Date 2026-07-15: 2390 cumulative records
+  Date 2026-07-31: 3585 cumulative records
+  Date 2026-08-15: 4780 cumulative records
+  Date 2026-08-31: 5975 cumulative records
+  Date 2026-09-15: 7170 cumulative records
+  Date 2026-09-30: 8365 cumulative records
+  Date 2026-10-15: 9560 cumulative records
+  Date 2026-10-31: 10755 cumulative records
+  Date 2026-11-15: 11950 cumulative records
+  Date 2026-11-30: 13145 cumulative records
+  Date 2026-12-15: 14340 cumulative records
+  Date 2026-12-31: 15535 cumulative records
+  Raw temporal columns: ['PARTNER_LNG_ID', 'PARTNER_STATUS_AT_SURVEY', 'SNAP_DATE', 'Sprint End Date']
+  Renamed columns: {'PARTNER_LNG_ID': 'partner_lng_id', 'PARTNER_STATUS_AT_SURVEY': 'partner_status_at_survey', 'SNAP_DATE': 'snap_date'}
+  Total temporal records: 15535
+  Rows: 16604 -> 16604
+  Temporal status coverage: 10826
+  Status drift (current != at-survey): 48 rows
+  DRIFT EXAMPLES (data leakage would have used current status):
+    Partner nan [281749854619146]: at_survey=Blocked, current=ACTIVE
+    Partner nan [281749854671706]: at_survey=Blocked, current=ACTIVE
+    Partner nan [274877933424]: at_survey=Blocked, current=ACTIVE
+    Partner nan [281749854683600]: at_survey=Blocked, current=ACTIVE
+    Partner nan [281749854731739]: at_survey=Blocked, current=TERMINATION
+
+[5] Partner-level aggregate service metrics...
+  (Robust proxy: individual metrics can be noisy, partner aggregates normalize)
+  partner_avg_resolution_hours
+  partner_sla_compliance
+  partner_avg_tickets
+  partner_churn_rate
+  partner_avg_nps
+  partner_customer_count
+  partner_fcr_rate
+  partner_repeat_rate
+  partner_median_install_tat
+  Added 9 partner-level columns, rows: 16604->16604
+  resolution_vs_partner: customer minus partner norm
+  sla_vs_partner: customer minus partner norm
+  tickets_vs_partner: customer minus partner norm
+
+[6] Outlier handling...
+  install_tat_hours: 43 neg->NaN, P99 cap=7872h, delayed flag >72h
+  avg_resolution_hours: 7 neg->NaN, P99 cap=695h
+  days_since_last_recharge: 687 neg->0
+  HOURS_TO_FIRST_RECHARGE: 4 extreme->NaN, same-day flag
+  AVG_INSTALL_TAT_MINS: P99 cap=9864m
+
+[7] Derived features...
+  partner_risk (from partner_status_at_survey): 463 at-risk
+  support_effort_index: ['TOTAL_IVR_CALLS', 'AVG_TIMES_REOPENED', 'HAS_REPEAT_COMPLAINT', 'total_tickets']
+  network_quality_index
+  missed_call_ratio
+  autopay_ratio
+  ticket_severity
+
+[8] Save...
+  Final: 16604 rows x 205 cols
+
+  FEATURE COVERAGE (% non-null):
+    Snowflake (Phase 3)           : 13045/16604 (78.6%)
+    Industry Expert (Phase 3b)    : 12963/16604 (78.1%)
+    NLP themes                    :  5488/16604 (33.1%)
+    Temporal partner status       : 10826/16604 (65.2%)
+    Partner aggregates            : 10826/16604 (65.2%)
+    Sprint tab extras             : 12594/16604 (75.8%)
+    Outage events                 :  5077/16604 (30.6%)
+    FCR rate                      : 10313/16604 (62.1%)
+    Data usage                    :  2445/16604 (14.7%)
+    Support effort index          : 13045/16604 (78.6%)
+    Network quality index         : 10811/16604 (65.1%)
+
+  NPS DISTRIBUTION:
+    Promoter: 7594 (45.7%)
+    Passive: 1258 (7.6%)
+    Detractor: 7734 (46.6%)
+
+  SOURCE:
+    consolidated: 13045
+    sprint_tab_new: 3559
+
+  Saved: C:\Users\nikhi\wiom-nps-analysis\data\nps_modeling_dataset.csv (17.3 MB)

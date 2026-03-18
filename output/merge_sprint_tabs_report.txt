@@ -1,0 +1,145 @@
+======================================================================
+MERGE SPRINT TABS — NPS Expanded Base
+Run: 2026-03-18 11:37:45
+======================================================================
+
+Step 1: Loading nps_clean_base.csv ...
+  Loaded: 13045 rows, 33 columns
+  Sprints in base: ['Sprint 1', 'Sprint 10', 'Sprint 11', 'Sprint 12', 'Sprint 13', 'Sprint 2', 'Sprint 3', 'Sprint 4', 'Sprint 5', 'Sprint 6', 'Sprint 7', 'Sprint 8', 'Sprint 9']
+
+Step 2: Reading sprint tabs from Excel ...
+    Sprint 3 Aug CT: 1627 valid rows, 15 extra cols
+    Sprint 4 Aug: 1065 valid rows, 22 extra cols
+    Sprint 5 Sep: 957 valid rows, 22 extra cols
+    Sprint 6 Sep: 858 valid rows, 19 extra cols
+    Sprint 7 Oct25: 777 valid rows, 20 extra cols
+    Sprint 8 Oct25: 985 valid rows, 24 extra cols
+    Sprint 9 Nov25: 367 valid rows, 22 extra cols
+    Sprint 10 Nov25: 757 valid rows, 25 extra cols
+    Sprint 11 Dec25: 714 valid rows, 26 extra cols
+    Sprint 12 Dec25: 691 valid rows, 26 extra cols
+    Sprint 13 Jan26: 816 valid rows, 27 extra cols
+    Sprint 14 Jan26: 729 valid rows, 27 extra cols
+    Sprint RSP1 Feb26: 908 valid rows, 27 extra cols
+    Sprint RSP2 Feb26: 800 valid rows, 25 extra cols
+    Sprint RSP3 Feb26: 940 valid rows, 26 extra cols
+
+  Total sprint tab rows: 12991
+  Extra columns found across tabs: ['alt_mobile', 'call_status', 'caller', 'cash_online', 'comments_sprint', 'data_usage_amount', 'data_usage_days', 'data_usage_per_day', 'data_usage_percentile', 'device_model', 'device_type', 'devices_2_4g', 'devices_5g', 'first_time_user', 'install_date_sprint', 'last_recharge_date', 'nps_match', 'nps_oe_copied', 'nps_reason_primary_sprint', 'nps_reason_secondary_sprint', 'nps_reason_sprint', 'nps_reason_tertiary_sprint', 'optical_power', 'optical_range', 'overall_service_experience', 'partner_name', 'pay_g', 'payment_issue_tickets_flag', 'plan_expiry_date', 'plan_expiry_window', 'prev_nps', 'recharge_done', 'response_id', 'sla', 'tenure_from_install', 'tickets_last_3m_sprint', 'zone']
+
+Step 3: Identifying records NOT in Consolidated ...
+  Sprint tab records matching Consolidated: 9432
+  Sprint tab records NOT in Consolidated (new): 3559
+
+  New records by sprint:
+    Sprint 3: 24
+    Sprint 4: 11
+    Sprint 5: 2
+    Sprint 6: 26
+    Sprint 7: 19
+    Sprint 8: 32
+    Sprint 10: 19
+    Sprint 11: 13
+    Sprint 12: 14
+    Sprint 13: 22
+    Sprint 14: 729
+    Sprint RSP1: 908
+    Sprint RSP2: 800
+    Sprint RSP3: 940
+
+Step 4: Enriching Consolidated rows with extra columns ...
+  Enrichment rows available: 9405
+  Base rows enriched with at least one extra col: 9419
+
+Step 5: Preparing new records for appending ...
+  New records prepared: 3559
+
+Step 6: Building expanded dataset ...
+Step 7: Adding is_payg flag ...
+  PayG customers (install >= 2026-01-26): 27
+
+Step 8: Saving outputs ...
+  Saved: C:\Users\nikhi\wiom-nps-analysis\data\nps_expanded_base.csv
+  Shape: (16604, 76)
+
+======================================================================
+SUMMARY
+======================================================================
+Original Consolidated rows:   13045
+New rows from sprint tabs:    3559
+Total expanded rows:          16604
+Total columns:                76
+Extra columns added:          37
+
+Rows by Sprint ID:
+  Sprint RSP1         :   908  ({'sprint_tab_new': 908})
+  Sprint RSP2         :   800  ({'sprint_tab_new': 800})
+  Sprint RSP3         :   940  ({'sprint_tab_new': 940})
+  Sprint 1            :  2679  ({'consolidated': 2679})
+  Sprint 2            :   684  ({'consolidated': 684})
+  Sprint 3            :  1627  ({'consolidated': 1603, 'sprint_tab_new': 24})
+  Sprint 4            :  1062  ({'consolidated': 1051, 'sprint_tab_new': 11})
+  Sprint 5            :   957  ({'consolidated': 955, 'sprint_tab_new': 2})
+  Sprint 6            :   848  ({'consolidated': 822, 'sprint_tab_new': 26})
+  Sprint 7            :   777  ({'consolidated': 758, 'sprint_tab_new': 19})
+  Sprint 8            :   985  ({'consolidated': 953, 'sprint_tab_new': 32})
+  Sprint 9            :   630  ({'consolidated': 630})
+  Sprint 10           :   757  ({'consolidated': 738, 'sprint_tab_new': 19})
+  Sprint 11           :   714  ({'consolidated': 701, 'sprint_tab_new': 13})
+  Sprint 12           :   691  ({'consolidated': 677, 'sprint_tab_new': 14})
+  Sprint 13           :   816  ({'consolidated': 794, 'sprint_tab_new': 22})
+  Sprint 14           :   729  ({'sprint_tab_new': 729})
+
+Rows by source:
+_source
+consolidated      13045
+sprint_tab_new     3559
+
+is_post_reset breakdown:
+is_post_reset
+False    13956
+True      2648
+
+is_payg breakdown:
+is_payg
+False    16577
+True        27
+
+Extra columns and their fill rates:
+  alt_mobile                              :     38 / 16604 (  0.2%)
+  call_status                             :     99 / 16604 (  0.6%)
+  caller                                  :    136 / 16604 (  0.8%)
+  cash_online                             :  10919 / 16604 ( 65.8%)
+  comments_sprint                         :    806 / 16604 (  4.9%)
+  data_usage_amount                       :   8908 / 16604 ( 53.6%)
+  data_usage_days                         :   8908 / 16604 ( 53.6%)
+  data_usage_per_day                      :   1408 / 16604 (  8.5%)
+  data_usage_percentile                   :   1408 / 16604 (  8.5%)
+  device_model                            :  12584 / 16604 ( 75.8%)
+  device_type                             :  12594 / 16604 ( 75.8%)
+  devices_2_4g                            :   9842 / 16604 ( 59.3%)
+  devices_5g                              :   9842 / 16604 ( 59.3%)
+  first_time_user                         :   9188 / 16604 ( 55.3%)
+  install_date_sprint                     :   5400 / 16604 ( 32.5%)
+  last_recharge_date                      :  11647 / 16604 ( 70.1%)
+  nps_match                               :    729 / 16604 (  4.4%)
+  nps_oe_copied                           :    579 / 16604 (  3.5%)
+  nps_reason_primary_sprint               :   3732 / 16604 ( 22.5%)
+  nps_reason_secondary_sprint             :    999 / 16604 (  6.0%)
+  nps_reason_sprint                       :     73 / 16604 (  0.4%)
+  nps_reason_tertiary_sprint              :    691 / 16604 (  4.2%)
+  optical_power                           :   9767 / 16604 ( 58.8%)
+  optical_range                           :   5144 / 16604 ( 31.0%)
+  overall_service_experience              :     30 / 16604 (  0.2%)
+  partner_name                            :    880 / 16604 (  5.3%)
+  pay_g                                   :      0 / 16604 (  0.0%)
+  payment_issue_tickets_flag              :   2476 / 16604 ( 14.9%)
+  plan_expiry_date                        :   7385 / 16604 ( 44.5%)
+  plan_expiry_window                      :      0 / 16604 (  0.0%)
+  prev_nps                                :    729 / 16604 (  4.4%)
+  recharge_done                           :  12601 / 16604 ( 75.9%)
+  response_id                             :   1420 / 16604 (  8.6%)
+  sla                                     :    880 / 16604 (  5.3%)
+  tenure_from_install                     :   2498 / 16604 ( 15.0%)
+  tickets_last_3m_sprint                  :   7528 / 16604 ( 45.3%)
+  zone                                    :  10974 / 16604 ( 66.1%)

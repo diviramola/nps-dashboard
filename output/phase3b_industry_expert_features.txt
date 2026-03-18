@@ -1,0 +1,446 @@
+======================================================================
+PHASE 3B: INDUSTRY EXPERT FEATURES REPORT
+Generated: 2026-03-18 11:35:19
+======================================================================
+
+NPS respondents: 13045
+Unique phones: 12290
+Total columns: 64
+
+======================================================================
+FEASIBILITY ASSESSMENT: WHICH FEATURES CAN WE COMPUTE?
+======================================================================
+
+  Feature 1: Disconnection FREQUENCY
+  Status: CAN COMPUTE
+  Tables: IMPACTED_DEVICES + t_wg_customer
+  Description: Count of outage events per device, distinct outage alerts, avg recovery time
+  Caveats: Only ~20 days of outage data available (Dec 20 2025 - Jan 8 2026). Not all NPS respondents fall in this window. Device-level, not customer-perception level.
+  Columns: OUTAGE_EVENTS, DISTINCT_OUTAGES, AVG_RECOVERY_MINS
+  Match rate: 5077/13045 (38.9%)
+
+  Feature 2: Peak-hour quality (7-11 PM)
+  Status: CAN COMPUTE
+  Tables: PARTNER_INFLUX_SUMMARY
+  Description: Peak-hour uptime %, stable ping %, peak-vs-overall gap, peak interruptions count. Joined to customers via partner_id.
+  Caveats: Partner-level aggregation (not per-device/customer). Peak hours defined by Wiom system (likely 7-11 PM). Last 90 days rolling window.
+  Columns: PEAK_UPTIME_PCT, PEAK_STABLE_PCT, PEAK_VS_OVERALL_GAP, AVG_PEAK_INTERRUPTIONS
+  Match rate: 10808/13045 (82.9%)
+
+  Feature 3: First-Call Resolution Rate
+  Status: CAN COMPUTE
+  Tables: service_ticket_model + t_wg_customer
+  Description: FCR rate = resolved tickets with zero reopenings / total resolved. Also: avg reopenings, customer call counts per ticket, ticket ratings.
+  Caveats: FCR proxy uses TIMES_REOPENED=0 which may miss cases where issue was not truly resolved but ticket was not reopened. Excludes CC-type tickets.
+  Columns: FCR_RATE, FCR_TICKETS, AVG_TIMES_REOPENED, AVG_CUSTOMER_CALLS_PER_TICKET, AVG_TICKET_RATING
+  Match rate: 10313/13045 (79.1%)
+
+  Feature 4: Repeat complaints (3+ calls same issue)
+  Status: CAN COMPUTE
+  Tables: service_ticket_model + t_wg_customer
+  Description: Multiple tickets with same FIRST_TITLE per customer. Flag for 3+ tickets on same issue type.
+  Caveats: Uses FIRST_TITLE as issue proxy. Same title != same root cause always. Does not capture repeat calls that did not result in tickets.
+  Columns: HAS_REPEAT_COMPLAINT, MAX_TICKETS_SAME_ISSUE, ISSUES_WITH_3PLUS_TICKETS
+  Match rate: 10426/13045 (79.9%)
+
+  Feature 5: Outage exposure at DEVICE level
+  Status: CAN COMPUTE
+  Tables: IMPACTED_DEVICES + t_wg_customer
+  Description: Same outage data as Feature 1 but emphasizing device-level granularity vs partner-level. Count of outage events affecting specific customer device.
+  Caveats: Same data window limitation (~20 days). Shared columns with Feature 1. This IS the device-level view the industry expert recommended.
+  Columns: OUTAGE_EVENTS, DISTINCT_OUTAGES, RECOVERED_EVENTS
+  Match rate: 5077/13045 (38.9%)
+
+  Feature 6: Recharge attempt failures
+  Status: CAN COMPUTE
+  Tables: payment_logs
+  Description: Count of order_failed vs order_succeeded events per customer. Failure rate percentage. Payment attempt count.
+  Caveats: payment_logs tracks gateway-level events. Some failures may be user error (insufficient balance, wrong card). Does not distinguish payment method or reason.
+  Columns: PAYMENT_FAILURES, PAYMENT_SUCCESSES, FAILURE_RATE_PCT
+  Match rate: 13039/13045 (100.0%)
+
+  Feature 7: Partner dispatch decline rate
+  Status: CAN COMPUTE
+  Tables: profile_lead_model
+  Description: Percentage of leads where ALL partners declined the install request. Also: leads accepted, installed, avg install TAT, install rating.
+  Caveats: ALL_PARTNERS_DECLINED is a binary flag at lead level. Does not capture partial declines, slow responses, or response quality.
+  Columns: DISPATCH_DECLINE_RATE_PCT, LEADS_ALL_DECLINED, AVG_INSTALL_RATING, AVG_INSTALL_TAT_MINS
+  Match rate: 13041/13045 (100.0%)
+
+  Feature 8: Time-to-value post-install
+  Status: CAN COMPUTE
+  Tables: profile_lead_model + t_router_user_mapping
+  Description: Hours/days from installation timestamp to first successful recharge. Proxy for when customer starts meaningful paid usage.
+  Caveats: First recharge may not be first usage if free trial exists. Negative values possible if recharge record precedes install record. FIRST_PING_POST_INSTALLATION exists but as TEXT, harder to parse.
+  Columns: HOURS_TO_FIRST_RECHARGE, DAYS_TO_FIRST_RECHARGE
+  Match rate: 12702/13045 (97.4%)
+
+  Feature 9: IVR call volume
+  Status: CAN COMPUTE
+  Tables: tata_ivr_events
+  Description: Total calls, inbound/outbound split, answered/missed/dropped counts, avg call duration. Matched via RIGHT(CLIENT_NUMBER, 10).
+  Caveats: CLIENT_NUMBER uses +91 prefix, matched via last 10 digits. Not time-scoped to NPS survey window -- includes all historical calls. Some phone numbers may match non-customers.
+  Columns: TOTAL_IVR_CALLS, INBOUND_CALLS, OUTBOUND_CALLS, ANSWERED_CALLS, MISSED_CALLS, AVG_ANSWERED_SECONDS
+  Match rate: 12963/13045 (99.4%)
+
+  Feature 10: Data usage patterns
+  Status: CAN COMPUTE
+  Tables: data_usage_okr + t_wg_customer (via NASID)
+  Description: Daily data usage at NAS (router) level. Avg/median/stddev GB per day. Low-usage (<1 GB) and high-usage (>50 GB) day counts.
+  Caveats: NAS-level aggregation (shared router), NOT per-customer. A busy router shows high usage regardless of individual experience. Low match rate (18.7%) because many NAS IDs do not appear in data_usage_okr. Best interpreted as "neighborhood quality" proxy.
+  Columns: AVG_DAILY_DATA_GB, MEDIAN_DAILY_DATA_GB, LOW_USAGE_DAYS, HIGH_USAGE_DAYS
+  Match rate: 2445/13045 (18.7%)
+
+======================================================================
+MATCH RATE SUMMARY
+======================================================================
+
+  Feature                                       | Matched |   Total |   Rate
+  --------------------------------------------- | ------- | ------- | ------
+  1. Disconnection Frequency                    |    5077 |   13045 |  38.9%
+  10. Data Usage Patterns                       |    2445 |   13045 |  18.7%
+  2. Peak-Hour Quality                          |   10808 |   13045 |  82.9%
+  3. First-Call Resolution Rate                 |   10313 |   13045 |  79.1%
+  4. Repeat Complaints                          |   10426 |   13045 |  79.9%
+  5. Device-Level Outage Exposure               |    5077 |   13045 |  38.9%
+  6. Recharge Attempt Failures                  |   13039 |   13045 | 100.0%
+  7. Partner Dispatch Decline Rate              |   13041 |   13045 | 100.0%
+  8. Time-to-Value Post-Install                 |   12702 |   13045 |  97.4%
+  9. IVR Call Volume                            |   12963 |   13045 |  99.4%
+
+======================================================================
+COMPUTATION SUMMARY
+======================================================================
+
+  Features we CAN compute:    10/10 (all 10)
+  Features we CANNOT compute: 0/10
+
+  All 10 industry-expert-recommended features have at least partial
+  data available in Snowflake. However, important caveats:
+
+  HIGH COVERAGE (>80%):
+    - Recharge Attempt Failures: 100.0% (payment_logs)
+    - Partner Dispatch Decline:  100.0% (profile_lead_model)
+    - IVR Call Volume:            99.4% (tata_ivr_events)
+    - Time-to-Value:              97.4% (profile_lead_model + recharges)
+    - Peak-Hour Quality:          82.9% (PARTNER_INFLUX_SUMMARY)
+
+  MODERATE COVERAGE (40-80%):
+    - Repeat Complaints:          79.9% (service_ticket_model)
+    - First-Call Resolution:      79.1% (service_ticket_model)
+
+  LOW COVERAGE (<40%):
+    - Disconnection Frequency:    38.9% (IMPACTED_DEVICES, only ~20 days)
+    - Device-Level Outage:        38.9% (same table, same limitation)
+    - Data Usage Patterns:        18.7% (data_usage_okr, NAS-level only)
+
+======================================================================
+FEATURE STATISTICS
+======================================================================
+
+  --- 1. Disconnection Frequency ---
+    OUTAGE_EVENTS (n=5077):
+      Mean=2.53  Median=2.00  Std=2.61  Min=1.00  Max=30.00
+    DISTINCT_OUTAGES (n=5077):
+      Mean=2.53  Median=2.00  Std=2.61  Min=1.00  Max=30.00
+    AVG_RECOVERY_MINS (n=4899):
+      Mean=106.04  Median=71.90  Std=110.08  Min=18.50  Max=1457.00
+
+  --- 2. Peak-Hour Quality ---
+    PEAK_UPTIME_PCT (n=10808):
+      Mean=0.71  Median=0.72  Std=0.07  Min=0.00  Max=0.89
+    PEAK_STABLE_PCT (n=10808):
+      Mean=0.46  Median=0.47  Std=0.08  Min=0.00  Max=0.69
+    OVERALL_UPTIME_PCT (n=10808):
+      Mean=0.70  Median=0.71  Std=0.07  Min=0.00  Max=0.81
+    PEAK_VS_OVERALL_GAP (n=10808):
+      Mean=-0.01  Median=-0.01  Std=0.01  Min=-0.17  Max=0.03
+    AVG_PEAK_INTERRUPTIONS (n=10808):
+      Mean=124.22  Median=100.54  Std=95.45  Min=0.31  Max=618.80
+
+  --- 3. First-Call Resolution ---
+    FCR_RATE (n=10313):
+      Mean=90.91  Median=100.00  Std=13.56  Min=0.00  Max=100.00
+    AVG_TIMES_REOPENED (n=10426):
+      Mean=0.14  Median=0.00  Std=0.26  Min=0.00  Max=5.12
+    AVG_CUSTOMER_CALLS_PER_TICKET (n=3168):
+      Mean=0.63  Median=0.60  Std=0.61  Min=0.00  Max=8.20
+    TOTAL_CUSTOMER_CALLS (n=3168):
+      Mean=4.43  Median=2.00  Std=7.34  Min=0.00  Max=86.00
+    AVG_TICKET_RATING (n=1501):
+      Mean=3.97  Median=4.50  Std=1.26  Min=1.00  Max=5.00
+
+  --- 4. Repeat Complaints ---
+    MAX_TICKETS_SAME_ISSUE (n=10426):
+      Mean=4.85  Median=3.00  Std=4.39  Min=1.00  Max=51.00
+    AVG_TICKETS_PER_ISSUE (n=10426):
+      Mean=3.41  Median=2.43  Std=3.01  Min=1.00  Max=42.23
+    ISSUES_WITH_3PLUS_TICKETS (n=10426):
+      Mean=1.03  Median=1.00  Std=1.08  Min=0.00  Max=9.00
+    HAS_REPEAT_COMPLAINT (n=10426):
+      Mean=0.64  Median=1.00  Std=0.48  Min=0.00  Max=1.00
+
+  --- 6. Payment Failures ---
+    PAYMENT_FAILURES (n=13039):
+      Mean=7.32  Median=5.00  Std=8.99  Min=0.00  Max=234.00
+    PAYMENT_SUCCESSES (n=13039):
+      Mean=13.15  Median=12.00  Std=7.23  Min=0.00  Max=115.00
+    FAILURE_RATE_PCT (n=13039):
+      Mean=31.41  Median=30.43  Std=18.29  Min=0.00  Max=100.00
+
+  --- 7. Partner Dispatch ---
+    DISPATCH_DECLINE_RATE_PCT (n=13041):
+      Mean=4.19  Median=0.00  Std=16.99  Min=0.00  Max=100.00
+    LEADS_ALL_DECLINED (n=13041):
+      Mean=0.09  Median=0.00  Std=0.34  Min=0.00  Max=6.00
+    AVG_INSTALL_RATING (n=1577):
+      Mean=4.97  Median=5.00  Std=0.32  Min=1.00  Max=5.00
+    AVG_INSTALL_TAT_MINS (n=12021):
+      Mean=2220.61  Median=33.72  Std=29823.72  Min=0.00  Max=488408.40
+
+  --- 8. Time-to-Value ---
+    HOURS_TO_FIRST_RECHARGE (n=12702):
+      Mean=-2.47  Median=0.00  Std=129.88  Min=-13223.00  Max=186.00
+    DAYS_TO_FIRST_RECHARGE (n=12702):
+      Mean=-0.10  Median=0.00  Std=5.41  Min=-551.00  Max=8.00
+
+  --- 9. IVR Call Volume ---
+    TOTAL_IVR_CALLS (n=12963):
+      Mean=29.38  Median=23.00  Std=23.86  Min=1.00  Max=337.00
+    INBOUND_CALLS (n=12963):
+      Mean=14.24  Median=8.00  Std=18.49  Min=0.00  Max=247.00
+    OUTBOUND_CALLS (n=12963):
+      Mean=15.14  Median=12.00  Std=13.22  Min=0.00  Max=302.00
+    ANSWERED_CALLS (n=12963):
+      Mean=10.04  Median=7.00  Std=10.81  Min=0.00  Max=164.00
+    MISSED_CALLS (n=12963):
+      Mean=19.25  Median=15.00  Std=16.02  Min=0.00  Max=315.00
+    AVG_ANSWERED_SECONDS (n=12517):
+      Mean=182.12  Median=168.75  Std=123.13  Min=0.00  Max=1963.00
+
+  --- 10. Data Usage ---
+    AVG_DAILY_DATA_GB (n=2445):
+      Mean=13.46  Median=11.08  Std=10.18  Min=0.09  Max=114.15
+    MEDIAN_DAILY_DATA_GB (n=2445):
+      Mean=12.42  Median=10.26  Std=9.30  Min=0.01  Max=114.35
+    STDDEV_DAILY_DATA_GB (n=2444):
+      Mean=8.35  Median=6.79  Std=7.60  Min=0.07  Max=126.26
+    LOW_USAGE_DAYS (n=2445):
+      Mean=11.79  Median=8.00  Std=14.67  Min=0.00  Max=167.00
+    HIGH_USAGE_DAYS (n=2445):
+      Mean=3.73  Median=0.00  Std=14.47  Min=0.00  Max=180.00
+
+======================================================================
+KEY FEATURES BY NPS GROUP
+======================================================================
+
+  OUTAGE_EVENTS:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       2.51 |       2.00 |   2432
+    Passive      |       2.31 |       2.00 |    404
+    Detractor    |       2.59 |       2.00 |   2241
+
+  PEAK_UPTIME_PCT:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       0.71 |       0.72 |   5072
+    Passive      |       0.71 |       0.72 |    902
+    Detractor    |       0.71 |       0.72 |   4834
+
+  PEAK_VS_OVERALL_GAP:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |      -0.01 |      -0.01 |   5072
+    Passive      |      -0.01 |      -0.01 |    902
+    Detractor    |      -0.01 |      -0.01 |   4834
+
+  FCR_RATE:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |      92.27 |     100.00 |   4794
+    Passive      |      91.60 |     100.00 |    844
+    Detractor    |      89.39 |      93.33 |   4675
+
+  AVG_TIMES_REOPENED:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       0.11 |       0.00 |   4856
+    Passive      |       0.13 |       0.00 |    854
+    Detractor    |       0.17 |       0.07 |   4716
+
+  AVG_CUSTOMER_CALLS_PER_TICKET:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       0.61 |       0.50 |   1326
+    Passive      |       0.66 |       0.50 |    232
+    Detractor    |       0.65 |       0.62 |   1610
+
+  HAS_REPEAT_COMPLAINT:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       0.60 |       1.00 |   4856
+    Passive      |       0.61 |       1.00 |    854
+    Detractor    |       0.69 |       1.00 |   4716
+
+  MAX_TICKETS_SAME_ISSUE:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       4.31 |       3.00 |   4856
+    Passive      |       4.54 |       3.00 |    854
+    Detractor    |       5.47 |       4.00 |   4716
+
+  PAYMENT_FAILURES:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       7.51 |       5.00 |   6007
+    Passive      |       6.82 |       5.00 |   1027
+    Detractor    |       7.21 |       5.00 |   6005
+
+  FAILURE_RATE_PCT:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |      31.96 |      31.25 |   6007
+    Passive      |      29.92 |      28.57 |   1027
+    Detractor    |      31.12 |      30.00 |   6005
+
+  DISPATCH_DECLINE_RATE_PCT:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       4.12 |       0.00 |   6009
+    Passive      |       3.81 |       0.00 |   1027
+    Detractor    |       4.32 |       0.00 |   6005
+
+  AVG_INSTALL_RATING:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       4.95 |       5.00 |    745
+    Passive      |       5.00 |       5.00 |    143
+    Detractor    |       4.98 |       5.00 |    689
+
+  DAYS_TO_FIRST_RECHARGE:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |      -0.03 |       0.00 |   5876
+    Passive      |      -0.03 |       0.00 |   1002
+    Detractor    |      -0.18 |       0.00 |   5824
+
+  TOTAL_IVR_CALLS:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |      26.54 |      21.00 |   5964
+    Passive      |      27.00 |      20.00 |   1019
+    Detractor    |      32.63 |      26.00 |   5980
+
+  INBOUND_CALLS:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |      12.02 |       7.00 |   5964
+    Passive      |      13.26 |       7.00 |   1019
+    Detractor    |      16.63 |      10.00 |   5980
+
+  AVG_DAILY_DATA_GB:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |      13.73 |      11.27 |   1094
+    Passive      |      12.57 |      10.95 |    203
+    Detractor    |      13.36 |      10.95 |   1148
+
+  LOW_USAGE_DAYS:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |      12.37 |       8.00 |   1094
+    Passive      |      12.31 |       8.00 |    203
+    Detractor    |      11.14 |       7.00 |   1148
+
+======================================================================
+PRELIMINARY INSIGHTS (Detractor vs Promoter Differences)
+======================================================================
+
+  Peak uptime (PEAK_UPTIME_PCT):
+    Detractor mean: 0.706
+    Promoter mean:  0.712
+    Detractors are 0.9% LOWER than Promoters 
+    Interpretation: lower is worse
+
+  First-call resolution (FCR_RATE):
+    Detractor mean: 89.393
+    Promoter mean:  92.265
+    Detractors are 3.1% LOWER than Promoters *
+    Interpretation: lower is worse
+
+  Ticket reopenings (AVG_TIMES_REOPENED):
+    Detractor mean: 0.169
+    Promoter mean:  0.114
+    Detractors are 47.7% HIGHER than Promoters ***
+    Interpretation: higher is worse
+
+  IVR call volume (TOTAL_IVR_CALLS):
+    Detractor mean: 32.626
+    Promoter mean:  26.538
+    Detractors are 22.9% HIGHER than Promoters ***
+    Interpretation: higher is worse
+
+  Inbound calls to Wiom (INBOUND_CALLS):
+    Detractor mean: 16.634
+    Promoter mean:  12.017
+    Detractors are 38.4% HIGHER than Promoters ***
+    Interpretation: higher is worse
+
+  Device outage events (OUTAGE_EVENTS):
+    Detractor mean: 2.587
+    Promoter mean:  2.510
+    Detractors are 3.1% HIGHER than Promoters *
+    Interpretation: higher is worse
+
+  Repeat complaint flag (HAS_REPEAT_COMPLAINT):
+    Detractor mean: 0.688
+    Promoter mean:  0.595
+    Detractors are 15.6% HIGHER than Promoters ***
+    Interpretation: higher is worse
+
+  Max tickets same issue (MAX_TICKETS_SAME_ISSUE):
+    Detractor mean: 5.467
+    Promoter mean:  4.311
+    Detractors are 26.8% HIGHER than Promoters ***
+    Interpretation: higher is worse
+
+  Payment failure rate (FAILURE_RATE_PCT):
+    Detractor mean: 31.117
+    Promoter mean:  31.958
+    Detractors are 2.6% LOWER than Promoters *
+    Interpretation: unclear
+
+  Partner decline rate (DISPATCH_DECLINE_RATE_PCT):
+    Detractor mean: 4.324
+    Promoter mean:  4.120
+    Detractors are 4.9% HIGHER than Promoters *
+    Interpretation: higher is worse
+
+  Avg daily data usage (AVG_DAILY_DATA_GB):
+    Detractor mean: 13.364
+    Promoter mean:  13.730
+    Detractors are 2.7% LOWER than Promoters *
+    Interpretation: ambiguous
+
+======================================================================
+STRONGEST SIGNALS FOR MODELING
+======================================================================
+
+  Based on Detractor-vs-Promoter difference magnitude:
+
+  1. AVG_TIMES_REOPENED          (+47.7%) *** Detractors have far more ticket reopenings
+  2. TOTAL_IVR_CALLS             (+22.9%) *** Detractors call Wiom IVR 23% more
+  3. INBOUND_CALLS               (+38.4%) *** Detractors make 38% more inbound calls
+  4. MAX_TICKETS_SAME_ISSUE      (+26.9%) *** Detractors have more repeat tickets for same issue
+  5. HAS_REPEAT_COMPLAINT        (+15.6%) *** Detractors are 16% more likely to have repeat complaints
+  6. FCR_RATE                    (-3.1%)  **  Detractors have slightly lower first-call resolution
+  7. OUTAGE_EVENTS               (+3.1%)  *   Slight difference in outage exposure
+  8. PEAK_UPTIME_PCT             (-0.9%)      Minimal difference in peak hour quality
+  9. FAILURE_RATE_PCT            (-2.6%)      Surprising: detractors have LOWER failure rate
+  10. DISPATCH_DECLINE_RATE_PCT  (+4.9%)  *   Slightly higher partner decline for detractors
+
+  KEY TAKEAWAY: The strongest NPS predictors from industry expert features are
+  SUPPORT EXPERIENCE metrics (reopenings, IVR call volume, repeat complaints, FCR)
+  rather than NETWORK metrics (uptime, outages). This suggests that how Wiom HANDLES
+  problems matters more to customers than the frequency of problems themselves.

@@ -1,0 +1,1052 @@
+======================================================================
+PHASE 1.3 — ADAPTIVE THEME DISCOVERY REPORT
+======================================================================
+
+Total comments analyzed: 5488
+Classified: 3680 (67.1%)
+Unclassified: 1808 (32.9%)
+With secondary theme: 1584 (28.9%)
+
+======================================================================
+THEME DISTRIBUTION (Primary Theme)
+======================================================================
+  unclassified                            :  1808 ( 32.9%) ################################
+  general_positive                        :   999 ( 18.2%) ##################
+  slow_speed                              :   877 ( 16.0%) ###############
+  disconnection_frequency                 :   676 ( 12.3%) ############
+  general_negative                        :   198 (  3.6%) ###
+  range_coverage                          :   169 (  3.1%) ###
+  complaint_resolution_bad                :   161 (  2.9%) ##
+  internet_down_outage                    :   147 (  2.7%) ##
+  pricing_affordable                      :   109 (  2.0%) #
+  good_speed                              :    67 (  1.2%) #
+  billing_28day                           :    57 (  1.0%) #
+  pricing_expensive                       :    45 (  0.8%) 
+  router_device                           :    26 (  0.5%) 
+  ott_content                             :    24 (  0.4%) 
+  app_tech_issues                         :    21 (  0.4%) 
+  call_center_bad                         :    21 (  0.4%) 
+  competitor_comparison                   :    20 (  0.4%) 
+  technician_partner_bad                  :    17 (  0.3%) 
+  autopay_payment_mode                    :    15 (  0.3%) 
+  complaint_resolution_good               :    10 (  0.2%) 
+  call_center_good                        :     9 (  0.2%) 
+  shifting_relocation                     :     6 (  0.1%) 
+  rdni_recharge_no_internet               :     5 (  0.1%) 
+  technician_partner_good                 :     1 (  0.0%) 
+
+======================================================================
+THEME x NPS GROUP (% within each theme)
+======================================================================
+Theme                                    |   Promoter |    Passive |  Detractor |  Count | Mean NPS
+----------------------------------------------------------------------------------------------------
+  unclassified                             |      43.6% |       6.9% |      49.5% |   1808 |      5.6
+  general_positive                         |      71.6% |       7.5% |      20.9% |    999 |      8.1
+  slow_speed                               |      30.9% |       7.2% |      61.9% |    877 |      4.6
+  disconnection_frequency                  |      18.3% |       6.2% |      75.4% |    676 |      3.4
+  general_negative                         |       3.0% |       0.0% |      97.0% |    198 |      0.6
+  range_coverage                           |      29.0% |      10.1% |      60.9% |    169 |      4.6
+  complaint_resolution_bad                 |       9.9% |       5.0% |      85.1% |    161 |      2.4
+  internet_down_outage                     |      10.2% |       6.8% |      83.0% |    147 |      2.4
+  pricing_affordable                       |      73.4% |       8.3% |      18.3% |    109 |      8.6
+  good_speed                               |      80.6% |       3.0% |      16.4% |     67 |      8.5
+  billing_28day                            |      19.3% |       7.0% |      73.7% |     57 |      3.0
+  pricing_expensive                        |      37.8% |      11.1% |      51.1% |     45 |      5.3
+  router_device                            |       7.7% |      11.5% |      80.8% |     26 |      3.1
+  ott_content                              |      20.8% |      12.5% |      66.7% |     24 |      4.2
+  app_tech_issues                          |      14.3% |       0.0% |      85.7% |     21 |      2.9
+  call_center_bad                          |      38.1% |       4.8% |      57.1% |     21 |      4.8
+  competitor_comparison                    |      45.0% |       0.0% |      55.0% |     20 |      5.2
+  technician_partner_bad                   |      29.4% |       0.0% |      70.6% |     17 |      3.4
+  autopay_payment_mode                     |      13.3% |       0.0% |      86.7% |     15 |      1.8
+  complaint_resolution_good                |      90.0% |       0.0% |      10.0% |     10 |      9.2
+  call_center_good                         |      44.4% |       0.0% |      55.6% |      9 |      4.9
+  shifting_relocation                      |       0.0% |       0.0% |     100.0% |      6 |      0.8
+  rdni_recharge_no_internet                |       0.0% |      20.0% |      80.0% |      5 |      1.4
+  technician_partner_good                  |     100.0% |       0.0% |       0.0% |      1 |     10.0
+
+======================================================================
+THEME x CHURN RATE (sorted by churn rate)
+======================================================================
+Theme                                    |  Total | Churned |  Churn% | Mean NPS
+--------------------------------------------------------------------------------
+  shifting_relocation                      |      6 |       4 |   66.7% |      0.8
+  rdni_recharge_no_internet                |      5 |       2 |   40.0% |      1.4
+  router_device                            |     26 |      10 |   38.5% |      3.1
+  call_center_bad                          |     21 |       8 |   38.1% |      4.8
+  call_center_good                         |      9 |       3 |   33.3% |      4.9
+  billing_28day                            |     57 |      18 |   31.6% |      3.0
+  pricing_expensive                        |     45 |      13 |   28.9% |      5.3
+  general_negative                         |    198 |      54 |   27.3% |      0.6
+  technician_partner_bad                   |     17 |       4 |   23.5% |      3.4
+  range_coverage                           |    169 |      37 |   21.9% |      4.6
+  unclassified                             |   1808 |     376 |   20.8% |      5.6
+  complaint_resolution_bad                 |    161 |      33 |   20.5% |      2.4
+  complaint_resolution_good                |     10 |       2 |   20.0% |      9.2
+  internet_down_outage                     |    147 |      29 |   19.7% |      2.4
+  slow_speed                               |    877 |     156 |   17.8% |      4.6
+  disconnection_frequency                  |    676 |     115 |   17.0% |      3.4
+  ott_content                              |     24 |       4 |   16.7% |      4.2
+  competitor_comparison                    |     20 |       3 |   15.0% |      5.2
+  general_positive                         |    999 |     148 |   14.8% |      8.1
+  good_speed                               |     67 |       8 |   11.9% |      8.5
+  app_tech_issues                          |     21 |       2 |    9.5% |      2.9
+  pricing_affordable                       |    109 |       7 |    6.4% |      8.6
+  autopay_payment_mode                     |     15 |       0 |    0.0% |      1.8
+  technician_partner_good                  |      1 |       0 |    0.0% |     10.0
+
+======================================================================
+THEME x TENURE BUCKET (% within each theme)
+======================================================================
+Theme                                    |      1–2 |      3–6 |       6+
+------------------------------------------------------------------------------
+  unclassified                             |    20.3% |    28.6% |    51.1%
+  general_positive                         |    23.6% |    26.2% |    50.2%
+  slow_speed                               |    22.9% |    28.5% |    48.6%
+  disconnection_frequency                  |    19.1% |    24.8% |    56.2%
+  general_negative                         |    21.3% |    19.7% |    59.0%
+  range_coverage                           |    20.4% |    25.9% |    53.7%
+  complaint_resolution_bad                 |    21.1% |    19.0% |    59.9%
+  internet_down_outage                     |    15.1% |    28.1% |    56.8%
+  pricing_affordable                       |    12.6% |    26.3% |    61.1%
+  good_speed                               |    38.6% |    22.8% |    38.6%
+  billing_28day                            |    17.0% |    13.2% |    69.8%
+  pricing_expensive                        |    23.3% |    20.9% |    55.8%
+  router_device                            |    34.8% |    13.0% |    52.2%
+  ott_content                              |    60.9% |     8.7% |    30.4%
+  app_tech_issues                          |    31.6% |    10.5% |    57.9%
+  call_center_bad                          |    30.0% |    15.0% |    55.0%
+  competitor_comparison                    |    40.0% |    26.7% |    33.3%
+  technician_partner_bad                   |    18.8% |    31.2% |    50.0%
+  autopay_payment_mode                     |    13.3% |    26.7% |    60.0%
+  complaint_resolution_good                |    37.5% |    12.5% |    50.0%
+  call_center_good                         |    50.0% |    16.7% |    33.3%
+  shifting_relocation                      |    16.7% |    50.0% |    33.3%
+  rdni_recharge_no_internet                |    25.0% |    50.0% |    25.0%
+  technician_partner_good                  |   100.0% |     0.0% |     0.0%
+
+======================================================================
+THEME x CITY (% within each theme)
+======================================================================
+Theme                                    |    Delhi |   Mumbai |       UP
+------------------------------------------------------------------------------
+  unclassified                             |    77.5% |     6.0% |    10.4%
+  general_positive                         |    77.6% |     6.7% |     7.0%
+  slow_speed                               |    75.1% |     5.2% |    10.4%
+  disconnection_frequency                  |    73.2% |     6.5% |     9.6%
+  general_negative                         |    74.7% |     6.6% |    10.1%
+  range_coverage                           |    82.8% |     3.0% |     9.5%
+  complaint_resolution_bad                 |    74.5% |     9.3% |     8.1%
+  internet_down_outage                     |    80.3% |     7.5% |     7.5%
+  pricing_affordable                       |    76.1% |     5.5% |     5.5%
+  good_speed                               |    68.7% |    10.4% |     9.0%
+  billing_28day                            |    82.5% |     5.3% |     5.3%
+  pricing_expensive                        |    77.8% |     4.4% |    13.3%
+  router_device                            |    61.5% |    11.5% |    15.4%
+  ott_content                              |    70.8% |    12.5% |    12.5%
+  app_tech_issues                          |    76.2% |    14.3% |     4.8%
+  call_center_bad                          |    52.4% |    14.3% |    19.0%
+  competitor_comparison                    |    60.0% |     5.0% |    10.0%
+  technician_partner_bad                   |    70.6% |    11.8% |    17.6%
+  autopay_payment_mode                     |    93.3% |     0.0% |     6.7%
+  complaint_resolution_good                |    60.0% |    10.0% |    10.0%
+  call_center_good                         |    44.4% |     0.0% |    22.2%
+  shifting_relocation                      |   100.0% |     0.0% |     0.0%
+  rdni_recharge_no_internet                |    80.0% |     0.0% |     0.0%
+  technician_partner_good                  |   100.0% |     0.0% |     0.0%
+
+======================================================================
+THEME x SENTIMENT (% within each theme)
+======================================================================
+Theme                                    |   Positive |    Neutral |   Negative
+--------------------------------------------------------------------------------
+  unclassified                             |      49.7% |       6.0% |      44.3%
+  general_positive                         |      93.7% |       1.0% |       5.3%
+  slow_speed                               |      42.9% |       4.7% |      52.5%
+  disconnection_frequency                  |      22.3% |       3.8% |      73.8%
+  general_negative                         |       2.0% |       0.0% |      98.0%
+  range_coverage                           |       9.5% |       0.0% |      90.5%
+  complaint_resolution_bad                 |       9.9% |       2.5% |      87.6%
+  internet_down_outage                     |       8.8% |       2.7% |      88.4%
+  pricing_affordable                       |      89.0% |       1.8% |       9.2%
+  good_speed                               |      89.6% |       0.0% |      10.4%
+  billing_28day                            |      22.8% |       5.3% |      71.9%
+  pricing_expensive                        |      35.6% |       4.4% |      60.0%
+  router_device                            |      15.4% |       7.7% |      76.9%
+  ott_content                              |      29.2% |       4.2% |      66.7%
+  app_tech_issues                          |       9.5% |       4.8% |      85.7%
+  call_center_bad                          |      38.1% |       4.8% |      57.1%
+  competitor_comparison                    |      45.0% |       0.0% |      55.0%
+  technician_partner_bad                   |      23.5% |       0.0% |      76.5%
+  autopay_payment_mode                     |       6.7% |       6.7% |      86.7%
+  complaint_resolution_good                |      60.0% |       0.0% |      40.0%
+  call_center_good                         |      55.6% |       0.0% |      44.4%
+  shifting_relocation                      |       0.0% |       0.0% |     100.0%
+  rdni_recharge_no_internet                |      40.0% |       0.0% |      60.0%
+  technician_partner_good                  |     100.0% |       0.0% |       0.0%
+
+======================================================================
+DETRACTOR DEEP DIVE — Top themes among Detractors
+======================================================================
+  unclassified                            :   895 ( 30.6%) | Churn: 25.4%
+  slow_speed                              :   543 ( 18.6%) | Churn: 21.0%
+  disconnection_frequency                 :   510 ( 17.4%) | Churn: 18.6%
+  general_positive                        :   209 (  7.1%) | Churn: 19.1%
+  general_negative                        :   192 (  6.6%) | Churn: 27.6%
+  complaint_resolution_bad                :   137 (  4.7%) | Churn: 22.6%
+  internet_down_outage                    :   122 (  4.2%) | Churn: 21.3%
+  range_coverage                          :   103 (  3.5%) | Churn: 24.3%
+  billing_28day                           :    42 (  1.4%) | Churn: 31.0%
+  pricing_expensive                       :    23 (  0.8%) | Churn: 39.1%
+  router_device                           :    21 (  0.7%) | Churn: 47.6%
+  pricing_affordable                      :    20 (  0.7%) | Churn: 15.0%
+  app_tech_issues                         :    18 (  0.6%) | Churn: 11.1%
+  ott_content                             :    16 (  0.5%) | Churn: 12.5%
+  autopay_payment_mode                    :    13 (  0.4%) | Churn: 0.0%
+  call_center_bad                         :    12 (  0.4%) | Churn: 33.3%
+  technician_partner_bad                  :    12 (  0.4%) | Churn: 25.0%
+  competitor_comparison                   :    11 (  0.4%) | Churn: 18.2%
+  good_speed                              :    11 (  0.4%) | Churn: 18.2%
+  shifting_relocation                     :     6 (  0.2%) | Churn: 66.7%
+  call_center_good                        :     5 (  0.2%) | Churn: 60.0%
+  rdni_recharge_no_internet               :     4 (  0.1%) | Churn: 50.0%
+  complaint_resolution_good               :     1 (  0.0%) | Churn: 0.0%
+
+======================================================================
+PROMOTER DEEP DIVE — Top themes among Promoters
+======================================================================
+  unclassified                            :   788 ( 35.9%) | Churn: 16.9%
+  general_positive                        :   715 ( 32.6%) | Churn: 14.0%
+  slow_speed                              :   271 ( 12.4%) | Churn: 14.0%
+  disconnection_frequency                 :   124 (  5.7%) | Churn: 12.1%
+  pricing_affordable                      :    80 (  3.6%) | Churn: 3.8%
+  good_speed                              :    54 (  2.5%) | Churn: 11.1%
+  range_coverage                          :    49 (  2.2%) | Churn: 14.3%
+  pricing_expensive                       :    17 (  0.8%) | Churn: 17.6%
+  complaint_resolution_bad                :    16 (  0.7%) | Churn: 12.5%
+  internet_down_outage                    :    15 (  0.7%) | Churn: 13.3%
+  billing_28day                           :    11 (  0.5%) | Churn: 45.5%
+  complaint_resolution_good               :     9 (  0.4%) | Churn: 22.2%
+  competitor_comparison                   :     9 (  0.4%) | Churn: 11.1%
+  call_center_bad                         :     8 (  0.4%) | Churn: 50.0%
+  general_negative                        :     6 (  0.3%) | Churn: 16.7%
+  ott_content                             :     5 (  0.2%) | Churn: 20.0%
+  technician_partner_bad                  :     5 (  0.2%) | Churn: 20.0%
+  call_center_good                        :     4 (  0.2%) | Churn: 0.0%
+  app_tech_issues                         :     3 (  0.1%) | Churn: 0.0%
+  router_device                           :     2 (  0.1%) | Churn: 0.0%
+  autopay_payment_mode                    :     2 (  0.1%) | Churn: 0.0%
+  technician_partner_good                 :     1 (  0.0%) | Churn: 0.0%
+
+======================================================================
+REPRESENTATIVE EXAMPLES BY THEME
+======================================================================
+
+--- APP_TECH_ISSUES ---
+  [1] NPS=0 | Detractor | hinglish | negative | anger | Delhi | Tenure: 6+
+      Original: "Abhi tak mera wiom wifi theek nhi hua hai lekin ye app show kr rha ki mera wifi theek ho gya hai, aur internet bhi chal rha hai ye bhi dikha rha h, last but not least es app me bilkul bhi security nhi"
+      Translated: "abhi tak mera wiom wifi theek nhi hua hai lekin ye app show kr rha ki mera wifi theek ho gya hai, aur internet bhi chal rha hai ye bhi dikha rha h, last but not least es app me bilkul bhi security nhi"
+
+  [2] NPS=0 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 1–2
+      Original: "Bhot ki bekar h Har 4 din me net nhi chlta bar bar customer support ko bolna pdta h application bhi sahi se kaam nhi krti"
+      Translated: "bhot ki bekar h har 4 din me net nhi chlta bar bar customer support ko bolna pdta h application bhi sahi se kaam nhi krti"
+
+  [3] NPS=5 | Detractor | english | negative | frustration | Delhi | Tenure: 6+
+      Original: "wiom application not update used data."
+      Translated: "wiom application not update used data."
+
+
+--- AUTOPAY_PAYMENT_MODE ---
+  [1] NPS=0 | Detractor | english | negative | frustration | Delhi | Tenure: 6+
+      Original: "Poor technology. Every month my wifi connection is disconnected even though auto payment is enabled. I have to make payment manually."
+      Translated: "poor technology. every month my wifi connection is disconnected even though auto payment is enabled. i have to make payment manually."
+
+  [2] NPS=0 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 3–6
+      Original: "Bar bar presan karte hai, auto payment ke bad bi bar bar call ate hai payment kar diya kya???"
+      Translated: "bar bar presan karte hai, auto payment ke bad bi bar bar call ate hai payment kar diya kya???"
+
+  [3] NPS=5 | Detractor | hinglish | neutral | indifference | Delhi | Tenure: 6+
+      Original: "Acha service nahi milta hai auto pay payment katne k baad bhi chalo karbana padta hai hai net har baar"
+      Translated: "acha service nahi milta hai auto pay payment katne k baad bhi chalo karbana padta hai hai net har baar"
+
+
+--- BILLING_28DAY ---
+  [1] NPS=10 | Promoter | hinglish | positive | satisfaction | Unknown | Tenure: nan
+      Original: "Wiom internet middle class logo ke liye bhot acha hai or budget me bhi hai 
+ Mar esme ek problem hai wiom ka recharge sirf 28 din hi chalta hai 
+ Mar ese pure 30 din chalna chahiye 
+ Please es problem"
+      Translated: "wiom internet middle class logo ke liye bhot is good or budget me bhi hai 
+ mar esme ek there is a problem wiom ka recharge sirf 28 din hi chalta hai 
+ mar ese pure 30 din chalna chahiye 
+ please es p"
+
+  [2] NPS=8 | Passive | hinglish | positive | satisfaction | Delhi | Tenure: 1–2
+      Original: "Sabsa phla to iska net kbhi bhi band ho jata ha fir call kro jb jaka chalu hota ha dusra iska plan 28 din ka km sa km 30 to pure do or bat rhi iska recharge ke to vo bhi 500 rupay 28 din koi value nhi"
+      Translated: "sabsa phla to iska net kbhi bhi stops working ha fir call kro jb jaka chalu hota ha dusra iska plan 28-day km sa km 30 to pure do or bat rhi iska recharge ke to vo bhi 500 rupay 28 din koi value nhi h"
+
+  [3] NPS=8 | Passive | english | positive | indifference | Delhi | Tenure: 6+
+      Original: "Validity increase 28 days to 30 days"
+      Translated: "validity increase 28 days to 30 days"
+
+
+--- CALL_CENTER_BAD ---
+  [1] NPS=0 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 1–2
+      Original: "app me exact wifi usage show hi nahi karta or service ek dum khrab hai baat karne ki tamiz nahi hai customer care walo ko or ek baat or aap kisi or number se customer care ko call nahi kar skte sabse "
+      Translated: "app me exact wifi usage show hi nahi karta or service ek dum khrab hai baat karne ki tamiz nahi hai customer care walo ko or ek baat or aap kisi or number se customer care ko call nahi kar skte sabse "
+
+  [2] NPS=10 | Promoter | hinglish | negative | frustration | Mumbai | Tenure: 3–6
+      Original: "Aapka Network ka bahut Vishwas hai aap customer care bhi reply Nahin de raha hai phone Nahin receive kar raha hai aisa FIR Karega Wi-Fi ka problem bahut a raha hai cal raat Ko Soye problem ja raha tha"
+      Translated: "aapka network ka bahut vishwas hai aap customer care bhi reply nahin de raha hai phone nahin receive kar raha hai aisa fir karega wi-fi ka problem bahut a raha hai cal at night soye problem ja raha th"
+
+  [3] NPS=5 | Detractor | english | neutral | indifference | Delhi | Tenure: 6+
+      Original: "Frequent loss of serive and internet. Lack of support from customer care"
+      Translated: "frequent loss of serive and internet. lack of support from customer care"
+
+
+--- CALL_CENTER_GOOD ---
+  [1] NPS=0 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 6+
+      Original: "Jb zarurat hoti h wifi bilkul nhi aaata aur customr care ko ph kro to ek he reason deta h mosam khrab h aade din to internet aata hi nhi h h bhot preshani hoti h work from home krne me"
+      Translated: "jb zarurat hoti h wifi bilkul nhi aaata aur customr care ko ph kro to ek he reason deta h mosam khrab h aade din to internet aata hi nhi h h bhot preshani hoti h work from home krne me"
+
+  [2] NPS=9 | Promoter | english | positive | satisfaction | Unknown | Tenure: nan
+      Original: "Good service and good support"
+      Translated: "good service and good support"
+
+  [3] NPS=5 | Detractor | english | positive | satisfaction | Unknown | Tenure: nan
+      Original: "Query solved good supporting member"
+      Translated: "query solved good supporting member"
+
+
+--- COMPETITOR_COMPARISON ---
+  [1] NPS=2 | Detractor | english | negative | frustration | Delhi | Tenure: 1–2
+      Original: "Not so much reliable network alaways there is issue with network speed and also having no ott platform access as other utility offer like airtel, JIO."
+      Translated: "not so much reliable network alaways there is issue with network speed and also having no ott platform access as other utility offer like airtel, jio."
+
+  [2] NPS=0 | Detractor | english | negative | frustration | Delhi | Tenure: 6+
+      Original: "Internet is down since yesterday & still not fixed. No update, no intimation. Why should customers raise tickets every time? You should inform users when service is down, like @airtelindia does. Impro"
+      Translated: "internet is down since yesterday & still not fixed. no update, no intimation. why should customers raise tickets every time? you should inform users when service is down, like @airtelindia does. impro"
+
+  [3] NPS=9 | Promoter | hinglish | positive | satisfaction | Unknown | Tenure: nan
+      Original: "Service theek Hai Magar Tv Ke Liye Set top Box Nahi Hai
+ 
+ Airtel & jio me Milta hai"
+      Translated: "service is okay magar tv ke liye set top box nahi hai
+ 
+ airtel & jio me milta hai"
+
+
+--- COMPLAINT_RESOLUTION_BAD ---
+  [1] NPS=5 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 6+
+      Original: "Kyunki aapki service bahut ghatiya hai complaint karte Hain to 48 ghante mein service milati hai call kar karke pagal Ho jaati Hai Lekin service sahi se nahin mil paati agar service acche mile to Apne"
+      Translated: "kyunki aapki service bahut awful/substandard hai complaint karte hain to 48 ghante mein service milati hai call kar karke pagal ho jaati hai lekin service sahi se nahin mil paati agar service acche mi"
+
+  [2] NPS=0 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 3–6
+      Original: "Is se ghatiya service maine aaj tak kisi wifi ki nahi dekhi,
+Ek hafte me 2-3 baar to kharab hota hi h,
+Chalta hi nahi signal nahi aate, complaint karo technician nahi aate, call centre baat karo to un"
+      Translated: "is se awful/substandard service maine aaj tak kisi wifi ki nahi dekhi,
+ek hafte me 2-3 baar to kharab hota hi h,
+does not work at all signal nahi aate, complaint karo technician nahi aate, call centre"
+
+  [3] NPS=0 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 1–2
+      Original: "Speed bhot slow complaint kro to koi response nahi milta is baja se"
+      Translated: "speed bhot slow complaint kro to koi response nahi milta is baja se"
+
+
+--- COMPLAINT_RESOLUTION_GOOD ---
+  [1] NPS=10 | Promoter | hinglish | negative | frustration | Delhi | Tenure: 6+
+      Original: "Sasta h or bohot use ka h network ache aate h koi dikkat ho jaaye toh turant a action le lete h or with in 10-15 min problem solve kr dete h service bohot achi h agr hamare contact me kisi ko wifi lgw"
+      Translated: "sasta h or bohot use ka h network ache aate h koi dikkat ho jaaye toh turant a action le lete h or with in 10-15 min problem solve kr dete h service bohot achi h agr hamare contact me kisi ko wifi lgw"
+
+  [2] NPS=10 | Promoter | hinglish | negative | frustration | Unknown | Tenure: nan
+      Original: "Wiom ek acha wifi hai net bhi fast hai our charges bhi kam hai Koi dikkat aati Hai to turant samasya ka kam hone lagta hai se hamen coupons bhi milte Hain 
+ Itna sab kuchh Kaun deta hai 
+ Maine pahle "
+      Translated: "wiom ek acha wifi hai net bhi fast hai our charges bhi kam hai koi dikkat aati hai to turant samasya ka kam hone lagta hai se hamen coupons bhi milte hain 
+ itna sab kuchh kaun deta hai 
+ maine pahle "
+
+  [3] NPS=10 | Promoter | hinglish | positive | satisfaction | Delhi | Tenure: 6+
+      Original: "Jaldi resolved ho gya h"
+      Translated: "jaldi resolved ho gya h"
+
+
+--- DISCONNECTION_FREQUENCY ---
+  [1] NPS=4 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 6+
+      Original: "Har 10 din me dikkat deta hai, complaint krne pe solution to mil jata ha but tab tak agar meeting bgera hoti ha to cancel ho jati ha ya krni pdti hai. Ye bar bar cheej hoti ha, baki speed bgera sab sa"
+      Translated: "har 10 din me dikkat deta hai, complaint krne pe solution to mil jata ha but tab tak agar meeting bgera hoti ha to cancel ho jati ha ya krni pdti hai. ye bar bar cheej hoti ha, baki speed bgera sab sa"
+
+  [2] NPS=3 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 3–6
+      Original: "Slow speed bar bar connection lose hona or uske tikh krne me bhot jada delay Krna ek month me 15 din WiFi me kuch na kuch issue rhta bs 15 din hi sahi chal pata h aapko apne service pe bhot kam krne k"
+      Translated: "slow speed bar bar connection lose hona or uske tikh krne me bhot jada delay krna ek month me 15 din wifi me kuch na kuch issue rhta bs 15 din hi sahi chal pata h aapko apne service pe bhot kam krne k"
+
+  [3] NPS=5 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 1–2
+      Original: "Kabhi kabhi kafi slow chalta hai daily night ek bar kuch der band hota ha"
+      Translated: "sometimes kafi slow chalta hai daily night ek bar kuch der band hota ha"
+
+
+--- GENERAL_NEGATIVE ---
+  [1] NPS=0 | Detractor | english | negative | anger | Delhi | Tenure: 1–2
+      Original: "Worst service internet is not working but they are insist to use and said it will be resolved soon
+ But thanks that my recharge came to an end in future i will never choose this pathetic internet serv"
+      Translated: "worst service internet is not working but they are insist to use and said it will be resolved soon
+ but thanks that my recharge came to an end in future i will never choose this pathetic internet serv"
+
+  [2] NPS=0 | Detractor | hinglish | negative | frustration | UP | Tenure: 6+
+      Original: "Sar mam problem network phone karte Hain Koi karyvahi nahin Hoti kya fayda isase to Koi aur company ka Wi-Fi lagva le Sabse Badi dikkat network ki hai Ruk Ruk kar chalna impossible hai 4G network firs"
+      Translated: "sar mam problem network phone karte hain koi karyvahi nahin hoti kya fayda isase to koi aur company ka wi-fi lagva le sabse badi dikkat network ki hai ruk ruk kar chalna impossible hai 4g network firs"
+
+  [3] NPS=0 | Detractor | english | negative | frustration | UP | Tenure: 6+
+      Original: "Bad service, scamers. No internet at all, I am gonna file a case"
+      Translated: "bad service, scamers. no internet at all, i am gonna file a case"
+
+
+--- GENERAL_POSITIVE ---
+  [1] NPS=10 | Promoter | english | positive | delight | Mumbai | Tenure: 6+
+      Original: "Wiom s network is very good ;it stops sometime but it's speed is excellent , and the sarvice is the best thank you wiom â˜ºï¸_x008f_ðŸ‘_x008d_"
+      Translated: "wiom s network is very good ;it stops sometime but it's speed is excellent , and the sarvice is the best thank you wiom â˜ºï¸_x008f_ðÿ‘_x008d_"
+
+  [2] NPS=5 | Detractor | english | positive | delight | Mumbai | Tenure: 6+
+      Original: "Wiom Internet service is best, but your technician behaviour is unsatisfied I lost 10 to 15 days behind faulty Wi-Fi router, solution received after your Delhi office involved. WIOM internet 10/10 . W"
+      Translated: "wiom internet service is best, but your technician behaviour is unsatisfied i lost 10 to 15 days behind faulty wi-fi router, solution received after your delhi office involved. wiom internet 10/10 . w"
+
+  [3] NPS=10 | Promoter | english | positive | delight | Delhi | Tenure: 3–6
+      Original: "Your service is good and speed to Awesome and I like Wiom"
+      Translated: "your service is good and speed to awesome and i like wiom"
+
+
+--- GOOD_SPEED ---
+  [1] NPS=10 | Promoter | hinglish | positive | satisfaction | Delhi | Tenure: 6+
+      Original: "Fast Service 
+ High Speed Network 24 hrs
+ Discount On Auto-pay on Recharge 
+ 4 Routers In just 550rs per Month"
+      Translated: "fast service 
+ high speed network 24 hrs
+ discount on auto-pay on recharge 
+ 4 routers in just 550rs per month"
+
+  [2] NPS=10 | Promoter | english | positive | delight | Delhi | Tenure: 6+
+      Original: "Continue service and fast speed and if there is any issue the response and resolution time is awesome.
+ Only issue is Invoice which is not downloadable we have to call everytime for this."
+      Translated: "continue service and fast speed and if there is any issue the response and resolution time is awesome.
+ only issue is invoice which is not downloadable we have to call everytime for this."
+
+  [3] NPS=9 | Promoter | hinglish | positive | satisfaction | Unknown | Tenure: nan
+      Original: "24 ghante service , fast speed"
+      Translated: "24 ghante service , fast speed"
+
+
+--- INTERNET_DOWN_OUTAGE ---
+  [1] NPS=0 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 6+
+      Original: "Nahi kahenge q ki immediately support team kaam nahi karti hai 5 din se Mera internet band Hai solution nahi Kar Rahe hai"
+      Translated: "nahi kahenge q ki immediately support team kaam nahi karti hai 5 din se mera internet band hai solution nahi kar rahe hai"
+
+  [2] NPS=0 | Detractor | english | negative | frustration | Delhi | Tenure: 6+
+      Original: "Net Providing System is not good and the problem solving team reaches after continuous efforts.....Today my net is not working since moring i have been complaning again and again but neither actions h"
+      Translated: "net providing system is not good and the problem solving team reaches after continuous efforts.....today my net is not working since moring i have been complaning again and again but neither actions h"
+
+  [3] NPS=10 | Promoter | hinglish | negative | frustration | Delhi | Tenure: 6+
+      Original: "Koi problem nhi ati network bhi acha he kabhi server down ka bahana nhi hota. Best he"
+      Translated: "koi problem nhi ati network bhi acha he kabhi server down ka bahana nhi hota. best he"
+
+
+--- OTT_CONTENT ---
+  [1] NPS=0 | Detractor | hinglish | positive | satisfaction | Delhi | Tenure: 1–2
+      Original: "Wiom team,
+Dil se bolu to 2 saal ka experience mere liye ek journey jaisa tha starting me maine aapki service ki tarif har jagah ki, apne YouTube channel par recommend bhi kiya, jisse aapke paas surel"
+      Translated: "wiom team,
+dil se bolu to 2 saal ka experience mere liye ek journey jaisa tha starting me maine aapki service ki tarif har jagah ki, apne youtube channel par recommend bhi kiya, jisse aapke paas surel"
+
+  [2] NPS=1 | Detractor | hinglish | negative | frustration | Unknown | Tenure: nan
+      Original: "Mujhe yah Jaise jio mein Jaise channel ka option aata Hai uska recharge aata hai ismein kya hai ismein vah chij hai nahin Jo TV ka connection De De yah channel dekh le"
+      Translated: "mujhe yah jaise jio mein jaise channel ka option aata hai uska recharge aata hai ismein kya hai ismein vah chij hai nahin jo tv ka connection de de yah channel dekh le"
+
+  [3] NPS=7 | Passive | hinglish | positive | indifference | Mumbai | Tenure: 1–2
+      Original: "500 me agar tv+ ott hona chahiye tha to or bhi behtr hota..."
+      Translated: "500 me agar tv+ ott hona chahiye tha to or bhi behtr hota..."
+
+
+--- PRICING_AFFORDABLE ---
+  [1] NPS=9 | Promoter | hinglish | positive | satisfaction | Unknown | Tenure: nan
+      Original: "Kyuki Sab Kuch Free of Cost Hai Koi Extra Charges Nhi ! Or Speed Bhi Achi Hai"
+      Translated: "kyuki sab kuch free of cost hai koi extra charges nhi ! or speed bhi achi hai"
+
+  [2] NPS=10 | Promoter | hinglish | positive | delight | Delhi | Tenure: 6+
+      Original: "Kyoki yai best connection hai or iske network bhtt ache hai kbhi koi problem nahi aati or sbse Maine point hai sbse sasta hai sabse"
+      Translated: "kyoki yai best connection hai or iske network bhtt ache hai kbhi no problems aati or sbse maine point hai sbse is affordable/cheap sabse"
+
+  [3] NPS=10 | Promoter | hinglish | positive | satisfaction | Unknown | Tenure: nan
+      Original: "Bahut aacha aur bahut sasta hai sab koi use kar sakta hai"
+      Translated: "bahut aacha aur bahut is affordable/cheap sab koi use kar sakta hai"
+
+
+--- PRICING_EXPENSIVE ---
+  [1] NPS=5 | Detractor | english | negative | frustration | UP | Tenure: 3–6
+      Original: "Though your wifi provides good services but there is no option to use our own router to get price lower. Also your wifi is little expensive than others."
+      Translated: "though your wifi provides good services but there is no option to use our own router to get price lower. also your wifi is little expensive than others."
+
+  [2] NPS=7 | Passive | hinglish | positive | satisfaction | Mumbai | Tenure: 6+
+      Original: "Q ki nework acha h or kabhi internet issues aaya to b solve kr dete hai ek call pr mtlb fast service bhi hai bs dikkat hai to recharge me q ki recharge plan jyada mehenga h baaki wifi ke mukaable 400 "
+      Translated: "q ki nework acha h or kabhi internet issues aaya to b solve kr dete hai ek call pr mtlb fast service bhi hai bs there is a problem to recharge me q ki recharge plan jyada mehenga h baaki wifi ke mukaa"
+
+  [3] NPS=0 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 3–6
+      Original: "Recharge amount so costly comparision other network"
+      Translated: "recharge amount so costly comparision other network"
+
+
+--- RANGE_COVERAGE ---
+  [1] NPS=2 | Detractor | english | positive | satisfaction | UP | Tenure: 3–6
+      Original: "The router is placed slightly far from room, using 2.4G wifi is the option, that gives slow speed, it just stops for a couple of minutes and works again. And Wiom has the worst coverage under 5G netwo"
+      Translated: "the router is placed slightly far from room, using 2.4g wifi is the option, that gives slow speed, it just stops for a couple of minutes and works again. and wiom has the worst coverage under 5g netwo"
+
+  [2] NPS=5 | Detractor | hinglish | negative | frustration | Unknown | Tenure: nan
+      Original: "5 isliye diya ye free lag jaata hai bas recharge ke paise dene hote hai ye to sahi par kuch na kuch dikkat isme aati rehti hai jaise 2g network ka kaam na karna door me bhi paas me bhi 30 main se 8 di"
+      Translated: "5 isliye diya ye free lag jaata hai bas recharge ke paise dene hote hai ye to sahi par kuch na kuch dikkat isme aati rehti hai jaise 2g network ka kaam na karna door me bhi paas me bhi 30 main se 8 di"
+
+  [3] NPS=0 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 1–2
+      Original: "Range kam hai bhot ek room se doosre room Tak nahi ja pati hai agar range thik ho gaye to thik hai phir"
+      Translated: "range kam hai bhot ek room se doosre room tak nahi ja pati hai agar range thik ho gaye to is okay phir"
+
+
+--- RDNI_RECHARGE_NO_INTERNET ---
+  [1] NPS=0 | Detractor | hinglish | negative | frustration | Unknown | Tenure: nan
+      Original: "Bahut hi bekar wifi hai
+ Maine recharge kiya lekin mera wifi nahi chal rha hai 1 month to thik chala dusre month recharge karba ne ke baad internet nhi chal raha hai na to iska service barya hai"
+      Translated: "bahut hi bekar wifi hai
+ maine recharge kiya lekin mera wifi nahi chal rha hai 1 month to thik chala dusre month recharge karba ne ke baad internet nhi chal raha hai na to iska service barya hai"
+
+  [2] NPS=0 | Detractor | english | positive | satisfaction | Delhi | Tenure: 6+
+      Original: "I have recharge 28/08/2025 but still my internet service is not active, I m unable to use internet after recharge done, i have complete many time customer care, but they said our team is working for i"
+      Translated: "i have recharge 28/08/2025 but still my internet service is not active, i m unable to use internet after recharge done, i have complete many time customer care, but they said our team is working for i"
+
+  [3] NPS=7 | Passive | hinglish | positive | satisfaction | Delhi | Tenure: 1–2
+      Original: "Mere ghar ka WiFi nahi chala raha hai sahi se internet seepd nahi aarahi hai"
+      Translated: "mere ghar ka wifi nahi chala raha hai sahi se internet seepd nahi aarahi hai"
+
+
+--- ROUTER_DEVICE ---
+  [1] NPS=0 | Detractor | english | negative | frustration | Delhi | Tenure: 1–2
+      Original: "Bad Wi-Fi feedback can be caused by poor router placement, signal interference, and too many connected devices. To fix it, try restarting your modem, moving the router to a more central and open locat"
+      Translated: "bad wi-fi feedback can be caused by poor router placement, signal interference, and too many connected devices. to fix it, try restarting your modem, moving the router to a more central and open locat"
+
+  [2] NPS=0 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 6+
+      Original: "Pichle 10 din wifi router me red light show ho rha h aaj tak koi nhi aaya banane mera recharge ka paisa bhi dub gya koi matlab lena wiom connection bhulke bhi pastaoge koi dekhne wala nhi net nhi aaya"
+      Translated: "pichle 10 din wifi router me red light show ho rha h aaj tak koi nhi aaya banane mera recharge ka paisa bhi dub gya koi matlab lena wiom connection bhulke bhi pastaoge koi dekhne wala nhi net nhi aaya"
+
+  [3] NPS=2 | Detractor | english | negative | frustration | Delhi | Tenure: 1–2
+      Original: "Red light blink problem"
+      Translated: "red light blink problem"
+
+
+--- SHIFTING_RELOCATION ---
+  [1] NPS=0 | Detractor | english | negative | indifference | Delhi | Tenure: 3–6
+      Original: "We have requested for shifting but we have given a time period of 12 days"
+      Translated: "we have requested for shifting but we have given a time period of 12 days"
+
+  [2] NPS=0 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 1–2
+      Original: "Sarvice bahut buri h
+ Bikul bakbas bahut buri sarvice bakbas 
+ Bahut bura h itni buri sarvice kisi ki nhi h meri shifting ki complent h abhi tk nhi solbh huyi h"
+      Translated: "sarvice bahut buri h
+ bikul bakbas bahut buri sarvice bakbas 
+ bahut bura h itni buri sarvice kisi ki nhi h meri shifting ki complent h abhi tk nhi solbh huyi h"
+
+  [3] NPS=0 | Detractor | english | negative | frustration | Delhi | Tenure: 3–6
+      Original: "Net is poor or shifting kar diya vese lgana hoga to bta denge"
+      Translated: "net is poor or shifting kar diya vese lgana hoga to bta denge"
+
+
+--- SLOW_SPEED ---
+  [1] NPS=2 | Detractor | hinglish | negative | frustration | Delhi | Tenure: 3–6
+      Original: "Bohot baar complaint kri koi solution nhi nikala.. apne aap ruk jaata h bich bich m . Or downloading speed Kam h Boht . Starting m bola tha 100 mbps speed hogi but aaati 5 ya 6 hi h . Complaint krte k"
+      Translated: "bohot baar complaint kri koi solution nhi nikala.. apne aap ruk jaata h bich bich m . or downloading speed kam h boht . starting m bola tha 100 mbps speed hogi but aaati 5 ya 6 hi h . complaint krte k"
+
+  [2] NPS=0 | Detractor | english | positive | satisfaction | Delhi | Tenure: 3–6
+      Original: "The youtube of mobile work slow downloading speed is good but when I play game it gives wrost network"
+      Translated: "the youtube of mobile work slow downloading speed is good but when i play game it gives wrost network"
+
+  [3] NPS=7 | Passive | hinglish | negative | frustration | Delhi | Tenure: 6+
+      Original: "Timing buffering downloading and Netflix net slow"
+      Translated: "timing buffering downloading and netflix net slow"
+
+
+--- TECHNICIAN_PARTNER_BAD ---
+  [1] NPS=10 | Promoter | hinglish | positive | delight | Delhi | Tenure: 1–2
+      Original: "Ye score dene ki sabse badi 
+Vjha hai ki wiom bhut kam pese me hame ek bhadhiya connection provide karta hai or ager koi dikhat a jati hai to wiom ki 
+Taraf se turant technician visit kerta hai jo sab"
+      Translated: "ye score dene ki sabse badi 
+vjha hai ki wiom bhut kam pese me hame ek bhadhiya connection provide karta hai or ager koi dikhat a jati hai to wiom ki 
+taraf se turant technician visit kerta hai jo sab"
+
+  [2] NPS=0 | Detractor | english | negative | frustration | UP | Tenure: 3–6
+      Original: "Bekar net h ekdum , technicians bolte h ate hi ni h location pe call kro to bhaiya aarahe h bolte h"
+      Translated: "bekar net h ekdum , technicians bolte h ate hi ni h location pe call kro to bhaiya aarahe h bolte h"
+
+  [3] NPS=0 | Detractor | english | negative | anger | Delhi | Tenure: 3–6
+      Original: "Worst customer service and technician refuse to come"
+      Translated: "worst customer service and technician refuse to come"
+
+
+--- TECHNICIAN_PARTNER_GOOD ---
+  [1] NPS=10 | Promoter | hinglish | positive | indifference | Delhi | Tenure: 1–2
+      Original: "Kyunki jaldi installation Ho Gaya"
+      Translated: "kyunki jaldi installation ho gaya"
+
+
+======================================================================
+EMERGENT THEME CODEBOOK
+======================================================================
+
+NEGATIVE EXPERIENCE THEMES:
+----------------------------------------
+
+  Theme: disconnection_frequency
+  Category: Bad Internet Experience
+  Count: 676 (12.3%)
+  Description: Frequent internet disconnections, unstable connection, network dropping repeatedly
+  Top words: network(303), problem(146), bar(122), jata(102), chalta(96), connection(91), din(87), working(79), band(77), stops(64)
+
+  Theme: slow_speed
+  Category: Bad Internet Experience
+  Count: 877 (16.0%)
+  Description: Internet speed is slow, buffering, loading issues, speed below expectations
+  Top words: speed(673), slow(307), aati(165), network(115), good(97), chalta(75), problem(52), sometimes(42), connection(38), sahi(37)
+
+  Theme: internet_down_outage
+  Category: Bad Internet Experience
+  Count: 147 (2.7%)
+  Description: Internet completely not working, server down, extended outage periods
+  Top words: working(76), problem(59), down(25), time(25), network(15), properly(14), days(11), din(10), good(9), issue(8)
+
+  Theme: range_coverage
+  Category: Bad Internet Experience
+  Count: 169 (3.1%)
+  Description: WiFi signal weak, does not reach other rooms, limited range from router
+  Top words: range(155), aati(98), network(22), sahi(9), room(9), kaam(7), din(6), okay(6), floor(6), recharge(5)
+
+  Theme: complaint_resolution_bad
+  Category: Bad CX Support
+  Count: 161 (2.9%)
+  Description: Complaints not resolved, no response after raising issue, pending resolution, delayed fixes
+  Top words: complaint(86), issue(37), din(36), time(26), call(24), network(22), baar(22), problem(20), mahine(19), connection(17)
+
+  Theme: call_center_bad
+  Category: Bad CX Support
+  Count: 21 (0.4%)
+  Description: Call center not picking up, customer care not responsive, support staff unhelpful
+  Top words: customer(17), care(17), number(7), baat(5), network(5), support(4), recharge(4), नहीं(4), problem(3), है।(3)
+
+  Theme: technician_partner_bad
+  Category: Bad CX Support
+  Count: 17 (0.3%)
+  Description: Field technician not visiting, late arrival, poor quality work, rude behavior
+  Top words: aata(7), technician(5), din(3), problem(3), good(3), connection(3), ott(3), app(3), technicians(2), bolte(2)
+
+  Theme: pricing_expensive
+  Category: Offering/Plan Dissatisfaction
+  Count: 45 (0.8%)
+  Description: Service considered expensive, high charges, price not justified for quality
+  Top words: recharge(10), amount(7), cost(6), expensive(6), plan(5), costly(5), members(5), high(4), price(3), charges(3)
+
+  Theme: billing_28day
+  Category: Offering/Plan Dissatisfaction
+  Count: 57 (1.0%)
+  Description: 28-day billing cycle instead of calendar month, customers feel cheated paying for 13 months/year
+  Top words: recharge(33), din(32), days(21), day(17), plan(15), month(9), liye(7), mahine(6), work(6), chalta(5)
+
+  Theme: rdni_recharge_no_internet
+  Category: Bad Service
+  Count: 5 (0.1%)
+  Description: Customer recharged/paid but internet did not activate or still not working
+  Top words: recharge(5), kiya(3), chal(2), month(2), chala(2), use(2), customer(2), care(2), bekar(1), maine(1)
+
+  Theme: general_negative
+  Category: Bad Internet Experience
+  Count: 198 (3.6%)
+  Description: General negative sentiment about service without specifying particular issue
+  Top words: bad(121), bekar(47), network(34), problem(16), worst(15), din(13), services(12), useless(11), sarvice(10), connection(9)
+
+  Theme: app_tech_issues
+  Category: Application/Tech
+  Count: 21 (0.4%)
+  Description: App not working, recharge option missing, app crashes or errors
+  Top words: app(8), recharge(7), rha(5), network(5), change(4), problem(4), chalta(4), sahi(4), karo(3), always(3)
+
+  Theme: shifting_relocation
+  Category: Offering/Plan Dissatisfaction
+  Count: 6 (0.1%)
+  Description: Connection transfer not feasible when customer relocates
+  Top words: shifting(3), sarvice(3), area(2), bakbas(2), engineer(1), available(1), bilkul(1), galti(1), get(1), removed(1)
+
+  Theme: router_device
+  Category: Bad Internet Experience
+  Count: 26 (0.5%)
+  Description: Issues with router hardware — lights, power, restarting, cable problems
+  Top words: router(14), light(8), red(7), problem(6), baar(5), connection(5), connect(4), network(4), restart(4), bar(4)
+
+POSITIVE EXPERIENCE THEMES:
+----------------------------------------
+
+  Theme: general_positive
+  Category: Good Internet Experience
+  Count: 999 (18.2%)
+  Description: General positive sentiment — good service, satisfied, happy with Wiom
+  Top words: good(494), great(241), works(219), best(144), network(94), nice(65), badiya(26), connection(20), badhiya(20), problem(18)
+
+  Theme: good_speed
+  Category: Good Internet Experience
+  Count: 67 (1.2%)
+  Description: Explicit praise for fast internet speed
+  Top words: fast(59), good(12), speed(10), network(9), jaldi(7), chalta(5), problem(5), time(4), price(4), work(4)
+
+  Theme: pricing_affordable
+  Category: Good Price
+  Count: 109 (2.0%)
+  Description: Appreciation of affordable pricing, value for money, low cost
+  Top words: affordable(26), price(23), good(22), budget(22), sasta(21), cheap(17), network(12), plan(10), reasonable(9), connection(8)
+
+  Theme: complaint_resolution_good
+  Category: Good CX Support
+  Count: 10 (0.2%)
+  Description: Complaints resolved quickly, fast issue resolution
+  Top words: problem(6), network(5), turant(5), solve(4), hone(4), dikkat(3), jaldi(3), amount(2), sahi(2), fast(2)
+
+  Theme: call_center_good
+  Category: Good CX Support
+  Count: 9 (0.2%)
+  Description: Good customer support experience, helpful call center
+  Top words: staff(4), good(3), team(2), care(2), krne(2), kaam(2), krta(2), support(1), noce(1), seevice(1)
+
+  Theme: technician_partner_good
+  Category: Good CX Support
+  Count: 1 (0.0%)
+  Description: Positive experience with field technician, good installation, quick visit
+  Top words: jaldi(1), installation(1), gaya(1)
+
+OTHER THEMES:
+----------------------------------------
+
+  Theme: ott_content
+  Category: Feature Request
+  Count: 24 (0.4%)
+  Description: OTT/streaming content requests or complaints
+
+  Theme: autopay_payment_mode
+  Category: Payment
+  Count: 15 (0.3%)
+  Description: Comments about payment methods — autopay, UPI, cash
+
+  Theme: competitor_comparison
+  Category: Competitive
+  Count: 20 (0.4%)
+  Description: Comparisons with JioFiber, Airtel, or other providers
+
+======================================================================
+UNCLASSIFIED COMMENT ANALYSIS
+======================================================================
+Total unclassified: 1808 (32.9%)
+
+NPS Group distribution of unclassified:
+  Detractor: 895 (49.5%)
+  Promoter: 788 (43.6%)
+  Passive: 125 (6.9%)
+
+Top 30 words in unclassified comments:
+  stops                    : 304
+  jaata                    : 290
+  running                  : 286
+  रुक                      : 187
+  चलता                     : 171
+  है।                      : 149
+  दिक्कत                   : 144
+  ठीक                      : 136
+  नेट                      : 120
+  नहीं                     : 119
+  में                      : 93
+  जल्दी                    : 85
+  chalta                   : 77
+  कभी                      : 69
+  बहुत                     : 65
+  हैं                      : 64
+  बढ़िया                   : 62
+  sahi                     : 55
+  सर्विस                   : 52
+  होने                     : 45
+  chal                     : 45
+  दिन                      : 43
+  poor                     : 43
+  बार                      : 43
+  प्लान                    : 41
+  कोई                      : 41
+  इंटरनेट                  : 38
+  achcha                   : 38
+  लगी                      : 37
+  किफ़ायती                 : 36
+
+Sample unclassified comments (first 20):
+  [1] NPS=3 | Detractor | "“पहले पूरा महीना-प्लान लागू रहता था। फिर उसे 28 दिन कर दिया गया। उसके बाद 25 दिन कर दिया गया। अब तो वर्तमान में 19 तारीख"
+  [2] NPS=0 | Detractor | "“क्योंकि चार्ज पूरे महीने का सेवायें मात्र 28 दिन या इससे कम दिन की हैं, यह तो अपने ग्राहकों से ठगी करना होगा।”"
+  [3] NPS=0 | Detractor | "28 दिन ही मिलता है, जबकि 1 महीने का बोलते हैं। और नेटवर्क भी बहुत गंदा है, बहुत स्लो है।"
+  [4] NPS=10 | Promoter | "500 handuder stolmant de raha hai"
+  [5] NPS=8 | Passive | "Hame sirf net ka hi richarge dene hote hai"
+  [6] NPS=10 | Promoter | "कोई फ़ालतू खर्चा नहीं, कोई सरदर्द नहीं।
+रिचार्ज खत्म हो जाए तो जब मन करे तब रिचार्ज करो और एन्जॉय करो।"
+  [7] NPS=10 | Promoter | "Afordable"
+  [8] NPS=0 | Detractor | "Wajah ye hai ki itna jhantu wifi hai ki 3 din se chla nhi hai aur har week me wifi ki ma khud jati h"
+  [9] NPS=10 | Promoter | "Discount accha milta h"
+  [10] NPS=10 | Promoter | "Discuant bhi milta hai"
+  [11] NPS=10 | Promoter | "Economy"
+  [12] NPS=10 | Promoter | "Esme jada khrcha ni hi"
+  [13] NPS=10 | Promoter | "Wiom ka Internet sabse acha aur sabse sashta hai 
+ Is liye hum apne rishte dar aur doshton ko wiom wifi internet lagwane"
+  [14] NPS=6 | Detractor | "Chalte Chalte band ho jaata hai"
+  [15] NPS=10 | Promoter | "इसमें सीधा किराया लिया जाता है, ज़्यादा खर्चा नहीं होता।"
+  [16] NPS=8 | Passive | "क्योंकि मोबाइल में बिना डेटा वाले रिचार्ज प्लान बहुत सस्ते नहीं होते, इसलिए मोबाइल रिचार्ज तो करना ही पड़ता है, जिसमें इ"
+  [17] NPS=7 | Passive | "Monthly pack ka rate kaam kre bs 500 hona chahiye"
+  [18] NPS=10 | Promoter | "Kam kimat hai"
+  [19] NPS=10 | Promoter | "Ap achhi trh se hme canection de khrab ho jane pe jldi theek kren
+ Thanks"
+  [20] NPS=10 | Promoter | "Kam paison mein achcha WiFi"
+
+======================================================================
+CROSS-VALIDATION: Our Themes vs Existing Pre-Coded Categories
+======================================================================
+
+Mapping between our emergent themes and Wiom's existing 'NPS Reason - Primary' codes:
+
+Rows with both theme and pre-code: 3627
+
+  app_tech_issues:
+    -> Frequent Disconnections: 4
+    -> General Bad Service: 4
+    -> Bad Application: 3
+    -> No/ Late Complaint Resolution: 2
+    -> Expensive: 1
+
+  autopay_payment_mode:
+    -> Affordable: 2
+    -> Expensive: 2
+    -> Bad Customer Support - Call Centre: 2
+    -> RDNI (Recharge Done, No Internet): 2
+    -> Bad Application: 1
+
+  billing_28day:
+    -> 28-Day Plan Issue: 18
+    -> General Bad Service: 7
+    -> Frequent Disconnections: 6
+    -> RDNI (Recharge Done, No Internet): 5
+    -> Internet Down: 5
+
+  call_center_bad:
+    -> Good Customer Support - Call Centre: 7
+    -> Bad Customer Support - Call Centre: 6
+    -> Frequent Disconnections: 4
+    -> General Good Service: 1
+    -> Internet Down: 1
+
+  call_center_good:
+    -> Good Customer Support - Call Centre: 3
+    -> General Good Service: 2
+    -> General Bad Service: 1
+    -> Bad Customer Support - Call Centre: 1
+    -> No/ Late Complaint Resolution: 1
+
+  competitor_comparison:
+    -> General Good Service: 4
+    -> General Bad Service: 2
+    -> Frequent Disconnections: 2
+    -> RDNI (Recharge Done, No Internet): 2
+    -> Bad Customer Support - Call Centre: 2
+
+  complaint_resolution_bad:
+    -> Frequent Disconnections: 49
+    -> General Bad Service: 26
+    -> No/ Late Complaint Resolution: 21
+    -> Bad Customer Support - Call Centre: 17
+    -> Slow Speed: 13
+
+  complaint_resolution_good:
+    -> Good Customer Support - Call Centre: 5
+    -> Affordable: 3
+    -> No/ Late Complaint Resolution: 1
+
+  disconnection_frequency:
+    -> Frequent Disconnections: 243
+    -> General Bad Service: 190
+    -> General Good Service: 94
+    -> Slow Speed: 58
+    -> No/ Late Complaint Resolution: 13
+
+  general_negative:
+    -> General Bad Service: 155
+    -> Frequent Disconnections: 15
+    -> Bad Customer Support - Call Centre: 8
+    -> No/ Late Complaint Resolution: 3
+    -> Slow Speed: 3
+
+  general_positive:
+    -> General Good Service: 866
+    -> General Bad Service: 56
+    -> Affordable: 23
+    -> Good Speed: 14
+    -> Frequent Disconnections: 12
+
+  good_speed:
+    -> Good Speed: 39
+    -> General Good Service: 7
+    -> Affordable: 7
+    -> Frequent Disconnections: 3
+    -> Good Customer Support - Call Centre: 2
+
+  internet_down_outage:
+    -> Frequent Disconnections: 49
+    -> General Bad Service: 38
+    -> Internet Down: 23
+    -> General Good Service: 11
+    -> No/ Late Complaint Resolution: 5
+
+  ott_content:
+    -> General Bad Service: 7
+    -> OTT Request, No OTT complaint: 6
+    -> Slow Speed: 3
+    -> Frequent Disconnections: 2
+    -> General Good Service: 2
+
+  pricing_affordable:
+    -> Affordable: 90
+    -> Expensive: 5
+    -> General Good Service: 4
+    -> General Bad Service: 3
+    -> Frequent Disconnections: 3
+
+  pricing_expensive:
+    -> Expensive: 16
+    -> Affordable: 12
+    -> General Good Service: 4
+    -> General Bad Service: 3
+    -> Good Customer Support - Call Centre: 2
+
+  range_coverage:
+    -> Range Issue: 148
+    -> General Good Service: 5
+    -> Frequent Disconnections: 4
+    -> General Bad Service: 2
+    -> RDNI (Recharge Done, No Internet): 2
+
+  rdni_recharge_no_internet:
+    -> RDNI (Recharge Done, No Internet): 2
+    -> Slow Speed: 1
+    -> General Bad Service: 1
+    -> Shifting not Feasible: 1
+
+  router_device:
+    -> General Bad Service: 9
+    -> Frequent Disconnections: 3
+    -> Affordable: 2
+    -> Slow Speed: 2
+    -> Internet Down: 2
+
+  shifting_relocation:
+    -> General Bad Service: 2
+    -> Shifting not Feasible: 2
+    -> Bad Customer Support - Technician: 1
+    -> Range Issue: 1
+
+  slow_speed:
+    -> Slow Speed: 650
+    -> Good Speed: 160
+    -> Frequent Disconnections: 20
+    -> General Good Service: 13
+    -> Affordable: 9
+
+  technician_partner_bad:
+    -> Bad Customer Support - Technician: 3
+    -> Frequent Disconnections: 3
+    -> General Good Service: 3
+    -> General Bad Service: 2
+    -> Fast Complaint Resolution: 1
+
+  technician_partner_good:
+    -> Quick Installation: 1
+
+
+======================================================================
+KEY FINDINGS SUMMARY
+======================================================================
+
+1. HIGHEST CHURN THEMES (actionable intervention targets):
+   router_device                           : 38.5% churn (n=26)
+   call_center_bad                         : 38.1% churn (n=21)
+   billing_28day                           : 31.6% churn (n=57)
+   pricing_expensive                       : 28.9% churn (n=45)
+   general_negative                        : 27.3% churn (n=198)
+   range_coverage                          : 21.9% churn (n=169)
+   unclassified                            : 20.8% churn (n=1808)
+   complaint_resolution_bad                : 20.5% churn (n=161)
+   internet_down_outage                    : 19.7% churn (n=147)
+   slow_speed                              : 17.8% churn (n=877)
+
+2. MOST COMMON DETRACTOR THEMES (volume-based priority):
+   unclassified                            :   895 (30.6% of Detractors)
+   slow_speed                              :   543 (18.6% of Detractors)
+   disconnection_frequency                 :   510 (17.4% of Detractors)
+   general_positive                        :   209 (7.1% of Detractors)
+   general_negative                        :   192 (6.6% of Detractors)
+   complaint_resolution_bad                :   137 (4.7% of Detractors)
+   internet_down_outage                    :   122 (4.2% of Detractors)
+   range_coverage                          :   103 (3.5% of Detractors)
+   billing_28day                           :    42 (1.4% of Detractors)
+   pricing_expensive                       :    23 (0.8% of Detractors)
+
+3. THEME OVERLAP (multi-issue customers):
+   1584 comments (28.9%) mention 2+ themes
+   Most common primary+secondary combinations:
+   disconnection_frequency + internet_down_outage: 127
+   general_positive + disconnection_frequency: 101
+   slow_speed + disconnection_frequency: 88
+   slow_speed + general_positive: 77
+   disconnection_frequency + slow_speed: 57
+   slow_speed + good_speed: 54
+   slow_speed + internet_down_outage: 50
+   general_positive + general_negative: 47
+   general_negative + disconnection_frequency: 44
+   slow_speed + general_negative: 30
+   disconnection_frequency + complaint_resolution_bad: 30
+   complaint_resolution_bad + disconnection_frequency: 28
+   slow_speed + range_coverage: 27
+   pricing_affordable + general_positive: 26
+   good_speed + complaint_resolution_good: 24
+
+4. SENTIMENT VALIDATION:
+   Themes where sentiment aligns with expectation (high confidence):
+   disconnection_frequency                 : 74% negative, 22% positive
+   slow_speed                              : 52% negative, 43% positive
+   general_positive                        : 5% negative, 94% positive
+   good_speed                              : 10% negative, 90% positive
+   pricing_affordable                      : 9% negative, 89% positive
+
+5. THEMES BY CITY (differential priorities):
+
+   Delhi — Top Detractor themes:
+     unclassified                            : 687
+     slow_speed                              : 406
+     disconnection_frequency                 : 378
+     general_positive                        : 169
+     general_negative                        : 144
+
+   Mumbai — Top Detractor themes:
+     unclassified                            : 49
+     slow_speed                              : 29
+     disconnection_frequency                 : 27
+     general_positive                        : 16
+     complaint_resolution_bad                : 14
+
+   UP — Top Detractor themes:
+     unclassified                            : 105
+     slow_speed                              : 57
+     disconnection_frequency                 : 52
+     general_negative                        : 20
+     general_positive                        : 13

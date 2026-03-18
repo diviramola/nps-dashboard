@@ -1,0 +1,30 @@
+# Data files (too large for git, contain customer data)
+data/*.csv
+data/*.xlsx
+
+# Output files with customer data
+output/churn_risk_scores.csv
+
+# Credentials & auth
+credentials.json
+authorized_user.json
+*.env
+metabase_key.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

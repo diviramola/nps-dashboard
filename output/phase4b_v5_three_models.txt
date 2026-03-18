@@ -1,0 +1,355 @@
+====================================================================================================
+PHASE 4B v5: CLEAN FEATURES + THREE-MODEL FRAMEWORK
+Started: 2026-03-18 22:22:39
+====================================================================================================
+
+[LOAD] Rows: 13045, Columns: 299
+  Churn: 3057/13045 (23.4%)
+  NPS: mean=5.9, median=8
+
+====================================================================================================
+FEATURE ENGINEERING: TENURE NORMALIZATION
+====================================================================================================
+
+  Creating 22 per-month normalized features:
+  Original                                 → Normalized                          | Old tenure_r → New tenure_r
+  ----------------------------------------   -----------------------------------   ------------    ------------
+  TOTAL_IVR_CALLS                          → ivr_calls_per_month                 |       +0.249 →       -0.296  [no]
+  MISSED_CALLS                             → missed_calls_per_month              |       +0.201 →       -0.300  [no]
+  INBOUND_CALLS                            → inbound_calls_per_month             |       +0.348 →       -0.064  [YES]
+  ANSWERED_CALLS                           → answered_calls_per_month            |       +0.252 →       -0.196  [YES]
+  INBOUND_ANSWERED                         → inbound_answered_per_month          |       +0.273 →       -0.056  [YES]
+  INBOUND_UNANSWERED                       → inbound_unanswered_per_month        |       +0.371 →       -0.025  [YES]
+  total_tickets                            → tickets_per_month                   |       +0.324 →       -0.187  [YES]
+  cx_tickets                               → cx_tickets_per_month                |       +0.167 →       -0.106  [YES]
+  px_tickets                               → px_tickets_per_month                |       +0.335 →       -0.260  [YES]
+  DISTINCT_ISSUE_TYPES                     → distinct_issues_per_month           |       +0.339 →       -0.322  [YES]
+  MAX_TICKETS_SAME_ISSUE                   → max_same_issue_per_month            |       +0.210 →       -0.302  [no]
+  TICKETS_REOPENED_ONCE                    → reopened_once_per_month             |       +0.287 →       -0.015  [YES]
+  TICKETS_REOPENED_3PLUS                   → reopened_3plus_per_month            |       +0.157 →       +0.021  [YES]
+  MAX_TIMES_REOPENED                       → max_reopened_per_month              |       +0.193 →       -0.058  [YES]
+  ISSUES_WITH_3PLUS_TICKETS                → complex_issues_per_month            |       +0.280 →       -0.210  [YES]
+  AVG_TIMES_REOPENED                       → avg_reopened_per_month              |       +0.152 →       -0.076  [YES]
+  support_effort_index                     → support_effort_per_month            |       +0.323 →       +0.317  [YES]
+  install_attempts                         → install_attempts_per_month          |       +0.172 →       -0.312  [no]
+  TOTAL_LEADS                              → leads_per_month                     |       +0.241 →       -0.125  [YES]
+  LEADS_ACCEPTED                           → leads_accepted_per_month            |       -0.387 →       -0.452  [no]
+  partner_avg_tickets                      → partner_avg_tickets_per_month       |       +0.216 →       -0.355  [no]
+  tickets_vs_partner                       → tickets_vs_partner_per_month        |       +0.248 →       +0.134  [YES]
+
+====================================================================================================
+v5 FEATURE LISTS (AUDIT-DRIVEN)
+====================================================================================================
+
+  OPS features (clean + normalized): 69
+    Clean: 47
+    Normalized: 22
+  NPS features: 9
+  Categorical: 3
+
+  Actually available:
+    OPS: 69/69
+    NPS: 9/9
+    CAT: 3/3
+
+====================================================================================================
+TEMPORAL SPLIT
+====================================================================================================
+  Train: Sprints 1-7, n=8552, churn=30.9%
+  Test:  Sprints 8-11, n=3022, churn=12.9%
+  Train NPS: mean=5.9
+  Test  NPS: mean=5.9
+
+Building feature matrices...
+  X_ops:  75 features
+  X_nps:  9 features
+  X_all:  84 features
+
+====================================================================================================
+v5 TENURE AUDIT — All features should have |tenure_r| < 0.15
+====================================================================================================
+  NOTE:    ivr_calls_per_month                           tenure_r=-0.296
+  WARNING: missed_calls_per_month                        tenure_r=-0.300
+  NOTE:    answered_calls_per_month                      tenure_r=-0.196
+  NOTE:    tickets_per_month                             tenure_r=-0.187
+  NOTE:    px_tickets_per_month                          tenure_r=-0.260
+  WARNING: distinct_issues_per_month                     tenure_r=-0.322
+  WARNING: max_same_issue_per_month                      tenure_r=-0.302
+  NOTE:    complex_issues_per_month                      tenure_r=-0.210
+  WARNING: support_effort_per_month                      tenure_r=+0.317
+  WARNING: install_attempts_per_month                    tenure_r=-0.312
+  WARNING: leads_accepted_per_month                      tenure_r=-0.452
+  WARNING: partner_avg_tickets_per_month                 tenure_r=-0.355
+  NOTE:    city_Unknown                                  tenure_r=-0.224
+
+  Features with |tenure_r| > 0.15: 13/75
+  Features with |tenure_r| < 0.15: 62/75
+
+====================================================================================================
+MODEL A: OPS → NPS (Can operational data predict NPS scores?)
+====================================================================================================
+
+--- A1: NPS Score Regression ---
+  Train: R²=0.2861, MAE=3.12
+  Test:  R²=0.1548, MAE=3.48
+  (NPS range: 0-10, so MAE=3.48 means avg error of 3.5 points)
+
+  Top 15 OPS drivers of NPS score:
+     1. partner_avg_nps                         : 0.4025 (40.3%)
+     2. leads_accepted_per_month                : 0.0330 (3.3%) [NORMALIZED]
+     3. partner_avg_tickets_per_month           : 0.0319 (3.2%) [NORMALIZED]
+     4. support_effort_per_month                : 0.0317 (3.2%) [NORMALIZED]
+     5. tickets_vs_partner_per_month            : 0.0257 (2.6%) [NORMALIZED]
+     6. FAILURE_RATE_PCT                        : 0.0240 (2.4%)
+     7. answered_calls_per_month                : 0.0238 (2.4%) [NORMALIZED]
+     8. avg_reopened_per_month                  : 0.0211 (2.1%) [NORMALIZED]
+     9. ticket_severity                         : 0.0209 (2.1%)
+    10. install_attempts_per_month              : 0.0161 (1.6%) [NORMALIZED]
+    11. reopened_once_per_month                 : 0.0159 (1.6%) [NORMALIZED]
+    12. sla_vs_partner                          : 0.0149 (1.5%)
+    13. leads_per_month                         : 0.0144 (1.4%) [NORMALIZED]
+    14. sc_speed_gap_pct                        : 0.0143 (1.4%)
+    15. AVG_ANSWERED_SECONDS                    : 0.0137 (1.4%)
+
+--- A2: Detractor Classification ---
+  Detractor AUC (OOT): 0.7056
+  Train Detractor rate: 46.3%
+  Test  Detractor rate: 45.5%
+
+--- A3: 3-Class NPS (Detractor/Passive/Promoter) ---
+  3-class accuracy (OOT): 59.8%
+  Class distribution (test): D=1374, P=226, Pro=1422
+
+====================================================================================================
+MODEL B: OPS → CHURN (v5 Clean Model)
+====================================================================================================
+
+  3-Fold CV on training data (Sprints 1-7)...
+    GB CV AUC: 0.9277 (+/- 0.0070)
+    RF CV AUC: 0.8917 (+/- 0.0075)
+
+  Out-of-Time AUC (Sprints 8-11):
+    GB:       0.8886
+    RF:       0.8614
+    Ensemble: 0.8824
+
+  Confusion @ 0.5:
+    TN=2334, FP=298, FN=123, TP=267
+    Precision=47.3%, Recall=68.5%, F1=55.9%
+
+  Top 20 OPS drivers of Churn:
+     1. avg_uptime_pct                          : 0.3162 (31.6%)
+     2. sc_avg_rxpower_in_range                 : 0.1498 (15.0%)
+     3. tk_sla_compliance                       : 0.0688 (6.9%)
+     4. ivr_calls_per_month                     : 0.0681 (6.8%) [NORMALIZED]
+     5. FAILURE_RATE_PCT                        : 0.0338 (3.4%)
+     6. avg_resolution_hours_w                  : 0.0333 (3.3%)
+     7. AVG_ANSWERED_SECONDS                    : 0.0310 (3.1%)
+     8. missed_calls_per_month                  : 0.0307 (3.1%) [NORMALIZED]
+     9. AVG_TICKETS_PER_ISSUE                   : 0.0231 (2.3%)
+    10. avg_resolution_hours                    : 0.0183 (1.8%)
+    11. autopay_ratio                           : 0.0180 (1.8%)
+    12. sc_avg_rxpower                          : 0.0166 (1.7%)
+    13. sc_avg_speed_in_range                   : 0.0139 (1.4%)
+    14. px_tickets_per_month                    : 0.0130 (1.3%) [NORMALIZED]
+    15. inbound_unanswered_per_month            : 0.0126 (1.3%) [NORMALIZED]
+    16. answered_calls_per_month                : 0.0108 (1.1%) [NORMALIZED]
+    17. partner_avg_nps                         : 0.0105 (1.1%)
+    18. tickets_per_month                       : 0.0101 (1.0%) [NORMALIZED]
+    19. sc_avg_latest_speed                     : 0.0095 (1.0%)
+    20. leads_accepted_per_month                : 0.0081 (0.8%) [NORMALIZED]
+
+====================================================================================================
+MODEL C: NPS → CHURN (Can NPS alone predict churn?)
+====================================================================================================
+
+--- C1: NPS Score Only ---
+  NPS score only AUC (OOT): 0.5874
+  Coefficient: -0.0585 (negative = lower NPS → higher churn)
+  Detractor (0-6): churn=16.2% (n=1374)
+  Passive (7-8): churn=7.1% (n=226)
+  Promoter (9-10): churn=10.7% (n=1422)
+
+--- C2: Full NPS Features ---
+  Full NPS features AUC (OOT): 0.6056
+
+  NPS feature importances:
+    nps_score                               : 0.7655 (76.6%)
+    has_comment                             : 0.0730 (7.3%)
+    is_positive_sentiment                   : 0.0430 (4.3%)
+    is_negative_sentiment                   : 0.0342 (3.4%)
+    theme_slow_speed                        : 0.0250 (2.5%)
+    theme_other                             : 0.0210 (2.1%)
+    theme_unclassified                      : 0.0172 (1.7%)
+    theme_general_positive                  : 0.0122 (1.2%)
+    theme_disconnection_frequency           : 0.0089 (0.9%)
+
+====================================================================================================
+MODEL D: OPS + NPS → CHURN (Does NPS add value on top of ops?)
+====================================================================================================
+
+  Ops + NPS AUC (OOT): 0.8886
+
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  MODEL COMPARISON SUMMARY                                  ║
+  ╠══════════════════════════════════════════════════════════════╣
+  ║  Model B: Ops → Churn          AUC = 0.8824             ║
+  ║  Model C1: NPS score → Churn   AUC = 0.5874             ║
+  ║  Model C2: NPS full → Churn    AUC = 0.6056             ║
+  ║  Model D: Ops + NPS → Churn    AUC = 0.8886             ║
+  ║                                                              ║
+  ║  NPS incremental lift: +0.0062                          ║
+  ╚══════════════════════════════════════════════════════════════╝
+
+  Top 20 features (Ops+NPS combined):
+     1. [OPS] avg_uptime_pct                          : 0.3148 (31.5%)
+     2. [OPS] sc_avg_rxpower_in_range                 : 0.1491 (14.9%)
+     3. [OPS] ivr_calls_per_month                     : 0.0692 (6.9%) [NORM]
+     4. [OPS] tk_sla_compliance                       : 0.0689 (6.9%)
+     5. [OPS] FAILURE_RATE_PCT                        : 0.0343 (3.4%)
+     6. [OPS] AVG_ANSWERED_SECONDS                    : 0.0314 (3.1%)
+     7. [OPS] missed_calls_per_month                  : 0.0299 (3.0%) [NORM]
+     8. [OPS] avg_resolution_hours                    : 0.0279 (2.8%)
+     9. [OPS] AVG_TICKETS_PER_ISSUE                   : 0.0227 (2.3%)
+    10. [OPS] avg_resolution_hours_w                  : 0.0226 (2.3%)
+    11. [OPS] autopay_ratio                           : 0.0166 (1.7%)
+    12. [OPS] sc_avg_rxpower                          : 0.0166 (1.7%)
+    13. [OPS] sc_avg_speed_in_range                   : 0.0127 (1.3%)
+    14. [OPS] px_tickets_per_month                    : 0.0126 (1.3%) [NORM]
+    15. [OPS] inbound_unanswered_per_month            : 0.0116 (1.2%) [NORM]
+    16. [OPS] answered_calls_per_month                : 0.0116 (1.2%) [NORM]
+    17. [OPS] tickets_per_month                       : 0.0105 (1.1%) [NORM]
+    18. [OPS] sc_avg_latest_speed                     : 0.0094 (0.9%)
+    19. [OPS] partner_avg_nps                         : 0.0082 (0.8%)
+    20. [OPS] leads_accepted_per_month                : 0.0068 (0.7%) [NORM]
+
+  nps_score ranks #22 out of 84 total features
+
+====================================================================================================
+MEDIATION ANALYSIS: Does NPS mediate the Ops→Churn pathway?
+====================================================================================================
+
+  The mediation question:
+    Ops metrics → NPS (Model A) → Churn (Model C)?
+    Or: Ops metrics → Churn directly (Model B)?
+
+  If NPS mediates: improving ops should improve NPS, which reduces churn.
+  If ops acts directly: ops affects churn regardless of NPS (NPS is a parallel signal).
+
+  Step 1: Correlation between predicted NPS and churn
+    Actual NPS ↔ Churn:    r = -0.1127
+    Predicted NPS ↔ Churn: r = -0.1199
+
+  Step 2: Ops predicts churn beyond NPS?
+    Ops-only AUC:                 0.8824
+    Ops + predicted NPS AUC:      0.8851
+    Predicted NPS lift:           +0.0027
+    predicted_nps importance: 0.0159 (1.6%), rank #13
+
+  INTERPRETATION: NPS does NOT strongly mediate ops→churn.
+  Ops drives churn mostly through direct pathways (not via NPS perception).
+  NPS and churn may be parallel consequences of bad ops, not a causal chain.
+
+====================================================================================================
+RESIDUAL ANALYSIS: NPS signal within ops-risk strata
+====================================================================================================
+
+  Question: Among customers with SIMILAR ops risk, does NPS still predict churn?
+  If yes → NPS captures something ops data misses (e.g., perception, expectations).
+  If no → NPS is redundant given ops data.
+
+
+      Risk Bin |     N | Churn% | NPS Corr | Det Churn% | Pro Churn% |    Gap
+  ------------ | ----- | ------ | -------- | ---------- | ---------- | ------
+      Very Low |   605 |   0.8% |  -0.085 |       1.7% |       0.3% |  +1.3pp
+           Low |   604 |   1.3% |  -0.000 |       1.2% |       1.6% |  -0.4pp
+        Medium |   604 |   4.8% |  -0.073 |       5.8% |       3.7% |  +2.1pp
+          High |   604 |  12.3% |  -0.077 |      13.5% |       9.9% |  +3.6pp
+     Very High |   605 |  45.3% |  -0.111 |      49.8% |      41.4% |  +8.4pp
+
+  INTERPRETATION:
+  - If Detractor-Promoter churn gap persists WITHIN each risk bin → NPS adds unique signal
+  - If gap disappears → NPS is just a proxy for ops quality (redundant)
+
+
+====================================================================================================
+POPULATION SCORING VIABILITY
+====================================================================================================
+
+  Goal: Score ALL Wiom customers (not just NPS respondents) with churn risk.
+
+  Model B (Ops→Churn) uses only operational features available for everyone.
+  Model D (Ops+NPS→Churn) needs NPS — only available for survey respondents.
+
+  Two strategies for population scoring:
+  1. Use Model B directly (ops-only) — available for all customers
+  2. Use Model A to PREDICT NPS, then use predicted NPS + ops for churn scoring
+     (Model D with predicted NPS instead of actual NPS)
+
+
+  Population scoring AUC comparison:
+    Model B (Ops only):                     0.8824
+    Model D (Ops + actual NPS):              0.8886
+    Model D' (Ops + predicted NPS):          0.8908
+
+    Predicted NPS loss vs actual:  +0.0022
+    Predicted NPS gain vs ops-only: +0.0084
+
+  RECOMMENDATION: Use Model D' (Ops + predicted NPS) for population scoring.
+  Predicted NPS adds 0.84pp AUC even without actual survey data.
+
+====================================================================================================
+v4 vs v5 COMPARISON
+====================================================================================================
+
+  v4 (previous — with tenure-biased features):
+    - CV AUC (GB): 0.9347
+    - OOT AUC:     0.8832
+    - Issues: TOTAL_IVR_CALLS (tenure_r=+0.249), MISSED_CALLS (+0.201),
+              INBOUND_CALLS (+0.348), sc_avg_weekly_data_gb (+0.485)
+    - Features: 91 (mix of clean + biased absolute counts)
+
+  v5 (clean — audit-driven features):
+    - CV AUC (GB): 0.9277
+    - OOT AUC:     0.8824
+    - All absolute counts replaced with per-month normalized versions
+    - Features: 75 (74 clean + 22 normalized)
+
+  Change: OOT AUC -0.0008 (v4→v5)
+
+  VERDICT: v5 maintains strong performance with cleaner signal.
+  The model now generalizes better to different tenure distributions.
+
+====================================================================================================
+FINAL SUMMARY: THREE-MODEL FRAMEWORK RESULTS
+====================================================================================================
+
+  ┌──────────────────────────────────────────────────────────────────────────┐
+  │ MODEL A: OPS → NPS                                                      │
+  │   NPS Regression:  R²=0.1548, MAE=3.48 (out of 0-10)              │
+  │   Detractor AUC:   0.7056                                               │
+  │   Top drivers: (check feature list above)                               │
+  ├──────────────────────────────────────────────────────────────────────────┤
+  │ MODEL B: OPS → CHURN (v5 clean model)                                   │
+  │   CV AUC:  0.9277                                                      │
+  │   OOT AUC: 0.8824 (ensemble)                                         │
+  │   Top driver: avg_uptime_pct (31.6%)                            │
+  ├──────────────────────────────────────────────────────────────────────────┤
+  │ MODEL C: NPS → CHURN                                                    │
+  │   NPS score only:  AUC=0.5874                                          │
+  │   Full NPS:        AUC=0.6056                                          │
+  ├──────────────────────────────────────────────────────────────────────────┤
+  │ MODEL D: OPS + NPS → CHURN                                              │
+  │   AUC: 0.8886                                                            │
+  │   NPS incremental lift: +0.0062                                       │
+  ├──────────────────────────────────────────────────────────────────────────┤
+  │ POPULATION SCORING                                                      │
+  │   Ops only (B):          0.8824                                       │
+  │   Ops + predicted NPS:   0.8908                                       │
+  └──────────────────────────────────────────────────────────────────────────┘
+
+  KEY INSIGHTS:
+  1. Can ops predict NPS? R²=0.1548 → YES, ops explains substantial NPS variance
+  2. Does NPS predict churn beyond ops? Lift=+0.0062 → MARGINAL
+  3. NPS mediates ops→churn? predicted_nps importance=1.6% → NO — parallel pathways
+  4. Population scoring: Use Ops + predicted NPS

@@ -1,0 +1,907 @@
+======================================================================
+PHASE 4 -- STATISTICAL MODELING
+======================================================================
+
+Timestamp: 2026-03-18 13:32:48
+
+  Modeling on consolidated rows: 13045 (excluded 3559 new rows)
+Final modeling dataset: 13045 rows x 205 columns
+
+Feature availability:
+  Snowflake ops features:     23
+  Industry Expert features:   44
+  Derived composite features: 19
+  Sprint tab features:        12
+  Excel features:             6
+  Theme features:             True
+  Temporal partner status:    True
+
+======================================================================
+STEP 1: EXPLORATORY DATA ANALYSIS
+======================================================================
+
+--- NPS Score Distribution ---
+   0:  2660 ( 20.4%) ####################
+   1:  1259 (  9.7%) #########
+   2:   376 (  2.9%) ##
+   3:   317 (  2.4%) ##
+   4:   298 (  2.3%) ##
+   5:   789 (  6.0%) ######
+   6:   308 (  2.4%) ##
+   7:   465 (  3.6%) ###
+   8:   562 (  4.3%) ####
+   9:   448 (  3.4%) ###
+  10:  5563 ( 42.6%) ##########################################
+
+--- NPS Group Distribution ---
+  Promoter    :  6011 (46.1%)
+  Passive     :  1027 (7.9%)
+  Detractor   :  6007 (46.0%)
+
+--- Overall Churn Rate: 23.4% (3057 / 13045) ---
+
+--- Churn Rate by NPS Group ---
+  Promoter    :  20.2% churn (n=6011)
+  Passive     :  17.1% churn (n=1027)
+  Detractor   :  27.8% churn (n=6007)
+
+--- Churn Rate by Tenure Bucket ---
+
+--- Churn Rate by City ---
+  Delhi          :  23.6% churn (n=10312)
+  UP             :  34.7% churn (n=1170)
+  Mumbai         :  25.7% churn (n=802)
+  Unknown        :   1.6% churn (n=761)
+
+--- Churn Rate by Sprint ---
+  Sprint  1:  34.7% churn (n=2679)
+  Sprint  2:  31.3% churn (n=684)
+  Sprint  3:  31.1% churn (n=1603)
+  Sprint  4:  29.9% churn (n=1051)
+  Sprint  5:  30.7% churn (n=955)
+  Sprint  6:  27.6% churn (n=822)
+  Sprint  7:  22.3% churn (n=758)
+  Sprint  8:  17.9% churn (n=953)
+  Sprint  9:  14.1% churn (n=630)
+  Sprint 10:  11.2% churn (n=738)
+  Sprint 11:   6.7% churn (n=701)
+  Sprint 12:   3.2% churn (n=677)
+  Sprint 13:   0.0% churn (n=794)
+
+--- Mean NPS by Tenure Bucket ---
+
+--- Mean NPS & Churn by Theme (classified comments only) ---
+  Theme                               |  Count | Mean NPS |  Churn%
+  ------------------------------------+--------+----------+--------
+  general_positive                    |   1003 |      8.0 |   14.8%
+  slow_speed                          |    878 |      4.6 |   17.9%
+  disconnection_frequency             |    676 |      3.4 |   17.0%
+  general_negative                    |    198 |      0.6 |   27.3%
+  range_coverage                      |    169 |      4.6 |   21.9%
+  complaint_resolution_bad            |    161 |      2.4 |   20.5%
+  internet_down_outage                |    147 |      2.4 |   19.7%
+  pricing_affordable                  |    109 |      8.6 |    6.4%
+  good_speed                          |     67 |      8.5 |   11.9%
+  billing_28day                       |     57 |      3.0 |   31.6%
+  pricing_expensive                   |     45 |      5.3 |   28.9%
+  router_device                       |     26 |      3.1 |   38.5%
+  ott_content                         |     24 |      4.2 |   16.7%
+  app_tech_issues                     |     21 |      2.9 |    9.5%
+  call_center_bad                     |     21 |      4.8 |   38.1%
+  competitor_comparison               |     20 |      5.2 |   15.0%
+  technician_partner_bad              |     17 |      3.4 |   23.5%
+  autopay_payment_mode                |     15 |      1.8 |    0.0%
+  complaint_resolution_good           |     10 |      9.2 |   20.0%
+  call_center_good                    |      9 |      4.9 |   33.3%
+  shifting_relocation                 |      6 |      0.8 |   66.7%
+  rdni_recharge_no_internet           |      5 |      1.4 |   40.0%
+  technician_partner_good             |      1 |     10.0 |    0.0%
+
+======================================================================
+STEP 2: FEATURE MATRIX CONSTRUCTION
+======================================================================
+
+Total candidate features: 141
+  Numeric (original): 107
+  Categorical (encoded): 34
+
+--- Feature Fill Rates ---
+  ANSWERED_CALLS                          :  12963 / 13045 ( 99.4%)
+  AVG_ANSWERED_SECONDS                    :  12517 / 13045 ( 96.0%)
+  AVG_CUSTOMER_CALLS_PER_TICKET           :   3168 / 13045 ( 24.3%)
+  AVG_DAILY_DATA_GB                       :   2445 / 13045 ( 18.7%)
+  AVG_INSTALL_RATING                      :   1577 / 13045 ( 12.1%)
+  AVG_INSTALL_TAT_MINS                    :  12021 / 13045 ( 92.2%)
+  AVG_INSTALL_TAT_MINS_w                  :  12021 / 13045 ( 92.2%)
+  AVG_PEAK_INTERRUPTIONS                  :  10808 / 13045 ( 82.9%)
+  AVG_RECOVERY_MINS                       :   4899 / 13045 ( 37.6%)
+  AVG_TICKETS_PER_ISSUE                   :  10426 / 13045 ( 79.9%)
+  AVG_TICKET_RATING                       :   1501 / 13045 ( 11.5%)
+  AVG_TIMES_REOPENED                      :  10426 / 13045 ( 79.9%)
+  DAYS_TO_FIRST_RECHARGE                  :  12698 / 13045 ( 97.3%)
+  DISPATCH_DECLINE_RATE_PCT               :  13041 / 13045 (100.0%)
+  DISTINCT_ISSUE_TYPES                    :  10426 / 13045 ( 79.9%)
+  DISTINCT_OUTAGES                        :   5077 / 13045 ( 38.9%)
+  DROPPED_CALLS                           :  12963 / 13045 ( 99.4%)
+  FAILURE_RATE_PCT                        :  13039 / 13045 (100.0%)
+  FCR_RATE                                :  10313 / 13045 ( 79.1%)
+  HAS_REPEAT_COMPLAINT                    :  10426 / 13045 ( 79.9%)
+  HIGH_USAGE_DAYS                         :   2445 / 13045 ( 18.7%)
+  HOURS_TO_FIRST_RECHARGE                 :  12698 / 13045 ( 97.3%)
+  INBOUND_CALLS                           :  12963 / 13045 ( 99.4%)
+  ISSUES_WITH_3PLUS_TICKETS               :  10426 / 13045 ( 79.9%)
+  LEADS_ALL_DECLINED                      :  13041 / 13045 (100.0%)
+  LOW_USAGE_DAYS                          :   2445 / 13045 ( 18.7%)
+  MAX_TICKETS_SAME_ISSUE                  :  10426 / 13045 ( 79.9%)
+  MAX_TIMES_REOPENED                      :  10426 / 13045 ( 79.9%)
+  MEDIAN_DAILY_DATA_GB                    :   2445 / 13045 ( 18.7%)
+  MISSED_CALLS                            :  12963 / 13045 ( 99.4%)
+  OUTAGE_EVENTS                           :   5077 / 13045 ( 38.9%)
+  OUTBOUND_CALLS                          :  12963 / 13045 ( 99.4%)
+  OVERALL_UPTIME_PCT                      :  10808 / 13045 ( 82.9%)
+  PAYMENT_FAILURES                        :  13039 / 13045 (100.0%)
+  PAYMENT_SUCCESSES                       :  13039 / 13045 (100.0%)
+  PEAK_STABLE_PCT                         :  10808 / 13045 ( 82.9%)
+  PEAK_UPTIME_PCT                         :  10808 / 13045 ( 82.9%)
+  PEAK_VS_OVERALL_GAP                     :  10808 / 13045 ( 82.9%)
+  RECOVERED_EVENTS                        :   5077 / 13045 ( 38.9%)
+  TICKETS_REOPENED_3PLUS                  :  10426 / 13045 ( 79.9%)
+  TICKETS_REOPENED_ONCE                   :  10426 / 13045 ( 79.9%)
+  TOTAL_CUSTOMER_CALLS                    :   3168 / 13045 ( 24.3%)
+  TOTAL_IVR_CALLS                         :  12963 / 13045 ( 99.4%)
+  autopay_payments                        :  13038 / 13045 ( 99.9%)
+  autopay_ratio                           :  13038 / 13045 ( 99.9%)
+  avg_payment_amount                      :  13038 / 13045 ( 99.9%)
+  avg_resolution_hours                    :  10305 / 13045 ( 79.0%)
+  avg_resolution_hours_w                  :  10305 / 13045 ( 79.0%)
+  avg_uptime_pct                          :  13027 / 13045 ( 99.9%)
+  cash_payments                           :  13038 / 13045 ( 99.9%)
+  cx_tickets                              :  10426 / 13045 ( 79.9%)
+  data_usage_amount                       :   6458 / 13045 ( 49.5%)
+  data_usage_days                         :   6458 / 13045 ( 49.5%)
+  data_usage_per_day                      :   1261 / 13045 (  9.7%)
+  data_usage_percentile                   :      0 / 13045 (  0.0%)
+  devices_2_4g                            :   7081 / 13045 ( 54.3%)
+  devices_5g                              :   7081 / 13045 ( 54.3%)
+  install_attempts                        :  12024 / 13045 ( 92.2%)
+  install_delayed                         :  11403 / 13045 ( 87.4%)
+  install_tat_hours                       :  11403 / 13045 ( 87.4%)
+  install_tat_hours_w                     :  11403 / 13045 ( 87.4%)
+  min_uptime                              :  13027 / 13045 ( 99.9%)
+  missed_call_ratio                       :  12963 / 13045 ( 99.4%)
+  network_quality_index                   :  10811 / 13045 ( 82.9%)
+  optical_power                           :   7063 / 13045 ( 54.1%)
+  partner_at_risk                         :  10826 / 13045 ( 83.0%)
+  partner_avg_nps                         :  10826 / 13045 ( 83.0%)
+  partner_avg_resolution_hours            :  10810 / 13045 ( 82.9%)
+  partner_avg_tickets                     :  10826 / 13045 ( 83.0%)
+  partner_churn_rate                      :  10826 / 13045 ( 83.0%)
+  partner_customer_count                  :  10826 / 13045 ( 83.0%)
+  partner_fcr_rate                        :  10810 / 13045 ( 82.9%)
+  partner_median_install_tat              :  10779 / 13045 ( 82.6%)
+  partner_repeat_rate                     :  10817 / 13045 ( 82.9%)
+  partner_risk_level                      :  10826 / 13045 ( 83.0%)
+  partner_sla_compliance                  :  10817 / 13045 ( 82.9%)
+  plan_expiry_window                      :      0 / 13045 (  0.0%)
+  px_tickets                              :  10426 / 13045 ( 79.9%)
+  recharge_done                           :   9289 / 13045 ( 71.2%)
+  recharge_same_day                       :  12698 / 13045 ( 97.3%)
+  recharges_before_sprint                 :  12251 / 13045 ( 93.9%)
+  resolution_vs_partner                   :  10312 / 13045 ( 79.0%)
+  sentiment_intensity                     :   5488 / 13045 ( 42.1%)
+  sla_compliance_pct                      :  10426 / 13045 ( 79.9%)
+  sla_vs_partner                          :  10426 / 13045 ( 79.9%)
+  stddev_uptime                           :  13027 / 13045 ( 99.9%)
+  ticket_severity                         :  10426 / 13045 ( 79.9%)
+  tickets_before_3m                       :  12251 / 13045 ( 93.9%)
+  tickets_last_3m_sprint                  :   5595 / 13045 ( 42.9%)
+  tickets_post_sprint                     :   6636 / 13045 ( 50.9%)
+  tickets_vs_partner                      :  10826 / 13045 ( 83.0%)
+  total_payments                          :  13038 / 13045 ( 99.9%)
+
+High-fill features (>=50%): 122
+
+======================================================================
+STEP 3: KEY DRIVER ANALYSIS — What drives NPS score?
+======================================================================
+
+Modeling sample: 13045 rows (of 13045 total)
+
+--- Method 1: Linear Regression (Standardized Coefficients) ---
+  R-squared: 0.384
+
+  Top 15 drivers (standardized coefficients):
+  Feature                                  |  Coefficient |  Direction
+  -----------------------------------------+--------------+-----------
+  INBOUND_CALLS                            |      -1.4767 |   NEGATIVE
+  TOTAL_IVR_CALLS                          |      +1.4083 |   POSITIVE
+  is_negative_sentiment                    |      -1.2821 |   NEGATIVE
+  OUTBOUND_CALLS                           |      -1.1543 |   NEGATIVE
+  is_positive_sentiment                    |      +1.1524 |   POSITIVE
+  partner_avg_nps                          |      +1.0527 |   POSITIVE
+  MAX_TICKETS_SAME_ISSUE                   |      -0.6031 |   NEGATIVE
+  avg_uptime_pct                           |      +0.5137 |   POSITIVE
+  avg_resolution_hours                     |      +0.4919 |   POSITIVE
+  MISSED_CALLS                             |      +0.4587 |   POSITIVE
+  resolution_vs_partner                    |      -0.4560 |   NEGATIVE
+  DAYS_TO_FIRST_RECHARGE                   |      -0.4218 |   NEGATIVE
+  HOURS_TO_FIRST_RECHARGE                  |      +0.3905 |   POSITIVE
+  tickets_before_3m                        |      -0.3893 |   NEGATIVE
+  has_comment                              |      -0.3789 |   NEGATIVE
+
+--- Method 2: Random Forest Feature Importance ---
+  R-squared: 0.483
+  CV R-squared: 0.356 (+/- 0.107)
+
+  Top 15 features by RF importance:
+  Feature                                  |   Importance |   Cum%
+  -----------------------------------------+--------------+-------
+  is_negative_sentiment                    |       0.5021 |  50.2%
+  partner_avg_nps                          |       0.1610 |  66.3%
+  is_positive_sentiment                    |       0.0870 |  75.0%
+  tickets_before_3m                        |       0.0215 |  77.2%
+  days_since_last_recharge                 |       0.0170 |  78.9%
+  sprint_num                               |       0.0071 |  79.6%
+  theme_range_coverage                     |       0.0070 |  80.3%
+  tenure_days                              |       0.0067 |  80.9%
+  support_effort_index                     |       0.0065 |  81.6%
+  missed_call_ratio                        |       0.0064 |  82.2%
+  ANSWERED_CALLS                           |       0.0060 |  82.8%
+  AVG_ANSWERED_SECONDS                     |       0.0059 |  83.4%
+  tickets_vs_partner                       |       0.0057 |  84.0%
+  FAILURE_RATE_PCT                         |       0.0055 |  84.5%
+  sla_vs_partner                           |       0.0054 |  85.1%
+
+--- Method 3: Partial Correlations (NPS vs each feature, controlling others) ---
+
+  Top 15 partial correlations with NPS:
+  Feature                                  |  Partial r |    p-value |  Sig
+  -----------------------------------------+------------+------------+-----
+  partner_avg_nps                          |    +0.2687 |   0.000000 |  ***
+  is_negative_sentiment                    |    -0.1176 |   0.000000 |  ***
+  is_positive_sentiment                    |    +0.1047 |   0.000000 |  ***
+  tickets_before_3m                        |    -0.0925 |   0.000000 |  ***
+  is_first_time_wifi                       |    +0.0613 |   0.000000 |  ***
+  channel_WA                               |    -0.0430 |   0.000001 |  ***
+  days_since_last_recharge                 |    -0.0354 |   0.000053 |  ***
+  DISTINCT_ISSUE_TYPES                     |    -0.0279 |   0.001410 |   **
+  city_Unknown                             |    -0.0236 |   0.006923 |   **
+  DAYS_TO_FIRST_RECHARGE                   |    -0.0236 |   0.007138 |   **
+  AVG_ANSWERED_SECONDS                     |    -0.0236 |   0.007143 |   **
+  MAX_TICKETS_SAME_ISSUE                   |    -0.0233 |   0.007871 |   **
+  HOURS_TO_FIRST_RECHARGE                  |    +0.0217 |   0.013292 |    *
+  channel_Call                             |    +0.0215 |   0.014075 |    *
+  theme_range_coverage                     |    +0.0207 |   0.018336 |    *
+
+--- Method 4: Gradient Boosting + Permutation Importance ---
+  R-squared: 0.580
+
+  Top 15 by permutation importance:
+  Feature                                  |   Mean Imp |      Std
+  -----------------------------------------+------------+---------
+  is_negative_sentiment                    |     0.3392 |   0.0050
+  partner_avg_nps                          |     0.1691 |   0.0036
+  is_positive_sentiment                    |     0.0887 |   0.0021
+  tickets_before_3m                        |     0.0274 |   0.0011
+  days_since_last_recharge                 |     0.0233 |   0.0005
+  is_first_time_wifi                       |     0.0158 |   0.0011
+  AVG_ANSWERED_SECONDS                     |     0.0150 |   0.0004
+  OUTBOUND_CALLS                           |     0.0132 |   0.0006
+  missed_call_ratio                        |     0.0130 |   0.0003
+  avg_payment_amount                       |     0.0115 |   0.0006
+  tenure_days                              |     0.0110 |   0.0004
+  sla_vs_partner                           |     0.0109 |   0.0004
+  AVG_TICKETS_PER_ISSUE                    |     0.0109 |   0.0006
+  sprint_num                               |     0.0108 |   0.0006
+  resolution_vs_partner                    |     0.0103 |   0.0003
+
+--- CONSENSUS DRIVER RANKING (appears in top-10 across >=2 methods) ---
+
+  Feature                                  |  # Methods | Methods
+  -----------------------------------------+------------+---------------------
+  partner_avg_nps                          |          4 | LR, RF, PC, GB
+  is_positive_sentiment                    |          4 | LR, RF, PC, GB
+  is_negative_sentiment                    |          4 | LR, RF, PC, GB
+  tickets_before_3m                        |          3 | RF, PC, GB
+  days_since_last_recharge                 |          3 | RF, PC, GB
+  missed_call_ratio                        |          2 | RF, GB
+  OUTBOUND_CALLS                           |          2 | LR, GB
+  is_first_time_wifi                       |          2 | PC, GB
+
+======================================================================
+STEP 4: TENURE-STRATIFIED KEY DRIVER ANALYSIS
+======================================================================
+
+  NOTE: Fine-grained tenure_bucket is 96.6% Loyal. Using tenure_excel (1-2/3-6/6+).
+
+--- [6+ months] n=5706, mean NPS=5.6, churn=18.4% ---
+  Top 5 drivers:
+    is_negative_sentiment                   : 0.4837
+    partner_avg_nps                         : 0.1420
+    is_positive_sentiment                   : 0.1034
+    days_since_last_recharge                : 0.0135
+    theme_range_coverage                    : 0.0117
+
+--- [1–2] n=3122, mean NPS=6.5, churn=35.4% ---
+  Top 5 drivers:
+    is_negative_sentiment                   : 0.4619
+    partner_avg_nps                         : 0.1525
+    days_since_last_recharge                : 0.0486
+    tickets_before_3m                       : 0.0312
+    is_positive_sentiment                   : 0.0259
+
+--- [3–6] n=3423, mean NPS=5.9, churn=26.4% ---
+  Top 5 drivers:
+    is_negative_sentiment                   : 0.4385
+    partner_avg_nps                         : 0.1595
+    is_positive_sentiment                   : 0.1048
+    tickets_before_3m                       : 0.0202
+    tenure_days                             : 0.0120
+
+======================================================================
+STEP 5: CUSTOMER SEGMENTATION
+======================================================================
+
+Clustering features: ['is_negative_sentiment', 'partner_avg_nps', 'is_positive_sentiment', 'tickets_before_3m', 'days_since_last_recharge', 'sprint_num', 'theme_range_coverage', 'tenure_days', 'support_effort_index', 'missed_call_ratio']
+
+--- Silhouette Analysis ---
+  k=3: silhouette=0.193
+  k=4: silhouette=0.171
+  k=5: silhouette=0.205
+  k=6: silhouette=0.222
+  k=7: silhouette=0.171
+
+  Best k=6 (silhouette=0.222)
+
+--- Segment Profiles ---
+
+  SEGMENT 0 (n=770, 5.9%):
+    Mean NPS:  6.0
+    Churn%:    0.0%
+    Promoter:  45.5%
+    Passive:  10.1%
+    Detractor:  44.4%
+    Key features:
+      is_negative_sentiment              : 0.26
+      partner_avg_nps                    : 6.19
+      is_positive_sentiment              : 0.31
+      tickets_before_3m                  : 1.00
+      days_since_last_recharge           : 2.60
+    Top tenure: Loyal (270d+) (43%), Steady State (121-270d) (24%)
+    Top themes: unclassified (25%), general_positive (20%), slow_speed (18%)
+
+  SEGMENT 1 (n=2001, 15.3%):
+    Mean NPS:  1.7
+    Churn%:    25.2%
+    Promoter:  5.8%
+    Passive:  3.4%
+    Detractor:  90.8%
+    Key features:
+      is_negative_sentiment              : 1.00
+      partner_avg_nps                    : 5.61
+      is_positive_sentiment              : 0.00
+      tickets_before_3m                  : 1.31
+      days_since_last_recharge           : 275.98
+    Top tenure: Loyal (270d+) (100%)
+    Top themes: unclassified (32%), slow_speed (20%), disconnection_frequency (20%)
+
+  SEGMENT 2 (n=2298, 17.6%):
+    Mean NPS:  8.7
+    Churn%:    16.3%
+    Promoter:  77.4%
+    Passive:  9.6%
+    Detractor:  13.0%
+    Key features:
+      is_negative_sentiment              : 0.00
+      partner_avg_nps                    : 6.44
+      is_positive_sentiment              : 1.00
+      tickets_before_3m                  : 0.95
+      days_since_last_recharge           : 256.45
+    Top tenure: Loyal (270d+) (100%)
+    Top themes: general_positive (36%), unclassified (35%), slow_speed (14%)
+
+  SEGMENT 3 (n=169, 1.3%):
+    Mean NPS:  4.6
+    Churn%:    21.9%
+    Promoter:  29.0%
+    Passive:  10.1%
+    Detractor:  60.9%
+    Key features:
+      is_negative_sentiment              : 0.91
+      partner_avg_nps                    : 6.18
+      is_positive_sentiment              : 0.09
+      tickets_before_3m                  : 1.41
+      days_since_last_recharge           : 234.34
+    Top tenure: Loyal (270d+) (97%), Establishing (61-120d) (1%)
+    Top themes: range_coverage (100%)
+
+  SEGMENT 4 (n=1845, 14.1%):
+    Mean NPS:  4.4
+    Churn%:    24.5%
+    Promoter:  29.6%
+    Passive:  6.6%
+    Detractor:  63.7%
+    Key features:
+      is_negative_sentiment              : 0.16
+      partner_avg_nps                    : 5.22
+      is_positive_sentiment              : 0.05
+      tickets_before_3m                  : 4.60
+      days_since_last_recharge           : 244.11
+    Top tenure: Loyal (270d+) (100%)
+    Top themes: unclassified (38%), disconnection_frequency (15%), general_positive (11%)
+
+  SEGMENT 5 (n=5962, 45.7%):
+    Mean NPS:  6.8
+    Churn%:    28.3%
+    Promoter:  53.2%
+    Passive:  8.7%
+    Detractor:  38.1%
+    Key features:
+      is_negative_sentiment              : 0.00
+      partner_avg_nps                    : 6.27
+      is_positive_sentiment              : 0.00
+      tickets_before_3m                  : 0.70
+      days_since_last_recharge           : 242.84
+    Top tenure: Loyal (270d+) (100%)
+    Top themes: unclassified (52%), slow_speed (23%), disconnection_frequency (13%)
+
+======================================================================
+STEP 6: CHURN RISK SCORING MODEL
+======================================================================
+
+  LEAKAGE GUARD: Excluding 5 features from churn model
+  Excluded: ['days_since_last_recharge', 'recharge_regularity', 'recharges_before_sprint', 'sprint_num', 'total_recharges']
+  Reason: These features directly encode churn status or observation time
+
+Churn modeling sample: 13045 rows
+  Churn: 3057 (23.4%)
+  Active: 9988 (76.6%)
+
+  RIGHT-CENSORING CHECK:
+    Sprint  1: n= 2679, churn= 34.7%
+    Sprint  2: n=  684, churn= 31.3%
+    Sprint  3: n= 1603, churn= 31.1%
+    Sprint  4: n= 1051, churn= 29.9%
+    Sprint  5: n=  955, churn= 30.7%
+    Sprint  6: n=  822, churn= 27.6%
+    Sprint  7: n=  758, churn= 22.3%
+    Sprint  8: n=  953, churn= 17.9%
+    Sprint  9: n=  630, churn= 14.1%
+    Sprint 10: n=  738, churn= 11.2%
+    Sprint 11: n=  701, churn=  6.7%
+    Sprint 12: n=  677, churn=  3.2%
+    Sprint 13: n=  794, churn=  0.0%
+  EXCLUDING right-censored sprints [12, 13]: 13045->11574 rows
+  Revised churn rate: 26.2%
+  Features: 119
+
+--- Model A: Operational features only (no NPS) ---
+  AUC-ROC: 0.9766
+  Avg Precision: 0.9395
+
+--- Model B: Operational + NPS score ---
+  AUC-ROC: 0.9765
+  Avg Precision: 0.9396
+  Lift from NPS: +-0.0001 AUC
+
+--- Model C: Operational + NPS + Themes ---
+  AUC-ROC: 0.9765
+  Avg Precision: 0.9396
+  Lift from themes: +-0.0000 AUC (over Model B)
+  Total lift: +-0.0001 AUC (over Model A)
+
+--- Iterative Tuning (best model) ---
+  Best base model: Model A (AUC=0.9766)
+  Config 1: depth=4, lr=0.03, trees=500 -> AUC=0.9746
+  Config 2: depth=6, lr=0.05, trees=500 -> AUC=0.9777
+  Config 3: depth=5, lr=0.02, trees=800 -> AUC=0.9769
+  Config 4: depth=7, lr=0.05, trees=300 -> AUC=0.9773
+  Config 5: depth=5, lr=0.03, trees=600 -> AUC=0.9771
+  RF balanced: AUC=0.9379
+
+  BEST AUC-ROC achieved: 0.9777
+
+--- LIFT TABLE (Risk Deciles) ---
+
+   Decile |  Count | Churners |  Churn% |  Lift |  Cum%Churn |  Avg NPS
+  --------+--------+----------+---------+-------+------------+---------
+        9 |   1158 |     1147 |   99.1% |  3.78 |      37.8% |      5.0
+        8 |   1157 |     1028 |   88.9% |  3.39 |      71.7% |      5.2
+        7 |   1157 |      634 |   54.8% |  2.09 |      92.6% |      5.6
+        6 |   1158 |      170 |   14.7% |  0.56 |      98.2% |      5.8
+        5 |   1157 |       41 |    3.5% |  0.14 |      99.5% |      6.0
+        4 |   1157 |        9 |    0.8% |  0.03 |      99.8% |      6.1
+        3 |   1158 |        4 |    0.3% |  0.01 |      99.9% |      6.3
+        2 |   1157 |        2 |    0.2% |  0.01 |     100.0% |      6.4
+        1 |   1157 |        0 |    0.0% |  0.00 |     100.0% |      6.5
+        0 |   1158 |        0 |    0.0% |  0.00 |     100.0% |      6.5
+
+  Interpretation:
+    Top 10% risk captures 38% of all churners (lift=3.8x)
+    Top 20% risk captures 72% of all churners
+    Top 30% risk captures 93% of all churners
+
+--- Feature Importance for Churn Prediction ---
+
+  Top 15 churn predictors:
+  Feature                                  |   Importance |   Cum%
+  -----------------------------------------+--------------+-------
+  total_payments                           |       0.3056 |  30.6%
+  partner_churn_rate                       |       0.1142 |  42.0%
+  avg_uptime_pct                           |       0.1111 |  53.1%
+  tenure_days                              |       0.0813 |  61.2%
+  PAYMENT_SUCCESSES                        |       0.0589 |  67.1%
+  OUTBOUND_CALLS                           |       0.0508 |  72.2%
+  is_first_time_wifi                       |       0.0278 |  75.0%
+  AVG_ANSWERED_SECONDS                     |       0.0202 |  77.0%
+  recharge_done                            |       0.0178 |  78.8%
+  avg_payment_amount                       |       0.0097 |  79.8%
+  resolution_vs_partner                    |       0.0096 |  80.7%
+  channel_WA                               |       0.0087 |  81.6%
+  FAILURE_RATE_PCT                         |       0.0086 |  82.4%
+  optical_power                            |       0.0076 |  83.2%
+  avg_resolution_hours_w                   |       0.0073 |  83.9%
+
+  Top 15 churn predictors (permutation importance):
+    total_payments                          : 0.1462
+    tenure_days                             : 0.0456
+    partner_churn_rate                      : 0.0148
+    PAYMENT_SUCCESSES                       : 0.0095
+    is_first_time_wifi                      : 0.0009
+    recharge_done                           : 0.0005
+    avg_uptime_pct                          : 0.0005
+    AVG_ANSWERED_SECONDS                    : 0.0004
+    channel_In - WA                         : 0.0002
+    avg_payment_amount                      : 0.0002
+    OUTBOUND_CALLS                          : 0.0001
+    cash_payments                           : 0.0001
+    channel_WA                              : 0.0001
+    FAILURE_RATE_PCT                        : 0.0001
+    optical_power                           : 0.0001
+
+======================================================================
+STEP 7: TENURE-STRATIFIED CHURN MODELS
+======================================================================
+
+--- [6+] n=5354, churners=1045 (19.5%) ---
+  AUC-ROC: 0.9428
+  Top 5 churn drivers:
+    avg_uptime_pct                          : 0.2323
+    PAYMENT_SUCCESSES                       : 0.1768
+    total_payments                          : 0.1422
+    partner_churn_rate                      : 0.1307
+    tenure_days                             : 0.0714
+
+--- [1–2] n=2983, churners=1093 (36.6%) ---
+  AUC-ROC: 0.9233
+  Top 5 churn drivers:
+    total_payments                          : 0.6517
+    partner_churn_rate                      : 0.0641
+    channel_In - WA                         : 0.0424
+    is_first_time_wifi                      : 0.0413
+    OUTBOUND_CALLS                          : 0.0326
+
+--- [3–6] n=3237, churners=897 (27.7%) ---
+  AUC-ROC: 0.9182
+  Top 5 churn drivers:
+    total_payments                          : 0.5489
+    partner_churn_rate                      : 0.0824
+    is_first_time_wifi                      : 0.0547
+    OUTBOUND_CALLS                          : 0.0390
+    tenure_days                             : 0.0288
+
+======================================================================
+STEP 8: DOSE-RESPONSE ANALYSIS
+======================================================================
+
+--- NPS Score → Churn Rate (excluding right-censored sprints) ---
+   NPS |  Churn% |  Count
+  -----+---------+-------
+     0 |   33.1% |   2286 ################
+     1 |   35.7% |   1189 #################
+     2 |   28.5% |    330 ##############
+     3 |   23.2% |    285 ###########
+     4 |   29.0% |    262 ##############
+     5 |   23.9% |    711 ###########
+     6 |   26.0% |    273 #############
+     7 |   21.4% |    407 ##########
+     8 |   18.0% |    495 ########
+     9 |   21.8% |    394 ##########
+    10 |   22.6% |   4942 ###########
+
+--- tenure_days → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                     (366.999, 411.0] |      6.7 |   36.1% |   2334
+                       (411.0, 486.0] |      6.0 |   29.6% |   2307
+                       (486.0, 609.0] |      5.8 |   25.6% |   2306
+                       (609.0, 827.0] |      5.8 |   21.0% |   2315
+                      (827.0, 1568.0] |      5.4 |   18.6% |   2312
+
+--- recharges_before_sprint → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                         (0.999, 2.0] |      6.6 |   36.6% |   2983
+                           (2.0, 4.0] |      6.0 |   29.3% |   1823
+                           (4.0, 8.0] |      5.8 |   24.8% |   2329
+                          (8.0, 15.0] |      5.8 |   20.4% |   2239
+                         (15.0, 43.0] |      5.3 |   17.0% |   2200
+
+--- tickets_before_3m → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                        (-0.001, 1.0] |      6.4 |   26.0% |   7703
+                           (1.0, 3.0] |      5.4 |   25.2% |   2386
+                          (3.0, 23.0] |      4.2 |   29.2% |   1485
+
+--- total_recharges → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                         (0.999, 6.0] |      5.8 |   62.5% |   2759
+                           (6.0, 9.0] |      6.4 |   21.6% |   2023
+                          (9.0, 13.0] |      6.2 |   14.0% |   2320
+                         (13.0, 20.0] |      5.8 |   15.5% |   2264
+                         (20.0, 51.0] |      5.5 |    9.0% |   2208
+
+--- avg_recharge_amount → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                      (96.999, 479.4] |      5.7 |   17.2% |   2317
+                     (479.4, 494.857] |      6.3 |   22.0% |   2318
+                     (494.857, 540.0] |      6.2 |   32.2% |   2315
+                       (540.0, 564.9] |      5.6 |   25.8% |   2310
+                      (564.9, 3481.0] |      6.1 |   34.0% |   2314
+
+--- sla_compliance_pct → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                     (-0.001, 57.143] |      5.4 |   28.9% |   2447
+                       (57.143, 75.0] |      5.8 |   39.4% |   5037
+                       (75.0, 88.889] |      6.0 |   10.7% |   1870
+                      (88.889, 100.0] |      6.8 |    6.5% |   2220
+
+--- total_tickets → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                        (-0.001, 4.0] |      6.3 |   39.5% |   4859
+                           (4.0, 8.0] |      6.3 |   16.4% |   2339
+                          (8.0, 14.0] |      6.0 |   18.2% |   2080
+                        (14.0, 124.0] |      4.8 |   15.5% |   2296
+
+--- PEAK_UPTIME_PCT → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                      (-0.001, 0.705] |      5.7 |   25.5% |   2323
+                       (0.705, 0.721] |      6.1 |   14.7% |   2310
+                       (0.721, 0.722] |      5.6 |   66.2% |   2317
+                       (0.722, 0.733] |      6.1 |   12.0% |   2320
+                       (0.733, 0.891] |      6.1 |   12.7% |   2304
+
+--- TOTAL_IVR_CALLS → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                        (0.999, 12.0] |      6.7 |   12.0% |   2420
+                         (12.0, 20.0] |      6.4 |   20.4% |   2447
+                         (20.0, 29.0] |      5.9 |   29.5% |   2246
+                         (29.0, 44.0] |      5.6 |   33.5% |   2208
+                        (44.0, 337.0] |      4.9 |   37.4% |   2253
+
+--- INBOUND_CALLS → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                        (-0.001, 2.0] |      6.5 |   30.0% |   2790
+                           (2.0, 6.0] |      6.5 |   26.9% |   2234
+                          (6.0, 11.0] |      6.1 |   25.8% |   1942
+                         (11.0, 23.0] |      5.7 |   24.6% |   2397
+                        (23.0, 247.0] |      4.9 |   22.8% |   2211
+
+--- AVG_TIMES_REOPENED → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                        (-0.001, 0.2] |      6.2 |   27.9% |   9423
+                          (0.2, 5.12] |      5.0 |   19.1% |   2151
+
+--- FCR_RATE → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                     (-0.001, 85.714] |      5.1 |   19.1% |   2501
+                      (85.714, 100.0] |      6.2 |   28.2% |   9073
+
+--- MAX_TICKETS_SAME_ISSUE → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                         (0.999, 2.0] |      6.6 |   18.1% |   3235
+                           (2.0, 3.0] |      5.9 |   46.6% |   3793
+                           (3.0, 6.0] |      5.9 |   17.7% |   2327
+                          (6.0, 51.0] |      5.0 |   12.0% |   2219
+
+--- support_effort_index → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                     (-1.051, -0.716] |      6.7 |   20.5% |   2328
+                      (-0.716, -0.31] |      6.1 |   44.6% |   2302
+                      (-0.31, 0.0791] |      6.3 |   22.5% |   2315
+                      (0.0791, 0.494] |      5.9 |   19.7% |   2314
+                       (0.494, 6.893] |      4.7 |   23.9% |   2315
+
+--- network_quality_index → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                     (-4.407, -0.228] |      6.0 |   16.4% |   2320
+                      (-0.228, 0.106] |      6.0 |   13.2% |   2310
+                       (0.106, 0.123] |      5.6 |   66.3% |   2317
+                       (0.123, 0.347] |      6.1 |   16.0% |   2312
+                       (0.347, 1.934] |      5.9 |   19.2% |   2315
+
+--- partner_avg_nps → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                      (-0.001, 5.167] |      4.0 |   23.4% |   2328
+                         (5.167, 6.0] |      5.7 |   16.0% |   2325
+                           (6.0, 6.1] |      5.5 |   65.4% |   2297
+                           (6.1, 7.0] |      6.5 |   13.4% |   2384
+                          (7.0, 10.0] |      8.0 |   13.2% |   2240
+
+--- partner_churn_rate → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                      (-0.001, 0.027] |      6.3 |    0.2% |   2329
+                       (0.027, 0.109] |      5.9 |   37.4% |   4461
+                       (0.109, 0.111] |      5.9 |   12.7% |    157
+                        (0.111, 0.21] |      6.0 |   17.3% |   2322
+                          (0.21, 1.0] |      5.4 |   40.7% |   2305
+
+--- resolution_vs_partner → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                  (-551.456, -10.821] |      6.3 |    9.5% |   2315
+                       (-10.821, 0.0] |      5.9 |   37.2% |   5037
+                        (0.0, 34.716] |      5.5 |   15.3% |   1907
+                   (34.716, 7665.833] |      6.0 |   28.0% |   2315
+
+--- missed_call_ratio → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                        (-0.001, 0.5] |      5.7 |   22.1% |   2748
+                         (0.5, 0.609] |      5.6 |   23.9% |   1890
+                       (0.609, 0.706] |      5.9 |   25.6% |   2355
+                       (0.706, 0.818] |      6.1 |   27.4% |   2321
+                         (0.818, 1.0] |      6.4 |   32.7% |   2260
+
+--- install_tat_hours_w → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                        (-0.001, 6.0] |      5.9 |   25.6% |   2515
+                          (6.0, 25.0] |      6.2 |   26.6% |   2216
+                         (25.0, 30.0] |      5.4 |   23.6% |   2241
+                         (30.0, 79.0] |      6.1 |   27.5% |   2294
+                      (79.0, 7871.62] |      6.1 |   27.8% |   2308
+
+--- FAILURE_RATE_PCT → NPS & Churn ---
+                                Range | Mean NPS |  Churn% |  Count
+  ------------------------------------+----------+---------+-------
+                       (-0.001, 16.0] |      5.9 |   22.5% |   2338
+                       (16.0, 26.087] |      5.8 |   18.3% |   2305
+                      (26.087, 35.59] |      5.8 |   22.9% |   2301
+                      (35.59, 47.619] |      6.0 |   26.3% |   2323
+                      (47.619, 100.0] |      6.2 |   41.1% |   2307
+
+======================================================================
+STEP 9: HYPOTHESIS TESTING
+======================================================================
+
+--- H1: Network uptime is #1 NPS driver ---
+  CAVEAT: avg_uptime_pct measures PARTNER FLEET health, not customer-experienced uptime
+  Testing with PEAK_UPTIME_PCT (peak-hour quality) as better proxy
+  PEAK_UPTIME_PCT: NOT in any top-10 list
+  avg_uptime_pct: in top-10 of ['LR'] only
+  OUTAGE_EVENTS: NOT in any top-10 list
+  network_quality_index: NOT in any top-10 list
+  NOTE: Support effort (tickets, IVR, reopenings) may dominate over network quality
+
+--- H2: Install TAT is top-3 for customers in first 30 days ---
+
+--- H3: SLA compliance matters more than ticket volume ---
+  SLA compliance ↔ NPS: r=0.093
+  Ticket volume ↔ NPS:  r=-0.123
+  NOT SUPPORTED: SLA < volume
+
+--- H6: Network complaint Detractors churn at 2x vs pricing complaint Detractors ---
+  Network complaint Detractors: 24.7% churn (n=1054)
+  Pricing complaint Detractors: 34.2% churn (n=73)
+  Ratio: 0.72x
+  NOT SUPPORTED
+
+--- H7: Autopay users have higher NPS than cash/online ---
+  autopay        : mean NPS=6.0 (n=2638)
+  cash           : mean NPS=6.4 (n=314)
+  online         : mean NPS=5.9 (n=8617)
+  unknown        : mean NPS=6.0 (n=5)
+
+======================================================================
+STEP 9B: SPRINT-LEVEL TEMPORAL ANALYSIS
+======================================================================
+
+  How do NPS drivers change OVER TIME across sprints?
+
+  Sprints available: [np.float64(1.0), np.float64(2.0), np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0)]
+
+   Sprint |     N |   NPS | Churn% |    IVR | Reopen |  SLA% |  Risk%
+  --------+-------+-------+--------+--------+--------+-------+-------
+        1 |  2679 |   6.3 |  34.7% |   31.6 |  0.111 |  70.6 |    4.2
+        2 |   684 |   5.4 |  31.3% |   31.9 |  0.116 |  71.3 |    4.7
+        3 |  1603 |   6.0 |  31.1% |   32.3 |  0.118 |  71.4 |    3.7
+        4 |  1051 |   5.7 |  29.9% |   33.5 |  0.116 |  71.4 |    3.4
+        5 |   955 |   5.9 |  30.7% |   31.0 |  0.114 |  72.2 |    3.1
+        6 |   822 |   5.8 |  27.6% |   29.0 |  0.103 |  72.1 |    2.1
+        7 |   758 |   5.5 |  22.3% |   28.2 |  0.116 |  71.2 |    4.1
+        8 |   953 |   5.8 |  17.9% |   27.4 |  0.120 |  71.7 |    3.0
+        9 |   630 |   6.1 |  14.1% |   26.9 |  0.112 |  73.2 |    3.0
+       10 |   738 |   6.0 |  11.2% |   25.1 |  0.111 |  70.2 |    3.0
+       11 |   701 |   5.8 |   6.7% |   25.3 |  0.094 |  71.6 |    2.7
+
+--- Sprint-Level Top-3 Drivers (are drivers stable or shifting?) ---
+  Sprint 1: partner_avg_nps(0.259), tickets_before_3m(0.081), days_since_last_recharge(0.067)
+  Sprint 2: is_positive_sentiment(0.716), is_negative_sentiment(0.073), partner_avg_nps(0.040)
+  Sprint 3: is_negative_sentiment(0.343), partner_avg_nps(0.166), is_positive_sentiment(0.054)
+  Sprint 4: is_negative_sentiment(0.374), partner_avg_nps(0.102), theme_range_coverage(0.099)
+  Sprint 5: partner_avg_nps(0.292), days_since_last_recharge(0.039), is_negative_sentiment(0.038)
+  Sprint 6: is_negative_sentiment(0.560), partner_avg_nps(0.074), is_positive_sentiment(0.037)
+  Sprint 7: is_negative_sentiment(0.483), is_positive_sentiment(0.098), partner_avg_nps(0.091)
+  Sprint 8: is_negative_sentiment(0.521), partner_avg_nps(0.091), is_positive_sentiment(0.045)
+  Sprint 9: is_negative_sentiment(0.588), partner_avg_nps(0.071), is_positive_sentiment(0.040)
+  Sprint 10: is_negative_sentiment(0.593), partner_avg_nps(0.054), is_positive_sentiment(0.038)
+  Sprint 11: is_negative_sentiment(0.558), partner_avg_nps(0.103), is_positive_sentiment(0.037)
+
+  DRIVER STABILITY (appears in top-3 across sprints):
+    partner_avg_nps                         : 11/11 sprints (100%) [STABLE]
+    is_negative_sentiment                   : 10/11 sprints (91%) [STABLE]
+    is_positive_sentiment                   : 8/11 sprints (73%) [STABLE]
+    days_since_last_recharge                : 2/11 sprints (18%) [SPORADIC]
+    tickets_before_3m                       : 1/11 sprints (9%) [SPORADIC]
+    theme_range_coverage                    : 1/11 sprints (9%) [SPORADIC]
+
+======================================================================
+STEP 10: RISK SCORE ASSIGNMENT
+======================================================================
+
+--- Risk Score Distribution ---
+  Low       :   8105 (62.1%)
+  Medium    :    889 (6.8%)
+  High      :    479 (3.7%)
+  Critical  :   3294 (25.3%)
+
+--- Risk Category by NPS Group ---
+  Category   |   Promoter |    Passive |  Detractor
+  -----------+------------+------------+-----------
+  Low        |      67.0% |      71.4% |      58.7%
+  Medium     |       6.8% |       6.8% |       7.1%
+  High       |       3.8% |       2.5% |       4.0%
+  Critical   |      22.4% |      19.3% |      30.2%
+
+  Saved: C:\Users\nikhi\wiom-nps-analysis\data\nps_with_risk_scores.csv
+  Rows: 13045, Columns: 248
+
+======================================================================
+PHASE 4 SUMMARY
+======================================================================
+
+  Dataset: 13045 respondents, 248 features
+  NPS KDA R-squared (RF): 0.483
+  NPS KDA R-squared (GB): 0.580
+  Churn AUC-ROC (Model A - ops only): 0.9766
+  Churn AUC-ROC (Model B - ops+NPS): 0.9765
+  Churn AUC-ROC (Model C - ops+NPS+themes): 0.9765
+  Best tuned AUC-ROC: 0.9777
+  Customer segments: 6
+  Consensus NPS drivers (>=2 methods): 8
+
+  Top consensus drivers:
+    partner_avg_nps                          [4 methods: LR, RF, PC, GB]
+    is_positive_sentiment                    [4 methods: LR, RF, PC, GB]
+    is_negative_sentiment                    [4 methods: LR, RF, PC, GB]
+    tickets_before_3m                        [3 methods: RF, PC, GB]
+    days_since_last_recharge                 [3 methods: RF, PC, GB]
+    missed_call_ratio                        [2 methods: RF, GB]
+    OUTBOUND_CALLS                           [2 methods: LR, GB]
+    is_first_time_wifi                       [2 methods: PC, GB]

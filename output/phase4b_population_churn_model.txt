@@ -1,0 +1,327 @@
+====================================================================================================
+PHASE 4B: POPULATION OPS→CHURN MODEL
+Started: 2026-03-19 00:04:44
+====================================================================================================
+
+====================================================================================================
+STEP 1: SPRINT-BASED COHORT SAMPLING (13 sprints, ~1200/sprint)
+====================================================================================================
+  Design: 13 sprints x 1200/sprint = 15600 target
+  Active = recharged within 28 days before sprint date
+  Churn = DATEDIFF(last_recharge_ever, CURRENT_DATE) >= 44 (no forward window)
+    Sprint  1 (2025-07-07):  1200 new, churn=46.0%
+    Sprint  2 (2025-07-21):  1192 new, churn=44.6%
+    Sprint  3 (2025-08-04):  1176 new, churn=42.9%
+    Sprint  4 (2025-08-18):  1163 new, churn=42.9%
+    Sprint  5 (2025-09-01):  1167 new, churn=42.1%
+    Sprint  6 (2025-09-15):  1165 new, churn=38.1%
+    Sprint  7 (2025-09-29):  1148 new, churn=38.4%
+    Sprint  8 (2025-10-13):  1145 new, churn=37.6%
+    Sprint  9 (2025-10-27):  1133 new, churn=32.2%
+    Sprint 10 (2025-11-10):  1129 new, churn=31.4%
+    Sprint 11 (2025-11-24):  1135 new, churn=29.1%
+    Sprint 12 (2025-12-08):  1116 new, churn=26.7%
+    Sprint 13 (2026-01-05):  1116 new, churn=23.7%
+
+  Total: 14985 customers from 13 sprints
+  Overall churn rate: 36.7%
+  Avg tenure: 165 days
+  Median recharges: 10
+  Sprint distribution:
+    Sprint  1: n= 1200, churn=46.0%
+    Sprint  2: n= 1192, churn=44.6%
+    Sprint  3: n= 1176, churn=42.9%
+    Sprint  4: n= 1163, churn=42.9%
+    Sprint  5: n= 1167, churn=42.1%
+    Sprint  6: n= 1165, churn=38.1%
+    Sprint  7: n= 1148, churn=38.4%
+    Sprint  8: n= 1145, churn=37.6%
+    Sprint  9: n= 1133, churn=32.2%
+    Sprint 10: n= 1129, churn=31.4%
+    Sprint 11: n= 1135, churn=29.1%
+    Sprint 12: n= 1116, churn=26.7%
+    Sprint 13: n= 1116, churn=23.7%
+  Overlap with NPS respondents: 935 (6.2%)
+
+====================================================================================================
+STEP 2: PARTNER MAPPING (t_wg_customer → partner_lng_id, device_id)
+====================================================================================================
+  Querying partner mapping...
+    Batch 1/30: 405 rows
+    Batch 2/30: 384 rows
+    Batch 3/30: 383 rows
+    Batch 4/30: 396 rows
+    Batch 5/30: 389 rows
+    Batch 6/30: 404 rows
+    Batch 7/30: 406 rows
+    Batch 8/30: 404 rows
+    Batch 9/30: 407 rows
+    Batch 10/30: 398 rows
+    Batch 11/30: 403 rows
+    Batch 12/30: 402 rows
+    Batch 13/30: 411 rows
+    Batch 14/30: 413 rows
+    Batch 15/30: 408 rows
+    Batch 16/30: 416 rows
+    Batch 17/30: 424 rows
+    Batch 18/30: 419 rows
+    Batch 19/30: 407 rows
+    Batch 20/30: 437 rows
+    Batch 21/30: 412 rows
+    Batch 22/30: 426 rows
+    Batch 23/30: 428 rows
+    Batch 24/30: 432 rows
+    Batch 25/30: 425 rows
+    Batch 26/30: 451 rows
+    Batch 27/30: 442 rows
+    Batch 28/30: 460 rows
+    Batch 29/30: 461 rows
+    Batch 30/30: 436 rows
+  Partner mapping: 12489 rows
+  Partner match rate: 83.3%
+  Cities: {'Delhi': 10666, 'Mumbai': 853, 'Bharat': 810, 'Meerut': 159}
+
+====================================================================================================
+STEP 3: PARTNER UPTIME (90-day avg from PARTNER_INFLUX_SUMMARY)
+====================================================================================================
+  Unique partners: 1195
+  Querying partner uptime...
+  Uptime data: 1183 partners
+  Uptime match rate: 83.3%
+  Mean uptime: 69.9%
+
+====================================================================================================
+STEP 4: NETWORK SCORECARD (speed, rxpower, optical)
+====================================================================================================
+  Querying network scorecard...
+    Batch 1/30: 500 rows
+    Batch 2/30: 498 rows
+    Batch 3/30: 500 rows
+    Batch 4/30: 499 rows
+    Batch 5/30: 499 rows
+    Batch 6/30: 500 rows
+    Batch 7/30: 499 rows
+    Batch 8/30: 500 rows
+    Batch 9/30: 500 rows
+    Batch 10/30: 500 rows
+    Batch 11/30: 500 rows
+    Batch 12/30: 499 rows
+    Batch 13/30: 500 rows
+    Batch 14/30: 499 rows
+    Batch 15/30: 500 rows
+    Batch 16/30: 500 rows
+    Batch 17/30: 500 rows
+    Batch 18/30: 500 rows
+    Batch 19/30: 500 rows
+    Batch 20/30: 500 rows
+    Batch 21/30: 500 rows
+    Batch 22/30: 499 rows
+    Batch 23/30: 500 rows
+    Batch 24/30: 499 rows
+    Batch 25/30: 500 rows
+    Batch 26/30: 498 rows
+    Batch 27/30: 499 rows
+    Batch 28/30: 500 rows
+    Batch 29/30: 500 rows
+    Batch 30/30: 483 rows
+  Scorecard data: 14971 customers
+  Scorecard match rate: 99.9%
+
+====================================================================================================
+STEP 5: SERVICE TICKETS (resolution, SLA, severity)
+====================================================================================================
+  Device IDs available: 12468
+  Querying service tickets...
+    Batch 1/42: 265 rows
+    Batch 2/42: 254 rows
+    Batch 3/42: 256 rows
+    Batch 4/42: 248 rows
+    Batch 5/42: 254 rows
+    Batch 6/42: 259 rows
+    Batch 7/42: 251 rows
+    Batch 8/42: 260 rows
+    Batch 9/42: 250 rows
+    Batch 10/42: 262 rows
+    Batch 11/42: 254 rows
+    Batch 12/42: 267 rows
+    Batch 13/42: 260 rows
+    Batch 14/42: 253 rows
+    Batch 15/42: 272 rows
+    Batch 16/42: 254 rows
+    Batch 17/42: 264 rows
+    Batch 18/42: 262 rows
+    Batch 19/42: 266 rows
+    Batch 20/42: 266 rows
+    Batch 21/42: 250 rows
+    Batch 22/42: 259 rows
+    Batch 23/42: 240 rows
+    Batch 24/42: 265 rows
+    Batch 25/42: 255 rows
+    Batch 26/42: 255 rows
+    Batch 27/42: 258 rows
+    Batch 28/42: 263 rows
+    Batch 29/42: 272 rows
+    Batch 30/42: 252 rows
+    Batch 31/42: 258 rows
+    Batch 32/42: 259 rows
+    Batch 33/42: 259 rows
+    Batch 34/42: 258 rows
+    Batch 35/42: 251 rows
+    Batch 36/42: 256 rows
+    Batch 37/42: 254 rows
+    Batch 38/42: 265 rows
+    Batch 39/42: 257 rows
+    Batch 40/42: 259 rows
+    Batch 41/42: 254 rows
+    Batch 42/42: 146 rows
+  Ticket data: 10722 devices
+  Ticket match rate: 71.6%
+
+====================================================================================================
+STEP 6: IVR CALL METRICS
+====================================================================================================
+  Querying IVR calls...
+    Batch 1/30: 440 rows
+    Batch 2/30: 430 rows
+    Batch 3/30: 438 rows
+    Batch 4/30: 444 rows
+    Batch 5/30: 437 rows
+    Batch 6/30: 445 rows
+    Batch 7/30: 422 rows
+    Batch 8/30: 425 rows
+    Batch 9/30: 442 rows
+    Batch 10/30: 453 rows
+    Batch 11/30: 443 rows
+    Batch 12/30: 448 rows
+    Batch 13/30: 451 rows
+    Batch 14/30: 427 rows
+    Batch 15/30: 438 rows
+    Batch 16/30: 440 rows
+    Batch 17/30: 446 rows
+    Batch 18/30: 457 rows
+    Batch 19/30: 453 rows
+    Batch 20/30: 441 rows
+    Batch 21/30: 452 rows
+    Batch 22/30: 432 rows
+    Batch 23/30: 451 rows
+    Batch 24/30: 441 rows
+    Batch 25/30: 446 rows
+    Batch 26/30: 441 rows
+    Batch 27/30: 444 rows
+    Batch 28/30: 438 rows
+    Batch 29/30: 439 rows
+    Batch 30/30: 431 rows
+  IVR data: 13235 customers
+  IVR match rate: 88.3%
+
+====================================================================================================
+STEP 7: INSTALL TAT
+====================================================================================================
+  Querying install TAT...
+    Batch 1/30: 461 rows
+    Batch 2/30: 451 rows
+    Batch 3/30: 441 rows
+    Batch 4/30: 470 rows
+    Batch 5/30: 457 rows
+    Batch 6/30: 448 rows
+    Batch 7/30: 466 rows
+    Batch 8/30: 459 rows
+    Batch 9/30: 445 rows
+    Batch 10/30: 466 rows
+    Batch 11/30: 463 rows
+    Batch 12/30: 455 rows
+    Batch 13/30: 465 rows
+    Batch 14/30: 457 rows
+    Batch 15/30: 464 rows
+    Batch 16/30: 458 rows
+    Batch 17/30: 458 rows
+    Batch 18/30: 458 rows
+    Batch 19/30: 454 rows
+    Batch 20/30: 461 rows
+    Batch 21/30: 454 rows
+    Batch 22/30: 448 rows
+    Batch 23/30: 462 rows
+    Batch 24/30: 446 rows
+    Batch 25/30: 455 rows
+    Batch 26/30: 457 rows
+    Batch 27/30: 465 rows
+    Batch 28/30: 454 rows
+    Batch 29/30: 448 rows
+    Batch 30/30: 439 rows
+  Install data: 13685 customers
+  Install match rate: 91.3%
+
+====================================================================================================
+STEP 8: FEATURE ENGINEERING + NORMALIZATION
+====================================================================================================
+  TOTAL_IVR_CALLS                → ivr_calls_per_month
+  MISSED_CALLS                   → missed_calls_per_month
+  INBOUND_CALLS                  → inbound_calls_per_month
+  ANSWERED_CALLS                 → answered_calls_per_month
+  INBOUND_ANSWERED               → inbound_answered_per_month
+  INBOUND_UNANSWERED             → inbound_unanswered_per_month
+  TOTAL_TICKETS                  → tickets_per_month
+  CX_TICKETS                     → cx_tickets_per_month
+  PX_TICKETS                     → px_tickets_per_month
+  DISTINCT_ISSUE_TYPES           → distinct_issues_per_month
+  TICKETS_REOPENED_ONCE          → reopened_once_per_month
+  MAX_TIMES_REOPENED             → max_reopened_per_month
+  INSTALL_ATTEMPTS               → install_attempts_per_month
+
+  Final population dataset: 14985 rows × 70 cols
+  Churn rate: 36.7%
+  SAVED: C:\Users\nikhi\wiom-nps-analysis\data\population_ops_features.csv
+
+====================================================================================================
+STEP 9: TRAIN MODEL B (Ops→Churn) ON POPULATION
+====================================================================================================
+  Available features: 39/39
+  Dropping 2 all-NaN columns: ['PEAK_UPTIME_PCT', 'AVG_TICKET_RATING']
+  Training matrix: 14985 rows × 37 features
+  Churn: 5506/14985 (36.7%)
+
+  3-Fold CV on population data...
+    GB CV AUC: 0.9484 (+/- 0.0040)
+    RF CV AUC: 0.9438 (+/- 0.0039)
+
+  Top 20 Population Churn Drivers:
+     1. PEAK_VS_OVERALL_GAP                     : 0.4525 (45.2%)
+     2. resolution_rate                         : 0.3484 (34.8%)
+     3. avg_resolution_hours_w                  : 0.0463 (4.6%)
+     4. avg_resolution_hours                    : 0.0393 (3.9%)
+     5. SC_AVG_RXPOWER_IN_RANGE                 : 0.0287 (2.9%)
+     6. ivr_calls_per_month                     : 0.0071 (0.7%)
+     7. AVG_ANSWERED_SECONDS                    : 0.0064 (0.6%)
+     8. answered_calls_per_month                : 0.0051 (0.5%)
+     9. STDDEV_UPTIME                           : 0.0046 (0.5%)
+    10. ticket_severity                         : 0.0046 (0.5%)
+    11. SLA_COMPLIANCE_PCT                      : 0.0046 (0.5%)
+    12. tickets_per_month                       : 0.0044 (0.4%)
+    13. SC_AVG_WEEKLY_DATA_GB                   : 0.0043 (0.4%)
+    14. missed_calls_per_month                  : 0.0042 (0.4%)
+    15. inbound_unanswered_per_month            : 0.0038 (0.4%)
+    16. install_attempts_per_month              : 0.0037 (0.4%)
+    17. SC_AVG_RXPOWER                          : 0.0035 (0.4%)
+    18. distinct_issues_per_month               : 0.0035 (0.3%)
+    19. px_tickets_per_month                    : 0.0032 (0.3%)
+    20. SC_SPEED_GAP_PCT                        : 0.0030 (0.3%)
+
+====================================================================================================
+STEP 10: VALIDATE POPULATION MODEL ON NPS RESPONDENTS
+====================================================================================================
+  Mapped 22/37 features to NPS dataset
+  Unmapped: ['AVG_CUSTOMER_CALLS', 'resolution_rate', 'ivr_calls_per_month', 'missed_calls_per_month', 'inbound_calls_per_month', 'answered_calls_per_month', 'inbound_answered_per_month', 'inbound_unanswered_per_month', 'tickets_per_month', 'cx_tickets_per_month', 'px_tickets_per_month', 'distinct_issues_per_month', 'reopened_once_per_month', 'max_reopened_per_month', 'install_attempts_per_month']
+
+  Population-trained model scored on NPS respondents (n=13045):
+    GB AUC:       0.6811
+    RF AUC:       0.7436
+    Ensemble AUC: 0.7334
+    OOT (Sprints 8-11) AUC: 0.7135 (n=3022)
+
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  COMPARISON: Population vs NPS-Trained Models                    ║
+  ╠══════════════════════════════════════════════════════════════════╣
+  ║  v5 (NPS-trained, OOT):    AUC = 0.8824                        ║
+  ║  Population (CV):           AUC = 0.9484                        ║
+  ║  Population → NPS scored:   AUC = 0.7334                        ║
+  ╚══════════════════════════════════════════════════════════════════╝

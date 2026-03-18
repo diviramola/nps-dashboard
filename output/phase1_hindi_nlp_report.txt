@@ -1,0 +1,225 @@
+======================================================================
+PHASE 1 — HINDI NLP PROCESSING REPORT
+======================================================================
+
+Total comments processed: 5507
+
+--- LANGUAGE DISTRIBUTION ---
+  hinglish                 :  3760 ( 68.3%)
+  english                  :  1159 ( 21.0%)
+  hindi_devanagari         :   550 ( 10.0%)
+  unknown                  :    20 (  0.4%)
+  mixed                    :    18 (  0.3%)
+
+--- SENTIMENT BY NPS GROUP ---
+sentiment_polarity  negative  neutral  positive
+nps_group                                      
+Detractor               80.7      7.2      12.0
+Passive                 26.4      0.5      73.0
+Promoter                 7.8      0.1      92.2
+
+--- EMOTION BY NPS GROUP ---
+emotion    anger  delight  disappointment  frustration  indifference  satisfaction
+nps_group                                                                         
+Detractor    1.0      0.2             1.1         62.1          23.7          11.8
+Passive      0.3      3.2             0.8         25.3          22.1          48.2
+Promoter     0.0      8.1             0.1          7.7          25.5          58.6
+
+--- SCORE-SENTIMENT MISMATCH ---
+  Overall mismatch rate: 7.4%
+nps_group
+Detractor    8.1
+Passive      0.0
+Promoter     7.8
+
+--- COMMENT QUALITY BY NPS GROUP ---
+comment_quality  high   low  medium
+nps_group                          
+Detractor        16.9  24.7    58.4
+Passive          12.9  30.2    56.9
+Promoter          5.1  43.9    51.0
+
+--- 28-DAY PLAN MENTIONS ---
+  Total: 60 (1.1%)
+  By NPS Group:
+nps_group
+Detractor    1.6
+Passive      1.1
+Promoter     0.4
+
+--- COMPETITOR MENTIONS ---
+  Total: 17
+competitor_names
+Airtel             7
+JioFiber           6
+JioFiber,Airtel    4
+
+--- LANGUAGE x NPS GROUP ---
+detected_language  english  hindi_devanagari  hinglish  mixed  unknown
+nps_group                                                             
+Detractor              565               269      2078     14        6
+Passive                 97                48       222      1        3
+Promoter               497               233      1460      3       11
+
+--- SENTIMENT x TENURE BUCKET ---
+sentiment_polarity       negative  neutral  positive
+tenure_bucket                                       
+Early Life (16-60d)          37.7      7.8      54.5
+Establishing (61-120d)       28.8      6.1      65.2
+Loyal (270d+)                48.4      3.8      47.9
+Onboarding (0-15d)           46.7     13.3      40.0
+Steady State (121-270d)      43.1      5.2      51.7
+
+--- TOP 15 HIGH-QUALITY DETRACTOR COMMENTS ---
+
+  [1] NPS=3 | hindi_devanagari | indifference | Intensity=1
+      Original: “पहले पूरा महीना-प्लान लागू रहता था। फिर उसे 28 दिन कर दिया गया। उसके बाद 25 दिन कर दिया गया। अब तो वर्तमान में 19 तारीख़ को ही महीना पूरा कर दिया जाता है। ये तो उपभोक्ताओं के साथ सीधा धोखा है।”
+      Translated: “पहले पूरा महीना-प्लान लागू रहता था। फिर उसे 28 दिन कर दिया गया। उसके बाद 25 दिन कर दिया गया। अब तो वर्तमान में 19 तारीख़ को ही महीना पूरा कर दिया जाता है। ये तो उपभोक्ताओं के साथ सीधा धोखा है।”
+
+  [2] NPS=0 | hinglish | indifference | Intensity=1
+      Original: 0% isliye Diya hun kyunki aapka Mahina jo hai na 28 din Ka hi hota hai isiliye zero
+      Translated: 0% isliye diya hun kyunki aapka mahina jo hai na 28-day hi hota hai isiliye zero
+
+  [3] NPS=1 | hinglish | satisfaction | Intensity=1
+      Original: Acha chalta hai .. baz plan ki awadhi bhada di jaye 28 ki jagh 30 din krdo same plan me
+      Translated: works well .. baz plan ki awadhi bhada di jaye 28 ki jagh 30 din krdo same plan me
+
+  [4] NPS=0 | hinglish | indifference | Intensity=1
+      Original: Wiom ki billing cycle period jo ki 28 day ka hota h vo one month ka hona chahiye
+      Translated: wiom ki billing cycle period jo ki 28 day ka hota h vo one month ka hona chahiye
+
+  [5] NPS=0 | english | indifference | Intensity=1
+      Original: Other company month count 30 days but your comp count 28 day . According to you 24 day extra charges received in year.
+      Translated: other company month count 30 days but your comp count 28 day . according to you 24 day extra charges received in year.
+
+  [6] NPS=2 | hinglish | frustration | Intensity=3
+      Original: Reason 1.yeh hai ki month me recharge aap log 565rs ka hota hai but milta hai 28 days ka .
+ Reason 2. Mostly internet break hota rehta hai. Abhi bhi mai jo form bhar raha hu apne ghar beth ke apne mob
+      Translated: reason 1.yeh hai ki month me recharge aap log 565rs ka hota hai but milta hai 28 days ka .
+ reason 2. mostly internet break hota rehta hai. abhi bhi mai jo form bhar raha hu apne ghar beth ke apne mob
+
+  [7] NPS=0 | hinglish | frustration | Intensity=4
+      Original: Ye 28 din ka hai kam se kam 1 mahina do de our bohot din tak network issue aata hai uske bdle extra din bhi nahi dete he our plan hold karna ka bhi option nhi hai
+      Translated: ye 28-day hai kam se kam 1 mahina do de our bohot din tak network problem aata hai uske bdle extra din bhi nahi dete he our plan hold karna ka bhi option nhi hai
+
+  [8] NPS=0 | hinglish | frustration | Intensity=3
+      Original: Wajah ye hai ki itna jhantu wifi hai ki 3 din se chla nhi hai aur har week me wifi ki ma khud jati h
+      Translated: wajah ye hai ki itna jhantu wifi hai ki 3 din se chla nhi hai aur har week me wifi ki ma khud jati h
+
+  [9] NPS=5 | english | satisfaction | Intensity=1
+      Original: I am a student he must help me for online study and affordable price with in 1 to 3 day installation with attached on this price
+      Translated: i am a student he must help me for online study and affordable price with in 1 to 3 day installation with attached on this price
+
+  [10] NPS=0 | hinglish | satisfaction | Intensity=1
+      Original: Na to koi coupon milta jyada se jyada 20 rs ka coupon milta hai 20rs main kya hota h aaj ki date main na he theek se service milti
+      Translated: na to koi coupon milta jyada se jyada 20 rs ka coupon milta hai 20rs main kya hota h aaj ki date main na he theek se service milti
+
+  [11] NPS=5 | english | frustration | Intensity=2
+      Original: Jinko financial koi problem h wo yah use kr sakta h pr iski timingbht km h1 month richarge nhi krte to router mang lete h ek dum se phir sudden karnapadta h richarge
+      Translated: jinko financial koi problem h wo yah use kr sakta h pr iski timingbht km h1 month richarge nhi krte to router mang lete h ek dum se phir sudden karnapadta h richarge
+
+  [12] NPS=5 | hinglish | frustration | Intensity=3
+      Original: 5 isliye diya ye free lag jaata hai bas recharge ke paise dene hote hai ye to sahi par kuch na kuch dikkat isme aati rehti hai jaise 2g network ka kaam na karna door me bhi paas me bhi 30 main se 8 di
+      Translated: 5 isliye diya ye free lag jaata hai bas recharge ke paise dene hote hai ye to sahi par kuch na kuch dikkat isme aati rehti hai jaise 2g network ka kaam na karna door me bhi paas me bhi 30 main se 8 di
+
+  [13] NPS=0 | hinglish | frustration | Intensity=1
+      Original: Acche se nahin chalta aur network Kabhi Aata Kabhi Nahin Aata aur abhi Bhi Koi working Nahin Hai recharge kara Rakha but Nahin chalta
+      Translated: acche se nahin chalta aur network kabhi aata kabhi nahin aata aur abhi bhi koi working nahin hai recharge kara rakha but nahin chalta
+
+  [14] NPS=3 | hinglish | frustration | Intensity=2
+      Original: Connection aata nahi hai hafte mein ek baar kharab ho jata hai aur paise bhi jyada hai connection lagne ke bhi aur wifi ke bhi speed kabhi bhi chali jati hai hume complain karni padti hai baar baar a 
+      Translated: connection aata nahi hai hafte mein ek baar kharab ho jata hai aur paise bhi jyada hai connection lagne ke bhi aur wifi ke bhi speed kabhi bhi chali jati hai hume complain karni padti hai again and ag
+
+  [15] NPS=0 | english | frustration | Intensity=4
+      Original: Your Service is very Bad 15 days I have facing issues interview not working properly, I have sometime calling but still not resolve My issue
+      Translated: your service is very bad 15 days i have facing issues interview not working properly, i have sometime calling but still not resolve my issue
+
+--- TOP 10 HIGH-QUALITY PROMOTER COMMENTS ---
+
+  [1] NPS=10 | hinglish | satisfaction | Intensity=1
+      Original: Apne 449 se 500 to kar diya kya apne iske sath aap logo ne internet increment kiya jese aap chahte to 28 days 30 days kar sakte hana taki customer acha lagta thank you..!
+      Translated: apne 449 se 500 to kar diya kya apne iske sath aap logo ne internet increment kiya jese aap chahte to 28 days 30 days kar sakte hana taki customer acha lagta thank you..!
+
+  [2] NPS=10 | hinglish | frustration | Intensity=1
+      Original: aap 28 din ka plan hai montlhy - normally sab log telecom log sab 30 days ka dete hai. mujhe yhi problem hai bas. mujhe yaha par 2 mahine hi lena tha - toh maine 2 mahine ke liye adjust krne ke liye w
+      Translated: aap 28-day plan hai montlhy - normally sab log telecom log sab 30 days ka dete hai. mujhe yhi there is a problem bas. mujhe yaha par 2 mahine hi lena tha - toh maine 2 mahine ke liye adjust krne ke li
+
+  [3] NPS=10 | hinglish | satisfaction | Intensity=3
+      Original: ACHa network hai aur kya hai - amount jo hai monthly amount hai wo bhi sahi hai - router ke liye paisa nahi lere - koi issue bhi nahi hora hai toh solve ho jaata hai
+      Translated: acha network hai aur kya hai - amount jo hai monthly amount hai wo bhi sahi hai - router ke liye paisa nahi lere - koi issue bhi nahi hora hai toh solve ho jaata hai
+
+  [4] NPS=9 | hinglish | satisfaction | Intensity=2
+      Original: Kyuki Sab Kuch Free of Cost Hai Koi Extra Charges Nhi ! Or Speed Bhi Achi Hai
+      Translated: kyuki sab kuch free of cost hai koi extra charges nhi ! or speed bhi achi hai
+
+  [5] NPS=10 | hinglish | satisfaction | Intensity=2
+      Original: Apke is wifi ko har koi lagwa sakta hai..sabse badi khaasiyat yahi hai...aur plan bhi achha hi hai....
+      Translated: apke is wifi ko har koi lagwa sakta hai..sabse badi khaasiyat yahi hai...aur plan bhi achha hi hai....
+
+  [6] NPS=10 | hinglish | satisfaction | Intensity=3
+      Original: Speed acchi hai aur connection isliye Ho Gaya aur Sabse Badi baat ki jo iska charge hai na vah bahut achcha Laga
+      Translated: speed is good aur connection isliye ho gaya aur sabse badi baat ki jo iska charge hai na vah bahut achcha laga
+
+  [7] NPS=10 | hinglish | frustration | Intensity=4
+      Original: Wiom ek acha wifi hai net bhi fast hai our charges bhi kam hai Koi dikkat aati Hai to turant samasya ka kam hone lagta hai se hamen coupons bhi milte Hain 
+ Itna sab kuchh Kaun deta hai 
+ Maine pahle 
+      Translated: wiom ek acha wifi hai net bhi fast hai our charges bhi kam hai koi dikkat aati hai to turant samasya ka kam hone lagta hai se hamen coupons bhi milte hain 
+ itna sab kuchh kaun deta hai 
+ maine pahle 
+
+  [8] NPS=10 | hinglish | satisfaction | Intensity=3
+      Original: Wiom internet middle class logo ke liye bhot acha hai or budget me bhi hai 
+ Mar esme ek problem hai wiom ka recharge sirf 28 din hi chalta hai 
+ Mar ese pure 30 din chalna chahiye 
+ Please es problem
+      Translated: wiom internet middle class logo ke liye bhot is good or budget me bhi hai 
+ mar esme ek there is a problem wiom ka recharge sirf 28 din hi chalta hai 
+ mar ese pure 30 din chalna chahiye 
+ please es p
+
+  [9] NPS=9 | english | frustration | Intensity=1
+      Original: Easy recharge method, additional benefit of wifi connect from any wiom router, no initial big amount process
+      Translated: easy recharge method, additional benefit of wifi connect from any wiom router, no initial big amount process
+
+  [10] NPS=9 | english | satisfaction | Intensity=3
+      Original: Good condition and all time service provid free off cost
+ Net properly all time work easily online working no disturbance no any problem good condition wifi thanks ðŸ‘_x008d_
+      Translated: good condition and all time service provid free off cost
+ net properly all time work easily online working no disturbance no any problem good condition wifi thanks ðÿ‘_x008d_
+
+--- CHURN RATE BY SENTIMENT POLARITY ---
+                    total  churned  churn_rate
+sentiment_polarity                            
+negative             2636      599        22.7
+neutral               216       42        19.4
+positive             2655      395        14.9
+
+--- CHURN RATE BY EMOTION ---
+                total  churned  churn_rate
+emotion                                   
+anger              30        9        30.0
+delight           198       27        13.6
+disappointment     38       11        28.9
+frustration      2085      447        21.4
+indifference     1339      256        19.1
+satisfaction     1817      286        15.7
+
+--- PRIMARY REASON x SENTIMENT (coded subset) ---
+sentiment_polarity                   negative  neutral  positive  total
+NPS Reason - Primary                                                   
+General Good Service                       57        7      1397   1461
+Frequent Disconnections                   634       81       243    958
+General Bad Service                       721       26        62    809
+Slow Speed                                542       47       208    797
+Good Speed                                  7        0       233    240
+Affordable                                 25        3       212    240
+Range Issue                               167        1         9    177
+No/ Late Complaint Resolution              86       14        12    112
+Fast Complaint Resolution                   1        0        83     84
+Bad Customer Support - Call Centre         73        0         3     76
+Internet Down                              70        1         2     73
+Good Customer Support - Call Centre        11        0        37     48
+Expensive                                  32        3         6     41
+Bad Customer Support - Technician          31        1         5     37
+RDNI (Recharge Done, No Internet)          31        2         4     37

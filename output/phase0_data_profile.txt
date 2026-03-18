@@ -1,0 +1,209 @@
+
+======================================================================
+PHASE 0 — DATA PROFILE REPORT
+======================================================================
+
+Source: C:\Users\nikhi\Downloads\NPS Verma Parivar.xlsx
+Sheet: Consolidated
+Total rows: 13045
+Total columns: 33
+
+--- COLUMN FILL RATES ---
+  phone_number                                 :  13045 / 13045 (100.0%)
+  phone_valid                                  :  13045 / 13045 (100.0%)
+  nps_score                                    :  13045 / 13045 (100.0%)
+  nps_group                                    :  13045 / 13045 (100.0%)
+  OE                                           :   5507 / 13045 ( 42.2%)
+  has_comment                                  :  13045 / 13045 (100.0%)
+  NPS Reason - Primary                         :   5254 / 13045 ( 40.3%)
+  NPS Reason - Secondary                       :    515 / 13045 (  3.9%)
+  NPS Reason - Tertiary                        :     56 / 13045 (  0.4%)
+  Primary Category                             :   5251 / 13045 ( 40.3%)
+  Secondary Category                           :    514 / 13045 (  3.9%)
+  Tertiary Category                            :     56 / 13045 (  0.4%)
+  Channel                                      :  13045 / 13045 (100.0%)
+  first_time_wifi                              :  13045 / 13045 (100.0%)
+  Sprint ID                                    :  13045 / 13045 (100.0%)
+  sprint_num                                   :  13045 / 13045 (100.0%)
+  Cycle ID                                     :  13045 / 13045 (100.0%)
+  Sprint Start Date                            :  13045 / 13045 (100.0%)
+  Sprint End Date                              :  13045 / 13045 (100.0%)
+  Install Date                                 :  13045 / 13045 (100.0%)
+  tenure_days                                  :  13045 / 13045 (100.0%)
+  tenure_bucket                                :  13045 / 13045 (100.0%)
+  tenure_excel                                 :  13045 / 13045 (100.0%)
+  city                                         :  13045 / 13045 (100.0%)
+  churn_label                                  :  13045 / 13045 (100.0%)
+  is_churned                                   :  13045 / 13045 (100.0%)
+  recharges_before_sprint                      :  12251 / 13045 ( 93.9%)
+  tickets_post_sprint                          :   6636 / 13045 ( 50.9%)
+  tickets_before_3m                            :  12251 / 13045 ( 93.9%)
+  आपका Wi-Fi internet कैसे चलता है             :   2696 / 13045 ( 20.7%)
+  WiFi की स्पीड कैसी है?                       :   2697 / 13045 ( 20.7%)
+  समस्या के समाधान का अनुवभ कैसे है?           :   2691 / 13045 ( 20.6%)
+  Jab dikkat aayi toh kya kia?                 :     73 / 13045 (  0.6%)
+
+--- NPS SCORE DISTRIBUTION ---
+   0:  2660 ( 20.4%) ####################
+   1:  1259 (  9.7%) #########
+   2:   376 (  2.9%) ##
+   3:   317 (  2.4%) ##
+   4:   298 (  2.3%) ##
+   5:   789 (  6.0%) ######
+   6:   308 (  2.4%) ##
+   7:   465 (  3.6%) ###
+   8:   562 (  4.3%) ####
+   9:   448 (  3.4%) ###
+  10:  5563 ( 42.6%) ##########################################
+
+--- NPS GROUP ---
+  Promoter    :  6011 ( 46.1%)
+  Passive     :  1027 (  7.9%)
+  Detractor   :  6007 ( 46.0%)
+
+--- COMPUTED TENURE BUCKETS ---
+  Onboarding (0-15d)       :    25 (  0.2%)
+  Early Life (16-60d)      :   125 (  1.0%)
+  Establishing (61-120d)   :   108 (  0.8%)
+  Steady State (121-270d)  :   186 (  1.4%)
+  Loyal (270d+)            : 12601 ( 96.6%)
+  Unknown                  :     0 (  0.0%)
+
+--- CROSS-TAB: NPS GROUP x TENURE BUCKET (counts) ---
+nps_group                Promoter  Passive  Detractor
+tenure_bucket                                        
+Onboarding (0-15d)             12        4          9
+Early Life (16-60d)            63        9         53
+Establishing (61-120d)         51        8         49
+Steady State (121-270d)        82       19         85
+Loyal (270d+)                5803      987       5811
+Unknown                         0        0          0
+
+--- MEAN NPS SCORE BY TENURE BUCKET ---
+                             mean  median    count
+tenure_bucket                                     
+Onboarding (0-15d)       7.200000     8.0     25.0
+Early Life (16-60d)      6.400000     9.0    125.0
+Establishing (61-120d)   6.083333     7.5    108.0
+Steady State (121-270d)  5.715054     7.0    186.0
+Loyal (270d+)            5.924927     8.0  12601.0
+Unknown                       NaN     NaN      NaN
+
+--- CHURN RATE BY NPS GROUP ---
+           total  churned  churn_rate
+nps_group                            
+Detractor   6007     1669        27.8
+Passive     1027      176        17.1
+Promoter    6011     1212        20.2
+
+--- CHURN RATE BY TENURE BUCKET ---
+                           total  churned  churn_rate
+tenure_bucket                                        
+Onboarding (0-15d)          25.0      0.0         0.0
+Early Life (16-60d)        125.0      0.0         0.0
+Establishing (61-120d)     108.0      0.0         0.0
+Steady State (121-270d)    186.0      0.0         0.0
+Loyal (270d+)            12601.0   3057.0        24.3
+Unknown                      NaN      NaN         NaN
+
+--- CHURN RATE BY CITY x NPS GROUP ---
+
+  Delhi:
+           total  churned  churn_rate
+nps_group                            
+Detractor   4763     1346        28.3
+Passive      796      138        17.3
+Promoter    4753      949        20.0
+
+  Mumbai:
+           total  churned  churn_rate
+nps_group                            
+Detractor    356      107        30.1
+Passive       65       10        15.4
+Promoter     381       89        23.4
+
+  UP:
+           total  churned  churn_rate
+nps_group                            
+Detractor    549      207        37.7
+Passive       96       28        29.2
+Promoter     525      171        32.6
+
+--- COMMENT (OE) FILL RATE BY NPS GROUP ---
+nps_group
+Detractor    48.8
+Passive      36.1
+Promoter     36.7
+
+--- COMMENT (OE) FILL RATE BY TENURE BUCKET ---
+tenure_bucket
+Onboarding (0-15d)         60.0
+Early Life (16-60d)        61.6
+Establishing (61-120d)     61.1
+Steady State (121-270d)    62.4
+Loyal (270d+)              41.5
+Unknown                     NaN
+
+--- CHANNEL DISTRIBUTION ---
+Channel
+WA               5168
+CT               4514
+In - WA          2679
+G- form in WA     606
+Call               78
+
+--- PRIMARY CATEGORY DISTRIBUTION ---
+Primary Category
+Bad Internet Experience           2852
+Good Internet Experience          1701
+Good Price                         240
+Bad Cx Support                     226
+Good Cx Support                    139
+Offering/ Plan Dissatisfaction      85
+Application/ Tech                    8
+
+--- NPS REASON - PRIMARY (top 20) ---
+NPS Reason - Primary
+General Good Service                   1461
+Frequent Disconnections                 958
+General Bad Service                     809
+Slow Speed                              797
+Affordable                              240
+Good Speed                              240
+Range Issue                             177
+No/ Late Complaint Resolution           112
+Fast Complaint Resolution                84
+Bad Customer Support - Call Centre       76
+Internet Down                            73
+Good Customer Support - Call Centre      48
+Expensive                                41
+Bad Customer Support - Technician        37
+RDNI (Recharge Done, No Internet)        37
+28-Day Plan Issue                        26
+OTT Request, No OTT complaint            11
+Bad Application                           7
+Shifting not Feasible                     6
+Autopay                                   3
+
+--- FIRST TIME WIFI ---
+first_time_wifi
+Unknown    7070
+Yes        3901
+No         2074
+
+--- SPRINT DISTRIBUTION ---
+           count  mean_nps  churn_rate
+Sprint ID                             
+Sprint 1    2679      6.33        34.7
+Sprint 10    738      6.00        11.2
+Sprint 11    701      5.84         6.7
+Sprint 12    677      5.77         3.2
+Sprint 13    794      5.96         0.0
+Sprint 2     684      5.37        31.3
+Sprint 3    1603      6.01        31.1
+Sprint 4    1051      5.67        29.9
+Sprint 5     955      5.86        30.7
+Sprint 6     822      5.84        27.6
+Sprint 7     758      5.51        22.3
+Sprint 8     953      5.80        17.9
+Sprint 9     630      6.13        14.1

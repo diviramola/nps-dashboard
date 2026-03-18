@@ -1,0 +1,571 @@
+============================================================================
+  WIOM NPS DRIVER ANALYSIS
+  CEO SYNTHESIS & LEADERSHIP DELIVERABLE
+============================================================================
+  Prepared: March 18, 2026
+  Data Period: July 2025 (Sprint 1) through January 2026 (Sprint 13)
+  Sample: 13,045 NPS respondents | 5,488 free-text comments (42%)
+  Methodology: Triangulated qualitative (NLP/CX), quantitative (KDA/ML),
+  and independent industry expert assessment
+
+============================================================================
+  1. EXECUTIVE SUMMARY
+============================================================================
+
+  HEADLINE: Wiom's NPS problem is NOT primarily a network problem.
+  It is a HUMAN DELIVERY and PROCESS problem.
+
+  THE NUMBERS
+  +-----------------------+-----------+
+  | NPS Score (net)       | +0.0      |
+  | Mean Score (0-10)     | 5.9        |
+  | Promoters (9-10)      | 46.1%      |
+  | Passives (7-8)        | 7.9%       |
+  | Detractors (0-6)      | 46.0%      |
+  | Overall Churn Rate    | 23.4%      |
+  | Promoter Churn Rate   | 20.2%      |
+  +-----------------------+-----------+
+
+  KEY FINDING: NPS scores do NOT predict churn beyond what operational
+  data already captures (AUC +0.0001 lift). The value of NPS is in the
+  COMMENTS (qualitative diagnosis), not the SCORE (quantitative prediction).
+
+  NPS TREND BY SPRINT
+  Sprint  |  Avg NPS  |  Trend
+  --------+-----------+--------
+  Sprint 1|   6.3     | 
+  Sprint 2|   5.4     |   -1.0
+  Sprint 3|   6.0     |   +0.6
+  Sprint 4|   5.7     |   -0.3
+  Sprint 5|   5.9     |   ~flat
+  Sprint 6|   5.8     |   ~flat
+  Sprint 7|   5.5     |   -0.3
+  Sprint 8|   5.8     |   ~flat
+  Sprint 9|   6.1     |   +0.3
+  Sprint 10|   6.0     |   ~flat
+  Sprint 11|   5.8     |   ~flat
+  Sprint 12|   5.8     |   ~flat
+  Sprint 13|   6.0     |   ~flat
+
+  TOP 5 DRIVERS (Triangulated, Ranked by Impact x Actionability)
+
+  Rank | Driver                       | Confidence | What To Do
+  -----+------------------------------+------------+---------------------------
+    1  | Partner/Rohit Quality         | HIGH       | Quality tiering + training
+    2  | Support & Complaint Handling  | HIGH       | Service recovery SOP
+    3  | Network Stability             | MED-HIGH   | Device-level monitoring
+    4  | 28-Day Billing Cycle          | MED-HIGH   | Move to 30-day cycles
+    5  | Price/Value Perception        | MED-HIGH   | Protect affordability moat
+
+  THE ONE SENTENCE FOR THE BOARD:
+  "The Rohit (partner) IS Wiom for the customer. Improving partner quality
+  and complaint handling will move NPS more than any network investment,
+  and eliminating the 28-day billing cycle removes a self-inflicted wound."
+
+  NPS-CHURN LINKAGE
+  The churn model (AUC 0.977) identifies at-risk customers using
+  operational data alone. NPS adds zero incremental predictive power.
+
+  What this means for leadership:
+  - Operational dashboards are SUFFICIENT for churn prediction
+  - NPS is useful for diagnosing WHY customers are unhappy (comments)
+  - NPS is NOT useful for predicting WHO will churn (score)
+  - Focus NPS investment on: closed-loop follow-up, comment analysis,
+    and theme tracking — NOT on score-based prediction models
+
+============================================================================
+  2. DRIVER DEEP-DIVE #1: PARTNER/ROHIT QUALITY
+     "The Partner IS the Brand"
+============================================================================
+
+  EVIDENCE STRENGTH: HIGH (all 3 perspectives converge)
+
+  QUANTITATIVE
+  - partner_avg_nps is #1 KDA consensus driver (4/4 statistical methods)
+  - 100% sprint stability (appears in every sprint tested)
+  - partner_churn_rate is #2 churn predictor (11.4% feature importance)
+  - partner_sla_compliance, partner_fcr_rate in extended top-20
+  - Partner quality explains more NPS variance than any network metric
+
+  QUALITATIVE
+  - technician_partner_bad theme: 70.6% Detractors, 23.5% churn rate
+  - complaint_resolution_bad: 85.1% Detractors, NPS 2.4
+  - Customer voices:
+    "Technician nahi aate" (technician doesn't come)
+    "Rohit ne bola 100 Mbps milega, magar 5-6 hi aati hai"
+    (Rohit promised 100 Mbps, but only getting 5-6)
+    "Ek hafte se complaint hai, koi dhyan nahi deta"
+    (Complaint for a week, nobody pays attention)
+
+  INDUSTRY EXPERT VIEW
+  - Independent finding #3: "The Partner IS the Brand"
+  - Partner quality variance > geography variance
+  - "A bad partner = bad Wiom, regardless of network quality"
+  - This is a known pattern in last-mile ISPs: the field tech shapes
+    the ENTIRE perception of the service
+
+  OPERATIONAL LEVER
+  Snowflake: partner_details_log (partner status), PARTNER_INFLUX_SUMMARY
+  (partner uptime), service_ticket_model (partner SLA), t_router_user_mapping
+  (partner customer portfolio)
+
+  RECOMMENDED ACTION
+  1. Build Partner Quality Composite Score:
+     - Partner uptime % (30-day avg)
+     - Median install TAT
+     - Ticket SLA compliance rate
+     - Customer churn rate in portfolio
+     - Average NPS of their customers
+  2. Tier partners A/B/C based on composite score
+  3. A-tier: higher commissions, priority install allocation
+  4. C-tier: mandatory training, 90-day improvement window, supervised
+  5. Auto-escalate any complaint from C-tier partner customers
+
+  EXPECTED IMPACT: Moving bottom-quartile partners to median could shift
+  15-20% of their Detractors toward Passive/Promoter. Estimated NPS
+  improvement: +3 to +5 points within 2 sprints of implementation.
+
+============================================================================
+  3. DRIVER DEEP-DIVE #2: SUPPORT EFFORT & COMPLAINT HANDLING
+     "How you handle problems matters more than problem frequency"
+============================================================================
+
+  EVIDENCE STRENGTH: HIGH (all 3 perspectives converge)
+
+  QUANTITATIVE
+  - tickets_before_3m: #4 KDA consensus driver (3/4 methods)
+  - AVG_TIMES_REOPENED: 47.7% higher for Detractors vs Promoters
+  - TOTAL_IVR_CALLS: 22.9% higher for Detractors
+  - MAX_TICKETS_SAME_ISSUE: 26.8% higher for Detractors
+  - support_effort_index: significant in regression models
+
+  QUALITATIVE
+  - complaint_resolution_bad: 161 comments, 85.1% Detractors, NPS 2.4
+  - complaint_resolution_good: 10 comments, NPS 9.2 (a 6.8 point gap!)
+  - 28.9% of commenting Detractors cite complaint handling
+  - The SERVICE RECOVERY PARADOX is real in this data:
+    Good resolution of a problem creates a STRONGER promoter than
+    never having a problem at all
+
+  INDUSTRY EXPERT VIEW
+  - Breakage Point #3: "First complaint resolution failure creates
+    permanent distrust"
+  - "Each additional call doubles churn probability"
+  - FCR (first contact resolution) is the gold standard metric
+
+  CUSTOMER VOICES
+  - "Ek hafte se complaint hai, koi dhyan nahi deta"
+    (Week-long complaint, nobody pays attention)
+  - "Customer care call nahi uthata"
+    (Customer care doesn't answer calls)
+  - "Jab tak complaint nahi karenge tab tak koi nahi dekhega"
+    (Nobody looks until you complain)
+
+  RECOMMENDED ACTION
+  1. 2-hour follow-up SOP: WhatsApp to customer after every complaint
+  2. Repeat complaint alert: 2nd ticket in 7 days = auto-escalate
+  3. Target: reduce AVG_TIMES_REOPENED from 0.14 to <0.05
+  4. Fast-track first-30-day complaints (critical retention window)
+  5. Track FCR at customer level (not just system-level SLA)
+
+  EXPECTED IMPACT: Reducing repeat complaints by 30% could convert
+  200-300 Detractors to Passives, improving NPS by +3-5 points.
+
+============================================================================
+  4. DRIVER DEEP-DIVE #3: NETWORK STABILITY
+     "Customers talk about it most, but we can't measure it well"
+============================================================================
+
+  EVIDENCE STRENGTH: MEDIUM-HIGH (qual + industry agree; quant limited)
+
+  THIS IS A MEASUREMENT GAP, NOT DRIVER IRRELEVANCE
+
+  What customers say (STRONG signal):
+  - slow_speed: 877 comments (16.0% of classified) — #1 theme by volume
+  - disconnection_frequency: 676 comments (12.3%) — #3 theme
+  - internet_down_outage: 147 comments (2.7%)
+  - Combined network complaints: 1,700+ comments = 31% of all themes
+  - "100 Mbps bola tha, aaati 5-6 hi hai" (Promised 100, getting 5-6)
+
+  What our models see (WEAK signal):
+  - avg_uptime_pct: NOT in NPS KDA consensus top-8
+  - Only 0.9% gap in PEAK_UPTIME_PCT between Detractors and Promoters
+  - BUT: avg_uptime_pct IS #3 churn predictor (11.1% importance)
+  - AND: For 6+ month customers, uptime becomes #1 churn predictor
+
+  WHY THE GAP:
+  - Uptime measured at PARTNER FLEET level, not customer device level
+  - A partner with 71% uptime may have customers at 95% and 50%
+  - Speed data is COMPLETELY MISSING from Snowflake at customer level
+  - The #1 customer complaint has NO statistical representation
+
+  INDUSTRY EXPERT VIEW
+  - "Connection stability > speed for this segment"
+  - First outage experience is Breakage Point #1
+  - "95% monthly uptime can hide 6 hours of prime-time downtime"
+
+  RECOMMENDED ACTION
+  1. Deploy device-level speed testing (periodic automated tests)
+  2. Customer-experienced uptime tracking (device ping monitoring)
+  3. Peak-hour QoE monitoring (6-11 PM family usage window)
+  4. WiFi signal strength mapping at installation
+
+  EXPECTED IMPACT: Closing this measurement gap would enable targeted
+  interventions for individual customers instead of partner-level averages.
+  Cannot quantify NPS impact until device-level data is available.
+
+============================================================================
+  5. DRIVER DEEP-DIVE #4: 28-DAY BILLING CYCLE
+     "A self-inflicted competitive wound"
+============================================================================
+
+  EVIDENCE STRENGTH: MEDIUM-HIGH (qual + industry strong; quant indirect)
+
+  THE MATH CUSTOMERS DO
+  - 28-day cycle = 13 billing cycles per year
+  - Competitors (JioFiber, Airtel) use 30-day = 12 cycles per year
+  - Extra cycle cost: Rs 500-600/year at typical plan prices
+  - For a Rs 399/month customer, that's 8.3% more expensive annually
+
+  QUALITATIVE EVIDENCE
+  - billing_28day theme: 57 comments, 73.7% Detractors, NPS 3.0
+  - Churn rate: 31.6% (4th highest of any theme)
+  - Even PROMOTERS complain about it — Kano Reverse Quality
+  - The irritation COMPOUNDS with tenure: 69.8% from 6+ month bucket
+  - Customer voice: "Ye to upbhoktaon ke saath seedha dhokha hai"
+    (This is outright fraud against consumers)
+
+  INDUSTRY EXPERT VIEW
+  - Finding #1: "Strategic Vulnerability"
+  - "Recurring reminder that Wiom charges more than competitors"
+  - Every recharge is a moment where the customer does competitive math
+  - This is the EASIEST competitor talking point: "We charge monthly,
+    they charge every 28 days"
+
+  WHY IT MATTERS BEYOND THE MONEY
+  - It signals UNFAIRNESS — customers feel cheated, not just overcharged
+  - It creates a negative touchpoint 13x per year
+  - It gives competitors an easy differentiation message
+  - It disproportionately hurts loyal customers who stay long enough
+    to notice the pattern
+
+  RECOMMENDED ACTION
+  Option A: Move to 30-day billing cycle (clean, permanent fix)
+  Option B: Add 2 "bonus days" per cycle for 6+ month customers
+  Revenue impact: ~3.7% fewer recharge events/year (13 -> 12.2)
+  Offset: reduced churn + eliminated competitive disadvantage
+
+  EXPECTED IMPACT: Eliminates a Reverse Quality entirely. Could prevent
+  18-30 churns per sprint among billing-sensitive customers.
+
+============================================================================
+  6. DRIVER DEEP-DIVE #5: PRICE/VALUE PERCEPTION
+     "Affordability is Wiom's #1 moat — protect it"
+============================================================================
+
+  EVIDENCE STRENGTH: MEDIUM-HIGH (qual + industry strong; quant moderate)
+
+  THE GOOD NEWS: AFFORDABILITY IS THE #1 PROMOTER DRIVER
+  - pricing_affordable theme: NPS 8.6, churn 6.4% (LOWEST of any theme)
+  - "Sasta hai, koi extra charge nahi" (It's cheap, no hidden charges)
+  - "Paise vasool" (Value for money)
+  - Wiom wins on price-to-quality ratio vs JioFiber (Rs 399 vs Rs 399+)
+
+  THE BAD NEWS: PRICE SENSITIVITY IS A DOUBLE-EDGED SWORD
+  - pricing_expensive theme: NPS 5.3, churn 28.9%
+  - Customers who feel overcharged churn at 4.5x the rate of those
+    who feel Wiom is affordable (28.9% vs 6.4%)
+  - The 28-day billing cycle erodes the affordability perception
+
+  INDUSTRY EXPERT VIEW
+  - Ranked #3 in ISP driver taxonomy (value perception)
+  - "Price-to-quality ratio vs alternatives is the key metric"
+  - Low switching costs amplify price sensitivity in this segment
+  - JTBD: Wiom wins on "affordable internet for children's education"
+
+  RECOMMENDED ACTION
+  1. DO NOT increase prices without proportional value addition
+  2. Address 28-day perception (see Driver #4)
+  3. Transparent pricing communication at onboarding
+  4. Communicate total value (speed + reliability + support) not just price
+  5. Monitor competitor pricing in each geography monthly
+
+  EXPECTED IMPACT: Protecting the affordability moat maintains Wiom's
+  primary competitive advantage. Price increases without visible value
+  improvements would trigger outsized churn in this price-sensitive base.
+
+============================================================================
+  7. CUSTOMER SEGMENTATION & RISK VIEW
+============================================================================
+
+  A. BY CUSTOMER TENURE
+
+  Tenure     |   n    | Mean NPS | Churn  | Key Insight
+  -----------+--------+----------+--------+------------------------------------------
+  1-2        |  3,122 |   6.5    | 35.4%  | Speed gap + first impression; 0-15 day intervention window
+  3-6        |  3,423 |   5.9    | 26.4%  | Evaluation period; partner quality decisive
+  6+         |  5,706 |   5.6    | 18.4%  | Chronic issues compound; uptime becomes #1 churn driver
+
+  CRITICAL TENURE INSIGHT:
+  - 1-2 month customers: highest churn (35.4%). The damage happens in
+    the first 15 days. Speed expectation gap and partner quality decide
+    whether the customer stays.
+  - 6+ month customers: lowest churn (18.4%) but when they DO churn,
+    uptime is the #1 predictor — infrastructure quality matters most here.
+  - Driver priorities SHIFT with tenure: partner/support for new,
+    network reliability for loyal.
+
+  B. BY CITY
+
+  City       |   n    | Mean NPS | Churn  | Notes
+  -----------+--------+----------+--------+------------------------------------------
+  Delhi      | 10,312 |   5.9    | 23.6%  |
+  UP         |  1,170 |   5.8    | 34.7%  |
+  Mumbai     |    802 |   6.1    | 25.7%  |
+  Unknown    |    761 |   6.0    | 1.6%  |
+
+  CITY INSIGHT: Delhi dominates (79% of respondents). Mumbai and UP are
+  too small for standalone driver analysis but can be used for comparison.
+  City is NOT a consensus KDA driver — geography matters less than
+  partner quality within each city.
+
+  C. CHURN RISK DISTRIBUTION
+
+  Risk Level |   n    |  %    
+  -----------+--------+-------
+  Critical   |  3,294 | 25.3%
+  High       |    479 | 3.7%
+  Low        |  8,105 | 62.1%
+  Medium     |    889 | 6.8%
+
+  RISK INSIGHT: 25.3% of customers are Critical risk. These should be
+  the immediate focus of closed-loop NPS follow-up. The Low-risk 62.1%
+  are the stable base — protect them from erosion.
+
+  D. CUSTOMER SEGMENTS (Data-Driven Clustering)
+
+  Segment |   n    | Mean NPS | Churn  
+  --------+--------+----------+--------
+  Agra    |    173 |   5.8    | 27.7%
+  Bareilly|    138 |   5.5    | 26.1%
+  Delhi   |  9,173 |   6.1    | 13.5%
+  Gorakhpur|     48 |   6.8    | 10.4%
+  Lucknow |     48 |   6.4    | 20.8%
+  Meerut  |    505 |   5.7    | 19.8%
+  Mumbai  |    707 |   6.2    | 17.0%
+  Prayagraj|     34 |   6.5    | 23.5%
+
+============================================================================
+  8. INTERNET INDUSTRY EXPERT — INDEPENDENT ASSESSMENT
+============================================================================
+
+  The Industry Expert worked independently of both the CX and Stats teams.
+  Their assessment provides an external benchmark for Wiom's findings.
+
+  WHERE WIOM'S FINDINGS ALIGN WITH ISP BEST PRACTICE
+  1. Partner quality as top driver: Consistent with last-mile ISP pattern
+     where field technicians shape the entire service perception
+  2. Support effort > problem frequency: Classic finding in telecom CX
+  3. Affordability as #1 moat: Correct positioning for lower-middle-income
+  4. 28-day billing vulnerability: Known competitive risk in Indian ISP market
+  5. Bimodal NPS distribution: Common in emerging-market ISPs with binary
+     service experience (works perfectly or doesn't work at all)
+
+  BLIND SPOTS: DRIVERS THAT SHOULD MATTER BUT WEREN'T SURFACED
+  These are areas where ISP industry knowledge suggests important drivers
+  exist, but our data couldn't capture them:
+
+  1. Peak-hour quality of experience (6-11 PM family usage)
+     - No hourly speed/uptime data at customer level
+     - "Slow" complaints may be peak-hour contention, not always-on issue
+
+  2. DNS resolution speed
+     - "Pages load slow" but bandwidth may be fine
+     - Not measured in any Snowflake table
+
+  3. WiFi interference & RF environment
+     - Neighbor routers, walls, microwaves affect indoor WiFi quality
+     - Customer blames Wiom but issue is environmental
+
+  4. Device limitations
+     - Old smartphones can't utilize available bandwidth
+     - Customer perceives "slow internet" when device is the bottleneck
+
+  5. Power supply instability
+     - Unstable power causes router reboots = intermittent connectivity
+     - Common in tier-2/3 areas (UP, parts of Delhi NCR)
+
+  6. Competitive context by geography
+     - NPS interpretation needs local competitive benchmark
+     - NPS 5 where JioFiber operates is worse than NPS 5 without alternatives
+
+  COMPETITIVE CONTEXT
+  +------------------+----------+--------+---------+-------------------+
+  | Competitor        | Tech     | Price  | Billing | Positioning       |
+  +------------------+----------+--------+---------+-------------------+
+  | JioFiber          | Fiber    | Rs 399+| 30-day  | Premium, reliable |
+  | Airtel Xstream    | Fiber    | Rs 499+| 30-day  | Premium, quality  |
+  | BSNL FTTH         | Fiber    | Rs 329+| 30-day  | Cheap, unreliable |
+  | Local Cable ISP   | Cable    | Rs 200+| Monthly | Flexible payment  |
+  | Wiom              | Wireless | Rs 399+| 28-day  | Affordable, fast  |
+  +------------------+----------+--------+---------+-------------------+
+
+  Wiom's 28-day billing is a UNIQUE disadvantage among competitors.
+  Every competitor uses 30-day cycles.
+
+============================================================================
+  9. MONITORING FRAMEWORK & KPI TARGETS
+============================================================================
+
+  Recommended Metabase dashboards to track each driver:
+
+  A. PARTNER QUALITY SCORECARD (Weekly)
+  +-----------------------------------+---------------+------------------+
+  | Metric                            | Current State | Target           |
+  +-----------------------------------+---------------+------------------+
+  | Partner Uptime % (30d avg)        | ~71%          | >85%             |
+  | Partner Install TAT (median hrs)  | TBD           | <24 hrs          |
+  | Partner SLA Compliance %          | TBD           | >90%             |
+  | Partner FCR Rate                  | TBD           | >70%             |
+  | Partner Customer Churn Rate       | varies        | <15%             |
+  | # of C-tier Partners              | TBD           | <10% of total    |
+  +-----------------------------------+---------------+------------------+
+
+  B. SUPPORT HEALTH DASHBOARD (Daily)
+  +-----------------------------------+---------------+------------------+
+  | Metric                            | Current State | Target           |
+  +-----------------------------------+---------------+------------------+
+  | Avg Ticket Resolution TAT (hrs)   | TBD           | <4 hrs           |
+  | Ticket Reopen Rate                | 0.14 avg      | <0.05            |
+  | Repeat Complaint Rate (7-day)     | 64% of ticket | <30%             |
+  |   havers                          |               |                  |
+  | Missed Call Ratio                 | tracked       | <10%             |
+  | First-30-Day Complaint Rate       | TBD           | <5%              |
+  +-----------------------------------+---------------+------------------+
+
+  C. NPS THEME TRACKER (Per Sprint)
+  +-----------------------------------+---------------+------------------+
+  | Metric                            | Current State | Target           |
+  +-----------------------------------+---------------+------------------+
+  | % Detractor (overall)             | 46.0%         | <35%             |
+  | % Detractor citing network issues | ~28%          | <20%             |
+  | % Detractor citing support issues | ~29%          | <15%             |
+  | 28-day billing complaint volume   | 57 (0.4%)     | 0 (after fix)    |
+  | Router/device complaint volume    | 26 (0.2%)     | <10              |
+  | Mean NPS by tenure bucket         | 6.5/5.9/5.6   | 7.0/6.5/6.5     |
+  +-----------------------------------+---------------+------------------+
+
+  D. CHURN RISK EARLY WARNING (Weekly)
+  +-----------------------------------+---------------+------------------+
+  | Metric                            | Current State | Target           |
+  +-----------------------------------+---------------+------------------+
+  | % Critical Risk customers         | 25.3%         | <15%             |
+  | Days since last recharge (avg)    | monitored     | flag >10 days    |
+  | New customer 15-day churn rate    | ~35%          | <25%             |
+  | Promoter churn rate               | 20.2%         | <12%             |
+  +-----------------------------------+---------------+------------------+
+
+  SPRINT-LEVEL KPI TARGETS (Derived from NPS Analysis)
+
+  Short-term (next 3 sprints / ~6 weeks):
+  - Reduce repeat complaint rate by 20% (SOP implementation)
+  - Identify and train bottom 10% of partners
+  - Launch closed-loop Detractor callback program
+  - Target: NPS improvement of +5 points (from ~0 to +5)
+
+  Medium-term (next 6 sprints / ~12 weeks):
+  - Partner quality tiering system operational
+  - 28-day billing decision made and communicated
+  - Device-level monitoring pilot in 2-3 high-complaint areas
+  - Target: NPS improvement of +10 points (to +10)
+
+  Long-term (next 12 sprints / ~24 weeks):
+  - Full partner quality program with incentive alignment
+  - Proactive outage communication system live
+  - Device-level quality data integrated into Metabase
+  - Target: NPS improvement of +15-20 points (to +15-20)
+
+============================================================================
+  10. APPENDIX: DATA QUALITY & METHODOLOGY NOTES
+============================================================================
+
+  A. WHAT THE DATA CAN TELL US (High Confidence)
+  - Which PARTNERS drive the most dissatisfaction (and churn)
+  - Whether SUPPORT HANDLING predicts NPS and churn
+  - Which TENURE STAGE is most vulnerable
+  - Whether 28-DAY BILLING correlates with churn
+  - Whether NPS SCORE adds value beyond operational data for churn
+  - Overall RISK SCORES for proactive intervention
+
+  B. WHAT THE DATA CANNOT TELL US (Known Limitations)
+  1. Speed data is missing: The #1 customer complaint has no metric
+  2. Uptime is too coarse: Partner-level masks individual experience
+  3. Outage data covers only ~20 days (Dec 20 - Jan 8, 2026)
+  4. Only 42% of respondents wrote comments (selection bias)
+  5. Churn model AUC of 0.977 is high partly due to total_payments
+     feature (more payments = longer active = not churned)
+  6. Install TAT analysis has insufficient sample for new customers
+     (only 25 in 0-15 day bucket)
+  7. Competitive context is not in the data (no neighborhood-level)
+  8. Promoter churn (20.2%) is abnormally high and partially unexplained
+
+  C. METHODOLOGY SUMMARY
+  - Phase 0: 13,045 NPS responses parsed from Excel, joined to Snowflake
+  - Phase 1: 5,488 Hindi/Hinglish/English comments processed through
+    NLP pipeline (cleaning, transliteration, translation, sentiment)
+    23 emergent themes discovered via unsupervised clustering
+  - Phase 2: CX frameworks applied (SERVQUAL, Kano, CES, JTBD)
+  - Phase 2b: Independent ISP industry expert assessment
+  - Phase 3: 200+ features engineered from Snowflake operational data
+  - Phase 4: Key Driver Analysis (4 methods: Ridge, Random Forest,
+    Gradient Boosting, Partial Correlation), churn models (AUC 0.977),
+    customer segmentation (6 clusters), temporal stability analysis
+  - Phase 5: Triangulation of qualitative, quantitative, and industry
+    expert findings; confidence-rated unified driver ranking
+  - Phase 6: This leadership synthesis
+
+  D. DATA LEAKAGE CONTROLS
+  Excluded from churn model to prevent artificial accuracy:
+  - days_since_last_recharge (directly encodes churn definition)
+  - sprint_num (right-censoring proxy)
+  - recharge_regularity, total_recharges (activity proxies)
+  - Sprints 12-13 excluded (insufficient churn observation time)
+
+============================================================================
+  WIOM NPS DRIVER ANALYSIS — ONE-PAGE SUMMARY
+============================================================================
+
+  NPS: +0.0 | Promoters: 46% | Detractors: 46% | Churn: 23%
+
+  ROOT CAUSE: Wiom's NPS is dragged down by human delivery and process
+  failures, not primarily by network infrastructure.
+
+  TOP 5 DRIVERS               ACTION                       TIMELINE
+  -------------------------   ---------------------------   ---------
+  1. Partner/Rohit Quality    Quality tiering + training    0-12 wks
+  2. Complaint Handling       Service recovery SOP          0-6 wks
+  3. Network Stability        Device-level monitoring       6-24 wks
+  4. 28-Day Billing Cycle     Move to 30-day billing        0-6 wks
+  5. Price/Value Perception   Protect affordability moat    Ongoing
+
+  THE SURPRISING FINDING: NPS score adds ZERO predictive power for
+  churn beyond operational data. Use NPS for DIAGNOSIS (why unhappy),
+  not PREDICTION (who will churn). Operational dashboards are sufficient
+  for churn prediction.
+
+  HIGHEST-ROI QUICK WIN: Implement service recovery SOP (2-hour
+  follow-up + repeat complaint alerts). 6.8-point NPS gap between bad
+  and good complaint resolution. Achievable in 2-4 weeks.
+
+  BIGGEST STRUCTURAL FIX: Move to 30-day billing cycle. Eliminates a
+  self-inflicted competitive disadvantage that compounds with tenure
+  and creates 31.6% churn among affected customers.
+
+  DATA GAPS TO CLOSE: Deploy device-level speed and uptime monitoring.
+  The two biggest customer complaints (speed, disconnections) are
+  invisible to our statistical models. Closing this gap would transform
+  Wiom's ability to identify and fix individual customer issues.
+
+============================================================================
+  END OF CEO SYNTHESIS
+============================================================================

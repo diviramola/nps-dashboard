@@ -1,0 +1,566 @@
+======================================================================
+PHASE 2b — INTERNET INDUSTRY EXPERT: INDEPENDENT ASSESSMENT
+======================================================================
+Wiom NPS Driver Analysis — Independent Voice-of-Customer Perspective
+Prepared independently of CX and Statistical Analytics teams
+======================================================================
+
+1. ISP EXPERIENCE DRIVER TAXONOMY
+======================================================================
+
+What objectively determines home internet satisfaction, ranked by
+impact for Wiom's demographic (lower-middle-income, Hindi-first,
+80% Delhi NCR, last-mile WiFi, partner-based delivery):
+
+--- 1.1 RELIABILITY DRIVERS (Highest Impact) ---
+
+Connection Stability (Disconnection Frequency)
+  - For Wiom's base, this is likely THE #1 driver
+  - WiFi over last-mile radio is inherently less stable than fiber
+  - Customers describe: "bar bar band hota hai" (keeps going off)
+  - Acceptable threshold: <2 noticeable drops per day
+  - Danger threshold: >5 drops per day -> Detractor territory
+  - Key insight: SHORT drops (5-10 sec) are more disruptive than
+    one long outage because they interrupt active use (video calls,
+    streaming, gaming)
+
+Uptime Consistency
+  - Industry standard for home internet: 99.5% monthly uptime
+  - For Wiom's infrastructure: 95%+ is likely the realistic target
+  - BUT: Monthly uptime masks peak-hour degradation
+  - 95% monthly = ~36 hours of downtime/month = unacceptable
+  - 99% monthly = ~7 hours/month = borderline acceptable
+  - Critical: Downtime during 7-11 PM (prime time) weighs 3-5x more
+    than 2-6 AM downtime in customer perception
+
+Recovery Speed After Outages
+  - Industry best: <30 minutes to restore service
+  - Customer tolerance: 2-4 hours before serious frustration
+  - After 24 hours without internet: churn consideration begins
+  - Key: Communication during outage matters more than speed
+  - "We know it's down, working on it" reduces churn risk 40%+
+
+--- 1.2 SPEED DELIVERY DRIVERS ---
+
+Advertised vs Actual Speed Gap
+  - Industry norm: deliver 80%+ of advertised speed consistently
+  - Common ISP trap: advertise "up to 100 Mbps" but deliver 15 Mbps
+  - For Wiom's segment: absolute speed matters less than sufficiency
+  - Key use cases and minimum viable speed:
+    * WhatsApp video call: 1.5 Mbps
+    * HD YouTube/streaming: 5 Mbps
+    * Online education: 3 Mbps
+    * Basic browsing: 1 Mbps
+    * Multiple devices (3-5): multiply by device count
+  - Wiom customers likely need 10-25 Mbps reliably, not 100+ Mbps
+
+Peak-Hour Degradation
+  - 6-11 PM is when families use internet most heavily
+  - Shared infrastructure = bandwidth contention during peak
+  - Customer says "slow" but really means "slow at 8 PM when I
+    actually need it, even though speed test at 2 AM is fine"
+  - Solution: partner-level bandwidth management, not just NAS uptime
+
+Consistency Over Speed
+  - Jitter and packet loss cause more perceived quality problems
+    than raw bandwidth for real-time applications
+  - A stable 10 Mbps >> a fluctuating 5-50 Mbps connection
+  - Wiom likely measures throughput (data_usage_okr) but NOT
+    consistency metrics (jitter, latency, packet loss)
+
+--- 1.3 VALUE PERCEPTION DRIVERS ---
+
+Price-to-Quality Ratio vs Alternatives
+  - JioFiber: Rs 399/month for 30 Mbps, 30-day cycle, fiber
+  - Airtel Xstream: Rs 499/month, fiber, bundled OTT
+  - Wiom: ~Rs 449-565/month, WiFi (not fiber), 28-day cycle
+  - The 28-day billing is a significant competitive disadvantage:
+    * Customer pays for 13 months/year vs 12 for competitors
+    * Effective annual premium: ~Rs 500-600/year (one extra month)
+    * This is noticed and resented, especially by price-sensitive base
+
+Switching Cost Assessment
+  - Wiom has LOW switching costs: no contract, free router (returned)
+  - Competitors have HIGHER switching costs: installation fee,
+    contracts, equipment deposits
+  - Low switching cost = every dissatisfaction event is a potential
+    churn trigger
+  - Implication: Wiom must work HARDER on satisfaction because
+    customers face no barrier to leaving
+
+Hidden Cost Sensitivity
+  - 28-day vs 30-day (hidden extra month cost)
+  - Recharge failure -> days without internet (money + service lost)
+  - Cash recharge premium (if any)
+  - No auto-pause when plan expires (internet dies immediately)
+
+--- 1.4 SUPPORT EXPERIENCE DRIVERS ---
+
+First-Call Resolution Rate
+  - Industry best-in-class: 70-80% FCR
+  - Average ISP: 50-60% FCR
+  - For Wiom: Unknown but likely low given "complaint karo to
+    koi response nahi" theme
+  - Each additional call doubles churn probability
+
+Technician/Partner Quality
+  - For Wiom this is UNIQUE: partners ARE the brand
+  - Bad partner experience = bad Wiom experience (no separation)
+  - Partner behaviors that destroy NPS:
+    * Not showing up for scheduled visits
+    * Rude or dismissive behavior
+    * Taking too long to resolve issues
+    * Pressuring for router return when customer delays recharge
+  - Partner behaviors that create promoters:
+    * Proactive outage communication
+    * Quick response to complaints
+    * Professional installation with speed test verification
+
+--- 1.5 BILLING & PAYMENT DRIVERS ---
+
+Recharge Friction
+  - Non-autopay customers must actively decide to pay every 28 days
+  - Each recharge is a micro-churn-decision point
+  - RDNI (Recharge Done, No Internet) is a SEVERE trust destroyer
+    * Customer paid money but got nothing -> fraud perception
+  - Cash-dependent customers have higher friction
+  - PayG post-reset adds complexity: more frequent smaller payments
+
+Grace Period Behavior
+  - When plan expires, internet dies immediately (or after short grace)
+  - For daily-wage earners, a 2-3 day grace period could be the
+    difference between retention and permanent churn
+  - Competing local cable operators often have flexible payment timing
+
+
+2. BREAKAGE POINT MAP — CRITICAL MOMENTS THAT CREATE CHURN
+======================================================================
+Ranked by churn risk severity for Wiom's demographic:
+
+#1. FIRST OUTAGE EXPERIENCE (Highest churn risk)
+  Why: Sets expectation for all future service quality
+  Customer experience: "Maine paise diye, internet nahi chala"
+  Good handling: Proactive SMS/WhatsApp, quick fix, follow-up call
+  Wiom risk: Partner may not have outage visibility or response SOP
+  Intervention: Automated outage detection + customer notification
+
+#2. REPEATED DISCONNECTION PATTERN (Cumulative)
+  Why: Each disconnect is small but cumulative frustration is massive
+  Customer experience: "Har ghante mein ek baar band ho jata hai"
+  Threshold: After 10+ disconnects in a week, customer starts looking
+  Wiom risk: WiFi infrastructure inherently less stable than fiber
+  Intervention: Remote monitoring, proactive technician dispatch
+
+#3. FIRST COMPLAINT RESOLUTION FAILURE
+  Why: Creates permanent distrust in support system
+  Customer experience: "Complaint kiya, koi aaya hi nahi"
+  Recovery: If second attempt also fails, customer is mentally gone
+  Wiom risk: Partner-based support lacks SLA enforcement
+  Intervention: Escalation protocol, customer follow-up within 2 hrs
+
+#4. RECHARGE DONE, NO INTERNET (RDNI)
+  Why: Customer gave money and got nothing = perceived fraud
+  Customer experience: "Paisa diya lekin net nahi chala"
+  Severity: Even one instance can trigger immediate churn
+  Wiom risk: System/sync issues between payment and activation
+  Intervention: Real-time activation monitoring, instant refund SOP
+
+#5. 28-DAY PLAN EXPIRY NOTIFICATION
+  Why: Recurring reminder that Wiom charges more than calendar month
+  Customer experience: "Abhi toh recharge kiya tha, phir se?"
+  Cumulative effect: Compounds every month, mentioned by promoters too
+  Wiom risk: Structural product issue, not just perception
+  Intervention: Move to 30-day cycles or bridge with bonus days
+
+#6. FIRST 48 HOURS POST-INSTALL
+  Why: Speed doesn't match expectations -> immediate churn risk
+  Customer experience: "Bola tha fast milega, slow aa raha hai"
+  Good handling: Speed test at install, set realistic expectations
+  Wiom risk: Partners may over-promise to close installation
+
+#7. PRICE INCREASE OR PLAN CHANGE
+  Why: Triggers value re-evaluation against alternatives
+  Customer experience: "449 se 500 kar diya, kya mila extra?"
+  Severity: High for price-sensitive base
+  Wiom risk: Recent price changes (449->500) visible in NPS comments
+
+#8. EXTENDED OUTAGE WITHOUT COMMUNICATION (>6 hours)
+  Why: Customer feels abandoned, no information = worst experience
+  Customer experience: "2 din se band hai, koi baat hi nahi karta"
+  Good handling: Proactive updates every 2 hours during outage
+  Wiom risk: Partner-level outage visibility may be limited
+
+#9. COMPETITIVE OFFER EXPOSURE
+  Why: JioFiber/Airtel marketing in neighborhood creates pull
+  Customer experience: "Pados mein Jio laga, 30 din ka hai"
+  Severity: Moderate (awareness -> consideration, not immediate churn)
+  Wiom risk: Higher in Delhi where competitive density is highest
+
+#10. ROUTER RETURN PRESSURE
+  Why: Threatening behavior when customer delays recharge
+  Customer experience: "Router wapas karo bol rahe hain"
+  Severity: Moderate but creates negative word-of-mouth
+  Wiom risk: Partners may use router return as pressure tactic
+
+
+3. DELIGHT DRIVER MAP — WHAT CREATES PROMOTERS
+======================================================================
+
+#1. "IT JUST WORKS" — Invisible Reliability
+  What: Internet is fast, stable, always on. Customer forgets about it.
+  Why it delights: The best internet experience is one you never think about
+  Evidence from NPS: "Acchi service" promoters often have NO specific
+  complaint — absence of problems IS the delight
+  Wiom lever: Partner uptime, infrastructure quality
+
+#2. SPEED EXCEEDS EXPECTATION
+  What: Customer expected slow (based on price), got fast
+  Why it delights: Overdelivery on core promise creates trust
+  Evidence: "Speed bahut acchi hai" — explicit speed praise
+  Wiom lever: Under-promise, over-deliver on speed plans
+
+#3. AFFORDABILITY CONFIRMATION
+  What: Customer realizes they're getting genuine value for money
+  Why it delights: Financial security + digital inclusion = powerful
+  Evidence: "Sasta hai, koi extra charge nahi" — value validation
+  Wiom lever: No hidden charges, transparent pricing, coupons
+
+#4. FAST, EMPATHETIC SUPPORT
+  What: Problem resolved quickly by someone who understands
+  Why it delights: Recovery paradox — good recovery > no problem
+  Evidence: "Turant solve kar dete hain" — immediate resolution
+  Wiom lever: Partner training, SLA enforcement, follow-up
+
+#5. EASY RECHARGE EXPERIENCE
+  What: Multiple payment modes, no friction, works first time
+  Why it delights: Reduces decision fatigue for frequent rechargers
+  Evidence: Low effort score = higher NPS in recharge journey
+  Wiom lever: UPI/autopay promotion, WhatsApp recharge option
+
+#6. FREE WiFi ROAMING
+  What: Can use any Wiom router nearby when home WiFi is down
+  Why it delights: Unexpected perk, reduces downtime impact
+  Evidence: Mentioned as differentiator by some promoters
+  Wiom lever: Expand coverage density, promote awareness
+
+#7. PROACTIVE COMMUNICATION
+  What: Company tells you about issues before you notice
+  Why it delights: Signals that company cares and is competent
+  Evidence: Industry best practice, rarely seen in budget ISPs
+  Wiom lever: Automated outage alerts via WhatsApp
+
+#8. COUPONS & REWARDS
+  What: Discount coupons, referral rewards, loyalty benefits
+  Why it delights: Makes price-sensitive customers feel valued
+  Evidence: "Coupons bhi milte hain" — mentioned by promoters
+  Wiom lever: Coupon program already exists, needs amplification
+
+
+4. LATENT DRIVERS — THINGS CUSTOMERS EXPERIENCE BUT DON'T ARTICULATE
+======================================================================
+
+These explain gaps between operational metrics and NPS scores:
+
+4.1 DNS Resolution Speed
+  - Pages load slow but speed test shows good bandwidth
+  - Customer says "slow" but the real issue is DNS
+  - NOT measured by Wiom (likely not even aware)
+  - Impact: Moderate — affects perceived speed
+
+4.2 Peak-Hour Throttling
+  - Works fine at 2 AM, terrible at 8 PM
+  - Partner-level bandwidth sharing means peak contention
+  - Customer won't say "peak hour throttling" — says "slow"
+  - Impact: HIGH — affects actual usage patterns
+
+4.3 WiFi Interference
+  - Neighbor's router on same channel, microwave, walls
+  - Real issue is RF environment, not Wiom's service
+  - But customer blames Wiom because it's their internet
+  - Impact: Moderate — explains range/speed complaints
+
+4.4 Device Limitations
+  - Old smartphone can't utilize available bandwidth
+  - Customer says "slow" but device is the bottleneck
+  - Wiom can't control customer devices
+  - Impact: Low-Moderate — creates unfair NPS penalty
+
+4.5 Shared Bandwidth Within Home
+  - 3-5 devices on one connection = everyone suffers
+  - Family fights over bandwidth during peak
+  - Customer says "slow" but issue is concurrent usage
+  - Impact: Moderate — worsens with more devices
+
+4.6 Router Placement
+  - Router position determines WiFi quality throughout home
+  - Bad placement -> range complaints, but customer won't
+    articulate it as a placement issue
+  - Impact: HIGH for range complaints — solvable at install
+
+4.7 Power Supply Fluctuations
+  - Unstable power -> router reboots -> "internet band ho gaya"
+  - Common in Tier 2/3 areas and lower-income neighborhoods
+  - Customer blames Wiom, but root cause is power quality
+  - Impact: Moderate — explains some UP/Bharat churn differential
+
+4.8 Weather Sensitivity
+  - WiFi/wireless links degrade in heavy rain/storms
+  - Seasonal NPS patterns may partially reflect weather
+  - Customer says "server down" but issue is weather interference
+  - Impact: Seasonal — explains periodic complaint spikes
+
+
+5. COMPETITIVE CONTEXT
+======================================================================
+
+--- 5.1 Indian Home Internet Landscape (2025-26) ---
+
+JioFiber
+  - Fiber-to-home (FTTH) — inherently more reliable than WiFi
+  - Rs 399/month for 30 Mbps, 30-day billing cycle
+  - Strong brand equity, aggressive expansion into Tier 2
+  - Bundled: 14+ OTT apps in higher plans
+  - Advantage over Wiom: Reliability, brand, content
+  - Disadvantage vs Wiom: Installation complexity, pricing inflexibility
+
+Airtel Xstream Fiber
+  - FTTH, premium positioning, Rs 499+ /month
+  - Strongest customer support brand in India
+  - Advantage: Support quality, reliability
+  - Disadvantage vs Wiom: Price, not accessible everywhere
+
+BSNL Fiber/Bharat Fiber
+  - Government ISP, variable quality
+  - Cheap but unreliable
+  - Wiom competes in similar price range but better quality
+
+Local Cable Operators
+  - Hyper-local, cash-based, personal relationships
+  - Often poor quality but flexible on payments
+  - Wiom's direct competition in many neighborhoods
+  - Advantage: Personal relationship with operator
+  - Disadvantage: No app, no digital payments, inconsistent quality
+
+--- 5.2 What This Means for NPS Interpretation ---
+
+1. A 6/10 NPS might be EXCELLENT if local cable was the alternative
+2. Delhi is highly competitive (JioFiber expanding) -> stricter NPS
+3. UP/Bharat has fewer alternatives -> more tolerance for issues
+4. "Affordable" driver may be masking quality tolerance
+5. Low switching costs (no contract) mean every bad experience is
+   a live churn risk — unlike contract ISPs with switching barriers
+6. The 28-day billing is a REAL competitive disadvantage
+   vs 30-day competitors — not just perception
+
+
+6. CHALLENGE QUESTIONS FOR CX AND STATS TEAMS
+======================================================================
+
+For CX Team:
+  Q1. Is uptime being measured at the right granularity? 95% monthly
+      uptime can hide 6 hours of prime-time downtime.
+
+  Q2. Are you measuring speed as the customer experiences it
+      (device-level) or as the network delivers it (NAS-level)?
+      These can differ by 50%+ due to WiFi conditions.
+
+  Q3. How are you separating Wiom service issues from customer-side
+      issues (bad device, bad power, bad router placement)?
+
+  Q4. Is "complaint resolution" being measured from customer's
+      perspective (first call to final resolution) or from system's
+      perspective (ticket open to close)?
+
+  Q5. Are you tracking REPEAT complaints? A customer who calls 3x
+      for the same issue has a fundamentally different experience
+      than one call, even if "resolution TAT" looks the same.
+
+For Stats Team:
+  Q6. Disconnection FREQUENCY vs DURATION — which actually predicts
+      churn? A 5-second drop 10x/day may be worse than one 2-hour
+      outage. Are you modeling both?
+
+  Q7. How are you handling right-censoring bias? Sprint 13 (Jan '26)
+      customers have had less time to churn than Sprint 1 (Jul '25).
+
+  Q8. Is the 28-day billing cycle a DRIVER or a SYMPTOM of deeper
+      value perception issues? Teasing apart is critical.
+
+  Q9. Are you controlling for competitive density by geography?
+      Delhi NPS should be evaluated differently than UP NPS.
+
+  Q10. Response bias: Are commenting customers (42%) systematically
+       different from non-commenting ones? If detractors comment
+       more, theme analysis is biased toward problems.
+
+For Both Teams:
+  Q11. How are you handling PayG post-reset customers (post Jan 26)?
+       Their recharge patterns are fundamentally different — higher
+       frequency, lower amounts, shorter plans.
+
+  Q12. What's your confidence that "General Good/Bad Service"
+       (the two largest pre-coded categories) actually reflects
+       distinct experiences? Or are these catch-all categories
+       that mask heterogeneous issues?
+
+  Q13. Partner quality varies enormously. Are you testing whether
+       NPS variance WITHIN a partner's customer base is lower than
+       BETWEEN partners? This would prove partner quality matters.
+
+  Q14. Seasonal effects: Are July/August NPS scores different due
+       to monsoon (more outages from rain) rather than service changes?
+
+  Q15. The bimodal distribution (42% score 10, 20% score 0) —
+       are these genuinely extreme experiences, or is this an artifact
+       of survey design (most people default to extremes)?
+
+
+7. WHAT WIOM SHOULD BE MEASURING BUT PROBABLY ISN'T
+======================================================================
+
+7.1 Customer-Premise Speed Tests
+  Current: NAS-level throughput (infrastructure speed)
+  Missing: Actual speed at customer device (WiFi conditions matter)
+  Why it matters: 50%+ of "slow speed" complaints may be WiFi, not network
+
+7.2 Peak-Hour Quality of Experience (QoE)
+  Current: Average daily metrics
+  Missing: 7-11 PM specific metrics
+  Why it matters: All-day average masks the hours that matter most
+
+7.3 First-Call Resolution Rate (FCR)
+  Current: Ticket resolution TAT
+  Missing: Was it resolved on first contact? How many follow-ups?
+  Why it matters: FCR is the strongest predictor of support NPS globally
+
+7.4 Touchpoint-Specific NPS
+  Current: Overall NPS survey (single score)
+  Missing: NPS at install, first complaint, recharge, outage recovery
+  Why it matters: Isolates which touchpoint drives overall score
+
+7.5 Time-to-Value (Post-Install)
+  Current: Install TAT (booking to installation)
+  Missing: How quickly customer starts meaningful usage after install
+  Why it matters: Speed of habit formation predicts retention
+
+7.6 Proactive Outage Detection Rate
+  Current: Reactive (customer reports issue)
+  Missing: % of outages detected before customer notices
+  Why it matters: Proactive communication dramatically reduces NPS hit
+
+7.7 WiFi Coverage Map Per Installation
+  Current: None (install quality is subjective)
+  Missing: Signal strength mapping at install
+  Why it matters: Bad placement = chronic range complaints = detractor
+
+7.8 Customer Device Health Monitoring
+  Current: None
+  Missing: Connected device types, capabilities, connection quality
+  Why it matters: Old device + good network = "slow" complaint
+
+7.9 Recharge Attempt Failure Rate
+  Current: Successful recharges tracked
+  Missing: Failed attempts (payment failed but customer tried)
+  Why it matters: Failed recharge = frustration even if retry succeeds
+
+7.10 Competitive Win/Loss Tracking
+  Current: Churn flag (did they leave?)
+  Missing: Where did they go? (JioFiber, Airtel, local cable?)
+  Why it matters: Losing to JioFiber vs local cable = different strategy
+
+
+8. TENURE-SPECIFIC INDUSTRY INSIGHTS
+======================================================================
+
+--- Onboarding (0-15 days) ---
+  Primary driver: Installation quality and first speed impression
+  Biggest churn risk: Speed doesn't match expectation
+  Best intervention: Speed test at install, proactive day-3 check-in
+  Industry insight: 60% of first-year churn decisions are made in
+  the first 2 weeks (source: ISP industry benchmarks)
+
+--- Early Life (16-60 days) ---
+  Primary driver: Speed consistency and value realization
+  Biggest churn risk: First complaint resolution failure
+  Best intervention: Proactive outage communication, easy recharge
+  Industry insight: Customers who survive 60 days without a major
+  issue have 3x lower churn rate for the next 12 months
+
+--- Establishing (61-120 days) ---
+  Primary driver: Service reliability and support quality
+  Biggest churn risk: Cumulative minor issues eroding trust
+  Best intervention: Service quality monitoring, partner quality check
+  Industry insight: This is when "habituation" happens — customer
+  either builds internet into daily routine or starts looking
+
+--- Steady State (121-270 days) ---
+  Primary driver: Ongoing quality and competitive comparison
+  Biggest churn risk: Competitive offer exposure + accumulated issues
+  Best intervention: Loyalty recognition, competitive value messaging
+  Industry insight: At this stage, passive satisfaction isn't enough —
+  customer needs a reason to STAY, not just no reason to leave
+
+--- Loyal (270+ days) ---
+  Primary driver: Sustained quality, severe breakage avoidance
+  Biggest churn risk: Major service failure after long period of trust
+  Best intervention: VIP treatment, proactive issue prevention
+  Industry insight: Loyal customers have HIGHER expectations and
+  react MORE negatively to failures (expectation gap is wider).
+  A loyal customer's bad NPS score is a louder alarm than a new
+  customer's bad score.
+  NOTE: 96.6% of NPS respondents fall here — this IS the analysis.
+
+
+9. KEY INDEPENDENT FINDINGS & RECOMMENDATIONS
+======================================================================
+
+FINDING 1: The 28-Day Billing Cycle Is a Strategic Vulnerability
+  Not just a complaint theme — it's a structural competitive
+  disadvantage. Every month, customers are reminded they pay more
+  per day than JioFiber/Airtel customers. This compounds over time
+  and is mentioned even by PROMOTERS. Fix this or it will bleed
+  customers as competitor coverage expands.
+
+FINDING 2: Connection Stability > Speed for This Segment
+  Wiom's customers need sufficient speed (10-25 Mbps), not maximum
+  speed. But they need it CONSISTENTLY. Frequent disconnections
+  are likely the top NPS driver, ahead of speed. Invest in
+  stability over raw throughput.
+
+FINDING 3: The Partner IS the Brand
+  For Wiom's customers, the partner (Rohit) is the company. Bad
+  partner = bad Wiom, regardless of network quality. Partner
+  quality clustering should be a PRIMARY feature in churn models.
+  The variance between partners is likely larger than the variance
+  between geographies.
+
+FINDING 4: Proactive Communication Is a Missing Competitive Advantage
+  Budget ISPs almost never communicate proactively. If Wiom can
+  send WhatsApp alerts during outages and before plan expiry,
+  this alone could move NPS 5-10 points for affected customers.
+
+FINDING 5: PayG Post-Reset Customers Are a Different Segment
+  Post Jan 26 PayG customers have fundamentally different economics:
+  - Smaller, more frequent recharges
+  - Lower commitment signal per recharge
+  - More churn-decision points per month
+  - Different recharge frequency != different tenure
+  These MUST be modeled separately or with a PayG interaction flag.
+
+FINDING 6: Right-Censoring Will Bias Churn Models
+  Sprint 13 and Sprint 14 customers haven't had enough time to
+  churn. Sprint RSP1-3 (Feb '26) even less. Unless survival
+  analysis or time-windowed churn definitions are used, recent
+  sprints will artificially appear to have lower churn.
+
+FINDING 7: The Bimodal Distribution Suggests Survey Design Issues
+  42.6% scoring 10 and 20.4% scoring 0 suggests either:
+  a) Genuinely extreme experiences (possible for budget ISP), or
+  b) Survey design pushing to extremes (no explanation of scale)
+  c) Cultural tendency to express in extremes (very Hindi-culture)
+  This affects whether we should model NPS as continuous or
+  as a 3-group classification (Promoter/Passive/Detractor).
+
+======================================================================
+END OF INDEPENDENT INDUSTRY EXPERT ASSESSMENT
+======================================================================

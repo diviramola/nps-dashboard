@@ -1,0 +1,559 @@
+====================================================================================================
+COMPREHENSIVE FEATURE AUDIT
+Started: 2026-03-18 22:15:53
+====================================================================================================
+
+[LOAD] Rows: 13045, Columns: 299
+  Features to audit: 259
+
+====================================================================================================
+AUDIT 1: BASIC STATISTICS & CORRELATION ANALYSIS
+====================================================================================================
+  Audited 259 features
+
+====================================================================================================
+AUDIT 2: FEATURE CLASSIFICATION
+====================================================================================================
+
+  VERDICT SUMMARY:
+    CLEAN       :  74 features
+    NORMALIZE   :  22 features
+    REVIEW      :  30 features
+    EXCLUDE     : 133 features
+
+====================================================================================================
+EXCLUDED FEATURES (must not enter any model)
+====================================================================================================
+  AVG_CUSTOMER_CALLS_PER_TICKET                 | Fill-rate leakage — +12pp gap persists in late sprints (+11pp)
+  AVG_DAILY_DATA_GB                             | Fill-rate leakage — +14pp gap persists in late sprints (+13pp)
+  AVG_INSTALL_RATING                            | Near-zero variance — 99% same value
+  AVG_PARTNER_CALLS_PER_TICKET                  | Fill-rate leakage — +12pp gap persists in late sprints (+11pp)
+  AVG_RECOVERY_MINS                             | Fill-rate leakage — +40pp gap persists in late sprints (+43pp)
+  DAYS_TO_FIRST_RECHARGE                        | Target leakage — mechanically linked to churn definition
+  DISTINCT_OUTAGES                              | Fill-rate leakage — +41pp gap persists in late sprints (+45pp)
+  FCR_TICKETS                                   | Fill-rate leakage — +39pp gap persists in late sprints (+38pp)
+  HIGH_USAGE_DAYS                               | Fill-rate leakage — +14pp gap persists in late sprints (+13pp)
+  HOURS_TO_FIRST_RECHARGE                       | Target leakage — mechanically linked to churn definition
+  Jab dikkat aayi toh kya kia?                  | Very low fill rate (1%)
+  LEADS_INSTALLED                               | Near-zero variance — 96% same value
+  LOW_USAGE_DAYS                                | Fill-rate leakage — +14pp gap persists in late sprints (+13pp)
+  MAX_DAILY_DATA_GB                             | Fill-rate leakage — +14pp gap persists in late sprints (+13pp)
+  MEDIAN_DAILY_DATA_GB                          | Fill-rate leakage — +14pp gap persists in late sprints (+13pp)
+  MIN_DAILY_DATA_GB                             | Fill-rate leakage — +14pp gap persists in late sprints (+13pp)
+  NPS Reason - Secondary                        | Very low fill rate (4%)
+  NPS Reason - Tertiary                         | Very low fill rate (0%)
+  OUTAGE_EVENTS                                 | Fill-rate leakage — +41pp gap persists in late sprints (+45pp)
+  OUTBOUND_CALLS                                | Reverse causality — reactive to risk, not predictive
+  PAYMENT_ATTEMPTS                              | Target leakage — mechanically linked to churn definition
+  PAYMENT_FAILURES                              | Target leakage — mechanically linked to churn definition
+  PAYMENT_SUCCESSES                             | Target leakage — mechanically linked to churn definition
+  RECOVERED_EVENTS                              | Fill-rate leakage — +41pp gap persists in late sprints (+45pp)
+  STDDEV_DAILY_DATA_GB                          | Fill-rate leakage — +14pp gap persists in late sprints (+13pp)
+  Secondary Category                            | Very low fill rate (4%)
+  TOTAL_CUSTOMER_CALLS                          | Fill-rate leakage — +12pp gap persists in late sprints (+11pp)
+  TOTAL_PAYMENT_EVENTS                          | Target leakage — mechanically linked to churn definition
+  TOTAL_TICKETS_FCR                             | Fill-rate leakage — +39pp gap persists in late sprints (+38pp)
+  TOTAL_TICKETS_REPEAT                          | Fill-rate leakage — +39pp gap persists in late sprints (+38pp)
+  Tertiary Category                             | Very low fill rate (0%)
+  UPTIME_DATA_DAYS                              | Near-zero variance — 99% same value
+  USAGE_DATA_DAYS                               | Fill-rate leakage — +14pp gap persists in late sprints (+13pp)
+  autopay_payments                              | Target leakage — mechanically linked to churn definition
+  avg_payment_amount                            | Target leakage — mechanically linked to churn definition
+  avg_recharge_amount                           | Target leakage — mechanically linked to churn definition
+  call_status                                   | Target leakage — mechanically linked to churn definition
+  caller                                        | Very low fill rate (1%)
+  cash_online                                   | Fill-rate leakage — +15pp gap persists in late sprints (+15pp)
+  cash_payments                                 | Target leakage — mechanically linked to churn definition
+  channel_Call                                  | Near-zero variance — 99% same value
+  channel_G- form in WA                         | Near-zero variance — 95% same value
+  churn_label                                   | Target leakage — mechanically linked to churn definition
+  churn_risk_pct                                | Target leakage — mechanically linked to churn definition
+  churn_risk_score                              | Target leakage — mechanically linked to churn definition
+  cis_active_day_ratio                          | Target leakage — mechanically linked to churn definition
+  cis_influx_data_days                          | Target leakage — mechanically linked to churn definition
+  cluster                                       | Fill-rate leakage — +41pp gap persists in late sprints (+41pp)
+  competitor_names                              | Very low fill rate (0%)
+  connection_instability                        | Fill-rate leakage — +86pp gap persists in late sprints (+85pp)
+  data_usage_per_day                            | Very low fill rate (10%)
+  data_usage_percentile                         | Near-zero variance — 100% same value
+  days_since_last_recharge                      | Target leakage — mechanically linked to churn definition
+  device_PD                                     | Near-zero variance — 100% same value
+  device_type                                   | Fill-rate leakage — +15pp gap persists in late sprints (+15pp)
+  is_cash_payment                               | Target leakage — mechanically linked to churn definition
+  is_payg                                       | Near-zero variance — 100% same value
+  is_post_reset                                 | Near-zero variance — 100% same value
+  min_uptime                                    | Near-zero variance — 100% same value
+  mis_city                                      | Fill-rate leakage — +41pp gap persists in late sprints (+41pp)
+  nps_match                                     | Near-zero variance — 100% same value
+  overall_service_experience                    | Very low fill rate (0%)
+  partner_at_risk                               | Target leakage — mechanically linked to churn definition
+  partner_churn_rate                            | Target leakage — mechanically linked to churn definition
+  partner_lng_id                                | Fill-rate leakage — +41pp gap persists in late sprints (+41pp)
+  partner_name                                  | Near-zero variance — 100% same value
+  partner_risk_level                            | Target leakage — mechanically linked to churn definition
+  partner_status                                | Target leakage — mechanically linked to churn definition
+  partner_status_at_survey                      | Target leakage — mechanically linked to churn definition
+  pay_g                                         | Near-zero variance — 100% same value
+  payment_issue_tickets_flag                    | Near-zero variance — 100% same value
+  paymode_cash                                  | Near-zero variance — 97% same value
+  paymode_unknown                               | Near-zero variance — 100% same value
+  phone_valid                                   | Near-zero variance — 100% same value
+  plan_expiry_window                            | Target leakage — mechanically linked to churn definition
+  prev_nps                                      | Near-zero variance — 100% same value
+  recharge_done                                 | Target leakage — mechanically linked to churn definition
+  recharge_regularity                           | Target leakage — mechanically linked to churn definition
+  recharge_same_day                             | Target leakage — mechanically linked to churn definition
+  recharges_before_sprint                       | Target leakage — mechanically linked to churn definition
+  risk_category                                 | Target leakage — mechanically linked to churn definition
+  sc_plan_active_ratio                          | Target leakage — mechanically linked to churn definition
+  sc_scorecard_ticket_count                     | Target leakage — mechanically linked to churn definition
+  sc_scorecard_weeks                            | Target leakage — mechanically linked to churn definition
+  sla                                           | Near-zero variance — 100% same value
+  sprint_num                                    | Right-censoring artifact — depends on observation window
+  tenure_Establishing (61-120d)                 | Near-zero variance — 99% same value
+  tenure_Loyal (270d+)                          | Near-zero variance — 97% same value
+  tenure_Onboarding (0-15d)                     | Near-zero variance — 100% same value
+  tenure_Steady State (121-270d)                | Near-zero variance — 99% same value
+  tenure_from_install                           | Near-zero variance — 100% same value
+  theme_billing_28day                           | Near-zero variance — 100% same value
+  theme_call_center_bad                         | Near-zero variance — 100% same value
+  theme_competitor_comparison                   | Near-zero variance — 100% same value
+  theme_complaint_resolution_bad                | Near-zero variance — 99% same value
+  theme_general_negative                        | Near-zero variance — 98% same value
+  theme_good_speed                              | Near-zero variance — 99% same value
+  theme_internet_down_outage                    | Near-zero variance — 99% same value
+  theme_ott_content                             | Near-zero variance — 100% same value
+  theme_pricing_affordable                      | Near-zero variance — 99% same value
+  theme_pricing_expensive                       | Near-zero variance — 100% same value
+  theme_range_coverage                          | Near-zero variance — 99% same value
+  theme_router_device                           | Near-zero variance — 100% same value
+  tickets_post_sprint                           | Target leakage — mechanically linked to churn definition
+  tk_avg_customer_calls                         | Near-zero variance — 100% same value
+  tk_avg_partner_calls                          | Very low fill rate (1%)
+  tk_avg_reopens                                | Fill-rate leakage — +31pp gap persists in late sprints (+31pp)
+  tk_avg_resolution_mins                        | Fill-rate leakage — +34pp gap persists in late sprints (+32pp)
+  tk_avg_ticket_rating                          | Near-zero variance — 100% same value
+  tk_cx_tickets                                 | Fill-rate leakage — +31pp gap persists in late sprints (+31pp)
+  tk_tickets_beyond_2x_tat                      | Fill-rate leakage — +31pp gap persists in late sprints (+31pp)
+  tk_tickets_disconnect                         | Fill-rate leakage — +31pp gap persists in late sprints (+31pp)
+  tk_tickets_freq_disconnect                    | Fill-rate leakage — +31pp gap persists in late sprints (+31pp)
+  tk_tickets_internet_down                      | Fill-rate leakage — +31pp gap persists in late sprints (+31pp)
+  tk_tickets_recharge_issue                     | Fill-rate leakage — +31pp gap persists in late sprints (+31pp)
+  tk_tickets_resolved                           | Fill-rate leakage — +31pp gap persists in late sprints (+31pp)
+  tk_tickets_slow_speed                         | Fill-rate leakage — +31pp gap persists in late sprints (+31pp)
+  tk_tickets_within_tat                         | Fill-rate leakage — +31pp gap persists in late sprints (+31pp)
+  tk_total_tickets                              | Fill-rate leakage — +31pp gap persists in late sprints (+31pp)
+  total_payments                                | Target leakage — mechanically linked to churn definition
+  total_recharges                               | Target leakage — mechanically linked to churn definition
+  ul1_avg_active_hours                          | Fill-rate leakage — +86pp gap persists in late sprints (+85pp)
+  ul1_avg_daily_data_gb                         | Fill-rate leakage — +86pp gap persists in late sprints (+85pp)
+  ul1_avg_daily_devices                         | Fill-rate leakage — +86pp gap persists in late sprints (+85pp)
+  ul1_avg_daily_sessions                        | Fill-rate leakage — +86pp gap persists in late sprints (+85pp)
+  ul1_avg_distinct_ips                          | Fill-rate leakage — +86pp gap persists in late sprints (+85pp)
+  ul1_avg_night_day_ratio                       | Fill-rate leakage — +86pp gap persists in late sprints (+85pp)
+  ul1_avg_peak_hour_ratio                       | Fill-rate leakage — +86pp gap persists in late sprints (+85pp)
+  ul1_avg_session_hours                         | Fill-rate leakage — +86pp gap persists in late sprints (+85pp)
+  ul1_avg_usage_volatility                      | Fill-rate leakage — +86pp gap persists in late sprints (+85pp)
+  ul1_pct_short_sessions                        | Near-zero variance — 100% same value
+  ul1_usage_data_days                           | Target leakage — mechanically linked to churn definition
+  uptime_data_days                              | Near-zero variance — 100% same value
+
+====================================================================================================
+NORMALIZE FEATURES (convert from absolute count to per-month rate)
+====================================================================================================
+  INBOUND_UNANSWERED                            | tenure_r=+0.371 | Tenure-biased absolute count (r=+0.371) — normalize to per-month rate
+  INBOUND_CALLS                                 | tenure_r=+0.348 | Tenure-biased absolute count (r=+0.348) — normalize to per-month rate
+  DISTINCT_ISSUE_TYPES                          | tenure_r=+0.339 | Tenure-biased absolute count (r=+0.339) — normalize to per-month rate
+  px_tickets                                    | tenure_r=+0.335 | Tenure-biased absolute count (r=+0.335) — normalize to per-month rate
+  total_tickets                                 | tenure_r=+0.324 | Tenure-biased absolute count (r=+0.324) — normalize to per-month rate
+  support_effort_index                          | tenure_r=+0.323 | Tenure-biased absolute count (r=+0.323) — normalize to per-month rate
+  TICKETS_REOPENED_ONCE                         | tenure_r=+0.287 | Tenure-biased absolute count (r=+0.287) — normalize to per-month rate
+  ISSUES_WITH_3PLUS_TICKETS                     | tenure_r=+0.280 | Tenure-biased absolute count (r=+0.280) — normalize to per-month rate
+  INBOUND_ANSWERED                              | tenure_r=+0.273 | Tenure-biased absolute count (r=+0.273) — normalize to per-month rate
+  ANSWERED_CALLS                                | tenure_r=+0.252 | Tenure-biased absolute count (r=+0.252) — normalize to per-month rate
+  TOTAL_IVR_CALLS                               | tenure_r=+0.249 | Tenure-biased absolute count (r=+0.249) — normalize to per-month rate
+  tickets_vs_partner                            | tenure_r=+0.248 | Tenure-biased absolute count (r=+0.248) — normalize to per-month rate
+  TOTAL_LEADS                                   | tenure_r=+0.241 | Tenure-biased absolute count (r=+0.241) — normalize to per-month rate
+  partner_avg_tickets                           | tenure_r=+0.216 | Tenure-biased absolute count (r=+0.216) — normalize to per-month rate
+  MAX_TICKETS_SAME_ISSUE                        | tenure_r=+0.210 | Tenure-biased absolute count (r=+0.210) — normalize to per-month rate
+  MISSED_CALLS                                  | tenure_r=+0.201 | Tenure-biased absolute count (r=+0.201) — normalize to per-month rate
+  MAX_TIMES_REOPENED                            | tenure_r=+0.193 | Tenure-biased absolute count (r=+0.193) — normalize to per-month rate
+  install_attempts                              | tenure_r=+0.172 | Tenure-biased absolute count (r=+0.172) — normalize to per-month rate
+  cx_tickets                                    | tenure_r=+0.167 | Tenure-biased absolute count (r=+0.167) — normalize to per-month rate
+  TICKETS_REOPENED_3PLUS                        | tenure_r=+0.157 | Tenure-biased absolute count (r=+0.157) — normalize to per-month rate
+  AVG_TIMES_REOPENED                            | tenure_r=+0.152 | Tenure-biased absolute count (r=+0.152) — normalize to per-month rate
+  LEADS_ACCEPTED                                | tenure_r=-0.387 | Tenure-biased absolute count (r=-0.387) — normalize to per-month rate
+
+  NORMALIZATION FORMULA:
+    normalized_value = raw_value / max(tenure_months, 1)
+    where tenure_months = tenure_days / 30
+    This removes the mechanical accumulation with time
+
+====================================================================================================
+REVIEW FEATURES (need manual check)
+====================================================================================================
+  AVG_CALL_DURATION                             | tenure_r=+0.154 | Moderate tenure correlation (r=+0.154) — verify not spurious
+  AVG_PEAK_INTERRUPTIONS                        | tenure_r=+0.162 | Moderate tenure correlation (r=+0.162) — verify not spurious
+  FCR_RATE                                      | tenure_r=-0.169 | Moderate tenure correlation (r=-0.169) — verify not spurious
+  NPS Reason - Primary                          | tenure_r=+nan | Fill-rate gap RECOVERABLE: overall=+10pp, late sprints=+1pp
+  Primary Category                              | tenure_r=+nan | Fill-rate gap RECOVERABLE: overall=+10pp, late sprints=+1pp
+  cis_avg_customer_uptime_pct                   | tenure_r=+0.077 | Fill-rate gap RECOVERABLE: overall=+55pp, late sprints=+2pp
+  cis_avg_peak_uptime_pct                       | tenure_r=+0.052 | Fill-rate gap RECOVERABLE: overall=+55pp, late sprints=+2pp
+  cis_avg_stable_ping_ratio                     | tenure_r=-0.258 | Fill-rate gap RECOVERABLE: overall=+58pp, late sprints=+6pp; Moderate tenure correlation (r=-0.258) — verify not spurious
+  cis_peak_interruption_rate                    | tenure_r=-0.002 | Fill-rate gap RECOVERABLE: overall=+55pp, late sprints=+2pp
+  city_Unknown                                  | tenure_r=-0.224 | Moderate tenure correlation (r=-0.224) — verify not spurious
+  comment_quality                               | tenure_r=+nan | Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp
+  customer_uptime_tier                          | tenure_r=+nan | Fill-rate gap RECOVERABLE: overall=+55pp, late sprints=+2pp
+  data_usage_amount                             | tenure_r=+0.461 | Fill-rate gap RECOVERABLE: overall=+13pp, late sprints=+5pp; Moderate tenure correlation (r=+0.461) — verify not spurious
+  data_usage_days                               | tenure_r=+0.124 | Fill-rate gap RECOVERABLE: overall=+13pp, late sprints=+5pp
+  detected_language                             | tenure_r=+nan | Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp
+  device_TP                                     | tenure_r=+0.445 | Moderate tenure correlation (r=+0.445) — verify not spurious
+  emotion                                       | tenure_r=+nan | Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp
+  first_time_user                               | tenure_r=+nan | Fill-rate gap RECOVERABLE: overall=+25pp, late sprints=+8pp
+  mentions_28day                                | tenure_r=+nan | Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp
+  mentions_amount                               | tenure_r=+nan | Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp
+  mentions_competitor                           | tenure_r=+nan | Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp
+  peak_uptime_gap                               | tenure_r=+0.063 | Fill-rate gap RECOVERABLE: overall=+55pp, late sprints=+2pp
+  primary_theme                                 | tenure_r=+nan | Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp
+  primary_theme_score                           | tenure_r=+0.007 | Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp
+  sc_avg_weekly_data_gb                         | tenure_r=+0.485 | Moderate tenure correlation (r=+0.485) — verify not spurious
+  score_sentiment_mismatch                      | tenure_r=+nan | Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp
+  secondary_theme_score                         | tenure_r=-0.009 | Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp
+  sentiment_intensity                           | tenure_r=+0.009 | Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp
+  sentiment_polarity                            | tenure_r=+nan | Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp
+  tenure_days                                   | tenure_r=+1.000 | Moderate tenure correlation (r=+1.000) — verify not spurious
+
+====================================================================================================
+CLEAN FEATURES (safe to use as-is)
+====================================================================================================
+  AVG_ANSWERED_SECONDS                          | tenure_r=+0.062 | churn_r=-0.138 | fill=100%
+  AVG_INSTALL_TAT_MINS                          | tenure_r=-0.050 | churn_r=+0.014 | fill=100%
+  AVG_INSTALL_TAT_MINS_w                        | tenure_r=-0.067 | churn_r=+0.019 | fill=100%
+  AVG_TICKETS_PER_ISSUE                         | tenure_r=+0.148 | churn_r=-0.115 | fill=100%
+  AVG_TICKET_RATING                             | tenure_r=-0.036 | churn_r=+0.012 | fill=12%
+  Channel                                       | tenure_r=N/A | churn_r=N/A | fill=100%
+  DISPATCH_DECLINE_RATE_PCT                     | tenure_r=-0.011 | churn_r=+0.023 | fill=100%
+  DROPPED_CALLS                                 | tenure_r=+0.013 | churn_r=+0.073 | fill=100%
+  FAILURE_RATE_PCT                              | tenure_r=-0.104 | churn_r=+0.150 | fill=100%
+  HAS_REPEAT_COMPLAINT                          | tenure_r=+0.124 | churn_r=+0.115 | fill=100%
+  LEADS_ALL_DECLINED                            | tenure_r=+0.024 | churn_r=+0.003 | fill=100%
+  OVERALL_UPTIME_PCT                            | tenure_r=+0.047 | churn_r=-0.093 | fill=100%
+  PEAK_STABLE_PCT                               | tenure_r=-0.009 | churn_r=-0.064 | fill=100%
+  PEAK_UPTIME_PCT                               | tenure_r=+0.026 | churn_r=-0.091 | fill=100%
+  PEAK_VS_OVERALL_GAP                           | tenure_r=+0.139 | churn_r=+0.014 | fill=100%
+  _source                                       | tenure_r=N/A | churn_r=N/A | fill=100%
+  autopay_ratio                                 | tenure_r=-0.041 | churn_r=-0.063 | fill=100%
+  avg_resolution_hours                          | tenure_r=+0.012 | churn_r=+0.058 | fill=100%
+  avg_resolution_hours_w                        | tenure_r=+0.009 | churn_r=+0.084 | fill=100%
+  avg_uptime_pct                                | tenure_r=+0.070 | churn_r=-0.255 | fill=100%
+  channel_In - WA                               | tenure_r=-0.094 | churn_r=+0.135 | fill=100%
+  channel_WA                                    | tenure_r=+0.076 | churn_r=-0.150 | fill=100%
+  city                                          | tenure_r=N/A | churn_r=N/A | fill=100%
+  city_Mumbai                                   | tenure_r=-0.042 | churn_r=+0.014 | fill=100%
+  city_UP                                       | tenure_r=-0.121 | churn_r=+0.083 | fill=100%
+  device_SY                                     | tenure_r=+0.017 | churn_r=-0.052 | fill=100%
+  devices_2_4g                                  | tenure_r=+0.027 | churn_r=-0.033 | fill=100%
+  devices_5g                                    | tenure_r=+0.053 | churn_r=-0.022 | fill=100%
+  first_time_wifi                               | tenure_r=N/A | churn_r=N/A | fill=100%
+  has_comment                                   | tenure_r=+0.055 | churn_r=-0.093 | fill=100%
+  has_tickets                                   | tenure_r=+0.089 | churn_r=-0.408 | fill=100%
+  install_delayed                               | tenure_r=-0.110 | churn_r=+0.019 | fill=100%
+  install_tat_hours                             | tenure_r=-0.095 | churn_r=-0.004 | fill=100%
+  install_tat_hours_w                           | tenure_r=-0.095 | churn_r=-0.002 | fill=100%
+  is_first_time_wifi                            | tenure_r=-0.003 | churn_r=-0.155 | fill=100%
+  is_negative_sentiment                         | tenure_r=+0.075 | churn_r=-0.008 | fill=100%
+  is_positive_sentiment                         | tenure_r=-0.006 | churn_r=-0.101 | fill=100%
+  missed_call_ratio                             | tenure_r=-0.050 | churn_r=+0.075 | fill=100%
+  network_quality_index                         | tenure_r=-0.080 | churn_r=+0.004 | fill=100%
+  optical_power                                 | tenure_r=+0.135 | churn_r=-0.053 | fill=100%
+  optical_range                                 | tenure_r=N/A | churn_r=N/A | fill=39%
+  partner_avg_nps                               | tenure_r=-0.082 | churn_r=-0.086 | fill=100%
+  partner_avg_resolution_hours                  | tenure_r=+0.028 | churn_r=+0.031 | fill=100%
+  partner_customer_count                        | tenure_r=+0.146 | churn_r=-0.085 | fill=100%
+  partner_fcr_rate                              | tenure_r=-0.133 | churn_r=-0.037 | fill=100%
+  partner_median_install_tat                    | tenure_r=-0.024 | churn_r=-0.012 | fill=100%
+  partner_repeat_rate                           | tenure_r=+0.135 | churn_r=+0.059 | fill=100%
+  partner_sla_compliance                        | tenure_r=-0.012 | churn_r=-0.119 | fill=100%
+  payment_mode                                  | tenure_r=N/A | churn_r=N/A | fill=100%
+  paymode_online                                | tenure_r=+0.008 | churn_r=+0.050 | fill=100%
+  resolution_vs_partner                         | tenure_r=+0.005 | churn_r=+0.051 | fill=100%
+  sc_avg_latest_speed                           | tenure_r=-0.096 | churn_r=-0.015 | fill=99%
+  sc_avg_opticalpower_in_range                  | tenure_r=-0.059 | churn_r=-0.005 | fill=32%
+  sc_avg_plan_speed                             | tenure_r=-0.041 | churn_r=+0.032 | fill=100%
+  sc_avg_rxpower                                | tenure_r=-0.067 | churn_r=-0.026 | fill=70%
+  sc_avg_rxpower_in_range                       | tenure_r=-0.009 | churn_r=-0.156 | fill=100%
+  sc_avg_speed_in_range                         | tenure_r=-0.072 | churn_r=-0.037 | fill=100%
+  sc_speed_gap_pct                              | tenure_r=+0.053 | churn_r=+0.036 | fill=99%
+  secondary_theme                               | tenure_r=N/A | churn_r=N/A | fill=12%
+  sla_compliance_pct                            | tenure_r=-0.044 | churn_r=-0.132 | fill=100%
+  sla_vs_partner                                | tenure_r=-0.048 | churn_r=-0.079 | fill=100%
+  speed_gap_severity                            | tenure_r=N/A | churn_r=N/A | fill=99%
+  stddev_uptime                                 | tenure_r=+0.057 | churn_r=-0.117 | fill=100%
+  tenure_bucket                                 | tenure_r=N/A | churn_r=N/A | fill=100%
+  tenure_excel                                  | tenure_r=N/A | churn_r=N/A | fill=94%
+  theme_disconnection_frequency                 | tenure_r=+0.037 | churn_r=-0.035 | fill=100%
+  theme_general_positive                        | tenure_r=-0.007 | churn_r=-0.059 | fill=100%
+  theme_other                                   | tenure_r=-0.058 | churn_r=+0.092 | fill=100%
+  theme_slow_speed                              | tenure_r=+0.007 | churn_r=-0.035 | fill=100%
+  theme_unclassified                            | tenure_r=+0.027 | churn_r=-0.025 | fill=100%
+  ticket_severity                               | tenure_r=+0.027 | churn_r=-0.207 | fill=100%
+  tickets_before_3m                             | tenure_r=+0.109 | churn_r=+0.026 | fill=100%
+  tickets_last_3m_sprint                        | tenure_r=+0.065 | churn_r=+0.026 | fill=43%
+  tk_sla_compliance                             | tenure_r=+0.018 | churn_r=-0.371 | fill=100%
+
+====================================================================================================
+AUDIT 4: MULTICOLLINEARITY (pairs with |r| > 0.85)
+====================================================================================================
+  Found 17 highly correlated feature pairs:
+    PEAK_UPTIME_PCT                          ↔ OVERALL_UPTIME_PCT                       | r=+0.990
+    has_comment                              ↔ theme_other                              | r=-0.987
+    install_tat_hours                        ↔ install_tat_hours_w                      | r=+0.984
+    MAX_TICKETS_SAME_ISSUE                   ↔ AVG_TICKETS_PER_ISSUE                    | r=+0.968
+    avg_resolution_hours                     ↔ resolution_vs_partner                    | r=+0.965
+    ANSWERED_CALLS                           ↔ INBOUND_ANSWERED                         | r=+0.943
+    INBOUND_CALLS                            ↔ INBOUND_UNANSWERED                       | r=+0.943
+    avg_uptime_pct                           ↔ OVERALL_UPTIME_PCT                       | r=+0.936
+    stddev_uptime                            ↔ OVERALL_UPTIME_PCT                       | r=+0.928
+    TOTAL_IVR_CALLS                          ↔ MISSED_CALLS                             | r=+0.926
+    avg_uptime_pct                           ↔ PEAK_UPTIME_PCT                          | r=+0.925
+    total_tickets                            ↔ px_tickets                               | r=+0.923
+    INBOUND_CALLS                            ↔ INBOUND_ANSWERED                         | r=+0.917
+    stddev_uptime                            ↔ PEAK_UPTIME_PCT                          | r=+0.914
+    avg_uptime_pct                           ↔ stddev_uptime                            | r=+0.894
+    INBOUND_CALLS                            ↔ ANSWERED_CALLS                           | r=+0.863
+    px_tickets                               ↔ MAX_TICKETS_SAME_ISSUE                   | r=+0.863
+
+====================================================================================================
+AUDIT 5: CX DOMAIN ASSESSMENT
+====================================================================================================
+
+  Network Quality (17 features):
+    [CLEAN    ] FAILURE_RATE_PCT                         tenure_r=-0.104  churn_r=+0.150
+    [CLEAN    ] OVERALL_UPTIME_PCT                       tenure_r=+0.047  churn_r=-0.093
+    [CLEAN    ] PEAK_UPTIME_PCT                          tenure_r=+0.026  churn_r=-0.091
+    [CLEAN    ] avg_uptime_pct                           tenure_r=+0.070  churn_r=-0.255
+    [CLEAN    ] network_quality_index                    tenure_r=-0.080  churn_r=+0.004
+    [CLEAN    ] optical_power                            tenure_r=+0.135  churn_r=-0.053
+    [CLEAN    ] optical_range                            tenure_r=+nan  churn_r=+nan
+    [CLEAN    ] sc_avg_latest_speed                      tenure_r=-0.096  churn_r=-0.015
+    [CLEAN    ] sc_avg_opticalpower_in_range             tenure_r=-0.059  churn_r=-0.005
+    [CLEAN    ] sc_avg_plan_speed                        tenure_r=-0.041  churn_r=+0.032
+    [CLEAN    ] sc_avg_rxpower                           tenure_r=-0.067  churn_r=-0.026
+    [CLEAN    ] sc_avg_rxpower_in_range                  tenure_r=-0.009  churn_r=-0.156
+    [CLEAN    ] sc_avg_speed_in_range                    tenure_r=-0.072  churn_r=-0.037
+    [CLEAN    ] sc_speed_gap_pct                         tenure_r=+0.053  churn_r=+0.036
+    [CLEAN    ] speed_gap_severity                       tenure_r=+nan  churn_r=+nan
+
+  Service/Support (17 features):
+    [CLEAN    ] AVG_TICKETS_PER_ISSUE                    tenure_r=+0.148  churn_r=-0.115
+    [CLEAN    ] AVG_TICKET_RATING                        tenure_r=-0.036  churn_r=+0.012
+    [CLEAN    ] DISPATCH_DECLINE_RATE_PCT                tenure_r=-0.011  churn_r=+0.023
+    [CLEAN    ] HAS_REPEAT_COMPLAINT                     tenure_r=+0.124  churn_r=+0.115
+    [CLEAN    ] avg_resolution_hours                     tenure_r=+0.012  churn_r=+0.058
+    [CLEAN    ] avg_resolution_hours_w                   tenure_r=+0.009  churn_r=+0.084
+    [CLEAN    ] has_tickets                              tenure_r=+0.089  churn_r=-0.408
+    [CLEAN    ] partner_avg_resolution_hours             tenure_r=+0.028  churn_r=+0.031
+    [CLEAN    ] partner_fcr_rate                         tenure_r=-0.133  churn_r=-0.037
+    [CLEAN    ] partner_sla_compliance                   tenure_r=-0.012  churn_r=-0.119
+    [CLEAN    ] resolution_vs_partner                    tenure_r=+0.005  churn_r=+0.051
+    [CLEAN    ] sla_compliance_pct                       tenure_r=-0.044  churn_r=-0.132
+    [CLEAN    ] sla_vs_partner                           tenure_r=-0.048  churn_r=-0.079
+    [CLEAN    ] ticket_severity                          tenure_r=+0.027  churn_r=-0.207
+    [CLEAN    ] tickets_before_3m                        tenure_r=+0.109  churn_r=+0.026
+
+  Calls/IVR (18 features):
+    [NORMALIZE] ANSWERED_CALLS                           tenure_r=+0.252  churn_r=+0.085
+    [CLEAN    ] AVG_ANSWERED_SECONDS                     tenure_r=+0.062  churn_r=-0.138
+    [REVIEW   ] AVG_CALL_DURATION                        tenure_r=+0.154  churn_r=-0.097
+    [EXCLUDE  ] AVG_CUSTOMER_CALLS_PER_TICKET            tenure_r=+0.182  churn_r=+0.021
+    [EXCLUDE  ] AVG_PARTNER_CALLS_PER_TICKET             tenure_r=-0.017  churn_r=+0.030
+    [CLEAN    ] DROPPED_CALLS                            tenure_r=+0.013  churn_r=+0.073
+    [NORMALIZE] INBOUND_ANSWERED                         tenure_r=+0.273  churn_r=-0.010
+    [NORMALIZE] INBOUND_CALLS                            tenure_r=+0.348  churn_r=-0.026
+    [NORMALIZE] INBOUND_UNANSWERED                       tenure_r=+0.371  churn_r=-0.038
+    [NORMALIZE] MISSED_CALLS                             tenure_r=+0.201  churn_r=+0.196
+    [EXCLUDE  ] TOTAL_CUSTOMER_CALLS                     tenure_r=+0.309  churn_r=-0.000
+    [NORMALIZE] TOTAL_IVR_CALLS                          tenure_r=+0.249  churn_r=+0.172
+    [EXCLUDE  ] caller                                   tenure_r=+nan  churn_r=+nan
+    [EXCLUDE  ] channel_Call                             tenure_r=-0.019  churn_r=+0.042
+    [CLEAN    ] missed_call_ratio                        tenure_r=-0.050  churn_r=+0.075
+
+  Usage/Engagement (3 features):
+    [CLEAN    ] device_SY                                tenure_r=+0.017  churn_r=-0.052
+    [CLEAN    ] devices_2_4g                             tenure_r=+0.027  churn_r=-0.033
+    [CLEAN    ] devices_5g                               tenure_r=+0.053  churn_r=-0.022
+
+  Partner Quality (12 features):
+    [CLEAN    ] AVG_INSTALL_TAT_MINS                     tenure_r=-0.050  churn_r=+0.014
+    [CLEAN    ] AVG_INSTALL_TAT_MINS_w                   tenure_r=-0.067  churn_r=+0.019
+    [CLEAN    ] install_delayed                          tenure_r=-0.110  churn_r=+0.019
+    [CLEAN    ] install_tat_hours                        tenure_r=-0.095  churn_r=-0.004
+    [CLEAN    ] install_tat_hours_w                      tenure_r=-0.095  churn_r=-0.002
+    [CLEAN    ] partner_avg_nps                          tenure_r=-0.082  churn_r=-0.086
+    [CLEAN    ] partner_avg_resolution_hours             tenure_r=+0.028  churn_r=+0.031
+    [CLEAN    ] partner_customer_count                   tenure_r=+0.146  churn_r=-0.085
+    [CLEAN    ] partner_fcr_rate                         tenure_r=-0.133  churn_r=-0.037
+    [CLEAN    ] partner_median_install_tat               tenure_r=-0.024  churn_r=-0.012
+    [CLEAN    ] partner_repeat_rate                      tenure_r=+0.135  churn_r=+0.059
+    [CLEAN    ] partner_sla_compliance                   tenure_r=-0.012  churn_r=-0.119
+
+  Payment/Value (3 features):
+    [CLEAN    ] autopay_ratio                            tenure_r=-0.041  churn_r=-0.063
+    [CLEAN    ] payment_mode                             tenure_r=+nan  churn_r=+nan
+    [CLEAN    ] sc_avg_plan_speed                        tenure_r=-0.041  churn_r=+0.032
+
+  Customer Profile (10 features):
+    [CLEAN    ] Channel                                  tenure_r=+nan  churn_r=+nan
+    [CLEAN    ] channel_In - WA                          tenure_r=-0.094  churn_r=+0.135
+    [CLEAN    ] channel_WA                               tenure_r=+0.076  churn_r=-0.150
+    [CLEAN    ] city                                     tenure_r=+nan  churn_r=+nan
+    [CLEAN    ] city_Mumbai                              tenure_r=-0.042  churn_r=+0.014
+    [CLEAN    ] city_UP                                  tenure_r=-0.121  churn_r=+0.083
+    [CLEAN    ] first_time_wifi                          tenure_r=+nan  churn_r=+nan
+    [CLEAN    ] is_first_time_wifi                       tenure_r=-0.003  churn_r=-0.155
+    [CLEAN    ] tenure_bucket                            tenure_r=+nan  churn_r=+nan
+    [CLEAN    ] tenure_excel                             tenure_r=+nan  churn_r=+nan
+
+====================================================================================================
+AUDIT 6: CALL FEATURES DEEP DIVE
+(User's concern: absolute counts have tenure bias, should be rates)
+====================================================================================================
+
+  Feature                                  | Type         |   tenure_r |    churn_r | Verdict     
+  ---------------------------------------- | ------------ | ---------- | ---------- | ------------
+  ANSWERED_CALLS                           | ABS COUNT    |     +0.252 |     +0.085 | NORMALIZE   
+  AVG_ANSWERED_SECONDS                     | RATE/AVG     |     +0.062 |     -0.138 | CLEAN       
+  AVG_CALL_DURATION                        | RATE/AVG     |     +0.154 |     -0.097 | REVIEW      
+  AVG_CUSTOMER_CALLS_PER_TICKET            | RATE/AVG     |     +0.182 |     +0.021 | REVIEW      
+  AVG_PARTNER_CALLS_PER_TICKET             | RATE/AVG     |     -0.017 |     +0.030 | CLEAN       
+  DROPPED_CALLS                            | ABS COUNT    |     +0.013 |     +0.073 | CLEAN       
+  INBOUND_ANSWERED                         | ABS COUNT    |     +0.273 |     -0.010 | NORMALIZE   
+  INBOUND_CALLS                            | ABS COUNT    |     +0.348 |     -0.026 | NORMALIZE   
+  INBOUND_UNANSWERED                       | ABS COUNT    |     +0.371 |     -0.038 | NORMALIZE   
+  MISSED_CALLS                             | ABS COUNT    |     +0.201 |     +0.196 | NORMALIZE   
+  OUTBOUND_CALLS                           | ABS COUNT    |     -0.037 |     +0.347 | EXCLUDE     
+  TOTAL_CUSTOMER_CALLS                     | ABS COUNT    |     +0.309 |     -0.000 | NORMALIZE   
+  TOTAL_IVR_CALLS                          | ABS COUNT    |     +0.249 |     +0.172 | NORMALIZE   
+  channel_Call                             | ABS COUNT    |     -0.019 |     +0.042 | CLEAN       
+  missed_call_ratio                        | RATE/AVG     |     -0.050 |     +0.075 | CLEAN       
+  theme_call_center_bad                    | ABS COUNT    |     +0.011 |     +0.014 | CLEAN       
+  tk_avg_customer_calls                    | RATE/AVG     |       +nan |       +nan | CLEAN       
+  tk_avg_partner_calls                     | RATE/AVG     |     +0.052 |     +0.041 | CLEAN       
+
+  CALL FEATURE RECOMMENDATIONS:
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  CLEAN (use as-is):
+    - AVG_ANSWERED_SECONDS (r=+0.062) — response time, already an average
+    - DROPPED_CALLS (r=+0.013) — rare events, not tenure-biased
+    - missed_call_ratio (r=-0.050) — already a ratio
+    - AVG_PARTNER_CALLS_PER_TICKET (r=-0.017) — already per-ticket
+    - AVG_CALL_DURATION (r=+0.154) — borderline, but an average
+
+  NORMALIZE (create per-month versions):
+    - TOTAL_IVR_CALLS → ivr_calls_per_month
+    - MISSED_CALLS → missed_calls_per_month (or use missed_call_ratio)
+    - INBOUND_CALLS → inbound_calls_per_month
+    - ANSWERED_CALLS → answered_calls_per_month
+    - INBOUND_ANSWERED → inbound_answered_per_month
+    - INBOUND_UNANSWERED → inbound_unanswered_per_month
+
+  EXCLUDE:
+    - OUTBOUND_CALLS — reverse causality (reactive)
+
+
+====================================================================================================
+AUDIT 7: FEATURE ENGINEERING — NORMALIZED VERSIONS
+====================================================================================================
+
+  Original                                 | Normalized                          |  Old tenure_r |  New tenure_r |  Improved?
+  ---------------------------------------- | ----------------------------------- | ------------- | ------------- | ----------
+  TOTAL_IVR_CALLS                          | ivr_calls_per_month                 |        +0.249 |        -0.296 |         NO
+  MISSED_CALLS                             | missed_calls_per_month              |        +0.201 |        -0.300 |         NO
+  INBOUND_CALLS                            | inbound_calls_per_month             |        +0.348 |        -0.064 |        YES
+  ANSWERED_CALLS                           | answered_calls_per_month            |        +0.252 |        -0.196 |        YES
+  INBOUND_ANSWERED                         | inbound_answered_per_month          |        +0.273 |        -0.056 |        YES
+  INBOUND_UNANSWERED                       | inbound_unanswered_per_month        |        +0.371 |        -0.025 |        YES
+  total_tickets                            | tickets_per_month                   |        +0.324 |        -0.187 |        YES
+  px_tickets                               | px_tickets_per_month                |        +0.335 |        -0.260 |        YES
+  cx_tickets                               | cx_tickets_per_month                |        +0.167 |        -0.106 |        YES
+  TOTAL_TICKETS_FCR                        | fcr_tickets_per_month               |        +0.349 |        -0.244 |        YES
+  TOTAL_TICKETS_REPEAT                     | repeat_tickets_per_month            |        +0.349 |        -0.244 |        YES
+  FCR_TICKETS                              | fcr_tickets_raw_per_month           |        +0.334 |        -0.248 |        YES
+  install_attempts                         | install_attempts_per_month          |        +0.172 |        -0.312 |         NO
+  DISTINCT_ISSUE_TYPES                     | distinct_issues_per_month           |        +0.339 |        -0.322 |        YES
+  MAX_TICKETS_SAME_ISSUE                   | max_same_issue_per_month            |        +0.210 |        -0.302 |         NO
+  TICKETS_REOPENED_ONCE                    | reopened_once_per_month             |        +0.287 |        -0.015 |        YES
+  TICKETS_REOPENED_3PLUS                   | reopened_3plus_per_month            |        +0.157 |        +0.021 |        YES
+  MAX_TIMES_REOPENED                       | max_reopened_per_month              |        +0.193 |        -0.058 |        YES
+  ISSUES_WITH_3PLUS_TICKETS                | complex_issues_per_month            |        +0.280 |        -0.210 |        YES
+  TOTAL_LEADS                              | leads_per_month                     |        +0.241 |        -0.125 |        YES
+  support_effort_index                     | support_effort_per_month            |        +0.323 |        +0.317 |        YES
+
+====================================================================================================
+AUDIT 8: v4 MODEL TOP-20 FEATURES — BIAS CHECK
+====================================================================================================
+
+    # Feature                                  |   Imp% |   tenure_r | Verdict      | Assessment
+  --- ---------------------------------------- | ------ | ---------- | ------------ | ----------------------------------------
+    1 avg_uptime_pct                           |  32.0% |     +0.070 | CLEAN        | Clean — no bias detected
+    2 sc_avg_rxpower_in_range                  |  14.8% |     -0.009 | CLEAN        | Clean — no bias detected
+    3 tk_sla_compliance                        |   6.2% |     +0.018 | CLEAN        | Clean — no bias detected
+    4 TOTAL_IVR_CALLS                          |   4.5% |     +0.249 | NORMALIZE    | BIASED — tenure_r=+0.249, replace with per-month version
+    5 FAILURE_RATE_PCT                         |   4.1% |     -0.104 | CLEAN        | Clean — no bias detected
+    6 MISSED_CALLS                             |   3.2% |     +0.201 | NORMALIZE    | BIASED — tenure_r=+0.201, replace with per-month version
+    7 AVG_ANSWERED_SECONDS                     |   3.0% |     +0.062 | CLEAN        | Clean — no bias detected
+    8 AVG_TICKETS_PER_ISSUE                    |   3.0% |     +0.148 | CLEAN        | Clean — no bias detected
+    9 avg_resolution_hours_w                   |   3.0% |     +0.009 | CLEAN        | Clean — no bias detected
+   10 avg_resolution_hours                     |   2.5% |     +0.012 | CLEAN        | Clean — no bias detected
+   11 autopay_ratio                            |   2.0% |     -0.041 | CLEAN        | Clean — no bias detected
+   12 sc_avg_rxpower                           |   1.7% |     -0.067 | CLEAN        | Clean — no bias detected
+   13 sc_avg_weekly_data_gb                    |   1.6% |     +0.485 | REVIEW       | BIASED — tenure_r=+0.485, replace with per-month version
+   14 INBOUND_CALLS                            |   1.4% |     +0.348 | NORMALIZE    | BIASED — tenure_r=+0.348, replace with per-month version
+   15 sc_avg_speed_in_range                    |   1.1% |     -0.072 | CLEAN        | Clean — no bias detected
+
+  SUMMARY: v4 Model Health
+  ━━━━━━━━━━━━━━━━━━━━━━━━━
+  Of the top 15 features in v4 OOT model:
+  - CLEAN:     avg_uptime_pct, sc_avg_rxpower_in_range, tk_sla_compliance,
+               FAILURE_RATE_PCT, AVG_ANSWERED_SECONDS, AVG_TICKETS_PER_ISSUE,
+               avg_resolution_hours_w, avg_resolution_hours, autopay_ratio,
+               sc_avg_rxpower, sc_avg_weekly_data_gb, sc_avg_speed_in_range
+  - NORMALIZE: TOTAL_IVR_CALLS (tenure_r=+0.249), MISSED_CALLS (tenure_r=+0.201),
+               INBOUND_CALLS (tenure_r=+0.348)
+
+  ACTION: Replace 3 tenure-biased features with per-month normalized versions.
+  EXPECTED: Model AUC may drop slightly but signal will be cleaner and
+            generalizable to the full population (different tenure distributions).
+
+
+====================================================================================================
+FINAL RECOMMENDED FEATURE LIST (v5)
+====================================================================================================
+
+  CLEAN features (use as-is): 74
+  NORMALIZE features (replace with per-month): 22
+  Total v5 features: 96
+
+  Normalized feature names to create:
+    total_tickets                            → tickets_per_month
+    cx_tickets                               → cx_tickets_per_month
+    px_tickets                               → px_tickets_per_month
+    install_attempts                         → install_attempts_per_month
+    AVG_TIMES_REOPENED                       → AVG_TIMES_REOPENED_per_month
+    MAX_TIMES_REOPENED                       → max_reopened_per_month
+    TICKETS_REOPENED_ONCE                    → reopened_once_per_month
+    TICKETS_REOPENED_3PLUS                   → reopened_3plus_per_month
+    DISTINCT_ISSUE_TYPES                     → distinct_issues_per_month
+    MAX_TICKETS_SAME_ISSUE                   → max_same_issue_per_month
+    ISSUES_WITH_3PLUS_TICKETS                → complex_issues_per_month
+    TOTAL_LEADS                              → leads_per_month
+    LEADS_ACCEPTED                           → LEADS_ACCEPTED_per_month
+    TOTAL_IVR_CALLS                          → ivr_calls_per_month
+    INBOUND_CALLS                            → inbound_calls_per_month
+    ANSWERED_CALLS                           → answered_calls_per_month
+    MISSED_CALLS                             → missed_calls_per_month
+    INBOUND_ANSWERED                         → inbound_answered_per_month
+    INBOUND_UNANSWERED                       → inbound_unanswered_per_month
+    partner_avg_tickets                      → partner_avg_tickets_per_month
+    tickets_vs_partner                       → tickets_vs_partner_per_month
+    support_effort_index                     → support_effort_per_month

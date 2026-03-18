@@ -1,0 +1,378 @@
+======================================================================
+PHASE 3: FEATURE ENGINEERING REPORT
+Generated: 2026-03-18 11:17:09
+======================================================================
+
+NPS respondents: 13045
+Unique phones: 12290
+Total columns: 64
+New features added: 31
+
+======================================================================
+MATCH RATES PER FEATURE
+======================================================================
+
+  Recharge History:
+    total_recharges                    :  13045 / 13045 (100.0%)
+    first_recharge                     :  13045 / 13045 (100.0%)
+    last_recharge                      :  13045 / 13045 (100.0%)
+    avg_recharge_amount                :  13045 / 13045 (100.0%)
+
+  Service Tickets:
+    total_tickets                      :  13045 / 13045 (100.0%)
+    cx_tickets                         :  10426 / 13045 ( 79.9%)
+    px_tickets                         :  10426 / 13045 ( 79.9%)
+    avg_resolution_hours               :  10312 / 13045 ( 79.0%)
+    sla_compliance_pct                 :  10426 / 13045 ( 79.9%)
+
+  Partner/Geography:
+    partner_lng_id                     :  10826 / 13045 ( 83.0%)
+    cluster                            :  10826 / 13045 ( 83.0%)
+    mis_city                           :  10826 / 13045 ( 83.0%)
+    zone                               :  10826 / 13045 ( 83.0%)
+    partner_name                       :  10826 / 13045 ( 83.0%)
+    partner_status                     :  10826 / 13045 ( 83.0%)
+
+  Partner Uptime:
+    avg_uptime_pct                     :  13027 / 13045 ( 99.9%)
+    stddev_uptime                      :  13027 / 13045 ( 99.9%)
+    min_uptime                         :  13027 / 13045 ( 99.9%)
+    uptime_data_days                   :  13027 / 13045 ( 99.9%)
+
+  Install TAT:
+    install_time                       :  12024 / 13045 ( 92.2%)
+    install_attempts                   :  12024 / 13045 ( 92.2%)
+    booking_time                       :  11446 / 13045 ( 87.7%)
+    install_tat_hours                  :  11446 / 13045 ( 87.7%)
+
+  Payment Mode:
+    total_payments                     :  13038 / 13045 ( 99.9%)
+    autopay_payments                   :  13038 / 13045 ( 99.9%)
+    cash_payments                      :  13038 / 13045 ( 99.9%)
+    avg_payment_amount                 :  13038 / 13045 ( 99.9%)
+
+  Derived Features:
+    payment_mode                       :  13045 / 13045 (100.0%)
+    has_tickets                        :  13045 / 13045 (100.0%)
+    days_since_last_recharge           :  13045 / 13045 (100.0%)
+    recharge_regularity                :  13045 / 13045 (100.0%)
+
+======================================================================
+FEATURE STATISTICS (mean / median / std)
+======================================================================
+
+  total_recharges (n=13045):
+    Mean:   12.89
+    Median: 11.00
+    Std:    8.66
+    Min:    1.00
+    Max:    51.00
+
+  avg_recharge_amount (n=13045):
+    Mean:   521.89
+    Median: 500.00
+    Std:    81.37
+    Min:    97.00
+    Max:    3481.00
+
+  total_tickets (n=13045):
+    Mean:   8.49
+    Median: 6.00
+    Std:    9.33
+    Min:    0.00
+    Max:    124.00
+
+  cx_tickets (n=10426):
+    Mean:   0.95
+    Median: 0.00
+    Std:    1.61
+    Min:    0.00
+    Max:    35.00
+
+  px_tickets (n=10426):
+    Mean:   9.29
+    Median: 7.00
+    Std:    8.45
+    Min:    0.00
+    Max:    116.00
+
+  avg_resolution_hours (n=10312):
+    Mean:   73.12
+    Median: 23.67
+    Std:    174.94
+    Min:    -15.43
+    Max:    7738.00
+
+  sla_compliance_pct (n=10426):
+    Mean:   70.57
+    Median: 75.00
+    Std:    24.22
+    Min:    0.00
+    Max:    100.00
+
+  total_payments (n=13038):
+    Mean:   12.57
+    Median: 11.00
+    Std:    8.00
+    Min:    1.00
+    Max:    36.00
+
+  autopay_payments (n=13038):
+    Mean:   3.36
+    Median: 1.00
+    Std:    4.89
+    Min:    0.00
+    Max:    33.00
+
+  cash_payments (n=13038):
+    Mean:   0.48
+    Median: 0.00
+    Std:    2.17
+    Min:    0.00
+    Max:    25.00
+
+  avg_payment_amount (n=13038):
+    Mean:   518.75
+    Median: 496.00
+    Std:    80.59
+    Min:    281.29
+    Max:    3468.50
+
+  install_tat_hours (n=11446):
+    Mean:   256.41
+    Median: 27.00
+    Std:    1492.47
+    Min:    -18840.00
+    Max:    16109.00
+
+  install_attempts (n=12024):
+    Mean:   1.58
+    Median: 1.00
+    Std:    1.78
+    Min:    1.00
+    Max:    72.00
+
+  avg_uptime_pct (n=13027):
+    Mean:   0.69
+    Median: 0.70
+    Std:    0.07
+    Min:    0.00
+    Max:    0.81
+
+  stddev_uptime (n=13027):
+    Mean:   0.33
+    Median: 0.33
+    Std:    0.03
+    Min:    0.00
+    Max:    0.45
+
+  min_uptime (n=13027):
+    Mean:   0.00
+    Median: 0.00
+    Std:    0.00
+    Min:    0.00
+    Max:    0.00
+
+  days_since_last_recharge (n=13045):
+    Mean:   233.90
+    Median: 239.00
+    Std:    107.23
+    Min:    -62.00
+    Max:    1507.00
+
+  recharge_regularity (n=13045):
+    Mean:   0.60
+    Median: 0.60
+    Std:    0.43
+    Min:    0.04
+    Max:    8.40
+
+======================================================================
+FEATURES BY NPS GROUP
+======================================================================
+
+  total_recharges:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |      12.42 |      10.00 |   6011
+    Passive      |      13.49 |      11.00 |   1027
+    Detractor    |      13.26 |      11.00 |   6007
+
+  avg_recharge_amount:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |     520.95 |     500.00 |   6011
+    Passive      |     526.73 |     500.00 |   1027
+    Detractor    |     522.01 |     500.33 |   6007
+
+  total_tickets:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       7.48 |       5.00 |   6011
+    Passive      |       7.97 |       5.00 |   1027
+    Detractor    |       9.59 |       7.00 |   6007
+
+  cx_tickets:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       0.81 |       0.00 |   4856
+    Passive      |       0.88 |       0.00 |    854
+    Detractor    |       1.09 |       0.00 |   4716
+
+  px_tickets:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       8.11 |       6.00 |   4856
+    Passive      |       8.38 |       6.00 |    854
+    Detractor    |      10.67 |       8.00 |   4716
+
+  avg_resolution_hours:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |      71.28 |      21.00 |   4793
+    Passive      |      74.37 |      18.04 |    844
+    Detractor    |      74.79 |      27.33 |   4675
+
+  sla_compliance_pct:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |      72.45 |      75.00 |   4856
+    Passive      |      72.16 |      75.00 |    854
+    Detractor    |      68.35 |      70.59 |   4716
+
+  total_payments:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |      12.15 |      10.00 |   6008
+    Passive      |      13.18 |      11.00 |   1027
+    Detractor    |      12.89 |      11.00 |   6003
+
+  autopay_payments:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       3.30 |       1.00 |   6008
+    Passive      |       3.62 |       1.00 |   1027
+    Detractor    |       3.38 |       1.00 |   6003
+
+  cash_payments:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       0.53 |       0.00 |   6008
+    Passive      |       0.39 |       0.00 |   1027
+    Detractor    |       0.44 |       0.00 |   6003
+
+  avg_payment_amount:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |     518.00 |     495.00 |   6008
+    Passive      |     523.91 |     497.22 |   1027
+    Detractor    |     518.61 |     499.31 |   6003
+
+  install_tat_hours:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |     267.79 |      27.00 |   5376
+    Passive      |     213.74 |      26.00 |    910
+    Detractor    |     252.09 |      27.00 |   5160
+
+  install_attempts:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       1.55 |       1.00 |   5616
+    Passive      |       1.57 |       1.00 |    954
+    Detractor    |       1.62 |       1.00 |   5454
+
+  avg_uptime_pct:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       0.69 |       0.70 |   6007
+    Passive      |       0.69 |       0.71 |   1027
+    Detractor    |       0.68 |       0.70 |   5993
+
+  stddev_uptime:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       0.33 |       0.33 |   6007
+    Passive      |       0.33 |       0.33 |   1027
+    Detractor    |       0.33 |       0.33 |   5993
+
+  min_uptime:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       0.00 |       0.00 |   6007
+    Passive      |       0.00 |       0.00 |   1027
+    Detractor    |       0.00 |       0.00 |   5993
+
+  days_since_last_recharge:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |     227.55 |     232.00 |   6011
+    Passive      |     212.60 |     219.00 |   1027
+    Detractor    |     243.89 |     249.00 |   6007
+
+  recharge_regularity:
+    Group        |       Mean |     Median |  Count
+    ------------ | ---------- | ---------- | ------
+    Promoter     |       0.61 |       0.59 |   6011
+    Passive      |       0.65 |       0.64 |   1027
+    Detractor    |       0.59 |       0.59 |   6007
+
+======================================================================
+PAYMENT MODE DISTRIBUTION
+======================================================================
+
+  Overall:
+    online         :   9740 (74.7%)
+    autopay        :   2957 (22.7%)
+    cash           :    341 (2.6%)
+    unknown        :      7 (0.1%)
+
+  By NPS Group (row %):
+    Mode            |   Promoter |    Passive |  Detractor
+    --------------- | ---------- | ---------- | ----------
+    autopay         |      45.7% |       8.1% |      46.2%
+    cash            |      54.0% |       4.1% |      41.9%
+    online          |      45.9% |       7.9% |      46.1%
+    unknown         |      42.9% |       0.0% |      57.1%
+
+  By NPS Group (column %):
+    Mode            |   Promoter |    Passive |  Detractor
+    --------------- | ---------- | ---------- | ----------
+    autopay         |      22.5% |      23.4% |      22.7%
+    cash            |       3.1% |       1.4% |       2.4%
+    online          |      74.4% |      75.3% |      74.8%
+    unknown         |       0.0% |       0.0% |       0.1%
+
+======================================================================
+GEOGRAPHY DISTRIBUTION
+======================================================================
+
+  Top zones:
+    East Delhi 2             :   2150 (16.5%)
+    North Delhi              :   1998 (15.3%)
+    West Delhi               :   1788 (13.7%)
+    East Delhi 1             :   1620 (12.4%)
+    South Delhi              :   1614 (12.4%)
+    Meerut++                 :    373 (2.9%)
+    Centre Mumbai            :    262 (2.0%)
+    Navi Mumbai              :    191 (1.5%)
+    North West Mumbai        :    159 (1.2%)
+    Meerut City              :    132 (1.0%)
+    Vasai Virar Mumbai       :     95 (0.7%)
+    Agra                     :     88 (0.7%)
+    Agra++                   :     87 (0.7%)
+    Bareilly++               :     82 (0.6%)
+    Bareilly                 :     56 (0.4%)
+
+  Top MIS cities:
+    Delhi                    :   9172 (70.3%)
+    Bharat                   :    815 (6.2%)
+    Mumbai                   :    707 (5.4%)
+    Meerut                   :    132 (1.0%)
+
+  Partner status:
+    ACTIVE                   :  10396 (79.7%)
+    TERMINATION              :    301 (2.3%)
+    TEMPORARY SUSPENSION     :    123 (0.9%)
+    CLOSED                   :      4 (0.0%)
+    BLACKLISTED              :      2 (0.0%)

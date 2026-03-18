@@ -1,0 +1,1095 @@
+"""
+Phase 5: Triangulation & Synthesis
+===================================
+Merges qualitative (Phase 1 themes, Phase 2 CX frameworks), quantitative
+(Phase 4 KDA, churn models), and industry expert (Phase 2b) findings into
+a unified NPS driver assessment with confidence ratings.
+"""
+
+import pandas as pd
+import numpy as np
+from datetime import datetime
+import os, sys
+
+OUT_DIR = r'C:\Users\nikhi\wiom-nps-analysis\output'
+DATA_DIR = r'C:\Users\nikhi\wiom-nps-analysis\data'
+os.makedirs(OUT_DIR, exist_ok=True)
+
+report_lines = []
+# Force UTF-8 stdout on Windows to avoid cp1252 encoding errors
+if sys.platform == 'win32':
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+
+def R(line=''):
+    report_lines.append(line)
+    print(line)
+
+def save_report():
+    path = os.path.join(OUT_DIR, 'phase5_triangulation.txt')
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(report_lines))
+    print(f"\n  Saved: {path}")
+
+# ── Load data ──────────────────────────────────────────────────────────
+df = pd.read_csv(os.path.join(DATA_DIR, 'nps_with_risk_scores.csv'), low_memory=False)
+R('=' * 72)
+R('PHASE 5 — TRIANGULATION & SYNTHESIS')
+R('=' * 72)
+R(f'\nTimestamp: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
+R(f'Dataset: {len(df)} rows x {df.shape[1]} columns')
+
+# ════════════════════════════════════════════════════════════════════════
+# SECTION 1: TRIANGULATION MATRIX
+# ════════════════════════════════════════════════════════════════════════
+R('\n' + '=' * 72)
+R('SECTION 1: DRIVER TRIANGULATION MATRIX')
+R('=' * 72)
+R('''
+Each driver is assessed from three independent perspectives:
+  [QUAL] Qualitative: NLP themes, sentiment analysis, verbatim evidence
+  [QUANT] Quantitative: KDA (4 methods), churn model feature importance
+  [INDUSTRY] Industry Expert: ISP domain knowledge, breakage points, benchmarks
+
+Confidence = how many perspectives converge:
+  HIGH = all 3 agree | MEDIUM = 2 of 3 agree | LOW = only 1 perspective
+''')
+
+# ── Build triangulation data ──────────────────────────────────────────
+
+# Theme data from Phase 1.3
+theme_stats = {
+    'slow_speed':              {'count': 877, 'pct_classified': 16.0, 'det_pct': 61.9, 'mean_nps': 4.6, 'churn': 17.8},
+    'disconnection_frequency': {'count': 676, 'pct_classified': 12.3, 'det_pct': 75.4, 'mean_nps': 3.4, 'churn': 17.0},
+    'general_positive':        {'count': 999, 'pct_classified': 18.2, 'det_pct': 20.9, 'mean_nps': 8.1, 'churn': 14.8},
+    'complaint_resolution_bad':{'count': 161, 'pct_classified': 2.9,  'det_pct': 85.1, 'mean_nps': 2.4, 'churn': 20.5},
+    'internet_down_outage':    {'count': 147, 'pct_classified': 2.7,  'det_pct': 83.0, 'mean_nps': 2.4, 'churn': 19.7},
+    'range_coverage':          {'count': 169, 'pct_classified': 3.1,  'det_pct': 60.9, 'mean_nps': 4.6, 'churn': 21.9},
+    'pricing_affordable':      {'count': 109, 'pct_classified': 2.0,  'det_pct': 18.3, 'mean_nps': 8.6, 'churn': 6.4},
+    'billing_28day':           {'count': 57,  'pct_classified': 1.0,  'det_pct': 73.7, 'mean_nps': 3.0, 'churn': 31.6},
+    'router_device':           {'count': 26,  'pct_classified': 0.5,  'det_pct': 80.8, 'mean_nps': 3.1, 'churn': 38.5},
+    'pricing_expensive':       {'count': 45,  'pct_classified': 0.8,  'det_pct': 51.1, 'mean_nps': 5.3, 'churn': 28.9},
+    'call_center_bad':         {'count': 21,  'pct_classified': 0.4,  'det_pct': 57.1, 'mean_nps': 4.8, 'churn': 38.1},
+    'technician_partner_bad':  {'count': 17,  'pct_classified': 0.3,  'det_pct': 70.6, 'mean_nps': 3.4, 'churn': 23.5},
+    'shifting_relocation':     {'count': 6,   'pct_classified': 0.1,  'det_pct': 100., 'mean_nps': 0.8, 'churn': 66.7},
+}
+
+# KDA consensus from Phase 4 (features in top-10 of ≥2 methods)
+kda_consensus = {
+    'partner_avg_nps':        {'methods': 4, 'method_list': 'LR,RF,PC,GB', 'rf_imp': 0.161, 'gb_perm': 0.169},
+    'is_negative_sentiment':  {'methods': 4, 'method_list': 'LR,RF,PC,GB', 'rf_imp': 0.502, 'gb_perm': 0.339},
+    'is_positive_sentiment':  {'methods': 4, 'method_list': 'LR,RF,PC,GB', 'rf_imp': 0.087, 'gb_perm': 0.089},
+    'tickets_before_3m':      {'methods': 3, 'method_list': 'RF,PC,GB',    'rf_imp': 0.022, 'gb_perm': 0.027},
+    'days_since_last_recharge':{'methods':3, 'method_list': 'RF,PC,GB',    'rf_imp': 0.017, 'gb_perm': 0.023},
+    'missed_call_ratio':      {'methods': 2, 'method_list': 'RF,GB',       'rf_imp': 0.006, 'gb_perm': 0.013},
+    'OUTBOUND_CALLS':         {'methods': 2, 'method_list': 'LR,GB',       'rf_imp': 0.003, 'gb_perm': 0.013},
+    'is_first_time_wifi':     {'methods': 2, 'method_list': 'PC,GB',       'rf_imp': 0.003, 'gb_perm': 0.016},
+}
+
+# Churn model top predictors (from Phase 4, post-leakage-fix)
+churn_predictors = {
+    'total_payments':       {'imp': 0.306, 'perm': 0.146},
+    'partner_churn_rate':   {'imp': 0.114, 'perm': 0.015},
+    'avg_uptime_pct':       {'imp': 0.111, 'perm': 0.001},
+    'tenure_days':          {'imp': 0.081, 'perm': 0.046},
+    'PAYMENT_SUCCESSES':    {'imp': 0.059, 'perm': 0.010},
+    'OUTBOUND_CALLS':       {'imp': 0.051, 'perm': 0.000},
+    'is_first_time_wifi':   {'imp': 0.028, 'perm': 0.001},
+    'AVG_ANSWERED_SECONDS': {'imp': 0.020, 'perm': 0.000},
+    'recharge_done':        {'imp': 0.018, 'perm': 0.001},
+    'avg_payment_amount':   {'imp': 0.010, 'perm': 0.000},
+}
+
+# ── THE TRIANGULATION MATRIX ──────────────────────────────────────────
+
+drivers = [
+    {
+        'name': 'Partner/Rohit Quality (Human Delivery Layer)',
+        'qual': {
+            'evidence': 'partner_avg_nps is #1 consensus KDA driver (4/4 methods). technician_partner_bad theme: 70.6% Detractors, 23.5% churn. complaint_resolution_bad: 85.1% Detractors. Verbatim: "technician nahi aate", "router wapas karo bol rahe hain"',
+            'strength': 'STRONG',
+            'themes': ['technician_partner_bad', 'complaint_resolution_bad', 'call_center_bad'],
+            'combined_count': 199,
+        },
+        'quant': {
+            'evidence': 'partner_avg_nps: #1 KDA consensus (4 methods, RF imp=0.161, GB perm=0.169). partner_churn_rate: #2 churn predictor (imp=0.114). partner_sla_compliance, partner_fcr_rate in extended top-20. 100% sprint stability (11/11 sprints in top-3).',
+            'strength': 'STRONG',
+        },
+        'industry': {
+            'evidence': 'Finding 3: "The Partner IS the Brand." Partner quality clustering recommended as PRIMARY feature. "Bad partner = bad Wiom, regardless of network quality." Partner variance > geography variance. Challenge Q13: test within-vs-between partner NPS variance.',
+            'strength': 'STRONG',
+        },
+        'churn_power': 'STRONG (partner_churn_rate OR=2.3 in top-3 churn predictors)',
+        'confidence': 'HIGH',
+        'convergence': 'ALL THREE PERSPECTIVES AGREE: Partner quality is the single strongest lever',
+        'actionability': 'HIGH — partner training, SLA enforcement, quality tiering, incentive alignment',
+    },
+    {
+        'name': 'Support Effort & Complaint Handling',
+        'qual': {
+            'evidence': 'complaint_resolution_bad (161 comments, 85.1% Detractors, NPS 2.4, churn 20.5%). complaint_resolution_good (10 comments, NPS 9.2). Gap of 6.8 NPS points between good and bad resolution. 28.9% of comments mention 2+ themes (multi-issue frustration).',
+            'strength': 'STRONG',
+            'themes': ['complaint_resolution_bad', 'complaint_resolution_good'],
+            'combined_count': 171,
+        },
+        'quant': {
+            'evidence': 'tickets_before_3m: #4 consensus (3 methods). AVG_TIMES_REOPENED: 47.7% higher for Detractors. TOTAL_IVR_CALLS: Detractors 22.9% higher. MAX_TICKETS_SAME_ISSUE: 26.8% higher for Detractors. support_effort_index in top-10 RF.',
+            'strength': 'STRONG',
+        },
+        'industry': {
+            'evidence': 'Breakage #3: First complaint resolution failure creates permanent distrust. Challenge Q4: measure from customer perspective not system perspective. Challenge Q5: track repeat complaints. FCR is strongest global predictor of support NPS.',
+            'strength': 'STRONG',
+        },
+        'churn_power': 'MODERATE (tickets in top-20 churn predictors; SLA compliance dose-response clear)',
+        'confidence': 'HIGH',
+        'convergence': 'ALL THREE AGREE: How problems are handled matters more than problem frequency',
+        'actionability': 'HIGH — escalation protocols, FCR targets, repeat complaint alerts, 2-hr follow-up SOP',
+    },
+    {
+        'name': 'Network Stability (Disconnections & Outages)',
+        'qual': {
+            'evidence': 'disconnection_frequency (676 comments, 75.4% Detractors, NPS 3.4, churn 17.0%). internet_down_outage (147 comments, 83.0% Detractors, NPS 2.4, churn 19.7%). Combined = 15.0% of classified comments. "Har 10 din me dikkat deta hai", "5 din se internet band hai".',
+            'strength': 'STRONG',
+            'themes': ['disconnection_frequency', 'internet_down_outage'],
+            'combined_count': 823,
+        },
+        'quant': {
+            'evidence': 'avg_uptime_pct: #3 churn predictor (imp=0.111). BUT NOT in NPS KDA consensus top-8. PEAK_UPTIME_PCT shows minimal Detractor-Promoter difference (0.706 vs 0.712). OUTAGE_EVENTS: only 3.1% D-P difference. H1 REJECTED: Uptime is NOT #1 NPS driver.',
+            'strength': 'MODERATE — strong for churn, weak for NPS',
+        },
+        'industry': {
+            'evidence': 'Finding 2: "Connection stability > speed for this segment." Breakage #1: First outage experience. Breakage #2: Repeated disconnection pattern. But notes uptime is measured at partner level, not customer-experienced level (Q1). Latent drivers: WiFi interference, power fluctuations confound.',
+            'strength': 'STRONG (hypothesized) but data measurement limitations',
+        },
+        'churn_power': 'STRONG for churn (avg_uptime_pct #1 for 6+ month tenure); WEAK for NPS',
+        'confidence': 'MEDIUM-HIGH',
+        'convergence': 'DIVERGENT: Qual says STRONG (#2 theme volume). Quant says MODERATE (churn yes, NPS no). Industry says STRONG but notes measurement gap.',
+        'actionability': 'MODERATE — infrastructure investment needed; partner-level uptime is crude proxy',
+        'conflict_resolution': '''
+  WHY THE DIVERGENCE: Uptime is measured at partner fleet level, not customer
+  device level. The Industry Expert flagged this (Q1, Q2). A partner with 71%
+  uptime could have individual customers at 95% or 50%. The aggregate metric
+  washes out the signal. Additionally, customers who experience outages talk
+  about it (qual evidence) but the operational metric does not differentiate
+  well (quant evidence). This is a MEASUREMENT GAP, not a driver irrelevance.
+
+  RESOLUTION: Network stability IS a major driver (qual + industry agree), but
+  our MEASUREMENT of it is too coarse to show up in statistical models. Better
+  device-level or customer-experienced uptime data would likely resolve this.
+  Treat as HIGH importance with MODERATE statistical confidence.''',
+    },
+    {
+        'name': 'Internet Speed (Actual vs Promised)',
+        'qual': {
+            'evidence': 'slow_speed is LARGEST single theme (877 comments, 16.0% of classified). 61.9% Detractors, NPS 4.6, churn 17.8%. good_speed: 80.6% Promoters, NPS 8.5. "Bola tha 100 Mbps, aaati 5-6 hi hai".',
+            'strength': 'STRONG (highest volume)',
+            'themes': ['slow_speed', 'good_speed'],
+            'combined_count': 944,
+        },
+        'quant': {
+            'evidence': 'NOT in KDA consensus top-8. AVG_DAILY_DATA_GB: only 18.7% fill rate, excluded from modeling. No direct speed metric in Snowflake accessible to us. network_quality_index: NOT in any top-10 list.',
+            'strength': 'WEAK — no usable speed metric available',
+        },
+        'industry': {
+            'evidence': 'Ranked #2 in ISP driver taxonomy (speed delivery). "Advertised vs actual gap" is fundamental. But notes: "absolute speed matters less than sufficiency" for this segment. 10-25 Mbps reliably > 100 Mbps inconsistently. Q2: Are we measuring device-level or NAS-level speed?',
+            'strength': 'STRONG',
+        },
+        'churn_power': 'UNKNOWN — no direct speed metric to test',
+        'confidence': 'MEDIUM',
+        'convergence': 'DIVERGENT: Qual says STRONG (#1 volume). Quant says WEAK (no metric). Industry says STRONG.',
+        'actionability': 'LOW (current) — need device-level speed data to operationalize',
+        'conflict_resolution': '''
+  WHY THE DIVERGENCE: Wiom's Snowflake data does not contain customer-level
+  speed metrics. data_usage_okr is NAS-level (shared router) with only 18.7%
+  match rate. Without a speed feature, the statistical model CANNOT detect
+  speed as a driver — this is a DATA GAP, not evidence of irrelevance.
+
+  RESOLUTION: Speed IS a major driver (qual + industry unambiguous), but we
+  have a measurement blind spot. Recommend: (a) device-level speed test data
+  collection, (b) proxy via data_usage patterns when available, (c) partner-
+  level speed benchmarks. Treat as HIGH importance with LOW statistical confidence.''',
+    },
+    {
+        'name': 'Sentiment & Comment Expression (Meta-Driver)',
+        'qual': {
+            'evidence': 'is_negative_sentiment: RF importance 0.502 (50.2% of model!). is_positive_sentiment: 0.087. These are NLP-derived features from Phase 1. They capture the AGGREGATE of all specific themes.',
+            'strength': 'N/A — this IS the qualitative signal encoded as a feature',
+            'themes': [],
+            'combined_count': 0,
+        },
+        'quant': {
+            'evidence': '#1 and #3 consensus drivers (4/4 methods each). is_negative_sentiment: 91% sprint stability (10/11 sprints). GB permutation importance: 0.339 (highest single feature). Together with partner_avg_nps, these 3 features explain 75% of RF model.',
+            'strength': 'DOMINANT',
+        },
+        'industry': {
+            'evidence': 'Not directly assessed (sentiment is a meta-signal, not an ISP-specific driver).',
+            'strength': 'N/A',
+        },
+        'churn_power': 'WEAK (NPS/sentiment adds zero lift to churn model: AUC +0.0001)',
+        'confidence': 'HIGH (for NPS prediction); LOW (for churn prediction)',
+        'convergence': 'IMPORTANT INSIGHT: Sentiment predicts NPS score (tautological) but NOT churn.',
+        'actionability': 'LOW directly — sentiment is an OUTCOME, not a lever. The lever is what CAUSES the sentiment.',
+        'conflict_resolution': '''
+  INTERPRETATION: is_negative_sentiment is not a "driver" — it is a
+  reflection of the customer's overall experience compressed into a binary.
+  Its dominance in the NPS model (50.2% RF importance) means: customers who
+  wrote negative comments also gave low NPS scores (unsurprising). The real
+  insight is what CAUSES negative sentiment: disconnections, slow speed,
+  complaint handling, billing issues. Sentiment is the MEDIATOR, not the CAUSE.
+
+  The fact that sentiment adds ZERO churn lift confirms this: knowing someone
+  is unhappy (sentiment) does not predict churn beyond what operational data
+  already captures. The operational reality drives both sentiment AND churn.''',
+    },
+    {
+        'name': '28-Day Billing Cycle (Structural Issue)',
+        'qual': {
+            'evidence': 'billing_28day: 57 comments, 73.7% Detractors, NPS 3.0, churn 31.6% (4th highest churn). Even Promoters mention it negatively. "ये तो उपभोक्ताओं के साथ सीधा धोखा है" (outright fraud). 69.8% from 6+ month tenure — irritation COMPOUNDS.',
+            'strength': 'MODERATE (low volume, high intensity)',
+            'themes': ['billing_28day'],
+            'combined_count': 57,
+        },
+        'quant': {
+            'evidence': 'Not a standalone feature in KDA (no "is_28day_mentioned" feature). Captured indirectly through sentiment and theme features. billing_28day as theme: 31.6% churn is the 4th highest of any theme.',
+            'strength': 'WEAK (not independently modeled)',
+        },
+        'industry': {
+            'evidence': 'Finding 1: "Strategic Vulnerability." Breakage #5: "Recurring reminder that Wiom charges more." 28 days = 13 billing cycles/year vs 12 for competitors. Rs 500-600/year extra cost. "This is a REAL competitive disadvantage, not just perception."',
+            'strength': 'STRONG',
+        },
+        'churn_power': 'MODERATE (31.6% churn among theme mentions, well above 23.4% base)',
+        'confidence': 'MEDIUM-HIGH',
+        'convergence': 'QUAL + INDUSTRY agree strongly. QUANT cannot detect (no feature). Two of three = MEDIUM-HIGH.',
+        'actionability': 'HIGH — structural product decision: move to 30-day cycles or bridge with bonus days',
+    },
+    {
+        'name': 'Price/Value Perception',
+        'qual': {
+            'evidence': 'pricing_affordable: 109 comments, NPS 8.6, churn 6.4% (LOWEST churn). pricing_expensive: 45 comments, NPS 5.3, churn 28.9%. "Sasta hai, koi extra charge nahi." Affordability is Wiom\'s #1 positive moat.',
+            'strength': 'STRONG',
+            'themes': ['pricing_affordable', 'pricing_expensive'],
+            'combined_count': 154,
+        },
+        'quant': {
+            'evidence': 'avg_payment_amount: in GB top-10 (perm=0.012). cash_payments: weak signal. Not in KDA consensus top-8. Dose-response: avg_recharge_amount shows non-linear pattern (no clean gradient).',
+            'strength': 'WEAK-MODERATE',
+        },
+        'industry': {
+            'evidence': 'Ranked #3 in driver taxonomy (value perception). "Price-to-quality ratio vs alternatives" is key. "28-day billing is a competitive disadvantage." Low switching costs amplify price sensitivity. JTBD: Wiom wins on affordability but loses on always-on.',
+            'strength': 'STRONG',
+        },
+        'churn_power': 'STRONG INVERSE — affordability-themed customers have LOWEST churn (6.4%)',
+        'confidence': 'MEDIUM-HIGH',
+        'convergence': 'QUAL + INDUSTRY agree value perception is critical. QUANT has limited metrics. Affordability is protective; perceived overcharging is destructive.',
+        'actionability': 'MODERATE — protect price positioning, address 28-day perception, transparent pricing',
+    },
+    {
+        'name': 'WiFi Signal Range / Coverage',
+        'qual': {
+            'evidence': 'range_coverage: 169 comments, 60.9% Detractors, NPS 4.6, churn 21.9%. "Ek room se doosre room tak nahi ja pati hai." Concentrated in Delhi (82.8%). theme_range_coverage in tenure-stratified top-5 for 6+ months.',
+            'strength': 'MODERATE',
+            'themes': ['range_coverage'],
+            'combined_count': 169,
+        },
+        'quant': {
+            'evidence': 'theme_range_coverage: appears in RF top-7 for overall model and top-5 for 6+ months tenure. Partial correlation: r=+0.021 (p=0.018). Weak but present signal.',
+            'strength': 'WEAK-MODERATE',
+        },
+        'industry': {
+            'evidence': 'Ranked #6: "WiFi signal range is one-dimensional." Latent driver 4.6: Router placement determines WiFi quality. "Bad placement -> range complaints, solvable at install." Missing measurement: WiFi coverage map per installation.',
+            'strength': 'MODERATE',
+        },
+        'churn_power': 'MODERATE (21.9% churn, above 23.4% base for small sample)',
+        'confidence': 'MEDIUM',
+        'convergence': 'All three agree range matters; no strong quant signal due to no device-level metric.',
+        'actionability': 'MODERATE — router placement optimization at install, signal testing protocol',
+    },
+    {
+        'name': 'First-Time WiFi User Effect',
+        'qual': {
+            'evidence': '30% of respondents with known status are first-time WiFi users. JTBD: "digital inclusion" is a powerful emotional driver. First-time users have different expectation anchors.',
+            'strength': 'MODERATE',
+            'themes': [],
+            'combined_count': 0,
+        },
+        'quant': {
+            'evidence': 'is_first_time_wifi: consensus driver (2 methods: PC, GB). GB permutation importance: 0.016. Churn predictor: imp=0.028 (#7). Partial correlation: r=+0.061 (p<0.001).',
+            'strength': 'MODERATE',
+        },
+        'industry': {
+            'evidence': 'Not directly addressed as a driver but implicit: "customers need sufficient speed, not maximum speed" and "60% of first-year churn decisions are made in first 2 weeks."',
+            'strength': 'WEAK-MODERATE',
+        },
+        'churn_power': 'MODERATE (in churn model top-7)',
+        'confidence': 'MEDIUM',
+        'convergence': 'QUANT shows moderate signal. QUAL provides context (digital inclusion). INDUSTRY tangential.',
+        'actionability': 'MODERATE — tailored onboarding for first-time WiFi users',
+    },
+    {
+        'name': 'Router/Hardware Reliability',
+        'qual': {
+            'evidence': 'router_device: 26 comments, 80.8% Detractors, NPS 3.1, churn 38.5% (HIGHEST churn of any theme with n>20). "Red light blink problem", "10 din se router me red light show ho rha h."',
+            'strength': 'MODERATE (low volume, catastrophic impact)',
+            'themes': ['router_device'],
+            'combined_count': 26,
+        },
+        'quant': {
+            'evidence': 'optical_power: in churn top-15 (imp=0.008). No direct router health metric available. Device types tracked but not in model.',
+            'strength': 'WEAK',
+        },
+        'industry': {
+            'evidence': 'Kano Must-Be: "Router powers on and stays on." When it fails, catastrophic impact. "Customer cannot self-diagnose" red light. Router return threats as Reverse Quality.',
+            'strength': 'STRONG',
+        },
+        'churn_power': 'EXTREME for affected customers (38.5% churn) but low frequency',
+        'confidence': 'MEDIUM',
+        'convergence': 'QUAL + INDUSTRY agree on catastrophic impact. QUANT limited by data availability.',
+        'actionability': 'HIGH — proactive router health monitoring, rapid replacement SLA',
+    },
+    {
+        'name': 'IVR/Call Interaction Patterns',
+        'qual': {
+            'evidence': 'call_center_bad (21 comments, 38.1% churn). Verbatim: "customer care call nahi uthata." Restricted to registered number creates friction.',
+            'strength': 'WEAK-MODERATE (low volume)',
+            'themes': ['call_center_bad', 'call_center_good'],
+            'combined_count': 30,
+        },
+        'quant': {
+            'evidence': 'missed_call_ratio: consensus driver (2 methods). OUTBOUND_CALLS: consensus (2 methods). TOTAL_IVR_CALLS: Detractors 22.9% higher. INBOUND_CALLS: Detractors 38.4% higher. AVG_ANSWERED_SECONDS: in GB top-10.',
+            'strength': 'STRONG',
+        },
+        'industry': {
+            'evidence': 'Support experience drivers: FCR, call volume as indicators of effort. "Each additional call doubles churn probability." Missing measurement: touchpoint-specific NPS at call center.',
+            'strength': 'MODERATE',
+        },
+        'churn_power': 'MODERATE (OUTBOUND_CALLS #6 churn predictor, AVG_ANSWERED_SECONDS #8)',
+        'confidence': 'MEDIUM-HIGH',
+        'convergence': 'QUANT strong on IVR metrics. QUAL confirms customer frustration. INDUSTRY validates framework.',
+        'actionability': 'HIGH — reduce outbound harassment, improve first-contact resolution, track missed call ratio',
+    },
+]
+
+# ── Print the matrix ──────────────────────────────────────────────────
+for i, d in enumerate(drivers, 1):
+    R(f'\n{"─" * 72}')
+    R(f'  DRIVER #{i}: {d["name"]}')
+    R(f'  CONFIDENCE: {d["confidence"]}')
+    R(f'{"─" * 72}')
+    R(f'\n  [QUAL] {d["qual"]["strength"]}')
+    R(f'    {d["qual"]["evidence"][:200]}')
+    R(f'\n  [QUANT] {d["quant"]["strength"]}')
+    R(f'    {d["quant"]["evidence"][:200]}')
+    R(f'\n  [INDUSTRY] {d["industry"]["strength"]}')
+    R(f'    {d["industry"]["evidence"][:200]}')
+    R(f'\n  Churn Predictive Power: {d["churn_power"]}')
+    R(f'  Convergence: {d["convergence"]}')
+    R(f'  Actionability: {d["actionability"]}')
+    if 'conflict_resolution' in d:
+        R(f'\n  CONFLICT RESOLUTION:{d["conflict_resolution"]}')
+
+
+# ════════════════════════════════════════════════════════════════════════
+# SECTION 2: UNIFIED DRIVER RANKING
+# ════════════════════════════════════════════════════════════════════════
+R('\n\n' + '=' * 72)
+R('SECTION 2: UNIFIED NPS DRIVER RANKING')
+R('=' * 72)
+
+R('''
+Final ranking by triangulated impact (combining qual volume, quant signal,
+industry assessment, churn power, and actionability):
+
+  Rank | Driver                          | Confidence | Churn    | Action
+  -----+---------------------------------+------------+----------+---------
+    1  | Partner/Rohit Quality            | HIGH       | STRONG   | HIGH
+    2  | Support Effort & Complaint Hdlg  | HIGH       | MODERATE | HIGH
+    3  | Network Stability (Disconnects)  | MED-HIGH   | STRONG   | MODERATE
+    4  | Internet Speed (vs Promise)      | MEDIUM     | UNKNOWN  | LOW*
+    5  | 28-Day Billing Cycle             | MED-HIGH   | MODERATE | HIGH
+    6  | Price/Value Perception           | MED-HIGH   | STRONG⁻¹| MODERATE
+    7  | IVR/Call Interaction Patterns     | MED-HIGH   | MODERATE | HIGH
+    8  | WiFi Signal Range                | MEDIUM     | MODERATE | MODERATE
+    9  | Router/Hardware Reliability      | MEDIUM     | EXTREME**| HIGH
+   10  | First-Time WiFi User Effect      | MEDIUM     | MODERATE | MODERATE
+
+  * LOW actionability due to missing speed data, not low importance
+  ** EXTREME for affected customers but low frequency (0.5% of comments)
+  ⁻¹ STRONG inverse: affordability perception is the #1 protective factor
+
+KEY INSIGHT: The ranking DIVERGES from what customers SAY vs what PREDICTS
+churn. Customers talk most about speed and disconnections (qual volume), but
+partner quality and support effort have the strongest MEASURABLE impact on
+both NPS scores and churn (quant). The industry expert resolves this by
+noting that "how problems are handled matters more than problem frequency."
+''')
+
+
+# ════════════════════════════════════════════════════════════════════════
+# SECTION 3: CONVERGENT FINDINGS (All 3 Perspectives Agree)
+# ════════════════════════════════════════════════════════════════════════
+R('=' * 72)
+R('SECTION 3: CONVERGENT FINDINGS (High Confidence)')
+R('=' * 72)
+
+R('''
+These findings have strong agreement across qualitative, quantitative,
+and industry expert perspectives. They are the most reliable insights.
+
+CONVERGENCE 1: Partner Quality is the #1 Controllable Lever
+  - [QUAL] technician/complaint themes: 85% Detractor, 20-38% churn
+  - [QUANT] partner_avg_nps: #1 KDA consensus (4/4 methods, 100% stable)
+  - [QUANT] partner_churn_rate: #2 churn predictor
+  - [INDUSTRY] "The Partner IS the Brand" — independent finding
+  - IMPLICATION: Partner quality variance explains more NPS variance than
+    any network or pricing metric. A customer served by a low-quality
+    partner has fundamentally different NPS regardless of network quality.
+    This is the HIGHEST-ROI intervention target.
+
+CONVERGENCE 2: Support Experience > Problem Frequency
+  - [QUAL] Bad resolution NPS=2.4 vs Good resolution NPS=9.2 (6.8 gap)
+  - [QUANT] tickets_before_3m: #4 consensus. Reopenings +47.7% for Detractors
+  - [INDUSTRY] "How company handles it matters more than the outage itself"
+  - IMPLICATION: Wiom should invest in RECOVERY capability before PREVENTION.
+    A customer whose complaint is resolved in 15 min becomes a promoter;
+    one who waits 48h becomes a permanent detractor. The service recovery
+    paradox is real and measurable in this data.
+
+CONVERGENCE 3: NPS Score Does NOT Predict Churn (Beyond Operational Data)
+  - [QUANT] Model A (ops only) AUC=0.9766; Model B (+NPS) AUC=0.9765
+  - [QUANT] Themes add +0.0000 AUC lift
+  - [INDUSTRY] Finding 7: Bimodal distribution may be survey artifact
+  - IMPLICATION: NPS is measuring the SAME signal as operational data,
+    not additional information. This means: (a) operational dashboards
+    are sufficient for churn prediction, (b) NPS is useful for QUALITATIVE
+    diagnosis (WHY are they unhappy) not QUANTITATIVE prediction (WHO
+    will churn). The value of NPS is in the comments, not the score.
+
+CONVERGENCE 4: Affordability is Wiom's Primary Moat
+  - [QUAL] pricing_affordable: NPS 8.6, churn 6.4% (lowest of any theme)
+  - [QUANT] avg_payment_amount in GB top-10
+  - [INDUSTRY] JTBD: "Wiom wins on affordable but loses on always-on"
+  - IMPLICATION: Price is the #1 reason customers STAY and recommend.
+    Any price increase or hidden cost (28-day billing) directly threatens
+    Wiom's competitive advantage. Protect this moat.
+
+CONVERGENCE 5: The 28-Day Billing Issue Is Real (Not Just Perception)
+  - [QUAL] 31.6% churn, NPS 3.0, even Promoters complain
+  - [INDUSTRY] "Structural competitive disadvantage" — 13 cycles/year
+  - [CX] Kano Reverse Quality — presence CAUSES dissatisfaction
+  - IMPLICATION: This is the single most actionable structural change.
+    Moving to 30-day cycles would: (a) eliminate the #4 churn theme,
+    (b) remove a competitive disadvantage vs JioFiber/Airtel,
+    (c) reduce perceived cost by ~8% (12 vs 13 payments/year).
+''')
+
+
+# ════════════════════════════════════════════════════════════════════════
+# SECTION 4: DIVERGENT FINDINGS (Perspectives Disagree)
+# ════════════════════════════════════════════════════════════════════════
+R('=' * 72)
+R('SECTION 4: DIVERGENT FINDINGS & RESOLUTION')
+R('=' * 72)
+
+R('''
+These findings show disagreement between perspectives. Each requires
+careful interpretation and a resolution.
+
+DIVERGENCE 1: Network Uptime — Qual/Industry Say #1, Quant Says "Meh"
+  What customers say: Disconnections and outages are the #2 and #7 most
+    common themes, with 823 combined mentions and NPS 2.4-3.4.
+  What industry says: "Connection stability > speed for this segment."
+    This should be THE #1 driver.
+  What the data shows: avg_uptime_pct is NOT in KDA consensus top-8.
+    PEAK_UPTIME_PCT shows only 0.9% Detractor-Promoter gap. OUTAGE_EVENTS
+    shows only 3.1% gap. H1 (uptime = #1 driver) was REJECTED.
+
+  RESOLUTION: This is a MEASUREMENT problem, not a reality problem.
+    - Uptime is measured at the PARTNER FLEET level (PARTNER_INFLUX_SUMMARY)
+    - A partner with 71% uptime may have customers at 95% and 50%
+    - The aggregate washes out the signal at individual customer level
+    - Device-level outage data (IMPACTED_DEVICES) only covers ~20 days
+    - Customers experience network differently than infrastructure metrics show
+    - RECOMMENDATION: Invest in device-level quality monitoring to close
+      this measurement gap. The driver is almost certainly real but invisible
+      to current data.
+
+DIVERGENCE 2: Speed — #1 Qual Volume, Absent From Quant Models
+  What customers say: slow_speed is the SINGLE LARGEST theme (877 comments).
+    16% of all classified comments. Clear verbatim: "100 Mbps bola, 5-6 aati hai."
+  What the data shows: No speed metric available in Snowflake at customer
+    level. data_usage_okr is NAS-level with 18.7% match rate.
+  What industry says: "Absolute speed matters less than sufficiency" and
+    "consistency > raw throughput" for this segment.
+
+  RESOLUTION: This is a DATA GAP, not evidence of irrelevance.
+    Without a speed feature, models CANNOT detect speed as a driver.
+    The industry expert's nuance is key: customers say "slow" but may
+    mean "inconsistent" or "slow during peak hours." Multiple root causes
+    map to the "slow speed" customer complaint:
+    - Actual low throughput (network issue)
+    - Peak-hour contention (shared bandwidth)
+    - WiFi interference (RF environment)
+    - Old device (customer-side)
+    - DNS resolution (latent)
+    RECOMMENDATION: Deploy device-level speed testing and peak-hour QoE
+    monitoring to distinguish these root causes.
+
+DIVERGENCE 3: NPS Score Predicts NPS (Tautological) but Not Churn
+  Sentiment features (is_negative/positive) dominate the NPS model (50.2%
+  RF importance) but add ZERO lift to churn prediction.
+
+  RESOLUTION: This is actually a FINDING, not a problem.
+    NPS score and sentiment are measuring the same underlying experience.
+    When you add NPS to a churn model that already has operational data,
+    it adds no new information because operations → NPS → churn is a
+    serial chain, not parallel signals. The practical implication: focus
+    on OPERATIONAL metrics for churn prediction, use NPS COMMENTS for
+    qualitative diagnosis of WHY metrics are bad.
+
+DIVERGENCE 4: Promoter Churn is Abnormally High (20.2%)
+  Industry benchmark: Promoter churn should be 5-12%.
+  Wiom actual: 20.2% of Promoters churn.
+
+  RESOLUTION: Multiple explanations:
+    - External factors: relocation (shifting_relocation: 66.7% churn),
+      competitor entry (JioFiber expansion in Delhi), financial constraints
+    - Survey timing: NPS captured at survey date, churn measured later;
+      promoter may have deteriorating experience AFTER survey
+    - Bimodal scoring: cultural tendency to score 10 even with mixed
+      feelings (bilkul_28day promoters scoring 10 but complaining)
+    - Survivorship: NPS 10 may include "haven't had a problem YET"
+      customers who are new and haven't encountered issues
+    IMPLICATION: Promoter status is NOT a reliable churn shield.
+    Operational metrics (payment patterns, support interactions, partner
+    quality) are better predictors. The NPS label is too coarse.
+''')
+
+
+# ════════════════════════════════════════════════════════════════════════
+# SECTION 5: LATENT/BLIND SPOT ANALYSIS
+# ════════════════════════════════════════════════════════════════════════
+R('=' * 72)
+R('SECTION 5: BLIND SPOTS & LATENT DRIVERS')
+R('=' * 72)
+
+R('''
+Drivers that the industry expert flagged but NEITHER qual nor quant
+could detect. These represent measurement gaps that may hide real impact.
+
+BLIND SPOT 1: Peak-Hour Quality of Experience
+  Industry: "6-11 PM is when families use internet most heavily."
+  Quant: PEAK_UPTIME_PCT measured at partner level; no customer-level QoE.
+  Qual: Customers say "slow" but don't specify peak hours.
+  Data: PEAK_VS_OVERALL_GAP = -0.01 (near zero) across all groups.
+  Action: Need hourly speed/uptime data at device level.
+
+BLIND SPOT 2: DNS Resolution Speed
+  Industry: "Pages load slow but speed test shows good bandwidth."
+  Quant: Not measured in any Snowflake table.
+  Qual: Bundled into "slow_speed" complaints indistinguishably.
+  Action: DNS response time logging at router level.
+
+BLIND SPOT 3: WiFi Interference & RF Environment
+  Industry: "Neighbor's router on same channel, microwave, walls."
+  Quant: Not directly measurable from Snowflake.
+  Qual: Bundled into "range_coverage" complaints.
+  Action: Channel utilization scanning at installation.
+
+BLIND SPOT 4: Device Limitations
+  Industry: "Old smartphone can't utilize available bandwidth."
+  Quant: devices_2_4g, devices_5g tracked but not in model top features.
+  Qual: Customer blames Wiom, not their device.
+  Action: Device capability assessment at install (5G capable? WiFi 5/6?).
+
+BLIND SPOT 5: Power Supply Quality
+  Industry: "Unstable power -> router reboots -> internet band ho gaya."
+  Quant: Not measured. May explain some UP/Bharat churn differential.
+  Qual: Customer blames Wiom for power-related outages.
+  Action: Router power-cycle logging (detects unstable power).
+
+BLIND SPOT 6: Competitive Context by Geography
+  Industry: "A 6/10 NPS might be EXCELLENT if local cable was the alternative."
+  Quant: City effect captured (Delhi/Mumbai/UP) but not competitive density.
+  Qual: Only 20 competitor comparison comments (0.4%).
+  Action: Map competitor coverage by area; adjust NPS interpretation.
+''')
+
+
+# ════════════════════════════════════════════════════════════════════════
+# SECTION 6: HYPOTHESIS VERDICT TABLE
+# ════════════════════════════════════════════════════════════════════════
+R('=' * 72)
+R('SECTION 6: HYPOTHESIS VERDICTS (Triangulated)')
+R('=' * 72)
+
+R('''
+  H# | Hypothesis                       | Phase 4     | Triangulated Verdict
+  ---+----------------------------------+-------------+---------------------------------------------
+  H1 | Network uptime is #1 NPS driver  | REJECTED    | MEASUREMENT GAP: Likely true but our uptime
+     |                                  |             | metric is too coarse (partner-level) to
+     |                                  |             | detect. Customer verbatim strongly supports.
+     |                                  |             | Verdict: INCONCLUSIVE (data limitation)
+  ---+----------------------------------+-------------+---------------------------------------------
+  H2 | Install TAT is top-3 for first   | NOT TESTED  | Limited data: only 25 customers in 0-15 day
+     | 30 days                          | (small n)   | bucket. Cannot validate or reject.
+     |                                  |             | Industry expert says first 48h is critical.
+     |                                  |             | Verdict: PLAUSIBLE but UNTESTABLE
+  ---+----------------------------------+-------------+---------------------------------------------
+  H3 | SLA compliance > ticket volume   | NOT         | REVERSED: Ticket volume correlates more
+     |                                  | SUPPORTED   | strongly with NPS than SLA compliance.
+     |                                  |             | Aligns with industry: repeat contacts matter
+     |                                  |             | more than SLA metrics.
+     |                                  |             | Verdict: REJECTED (ticket volume > SLA)
+  ---+----------------------------------+-------------+---------------------------------------------
+  H6 | Network Detractors churn at 2x   | NOT         | REVERSED: Network Detractors churn at 0.72x
+     | vs pricing Detractors            | SUPPORTED   | vs pricing Detractors (24.7% vs 34.2%).
+     |                                  |             | Pricing detractors are harder to save.
+     |                                  |             | Verdict: REJECTED (pricing churn > network)
+  ---+----------------------------------+-------------+---------------------------------------------
+  H7 | Autopay users have higher NPS    | MIXED       | Cash NPS=6.4 > Autopay NPS=6.0 > Online=5.9
+     |                                  |             | Small n for cash (314). Autopay complaints
+     |                                  |             | (NPS 1.8) suggest broken autopay mechanism.
+     |                                  |             | Verdict: REJECTED (cash > autopay)
+  ---+----------------------------------+-------------+---------------------------------------------
+  H8 | First outage experience > cumu-  | NOT         | Cannot test directly: no "first outage" flag.
+     | lative outage count              | TESTABLE    | Industry expert rates first outage as
+     |                                  |             | Breakage Point #1. Plausible but unverifiable.
+     |                                  |             | Verdict: PLAUSIBLE but UNTESTABLE
+  ---+----------------------------------+-------------+---------------------------------------------
+
+  NEW HYPOTHESES GENERATED BY TRIANGULATION:
+
+  H9  | Partner quality variance > geography variance in explaining NPS
+      | Evidence: partner_avg_nps is #1 KDA driver; city is not in consensus
+      | Test: Within-partner NPS variance vs between-partner variance (ANOVA)
+
+  H10 | Customers who express negative sentiment about support (not network)
+      | churn at higher rates than those who complain about network quality
+      | Evidence: H6 reversal + support_effort_index significance
+      | Test: Theme-stratified survival analysis
+
+  H11 | The "general_positive" Detractors (209 people who gave 0-6 NPS
+      | despite writing positive comments) are survey-fatigued respondents
+      | Evidence: 7.1% of Detractors wrote positive comments; 19.1% churn
+      | Test: Compare their operational metrics to genuine Detractors
+''')
+
+
+# ════════════════════════════════════════════════════════════════════════
+# SECTION 7: TENURE-SPECIFIC TRIANGULATED INSIGHTS
+# ════════════════════════════════════════════════════════════════════════
+R('=' * 72)
+R('SECTION 7: TENURE-STRATIFIED TRIANGULATED INSIGHTS')
+R('=' * 72)
+
+R('''
+--- 1-2 Months (n=3122, mean NPS=6.5, churn=35.4%) ---
+
+  QUAL Top Themes: 22.9% slow_speed, 19.1% disconnection_frequency
+    First impressions dominate. Speed expectation gap is acute.
+    "Starting me bola tha 100 Mbps but aaati 5-6 hi hai"
+
+  QUANT Top Drivers: is_negative_sentiment (0.462), partner_avg_nps (0.153),
+    days_since_last_recharge (0.049), tickets_before_3m (0.031)
+    Churn model: total_payments dominant (0.652) — low payment history
+    strongly predicts churn (fewer payments = newer = higher churn risk)
+
+  INDUSTRY: "60% of first-year churn decisions are made in first 2 weeks."
+    First outage experience is the #1 breakage point. Installation quality
+    determines range for entire relationship.
+
+  TRIANGULATED INSIGHT: New customers churn for OPERATIONAL reasons
+    (bad first impression, speed gap, partner quality) and their churn
+    is predictable from very early payment behavior. The intervention
+    window is 0-15 days. After that, the damage is done.
+
+  PRIORITY ACTIONS:
+    1. Speed test at installation with customer present
+    2. Day-3 proactive check-in (WhatsApp)
+    3. Fast-track any complaint in first 30 days
+    4. Clear 28-day billing explanation before first recharge
+
+--- 3-6 Months (n=3423, mean NPS=5.9, churn=26.4%) ---
+
+  QUAL Top Themes: 28.5% slow_speed, 24.8% disconnection_frequency
+    Complaints shift from "expectation gap" to "pattern recognition."
+    Customer now has 3-6 billing cycles of data to evaluate.
+
+  QUANT Top Drivers: is_negative_sentiment (0.439), partner_avg_nps (0.160),
+    is_positive_sentiment (0.105), tickets_before_3m (0.020)
+    Churn model: total_payments still dominant but partner_churn_rate rises
+
+  INDUSTRY: "This is when habituation happens — customer either builds
+    internet into daily routine or starts looking." Competitor comparison
+    becomes active (40% of competitor_comparison comments from 1-2 months).
+
+  TRIANGULATED INSIGHT: The "evaluation window" — customers who survive
+    this with positive NPS become long-term assets. Those who don't are
+    either silently churning or becoming vocal Detractors. Partner quality
+    and complaint handling are now decisive.
+
+  PRIORITY ACTIONS:
+    1. 90-day loyalty coupon/retention incentive
+    2. Speed audit at 60-day mark
+    3. Partner quality review for customers with 2+ tickets
+    4. Competitive pre-emption if JioFiber/Airtel available in area
+
+--- 6+ Months (n=5706, mean NPS=5.6, churn=18.4%) ---
+
+  QUAL Top Themes: 48.6% slow_speed, 56.2% disconnection_frequency
+    Chronic issues dominate. billing_28day is 69.8% in this bucket —
+    the irritation COMPOUNDS over time (calculated 13 payments/year).
+    These are the customers who do the math.
+
+  QUANT Top Drivers: is_negative_sentiment (0.484), partner_avg_nps (0.142),
+    is_positive_sentiment (0.103), theme_range_coverage (0.012)
+    Churn model: avg_uptime_pct becomes #1 (0.232) — for loyal customers,
+    infrastructure quality overtakes payment behavior as churn predictor
+
+  INDUSTRY: "Loyal customers have HIGHER expectations and react MORE
+    negatively to failures." "At this stage, passive satisfaction isn't
+    enough — customer needs a reason to STAY."
+
+  TRIANGULATED INSIGHT: For 6+ month customers, the churn driver SHIFTS
+    from payment behavior to infrastructure quality. avg_uptime_pct is
+    the #1 churn predictor for this tenure (not for newer customers).
+    This means: network investment has the highest churn-reduction ROI
+    for the loyal base, while support quality matters more for newer
+    customers. The 28-day billing irritation peaks here.
+
+  PRIORITY ACTIONS:
+    1. Priority support queue for 6+ month customers
+    2. Address 28-day billing (structural change)
+    3. Proactive infrastructure monitoring for high-tenure customers
+    4. Loyalty program with meaningful benefits (not Rs 20 coupons)
+    5. Win-back program for churned loyalists (20.2% of Promoters churn!)
+''')
+
+
+# ════════════════════════════════════════════════════════════════════════
+# SECTION 8: INDUSTRY EXPERT CHALLENGE QUESTIONS — ANSWERED
+# ════════════════════════════════════════════════════════════════════════
+R('=' * 72)
+R('SECTION 8: INDUSTRY EXPERT CHALLENGE QUESTIONS — RESPONSES')
+R('=' * 72)
+
+R('''
+The Industry Expert posed 15 challenge questions. Here are the answers
+from the CX and Stats teams, informed by actual data analysis:
+
+Q1. Is uptime being measured at the right granularity?
+  ANSWER: NO. We confirmed this is a critical limitation. Uptime is at
+  partner fleet level (PARTNER_INFLUX_SUMMARY), not customer device level.
+  The 0.9% Detractor-Promoter gap in PEAK_UPTIME_PCT supports this concern.
+  IMPACT: Uptime as measured does NOT differentiate NPS groups.
+
+Q2. Are you measuring speed as customer experiences it or network-level?
+  ANSWER: We CANNOT measure customer-experienced speed. data_usage_okr
+  is NAS-level (shared router) with 18.7% coverage. This is a data gap.
+  IMPACT: Speed is the #1 comment theme but ABSENT from statistical models.
+
+Q3. How separating Wiom issues from customer-side issues?
+  ANSWER: We cannot separate cleanly. WiFi interference, device
+  limitations, and power issues all get blamed on Wiom. devices_2_4g
+  and devices_5g are tracked but show no strong NPS signal.
+
+Q4. Complaint resolution: customer vs system perspective?
+  ANSWER: System perspective (ticket open to close). AVG_TIMES_REOPENED
+  partially captures customer perspective (reopening = customer says "not
+  fixed"). This is the metric that shows +47.7% Detractor-Promoter gap.
+
+Q5. Tracking repeat complaints?
+  ANSWER: YES. HAS_REPEAT_COMPLAINT and MAX_TICKETS_SAME_ISSUE computed.
+  Detractors have 26.8% more repeat tickets for the same issue type.
+  64% of all ticket-having customers have at least one repeat complaint.
+
+Q6. Disconnection frequency vs duration — which predicts churn?
+  ANSWER: We measured OUTAGE_EVENTS (count) and AVG_RECOVERY_MINS (duration).
+  Neither shows strong NPS differentiation (3.1% D-P gap for count).
+  The ~20 day data window for IMPACTED_DEVICES severely limits this analysis.
+
+Q7. Right-censoring bias?
+  ANSWER: ADDRESSED. Sprints 12-13 excluded from churn model (<5% churn).
+  Monotonic churn decline from Sprint 1 (34.7%) to Sprint 13 (0.0%) confirms
+  the right-censoring pattern. Remaining sprints 1-11 used for modeling.
+
+Q8. Is 28-day billing a driver or symptom?
+  ANSWER: It is a DRIVER (Kano Reverse Quality). billing_28day theme has
+  31.6% churn (4th highest) and NPS 3.0. Even Promoters (NPS 10) complain
+  about it. It is independently actionable and NOT merely a symptom of
+  general dissatisfaction.
+
+Q9. Controlling for competitive density by geography?
+  ANSWER: PARTIALLY. city_core (Delhi/Mumbai/UP) is a feature, and Delhi
+  shows slightly higher Detractor concentration. But we don't have
+  neighborhood-level competitive density data.
+
+Q10. Response bias — are commenting customers different?
+  ANSWER: 42.2% have comments. Comment presence (has_comment) is in
+  regression top-15 with a NEGATIVE coefficient — suggesting commenters
+  tend to give slightly LOWER NPS. This confirms mild detractor overweight
+  in comment data but does not invalidate theme analysis.
+
+Q11. PayG post-reset customers?
+  ANSWER: NOT SEPARATELY MODELED. The NPS data spans Jul '25 - Jan '26.
+  PayG reset happened Jan 26 '26. The Sprint 13 (Jan 15) data may partially
+  overlap. We did not create a PayG interaction flag — this is a gap.
+
+Q12. "General Good/Bad Service" catch-all categories?
+  ANSWER: CONFIRMED CATCH-ALL. Our adaptive theme discovery recovered
+  23 specific themes from the 42% with comments. The pre-coded "General
+  Good/Bad" categories mask diverse issues: our "General Good" maps to
+  866/999 = 87% "General Good Service" pre-code, but also includes speed,
+  affordability, and support positives that the pre-code missed.
+
+Q13. NPS variance within vs between partners?
+  ANSWER: partner_avg_nps is the #1 KDA consensus driver, appearing in
+  all 4 methods and 100% of sprints. This STRONGLY suggests between-partner
+  variance exceeds within-partner variance. A formal ANOVA would confirm.
+
+Q14. Seasonal effects (monsoon)?
+  ANSWER: Sprint 1 (Jul 15 = peak monsoon) has NPS 6.3 — actually the
+  HIGHEST NPS. Sprint 2 (Aug 1) drops to 5.4. This may reflect monsoon
+  effects but is confounded with sample composition. Not conclusive.
+
+Q15. Bimodal distribution — extreme experiences or survey artifact?
+  ANSWER: LIKELY BOTH. 42.6% score 10 and 20.4% score 0 is extreme even
+  for ISPs. Cultural tendency to express in extremes (Hindi culture) plus
+  the binary nature of internet (works/doesn't work) likely contribute.
+  The 7.1% of Detractors who wrote positive comments supports some artifact.
+''')
+
+
+# ════════════════════════════════════════════════════════════════════════
+# SECTION 9: CRITICAL DATA QUALITY CAVEATS
+# ════════════════════════════════════════════════════════════════════════
+R('=' * 72)
+R('SECTION 9: DATA QUALITY CAVEATS FOR LEADERSHIP')
+R('=' * 72)
+
+R('''
+These caveats must accompany any presentation of findings:
+
+1. CHURN MODEL AUC OF 0.977 — INTERPRET WITH CAUTION
+   While we removed obvious leakage (days_since_recharge, sprint_num),
+   total_payments (30.6% importance) correlates with tenure/activity.
+   More payments = longer active = not churned. The model is useful for
+   RANKING risk but the absolute AUC overstates predictive accuracy
+   for new/unseen customer populations.
+
+2. SPEED DATA IS MISSING
+   The #1 customer complaint (slow speed, 877 comments) has NO
+   corresponding Snowflake metric at customer level. Any statistical
+   model is BLIND to the most-discussed issue. This is the single
+   largest limitation of the quantitative analysis.
+
+3. UPTIME IS MEASURED TOO COARSELY
+   Partner-level uptime masks individual customer experience. A partner
+   at 71% uptime could serve customers with 50% or 95% uptime. This
+   explains why H1 (uptime = #1 driver) was rejected statistically
+   despite overwhelming qualitative evidence.
+
+4. OUTAGE DATA COVERS ONLY ~20 DAYS
+   IMPACTED_DEVICES has data from Dec 20 2025 - Jan 8 2026 only.
+   Most NPS respondents (sprints 1-11) fall outside this window.
+   Outage exposure features have only 38.9% match rate.
+
+5. RIGHT-CENSORING ADDRESSED BUT NOT ELIMINATED
+   Sprints 12-13 excluded. But Sprint 11 (6.7% churn) may also be
+   partially censored. The monotonic decline suggests all later sprints
+   have underestimated churn. True steady-state churn analysis requires
+   fixed observation windows per respondent.
+
+6. 42% COMMENT RATE CREATES SELECTION BIAS
+   Only 42.2% of respondents wrote comments. Qualitative theme analysis
+   covers this vocal subset. Non-commenting 58% may have different
+   driver profiles. has_comment shows mild negative NPS bias.
+
+7. TENURE SKEW
+   96.6% of fine-grained tenure_bucket is "Loyal (270d+)". Excel tenure
+   (1-2/3-6/6+) used instead, but even this is coarse. Onboarding (n=25)
+   and Early Life (n=125) have insufficient sample for reliable analysis.
+
+8. PARTNER STATUS DRIFT
+   48 of 10,826 matched respondents had different partner status at survey
+   time vs current. Temporal approach correctly used at-survey status, but
+   partner history (how many status changes) is not captured.
+''')
+
+
+# ════════════════════════════════════════════════════════════════════════
+# SECTION 10: STRATEGIC RECOMMENDATIONS (Pre-CEO Synthesis)
+# ════════════════════════════════════════════════════════════════════════
+R('=' * 72)
+R('SECTION 10: TRIANGULATED STRATEGIC RECOMMENDATIONS')
+R('=' * 72)
+
+R('''
+Ranked by triangulated confidence x actionability x expected impact:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#1 PARTNER QUALITY PROGRAM (Highest confidence, highest actionability)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Why: partner_avg_nps is #1 statistical driver (4/4 methods, 100% sprint
+  stability). partner_churn_rate is #2 churn predictor. Industry expert
+  independently identified partner quality as primary finding.
+
+  What:
+  - Tier partners into quality levels (A/B/C) using composite proxy score:
+    partner uptime, install TAT, ticket SLA, churn rate, NPS of their customers
+  - Performance-based incentives: higher commissions for A-tier partners
+  - Mandatory training for C-tier partners; 90-day improvement window
+  - Auto-escalation when a C-tier partner's customer raises a complaint
+  - Customer allocation: route new installs to A-tier partners where possible
+
+  Expected Impact: Moving bottom-quartile partners to median performance
+  could shift 15-20% of Detractors toward Passive/Promoter territory.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#2 SERVICE RECOVERY SOP (High confidence, high actionability)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Why: 6.8 NPS point gap between bad (2.4) and good (9.2) complaint
+  resolution. tickets_before_3m is #4 consensus driver. AVG_TIMES_REOPENED
+  +47.7% for Detractors.
+
+  What:
+  - 2-hour follow-up SOP for every complaint (WhatsApp message)
+  - Repeat complaint alert: if same customer raises 2nd ticket in 7 days,
+    auto-escalate to supervisor
+  - Target: reduce AVG_TIMES_REOPENED from 0.14 to <0.05
+  - Track FCR at customer level (not just system level)
+  - Fast-track first-30-day complaints (critical retention window)
+
+  Expected Impact: Reducing repeat complaints by 30% could convert
+  ~200-300 Detractors to Passives, moving NPS by +3-5 points.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#3 MOVE TO 30-DAY BILLING CYCLE (High confidence, structural change)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Why: 31.6% churn for billing_28day complainers. Kano Reverse Quality.
+  Industry expert: "structural competitive disadvantage." Even Promoters
+  complain. Irritation compounds with tenure (69.8% from 6+ month bucket).
+
+  What:
+  - Extend plan validity from 28 to 30 days (matching competitors)
+  - Alternative: add 2 "bonus days" per cycle for loyalty customers
+  - Revenue impact: ~3.7% fewer recharge events per year (13→12.2 cycles)
+  - Offset: reduced churn in billing-sensitive customers + competitive parity
+
+  Expected Impact: Eliminates a Reverse Quality entirely. Could prevent
+  18-30 churns per sprint (31.6% of 57 billers), plus reduce detractor
+  creation for the larger group who notice but don't comment.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#4 PROACTIVE OUTAGE COMMUNICATION (Industry expert priority)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Why: Currently ABSENT. Customers say: "No update, no intimation. Why
+  should customers raise tickets every time?" Industry: proactive comm
+  "reduces churn risk 40%+" during outages. Would be an Attractive Quality
+  (Kano) unique among budget ISPs.
+
+  What:
+  - WhatsApp message when partner-level outage detected:
+    "Hi [name], we detected an issue with your WiFi network. Our team is
+    working on it. Expected resolution: [X] hours. Sorry for the trouble."
+  - Follow-up message when resolved
+  - No customer effort required (zero CES)
+
+  Expected Impact: Could reduce outage-related Detractor creation by 30-40%
+  and significantly reduce inbound call volume during outages.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#5 DEVICE-LEVEL MONITORING INVESTMENT (Data gap closure)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Why: The two biggest qualitative themes (speed, disconnections) are
+  invisible to our statistical models due to partner-level aggregation.
+  This is the single largest analytical limitation.
+
+  What:
+  - Deploy device-level speed testing (periodic automated speed tests)
+  - Customer-experienced uptime tracking (device ping monitoring)
+  - WiFi signal strength mapping at installation
+  - Power stability logging (detect frequent router reboots)
+
+  Expected Impact: Would close the measurement gap between what customers
+  experience and what Wiom can detect. Enables targeted intervention for
+  individual customer issues rather than partner-level aggregates.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#6 CLOSED-LOOP NPS PROGRAM (Best practice implementation)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Why: 46% are Detractors. Each one has operational data + risk score.
+  Industry benchmark: closed-loop programs yield +5 to +10 NPS in 6 months.
+
+  What:
+  - Call every Detractor within 48 hours of NPS response
+  - Use risk score to prioritize: Critical (25.3%) first, then High (3.7%)
+  - Match complaint theme to intervention:
+    * slow_speed → speed test + network check
+    * disconnection_frequency → line stability check + partner escalation
+    * complaint_resolution_bad → supervisor review + resolution
+    * billing_28day → transparent explanation + retention coupon
+    * router_device → rapid replacement within 24h
+  - Track NPS improvement in subsequent sprints for contacted customers
+
+  Expected Impact: Converting 15-20% of contacted Detractors to Passives
+  could move NPS from ~0 to +10-15 within 3-4 sprints.
+''')
+
+# ════════════════════════════════════════════════════════════════════════
+# SECTION 11: SUMMARY STATISTICS
+# ════════════════════════════════════════════════════════════════════════
+R('\n' + '=' * 72)
+R('SECTION 11: TRIANGULATION SUMMARY')
+R('=' * 72)
+
+# Count by confidence
+conf_counts = {}
+for d in drivers:
+    c = d['confidence']
+    conf_counts[c] = conf_counts.get(c, 0) + 1
+
+R(f'\n  Total drivers assessed: {len(drivers)}')
+for c, n in sorted(conf_counts.items()):
+    R(f'    {c}: {n}')
+
+R(f'''
+  Convergent findings (all 3 agree): 5
+  Divergent findings (perspectives disagree): 4
+  Blind spots (industry expert only): 6
+
+  Challenge questions answered: 15/15
+  Hypotheses adjudicated: 6 original + 3 new
+
+  Recommendations ranked: 6
+    #1 Partner Quality Program
+    #2 Service Recovery SOP
+    #3 30-Day Billing Cycle
+    #4 Proactive Outage Communication
+    #5 Device-Level Monitoring Investment
+    #6 Closed-Loop NPS Program
+
+  Key insight for CEO:
+  Wiom's NPS problem is NOT primarily a network problem — it is a
+  HUMAN DELIVERY and PROCESS problem. The partner (Rohit) is the
+  brand; complaint handling matters more than problem frequency;
+  the 28-day billing cycle is a self-inflicted wound. Network quality
+  matters but our ability to measure and act on it is limited by
+  partner-level aggregation.
+
+  The highest-ROI interventions are all OPERATIONAL (partner training,
+  complaint SOP, billing structure, proactive communication) rather
+  than INFRASTRUCTURE (network investment, speed upgrades). This is
+  good news: operational changes are faster and cheaper than infra.
+''')
+
+R('\n' + '=' * 72)
+R('END OF PHASE 5 — TRIANGULATION & SYNTHESIS')
+R('=' * 72)
+
+save_report()

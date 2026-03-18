@@ -1,0 +1,260 @@
+feature,verdict,reason,tenure_r,churn_r,fill_overall,fill_gap
+phone_valid,EXCLUDE,Near-zero variance — 100% same value,,,1.0,0.0
+has_comment,CLEAN,Passes all checks,0.0550240910971083,-0.09326141223925755,1.0,0.0
+NPS Reason - Primary,REVIEW,"Fill-rate gap RECOVERABLE: overall=+10pp, late sprints=+1pp",,,0.4027596780375623,0.10135643308443798
+NPS Reason - Secondary,EXCLUDE,Very low fill rate (4%),,,0.03947872748179379,0.012683194972992778
+NPS Reason - Tertiary,EXCLUDE,Very low fill rate (0%),,,0.0042928325028746646,0.0013343457356547843
+Primary Category,REVIEW,"Fill-rate gap RECOVERABLE: overall=+10pp, late sprints=+1pp",,,0.4025297048677654,0.10105607265191896
+Secondary Category,EXCLUDE,Very low fill rate (4%),,,0.03940206975852817,0.01258307482881977
+Tertiary Category,EXCLUDE,Very low fill rate (0%),,,0.0042928325028746646,0.0013343457356547843
+Channel,CLEAN,Passes all checks,,,1.0,0.0
+first_time_wifi,CLEAN,Passes all checks,,,1.0,0.0
+sprint_num,EXCLUDE,Right-censoring artifact — depends on observation window,-0.05353718912273807,-0.26171306981568626,1.0,0.0
+tenure_days,REVIEW,Moderate tenure correlation (r=+1.000) — verify not spurious,1.0,-0.06928335183623427,1.0,0.0
+tenure_bucket,CLEAN,Passes all checks,,,1.0,0.0
+tenure_excel,CLEAN,Passes all checks,,,0.9391337677270986,-0.07949539447336806
+city,CLEAN,Passes all checks,,,1.0,0.0
+churn_label,EXCLUDE,Target leakage — mechanically linked to churn definition,,,0.9391337677270986,-0.07949539447336806
+recharges_before_sprint,EXCLUDE,Target leakage — mechanically linked to churn definition,0.8947872879387057,-0.13226332020373033,1.0,0.0
+tickets_post_sprint,EXCLUDE,Target leakage — mechanically linked to churn definition,-0.03232772490465348,-0.07542162097711773,1.0,0.0
+tickets_before_3m,CLEAN,Passes all checks,0.10864134707763211,0.02647110014008851,1.0,0.0
+is_post_reset,EXCLUDE,Near-zero variance — 100% same value,,,1.0,0.0
+is_payg,EXCLUDE,Near-zero variance — 100% same value,,,1.0,0.0
+_source,CLEAN,Passes all checks,,,1.0,0.0
+Jab dikkat aayi toh kya kia?,EXCLUDE,Very low fill rate (1%),,,0.005596013798390188,-0.00550837648947137
+call_status,EXCLUDE,Target leakage — mechanically linked to churn definition,,,0.005672671521655807,-0.001563112241068084
+caller,EXCLUDE,Very low fill rate (1%),,,0.00850900728248371,0.00043238015811974083
+cash_online,EXCLUDE,Fill-rate leakage — +15pp gap persists in late sprints (+15pp),,,0.712073591414335,0.1485972895967146
+data_usage_amount,REVIEW,"Fill-rate gap RECOVERABLE: overall=+13pp, late sprints=+5pp; Moderate tenure correlation (r=+0.461) — verify not spurious",0.46086731334768705,-0.03897479851383894,0.4950555768493676,0.13303553403763946
+data_usage_days,REVIEW,"Fill-rate gap RECOVERABLE: overall=+13pp, late sprints=+5pp",0.12391740405654499,-0.09352061053265803,0.4950555768493676,0.13303553403763946
+data_usage_per_day,EXCLUDE,Very low fill rate (10%),0.5164155752307364,-0.06141053022310694,0.09666538903794557,-0.018155021223374493
+data_usage_percentile,EXCLUDE,Near-zero variance — 100% same value,,,0.0,0.0
+device_type,EXCLUDE,Fill-rate leakage — +15pp gap persists in late sprints (+15pp),,,0.7115369873514756,0.14875092505511034
+devices_2_4g,CLEAN,Passes all checks,0.027397776632571248,-0.033356537443356114,1.0,0.0
+devices_5g,CLEAN,Passes all checks,0.05306944911504804,-0.022118321260439826,1.0,0.0
+first_time_user,REVIEW,"Fill-rate gap RECOVERABLE: overall=+25pp, late sprints=+8pp",,,0.4378689152932158,0.24889415876087617
+nps_match,EXCLUDE,Near-zero variance — 100% same value,,,0.0,0.0
+optical_power,CLEAN,Passes all checks,0.1345587299488359,-0.05334186174869485,1.0,0.0
+optical_range,CLEAN,Passes all checks,,,0.3921042545036412,0.008827898024570902
+overall_service_experience,EXCLUDE,Very low fill rate (0%),,,0.0021464162514373323,-0.0023234947687961567
+partner_name,EXCLUDE,Near-zero variance — 100% same value,,,0.0,0.0
+pay_g,EXCLUDE,Near-zero variance — 100% same value,,,0.0,0.0
+payment_issue_tickets_flag,EXCLUDE,Near-zero variance — 100% same value,,,0.06853200459946339,0.06771825896669723
+plan_expiry_window,EXCLUDE,Target leakage — mechanically linked to churn definition,,,0.0,0.0
+prev_nps,EXCLUDE,Near-zero variance — 100% same value,,,0.0,0.0
+recharge_done,EXCLUDE,Target leakage — mechanically linked to churn definition,0.7863585365678599,-0.12008122170967037,1.0,0.0
+sla,EXCLUDE,Near-zero variance — 100% same value,,,0.0,0.0
+tenure_from_install,EXCLUDE,Near-zero variance — 100% same value,,,0.0,0.0
+tickets_last_3m_sprint,CLEAN,Passes all checks,0.06481069742897985,0.02640539266269577,0.42889996167113836,0.04193222904449684
+total_recharges,EXCLUDE,Target leakage — mechanically linked to churn definition,0.853489549187071,-0.32218282189156355,1.0,0.0
+avg_recharge_amount,EXCLUDE,Target leakage — mechanically linked to churn definition,-0.10325975007548842,0.04125584910855222,1.0,0.0
+total_tickets,NORMALIZE,Tenure-biased absolute count (r=+0.324) — normalize to per-month rate,0.32380533930321337,-0.19348392013749674,1.0,0.0
+cx_tickets,NORMALIZE,Tenure-biased absolute count (r=+0.167) — normalize to per-month rate,0.16658922386238767,-0.09112418360581433,1.0,0.0
+px_tickets,NORMALIZE,Tenure-biased absolute count (r=+0.335) — normalize to per-month rate,0.3348038566897667,-0.0856922611851372,1.0,0.0
+avg_resolution_hours,CLEAN,Passes all checks,0.012097770591289666,0.05781634690842777,1.0,0.0
+sla_compliance_pct,CLEAN,Passes all checks,-0.04421895665523248,-0.1319408626263751,1.0,0.0
+partner_lng_id,EXCLUDE,Fill-rate leakage — +41pp gap persists in late sprints (+41pp),-0.3233495785909224,0.03767960713820258,0.8298965120735914,0.41399113021330536
+cluster,EXCLUDE,Fill-rate leakage — +41pp gap persists in late sprints (+41pp),,,0.8298965120735914,0.41399113021330536
+mis_city,EXCLUDE,Fill-rate leakage — +41pp gap persists in late sprints (+41pp),,,0.8298965120735914,0.41399113021330536
+partner_status,EXCLUDE,Target leakage — mechanically linked to churn definition,,,0.8298965120735914,0.41399113021330536
+avg_uptime_pct,CLEAN,Passes all checks,0.069959148911624,-0.2548438506216933,1.0,0.0
+stddev_uptime,CLEAN,Passes all checks,0.05711568165695772,-0.11658030327716956,1.0,0.0
+min_uptime,EXCLUDE,Near-zero variance — 100% same value,,,1.0,0.0
+uptime_data_days,EXCLUDE,Near-zero variance — 100% same value,-0.014149037670877862,-0.06430168098780371,0.9986201609812189,0.0058881256133463955
+install_attempts,NORMALIZE,Tenure-biased absolute count (r=+0.172) — normalize to per-month rate,0.1722485096222953,-0.010486225394137655,1.0,0.0
+install_tat_hours,CLEAN,Passes all checks,-0.0948638907909924,-0.004431187891214657,1.0,0.0
+total_payments,EXCLUDE,Target leakage — mechanically linked to churn definition,0.831698249373684,-0.3420333029970266,1.0,0.0
+autopay_payments,EXCLUDE,Target leakage — mechanically linked to churn definition,0.2399217687250725,-0.16549078886000218,1.0,0.0
+cash_payments,EXCLUDE,Target leakage — mechanically linked to churn definition,0.1626136301029072,-0.03997501137401652,1.0,0.0
+avg_payment_amount,EXCLUDE,Target leakage — mechanically linked to churn definition,-0.07588574593372394,0.008507660593876951,1.0,0.0
+payment_mode,CLEAN,Passes all checks,,,1.0,0.0
+has_tickets,CLEAN,Passes all checks,0.0892669590748314,-0.40762474724825265,1.0,0.0
+days_since_last_recharge,EXCLUDE,Target leakage — mechanically linked to churn definition,0.15162539904687705,0.5965003679708709,1.0,0.0
+recharge_regularity,EXCLUDE,Target leakage — mechanically linked to churn definition,-0.04068599122168229,-0.34704877164773784,1.0,0.0
+OUTAGE_EVENTS,EXCLUDE,Fill-rate leakage — +41pp gap persists in late sprints (+45pp),-0.04901669835334766,0.03143341898922294,0.3891912610195477,0.4130358458282094
+DISTINCT_OUTAGES,EXCLUDE,Fill-rate leakage — +41pp gap persists in late sprints (+45pp),-0.04901669835334766,0.03143341898922294,0.3891912610195477,0.4130358458282094
+RECOVERED_EVENTS,EXCLUDE,Fill-rate leakage — +41pp gap persists in late sprints (+45pp),-0.046952060709925074,0.02868521604166239,0.3891912610195477,0.4130358458282094
+AVG_RECOVERY_MINS,EXCLUDE,Fill-rate leakage — +40pp gap persists in late sprints (+43pp),-0.012676079212572985,-0.02512715433529156,0.3755461862782675,0.3990596042696444
+PEAK_UPTIME_PCT,CLEAN,Passes all checks,0.026301959984629662,-0.09102856619522683,1.0,0.0
+PEAK_STABLE_PCT,CLEAN,Passes all checks,-0.008673908861853567,-0.06378722013985516,1.0,0.0
+OVERALL_UPTIME_PCT,CLEAN,Passes all checks,0.04691438643477174,-0.09302716394703635,1.0,0.0
+AVG_PEAK_INTERRUPTIONS,REVIEW,Moderate tenure correlation (r=+0.162) — verify not spurious,0.1622475030296073,-0.12144124188507685,1.0,0.0
+PEAK_VS_OVERALL_GAP,CLEAN,Passes all checks,0.1388913697642951,0.014023508381725718,1.0,0.0
+UPTIME_DATA_DAYS,EXCLUDE,Near-zero variance — 99% same value,-0.013537990159065436,-0.09935121406958447,0.8285166730548102,0.41987925582665175
+TOTAL_TICKETS_FCR,EXCLUDE,Fill-rate leakage — +39pp gap persists in late sprints (+38pp),0.3487433279765899,-0.011471026652117144,0.7992334227673438,0.38547850485679314
+FCR_TICKETS,EXCLUDE,Fill-rate leakage — +39pp gap persists in late sprints (+38pp),0.33425725816692714,-0.03605302181482623,0.7992334227673438,0.38547850485679314
+FCR_RATE,REVIEW,Moderate tenure correlation (r=-0.169) — verify not spurious,-0.1685710248416049,0.0835893272034409,1.0,0.0
+AVG_TIMES_REOPENED,NORMALIZE,Tenure-biased absolute count (r=+0.152) — normalize to per-month rate,0.15209501895921848,-0.06284574772849563,1.0,0.0
+MAX_TIMES_REOPENED,NORMALIZE,Tenure-biased absolute count (r=+0.193) — normalize to per-month rate,0.193295294134007,-0.05476868565337886,1.0,0.0
+AVG_CUSTOMER_CALLS_PER_TICKET,EXCLUDE,Fill-rate leakage — +12pp gap persists in late sprints (+11pp),0.18164725633797482,0.021151806587923434,0.24285166730548102,0.12449617329477086
+TOTAL_CUSTOMER_CALLS,EXCLUDE,Fill-rate leakage — +12pp gap persists in late sprints (+11pp),0.3091495600138743,-0.0004802644163994826,0.24285166730548102,0.12449617329477086
+AVG_PARTNER_CALLS_PER_TICKET,EXCLUDE,Fill-rate leakage — +12pp gap persists in late sprints (+11pp),-0.017061070809536834,0.030131327147249563,0.24285166730548102,0.12449617329477086
+AVG_TICKET_RATING,CLEAN,Passes all checks,-0.03553600707505946,0.012397796980279525,0.11506324262169414,0.07337745431907888
+TICKETS_REOPENED_ONCE,NORMALIZE,Tenure-biased absolute count (r=+0.287) — normalize to per-month rate,0.28670119607972927,-0.08618687886197939,1.0,0.0
+TICKETS_REOPENED_3PLUS,NORMALIZE,Tenure-biased absolute count (r=+0.157) — normalize to per-month rate,0.1566763542115078,-0.036642429868490776,1.0,0.0
+TOTAL_TICKETS_REPEAT,EXCLUDE,Fill-rate leakage — +39pp gap persists in late sprints (+38pp),0.3487201541596879,-0.011462410021629845,0.7992334227673438,0.38547850485679314
+DISTINCT_ISSUE_TYPES,NORMALIZE,Tenure-biased absolute count (r=+0.339) — normalize to per-month rate,0.3394410223158426,-0.014239897131286991,1.0,0.0
+MAX_TICKETS_SAME_ISSUE,NORMALIZE,Tenure-biased absolute count (r=+0.210) — normalize to per-month rate,0.2097679673698529,-0.11847652684967196,1.0,0.0
+AVG_TICKETS_PER_ISSUE,CLEAN,Passes all checks,0.14790797001319927,-0.11531379362417445,1.0,0.0
+ISSUES_WITH_3PLUS_TICKETS,NORMALIZE,Tenure-biased absolute count (r=+0.280) — normalize to per-month rate,0.28041243121635906,-0.012849075576894395,1.0,0.0
+HAS_REPEAT_COMPLAINT,CLEAN,Passes all checks,0.12423941203456224,0.11525276468610356,1.0,0.0
+PAYMENT_FAILURES,EXCLUDE,Target leakage — mechanically linked to churn definition,0.12579602145564156,-0.06275612825650188,1.0,0.0
+PAYMENT_SUCCESSES,EXCLUDE,Target leakage — mechanically linked to churn definition,0.5640430651608715,-0.3473319432231467,1.0,0.0
+PAYMENT_ATTEMPTS,EXCLUDE,Target leakage — mechanically linked to churn definition,0.17872817077778205,-0.39060438794849456,0.9995400536604063,0.001962708537782132
+TOTAL_PAYMENT_EVENTS,EXCLUDE,Target leakage — mechanically linked to churn definition,0.32958159862694386,-0.3396450005405414,0.9995400536604063,0.001962708537782132
+FAILURE_RATE_PCT,CLEAN,Passes all checks,-0.10384042727982845,0.1504054844997087,1.0,0.0
+TOTAL_LEADS,NORMALIZE,Tenure-biased absolute count (r=+0.241) — normalize to per-month rate,0.24062441768177714,-0.016222732231001128,0.9996933691069375,-0.00040048057669206383
+LEADS_ALL_DECLINED,CLEAN,Passes all checks,0.02400691046772691,0.00324182151510222,1.0,0.0
+LEADS_ACCEPTED,NORMALIZE,Tenure-biased absolute count (r=-0.387) — normalize to per-month rate,-0.386925793938522,0.01680709974025633,0.9996933691069375,-0.00040048057669206383
+LEADS_INSTALLED,EXCLUDE,Near-zero variance — 96% same value,-0.008140898436577193,0.011259589308194021,0.9996933691069375,-0.00040048057669206383
+AVG_INSTALL_TAT_MINS,CLEAN,Passes all checks,-0.04957542746889419,0.014399379243995428,1.0,0.0
+AVG_INSTALL_RATING,EXCLUDE,Near-zero variance — 99% same value,-0.028207860468251564,0.00828854568981208,0.12088922958988119,0.04253514423392468
+DISPATCH_DECLINE_RATE_PCT,CLEAN,Passes all checks,-0.010983638963331727,0.02268455771276187,1.0,0.0
+HOURS_TO_FIRST_RECHARGE,EXCLUDE,Target leakage — mechanically linked to churn definition,0.061474553834831254,-0.0029771976009700294,1.0,0.0
+DAYS_TO_FIRST_RECHARGE,EXCLUDE,Target leakage — mechanically linked to churn definition,0.06349973457388469,-0.005039268188375744,1.0,0.0
+TOTAL_IVR_CALLS,NORMALIZE,Tenure-biased absolute count (r=+0.249) — normalize to per-month rate,0.2493918414611422,0.17163836400048735,1.0,0.0
+INBOUND_CALLS,NORMALIZE,Tenure-biased absolute count (r=+0.348) — normalize to per-month rate,0.34820859354170486,-0.026399173853016208,1.0,0.0
+OUTBOUND_CALLS,EXCLUDE,"Reverse causality — reactive to risk, not predictive",-0.037129531700292574,0.3473100357900375,1.0,0.0
+ANSWERED_CALLS,NORMALIZE,Tenure-biased absolute count (r=+0.252) — normalize to per-month rate,0.25192025405391383,0.08549667757417373,1.0,0.0
+MISSED_CALLS,NORMALIZE,Tenure-biased absolute count (r=+0.201) — normalize to per-month rate,0.20107913436277816,0.1964518059370949,1.0,0.0
+DROPPED_CALLS,CLEAN,Passes all checks,0.012615539518473301,0.07277468531901485,1.0,0.0
+AVG_ANSWERED_SECONDS,CLEAN,Passes all checks,0.06166373395482221,-0.13759313031594683,1.0,0.0
+AVG_CALL_DURATION,REVIEW,Moderate tenure correlation (r=+0.154) — verify not spurious,0.15428999343672165,-0.09746969174915049,0.9937140666922193,-0.005646422419366415
+INBOUND_ANSWERED,NORMALIZE,Tenure-biased absolute count (r=+0.273) — normalize to per-month rate,0.2734315588539366,-0.010151690667613749,0.9937140666922193,-0.005646422419366415
+INBOUND_UNANSWERED,NORMALIZE,Tenure-biased absolute count (r=+0.371) — normalize to per-month rate,0.3711896614209203,-0.03807535985451415,0.9937140666922193,-0.005646422419366415
+AVG_DAILY_DATA_GB,EXCLUDE,Fill-rate leakage — +14pp gap persists in late sprints (+13pp),-0.01744545102000821,-0.1324146083970412,0.18742813338443848,0.14097486168878612
+MEDIAN_DAILY_DATA_GB,EXCLUDE,Fill-rate leakage — +14pp gap persists in late sprints (+13pp),0.0024050257012854744,-0.134117108313889,0.18742813338443848,0.14097486168878612
+STDDEV_DAILY_DATA_GB,EXCLUDE,Fill-rate leakage — +14pp gap persists in late sprints (+13pp),-0.07968165337009675,-0.09233182822802084,0.18735147566117286,0.14130197977841646
+MIN_DAILY_DATA_GB,EXCLUDE,Fill-rate leakage — +14pp gap persists in late sprints (+13pp),0.01935745179467251,0.17251326279532259,0.18742813338443848,0.14097486168878612
+MAX_DAILY_DATA_GB,EXCLUDE,Fill-rate leakage — +14pp gap persists in late sprints (+13pp),-0.08539739518640105,-0.12556679551807384,0.18742813338443848,0.14097486168878612
+USAGE_DATA_DAYS,EXCLUDE,Fill-rate leakage — +14pp gap persists in late sprints (+13pp),0.16640761823454,-0.7579840053845983,0.18742813338443848,0.14097486168878612
+LOW_USAGE_DAYS,EXCLUDE,Fill-rate leakage — +14pp gap persists in late sprints (+13pp),-0.11057184892717525,-0.08685999520348876,0.18742813338443848,0.14097486168878612
+HIGH_USAGE_DAYS,EXCLUDE,Fill-rate leakage — +14pp gap persists in late sprints (+13pp),-0.03924083531847299,-0.0731291675304012,0.18742813338443848,0.14097486168878612
+detected_language,REVIEW,"Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp",,,0.42069758528171713,0.10684054100118051
+sentiment_polarity,REVIEW,"Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp",,,0.42069758528171713,0.10684054100118051
+sentiment_intensity,REVIEW,"Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp",0.009012865213943008,0.041186211860868134,0.42069758528171713,0.10684054100118051
+emotion,REVIEW,"Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp",,,0.42069758528171713,0.10684054100118051
+comment_quality,REVIEW,"Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp",,,0.42069758528171713,0.10684054100118051
+score_sentiment_mismatch,REVIEW,"Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp",,,0.42069758528171713,0.10684054100118051
+primary_theme,REVIEW,"Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp",,,0.42069758528171713,0.10684054100118051
+primary_theme_score,REVIEW,"Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp",0.006517718338503814,-0.016744294797837674,0.42069758528171713,0.10684054100118051
+secondary_theme,CLEAN,Passes all checks,,,0.12142583365274051,0.03725464996988863
+secondary_theme_score,REVIEW,"Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp",-0.008686055958963296,-0.015828739977128106,0.42069758528171713,0.10684054100118051
+mentions_28day,REVIEW,"Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp",,,0.42069758528171713,0.10684054100118051
+mentions_competitor,REVIEW,"Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp",,,0.42069758528171713,0.10684054100118051
+competitor_names,EXCLUDE,Very low fill rate (0%),,,0.0013031812955155231,-6.910484272327263e-06
+mentions_amount,REVIEW,"Fill-rate gap RECOVERABLE: overall=+11pp, late sprints=+1pp",,,0.42069758528171713,0.10684054100118051
+partner_status_at_survey,EXCLUDE,Target leakage — mechanically linked to churn definition,,,0.8298965120735914,0.41399113021330536
+partner_avg_resolution_hours,CLEAN,Passes all checks,0.027946360626143318,0.03076414294607385,1.0,0.0
+partner_sla_compliance,CLEAN,Passes all checks,-0.012422300425081039,-0.1187915450676549,1.0,0.0
+partner_avg_tickets,NORMALIZE,Tenure-biased absolute count (r=+0.216) — normalize to per-month rate,0.21633039924956673,0.009147335582999228,1.0,0.0
+partner_churn_rate,EXCLUDE,Target leakage — mechanically linked to churn definition,-0.038282877361735496,0.3093926959584521,1.0,0.0
+partner_avg_nps,CLEAN,Passes all checks,-0.08196349065750252,-0.08605831576845493,1.0,0.0
+partner_customer_count,CLEAN,Passes all checks,0.14586119811341516,-0.08528430587888254,1.0,0.0
+partner_fcr_rate,CLEAN,Passes all checks,-0.1329826217289761,-0.03661269514655809,1.0,0.0
+partner_repeat_rate,CLEAN,Passes all checks,0.13525873175152,0.05925694697703628,1.0,0.0
+partner_median_install_tat,CLEAN,Passes all checks,-0.0237269245036392,-0.011598649380433357,1.0,0.0
+resolution_vs_partner,CLEAN,Passes all checks,0.0046198293407290775,0.050799503711985626,1.0,0.0
+sla_vs_partner,CLEAN,Passes all checks,-0.04762406130242275,-0.07933340954289361,1.0,0.0
+tickets_vs_partner,NORMALIZE,Tenure-biased absolute count (r=+0.248) — normalize to per-month rate,0.2480921752678526,-0.05932573298423227,1.0,0.0
+install_delayed,CLEAN,Passes all checks,-0.11012321494559198,0.018769976610845764,1.0,0.0
+install_tat_hours_w,CLEAN,Passes all checks,-0.09475243728814034,-0.0016345916844260594,1.0,0.0
+avg_resolution_hours_w,CLEAN,Passes all checks,0.00865453840742788,0.08361266236570987,1.0,0.0
+recharge_same_day,EXCLUDE,Target leakage — mechanically linked to churn definition,-0.0393723859830526,-0.001973194711796638,1.0,0.0
+AVG_INSTALL_TAT_MINS_w,CLEAN,Passes all checks,-0.0668120548579324,0.018668458696816423,1.0,0.0
+partner_risk_level,EXCLUDE,Target leakage — mechanically linked to churn definition,0.04925281431432725,0.05877044873983116,1.0,0.0
+partner_at_risk,EXCLUDE,Target leakage — mechanically linked to churn definition,0.04903107404204456,0.05232873713424137,1.0,0.0
+support_effort_index,NORMALIZE,Tenure-biased absolute count (r=+0.323) — normalize to per-month rate,0.32314227002248136,-0.03840402756468278,1.0,0.0
+network_quality_index,CLEAN,Passes all checks,-0.07984944326573234,0.0038156134224326494,1.0,0.0
+missed_call_ratio,CLEAN,Passes all checks,-0.049979699624727876,0.07532442070493507,1.0,0.0
+autopay_ratio,CLEAN,Passes all checks,-0.04120790805223611,-0.06338817088869872,1.0,0.0
+ticket_severity,CLEAN,Passes all checks,0.027031087509813513,-0.20654818138034176,1.0,0.0
+city_Mumbai,CLEAN,Passes all checks,-0.04222019905325946,0.013604296098695137,1.0,0.0
+city_UP,CLEAN,Passes all checks,-0.12062359543750521,0.08348830790098091,1.0,0.0
+city_Unknown,REVIEW,Moderate tenure correlation (r=-0.224) — verify not spurious,-0.2238158374663205,-0.12843337406592842,1.0,0.0
+tenure_Establishing (61-120d),EXCLUDE,Near-zero variance — 99% same value,-0.1806546649454307,-0.05054794929706788,1.0,0.0
+tenure_Loyal (270d+),EXCLUDE,Near-zero variance — 97% same value,0.35648334255966446,0.10384783139442359,1.0,0.0
+tenure_Onboarding (0-15d),EXCLUDE,Near-zero variance — 100% same value,-0.09976622292315666,-0.024242252184346256,1.0,0.0
+tenure_Steady State (121-270d),EXCLUDE,Near-zero variance — 99% same value,-0.19304212162219977,-0.06653671056720262,1.0,0.0
+channel_Call,EXCLUDE,Near-zero variance — 99% same value,-0.018752218094276206,0.041599196739196896,1.0,0.0
+channel_G- form in WA,EXCLUDE,Near-zero variance — 95% same value,0.0491938331041116,0.03094496265556755,1.0,0.0
+channel_In - WA,CLEAN,Passes all checks,-0.09374385634855474,0.13537980042622585,1.0,0.0
+channel_WA,CLEAN,Passes all checks,0.0760876261006477,-0.14988538820039407,1.0,0.0
+is_first_time_wifi,CLEAN,Passes all checks,-0.003434709748836785,-0.15501587473446457,1.0,0.0
+paymode_cash,EXCLUDE,Near-zero variance — 97% same value,0.046027396789951415,-0.0010331303735804207,1.0,0.0
+paymode_online,CLEAN,Passes all checks,0.007909344321449524,0.050140413694458055,1.0,0.0
+paymode_unknown,EXCLUDE,Near-zero variance — 100% same value,0.013401567120738525,0.026253689213317943,1.0,0.0
+is_cash_payment,EXCLUDE,Target leakage — mechanically linked to churn definition,-0.14250943986782622,0.034542774004707434,1.0,0.0
+device_PD,EXCLUDE,Near-zero variance — 100% same value,0.013734973261169734,-0.004843987987293432,1.0,0.0
+device_SY,CLEAN,Passes all checks,0.01701097982969952,-0.05203395552856888,1.0,0.0
+device_TP,REVIEW,Moderate tenure correlation (r=+0.445) — verify not spurious,0.44491605761554515,-0.03807522268001302,1.0,0.0
+theme_billing_28day,EXCLUDE,Near-zero variance — 100% same value,0.02184646539938202,0.01273788969428396,1.0,0.0
+theme_call_center_bad,EXCLUDE,Near-zero variance — 100% same value,0.010901197996201824,0.013898160345385204,1.0,0.0
+theme_competitor_comparison,EXCLUDE,Near-zero variance — 100% same value,-0.013550321378796528,-0.007802441530870619,1.0,0.0
+theme_complaint_resolution_bad,EXCLUDE,Near-zero variance — 99% same value,0.023534138749260473,-0.007751817999705098,1.0,0.0
+theme_disconnection_frequency,CLEAN,Passes all checks,0.03725586614734106,-0.03544562542267296,1.0,0.0
+theme_general_negative,EXCLUDE,Near-zero variance — 98% same value,0.0215905127933871,0.011249830869537356,1.0,0.0
+theme_general_positive,CLEAN,Passes all checks,-0.007369608628206416,-0.05912955104855878,1.0,0.0
+theme_good_speed,EXCLUDE,Near-zero variance — 99% same value,-0.016007716962886966,-0.0194966761675484,1.0,0.0
+theme_internet_down_outage,EXCLUDE,Near-zero variance — 99% same value,0.023794807067951958,-0.009341226830697302,1.0,0.0
+theme_other,CLEAN,Passes all checks,-0.05774632988887481,0.09190858611133827,1.0,0.0
+theme_ott_content,EXCLUDE,Near-zero variance — 100% same value,-0.00584103578051051,-0.006859227190618202,1.0,0.0
+theme_pricing_affordable,EXCLUDE,Near-zero variance — 99% same value,0.004032461631012184,-0.03686651104757367,1.0,0.0
+theme_pricing_expensive,EXCLUDE,Near-zero variance — 100% same value,0.018186496559392543,0.007576286832007861,1.0,0.0
+theme_range_coverage,EXCLUDE,Near-zero variance — 99% same value,0.01740256352532419,-0.004167246152663146,1.0,0.0
+theme_router_device,EXCLUDE,Near-zero variance — 100% same value,-0.005158538290537022,0.015853863636508578,1.0,0.0
+theme_slow_speed,CLEAN,Passes all checks,0.006748823214391286,-0.03521422566906209,1.0,0.0
+theme_unclassified,CLEAN,Passes all checks,0.027156645761206213,-0.024917943338851653,1.0,0.0
+is_negative_sentiment,CLEAN,Passes all checks,0.07529522767881264,-0.008231323424700156,1.0,0.0
+is_positive_sentiment,CLEAN,Passes all checks,-0.005652714202082958,-0.10147672340695212,1.0,0.0
+churn_risk_score,EXCLUDE,Target leakage — mechanically linked to churn definition,-0.09074983627405975,0.9324410707622106,1.0,0.0
+churn_risk_pct,EXCLUDE,Target leakage — mechanically linked to churn definition,-0.09074297667325615,0.9324539817396122,1.0,0.0
+risk_category,EXCLUDE,Target leakage — mechanically linked to churn definition,,,0.978689152932158,-0.02783340008009616
+sc_avg_plan_speed,CLEAN,Passes all checks,-0.04137606590189336,0.03231080846628049,0.9982368723648908,0.004533048424874675
+sc_avg_latest_speed,CLEAN,Passes all checks,-0.09612599419260297,-0.01481763874513036,0.994557301648141,0.010408237349654459
+sc_speed_gap_pct,CLEAN,Passes all checks,0.05313569062138165,0.03598771641036958,0.994557301648141,0.010408237349654459
+sc_avg_speed_in_range,CLEAN,Passes all checks,-0.07218299283167956,-0.03742202195419711,0.9982368723648908,0.004533048424874675
+sc_avg_rxpower,CLEAN,Passes all checks,-0.06666147733682341,-0.025568241499870054,0.6996550402453047,-0.052616328996169304
+sc_avg_rxpower_in_range,CLEAN,Passes all checks,-0.008552121345974502,-0.1563049011798637,0.9982368723648908,0.004533048424874675
+sc_avg_opticalpower_in_range,CLEAN,Passes all checks,-0.058705481173594316,-0.0050385431564071315,0.3209658873131468,-0.028542625373542796
+sc_avg_weekly_data_gb,REVIEW,Moderate tenure correlation (r=+0.485) — verify not spurious,0.4845479711548714,-0.03268915060510967,0.9882713683403603,0.01245210313874856
+sc_scorecard_ticket_count,EXCLUDE,Target leakage — mechanically linked to churn definition,0.01397478018884735,-0.1413397045297378,0.6995783825220391,0.12031503555002021
+sc_scorecard_weeks,EXCLUDE,Target leakage — mechanically linked to churn definition,0.3054658666118691,-0.7538930348281389,0.9982368723648908,0.004533048424874675
+sc_plan_active_ratio,EXCLUDE,Target leakage — mechanically linked to churn definition,0.1593238471186129,-0.4855782431883194,0.9982368723648908,0.004533048424874675
+cis_avg_customer_uptime_pct,REVIEW,"Fill-rate gap RECOVERABLE: overall=+55pp, late sprints=+2pp",0.0766565849493354,-0.1866159582200129,0.8697585281717133,0.5506467754763354
+cis_avg_stable_ping_ratio,REVIEW,"Fill-rate gap RECOVERABLE: overall=+58pp, late sprints=+6pp; Moderate tenure correlation (r=-0.258) — verify not spurious",-0.2579398698971145,-0.007641241170614785,0.8607895745496359,0.5752479684813794
+cis_avg_peak_uptime_pct,REVIEW,"Fill-rate gap RECOVERABLE: overall=+55pp, late sprints=+2pp",0.052025083219284944,-0.22658151795693962,0.8697585281717133,0.5506467754763354
+cis_peak_interruption_rate,REVIEW,"Fill-rate gap RECOVERABLE: overall=+55pp, late sprints=+2pp",-0.002340126684158373,0.05117682503904341,0.8697585281717133,0.5506467754763354
+cis_active_day_ratio,EXCLUDE,Target leakage — mechanically linked to churn definition,0.035442311847415725,-0.23335013491331089,0.8697585281717133,0.5506467754763354
+cis_influx_data_days,EXCLUDE,Target leakage — mechanically linked to churn definition,0.12909312152878805,-0.760800975639043,0.8697585281717133,0.5506467754763354
+ul1_avg_daily_sessions,EXCLUDE,Fill-rate leakage — +86pp gap persists in late sprints (+85pp),0.17839563346416323,-0.0021977217817942835,0.7408202376389421,0.8598970383694977
+ul1_avg_daily_devices,EXCLUDE,Fill-rate leakage — +86pp gap persists in late sprints (+85pp),0.3530857971571912,-0.00977357582102528,0.7408202376389421,0.8598970383694977
+ul1_avg_active_hours,EXCLUDE,Fill-rate leakage — +86pp gap persists in late sprints (+85pp),0.19850644375177692,-0.01830665816386887,0.7408202376389421,0.8598970383694977
+ul1_avg_daily_data_gb,EXCLUDE,Fill-rate leakage — +86pp gap persists in late sprints (+85pp),0.29051205002141356,-0.004868153399738775,0.7408202376389421,0.8598970383694977
+ul1_avg_session_hours,EXCLUDE,Fill-rate leakage — +86pp gap persists in late sprints (+85pp),0.31627362981980467,-0.014414045282986208,0.7408202376389421,0.8598970383694977
+ul1_avg_peak_hour_ratio,EXCLUDE,Fill-rate leakage — +86pp gap persists in late sprints (+85pp),-0.11879183710859112,0.0006050529508285231,0.7408202376389421,0.8598970383694977
+ul1_avg_night_day_ratio,EXCLUDE,Fill-rate leakage — +86pp gap persists in late sprints (+85pp),0.029754492604407438,-0.0047110307981789645,0.7405902644691452,0.8595966779369787
+ul1_avg_usage_volatility,EXCLUDE,Fill-rate leakage — +86pp gap persists in late sprints (+85pp),0.1388641010044361,0.00727934826598153,0.7407435799156765,0.8597969182253248
+ul1_pct_short_sessions,EXCLUDE,Near-zero variance — 100% same value,,,0.7408202376389421,0.8598970383694977
+ul1_avg_distinct_ips,EXCLUDE,Fill-rate leakage — +86pp gap persists in late sprints (+85pp),0.3476888301880092,-0.010624727231768279,0.7408202376389421,0.8598970383694977
+ul1_usage_data_days,EXCLUDE,Target leakage — mechanically linked to churn definition,-0.21663642174658593,-0.017679365090097397,0.7408202376389421,0.8598970383694977
+tk_total_tickets,EXCLUDE,Fill-rate leakage — +31pp gap persists in late sprints (+31pp),0.024365291998290198,-0.00932933353155708,0.7364507474128018,0.31416106262418403
+tk_cx_tickets,EXCLUDE,Fill-rate leakage — +31pp gap persists in late sprints (+31pp),0.006302723250009983,0.04308735517113053,0.7364507474128018,0.31416106262418403
+tk_tickets_internet_down,EXCLUDE,Fill-rate leakage — +31pp gap persists in late sprints (+31pp),0.06023319580250233,-0.10632000662031466,0.7364507474128018,0.31416106262418403
+tk_tickets_disconnect,EXCLUDE,Fill-rate leakage — +31pp gap persists in late sprints (+31pp),-0.037330668936678135,0.1510050060358796,0.7364507474128018,0.31416106262418403
+tk_tickets_recharge_issue,EXCLUDE,Fill-rate leakage — +31pp gap persists in late sprints (+31pp),0.007854472576040036,0.009219887788934858,0.7364507474128018,0.31416106262418403
+tk_tickets_freq_disconnect,EXCLUDE,Fill-rate leakage — +31pp gap persists in late sprints (+31pp),0.039663864077530836,-0.04471363668403178,0.7364507474128018,0.31416106262418403
+tk_tickets_slow_speed,EXCLUDE,Fill-rate leakage — +31pp gap persists in late sprints (+31pp),-0.042550227303629944,-0.013293835789032834,0.7364507474128018,0.31416106262418403
+tk_avg_reopens,EXCLUDE,Fill-rate leakage — +31pp gap persists in late sprints (+31pp),0.01962136892119465,0.045963601158939264,0.7364507474128018,0.31416106262418403
+tk_avg_resolution_mins,EXCLUDE,Fill-rate leakage — +34pp gap persists in late sprints (+32pp),-0.06581822019174409,0.30433814943474435,0.7245688003066308,0.3413662636577043
+tk_tickets_within_tat,EXCLUDE,Fill-rate leakage — +31pp gap persists in late sprints (+31pp),0.026396752526115733,-0.1008450131989607,0.7364507474128018,0.31416106262418403
+tk_tickets_beyond_2x_tat,EXCLUDE,Fill-rate leakage — +31pp gap persists in late sprints (+31pp),0.03073797844154812,0.09857573040223297,0.7364507474128018,0.31416106262418403
+tk_avg_customer_calls,EXCLUDE,Near-zero variance — 100% same value,,,0.00843234955921809,0.0016139747153568265
+tk_avg_partner_calls,EXCLUDE,Very low fill rate (1%),0.05246954886474146,0.04058269630103406,0.00843234955921809,0.0016139747153568265
+tk_avg_ticket_rating,EXCLUDE,Near-zero variance — 100% same value,,,0.0,0.0
+tk_tickets_resolved,EXCLUDE,Fill-rate leakage — +31pp gap persists in late sprints (+31pp),0.03305959819284692,-0.04195002976125637,0.7364507474128018,0.31416106262418403
+speed_gap_severity,CLEAN,Passes all checks,,,0.994557301648141,0.010408237349654459
+connection_instability,EXCLUDE,Fill-rate leakage — +86pp gap persists in late sprints (+85pp),0.14918893786833373,0.009099371372499361,0.7407435799156765,0.8597969182253248
+customer_uptime_tier,REVIEW,"Fill-rate gap RECOVERABLE: overall=+55pp, late sprints=+2pp",,,0.8697585281717133,0.5506467754763354
+peak_uptime_gap,REVIEW,"Fill-rate gap RECOVERABLE: overall=+55pp, late sprints=+2pp",0.06280111157076955,0.052313708099475414,0.8697585281717133,0.5506467754763354
+tk_sla_compliance,CLEAN,Passes all checks,0.017515695119170917,-0.3710912553522906,1.0,0.0

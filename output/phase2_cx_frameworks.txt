@@ -1,0 +1,1151 @@
+======================================================================
+PHASE 2 -- CX FRAMEWORKS REPORT
+Applied to Wiom Home WiFi ISP
+======================================================================
+
+Company Context:
+  - Indian home WiFi ISP targeting lower-middle-income households
+  - 80% customer base in Delhi NCR, remainder in Mumbai and UP
+  - Partner-based installation model (field technicians are partners, not employees)
+  - 28-day billing cycle (not calendar month)
+  - ~13K NPS respondents: 46.1% Promoters, 7.9% Passives, 46.0% Detractors
+  - NPS Score: ~0 (net zero, bimodal distribution -- 42.6% score 10, 20.4% score 0)
+  - 68% Hinglish comments, 21% English, 10% Hindi Devanagari
+  - 30% first-time WiFi users (of those with known status)
+  - Overall churn rate: ~24% among Loyal customers (270d+ tenure)
+  - Detractor churn: 27.8% vs Promoter churn: 20.2%
+
+Data Sources: Phase 0 Data Profile, Phase 1 Hindi NLP, Phase 1.3 Theme Discovery
+Report Date: 2026-03-18
+
+======================================================================
+1. SERVQUAL FRAMEWORK FOR HOME INTERNET ISP
+======================================================================
+
+The SERVQUAL model measures the gap between customer expectations and
+perceived service across five dimensions. Below is the Wiom-specific
+application grounded in actual NPS verbatim data.
+
+----------------------------------------------------------------------
+1.1 TANGIBLES (Physical Facilities, Equipment, Appearance)
+----------------------------------------------------------------------
+
+What customers see and touch:
+
+  Router/Netbox Quality:
+  - Wiom provides a shared router (netbox) at no upfront cost to customers
+  - Router issues (red light blinking, power failures, cable problems)
+    affect 0.5% of comments but carry 38.5% churn -- the HIGHEST churn
+    rate of any theme
+  - Customers report: "Router me red light show ho rha h aaj tak koi
+    nhi aaya banane" (red light on router, nobody came to fix for 10 days)
+  - Device types tracked: GX, SY, TP routers -- TP-Link devices show
+    lower NPS in Sprint 1 data (NPS: -11% vs GX at +5%)
+  - Router is Wiom-owned property; threats of router recovery if recharge
+    lapses create anxiety (see Section 2.5 Reverse Quality)
+
+  App/Digital Interface:
+  - Wiom app mentioned in 0.4% of comments, 85.7% negative sentiment
+  - Issues: usage data not updating, recharge option missing, app crashes
+  - "App me exact wifi usage show hi nahi karta" -- data transparency gap
+  - Invoice download not available in-app, requiring calls for billing docs
+
+  Network Infrastructure:
+  - Fiber-based last-mile delivery through partner network
+  - Optical power tracked per customer (column in sprint data)
+  - Infrastructure not directly visible to customers but manifests through
+    signal range and stability complaints
+
+  SERVQUAL Gap Assessment (Tangibles):
+  - Expected: Working, clean hardware with indicator lights showing status
+  - Perceived: Unreliable hardware that sometimes fails without quick
+    replacement; app that does not reflect real-time usage
+  - Gap Size: MODERATE -- low frequency but catastrophic when it occurs
+  - Priority: Fix router replacement SLA (currently highest churn driver)
+
+----------------------------------------------------------------------
+1.2 RELIABILITY (Ability to Perform Promised Service Dependably)
+----------------------------------------------------------------------
+
+This is Wiom's most critical SERVQUAL dimension. Three of the top five
+NPS themes relate to reliability failures.
+
+  Uptime Consistency:
+  - Disconnection frequency: 12.3% of classified comments, 75.4% from
+    Detractors, mean NPS = 3.4, churn = 17.0%
+  - Internet down/outage: 2.7% of comments, 83.0% from Detractors,
+    mean NPS = 2.4, churn = 19.7%
+  - Customers report "hafte mein ek baar kharab ho jata hai" (breaks
+    once a week) and "15 din se internet band hai" (internet down 15 days)
+  - Disconnection + outage themes overlap in 127 comments, indicating
+    chronic instability for a subset of users
+
+  Speed Delivery:
+  - Slow speed: 16.0% of classified comments (largest single theme),
+    61.9% from Detractors, mean NPS = 4.6, churn = 17.8%
+  - Promise vs delivery gap: "Starting me bola tha 100 mbps speed hogi
+    but aaati 5 ya 6 hi h" (promised 100 Mbps, getting 5-6 Mbps)
+  - Speed complaints have a 43% positive sentiment rate, suggesting many
+    customers find speed acceptable MOST of the time but experience
+    periodic degradation
+  - P40, P50, P90 speed metrics tracked internally (separate analysis tab)
+
+  Billing Accuracy:
+  - 28-day billing cycle is the single most emotionally charged issue
+  - 1.0% of comments explicitly mention it, but 73.7% of those are
+    Detractors with mean NPS = 3.0 and churn = 31.6%
+  - RDNI (Recharge Done, No Internet): 0.1% of comments, 80% Detractors,
+    churn = 40.0% -- payment taken but service not delivered
+
+  Plan Activation Post-Recharge:
+  - Autopay issues: 0.3% of comments, 86.7% Detractors, mean NPS = 1.8
+  - "Auto payment ke baad bhi bar bar call aate hai payment kar diya kya"
+    -- even after autopay, harassment calls continue
+  - "Recharge ke baad net nahi chala" -- service does not activate after
+    payment, violating the most basic reliability promise
+
+  SERVQUAL Gap Assessment (Reliability):
+  - Expected: Internet works continuously after recharge; promised speed
+    is delivered; billing matches calendar month expectations
+  - Perceived: Frequent disconnections; speed far below promises; 28-day
+    cycle feels like overcharging; recharge sometimes does not activate
+  - Gap Size: LARGE -- reliability failures are the #1 volume driver
+    of Detractor sentiment
+  - Priority: HIGHEST. Must close speed/stability gap before any other
+    improvement can move NPS
+
+----------------------------------------------------------------------
+1.3 RESPONSIVENESS (Willingness to Help, Prompt Service)
+----------------------------------------------------------------------
+
+  Complaint Resolution TAT:
+  - Bad complaint resolution: 2.9% of comments, 85.1% Detractors,
+    mean NPS = 2.4, churn = 20.5%
+  - Customers report 48-hour+ resolution times: "complaint karte hain
+    to 48 ghante mein service milati hai"
+  - Good complaint resolution: only 0.2% of comments, but mean NPS = 9.2
+    and those customers say "within 10-15 min problem solve kr dete h"
+  - The gap between best-case (15 min) and typical-case (48h+) resolution
+    suggests inconsistency, not systemic inability
+
+  Technician Dispatch Speed:
+  - Bad technician experience: 0.3% of comments, 70.6% Detractors,
+    mean NPS = 3.4, churn = 23.5%
+  - Partner model creates accountability gaps: "technicians bolte h ate
+    hi ni h location pe" (technicians say they are coming but do not)
+  - Shifting/relocation requests take 12+ days: "We have requested for
+    shifting but we have given a time period of 12 days"
+  - Shifting theme has 66.7% churn -- effectively a termination event
+
+  Call Center Pickup:
+  - Bad call center: 0.4% of comments, 57.1% Detractors, churn = 38.1%
+  - "Customer care call nahi uthata" (call center does not pick up)
+  - "Aap kisi or number se customer care ko call nahi kar skte" --
+    restricted to registered number, creating friction for family members
+  - Good call center: 0.2% of comments, but still only 44.4% Promoters
+    (even positive mentions carry mixed sentiment)
+
+  SERVQUAL Gap Assessment (Responsiveness):
+  - Expected: Quick acknowledgment, same-day resolution for basic issues,
+    technician visit within 24 hours for hardware issues
+  - Perceived: Multi-day resolution cycles; technician no-shows; call
+    center unreachable; no proactive communication during outages
+  - Gap Size: LARGE -- second only to reliability in NPS impact
+  - Priority: HIGH. Fast resolution can partially compensate for
+    reliability failures
+
+----------------------------------------------------------------------
+1.4 ASSURANCE (Knowledge, Courtesy, Trust-Building)
+----------------------------------------------------------------------
+
+  Pricing Transparency:
+  - 28-day billing is perceived as deceptive: "ये तो उपभोक्ताओं के
+    साथ सीधा धोखा है" (this is outright fraud against consumers)
+  - Customers calculate the hidden cost: "According to you 24 day extra
+    charges received in year" (customer computed 24 extra days/year)
+  - Price increases without corresponding value: "apne 449 se 500 to
+    kar diya" (you raised from 449 to 500)
+  - Pricing perception split: 2.0% mention affordability positively
+    (mean NPS 8.6) vs 0.8% find it expensive (mean NPS 5.3)
+
+  Service Guarantees:
+  - No formal SLA communicated to customers for uptime or resolution
+  - Lack of proactive outage notifications: "No update, no intimation.
+    Why should customers raise tickets every time?"
+  - Competitor comparison: "You should inform users when service is down,
+    like @airtelindia does"
+  - No plan hold option during extended outages: "plan hold karna ka
+    bhi option nhi hai"
+
+  Data Security/Privacy:
+  - App security concern raised: "es app me bilkul bhi security nhi"
+    (this app has no security at all)
+  - Phone number privacy noted in Google Form surveys ("phone number
+    goptaniy rakha jayega" -- phone number will be kept confidential)
+  - Low salience overall -- security is not a top-of-mind concern for
+    this customer segment compared to basic service reliability
+
+  SERVQUAL Gap Assessment (Assurance):
+  - Expected: Honest pricing (calendar month = 30 days), clear service
+    guarantees, proactive communication
+  - Perceived: 28-day billing feels dishonest; no guarantees; no
+    proactive outage communication
+  - Gap Size: MODERATE-HIGH -- concentrated in billing perception
+  - Priority: MEDIUM-HIGH. 28-day issue has outsized emotional impact
+    relative to its mention frequency
+
+----------------------------------------------------------------------
+1.5 EMPATHY (Caring, Individualized Attention)
+----------------------------------------------------------------------
+
+  Hindi-First Support:
+  - 68.3% of NPS comments are in Hinglish, 10% in Hindi Devanagari
+  - NPS survey questions are bilingual (Hindi + English)
+  - Support interactions appear to happen in Hindi/Hinglish based on
+    customer quotes about call center conversations
+  - This is a baseline met -- not a differentiator but table stakes
+
+  Understanding Financial Constraints:
+  - Target segment is lower-middle-income; affordability is the #1
+    positive driver (mean NPS 8.6, lowest churn at 6.4%)
+  - "Wiom internet middle class logo ke liye bhot acha hai or budget
+    me bhi hai" (Wiom is great for middle class, fits the budget)
+  - 30% are first-time WiFi users -- digital inclusion is real
+  - Yet: "jinko financial koi problem h wo yah use kr sakta h" (those
+    with financial problems can use this) -- positioning as fallback,
+    not aspiration
+  - Price sensitivity means even Rs. 20 coupon value is noticed: "jyada
+    se jyada 20 rs ka coupon milta hai 20rs main kya hota h"
+
+  Flexible Payment:
+  - Cash and online payment modes tracked (column in sprint data)
+  - Autopay available but unreliable (see 1.2 Reliability)
+  - No EMI or split-payment option visible in data
+  - No plan hold during financial hardship -- missed recharge triggers
+    router recovery threats
+
+  SERVQUAL Gap Assessment (Empathy):
+  - Expected: Flexibility during financial difficulties, understanding
+    that every rupee matters, patient support in local language
+  - Perceived: Language support adequate; pricing affordable but 28-day
+    cycle and router threats feel coercive; no financial flexibility
+  - Gap Size: MODERATE -- language is right but policies feel rigid
+  - Priority: MEDIUM. Introduce pause/hold mechanisms
+
+----------------------------------------------------------------------
+1.6 SERVQUAL SUMMARY: WIOM GAP PRIORITIZATION
+----------------------------------------------------------------------
+
+  Dimension       | Gap Size     | NPS Impact | Churn Impact | Priority
+  ----------------+--------------+------------+--------------+---------
+  Reliability     | LARGE        | HIGHEST    | HIGH         | 1
+  Responsiveness  | LARGE        | HIGH       | HIGH         | 2
+  Assurance       | MODERATE-HIGH| MODERATE   | HIGH (28-day)| 3
+  Tangibles       | MODERATE     | LOW (freq) | HIGHEST (per)| 4
+  Empathy         | MODERATE     | LOW-MOD    | MODERATE     | 5
+
+  Key Insight: Reliability and Responsiveness together account for
+  ~58% of all classified Detractor comments. Closing these two gaps
+  would shift the largest volume of customers toward Promoter territory.
+
+
+======================================================================
+2. KANO MODEL FOR HOME INTERNET
+======================================================================
+
+The Kano model classifies features by their relationship to customer
+satisfaction. For Wiom's lower-middle-income segment:
+
+----------------------------------------------------------------------
+2.1 MUST-BE QUALITIES (Expected, Absence Causes Dissatisfaction)
+----------------------------------------------------------------------
+
+These features do NOT increase satisfaction when present -- they only
+cause dissatisfaction when absent. Their absence is catastrophic.
+
+  1. Internet works after recharge
+     - RDNI (Recharge Done No Internet) has 40% churn, mean NPS 1.4
+     - Violating this is the single most damaging service failure
+     - "Recharge ke baad net nahi chala" -- breaks the fundamental
+       transactional promise
+
+  2. Router powers on and stays on
+     - Router device issues: 38.5% churn, mean NPS 3.1
+     - "Red light blink problem" -- customer cannot self-diagnose
+     - Hardware failure creates complete service blackout
+
+  3. Basic connectivity (internet connects to devices)
+     - General negative theme (unspecified issues): 27.3% churn
+     - "Internet kaam hi nahi karta" (internet does not work at all)
+     - Below this threshold, nothing else matters
+
+  4. Recharge/payment can be completed
+     - Autopay failures: 86.7% Detractors, mean NPS 1.8
+     - "App me recharge option nahi milta" (recharge option missing in app)
+     - Blocking the payment = blocking the service
+
+  5. Service available in customer's area after installation
+     - Shifting/relocation: 66.7% churn, 100% Detractors
+     - Once installed, service must remain available at that location
+
+----------------------------------------------------------------------
+2.2 ONE-DIMENSIONAL QUALITIES (More = Better, Linear Satisfaction)
+----------------------------------------------------------------------
+
+Satisfaction scales proportionally with performance. These are the
+battleground features where improvement directly lifts NPS.
+
+  1. Download/upload speed
+     - Largest theme by volume (16.0% of classified comments)
+     - Speed satisfaction is linear: fast = NPS 8.5, slow = NPS 4.6
+     - "Good speed" theme: 80.6% Promoters vs "slow speed": 61.9%
+       Detractors
+     - Every Mbps improvement moves the needle
+
+  2. Uptime percentage (stability)
+     - Disconnection frequency: 75.4% Detractors when mentioned
+     - Good connectivity correlates with general positive sentiment
+       (94% positive, NPS 8.1)
+     - Not binary (Must-Be) but graduated -- customers tolerate
+       occasional drops but not weekly disruptions
+
+  3. Complaint resolution speed
+     - Bad resolution: NPS 2.4; Good resolution: NPS 9.2
+     - Linear relationship: 15-minute fixes create promoters, 48-hour
+       fixes create detractors
+     - "Within 10-15 min problem solve kr dete h" vs "5 din se internet
+       band hai solution nahi kar rahe hai"
+
+  4. WiFi signal range (coverage within home)
+     - Range complaints: 3.1% of comments, 60.9% Detractors
+     - "Ek room se doosre room tak nahi ja pati hai" (signal does not
+       reach from one room to another)
+     - More range = more satisfaction, linearly
+
+  5. Price-to-value ratio
+     - Affordable perception: NPS 8.6, 6.4% churn
+     - Expensive perception: NPS 5.3, 28.9% churn
+     - Value for money is relative to delivered quality
+
+----------------------------------------------------------------------
+2.3 ATTRACTIVE QUALITIES (Delighters, Unexpected Positives)
+----------------------------------------------------------------------
+
+These create disproportionate satisfaction when present but do NOT
+cause dissatisfaction when absent.
+
+  1. Coupons/rewards/discounts
+     - Mentioned positively: "hamen coupons bhi milte hain, itna sab
+       kuchh kaun deta hai" (we get coupons too, who gives all this)
+     - Discount on autopay recharge mentioned as positive surprise
+     - Low absolute value (Rs. 20) but high perceived value for segment
+
+  2. Free WiFi roaming (connect from any Wiom router)
+     - "Additional benefit of wifi connect from any wiom router"
+     - Unique feature vs competitors -- portable WiFi access
+     - Not expected, so creates delight when discovered
+
+  3. Proactive outage alerts
+     - Currently ABSENT -- but would delight if implemented
+     - Customer explicitly asked for it: "You should inform users when
+       service is down, like @airtelindia does"
+     - Would reduce call center load AND increase trust simultaneously
+
+  4. OTT/streaming content access
+     - 0.4% of comments mention OTT; currently a gap vs JioFiber
+     - "500 me agar tv+ ott hona chahiye tha to or bhi behtr hota"
+     - Would be attractive at current price points
+     - Risk: could become One-Dimensional if competitors make it standard
+
+  5. No upfront hardware cost (free router)
+     - "Ye free lag jaata hai bas recharge ke paise dene hote hai"
+     - "No initial big amount process" -- cited as reason for high NPS
+     - Removes adoption barrier for lower-income households
+
+  6. Referral program
+     - Promoters actively recommend: "apne YouTube channel par recommend
+       bhi kiya" and "apne doshton ko wiom wifi internet lagwane"
+     - Formalizing referral rewards would amplify organic advocacy
+
+----------------------------------------------------------------------
+2.4 INDIFFERENT QUALITIES (No Impact on Satisfaction)
+----------------------------------------------------------------------
+
+These features neither increase nor decrease satisfaction regardless
+of their presence. Investment here yields no NPS return.
+
+  1. Brand aesthetics/visual identity
+     - Not mentioned in any of 5,507 customer comments
+     - Customer segment cares about function, not brand polish
+     - Generic "good" tags in Wiom's coding include aesthetics but
+       customers never mention it
+
+  2. Marketing messages/campaigns
+     - No comments reference Wiom advertising or marketing
+     - Customers evaluate based on lived experience only
+     - Pre-purchase marketing is irrelevant to post-purchase NPS
+
+  3. App visual design (vs functionality)
+     - When app is mentioned, it is always about function (crashes,
+       data not updating) never about UI appearance
+     - "App me recharge option nahi milta" -- function, not design
+
+  4. Multiple recharge plan tiers (variety)
+     - "Different types of internet packs are not available" -- mentioned
+       by exactly 1 customer in sample data
+     - Current single-plan simplicity may actually be a strength for
+       this segment
+
+----------------------------------------------------------------------
+2.5 REVERSE QUALITIES (Presence Causes Dissatisfaction)
+----------------------------------------------------------------------
+
+These features REDUCE satisfaction. They are things Wiom does that
+customers actively resent.
+
+  1. 28-day billing cycle (vs expected 30-day calendar month)
+     - 73.7% Detractors among those who mention it, churn = 31.6%
+     - Perceived as deceptive: "ये तो उपभोक्ताओं के साथ सीधा धोखा है"
+     - Customers calculate the annual overcharge: 13 billing cycles
+       per year instead of 12 = extra month's payment
+     - Even Promoters (NPS 10) complain: "aap chahte to 28 days 30
+       days kar sakte hana taki customer acha lagta"
+     - This is the clearest Reverse Quality in the data
+
+  2. Hidden charges / unexpected costs
+     - Price increases without notice: "449 se 500 to kar diya"
+     - "Koi extra charges nhi" is cited as a POSITIVE -- implying
+       that extra charges elsewhere are a known negative
+     - Any opacity in billing becomes a reverse quality for this
+       price-sensitive segment
+
+  3. Router return threats upon non-recharge
+     - "1 month richarge nhi krte to router mang lete h ek dum se"
+       (if you miss one month recharge, they suddenly demand the router)
+     - Creates anxiety and coercive relationship
+     - Transforms the "free router" attractive quality into a
+       threatening liability
+
+  4. Harassment calls for recharge
+     - "Bar bar presan karte hai auto payment ke bad bi bar bar call
+       aate hai payment kar diya kya" (they harass even after autopay)
+     - Aggressive collection behavior on a Rs. 500 product damages
+       trust disproportionately
+
+----------------------------------------------------------------------
+2.6 KANO CATEGORY SUMMARY
+----------------------------------------------------------------------
+
+  Category       | Features                  | NPS Impact    | Action
+  ---------------+---------------------------+---------------+---------
+  Must-Be        | Post-recharge activation, | No upside,    | Monitor
+                 | router function, basic    | catastrophic  | and
+                 | connectivity, payment     | downside      | maintain
+                 | works, area coverage      |               |
+  ---------------+---------------------------+---------------+---------
+  One-Dimensional| Speed, uptime, resolution | Linear NPS    | Invest
+                 | speed, range, value ratio | improvement   | heavily
+  ---------------+---------------------------+---------------+---------
+  Attractive     | Coupons, WiFi roaming,    | Delight when  | Deploy
+                 | proactive alerts, OTT,    | present, no   | selectively
+                 | free router, referral     | harm if absent| for lift
+  ---------------+---------------------------+---------------+---------
+  Indifferent    | Brand aesthetics, mktg,   | No effect     | Do not
+                 | app visual design, plan   |               | invest
+                 | variety                   |               |
+  ---------------+---------------------------+---------------+---------
+  Reverse        | 28-day billing, hidden    | Actively      | Eliminate
+                 | charges, router threats,  | destroys      | or
+                 | harassment calls          | satisfaction  | redesign
+
+
+======================================================================
+3. CUSTOMER EFFORT SCORE (CES) MAPPING
+======================================================================
+
+CES measures how much effort customers must expend to get value from
+the service. Lower effort = higher loyalty. Mapped to Wiom touchpoints:
+
+----------------------------------------------------------------------
+3.1 LOW EFFORT TOUCHPOINTS
+----------------------------------------------------------------------
+
+  1. Initial Installation
+     - Partner-based model means customer does not need to self-install
+     - "Jaldi installation ho gaya" (quick installation)
+     - No upfront cost reduces decision effort
+     - Effort Level: LOW
+     - NPS Implication: Positive, but rarely mentioned (table stakes)
+
+  2. Routine Internet Usage (when working)
+     - When service is stable, effort is zero -- WiFi is background
+     - "24 ghante service, fast speed" -- it just works
+     - No configuration or management needed by customer
+     - Effort Level: VERY LOW
+     - NPS Implication: Drives general_positive theme (18.2% of comments)
+
+  3. Basic Recharge (online/UPI)
+     - "Easy recharge method" -- UPI integration noted positively
+     - Simple recurring transaction
+     - Effort Level: LOW
+     - NPS Implication: Neutral -- expected to work
+
+  4. WiFi Roaming (connecting at other Wiom locations)
+     - Automatic connection to other Wiom routers in range
+     - "Additional benefit of wifi connect from any wiom router"
+     - Effort Level: VERY LOW (automatic)
+     - NPS Implication: Delighter (Attractive quality)
+
+----------------------------------------------------------------------
+3.2 HIGH EFFORT TOUCHPOINTS
+----------------------------------------------------------------------
+
+  1. Complaint Registration and Follow-Up
+     - Must call customer care from registered number only
+     - "Aap kisi or number se customer care ko call nahi kar skte"
+     - Call center often unreachable: "customer care call nahi uthata"
+     - Repeated follow-up required: "bar bar customer support ko bolna
+       pdta h" (have to tell customer support again and again)
+     - Effort Level: VERY HIGH
+     - NPS Implication: complaint_resolution_bad = NPS 2.4, churn 20.5%
+
+  2. Outage Self-Diagnosis and Resolution
+     - No proactive alerts -- customer discovers outage themselves
+     - Must figure out if problem is router, network, or area-wide
+     - "Red light blink" -- customer cannot interpret device indicators
+     - Must initiate contact with Wiom (high effort to even start)
+     - Effort Level: VERY HIGH
+     - NPS Implication: internet_down_outage = NPS 2.4, churn 19.7%
+
+  3. Getting Invoice/Billing Documentation
+     - "Invoice which is not downloadable we have to call everytime"
+     - No self-serve billing portal
+     - Effort Level: HIGH
+     - NPS Implication: Low frequency but impacts trust/assurance
+
+  4. Shifting/Relocation of Connection
+     - 12+ day timeline for a shifting request
+     - 66.7% churn -- most customers give up
+     - "Shifting not feasible" coded as a reason category
+     - Effort Level: EXTREMELY HIGH (often impossible)
+     - NPS Implication: Effectively a termination event
+
+  5. Escalation Beyond First-Level Support
+     - "Solution received after your Delhi office involved" -- had to
+       escalate to HQ for a router replacement
+     - No clear escalation path visible to customers
+     - Effort Level: HIGH
+     - NPS Implication: Delays compound frustration exponentially
+
+  6. Recharge During Service Interruption
+     - If service has lapsed, pressure to recharge immediately
+     - "Sudden karna padta h recharge" (have to recharge suddenly)
+     - No grace period or plan hold option
+     - Effort Level: MODERATE-HIGH (psychological pressure)
+     - NPS Implication: Creates coercive dynamic
+
+  7. Autopay Setup and Management
+     - Autopay does not always work: payment deducted but service not
+       activated
+     - "Auto payment is enabled [but] I have to make payment manually"
+     - Effort Level: HIGH (when it fails, defeating the purpose)
+     - NPS Implication: autopay_payment_mode = NPS 1.8
+
+----------------------------------------------------------------------
+3.3 CES IMPLICATIONS BY JOURNEY STAGE
+----------------------------------------------------------------------
+
+  Journey Stage         | Avg Effort | Key Friction               | Impact
+  ----------------------+------------+----------------------------+--------
+  Booking/Discovery     | LOW        | Minimal -- partner handles | Neutral
+  Installation          | LOW        | Quick, free installation   | Positive
+  Free Trial            | LOW        | Service works, exploring   | Positive
+  First Recharge        | LOW-MOD    | Learning payment process   | Neutral
+  Ongoing Usage         | VERY LOW   | Invisible when working     | Positive
+  Complaint Filing      | VERY HIGH  | Unreachable call center    | Negative
+  Outage Experience     | VERY HIGH  | No alerts, self-diagnosis  | Negative
+  Recharge Renewal      | LOW-MOD    | 28-day cycle confusion     | Negative
+  Billing/Invoice       | HIGH       | No self-serve portal       | Negative
+  Shifting/Relocation   | EXTREME    | 12+ day timeline           | Churn
+  Churn Decision        | LOW        | Just stop recharging       | --
+
+  Critical Insight: The effort curve is U-shaped. Onboarding is low
+  effort, steady usage is low effort, but any EXCEPTION (complaint,
+  outage, relocation) requires disproportionately high effort. This
+  creates a "works until it doesn't" experience where customers feel
+  trapped when problems arise.
+
+  CES Priority: Reduce effort at complaint, outage, and billing
+  touchpoints. These are where customers are ALREADY upset -- adding
+  effort on top of a problem multiplies dissatisfaction.
+
+
+======================================================================
+4. JOBS-TO-BE-DONE (JTBD) FRAMEWORK
+======================================================================
+
+What "job" are Wiom customers "hiring" home WiFi to accomplish?
+
+----------------------------------------------------------------------
+4.1 FUNCTIONAL JOBS
+----------------------------------------------------------------------
+
+  1. Enable children's education (online classes, homework, research)
+     - "I am a student he must help me for online study"
+     - Education is the primary justification for internet expenditure
+       in lower-middle-income households
+     - Outages during online classes create acute frustration
+     - Job Metric: Uptime during 9am-3pm (school hours)
+     - Failure Mode: Disconnection during exams or live classes
+
+  2. Access entertainment (streaming, social media, gaming)
+     - "YouTube", "Netflix" mentioned in speed context
+     - "Jab game play karta hai wrost network" (worst network when gaming)
+     - Entertainment is the high-bandwidth demand driver
+     - Job Metric: Sustained streaming-grade speed (5+ Mbps)
+     - Failure Mode: Buffering, slow downloads
+
+  3. Support work-from-home (WFH)
+     - "Bhot preshani hoti h work from home krne me" (WFH creates
+       problems with this internet)
+     - "Agar meeting bgera hoti ha to cancel ho jati ha" (meetings
+       get cancelled)
+     - WFH increasingly common post-COVID even in this segment
+     - Job Metric: Stable upload speed for video calls, low latency
+     - Failure Mode: Drops during video meetings
+
+  4. Enable family communication (WhatsApp, video calls)
+     - Base-level internet job for the segment
+     - WhatsApp works even on poor connections, so this job is usually
+       fulfilled
+     - Job Metric: Basic connectivity (any speed)
+     - Failure Mode: Complete outage only
+
+  5. Replace expensive mobile data
+     - "Mobile mein bina data wale recharge plan bahut saste nahi hote"
+       (mobile data-less recharge plans are not cheap)
+     - WiFi hired specifically to offload mobile data costs
+     - Job Metric: Cost per GB lower than mobile data
+     - Failure Mode: When WiFi is down, mobile data cost resumes
+
+----------------------------------------------------------------------
+4.2 EMOTIONAL JOBS
+----------------------------------------------------------------------
+
+  1. Feel connected and not left behind
+     - 30% are first-time WiFi users -- internet access is a step
+       toward digital inclusion
+     - "Har koi lagwa sakta hai...sabse badi khaasiyat yahi hai"
+       (anyone can get it...that is the best feature)
+     - Emotional Job: Not being digitally excluded from modern life
+
+  2. Feel like a good provider for family
+     - WiFi is a household investment justified by children's education
+     - "Middle class logo ke liye bhot acha hai" (great for middle class)
+     - Emotional Job: Providing opportunities for family advancement
+
+  3. Feel secure and not cheated
+     - 28-day billing triggers "dhoka" (fraud) language
+     - "Sab kuch free of cost hai koi extra charges nhi" -- the
+       ABSENCE of hidden charges is explicitly celebrated
+     - Emotional Job: Trust that the provider is honest and fair
+
+  4. Feel in control of household expenses
+     - Prepaid model gives control: "jab man kare tab recharge karo"
+       (recharge when you want)
+     - Autopay failures and router threats undermine this control
+     - Emotional Job: Financial autonomy and predictability
+
+----------------------------------------------------------------------
+4.3 SOCIAL JOBS
+----------------------------------------------------------------------
+
+  1. Status of having WiFi at home
+     - In lower-income neighborhoods, home WiFi signals modernity
+     - "Apke is wifi ko har koi lagwa sakta hai" -- recommending to
+       neighbors and relatives is a social act
+     - Social Job: Being seen as progressive and modern
+
+  2. Sharing WiFi with neighbors/extended family
+     - Multiple devices tracked per customer (devices on 2.4G, 5G)
+     - Shared usage means the customer's reputation is tied to the
+       service quality
+     - Social Job: Being a helpful neighbor/family member
+
+  3. Recommending to community (word-of-mouth)
+     - "Apne YouTube channel par recommend bhi kiya" -- customers
+       publicly advocate for Wiom
+     - "Maine apne rishte dar aur doshton ko wiom wifi internet
+       lagwane" -- actively recruiting for Wiom
+     - Social Job: Being a knowledgeable advisor in the community
+     - Risk: Service failures ALSO get shared socially, amplifying
+       negative WOM in the same tight-knit communities
+
+----------------------------------------------------------------------
+4.4 JTBD COMPETITIVE LANDSCAPE
+----------------------------------------------------------------------
+
+  Job                   | Wiom     | JioFiber     | Airtel Xstream
+  ----------------------+----------+--------------+----------------
+  Affordable internet   | STRONG   | Moderate     | Weak (premium)
+  No upfront cost       | STRONG   | Weak (setup) | Weak (setup)
+  Reliable uptime       | WEAK     | Strong       | Strong
+  Fast speed            | MODERATE | Strong       | Strong
+  OTT bundling          | ABSENT   | Strong       | Strong
+  Proactive support     | ABSENT   | Moderate     | Moderate
+  Hindi-first support   | STRONG   | Moderate     | Moderate
+
+  Wiom's JTBD Advantage: Affordability + zero upfront cost for a
+  segment that cannot justify Rs. 1000+ monthly or installation fees.
+  The job is "affordable, always-on internet" -- Wiom wins on affordable
+  but loses on always-on.
+
+
+======================================================================
+5. JOURNEY-TOUCHPOINT-METRIC MATRIX
+======================================================================
+
+  Stage          | Touchpoint            | Snowflake Table     | Key Metric                    | NPS Impact Hypothesis
+  ---------------+-----------------------+---------------------+-------------------------------+------------------------------------------
+  Booking        | Partner/referral      | DIM_CUSTOMER or     | Time from inquiry to booking  | Minimal direct NPS impact; sets
+                 | conversation, app     | customer acquisition| (days)                        | expectations that may not be met
+                 | signup                | tables              |                               |
+  ---------------+-----------------------+---------------------+-------------------------------+------------------------------------------
+  Installation   | Technician visit,     | install_date (in    | Install-to-activation time    | Fast install = early promoter;
+                 | router setup,         | sprint dump data),  | (hours), first connection     | delayed install = immediate
+                 | first connection      | DIM_CUSTOMER        | success rate                  | detractor before usage begins
+  ---------------+-----------------------+---------------------+-------------------------------+------------------------------------------
+  Free Trial     | Initial usage         | FCT_RECHARGE or     | Days from install to first    | Trial experience sets anchor;
+                 | period, speed test,   | usage/session       | recharge, data consumed in    | good trial + conversion =
+                 | exploration           | tables              | trial, speed achieved (P50)   | long-term promoter
+  ---------------+-----------------------+---------------------+-------------------------------+------------------------------------------
+  First          | Payment via app/UPI/  | FCT_RECHARGE,       | Recharge success rate,        | Payment friction = immediate
+  Recharge       | cash, plan            | payment mode        | days between trial end and    | churn risk; smooth first
+                 | activation            | column in sprint    | first recharge, payment       | recharge = retention signal
+                 |                       | data                | method (cash vs online)       |
+  ---------------+-----------------------+---------------------+-------------------------------+------------------------------------------
+  Ongoing        | Daily internet use,   | FCT_USAGE or        | Avg daily uptime %, P50      | Core NPS driver: speed +
+  Service        | speed experience,     | network quality     | speed, disconnection count    | stability = satisfaction;
+                 | device connectivity   | tables              | per sprint, devices connected | degradation = dissatisfaction
+  ---------------+-----------------------+---------------------+-------------------------------+------------------------------------------
+  Complaint      | Call center call,     | FCT_TICKETS or      | Ticket volume, TAT (hours),   | Bad resolution = NPS 2.4;
+                 | WhatsApp message,     | CRM ticket tables,  | first-call resolution rate,   | good resolution = NPS 9.2;
+                 | app ticket            | tickets_before_3m,  | repeat ticket rate within     | highest leverage touchpoint
+                 |                       | tickets_post_sprint | 7 days                        | for recovery
+  ---------------+-----------------------+---------------------+-------------------------------+------------------------------------------
+  Outage         | Service interruption, | FCT_OUTAGE or       | Outage duration (hours),      | Outage = NPS 2.4, churn 19.7%;
+                 | router failure,       | network monitoring  | notification sent Y/N,        | proactive alerts would flip
+                 | area-level issue      | tables, optical     | time to resolution, outage    | this touchpoint from negative
+                 |                       | power tracking      | frequency per customer/month   | to neutral
+  ---------------+-----------------------+---------------------+-------------------------------+------------------------------------------
+  Recharge       | 28-day cycle          | FCT_RECHARGE,       | Recharges per year, days      | 28-day = NPS 3.0, churn 31.6%;
+  Cycle          | renewal, autopay,     | Number of recharges | between consecutive           | late recharge = service gap =
+                 | lapse/grace period    | before end of       | recharges, recharge-to-       | frustration; consistent
+                 |                       | sprint              | activation lag (minutes)      | rechargers = stable NPS
+  ---------------+-----------------------+---------------------+-------------------------------+------------------------------------------
+  Churn          | Non-recharge,         | Active/Churn        | Days since last recharge,     | Churn is silent: customer
+  Decision       | competitor switch,    | overall, churn      | competitor availability in    | simply stops recharging;
+                 | relocation, router    | recharge bucket,    | area, last NPS score, last    | last NPS score is strongest
+                 | return                | how many recharges  | complaint theme, tenure at    | predictor; churn rate rises
+                 |                       | post sprint date    | churn                         | from 20% (Promoter) to 28%
+                 |                       |                     |                               | (Detractor)
+
+
+======================================================================
+6. HYPOTHESIZED NPS DRIVER MODEL (RANKED)
+======================================================================
+
+Based on framework analysis, theme frequency, churn correlation, and
+sentiment analysis, the following 10 drivers are ranked by expected
+impact on NPS score:
+
+  Rank | Driver                      | Framework Basis            | Direction | Evidence Strength | Estimated Impact
+  -----+-----------------------------+----------------------------+-----------+-------------------+------------------
+    1  | Internet speed (actual      | SERVQUAL Reliability,      | Positive  | STRONG            | HIGH
+       | vs promised)                | Kano One-Dimensional       |           | 877 comments,     | Each speed tier
+       |                             |                            |           | r=0.89 speed-NPS  | = ~2 NPS points
+  -----+-----------------------------+----------------------------+-----------+-------------------+------------------
+    2  | Disconnection frequency     | SERVQUAL Reliability,      | Negative  | STRONG            | HIGH
+       | (drops per sprint)          | Kano One-Dimensional       |           | 676 comments,     | Weekly drops
+       |                             |                            |           | NPS 3.4 vs 8.1    | = ~4.7 NPS loss
+  -----+-----------------------------+----------------------------+-----------+-------------------+------------------
+    3  | Complaint resolution TAT    | SERVQUAL Responsiveness,   | Negative  | STRONG            | HIGH
+       | (hours to resolve)          | CES High-Effort,           |           | NPS gap: 2.4 vs   | 15min fix = +6.8
+       |                             | Kano One-Dimensional       |           | 9.2 (6.8 spread)  | NPS vs 48h fix
+  -----+-----------------------------+----------------------------+-----------+-------------------+------------------
+    4  | 28-day billing perception   | Kano Reverse Quality,      | Negative  | MODERATE          | MODERATE-HIGH
+       | (vs 30-day expectation)     | SERVQUAL Assurance         |           | 57 comments but   | Mention = NPS
+       |                             |                            |           | 31.6% churn,      | drops to 3.0
+       |                             |                            |           | NPS 3.0           |
+  -----+-----------------------------+----------------------------+-----------+-------------------+------------------
+    5  | Price-to-quality ratio      | JTBD Functional/Emotional, | Positive  | STRONG            | MODERATE-HIGH
+       | (perceived value)           | Kano One-Dimensional       |           | Affordable=8.6    | Affordability is
+       |                             |                            |           | Expensive=5.3     | primary positive
+       |                             |                            |           | NPS, 6.4% churn   | moat
+  -----+-----------------------------+----------------------------+-----------+-------------------+------------------
+    6  | WiFi signal range           | SERVQUAL Tangibles,        | Negative  | MODERATE          | MODERATE
+       | (coverage within home)      | Kano One-Dimensional       |           | 169 comments,     | Range issue =
+       |                             |                            |           | NPS 4.6, 21.9%    | ~3.5 NPS loss
+       |                             |                            |           | churn              |
+  -----+-----------------------------+----------------------------+-----------+-------------------+------------------
+    7  | Router/hardware reliability | SERVQUAL Tangibles,        | Negative  | MODERATE          | MODERATE
+       | (device uptime)             | Kano Must-Be               |           | 26 comments but   | When it fails,
+       |                             |                            |           | 38.5% churn,      | catastrophic
+       |                             |                            |           | NPS 3.1            | impact
+  -----+-----------------------------+----------------------------+-----------+-------------------+------------------
+    8  | Proactive outage            | CES High-Effort Gap,       | Positive  | THEORETICAL       | MODERATE
+       | communication               | SERVQUAL Responsiveness    |           | Currently absent; | Would reduce
+       |                             |                            |           | customer demand    | complaint volume
+       |                             |                            |           | for it exists      | and effort score
+  -----+-----------------------------+----------------------------+-----------+-------------------+------------------
+    9  | Coupons/rewards/discounts   | Kano Attractive,           | Positive  | MODERATE          | LOW-MODERATE
+       |                             | JTBD Emotional             |           | Mentioned as      | Small $ but high
+       |                             |                            |           | delight factor     | symbolic value
+       |                             |                            |           | by promoters       | for the segment
+  -----+-----------------------------+----------------------------+-----------+-------------------+------------------
+   10  | First-time WiFi user        | JTBD Social/Emotional,     | Positive  | MODERATE          | LOW-MODERATE
+       | (digital inclusion effect)  | SERVQUAL Empathy           |           | First-time users   | Higher baseline
+       |                             |                            |           | have different     | gratitude but
+       |                             |                            |           | expectation anchor | lower tolerance
+       |                             |                            |           | (Sprint 1 NPS=6.3)| for sustained
+       |                             |                            |           |                    | failure
+
+  Model Summary:
+  - Drivers 1-3 (speed, stability, resolution) are OPERATIONAL and
+    account for ~50% of all classified comment volume
+  - Driver 4 (28-day billing) is STRUCTURAL and requires business
+    model decision
+  - Driver 5 (value ratio) is Wiom's PRIMARY MOAT and must be protected
+  - Drivers 6-7 are INFRASTRUCTURE dependent
+  - Drivers 8-10 are ENHANCEMENT opportunities
+
+
+======================================================================
+7. TENURE-DEPENDENT JOURNEY EMPHASIS
+======================================================================
+
+What matters most at each stage of the customer lifecycle:
+
+----------------------------------------------------------------------
+7.1 ONBOARDING (0-15 days) | n=25, Mean NPS=7.2, Median=8.0
+----------------------------------------------------------------------
+
+  What Matters Most:
+  - First impression of speed and connectivity
+  - Router placement quality (determines range for entire relationship)
+  - App setup and first recharge experience
+  - Understanding billing cycle and plan details
+
+  Key Frameworks:
+  - Kano Must-Be: Does internet work out of the box? (Pass/Fail)
+  - JTBD: Validating the decision to switch from mobile data
+  - CES: Should be zero effort -- partner handles everything
+
+  Critical Metrics:
+  - Time from install to first successful connection (minutes)
+  - Speed achieved in first 24 hours vs plan promise
+  - First recharge conversion rate (trial -> paid)
+
+  Risk Factors:
+  - 46.7% negative sentiment in Onboarding -- concerning given n=25
+  - 60% comment fill rate (highest of any bucket) -- new users are
+    vocal, both positively and negatively
+  - If first experience is bad, customer never returns to Promoter
+
+  Priority Actions:
+  - Ensure router placement optimizes range at installation
+  - Speed test at installation with customer present
+  - Clear explanation of 28-day billing before first recharge
+  - 48-hour follow-up call/message to check satisfaction
+
+----------------------------------------------------------------------
+7.2 EARLY LIFE (16-60 days) | n=125, Mean NPS=6.4, Median=9.0
+----------------------------------------------------------------------
+
+  What Matters Most:
+  - Consistency of experience after honeymoon period
+  - First complaint experience (if any issue arises)
+  - First recharge cycle completion (understanding 28-day billing)
+  - Speed stability across different times of day
+
+  Key Frameworks:
+  - Kano One-Dimensional: Speed and stability now measured daily
+  - SERVQUAL Reliability: "Does it keep working like day 1?"
+  - CES: First complaint experience sets long-term expectation
+
+  Critical Metrics:
+  - Uptime % in first 60 days
+  - Number of complaints in first 60 days
+  - Second recharge conversion rate (first cycle -> second cycle)
+  - Speed degradation from week 1 to week 4
+
+  Risk Factors:
+  - 37.7% negative sentiment (better than onboarding)
+  - Median NPS of 9.0 but mean of 6.4 -- highly bimodal
+  - First billing cycle is make-or-break for 28-day perception
+  - 0% churn recorded (sample bias -- too early for churn signal)
+
+  Priority Actions:
+  - Proactive check-in before first recharge date
+  - Explain 28-day cycle clearly with next due date
+  - Monitor speed delivery vs plan promise in first 30 days
+  - Fast-track any Early Life complaints (golden period for recovery)
+
+----------------------------------------------------------------------
+7.3 ESTABLISHING (61-120 days) | n=108, Mean NPS=6.1, Median=7.5
+----------------------------------------------------------------------
+
+  What Matters Most:
+  - Service consistency under varying conditions (weather, load)
+  - Value perception after 3-4 billing cycles (price fatigue?)
+  - Competitor awareness and comparison
+  - Accumulating small frustrations (range issues, speed dips)
+
+  Key Frameworks:
+  - SERVQUAL Assurance: Trust in pricing fairness solidifies here
+  - Kano Attractive: Coupons and rewards have most impact at this stage
+    (retention tool during evaluation window)
+  - JTBD Emotional: "Am I getting what I'm paying for?"
+
+  Critical Metrics:
+  - Consecutive on-time recharges (loyalty signal)
+  - Complaint frequency trend (increasing = risk)
+  - Competitor mentions in NPS comments (20 comments total)
+  - Speed consistency score (variance, not just average)
+
+  Risk Factors:
+  - NPS declining from 7.2 (Onboarding) to 6.1 (Establishing)
+  - 28.8% negative sentiment (better than loyal, interestingly)
+  - This is the "evaluation" window where customers actively compare
+  - 0% churn recorded (still too early for full cycle data)
+
+  Priority Actions:
+  - Targeted coupon/discount at 90-day mark (retention incentive)
+  - Speed audit at 60-day mark to catch degradation
+  - Competitor pre-emption messaging if JioFiber/Airtel available
+  - Celebrate "3 months with Wiom" milestone in app
+
+----------------------------------------------------------------------
+7.4 STEADY STATE (121-270 days) | n=186, Mean NPS=5.7, Median=7.0
+----------------------------------------------------------------------
+
+  What Matters Most:
+  - Chronic issue resolution (recurring problems now entrenched)
+  - Price/value re-evaluation (6-9 months of paying Rs. 500/cycle)
+  - Support experience accumulation (every interaction remembered)
+  - Network infrastructure quality in their specific location
+
+  Key Frameworks:
+  - SERVQUAL Responsiveness: By now, customer has likely needed support
+    at least once. That experience defines their NPS
+  - Kano Reverse: 28-day billing irritation COMPOUNDS over time (customer
+    has now "lost" ~12-18 extra days cumulatively)
+  - CES: Effort memories become crystallized opinions
+
+  Critical Metrics:
+  - Total tickets raised in last 3 months (tracked in sprint data)
+  - Recharge regularity (gaps = churn intent)
+  - Optical power readings (network health proxy)
+  - NPS trend vs previous survey (improving or declining?)
+
+  Risk Factors:
+  - NPS continues declining: 5.7 mean (lowest of any bucket)
+  - 43.1% negative sentiment
+  - Customers now have clear reference points for comparison
+  - 0% churn recorded (sample may not capture full lifecycle)
+
+  Priority Actions:
+  - Proactive health check for customers with >2 tickets in 90 days
+  - Loyalty recognition (6-month milestone, small reward)
+  - Address chronic issues with targeted infrastructure fixes
+  - Survey-triggered intervention for Detractors (closed-loop program)
+
+----------------------------------------------------------------------
+7.5 LOYAL (270+ days) | n=12,601, Mean NPS=5.9, Median=8.0
+----------------------------------------------------------------------
+
+  What Matters Most:
+  - Sustained service quality (no degradation over time)
+  - Feeling valued as a long-term customer (not taken for granted)
+  - Price competitiveness as market evolves
+  - Cumulative trust vs cumulative frustration balance
+
+  Key Frameworks:
+  - JTBD Social: These are the customers who recommend (or warn against)
+    Wiom in their communities -- their NPS IS the growth engine
+  - SERVQUAL Empathy: Long-tenure customers expect recognition
+  - Kano One-Dimensional: All dimensions now fully experienced and
+    evaluated; no more surprises
+
+  Critical Metrics:
+  - Churn rate: 24.3% for this bucket (highest because lifecycle
+    exposure allows churn to manifest)
+  - Referral activity (YouTube mentions, community recommendations)
+  - Recharge consistency (monthly pattern)
+  - Cumulative ticket history vs NPS score
+
+  Risk Factors:
+  - 48.4% negative sentiment (highest of any tenure bucket)
+  - 96.6% of the sample is in this bucket -- this IS Wiom's customer base
+  - Bimodal distribution: median 8.0 but mean 5.9 -- many 0s AND 10s
+  - Competitor switching most likely here (sunk cost is zero)
+  - Billing_28day theme is 69.8% concentrated in 6+ month tenure --
+    the irritation GROWS over time
+
+  Priority Actions:
+  - Loyalty program with meaningful benefits (not Rs. 20 coupons)
+  - Annual price review communication (transparent pricing)
+  - Priority support queue for 12+ month customers
+  - Win-back program for churned loyal customers (27.8% of Detractors,
+    20.2% of Promoters -- even Promoters churn)
+  - Closed-loop NPS program: call every Detractor within 48 hours
+
+----------------------------------------------------------------------
+7.6 TENURE JOURNEY SUMMARY
+----------------------------------------------------------------------
+
+  Tenure Stage    | Mean NPS | Key Focus          | Biggest Risk
+  ----------------+----------+--------------------+---------------------
+  Onboarding      |   7.2    | First impression   | Bad install/speed
+  Early Life      |   6.4    | Consistency        | First billing shock
+  Establishing    |   6.1    | Value evaluation   | Competitor comparison
+  Steady State    |   5.7    | Chronic issues     | Accumulated frustration
+  Loyal           |   5.9    | Sustained quality  | Silent churn
+
+  Pattern: NPS DECLINES from onboarding to steady state, with a slight
+  recovery in the Loyal bucket (survivorship bias -- the most dissatisfied
+  have already churned). This is a classic "expectation correction" curve
+  where initial excitement erodes as reality sets in.
+
+  Strategic Implication: The critical intervention window is 60-180 days.
+  Customers who survive this period with positive NPS become long-term
+  assets. Those who don't are either churning or becoming vocal Detractors.
+
+
+======================================================================
+8. INDUSTRY BENCHMARKS -- HOME INTERNET NPS
+======================================================================
+
+----------------------------------------------------------------------
+8.1 GLOBAL HOME INTERNET NPS BENCHMARKS
+----------------------------------------------------------------------
+
+  Region/Provider Type        | Typical NPS Range | Notes
+  ----------------------------+-------------------+---------------------------
+  US ISPs (cable/fiber)       | -5 to +15         | Industry notoriously low;
+                              |                   | Comcast, Spectrum at bottom
+  US ISPs (fiber-only)        | +20 to +40        | Verizon Fios, Google Fiber
+                              |                   | outperform cable peers
+  European ISPs               | +10 to +30        | More competition drives
+                              |                   | higher satisfaction
+  Australian ISPs             | -10 to +15        | NBN rollout created
+                              |                   | widespread dissatisfaction
+  Telecom industry average    | +10 to +25        | Internet is typically
+  (global, all types)         |                   | the lowest-NPS segment
+  SaaS/Tech average           | +30 to +50        | For comparison -- digital
+  (global)                    |                   | products score much higher
+
+  Internet is among the lowest-NPS categories globally. It is a utility
+  that customers expect to "just work" and notice only when it fails.
+
+----------------------------------------------------------------------
+8.2 EMERGING MARKET HOME INTERNET BENCHMARKS
+----------------------------------------------------------------------
+
+  Provider/Market             | Estimated NPS | Context
+  ----------------------------+---------------+-----------------------------
+  Jio Fiber (India)           | +25 to +35    | Aggressive pricing, OTT
+                              |               | bundles, Jio ecosystem
+  Airtel Xstream (India)      | +15 to +25    | Premium positioning, better
+                              |               | SLA, higher ARPU
+  BSNL Fiber (India)          | -20 to -5     | Government ISP, poor service
+                              |               | reputation, slow resolution
+  Hathway (India)             | -10 to +5     | Legacy cable operator,
+                              |               | mixed quality
+  ACT Fibernet (India)        | +20 to +35    | Strong in South India,
+                              |               | high reliability focus
+  Regional ISPs (India)       | -15 to +10    | Fragmented, variable quality
+  Indonesia broadband         | -5 to +10     | Similar segment, price-
+                              |               | sensitive market
+  Philippines ISPs            | -15 to +5     | Infrastructure challenges
+                              |               | similar to tier-2/3 India
+  African mobile-broadband    | -10 to +10    | Emerging, unreliable infra
+  Latin America ISPs          | -5 to +15     | Mixed, improving
+
+  Note: These are estimated ranges based on industry reports and publicly
+  available data. Exact NPS figures are typically proprietary.
+
+----------------------------------------------------------------------
+8.3 WIOM'S POSITION IN CONTEXT
+----------------------------------------------------------------------
+
+  Wiom NPS: ~0 (46.1% Promoters - 46.0% Detractors)
+
+  Relative Position:
+  - BELOW Jio Fiber and Airtel Xstream (premium competitors)
+  - ABOVE BSNL and poor-performing regional ISPs
+  - AT PAR with emerging market budget ISPs and legacy cable operators
+  - COMPARABLE to Hathway-tier operators
+
+  Wiom's Unique Challenge:
+  - Bimodal distribution (42.6% score 10, 20.4% score 0) is unusual
+  - Most ISPs have a normal-ish distribution with a right or left skew
+  - Wiom's bimodality suggests two distinct experience cohorts:
+    (a) Customers with stable, well-installed connections = Promoters
+    (b) Customers with infrastructure/partner issues = Detractors
+  - This is NOT a universal service problem -- it is a CONSISTENCY problem
+
+  What "Good" Would Look Like:
+  - Target NPS: +20 to +30 (achievable with current Promoter base)
+  - Required: Convert ~15-20% of Detractors to Passives or Promoters
+  - Translates to: ~900-1,200 customers moving from 0-6 to 7+ scores
+  - Primary levers: Fix disconnection frequency and slow speed for the
+    bottom quartile of network performance
+
+  Benchmark by Churn Rate:
+  - Wiom overall churn: ~24% (Loyal bucket)
+  - Indian ISP industry average churn: 15-25% annually
+  - Budget segment churn: typically 25-35%
+  - Wiom is within range but at the higher end
+
+  Benchmark by Detractor Churn:
+  - Wiom Detractor churn: 27.8%
+  - Industry Detractor churn: typically 30-45%
+  - Wiom Promoter churn: 20.2%
+  - Industry Promoter churn: typically 5-12%
+  - CRITICAL: Wiom's Promoter churn (20.2%) is ABNORMALLY HIGH
+  - This suggests external factors (relocations, financial constraints,
+    competitor entry) are churning even satisfied customers
+
+----------------------------------------------------------------------
+8.4 BENCHMARK-INFORMED PRIORITIES
+----------------------------------------------------------------------
+
+  1. Reduce Detractor share from 46% to <35% (moves NPS from 0 to +15)
+     - Focus: speed + stability for worst-performing connections
+     - Benchmark: Even budget ISPs in India achieve <35% Detractor share
+
+  2. Reduce Promoter churn from 20% to <12%
+     - Focus: loyalty program, competitive pre-emption, shifting support
+     - Benchmark: ISPs with good retention hold Promoter churn at 5-10%
+
+  3. Increase Passive share from 8% to 12-15% (absorb from Detractors)
+     - Focus: partial fixes that move scores from 0-5 to 6-8
+     - Benchmark: Healthy ISP distributions have 15-20% Passives
+
+  4. Implement closed-loop NPS program
+     - Benchmark: ISPs with closed-loop programs see +5 to +10 NPS
+       improvement within 6 months
+     - Wiom's 48.8% Detractor comment rate provides rich recovery data
+
+
+======================================================================
+END OF PHASE 2 -- CX FRAMEWORKS REPORT
+======================================================================
+
+Next Steps (Phase 3):
+  - Feature engineering using framework-derived variables
+  - Build NPS prediction model using hypothesized drivers
+  - Validate SERVQUAL gaps with Snowflake operational data
+  - Operationalize CES reduction at high-effort touchpoints
+  - Design closed-loop intervention program for Detractor recovery

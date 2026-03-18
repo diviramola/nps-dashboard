@@ -1,0 +1,199 @@
+======================================================================
+PHASE 3D v2: ENRICHED FEATURE ENGINEERING (FIXED)
+Started: 2026-03-18 17:06:37
+======================================================================
+
+[LOAD] Reading existing dataset...
+  Respondents: 13045, Unique phones: 12290, Columns: 248
+
+======================================================================
+[STEP 0] DEVICE_ID MAPPING (t_wg_customer)
+======================================================================
+  Mapped: 10155 phones -> device_id (82.6%)
+
+======================================================================
+[1/4] NETWORK SCORECARD — Speed Gap, Optical Power, Data Usage
+  + Extracts LNG_NAS per customer for downstream joins
+======================================================================
+  Matched: 12268 phones (99.8%)
+  Unique LNG_NAS extracted: 12254
+  Avg plan speed: 71.9 Mbps
+  Avg actual speed: 90.3 Mbps
+  Avg speed gap: -34.7%
+  Avg speed in range: 0.89
+  Avg weekly data GB: 7.9
+  Avg rxpower: -21.26 dBm
+
+======================================================================
+[2/4] CUSTOMER INFLUX — Customer-Level Uptime, Peak Interruption
+  Join: LNG_NAS from Network Scorecard (not idmaker)
+======================================================================
+  LNG_NAS IDs to query: 12254
+  Matched: 10616 LNG_NAS (86.6%)
+  Avg customer uptime: 85.4%
+  Avg peak uptime: 89.3%
+  Peak interruption rate: 46.3%
+  Active day ratio: 95.0%
+
+======================================================================
+[3/4] DAILY USAGE L1 — Sessions, Devices, Peak-Hour, Volatility
+  Join: LNG_NAS from Scorecard → NASID in DAILY_USAGE_L1
+======================================================================
+  Matched: 9013 NASIDs (73.6%)
+  Avg daily sessions: 4.1
+  Avg daily devices: 1.8
+  Avg daily data GB: 1.9
+  Avg peak-hour ratio: 0.248
+  Avg usage volatility: 105067913.5
+
+======================================================================
+[4/4] ENRICHED SERVICE TICKETS — Categories, Reopens, Calls
+  Join: DEVICE_ID from t_wg_customer (batch size 200)
+======================================================================
+  Device IDs to query: 10135
+  Matched: 8997 devices (88.8%)
+  Avg total tickets: 5.5
+  Avg internet down tickets: 3.0
+  Avg reopens: 0.083
+  Avg resolution mins: 3322
+  Avg customer calls: 0.00
+
+======================================================================
+MERGING ALL NEW FEATURES
+======================================================================
+  + LNG_NAS mapping: 13022/13045 phones
+  + Device mapping: 10826/13045 phones
+  + Scorecard: 13022/13045 (99.8%)
+  + Influx: 11346/13045 (87.0%)
+  + Usage L1: 9664/13045 (74.1%)
+  + Tickets: 9607/13045 (73.6%)
+
+======================================================================
+COMPUTING DERIVED FEATURES
+======================================================================
+  Speed gap severity: {'overdelivering': 8631, 'acceptable': 3179, 'moderate_gap': 793, 'large_gap': 213, 'severe_gap': 158}
+  Connection instability: 9663 computed
+  Uptime tier: {'good': 6419, 'excellent': 2296, 'fair': 1263, 'poor': 760, 'critical': 608}
+  Peak uptime gap: 11346 computed
+  Ticket severity: 13045 computed
+  SLA compliance: 13045 computed
+
+======================================================================
+SAVING
+======================================================================
+  File: C:\Users\nikhi\wiom-nps-analysis\data\nps_enriched_v2.csv
+  Rows: 13045, Columns: 298 (+50 new)
+
+  New columns (50):
+    cis_active_day_ratio                         :  11346/13045 (87.0%)
+    cis_avg_customer_uptime_pct                  :  11346/13045 (87.0%)
+    cis_avg_peak_uptime_pct                      :  11346/13045 (87.0%)
+    cis_avg_stable_ping_ratio                    :  11229/13045 (86.1%)
+    cis_influx_data_days                         :  11346/13045 (87.0%)
+    cis_peak_interruption_rate                   :  11346/13045 (87.0%)
+    connection_instability                       :   9663/13045 (74.1%)
+    customer_uptime_tier                         :  11346/13045 (87.0%)
+    device_id                                    :  10826/13045 (83.0%)
+    lng_nas                                      :  13022/13045 (99.8%)
+    peak_uptime_gap                              :  11346/13045 (87.0%)
+    sc_avg_latest_speed                          :  12974/13045 (99.5%)
+    sc_avg_opticalpower_in_range                 :   4187/13045 (32.1%)
+    sc_avg_plan_speed                            :  13022/13045 (99.8%)
+    sc_avg_rxpower                               :   9127/13045 (70.0%)
+    sc_avg_rxpower_in_range                      :  13022/13045 (99.8%)
+    sc_avg_speed_in_range                        :  13022/13045 (99.8%)
+    sc_avg_weekly_data_gb                        :  12892/13045 (98.8%)
+    sc_plan_active_ratio                         :  13022/13045 (99.8%)
+    sc_scorecard_ticket_count                    :   9126/13045 (70.0%)
+    sc_scorecard_weeks                           :  13022/13045 (99.8%)
+    sc_speed_gap_pct                             :  12974/13045 (99.5%)
+    speed_gap_severity                           :  12974/13045 (99.5%)
+    tk_avg_customer_calls                        :    110/13045 (0.8%)
+    tk_avg_partner_calls                         :    110/13045 (0.8%)
+    tk_avg_reopens                               :   9607/13045 (73.6%)
+    tk_avg_resolution_mins                       :   9452/13045 (72.5%)
+    tk_avg_ticket_rating                         :      0/13045 (0.0%)
+    tk_cx_tickets                                :   9607/13045 (73.6%)
+    tk_sla_compliance                            :  13045/13045 (100.0%)
+    tk_tickets_beyond_2x_tat                     :   9607/13045 (73.6%)
+    tk_tickets_disconnect                        :   9607/13045 (73.6%)
+    tk_tickets_freq_disconnect                   :   9607/13045 (73.6%)
+    tk_tickets_internet_down                     :   9607/13045 (73.6%)
+    tk_tickets_recharge_issue                    :   9607/13045 (73.6%)
+    tk_tickets_resolved                          :   9607/13045 (73.6%)
+    tk_tickets_slow_speed                        :   9607/13045 (73.6%)
+    tk_tickets_within_tat                        :   9607/13045 (73.6%)
+    tk_total_tickets                             :   9607/13045 (73.6%)
+    ul1_avg_active_hours                         :   9664/13045 (74.1%)
+    ul1_avg_daily_data_gb                        :   9664/13045 (74.1%)
+    ul1_avg_daily_devices                        :   9664/13045 (74.1%)
+    ul1_avg_daily_sessions                       :   9664/13045 (74.1%)
+    ul1_avg_distinct_ips                         :   9664/13045 (74.1%)
+    ul1_avg_night_day_ratio                      :   9661/13045 (74.1%)
+    ul1_avg_peak_hour_ratio                      :   9664/13045 (74.1%)
+    ul1_avg_session_hours                        :   9664/13045 (74.1%)
+    ul1_avg_usage_volatility                     :   9663/13045 (74.1%)
+    ul1_pct_short_sessions                       :   9664/13045 (74.1%)
+    ul1_usage_data_days                          :   9664/13045 (74.1%)
+
+======================================================================
+VALIDATION: NEW FEATURES BY NPS GROUP (Promoter vs Detractor)
+======================================================================
+
+  Feature                             |   Promoter |  Detractor |    D-P Gap |   Signal
+  ----------------------------------- | ---------- | ---------- | ---------- | --------
+  Plan Speed (Mbps)                   |     70.932 |     72.757 |     +1.825 |     weak
+  Actual Speed (Mbps)                 |     90.396 |     90.037 |     -0.359 |     weak
+  Speed Gap (%)                       |     -0.364 |     -0.327 |     +0.037 |   STRONG
+  Speed In Range                      |      0.897 |      0.887 |     -0.010 |     weak
+  Optical Power (dBm)                 |    -21.110 |    -21.455 |     -0.345 |     weak
+  Weekly Data (GB)                    |      6.546 |      9.432 |     +2.886 |   STRONG
+  Customer Uptime                     |      0.856 |      0.852 |     -0.004 |     weak
+  Peak Uptime                         |      0.898 |      0.888 |     -0.010 |     weak
+  Peak Interruption                   |      0.460 |      0.471 |     +0.011 |     weak
+  Active Day Ratio                    |      0.954 |      0.945 |     -0.010 |     weak
+  Daily Sessions                      |      4.003 |      4.141 |     +0.138 |     weak
+  Daily Devices                       |      1.772 |      1.894 |     +0.122 | moderate
+  Daily Data GB                       |      1.890 |      1.953 |     +0.063 |     weak
+  Peak Hour Ratio                     |      0.248 |      0.247 |     -0.001 |     weak
+  Total Tickets                       |      4.900 |      6.255 |     +1.355 |   STRONG
+  Avg Reopens                         |      0.061 |      0.105 |     +0.044 |   STRONG
+  Avg Resolution Mins                 |   3194.674 |   3355.635 |   +160.961 | moderate
+  SLA Compliance                      |      0.560 |      0.520 |     -0.040 | moderate
+  Connection Instability              |      0.172 |      0.173 |     +0.001 |     weak
+  Ticket Severity                     |      0.387 |      0.452 |     +0.065 |   STRONG
+  Peak Uptime Gap                     |     -0.042 |     -0.036 |     +0.006 |   STRONG
+
+======================================================================
+VALIDATION: NEW FEATURES BY CHURN STATUS
+======================================================================
+  Churn column: is_churned
+
+  Feature                             |     Active |    Churned |        Gap |   Signal
+  ----------------------------------- | ---------- | ---------- | ---------- | --------
+  Plan Speed (Mbps)                   |     71.398 |     73.279 |     +1.881 |     weak
+  Actual Speed (Mbps)                 |     90.643 |     89.282 |     -1.362 |     weak
+  Speed Gap (%)                       |     -0.360 |     -0.304 |     +0.056 |   STRONG
+  Speed In Range                      |      0.897 |      0.876 |     -0.021 |     weak
+  Optical Power (dBm)                 |    -21.186 |    -21.472 |     -0.285 |     weak
+  Weekly Data (GB)                    |      8.364 |      6.647 |     -1.717 |   STRONG
+  Customer Uptime                     |      0.867 |      0.767 |     -0.099 |   STRONG
+  Peak Uptime                         |      0.907 |      0.795 |     -0.112 |   STRONG
+  Peak Interruption                   |      0.455 |      0.520 |     +0.065 |   STRONG
+  Active Day Ratio                    |      0.962 |      0.864 |     -0.099 |   STRONG
+  Daily Sessions                      |      4.069 |      4.024 |     -0.046 |     weak
+  Daily Devices                       |      1.832 |      1.764 |     -0.068 |     weak
+  Daily Data GB                       |      1.924 |      1.871 |     -0.053 |     weak
+  Peak Hour Ratio                     |      0.248 |      0.248 |     +0.000 |     weak
+  Total Tickets                       |      5.542 |      5.421 |     -0.122 |     weak
+  Avg Reopens                         |      0.079 |      0.108 |     +0.029 |   STRONG
+  Avg Resolution Mins                 |   2172.837 |   9321.845 |  +7149.008 |   STRONG
+  Avg Ticket Rating                   |        nan |        nan |       +nan |     weak
+  SLA Compliance                      |      0.626 |      0.267 |     -0.359 |   STRONG
+  Connection Instability              |      0.172 |      0.180 |     +0.007 |     weak
+  Ticket Severity                     |      0.456 |      0.297 |     -0.159 |   STRONG
+  Peak Uptime Gap                     |     -0.041 |     -0.028 |     +0.013 |   STRONG
+
+======================================================================
+PHASE 3D v2 COMPLETE — 2026-03-18 17:17:05
+======================================================================

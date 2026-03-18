@@ -1,0 +1,3643 @@
+====================================================================================================
+EXTRA COLUMNS DEEP INVESTIGATION
+Generated: 2026-03-18 10:40:38
+Source: C:\Users\nikhi\Downloads\NPS Verma Parivar.xlsx
+Target tabs: ['Sprint 7 Oct25', 'Sprint 14 Jan26', 'Sprint RSP1 Feb26', 'Sprint RSP2 Feb26', 'Sprint RSP3 Feb26']
+====================================================================================================
+
+Loading workbook (this takes a minute)...
+====================================================================================================
+
+>>> TAB: 'Sprint 7 Oct25' <<<
+====================================================================================================
+  Dimensions: 791 rows x 42 cols
+  Total columns (including core): 30
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Data rows: 777
+  Extra columns count: 23
+
+  ALL COLUMN NAMES (including core):
+    Col  1: USER_ID [CORE]
+    Col  2: PROFILE_ALL_IDENTITIES [CORE]
+    Col  3: USER_RATING [CORE]
+    Col  4: NPS_CLASSIFICATION [CORE]
+    Col  5: COMMENT [CORE]
+    Col  6: TIMESTAMP [CORE]
+    Col  7: Mobile [CORE]
+    Col  8: Device Type [EXTRA]
+    Col  9: Tenure [EXTRA]
+    Col 10: City [EXTRA]
+    Col 11: Device [EXTRA]
+    Col 12: recharge done [EXTRA]
+    Col 13: Zone [EXTRA]
+    Col 14: cash/ online [EXTRA]
+    Col 15: ALT mobile [EXTRA]
+    Col 16: Optical Power [EXTRA]
+    Col 17: # of tickets in last 3 months [EXTRA]
+    Col 18: Devices on 2.4g [EXTRA]
+    Col 19: Devices on 5g [EXTRA]
+    Col 20: Last recharge done - when? [EXTRA]
+    Col 21: Optical Range [EXTRA]
+    Col 22: Data Usage amount [EXTRA]
+    Col 23: Data Usage Days [EXTRA]
+    Col 24: Data Usage Percentile [EXTRA]
+    Col 25: First time user? [EXTRA]
+    Col 26: Plan Expiry Date [EXTRA]
+    Col 27: Plan Expiry Window [EXTRA]
+    Col 28: Channel [EXTRA]
+    Col 29: Data Usage / Day [EXTRA]
+    Col 30: NPS Reason [EXTRA]
+
+  ==========================================================================================
+  DETAILED EXTRA COLUMN ANALYSIS
+  ==========================================================================================
+
+  --- Column: 'Device Type' (position 8) ---
+      Fill rate: 94.1% (731/777)
+      Data type: text
+      Sample values (first 5 non-null):
+        - GX
+        - SY
+        - SY
+        - GX
+        - SY
+      Value distribution:
+    Unique values: 3 | Total non-null: 731
+  'GX' = 379 (51.8%)
+  'SY' = 254 (34.7%)
+  'TP' = 98 (13.4%)
+
+  --- Column: 'Tenure' (position 9) ---
+      Fill rate: 94.1% (731/777)
+      Data type: text
+      Sample values (first 5 non-null):
+        - 3-6 months
+        - 6+ months
+        - 6+ months
+        - 6+ months
+        - 6+ months
+      Value distribution:
+    Unique values: 3 | Total non-null: 731
+  '6+ months' = 388 (53.1%)
+  '1-2 months' = 182 (24.9%)
+  '3-6 months' = 161 (22.0%)
+
+  --- Column: 'City' (position 10) ---
+      Fill rate: 94.1% (731/777)
+      Data type: text
+      Sample values (first 5 non-null):
+        - UP
+        - Delhi
+        - Delhi
+        - Delhi
+        - Delhi
+      Value distribution:
+    Unique values: 3 | Total non-null: 731
+  'Delhi' = 604 (82.6%)
+  'UP' = 84 (11.5%)
+  'Mumbai' = 43 (5.9%)
+
+  --- Column: 'Device' (position 11) ---
+      Fill rate: 100.0% (777/777)
+      Data type: text [mixed: text(175), integer(25)]
+      Sample values (first 5 non-null):
+        - GX101065
+        - SY24729
+        - SY8472
+        - GX33604
+        - SY11023
+
+  --- Column: 'recharge done' (position 12) ---
+      Fill rate: 100.0% (777/777)
+      Data type: integer [mixed: integer(166), text(34)]
+      Sample values (first 5 non-null):
+        - 4.0
+        - 11.0
+        - 22.0
+        - 15.0
+        - 18.0
+
+  --- Column: 'Zone' (position 13) ---
+      Fill rate: 100.0% (777/777)
+      Data type: text
+      Sample values (first 5 non-null):
+        - Agra,Saurabh,V2
+        - East Delhi 1,AM-Himanshu Bhardwaj
+        - East Delhi 1,AM-Himanshu Bhardwaj
+        - East Delhi 2,AM-Danish Ansari
+        - South Delhi,AM-Banke Bihari
+
+  --- Column: 'cash/ online' (position 14) ---
+      Fill rate: 100.0% (777/777)
+      Data type: text
+      Sample values (first 5 non-null):
+        - ONLINE
+        - ONLINE
+        - ONLINE
+        - ONLINE
+        - ONLINE
+      Value distribution:
+    Unique values: 3 | Total non-null: 777
+  'ONLINE' = 649 (83.5%)
+  'CASH' = 82 (10.6%)
+  '#N/A' = 46 (5.9%)
+
+  --- Column: 'ALT mobile' (position 15) ---
+      Fill rate: 0.0% (0/777)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Optical Power' (position 16) ---
+      Fill rate: 56.2% (437/777)
+      Data type: numeric [mixed: numeric(189), integer(11)]
+      Sample values (first 5 non-null):
+        - -24.202164
+        - -19.9
+        - -16.8
+        - -20.3
+        - -24.1
+
+  --- Column: '# of tickets in last 3 months' (position 17) ---
+      Fill rate: 56.2% (437/777)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 24.0
+        - 2.0
+        - 3.0
+        - 7.0
+        - 5.0
+      Value distribution:
+    Unique values: 14 | Total non-null: 437
+  '1.0' = 178 (40.7%)
+  '2.0' = 93 (21.3%)
+  '3.0' = 65 (14.9%)
+  '4.0' = 35 (8.0%)
+  '5.0' = 22 (5.0%)
+  '6.0' = 17 (3.9%)
+  '7.0' = 8 (1.8%)
+  '9.0' = 6 (1.4%)
+  '8.0' = 6 (1.4%)
+  '10.0' = 3 (0.7%)
+  '24.0' = 1 (0.2%)
+  '11.0' = 1 (0.2%)
+  '13.0' = 1 (0.2%)
+  '16.0' = 1 (0.2%)
+
+  --- Column: 'Devices on 2.4g' (position 18) ---
+      Fill rate: 67.8% (527/777)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 3.0
+        - 1.0
+        - 0.0
+        - 0.0
+        - 2.0
+      Value distribution:
+    Unique values: 9 | Total non-null: 527
+  '0.0' = 191 (36.2%)
+  '1.0' = 151 (28.7%)
+  '2.0' = 95 (18.0%)
+  '3.0' = 54 (10.2%)
+  '4.0' = 22 (4.2%)
+  '5.0' = 5 (0.9%)
+  '6.0' = 4 (0.8%)
+  '9.0' = 3 (0.6%)
+  '7.0' = 2 (0.4%)
+
+  --- Column: 'Devices on 5g' (position 19) ---
+      Fill rate: 67.8% (527/777)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 1.0
+        - 4.0
+        - 3.0
+        - 1.0
+        - 0.0
+      Value distribution:
+    Unique values: 7 | Total non-null: 527
+  '0.0' = 222 (42.1%)
+  '1.0' = 154 (29.2%)
+  '2.0' = 97 (18.4%)
+  '3.0' = 36 (6.8%)
+  '4.0' = 9 (1.7%)
+  '5.0' = 7 (1.3%)
+  '7.0' = 2 (0.4%)
+
+  --- Column: 'Last recharge done - when?' (position 20) ---
+      Fill rate: 93.6% (727/777)
+      Data type: datetime
+      Sample values (first 5 non-null):
+        - 2025-09-18 00:00:00
+        - 2025-10-09 00:00:00
+        - 2025-09-29 00:00:00
+        - 2025-10-07 00:00:00
+        - 2025-09-18 00:00:00
+
+  --- Column: 'Optical Range' (position 21) ---
+      Fill rate: 58.9% (458/777)
+      Data type: text
+      Sample values (first 5 non-null):
+        - In Range
+        - Outside
+        - In Range
+        - In Range
+        - In Range
+      Value distribution:
+    Unique values: 2 | Total non-null: 458
+  'In Range' = 393 (85.8%)
+  'Outside' = 65 (14.2%)
+
+  --- Column: 'Data Usage amount' (position 22) ---
+      Fill rate: 92.5% (719/777)
+      Data type: numeric
+      Sample values (first 5 non-null):
+        - 0.6200315822
+        - 0.25054800417274237
+        - 165.63045562896878
+        - 0.22980428487062454
+        - 1.5835136752575636
+
+  --- Column: 'Data Usage Days' (position 23) ---
+      Fill rate: 92.5% (719/777)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 13.0
+        - 13.0
+        - 13.0
+        - 11.0
+        - 13.0
+      Value distribution:
+    Unique values: 15 | Total non-null: 719
+  '13.0' = 375 (52.2%)
+  '14.0' = 105 (14.6%)
+  '12.0' = 68 (9.5%)
+  '11.0' = 41 (5.7%)
+  '10.0' = 30 (4.2%)
+  '9.0' = 19 (2.6%)
+  '6.0' = 15 (2.1%)
+  '7.0' = 14 (1.9%)
+  '15.0' = 13 (1.8%)
+  '8.0' = 12 (1.7%)
+  '5.0' = 8 (1.1%)
+  '4.0' = 7 (1.0%)
+  '2.0' = 6 (0.8%)
+  '3.0' = 5 (0.7%)
+  '17.0' = 1 (0.1%)
+
+  --- Column: 'Data Usage Percentile' (position 24) ---
+      Fill rate: 0.0% (0/777)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'First time user?' (position 25) ---
+      Fill rate: 97.6% (758/777)
+      Data type: text
+      Sample values (first 5 non-null):
+        - No - Had wifi before
+        - No - Had wifi before
+        - Yes - Wiom is first wifi
+        - Yes - Wiom is first wifi
+        - No - Had wifi before
+      Value distribution:
+    Unique values: 2 | Total non-null: 758
+  'Yes - Wiom is first wifi' = 489 (64.5%)
+  'No - Had wifi before' = 269 (35.5%)
+
+  --- Column: 'Plan Expiry Date' (position 26) ---
+      Fill rate: 100.0% (777/777)
+      Data type: datetime [mixed: datetime(166), text(34)]
+      Sample values (first 5 non-null):
+        - 2025-11-06 00:00:00
+        - 2025-10-22 00:00:00
+        - 2025-10-22 00:00:00
+        - 2025-10-26 00:00:00
+        - 2025-10-19 00:00:00
+
+  --- Column: 'Plan Expiry Window' (position 27) ---
+      Fill rate: 0.0% (0/777)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Channel' (position 28) ---
+      Fill rate: 100.0% (777/777)
+      Data type: text
+      Sample values (first 5 non-null):
+        - WA
+        - CT
+        - CT
+        - CT
+        - WA
+      Value distribution:
+    Unique values: 2 | Total non-null: 777
+  'WA' = 534 (68.7%)
+  'CT' = 243 (31.3%)
+
+  --- Column: 'Data Usage / Day' (position 29) ---
+      Fill rate: 0.0% (0/777)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'NPS Reason' (position 30) ---
+      Fill rate: 9.4% (73/777)
+      Data type: text
+      Sample values (first 5 non-null):
+        - //
+        - //
+        - No/ Late complaint Resolution, General Bad Service
+        - Affordable
+        - Frequent Disconnections
+      Value distribution:
+    Unique values: 29 | Total non-null: 73
+  'General Bad Service' = 18 (24.7%)
+  'Slow Speed' = 8 (11.0%)
+  'Frequent Disconnections' = 7 (9.6%)
+  'General Good Service' = 6 (8.2%)
+  '//' = 3 (4.1%)
+  'Affordable' = 3 (4.1%)
+  'General Good Remark' = 3 (4.1%)
+  'General good remark' = 3 (4.1%)
+  'General Bad Service, Frequent Disconnections' = 2 (2.7%)
+  'No/ Late complaint Resolution, General Bad Service' = 1 (1.4%)
+  'Frequent Disconnections, No/Late Complaint Resolut...' = 1 (1.4%)
+  'Frequent Disconnections, Slow Speed, No/ Late comp...' = 1 (1.4%)
+  'Frequent Disconnections, Slow Speed, No/ Late comp...' = 1 (1.4%)
+  'General Bad Service, Bad Customer Support' = 1 (1.4%)
+  'General Bad Service, Expensive' = 1 (1.4%)
+  'General Good Service, Good Speed' = 1 (1.4%)
+  'General Good Service, Good Speed, Affordable, Good...' = 1 (1.4%)
+  'RDNI, No/ Late complaint Resolution, General Bad S...' = 1 (1.4%)
+  'Frequent Disconnections, Slow Speed' = 1 (1.4%)
+  'Frequent Disconnections, No/ Late complaint Resolu...' = 1 (1.4%)
+  ... and 9 more unique values
+====================================================================================================
+
+>>> TAB: 'Sprint 14 Jan26' <<<
+====================================================================================================
+  Dimensions: 743 rows x 55 cols
+  Total columns (including core): 43
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Data rows: 729
+  Extra columns count: 35
+
+  ALL COLUMN NAMES (including core):
+    Col  1: USER_ID [CORE]
+    Col  2: PROFILE_ALL_IDENTITIES [CORE]
+    Col  3: USER_RATING [CORE]
+    Col  4: NPS_CLASSIFICATION [CORE]
+    Col  5: COMMENT [CORE]
+    Col  6: TIMESTAMP [CORE]
+    Col  7: Mobile [CORE]
+    Col  8: Device type [EXTRA]
+    Col  9: Tenure [EXTRA]
+    Col 10: City [EXTRA]
+    Col 11: Device [EXTRA]
+    Col 12: recharge done [EXTRA]
+    Col 13: Zone [EXTRA]
+    Col 14: cash/ online [EXTRA]
+    Col 15: ALT mobile [EXTRA]
+    Col 16: Optical Power [EXTRA]
+    Col 17: # of tickets in last 3 months [EXTRA]
+    Col 18: Payment_issue
+ Tickets Flag [EXTRA]
+    Col 19: Devices on 2.4g [EXTRA]
+    Col 20: Devices on 5g [EXTRA]
+    Col 21: Last recharge done - when? [EXTRA]
+    Col 22: Optical Range [EXTRA]
+    Col 23: Data Usage amount [EXTRA]
+    Col 24: Data Usage Days [EXTRA]
+    Col 25: Data Usage Percentile [EXTRA]
+    Col 26: First time user? [EXTRA]
+    Col 27: Plan Expiry Date [EXTRA]
+    Col 28: Plan Expiry Window [EXTRA]
+    Col 29: Channel [EXTRA]
+    Col 30: PREV NPS [EXTRA]
+    Col 31: MATCH? [EXTRA]
+    Col 32: NPS Reason - primary [EXTRA]
+    Col 33: NPS Reason - secondary [EXTRA]
+    Col 34: NPS reason tertiary [EXTRA]
+    Col 35: Comments [EXTRA]
+    Col 36: Caller [EXTRA]
+    Col 37: Status [EXTRA]
+    Col 38: Current Exp - Any additional context on rating? [EXTRA]
+    Col 39: <unnamed_col_39> [EXTRA]
+    Col 40: What do they do when they face a prob? [EXTRA]
+    Col 41: px [EXTRA]
+    Col 42: perf metrics [EXTRA]
+    Col 43: Install Date [EXTRA]
+
+  ==========================================================================================
+  DETAILED EXTRA COLUMN ANALYSIS
+  ==========================================================================================
+
+  --- Column: 'Device type' (position 8) ---
+      Fill rate: 97.5% (711/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - GX
+        - GX
+        - GX
+        - GX
+        - GX
+      Value distribution:
+    Unique values: 3 | Total non-null: 711
+  'GX' = 389 (54.7%)
+  'SY' = 249 (35.0%)
+  'TP' = 73 (10.3%)
+
+  --- Column: 'Tenure' (position 9) ---
+      Fill rate: 100.0% (729/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - 6+ months
+        - 6+ months
+        - 6+ months
+        - 6+ months
+        - 6+ months
+      Value distribution:
+    Unique values: 4 | Total non-null: 729
+  '6+ months' = 401 (55.0%)
+  '3–6 months' = 166 (22.8%)
+  '1–2 months' = 144 (19.8%)
+  '#N/A' = 18 (2.5%)
+
+  --- Column: 'City' (position 10) ---
+      Fill rate: 97.5% (711/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - Delhi
+        - Delhi
+        - Delhi
+        - Delhi
+        - Delhi
+      Value distribution:
+    Unique values: 3 | Total non-null: 711
+  'Delhi' = 627 (88.2%)
+  'UP' = 50 (7.0%)
+  'Mumbai' = 34 (4.8%)
+
+  --- Column: 'Device' (position 11) ---
+      Fill rate: 100.0% (729/729)
+      Data type: text [mixed: text(172), numeric(28)]
+      Sample values (first 5 non-null):
+        - GX75141
+        - GX70136
+        - GX15979
+        - GX26448
+        - GX29595
+
+  --- Column: 'recharge done' (position 12) ---
+      Fill rate: 100.0% (729/729)
+      Data type: numeric
+      Sample values (first 5 non-null):
+        - 13
+        - 12
+        - 19
+        - 13
+        - 19
+
+  --- Column: 'Zone' (position 13) ---
+      Fill rate: 100.0% (729/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - North Delhi,AM-Deepak Mittal
+        - East Delhi 2 + Noida,AM-Khemanand
+        - North Delhi,AM-Rahul Singh
+        - East Delhi 1,AM-Jaswant Singh
+        - East Delhi 2 + Noida,AM-Khemanand
+
+  --- Column: 'cash/ online' (position 14) ---
+      Fill rate: 100.0% (729/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - ONLINE
+        - ONLINE
+        - ONLINE
+        - ONLINE
+        - ONLINE
+      Value distribution:
+    Unique values: 3 | Total non-null: 729
+  'ONLINE' = 650 (89.2%)
+  'CASH' = 61 (8.4%)
+  '#N/A' = 18 (2.5%)
+
+  --- Column: 'ALT mobile' (position 15) ---
+      Fill rate: 0.0% (0/729)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Optical Power' (position 16) ---
+      Fill rate: 92.2% (672/729)
+      Data type: numeric [mixed: numeric(153), integer(47)]
+      Sample values (first 5 non-null):
+        - -17.304866
+        - -25.686362
+        - -26.575773
+        - -26.197887
+        - -15.243288
+
+  --- Column: '# of tickets in last 3 months' (position 17) ---
+      Fill rate: 56.8% (414/729)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 1.0
+        - 7.0
+        - 4.0
+        - 4.0
+        - 1.0
+      Value distribution:
+    Unique values: 13 | Total non-null: 414
+  '1.0' = 158 (38.2%)
+  '2.0' = 71 (17.1%)
+  '3.0' = 66 (15.9%)
+  '4.0' = 38 (9.2%)
+  '5.0' = 33 (8.0%)
+  '6.0' = 18 (4.3%)
+  '7.0' = 13 (3.1%)
+  '10.0' = 6 (1.4%)
+  '9.0' = 4 (1.0%)
+  '8.0' = 4 (1.0%)
+  '15.0' = 1 (0.2%)
+  '12.0' = 1 (0.2%)
+  '13.0' = 1 (0.2%)
+
+  --- Column: 'Payment_issue
+ Tickets Flag' (position 18) ---
+      Fill rate: 38.8% (283/729)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+      Value distribution:
+    Unique values: 1 | Total non-null: 283
+  '1.0' = 283 (100.0%)
+
+  --- Column: 'Devices on 2.4g' (position 19) ---
+      Fill rate: 76.1% (555/729)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 2.0
+        - 4.0
+        - 0.0
+        - 1.0
+        - 3.0
+      Value distribution:
+    Unique values: 10 | Total non-null: 555
+  '1.0' = 180 (32.4%)
+  '0.0' = 172 (31.0%)
+  '2.0' = 111 (20.0%)
+  '3.0' = 48 (8.6%)
+  '4.0' = 27 (4.9%)
+  '5.0' = 9 (1.6%)
+  '7.0' = 4 (0.7%)
+  '9.0' = 2 (0.4%)
+  '10.0' = 1 (0.2%)
+  '6.0' = 1 (0.2%)
+
+  --- Column: 'Devices on 5g' (position 20) ---
+      Fill rate: 76.1% (555/729)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 1.0
+        - 1.0
+        - 2.0
+        - 0.0
+        - 1.0
+      Value distribution:
+    Unique values: 8 | Total non-null: 555
+  '0.0' = 201 (36.2%)
+  '1.0' = 197 (35.5%)
+  '2.0' = 105 (18.9%)
+  '3.0' = 31 (5.6%)
+  '4.0' = 15 (2.7%)
+  '5.0' = 4 (0.7%)
+  '6.0' = 1 (0.2%)
+  '21.0' = 1 (0.2%)
+
+  --- Column: 'Last recharge done - when?' (position 21) ---
+      Fill rate: 97.7% (712/729)
+      Data type: datetime
+      Sample values (first 5 non-null):
+        - 2026-01-05 00:00:00
+        - 2025-12-30 00:00:00
+        - 2026-01-18 00:00:00
+        - 2026-01-27 00:00:00
+        - 2026-01-07 00:00:00
+
+  --- Column: 'Optical Range' (position 22) ---
+      Fill rate: 0.0% (0/729)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Data Usage amount' (position 23) ---
+      Fill rate: 33.5% (244/729)
+      Data type: numeric
+      Sample values (first 5 non-null):
+        - 0.01509911846369505
+        - 0.05357069801539183
+        - 0.0816741269081831
+        - 0.09327299054712057
+        - 0.15218924172222614
+
+  --- Column: 'Data Usage Days' (position 24) ---
+      Fill rate: 33.5% (244/729)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 3.0
+        - 26.0
+        - 22.0
+        - 6.0
+        - 31.0
+      Value distribution:
+    Unique values: 30 | Total non-null: 244
+  '32.0' = 80 (32.8%)
+  '31.0' = 49 (20.1%)
+  '33.0' = 23 (9.4%)
+  '30.0' = 18 (7.4%)
+  '29.0' = 13 (5.3%)
+  '26.0' = 9 (3.7%)
+  '28.0' = 9 (3.7%)
+  '27.0' = 6 (2.5%)
+  '25.0' = 4 (1.6%)
+  '18.0' = 3 (1.2%)
+  '20.0' = 3 (1.2%)
+  '34.0' = 3 (1.2%)
+  '3.0' = 2 (0.8%)
+  '9.0' = 2 (0.8%)
+  '10.0' = 2 (0.8%)
+  '5.0' = 2 (0.8%)
+  '14.0' = 2 (0.8%)
+  '15.0' = 2 (0.8%)
+  '22.0' = 1 (0.4%)
+  '6.0' = 1 (0.4%)
+  ... and 10 more unique values
+
+  --- Column: 'Data Usage Percentile' (position 25) ---
+      Fill rate: 0.0% (0/729)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'First time user?' (position 26) ---
+      Fill rate: 98.2% (716/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - No - Had net before
+        - Yes - wiom is first net
+        - Yes - wiom is first net
+        - Yes - wiom is first net
+        - Yes - wiom is first net
+      Value distribution:
+    Unique values: 2 | Total non-null: 716
+  'Yes - wiom is first net' = 495 (69.1%)
+  'No - Had net before' = 221 (30.9%)
+
+  --- Column: 'Plan Expiry Date' (position 27) ---
+      Fill rate: 0.0% (0/729)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Plan Expiry Window' (position 28) ---
+      Fill rate: 0.0% (0/729)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Channel' (position 29) ---
+      Fill rate: 100.0% (729/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - WA
+        - WA
+        - WA
+        - WA
+        - WA
+      Value distribution:
+    Unique values: 2 | Total non-null: 729
+  'WA' = 447 (61.3%)
+  'CT' = 282 (38.7%)
+
+  --- Column: 'PREV NPS' (position 30) ---
+      Fill rate: 100.0% (729/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - #REF!
+        - #REF!
+        - #REF!
+        - #REF!
+        - #REF!
+      Value distribution:
+    Unique values: 1 | Total non-null: 729
+  '#REF!' = 729 (100.0%)
+
+  --- Column: 'MATCH?' (position 31) ---
+      Fill rate: 100.0% (729/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - #REF!
+        - #REF!
+        - #REF!
+        - #REF!
+        - #REF!
+      Value distribution:
+    Unique values: 1 | Total non-null: 729
+  '#REF!' = 729 (100.0%)
+
+  --- Column: 'NPS Reason - primary' (position 32) ---
+      Fill rate: 92.5% (674/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - #REF!
+        - #REF!
+        - #REF!
+        - #REF!
+        - #REF!
+      Value distribution:
+    Unique values: 10 | Total non-null: 674
+  '#REF!' = 638 (94.7%)
+  'General Good Service' = 10 (1.5%)
+  'Frequent Disconnections' = 7 (1.0%)
+  'General Bad Service' = 6 (0.9%)
+  'N/A' = 5 (0.7%)
+  'Slow Speed' = 4 (0.6%)
+  'No/Late Complaint Resolution' = 1 (0.1%)
+  'Good Speed' = 1 (0.1%)
+  'Affordable' = 1 (0.1%)
+  'Internet Down' = 1 (0.1%)
+
+  --- Column: 'NPS Reason - secondary' (position 33) ---
+      Fill rate: 88.6% (646/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - #REF!
+        - #REF!
+        - #REF!
+        - #REF!
+        - #REF!
+      Value distribution:
+    Unique values: 5 | Total non-null: 646
+  '#REF!' = 641 (99.2%)
+  'Bad Customer Support - Call Centre' = 2 (0.3%)
+  'Good Speed' = 1 (0.2%)
+  'Fast Complaint Resolution' = 1 (0.2%)
+  'No/Late Complaint Resolution' = 1 (0.2%)
+
+  --- Column: 'NPS reason tertiary' (position 34) ---
+      Fill rate: 88.2% (643/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - #REF!
+        - #REF!
+        - #REF!
+        - #REF!
+        - #REF!
+      Value distribution:
+    Unique values: 2 | Total non-null: 643
+  '#REF!' = 641 (99.7%)
+  'Bad Customer Support - Technician' = 2 (0.3%)
+
+  --- Column: 'Comments' (position 35) ---
+      Fill rate: 89.6% (653/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - #REF!
+        - #REF!
+        - #REF!
+        - #REF!
+        - #REF!
+      Value distribution:
+    Unique values: 3 | Total non-null: 653
+  '#REF!' = 649 (99.4%)
+  '??' = 3 (0.5%)
+  'Check?' = 1 (0.2%)
+
+  --- Column: 'Caller' (position 36) ---
+      Fill rate: 3.2% (23/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - Shivani
+        - Shivani
+        - Shivani
+        - Shivani
+        - Shivani
+      Value distribution:
+    Unique values: 1 | Total non-null: 23
+  'Shivani' = 23 (100.0%)
+
+  --- Column: 'Status' (position 37) ---
+      Fill rate: 3.2% (23/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - DNP
+        - Connected
+        - Connected
+        - Connected
+        - Connected
+      Value distribution:
+    Unique values: 7 | Total non-null: 23
+  'Connected' = 14 (60.9%)
+  'DNP' = 4 (17.4%)
+  'No incoming' = 1 (4.3%)
+  'Callback 4pm' = 1 (4.3%)
+  'Busy' = 1 (4.3%)
+  'Unwilling' = 1 (4.3%)
+  'Switched off' = 1 (4.3%)
+
+  --- Column: 'Current Exp - Any additional context on rating?' (position 38) ---
+      Fill rate: 2.1% (15/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - sahi chalra hai koi dikkat nahi hai. bacho ki koi shikayat nahi hia - wahi lo...
+        - sahi chal raha hai, net chalane mein dikkt nhi hai = 10 number bhai ne dia hoga
+        - normally toh sahi hi chal rahah hai 0 overall theek hia lekin kabhi kbhi dikk...
+        - koi dikkat nahi aa rahi hai. maine uatopay pr daal rkhi thi - us pr lekin aut...
+        - theek chal rahah koi issue nahi hai .
+      Value distribution:
+    Unique values: 15 | Total non-null: 15
+  'sahi chalra hai koi dikkat nahi hai. bacho ki koi ...' = 1 (6.7%)
+  'sahi chal raha hai, net chalane mein dikkt nhi hai...' = 1 (6.7%)
+  'normally toh sahi hi chal rahah hai 0 overall thee...' = 1 (6.7%)
+  'koi dikkat nahi aa rahi hai. maine uatopay pr daal...' = 1 (6.7%)
+  'theek chal rahah koi issue nahi hai .' = 1 (6.7%)
+  'net jaise pehle chalta tha jospeed thi - ab waisa ...' = 1 (6.7%)
+  'Baar baar iske network chale jaate hai - kabhi bhi...' = 1 (6.7%)
+  'abhi tak sahi chal rahah lkin thoda bht band ho ja...' = 1 (6.7%)
+  'sab acha chal raha hai' = 1 (6.7%)
+  'sahi chal raha' = 1 (6.7%)
+  'sab kuch sahi hai - kabhi beech mein network chhod...' = 1 (6.7%)
+  'bohot dikkat - 2-2.5 ghante band ho jaata hai - fi...' = 1 (6.7%)
+  'Has raised remove connection ticekt - was facing i...' = 1 (6.7%)
+  'badhiya chal hai fihaal toh - sab badhiya hai koi ...' = 1 (6.7%)
+  'sahi chal raha hai. kabhi kabhi aati hai dikkat. -...' = 1 (6.7%)
+
+  --- Column: 'What do they do when they face a prob?' (position 40) ---
+      Fill rate: 0.3% (2/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - informed about cx care
+        - cx care
+      Value distribution:
+    Unique values: 2 | Total non-null: 2
+  'informed about cx care' = 1 (50.0%)
+  'cx care' = 1 (50.0%)
+
+  --- Column: 'px' (position 41) ---
+      Fill rate: 100.0% (729/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - Networld Fiber Solution
+        - V&K INTERNET SERVICES PVT LTD Noida
+        - DA fibernet
+        - Bhaiya Cable
+        - INDIANET BROADBAND
+
+  --- Column: 'perf metrics' (position 42) ---
+      Fill rate: 100.0% (729/729)
+      Data type: text
+      Sample values (first 5 non-null):
+        - LowPerf x LowTrend
+        - LowPerf x HighTrend
+        - HighPerf x HighTrend
+        - HighPerf x HighTrend
+        - LowPerf x HighTrend
+      Value distribution:
+    Unique values: 5 | Total non-null: 729
+  'LowPerf x HighTrend' = 263 (36.1%)
+  'HighPerf x HighTrend' = 252 (34.6%)
+  'LowPerf x LowTrend' = 106 (14.5%)
+  'HighPerf x LowTrend' = 89 (12.2%)
+  '#N/A' = 19 (2.6%)
+
+  --- Column: 'Install Date' (position 43) ---
+      Fill rate: 98.6% (719/729)
+      Data type: datetime
+      Sample values (first 5 non-null):
+        - 2025-01-30 00:00:00
+        - 2024-12-30 00:00:00
+        - 2024-08-04 00:00:00
+        - 2025-01-27 00:00:00
+        - 2024-08-14 00:00:00
+====================================================================================================
+
+>>> TAB: 'Sprint RSP1 Feb26' <<<
+====================================================================================================
+  Dimensions: 922 rows x 48 cols
+  Total columns (including core): 37
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Data rows: 908
+  Extra columns count: 30
+
+  ALL COLUMN NAMES (including core):
+    Col  1: USER_ID [CORE]
+    Col  2: PROFILE_ALL_IDENTITIES [CORE]
+    Col  3: USER_RATING [CORE]
+    Col  4: NPS_CLASSIFICATION [CORE]
+    Col  5: COMMENT [CORE]
+    Col  6: TIMESTAMP [CORE]
+    Col  7: Mobile [CORE]
+    Col  8: Device type [EXTRA]
+    Col  9: Tenure [EXTRA]
+    Col 10: City [EXTRA]
+    Col 11: Device [EXTRA]
+    Col 12: recharge done [EXTRA]
+    Col 13: Zone [EXTRA]
+    Col 14: cash/ online [EXTRA]
+    Col 15: ALT mobile [EXTRA]
+    Col 16: Optical Power [EXTRA]
+    Col 17: # of tickets in last 3 months [EXTRA]
+    Col 18: Payment_issue
+Tickets Flag [EXTRA]
+    Col 19: Devices on 2.4g [EXTRA]
+    Col 20: Devices on 5g [EXTRA]
+    Col 21: Last recharge done - when? [EXTRA]
+    Col 22: Optical Range [EXTRA]
+    Col 23: Data Usage amount [EXTRA]
+    Col 24: Data Usage Days [EXTRA]
+    Col 25: Data Usage Percentile [EXTRA]
+    Col 26: First time user? [EXTRA]
+    Col 27: Plan Expiry Date [EXTRA]
+    Col 28: Plan Expiry Window [EXTRA]
+    Col 29: Channel [EXTRA]
+    Col 30: NPS Reason - primary [EXTRA]
+    Col 31: NPS Reason - secondary [EXTRA]
+    Col 32: NPS reason tertiary [EXTRA]
+    Col 33: Comments [EXTRA]
+    Col 34: Partner [EXTRA]
+    Col 35: SLA [EXTRA]
+    Col 36: Install Date [EXTRA]
+    Col 37: Tenure - install [EXTRA]
+
+  ==========================================================================================
+  DETAILED EXTRA COLUMN ANALYSIS
+  ==========================================================================================
+
+  --- Column: 'Device type' (position 8) ---
+      Fill rate: 96.9% (880/908)
+      Data type: text
+      Sample values (first 5 non-null):
+        - GX
+        - GX
+        - GX
+        - GX
+        - SY
+      Value distribution:
+    Unique values: 3 | Total non-null: 880
+  'GX' = 521 (59.2%)
+  'SY' = 279 (31.7%)
+  'TP' = 80 (9.1%)
+
+  --- Column: 'Tenure' (position 9) ---
+      Fill rate: 100.0% (908/908)
+      Data type: text
+      Sample values (first 5 non-null):
+        - 3–6 months
+        - 6+ months
+        - 6+ months
+        - 3–6 months
+        - 1–2 months
+      Value distribution:
+    Unique values: 4 | Total non-null: 908
+  '6+ months' = 504 (55.5%)
+  '3–6 months' = 245 (27.0%)
+  '1–2 months' = 131 (14.4%)
+  '#N/A' = 28 (3.1%)
+
+  --- Column: 'City' (position 10) ---
+      Fill rate: 96.9% (880/908)
+      Data type: text
+      Sample values (first 5 non-null):
+        - Delhi
+        - Delhi
+        - Delhi
+        - Delhi
+        - Delhi
+      Value distribution:
+    Unique values: 3 | Total non-null: 880
+  'Delhi' = 741 (84.2%)
+  'UP' = 81 (9.2%)
+  'Mumbai' = 58 (6.6%)
+
+  --- Column: 'Device' (position 11) ---
+      Fill rate: 100.0% (908/908)
+      Data type: text [mixed: text(183), integer(17)]
+      Sample values (first 5 non-null):
+        - GX124682
+        - GX57023
+        - GX103221
+        - GX125840
+        - SY095487
+
+  --- Column: 'recharge done' (position 12) ---
+      Fill rate: 100.0% (908/908)
+      Data type: integer [mixed: integer(198), text(2)]
+      Sample values (first 5 non-null):
+        - 6.0
+        - 15.0
+        - 8.0
+        - 5.0
+        - 2.0
+
+  --- Column: 'Zone' (position 13) ---
+      Fill rate: 100.0% (908/908)
+      Data type: text
+      Sample values (first 5 non-null):
+        - East Delhi 2,AM-Wasim
+        - East Delhi 1 + Ghaziabad,AM-Arvind Diwakar
+        - North Delhi + Centre Delhi,AM-Ankit Kumar
+        - East Delhi 2,AM-Pankaj Tomar
+        - West Delhi + Gurgaon,AM-Amit Ojha,V2
+
+  --- Column: 'cash/ online' (position 14) ---
+      Fill rate: 100.0% (908/908)
+      Data type: text
+      Sample values (first 5 non-null):
+        - ONLINE
+        - ONLINE
+        - ONLINE
+        - ONLINE
+        - ONLINE
+      Value distribution:
+    Unique values: 3 | Total non-null: 908
+  'ONLINE' = 834 (91.9%)
+  'CASH' = 46 (5.1%)
+  '#N/A' = 28 (3.1%)
+
+  --- Column: 'ALT mobile' (position 15) ---
+      Fill rate: 0.0% (0/908)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Optical Power' (position 16) ---
+      Fill rate: 94.4% (857/908)
+      Data type: numeric
+      Sample values (first 5 non-null):
+        - -25.55235205
+        - -16.00375245
+        - -19.93089357
+        - -23.62114207
+        - -17.4778613
+
+  --- Column: '# of tickets in last 3 months' (position 17) ---
+      Fill rate: 71.9% (653/908)
+      Data type: numeric
+      Sample values (first 5 non-null):
+        - 2
+        - 1
+        - 4
+        - 1
+        - 1
+      Value distribution:
+    Unique values: 16 | Total non-null: 653
+  '1' = 196 (30.0%)
+  '2' = 129 (19.8%)
+  '3' = 96 (14.7%)
+  '4' = 75 (11.5%)
+  '5' = 60 (9.2%)
+  '6' = 32 (4.9%)
+  '7' = 18 (2.8%)
+  '9' = 13 (2.0%)
+  '8' = 10 (1.5%)
+  '10' = 9 (1.4%)
+  '11' = 4 (0.6%)
+  '14' = 3 (0.5%)
+  '13' = 3 (0.5%)
+  '12' = 3 (0.5%)
+  '23' = 1 (0.2%)
+  '16' = 1 (0.2%)
+
+  --- Column: 'Payment_issue
+Tickets Flag' (position 18) ---
+      Fill rate: 71.9% (653/908)
+      Data type: numeric
+      Sample values (first 5 non-null):
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+      Value distribution:
+    Unique values: 5 | Total non-null: 653
+  '0' = 556 (85.1%)
+  '1' = 72 (11.0%)
+  '2' = 16 (2.5%)
+  '3' = 6 (0.9%)
+  '4' = 3 (0.5%)
+
+  --- Column: 'Devices on 2.4g' (position 19) ---
+      Fill rate: 94.8% (861/908)
+      Data type: numeric
+      Sample values (first 5 non-null):
+        - 4
+        - 7
+        - 4
+        - 3
+        - 4
+      Value distribution:
+    Unique values: 16 | Total non-null: 861
+  '3' = 176 (20.4%)
+  '4' = 163 (18.9%)
+  '2' = 155 (18.0%)
+  '5' = 117 (13.6%)
+  '1' = 68 (7.9%)
+  '6' = 62 (7.2%)
+  '7' = 39 (4.5%)
+  '8' = 24 (2.8%)
+  '9' = 19 (2.2%)
+  '0' = 18 (2.1%)
+  '10' = 11 (1.3%)
+  '11' = 4 (0.5%)
+  '13' = 2 (0.2%)
+  '15' = 1 (0.1%)
+  '14' = 1 (0.1%)
+  '12' = 1 (0.1%)
+
+  --- Column: 'Devices on 5g' (position 20) ---
+      Fill rate: 94.8% (861/908)
+      Data type: numeric
+      Sample values (first 5 non-null):
+        - 2
+        - 6
+        - 8
+        - 2
+        - 3
+      Value distribution:
+    Unique values: 14 | Total non-null: 861
+  '2' = 205 (23.8%)
+  '3' = 181 (21.0%)
+  '4' = 164 (19.0%)
+  '1' = 98 (11.4%)
+  '5' = 95 (11.0%)
+  '6' = 49 (5.7%)
+  '0' = 24 (2.8%)
+  '7' = 22 (2.6%)
+  '8' = 14 (1.6%)
+  '9' = 5 (0.6%)
+  '13' = 1 (0.1%)
+  '12' = 1 (0.1%)
+  '11' = 1 (0.1%)
+  '10' = 1 (0.1%)
+
+  --- Column: 'Last recharge done - when?' (position 21) ---
+      Fill rate: 97.8% (888/908)
+      Data type: datetime
+      Sample values (first 5 non-null):
+        - 2026-01-21 00:00:00
+        - 2026-01-31 00:00:00
+        - 2026-02-15 00:00:00
+        - 2026-02-09 00:00:00
+        - 2026-01-30 00:00:00
+
+  --- Column: 'Optical Range' (position 22) ---
+      Fill rate: 0.0% (0/908)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Data Usage amount' (position 23) ---
+      Fill rate: 95.3% (865/908)
+      Data type: numeric
+      Sample values (first 5 non-null):
+        - 446.388
+        - 992.504
+        - 911.077
+        - 349.862
+        - 549.093
+
+  --- Column: 'Data Usage Days' (position 24) ---
+      Fill rate: 95.3% (865/908)
+      Data type: numeric
+      Sample values (first 5 non-null):
+        - 32
+        - 31
+        - 27
+        - 32
+        - 32
+      Value distribution:
+    Unique values: 24 | Total non-null: 865
+  '32' = 541 (62.5%)
+  '31' = 83 (9.6%)
+  '30' = 48 (5.5%)
+  '29' = 41 (4.7%)
+  '28' = 33 (3.8%)
+  '27' = 19 (2.2%)
+  '24' = 15 (1.7%)
+  '23' = 15 (1.7%)
+  '26' = 13 (1.5%)
+  '25' = 12 (1.4%)
+  '21' = 12 (1.4%)
+  '20' = 7 (0.8%)
+  '19' = 5 (0.6%)
+  '22' = 5 (0.6%)
+  '16' = 3 (0.3%)
+  '14' = 2 (0.2%)
+  '10' = 2 (0.2%)
+  '18' = 2 (0.2%)
+  '17' = 2 (0.2%)
+  '13' = 1 (0.1%)
+  ... and 4 more unique values
+
+  --- Column: 'Data Usage Percentile' (position 25) ---
+      Fill rate: 0.0% (0/908)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'First time user?' (position 26) ---
+      Fill rate: 99.2% (901/908)
+      Data type: text
+      Sample values (first 5 non-null):
+        - No - Had net before
+        - No - Had net before
+        - No - Had net before
+        - No - Had net before
+        - No - Had net before
+      Value distribution:
+    Unique values: 2 | Total non-null: 901
+  'Yes - Wiom is first net' = 608 (67.5%)
+  'No - Had net before' = 293 (32.5%)
+
+  --- Column: 'Plan Expiry Date' (position 27) ---
+      Fill rate: 100.0% (908/908)
+      Data type: datetime [mixed: datetime(198), text(2)]
+      Sample values (first 5 non-null):
+        - 2026-02-18 00:00:00
+        - 2026-02-28 00:00:00
+        - 2026-02-15 00:00:00
+        - 2026-02-08 00:00:00
+        - 2026-02-27 00:00:00
+      Value distribution:
+    Unique values: 30 | Total non-null: 908
+  '2026-02-08 00:00:00' = 53 (5.8%)
+  '2026-02-09 00:00:00' = 50 (5.5%)
+  '2026-02-07 00:00:00' = 42 (4.6%)
+  '2026-02-11 00:00:00' = 42 (4.6%)
+  '2026-02-12 00:00:00' = 39 (4.3%)
+  '2026-02-06 00:00:00' = 39 (4.3%)
+  '2026-02-19 00:00:00' = 38 (4.2%)
+  '2026-02-17 00:00:00' = 36 (4.0%)
+  '2026-02-18 00:00:00' = 35 (3.9%)
+  '2026-02-14 00:00:00' = 34 (3.7%)
+  '2026-02-05 00:00:00' = 34 (3.7%)
+  '2026-02-28 00:00:00' = 33 (3.6%)
+  '2026-02-04 00:00:00' = 32 (3.5%)
+  '2026-02-10 00:00:00' = 31 (3.4%)
+  '2026-02-25 00:00:00' = 30 (3.3%)
+  '2026-02-15 00:00:00' = 28 (3.1%)
+  '#N/A' = 28 (3.1%)
+  '2026-03-02 00:00:00' = 27 (3.0%)
+  '2026-02-23 00:00:00' = 27 (3.0%)
+  '2026-03-01 00:00:00' = 27 (3.0%)
+  ... and 10 more unique values
+
+  --- Column: 'Plan Expiry Window' (position 28) ---
+      Fill rate: 0.0% (0/908)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Channel' (position 29) ---
+      Fill rate: 100.0% (908/908)
+      Data type: text
+      Sample values (first 5 non-null):
+        - CT
+        - WA
+        - WA
+        - WA
+        - WA
+      Value distribution:
+    Unique values: 2 | Total non-null: 908
+  'WA' = 484 (53.3%)
+  'CT' = 424 (46.7%)
+
+  --- Column: 'NPS Reason - primary' (position 30) ---
+      Fill rate: 56.4% (512/908)
+      Data type: text
+      Sample values (first 5 non-null):
+        - 28-Day Plan Issue
+        - 28-Day Plan Issue
+        - Affordable
+        - Affordable
+        - General Bad Service
+      Value distribution:
+    Unique values: 18 | Total non-null: 512
+  'General Good Service' = 132 (25.8%)
+  'General Bad Service' = 105 (20.5%)
+  'Slow Speed' = 100 (19.5%)
+  'Frequent Disconnections' = 56 (10.9%)
+  'N/A' = 34 (6.6%)
+  'Good Speed' = 26 (5.1%)
+  'Affordable' = 23 (4.5%)
+  'No/Late Complaint Resolution' = 8 (1.6%)
+  'Range Issue' = 7 (1.4%)
+  'Expensive' = 5 (1.0%)
+  'Bad Customer Support - Call Centre' = 3 (0.6%)
+  'Internet Down' = 3 (0.6%)
+  '28-Day Plan Issue' = 2 (0.4%)
+  'Bad Customer Support - Technician' = 2 (0.4%)
+  'Good customer Support - call centre' = 2 (0.4%)
+  'RDNI (Recharge Done, No Internet)' = 2 (0.4%)
+  'Fast Complaint Resolution' = 1 (0.2%)
+  'Quick Installation' = 1 (0.2%)
+
+  --- Column: 'NPS Reason - secondary' (position 31) ---
+      Fill rate: 7.0% (64/908)
+      Data type: text
+      Sample values (first 5 non-null):
+        - Slow Speed
+        - Frequent Disconnections
+        - Slow Speed
+        - General Good Service
+        - Good Speed
+      Value distribution:
+    Unique values: 16 | Total non-null: 64
+  'Range Issue' = 11 (17.2%)
+  'Slow Speed' = 8 (12.5%)
+  'Bad Customer Support - Call Centre' = 8 (12.5%)
+  'Frequent Disconnections' = 7 (10.9%)
+  'Good Speed' = 6 (9.4%)
+  'No/Late Complaint Resolution' = 5 (7.8%)
+  'General Good Service' = 4 (6.2%)
+  'Bad Customer Support - Technician' = 3 (4.7%)
+  'Expensive' = 3 (4.7%)
+  'Fast Complaint Resolution' = 2 (3.1%)
+  'General Bad Service' = 2 (3.1%)
+  'Bad Application' = 1 (1.6%)
+  'Quick Installation' = 1 (1.6%)
+  'Good Partner/ Techinician Support' = 1 (1.6%)
+  'Affordable' = 1 (1.6%)
+  'Good customer Support - call centre' = 1 (1.6%)
+
+  --- Column: 'NPS reason tertiary' (position 32) ---
+      Fill rate: 1.4% (13/908)
+      Data type: text
+      Sample values (first 5 non-null):
+        - OTT Request, No OTT complaint
+        - 28-Day Plan Issue
+        - No/Late Complaint Resolution
+        - Slow Speed
+        - Bad Customer Support - Call Centre
+      Value distribution:
+    Unique values: 10 | Total non-null: 13
+  'No/Late Complaint Resolution' = 2 (15.4%)
+  'Slow Speed' = 2 (15.4%)
+  'Bad Customer Support - Technician' = 2 (15.4%)
+  'OTT Request, No OTT complaint' = 1 (7.7%)
+  '28-Day Plan Issue' = 1 (7.7%)
+  'Bad Customer Support - Call Centre' = 1 (7.7%)
+  'Fast Complaint Resolution' = 1 (7.7%)
+  'Quick Installation' = 1 (7.7%)
+  'Range Issue' = 1 (7.7%)
+  'Good Partner/ Techinician Support' = 1 (7.7%)
+
+  --- Column: 'Comments' (position 33) ---
+      Fill rate: 5.3% (48/908)
+      Data type: text
+      Sample values (first 5 non-null):
+        - churn risk
+        - ???
+        - check
+        - check
+        - check
+      Value distribution:
+    Unique values: 18 | Total non-null: 48
+  'check' = 22 (45.8%)
+  'churn risk' = 6 (12.5%)
+  '???' = 3 (6.2%)
+  '??' = 2 (4.2%)
+  '????????' = 2 (4.2%)
+  '///////' = 1 (2.1%)
+  'app' = 1 (2.1%)
+  '????' = 1 (2.1%)
+  'churned' = 1 (2.1%)
+  'check/ app' = 1 (2.1%)
+  'app issue' = 1 (2.1%)
+  '/////////' = 1 (2.1%)
+  '??? check' = 1 (2.1%)
+  '?/' = 1 (2.1%)
+  'why is it dif to recharge?' = 1 (2.1%)
+  'risk' = 1 (2.1%)
+  '//////' = 1 (2.1%)
+  '??????' = 1 (2.1%)
+
+  --- Column: 'Partner' (position 34) ---
+      Fill rate: 100.0% (908/908)
+      Data type: text
+      Sample values (first 5 non-null):
+        - Jagdamba Communication
+        - Shri Bankey Bihari Internet Services
+        - ANOOP INTERNET
+        - Krishbyl Broadband
+        - Rs enterprises
+
+  --- Column: 'SLA' (position 35) ---
+      Fill rate: 100.0% (908/908)
+      Data type: text
+      Sample values (first 5 non-null):
+        - High SLA
+        - High SLA
+        - Not found
+        - High SLA
+        - Low SLA
+      Value distribution:
+    Unique values: 4 | Total non-null: 908
+  'High SLA' = 534 (58.8%)
+  'Low SLA' = 268 (29.5%)
+  'Not found' = 78 (8.6%)
+  '#N/A' = 28 (3.1%)
+
+  --- Column: 'Install Date' (position 36) ---
+      Fill rate: 98.1% (891/908)
+      Data type: datetime
+      Sample values (first 5 non-null):
+        - 2025-09-03 00:00:00
+        - 2024-12-21 00:00:00
+        - 2025-07-04 00:00:00
+        - 2025-09-15 00:00:00
+        - 2026-01-02 00:00:00
+
+  --- Column: 'Tenure - install' (position 37) ---
+      Fill rate: 98.1% (891/908)
+      Data type: text
+      Sample values (first 5 non-null):
+        - 6+ months
+        - 6+ months
+        - 6+ months
+        - 6+ months
+        - 3-6 months
+      Value distribution:
+    Unique values: 3 | Total non-null: 891
+  '6+ months' = 612 (68.7%)
+  '3-6 months' = 278 (31.2%)
+  '1-2 months' = 1 (0.1%)
+====================================================================================================
+
+>>> TAB: 'Sprint RSP2 Feb26' <<<
+====================================================================================================
+  Dimensions: 1350 rows x 48 cols
+  Total columns (including core): 37
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Data rows: 1152
+  Extra columns count: 30
+
+  ALL COLUMN NAMES (including core):
+    Col  1: USER_ID [CORE]
+    Col  2: PROFILE_ALL_IDENTITIES [CORE]
+    Col  3: USER_RATING [CORE]
+    Col  4: NPS_CLASSIFICATION [CORE]
+    Col  5: COMMENT [CORE]
+    Col  6: TIMESTAMP [CORE]
+    Col  7: Mobile [CORE]
+    Col  8: Device type [EXTRA]
+    Col  9: Tenure [EXTRA]
+    Col 10: City [EXTRA]
+    Col 11: Device [EXTRA]
+    Col 12: recharge done [EXTRA]
+    Col 13: Zone [EXTRA]
+    Col 14: Optical Power [EXTRA]
+    Col 15: # of tickets in last 3 months [EXTRA]
+    Col 16: Payment_issue
+Tickets Flag [EXTRA]
+    Col 17: Devices on 2.4g [EXTRA]
+    Col 18: Devices on 5g [EXTRA]
+    Col 19: Last recharge done - when? [EXTRA]
+    Col 20: Optical Range [EXTRA]
+    Col 21: Data Usage amount [EXTRA]
+    Col 22: Data Usage Days [EXTRA]
+    Col 23: Data Usage Percentile [EXTRA]
+    Col 24: First time user? [EXTRA]
+    Col 25: Channel [EXTRA]
+    Col 26: NPS Reason - primary [EXTRA]
+    Col 27: NPS Reason - secondary [EXTRA]
+    Col 28: NPS reason tertiary [EXTRA]
+    Col 29: Comments [EXTRA]
+    Col 30: Caller [EXTRA]
+    Col 31: Status [EXTRA]
+    Col 32: Current Exp - Any additional context on rating? [EXTRA]
+    Col 33: What do they do when they face a prob? [EXTRA]
+    Col 34: Partner [EXTRA]
+    Col 35: SLA [EXTRA]
+    Col 36: Installation Date [EXTRA]
+    Col 37: Tenure // Install [EXTRA]
+
+  ==========================================================================================
+  DETAILED EXTRA COLUMN ANALYSIS
+  ==========================================================================================
+
+  --- Column: 'Device type' (position 8) ---
+      Fill rate: 67.4% (777/1152)
+      Data type: text
+      Sample values (first 5 non-null):
+        - SY
+        - TP
+        - SY
+        - SY
+        - TP
+      Value distribution:
+    Unique values: 3 | Total non-null: 777
+  'GX' = 434 (55.9%)
+  'SY' = 267 (34.4%)
+  'TP' = 76 (9.8%)
+
+  --- Column: 'Tenure' (position 9) ---
+      Fill rate: 69.4% (800/1152)
+      Data type: text
+      Sample values (first 5 non-null):
+        - 6+ months
+        - 6+ months
+        - 6+ months
+        - 6+ months
+        - 6+ months
+      Value distribution:
+    Unique values: 4 | Total non-null: 800
+  '6+ months' = 509 (63.6%)
+  '3–6 months' = 221 (27.6%)
+  '1–2 months' = 47 (5.9%)
+  '#N/A' = 23 (2.9%)
+
+  --- Column: 'City' (position 10) ---
+      Fill rate: 67.4% (777/1152)
+      Data type: text
+      Sample values (first 5 non-null):
+        - Delhi
+        - Mumbai
+        - Delhi
+        - Delhi
+        - Delhi
+      Value distribution:
+    Unique values: 3 | Total non-null: 777
+  'Delhi' = 663 (85.3%)
+  'Mumbai' = 62 (8.0%)
+  'UP' = 52 (6.7%)
+
+  --- Column: 'Device' (position 11) ---
+      Fill rate: 69.4% (800/1152)
+      Data type: text [mixed: text(188), integer(12)]
+      Sample values (first 5 non-null):
+        - SY044580
+        - 156392.0
+        - SY070317
+        - SY15270
+        - 171605.0
+
+  --- Column: 'recharge done' (position 12) ---
+      Fill rate: 69.4% (800/1152)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 27.0
+        - 24.0
+        - 27.0
+        - 24.0
+        - 26.0
+
+  --- Column: 'Zone' (position 13) ---
+      Fill rate: 69.4% (800/1152)
+      Data type: text
+      Sample values (first 5 non-null):
+        - West Delhi,AM-Saurabh Singh
+        - Centre Mumbai,AM-Avinash
+        - East Delhi 1,AM-Pramendra Yadav
+        - East Delhi 2 + Ghaziabad,AM-Wasim
+        - North Delhi,AM-Veer Chand
+
+  --- Column: 'Optical Power' (position 14) ---
+      Fill rate: 52.3% (602/1152)
+      Data type: numeric [mixed: numeric(192), integer(8)]
+      Sample values (first 5 non-null):
+        - -19.86432388
+        - -25.6775347582286
+        - -8.0
+        - -29.384925387468
+        - -11.3587368052822
+
+  --- Column: '# of tickets in last 3 months' (position 15) ---
+      Fill rate: 42.5% (490/1152)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 2.0
+        - 20.0
+        - 2.0
+        - 1.0
+        - 3.0
+      Value distribution:
+    Unique values: 15 | Total non-null: 490
+  '1.0' = 157 (32.0%)
+  '2.0' = 104 (21.2%)
+  '3.0' = 64 (13.1%)
+  '4.0' = 50 (10.2%)
+  '5.0' = 34 (6.9%)
+  '6.0' = 31 (6.3%)
+  '8.0' = 16 (3.3%)
+  '7.0' = 13 (2.7%)
+  '10.0' = 6 (1.2%)
+  '9.0' = 6 (1.2%)
+  '12.0' = 4 (0.8%)
+  '11.0' = 2 (0.4%)
+  '20.0' = 1 (0.2%)
+  '18.0' = 1 (0.2%)
+  '23.0' = 1 (0.2%)
+
+  --- Column: 'Payment_issue
+Tickets Flag' (position 16) ---
+      Fill rate: 47.8% (551/1152)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 1.0
+        - 2.0
+        - 0.0
+        - 0.0
+        - 0.0
+      Value distribution:
+    Unique values: 6 | Total non-null: 551
+  '0.0' = 458 (83.1%)
+  '1.0' = 74 (13.4%)
+  '2.0' = 15 (2.7%)
+  '3.0' = 2 (0.4%)
+  '5.0' = 1 (0.2%)
+  '4.0' = 1 (0.2%)
+
+  --- Column: 'Devices on 2.4g' (position 17) ---
+      Fill rate: 66.8% (769/1152)
+      Data type: integer [mixed: integer(199), numeric(1)]
+      Sample values (first 5 non-null):
+        - 1
+        - 3.0
+        - 7.0
+        - 3.0
+        - 3.0
+      Value distribution:
+    Unique values: 16 | Total non-null: 769
+  '3.0' = 182 (23.7%)
+  '4.0' = 147 (19.1%)
+  '5.0' = 108 (14.0%)
+  '2.0' = 100 (13.0%)
+  '6.0' = 69 (9.0%)
+  '7.0' = 48 (6.2%)
+  '1.0' = 43 (5.6%)
+  '8.0' = 33 (4.3%)
+  '9.0' = 17 (2.2%)
+  '0.0' = 6 (0.8%)
+  '12.0' = 6 (0.8%)
+  '11.0' = 3 (0.4%)
+  '13.0' = 3 (0.4%)
+  '10.0' = 2 (0.3%)
+  '1' = 1 (0.1%)
+  '72.0' = 1 (0.1%)
+
+  --- Column: 'Devices on 5g' (position 18) ---
+      Fill rate: 66.8% (769/1152)
+      Data type: integer [mixed: integer(199), numeric(1)]
+      Sample values (first 5 non-null):
+        - 4
+        - 3.0
+        - 3.0
+        - 4.0
+        - 5.0
+      Value distribution:
+    Unique values: 14 | Total non-null: 769
+  '3.0' = 194 (25.2%)
+  '4.0' = 179 (23.3%)
+  '2.0' = 130 (16.9%)
+  '5.0' = 98 (12.7%)
+  '1.0' = 66 (8.6%)
+  '6.0' = 46 (6.0%)
+  '7.0' = 29 (3.8%)
+  '0.0' = 10 (1.3%)
+  '8.0' = 9 (1.2%)
+  '10.0' = 3 (0.4%)
+  '13.0' = 2 (0.3%)
+  '4' = 1 (0.1%)
+  '238.0' = 1 (0.1%)
+  '9.0' = 1 (0.1%)
+
+  --- Column: 'Last recharge done - when?' (position 19) ---
+      Fill rate: 67.8% (781/1152)
+      Data type: datetime
+      Sample values (first 5 non-null):
+        - 2026-02-17 00:00:00
+        - 2026-02-06 00:00:00
+        - 2026-02-11 00:00:00
+        - 2026-01-28 00:00:00
+        - 2026-02-06 00:00:00
+
+  --- Column: 'Optical Range' (position 20) ---
+      Fill rate: 0.0% (0/1152)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Data Usage amount' (position 21) ---
+      Fill rate: 66.8% (770/1152)
+      Data type: numeric
+      Sample values (first 5 non-null):
+        - 225.224
+        - 613.116
+        - 425.344
+        - 471.185
+        - 503.567
+
+  --- Column: 'Data Usage Days' (position 22) ---
+      Fill rate: 66.8% (770/1152)
+      Data type: integer [mixed: integer(199), numeric(1)]
+      Sample values (first 5 non-null):
+        - 25
+        - 25.0
+        - 25.0
+        - 24.0
+        - 25.0
+      Value distribution:
+    Unique values: 22 | Total non-null: 770
+  '25.0' = 513 (66.6%)
+  '24.0' = 85 (11.0%)
+  '23.0' = 43 (5.6%)
+  '22.0' = 26 (3.4%)
+  '21.0' = 19 (2.5%)
+  '20.0' = 19 (2.5%)
+  '19.0' = 10 (1.3%)
+  '18.0' = 9 (1.2%)
+  '17.0' = 8 (1.0%)
+  '14.0' = 7 (0.9%)
+  '15.0' = 6 (0.8%)
+  '16.0' = 5 (0.6%)
+  '8.0' = 4 (0.5%)
+  '12.0' = 4 (0.5%)
+  '11.0' = 2 (0.3%)
+  '4.0' = 2 (0.3%)
+  '7.0' = 2 (0.3%)
+  '10.0' = 2 (0.3%)
+  '25' = 1 (0.1%)
+  '3.0' = 1 (0.1%)
+  ... and 2 more unique values
+
+  --- Column: 'Data Usage Percentile' (position 23) ---
+      Fill rate: 0.0% (0/1152)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'First time user?' (position 24) ---
+      Fill rate: 68.5% (789/1152)
+      Data type: text
+      Sample values (first 5 non-null):
+        - Yes - Wiom is first net
+        - Yes - Wiom is first net
+        - Yes - Wiom is first net
+        - Yes - Wiom is first net
+        - Yes - Wiom is first net
+      Value distribution:
+    Unique values: 2 | Total non-null: 789
+  'Yes - Wiom is first net' = 547 (69.3%)
+  'No - Had net before' = 242 (30.7%)
+
+  --- Column: 'Channel' (position 25) ---
+      Fill rate: 69.4% (800/1152)
+      Data type: text
+      Sample values (first 5 non-null):
+        - WA
+        - WA
+        - CT
+        - CT
+        - WA
+      Value distribution:
+    Unique values: 2 | Total non-null: 800
+  'WA' = 456 (57.0%)
+  'CT' = 344 (43.0%)
+
+  --- Column: 'NPS Reason - primary' (position 26) ---
+      Fill rate: 41.0% (472/1152)
+      Data type: text
+      Sample values (first 5 non-null):
+        - General Bad Service
+        - General Bad Service
+        - Expensive
+        - Slow Speed
+        - General Bad Service
+      Value distribution:
+    Unique values: 17 | Total non-null: 472
+  'General Good Service' = 134 (28.4%)
+  'General Bad Service' = 98 (20.8%)
+  'Slow Speed' = 67 (14.2%)
+  'Frequent Disconnections' = 55 (11.7%)
+  'Affordable' = 26 (5.5%)
+  'N/A' = 22 (4.7%)
+  'Expensive' = 16 (3.4%)
+  'No/Late Complaint Resolution' = 15 (3.2%)
+  'Good Speed' = 12 (2.5%)
+  'Fast Complaint Resolution' = 8 (1.7%)
+  'Bad Application' = 5 (1.1%)
+  'Range Issue' = 4 (0.8%)
+  'OTT Request, No OTT complaint' = 3 (0.6%)
+  '28-Day Plan Issue' = 3 (0.6%)
+  'Good customer Support - call centre' = 2 (0.4%)
+  'Bad Customer Support - Call Centre' = 1 (0.2%)
+  'Shifting not Feasible' = 1 (0.2%)
+
+  --- Column: 'NPS Reason - secondary' (position 27) ---
+      Fill rate: 3.8% (44/1152)
+      Data type: text
+      Sample values (first 5 non-null):
+        - General Bad Service
+        - No/Late Complaint Resolution
+        - Slow Speed
+        - Bad Customer Support - Call Centre
+        - Slow Speed
+      Value distribution:
+    Unique values: 14 | Total non-null: 44
+  'No/Late Complaint Resolution' = 8 (18.2%)
+  'Slow Speed' = 8 (18.2%)
+  'Bad Customer Support - Call Centre' = 6 (13.6%)
+  'Frequent Disconnections' = 5 (11.4%)
+  'Range Issue' = 4 (9.1%)
+  'General Bad Service' = 2 (4.5%)
+  'Good Speed' = 2 (4.5%)
+  'General Good Service' = 2 (4.5%)
+  'Good customer Support - call centre' = 2 (4.5%)
+  'Affordable' = 1 (2.3%)
+  'Fast Complaint Resolution' = 1 (2.3%)
+  'OTT Request, No OTT complaint' = 1 (2.3%)
+  'Bad Customer Support - Technician' = 1 (2.3%)
+  '28-Day Plan Issue' = 1 (2.3%)
+
+  --- Column: 'NPS reason tertiary' (position 28) ---
+      Fill rate: 0.9% (10/1152)
+      Data type: text
+      Sample values (first 5 non-null):
+        - Frequent Disconnections
+        - Bad Customer Support - Technician
+        - Frequent Disconnections
+        - Frequent Disconnections
+        - Range Issue
+      Value distribution:
+    Unique values: 5 | Total non-null: 10
+  'Frequent Disconnections' = 3 (30.0%)
+  'Bad Customer Support - Technician' = 3 (30.0%)
+  'Range Issue' = 2 (20.0%)
+  'Good Partner/ Techinician Support' = 1 (10.0%)
+  'Bad Customer Support - Call Centre' = 1 (10.0%)
+
+  --- Column: 'Comments' (position 29) ---
+      Fill rate: 4.2% (48/1152)
+      Data type: text
+      Sample values (first 5 non-null):
+        - been a cx since 2024, has been doing 500 recharge only - check pehle se kya m...
+        - churn risk
+        - time bound disconnection
+        - churn risk
+        - checl
+      Value distribution:
+    Unique values: 13 | Total non-null: 48
+  'check' = 19 (39.6%)
+  'churn risk' = 7 (14.6%)
+  'opp to det comment' = 7 (14.6%)
+  'time bound disconnection' = 6 (12.5%)
+  'been a cx since 2024, has been doing 500 recharge ...' = 1 (2.1%)
+  'checl' = 1 (2.1%)
+  'payg complaint' = 1 (2.1%)
+  'wiomnet check' = 1 (2.1%)
+  'wiomnett check' = 1 (2.1%)
+  'churned. why?' = 1 (2.1%)
+  'old cx - since 2024 - not sure why they know about...' = 1 (2.1%)
+  '399 migrated cx' = 1 (2.1%)
+  'v emo - flag' = 1 (2.1%)
+
+  --- Column: 'Caller' (position 30) ---
+      Fill rate: 0.0% (0/1152)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Status' (position 31) ---
+      Fill rate: 0.0% (0/1152)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Current Exp - Any additional context on rating?' (position 32) ---
+      Fill rate: 0.0% (0/1152)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'What do they do when they face a prob?' (position 33) ---
+      Fill rate: 0.0% (0/1152)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Partner' (position 34) ---
+      Fill rate: 0.0% (0/1152)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'SLA' (position 35) ---
+      Fill rate: 0.0% (0/1152)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Installation Date' (position 36) ---
+      Fill rate: 59.5% (685/1152)
+      Data type: datetime
+      Sample values (first 5 non-null):
+        - 2024-02-04 00:00:00
+        - 2024-02-06 00:00:00
+        - 2024-02-07 00:00:00
+        - 2024-02-15 00:00:00
+        - 2024-02-23 00:00:00
+
+  --- Column: 'Tenure // Install' (position 37) ---
+      Fill rate: 59.5% (685/1152)
+      Data type: text
+      Sample values (first 5 non-null):
+        - 6+ months
+        - 6+ months
+        - 6+ months
+        - 6+ months
+        - 6+ months
+      Value distribution:
+    Unique values: 3 | Total non-null: 685
+  '6+ months' = 476 (69.5%)
+  '3-6 months' = 203 (29.6%)
+  '1-2 months' = 6 (0.9%)
+====================================================================================================
+
+>>> TAB: 'Sprint RSP3 Feb26' <<<
+====================================================================================================
+  Dimensions: 954 rows x 63 cols
+  Total columns (including core): 48
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Data rows: 940
+  Extra columns count: 35
+
+  ALL COLUMN NAMES (including core):
+    Col  1: USER_ID [CORE]
+    Col  2: PROFILE_ALL_IDENTITIES [CORE]
+    Col  3: USER_RATING [CORE]
+    Col  4: NPS_CLASSIFICATION [CORE]
+    Col  5: COMMENT [CORE]
+    Col  6: TIMESTAMP [CORE]
+    Col  7: Mobile [CORE]
+    Col  8: Device type [EXTRA]
+    Col  9: Tenure [EXTRA]
+    Col 10: City [EXTRA]
+    Col 11: Device [EXTRA]
+    Col 12: recharge done [EXTRA]
+    Col 13: Zone [EXTRA]
+    Col 14: Optical Power [EXTRA]
+    Col 15: # of tickets in last 3 months [EXTRA]
+    Col 16: Payment_issue
+Tickets Flag [EXTRA]
+    Col 17: Devices on 2.4g [EXTRA]
+    Col 18: Devices on 5g [EXTRA]
+    Col 19: Last recharge done - when? [EXTRA]
+    Col 20: Optical Range [EXTRA]
+    Col 21: Data Usage amount [EXTRA]
+    Col 22: Data Usage Days [EXTRA]
+    Col 23: Data Usage Percentile [EXTRA]
+    Col 24: First time user? [EXTRA]
+    Col 25: Channel [EXTRA]
+    Col 26: NPS Reason - primary [EXTRA]
+    Col 27: NPS Reason - secondary [EXTRA]
+    Col 28: NPS reason tertiary [EXTRA]
+    Col 29: Comments [EXTRA]
+    Col 30: Caller [EXTRA]
+    Col 31: Status [EXTRA]
+    Col 32: Current Exp - Any additional context on rating? [EXTRA]
+    Col 33: What do they do when they face a prob? [EXTRA]
+    Col 34: Partner [EXTRA]
+    Col 35: SLA [EXTRA]
+    Col 36: Installation Date [EXTRA]
+    Col 37: Tenure // Install [EXTRA]
+    Col 38: pay g? [EXTRA]
+    Col 39: <unnamed_col_39> [EXTRA]
+    Col 40: <unnamed_col_40> [EXTRA]
+    Col 41: <unnamed_col_41> [EXTRA]
+    Col 42: <unnamed_col_42> [EXTRA]
+    Col 43: <unnamed_col_43> [EXTRA]
+    Col 44: Good Partner/ Techinician Support [EXTRA]
+    Col 45: 1.0 [EXTRA]
+    Col 46: <unnamed_col_46> [EXTRA]
+    Col 47: 1.0 [EXTRA]
+    Col 48: 2.0 [EXTRA]
+
+  ==========================================================================================
+  DETAILED EXTRA COLUMN ANALYSIS
+  ==========================================================================================
+
+  --- Column: 'Device type' (position 8) ---
+      Fill rate: 96.2% (904/940)
+      Data type: text
+      Sample values (first 5 non-null):
+        - GX
+        - SY
+        - GX
+        - TP
+        - GX
+      Value distribution:
+    Unique values: 3 | Total non-null: 904
+  'GX' = 491 (54.3%)
+  'SY' = 306 (33.8%)
+  'TP' = 107 (11.8%)
+
+  --- Column: 'Tenure' (position 9) ---
+      Fill rate: 100.0% (940/940)
+      Data type: text
+      Sample values (first 5 non-null):
+        - 6+ months
+        - 6+ months
+        - 3–6 months
+        - #N/A
+        - 6+ months
+      Value distribution:
+    Unique values: 4 | Total non-null: 940
+  '6+ months' = 635 (67.6%)
+  '3–6 months' = 242 (25.7%)
+  '#N/A' = 36 (3.8%)
+  '1–2 months' = 27 (2.9%)
+
+  --- Column: 'City' (position 10) ---
+      Fill rate: 96.2% (904/940)
+      Data type: text
+      Sample values (first 5 non-null):
+        - Delhi
+        - Delhi
+        - Delhi
+        - Delhi
+        - Delhi
+      Value distribution:
+    Unique values: 3 | Total non-null: 904
+  'Delhi' = 779 (86.2%)
+  'Mumbai' = 64 (7.1%)
+  'UP' = 61 (6.7%)
+
+  --- Column: 'Device' (position 11) ---
+      Fill rate: 100.0% (940/940)
+      Data type: text [mixed: text(169), integer(31)]
+      Sample values (first 5 non-null):
+        - GX61678
+        - SY069757
+        - GX104729
+        - #N/A
+        - 164325.0
+
+  --- Column: 'recharge done' (position 12) ---
+      Fill rate: 100.0% (940/940)
+      Data type: integer [mixed: integer(196), text(4)]
+      Sample values (first 5 non-null):
+        - 16.0
+        - 16.0
+        - 3.0
+        - #N/A
+        - 24.0
+
+  --- Column: 'Zone' (position 13) ---
+      Fill rate: 100.0% (940/940)
+      Data type: text
+      Sample values (first 5 non-null):
+        - East Delhi 1,AM-Himanshu Bhardwaj
+        - South Delhi,AM-Vivekanand
+        - East Delhi 2 + Noida,AM-Khemanand,V2
+        - #N/A
+        - South Delhi,AM-Vivekanand
+
+  --- Column: 'Optical Power' (position 14) ---
+      Fill rate: 93.9% (883/940)
+      Data type: numeric [mixed: numeric(168), integer(32)]
+      Sample values (first 5 non-null):
+        - -13.8478500372149
+        - -20.770891184573
+        - -25.1815224777993
+        - -8.0
+        - -26.3876280455096
+
+  --- Column: '# of tickets in last 3 months' (position 15) ---
+      Fill rate: 63.2% (594/940)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 1.0
+        - 4.0
+        - 2.0
+        - 1.0
+        - 2.0
+      Value distribution:
+    Unique values: 17 | Total non-null: 594
+  '1.0' = 175 (29.5%)
+  '2.0' = 149 (25.1%)
+  '3.0' = 94 (15.8%)
+  '4.0' = 64 (10.8%)
+  '5.0' = 42 (7.1%)
+  '6.0' = 29 (4.9%)
+  '8.0' = 13 (2.2%)
+  '7.0' = 12 (2.0%)
+  '9.0' = 5 (0.8%)
+  '13.0' = 3 (0.5%)
+  '15.0' = 2 (0.3%)
+  '17.0' = 1 (0.2%)
+  '21.0' = 1 (0.2%)
+  '19.0' = 1 (0.2%)
+  '10.0' = 1 (0.2%)
+  '14.0' = 1 (0.2%)
+  '11.0' = 1 (0.2%)
+
+  --- Column: 'Payment_issue
+Tickets Flag' (position 16) ---
+      Fill rate: 66.3% (623/940)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+      Value distribution:
+    Unique values: 5 | Total non-null: 623
+  '0.0' = 520 (83.5%)
+  '1.0' = 74 (11.9%)
+  '2.0' = 19 (3.0%)
+  '4.0' = 6 (1.0%)
+  '3.0' = 4 (0.6%)
+
+  --- Column: 'Devices on 2.4g' (position 17) ---
+      Fill rate: 94.0% (884/940)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 3.0
+        - 3.0
+        - 5.0
+        - 0.0
+        - 2.0
+      Value distribution:
+    Unique values: 14 | Total non-null: 884
+  '3.0' = 186 (21.0%)
+  '2.0' = 163 (18.4%)
+  '4.0' = 157 (17.8%)
+  '5.0' = 102 (11.5%)
+  '1.0' = 86 (9.7%)
+  '6.0' = 74 (8.4%)
+  '7.0' = 43 (4.9%)
+  '8.0' = 22 (2.5%)
+  '0.0' = 18 (2.0%)
+  '10.0' = 13 (1.5%)
+  '9.0' = 11 (1.2%)
+  '11.0' = 5 (0.6%)
+  '13.0' = 3 (0.3%)
+  '14.0' = 1 (0.1%)
+
+  --- Column: 'Devices on 5g' (position 18) ---
+      Fill rate: 94.0% (884/940)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 5.0
+        - 0.0
+        - 1.0
+        - 3.0
+        - 3.0
+      Value distribution:
+    Unique values: 14 | Total non-null: 884
+  '3.0' = 223 (25.2%)
+  '4.0' = 183 (20.7%)
+  '2.0' = 164 (18.6%)
+  '5.0' = 113 (12.8%)
+  '1.0' = 103 (11.7%)
+  '6.0' = 45 (5.1%)
+  '0.0' = 23 (2.6%)
+  '7.0' = 15 (1.7%)
+  '10.0' = 4 (0.5%)
+  '9.0' = 4 (0.5%)
+  '8.0' = 4 (0.5%)
+  '13.0' = 1 (0.1%)
+  '12.0' = 1 (0.1%)
+  '16.0' = 1 (0.1%)
+
+  --- Column: 'Last recharge done - when?' (position 19) ---
+      Fill rate: 97.3% (915/940)
+      Data type: datetime
+      Sample values (first 5 non-null):
+        - 2026-03-11 00:00:00
+        - 2026-02-17 00:00:00
+        - 2026-02-12 00:00:00
+        - 2026-02-23 00:00:00
+        - 2026-02-24 00:00:00
+
+  --- Column: 'Optical Range' (position 20) ---
+      Fill rate: 0.0% (0/940)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Data Usage amount' (position 21) ---
+      Fill rate: 95.0% (893/940)
+      Data type: numeric
+      Sample values (first 5 non-null):
+        - 260.075
+        - 138.805
+        - 197.009
+        - 31.801
+        - 98.285
+
+  --- Column: 'Data Usage Days' (position 22) ---
+      Fill rate: 95.0% (893/940)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 13.0
+        - 13.0
+        - 13.0
+        - 13.0
+        - 13.0
+      Value distribution:
+    Unique values: 13 | Total non-null: 893
+  '13.0' = 681 (76.3%)
+  '12.0' = 83 (9.3%)
+  '10.0' = 34 (3.8%)
+  '11.0' = 25 (2.8%)
+  '9.0' = 20 (2.2%)
+  '8.0' = 15 (1.7%)
+  '7.0' = 7 (0.8%)
+  '5.0' = 7 (0.8%)
+  '4.0' = 7 (0.8%)
+  '3.0' = 6 (0.7%)
+  '2.0' = 4 (0.4%)
+  '1.0' = 3 (0.3%)
+  '6.0' = 1 (0.1%)
+
+  --- Column: 'Data Usage Percentile' (position 23) ---
+      Fill rate: 0.0% (0/940)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'First time user?' (position 24) ---
+      Fill rate: 98.4% (925/940)
+      Data type: text
+      Sample values (first 5 non-null):
+        - Yes - Wiom is first net
+        - No - Had net before
+        - No - Had net before
+        - Yes - Wiom is first net
+        - No - Had net before
+      Value distribution:
+    Unique values: 2 | Total non-null: 925
+  'Yes - Wiom is first net' = 562 (60.8%)
+  'No - Had net before' = 363 (39.2%)
+
+  --- Column: 'Channel' (position 25) ---
+      Fill rate: 100.0% (940/940)
+      Data type: text
+      Sample values (first 5 non-null):
+        - CT
+        - WA
+        - CT
+        - CT
+        - CT
+      Value distribution:
+    Unique values: 2 | Total non-null: 940
+  'WA' = 510 (54.3%)
+  'CT' = 430 (45.7%)
+
+  --- Column: 'NPS Reason - primary' (position 26) ---
+      Fill rate: 58.2% (547/940)
+      Data type: text
+      Sample values (first 5 non-null):
+        - General Good Service
+        - Bad Customer Support - Call Centre
+        - General Good Service
+        - General Good Service
+        - General Good Service
+      Value distribution:
+    Unique values: 20 | Total non-null: 547
+  'General Good Service' = 116 (21.2%)
+  'General Bad Service' = 111 (20.3%)
+  'Slow Speed' = 83 (15.2%)
+  'Frequent Disconnections' = 76 (13.9%)
+  'Affordable' = 33 (6.0%)
+  'N/A' = 26 (4.8%)
+  'Good Speed' = 25 (4.6%)
+  'Internet Down' = 12 (2.2%)
+  'RDNI (Recharge Done, No Internet)' = 12 (2.2%)
+  'No/Late Complaint Resolution' = 11 (2.0%)
+  'Bad Customer Support - Call Centre' = 9 (1.6%)
+  'Bad Customer Support - Technician' = 7 (1.3%)
+  'Expensive' = 6 (1.1%)
+  'Range Issue' = 6 (1.1%)
+  'Fast Complaint Resolution' = 5 (0.9%)
+  'Bad Application' = 3 (0.5%)
+  '28-Day Plan Issue' = 2 (0.4%)
+  'Good Partner/ Techinician Support' = 2 (0.4%)
+  'Shifting not Feasible' = 1 (0.2%)
+  'OTT Request, No OTT complaint' = 1 (0.2%)
+
+  --- Column: 'NPS Reason - secondary' (position 27) ---
+      Fill rate: 3.4% (32/940)
+      Data type: text
+      Sample values (first 5 non-null):
+        - Bad Customer Support - Call Centre
+        - General Bad Service
+        - Bad Customer Support - Technician
+        - Bad Customer Support - Call Centre
+        - Bad Customer Support - Call Centre
+      Value distribution:
+    Unique values: 11 | Total non-null: 32
+  'Bad Customer Support - Call Centre' = 9 (28.1%)
+  'Slow Speed' = 5 (15.6%)
+  'Good Speed' = 4 (12.5%)
+  'Affordable' = 4 (12.5%)
+  'No/Late Complaint Resolution' = 3 (9.4%)
+  'Frequent Disconnections' = 2 (6.2%)
+  'General Bad Service' = 1 (3.1%)
+  'Bad Customer Support - Technician' = 1 (3.1%)
+  '28-Day Plan Issue' = 1 (3.1%)
+  'Range Issue' = 1 (3.1%)
+  'Fast Complaint Resolution' = 1 (3.1%)
+
+  --- Column: 'NPS reason tertiary' (position 28) ---
+      Fill rate: 0.5% (5/940)
+      Data type: text
+      Sample values (first 5 non-null):
+        - No/Late Complaint Resolution
+        - Frequent Disconnections
+        - Bad Customer Support - Call Centre
+        - Good Partner/ Techinician Support
+        - Bad Application
+      Value distribution:
+    Unique values: 5 | Total non-null: 5
+  'No/Late Complaint Resolution' = 1 (20.0%)
+  'Frequent Disconnections' = 1 (20.0%)
+  'Bad Customer Support - Call Centre' = 1 (20.0%)
+  'Good Partner/ Techinician Support' = 1 (20.0%)
+  'Bad Application' = 1 (20.0%)
+
+  --- Column: 'Comments' (position 29) ---
+      Fill rate: 2.0% (19/940)
+      Data type: text
+      Sample values (first 5 non-null):
+        - churn risl
+        - cx care number - give
+        - check
+        - churn risk
+        - churn risk
+      Value distribution:
+    Unique values: 8 | Total non-null: 19
+  'churn risk' = 10 (52.6%)
+  'check' = 3 (15.8%)
+  'churn risl' = 1 (5.3%)
+  'cx care number - give' = 1 (5.3%)
+  '??' = 1 (5.3%)
+  'churned?' = 1 (5.3%)
+  'reg what?' = 1 (5.3%)
+  'check - tech' = 1 (5.3%)
+
+  --- Column: 'Caller' (position 30) ---
+      Fill rate: 0.0% (0/940)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Status' (position 31) ---
+      Fill rate: 0.0% (0/940)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Current Exp - Any additional context on rating?' (position 32) ---
+      Fill rate: 0.0% (0/940)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'What do they do when they face a prob?' (position 33) ---
+      Fill rate: 0.0% (0/940)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Partner' (position 34) ---
+      Fill rate: 0.0% (0/940)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'SLA' (position 35) ---
+      Fill rate: 0.0% (0/940)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Installation Date' (position 36) ---
+      Fill rate: 99.9% (939/940)
+      Data type: datetime [mixed: datetime(198), text(2)]
+      Sample values (first 5 non-null):
+        - 2024-12-16 00:00:00
+        - 2024-12-23 00:00:00
+        - 2025-12-16 00:00:00
+        - #N/A
+        - 2024-05-07 00:00:00
+
+  --- Column: 'Tenure // Install' (position 37) ---
+      Fill rate: 99.9% (939/940)
+      Data type: text
+      Sample values (first 5 non-null):
+        - 6+ months
+        - 6+ months
+        - 3-6 months
+        - #N/A
+        - 6+ months
+      Value distribution:
+    Unique values: 4 | Total non-null: 939
+  '6+ months' = 669 (71.2%)
+  '3-6 months' = 233 (24.8%)
+  '1-2 months' = 20 (2.1%)
+  '#N/A' = 17 (1.8%)
+
+  --- Column: 'pay g?' (position 38) ---
+      Fill rate: 0.0% (0/940)
+      Data type: empty
+      Sample values (first 5 non-null):
+      Value distribution:
+  No non-null values
+
+  --- Column: 'Good Partner/ Techinician Support' (position 44) ---
+      Fill rate: 1.0% (9/940)
+      Data type: text
+      Sample values (first 5 non-null):
+        - Good Speed
+        - Internet Down
+        - No/Late Complaint Resolution
+        - OTT Request, No OTT complaint
+        - Range Issue
+      Value distribution:
+    Unique values: 9 | Total non-null: 9
+  'Good Speed' = 1 (11.1%)
+  'Internet Down' = 1 (11.1%)
+  'No/Late Complaint Resolution' = 1 (11.1%)
+  'OTT Request, No OTT complaint' = 1 (11.1%)
+  'Range Issue' = 1 (11.1%)
+  'RDNI (Recharge Done, No Internet)' = 1 (11.1%)
+  'Shifting not Feasible' = 1 (11.1%)
+  'Slow Speed' = 1 (11.1%)
+  'Grand Total' = 1 (11.1%)
+
+  --- Column: '1.0' (position 45) ---
+      Fill rate: 0.7% (7/940)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 1.0
+        - 10.0
+        - 9.0
+        - 5.0
+        - 11.0
+      Value distribution:
+    Unique values: 7 | Total non-null: 7
+  '1.0' = 1 (14.3%)
+  '10.0' = 1 (14.3%)
+  '9.0' = 1 (14.3%)
+  '5.0' = 1 (14.3%)
+  '11.0' = 1 (14.3%)
+  '75.0' = 1 (14.3%)
+  '309.0' = 1 (14.3%)
+
+  --- Column: '1.0' (position 47) ---
+      Fill rate: 0.4% (4/940)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 22.0
+        - 1.0
+        - 3.0
+        - 173.0
+      Value distribution:
+    Unique values: 4 | Total non-null: 4
+  '22.0' = 1 (25.0%)
+  '1.0' = 1 (25.0%)
+  '3.0' = 1 (25.0%)
+  '173.0' = 1 (25.0%)
+
+  --- Column: '2.0' (position 48) ---
+      Fill rate: 1.0% (9/940)
+      Data type: integer
+      Sample values (first 5 non-null):
+        - 25.0
+        - 12.0
+        - 11.0
+        - 1.0
+        - 6.0
+      Value distribution:
+    Unique values: 7 | Total non-null: 9
+  '12.0' = 2 (22.2%)
+  '1.0' = 2 (22.2%)
+  '25.0' = 1 (11.1%)
+  '11.0' = 1 (11.1%)
+  '6.0' = 1 (11.1%)
+  '83.0' = 1 (11.1%)
+  '521.0' = 1 (11.1%)
+
+====================================================================================================
+>>> SPECIFIC COLUMN DEEP DIVES <<<
+====================================================================================================
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'pay g?' (Payment gateway / payment method flag)
+    Found in 1/5 tabs:
+
+    Tab: 'Sprint RSP3 Feb26' (as 'pay g?')
+      Fill rate: 0.0%
+      Data type: empty
+      Samples: []
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'cash/ online' (Cash vs online payment mode)
+    Found in 3/5 tabs:
+
+    Tab: 'Sprint 7 Oct25' (as 'cash/ online')
+      Fill rate: 100.0%
+      Data type: text
+      Samples: ['ONLINE', 'ONLINE', 'ONLINE', 'ONLINE', 'ONLINE']
+      Full value distribution (3 unique):
+        'ONLINE' = 649 (83.5%)
+        'CASH' = 82 (10.6%)
+        '#N/A' = 46 (5.9%)
+
+    Tab: 'Sprint 14 Jan26' (as 'cash/ online')
+      Fill rate: 100.0%
+      Data type: text
+      Samples: ['ONLINE', 'ONLINE', 'ONLINE', 'ONLINE', 'ONLINE']
+      Full value distribution (3 unique):
+        'ONLINE' = 650 (89.2%)
+        'CASH' = 61 (8.4%)
+        '#N/A' = 18 (2.5%)
+
+    Tab: 'Sprint RSP1 Feb26' (as 'cash/ online')
+      Fill rate: 100.0%
+      Data type: text
+      Samples: ['ONLINE', 'ONLINE', 'ONLINE', 'ONLINE', 'ONLINE']
+      Full value distribution (3 unique):
+        'ONLINE' = 834 (91.9%)
+        'CASH' = 46 (5.1%)
+        '#N/A' = 28 (3.1%)
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'Tenure' (Customer tenure / duration of service)
+    Found in 5/5 tabs:
+
+    Tab: 'Sprint 7 Oct25' (as 'Tenure')
+      Fill rate: 94.1%
+      Data type: text
+      Samples: ['3-6 months', '6+ months', '6+ months', '6+ months', '6+ months']
+      Full value distribution (3 unique):
+        '6+ months' = 388 (53.1%)
+        '1-2 months' = 182 (24.9%)
+        '3-6 months' = 161 (22.0%)
+
+    Tab: 'Sprint 14 Jan26' (as 'Tenure')
+      Fill rate: 100.0%
+      Data type: text
+      Samples: ['6+ months', '6+ months', '6+ months', '6+ months', '6+ months']
+      Full value distribution (4 unique):
+        '6+ months' = 401 (55.0%)
+        '3–6 months' = 166 (22.8%)
+        '1–2 months' = 144 (19.8%)
+        '#N/A' = 18 (2.5%)
+
+    Tab: 'Sprint RSP1 Feb26' (as 'Tenure')
+      Fill rate: 100.0%
+      Data type: text
+      Samples: ['3–6 months', '6+ months', '6+ months', '3–6 months', '1–2 months']
+      Full value distribution (4 unique):
+        '6+ months' = 504 (55.5%)
+        '3–6 months' = 245 (27.0%)
+        '1–2 months' = 131 (14.4%)
+        '#N/A' = 28 (3.1%)
+
+    Tab: 'Sprint RSP2 Feb26' (as 'Tenure')
+      Fill rate: 69.4%
+      Data type: text
+      Samples: ['6+ months', '6+ months', '6+ months', '6+ months', '6+ months']
+      Full value distribution (4 unique):
+        '6+ months' = 509 (63.6%)
+        '3–6 months' = 221 (27.6%)
+        '1–2 months' = 47 (5.9%)
+        '#N/A' = 23 (2.9%)
+
+    Tab: 'Sprint RSP3 Feb26' (as 'Tenure')
+      Fill rate: 100.0%
+      Data type: text
+      Samples: ['6+ months', '6+ months', '3–6 months', '#N/A', '6+ months']
+      Full value distribution (4 unique):
+        '6+ months' = 635 (67.6%)
+        '3–6 months' = 242 (25.7%)
+        '#N/A' = 36 (3.8%)
+        '1–2 months' = 27 (2.9%)
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'City' (Customer city / geography)
+    Found in 5/5 tabs:
+
+    Tab: 'Sprint 7 Oct25' (as 'City')
+      Fill rate: 94.1%
+      Data type: text
+      Samples: ['UP', 'Delhi', 'Delhi', 'Delhi', 'Delhi']
+      Full value distribution (3 unique):
+        'Delhi' = 604 (82.6%)
+        'UP' = 84 (11.5%)
+        'Mumbai' = 43 (5.9%)
+
+    Tab: 'Sprint 14 Jan26' (as 'City')
+      Fill rate: 97.5%
+      Data type: text
+      Samples: ['Delhi', 'Delhi', 'Delhi', 'Delhi', 'Delhi']
+      Full value distribution (3 unique):
+        'Delhi' = 627 (88.2%)
+        'UP' = 50 (7.0%)
+        'Mumbai' = 34 (4.8%)
+
+    Tab: 'Sprint RSP1 Feb26' (as 'City')
+      Fill rate: 96.9%
+      Data type: text
+      Samples: ['Delhi', 'Delhi', 'Delhi', 'Delhi', 'Delhi']
+      Full value distribution (3 unique):
+        'Delhi' = 741 (84.2%)
+        'UP' = 81 (9.2%)
+        'Mumbai' = 58 (6.6%)
+
+    Tab: 'Sprint RSP2 Feb26' (as 'City')
+      Fill rate: 67.4%
+      Data type: text
+      Samples: ['Delhi', 'Mumbai', 'Delhi', 'Delhi', 'Delhi']
+      Full value distribution (3 unique):
+        'Delhi' = 663 (85.3%)
+        'Mumbai' = 62 (8.0%)
+        'UP' = 52 (6.7%)
+
+    Tab: 'Sprint RSP3 Feb26' (as 'City')
+      Fill rate: 96.2%
+      Data type: text
+      Samples: ['Delhi', 'Delhi', 'Delhi', 'Delhi', 'Delhi']
+      Full value distribution (3 unique):
+        'Delhi' = 779 (86.2%)
+        'Mumbai' = 64 (7.1%)
+        'UP' = 61 (6.7%)
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'Optical Power' (Fiber optical power readings (signal strength))
+    Found in 5/5 tabs:
+
+    Tab: 'Sprint 7 Oct25' (as 'Optical Power')
+      Fill rate: 56.2%
+      Data type: numeric [mixed: numeric(189), integer(11)]
+      Samples: ['-24.202164', '-19.9', '-16.8', '-20.3', '-24.1']
+      High cardinality: 264 unique values
+      Numeric stats: min=-40.00, max=-0.60, mean=-21.62, count=437
+
+    Tab: 'Sprint 14 Jan26' (as 'Optical Power')
+      Fill rate: 92.2%
+      Data type: numeric [mixed: numeric(153), integer(47)]
+      Samples: ['-17.304866', '-25.686362', '-26.575773', '-26.197887', '-15.243288']
+      High cardinality: 315 unique values
+      Numeric stats: min=-34.00, max=0.00, mean=-18.96, count=672
+
+    Tab: 'Sprint RSP1 Feb26' (as 'Optical Power')
+      Fill rate: 94.4%
+      Data type: numeric
+      Samples: ['-25.55235205', '-16.00375245', '-19.93089357', '-23.62114207', '-17.4778613']
+      High cardinality: 779 unique values
+      Numeric stats: min=-40.00, max=0.60, mean=-20.40, count=857
+
+    Tab: 'Sprint RSP2 Feb26' (as 'Optical Power')
+      Fill rate: 52.3%
+      Data type: numeric [mixed: numeric(192), integer(8)]
+      Samples: ['-19.86432388', '-25.6775347582286', '-8.0', '-29.384925387468', '-11.3587368052822']
+      High cardinality: 541 unique values
+      Numeric stats: min=-40.00, max=-4.61, mean=-20.15, count=602
+
+    Tab: 'Sprint RSP3 Feb26' (as 'Optical Power')
+      Fill rate: 93.9%
+      Data type: numeric [mixed: numeric(168), integer(32)]
+      Samples: ['-13.8478500372149', '-20.770891184573', '-25.1815224777993', '-8.0', '-26.3876280455096']
+      High cardinality: 777 unique values
+      Numeric stats: min=-35.23, max=-5.16, mean=-19.82, count=883
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'recharge done' (Whether recharge was completed)
+    Found in 5/5 tabs:
+
+    Tab: 'Sprint 7 Oct25' (as 'recharge done')
+      Fill rate: 100.0%
+      Data type: integer [mixed: integer(166), text(34)]
+      Samples: ['4.0', '11.0', '22.0', '15.0', '18.0']
+      High cardinality: 41 unique values
+      Numeric stats: min=1.00, max=41.00, mean=9.69, count=731
+
+    Tab: 'Sprint 14 Jan26' (as 'recharge done')
+      Fill rate: 100.0%
+      Data type: numeric
+      Samples: ['13', '12', '19', '13', '19']
+      High cardinality: 45 unique values
+      Numeric stats: min=1.00, max=45.00, mean=10.86, count=711
+
+    Tab: 'Sprint RSP1 Feb26' (as 'recharge done')
+      Fill rate: 100.0%
+      Data type: integer [mixed: integer(198), text(2)]
+      Samples: ['6.0', '15.0', '8.0', '5.0', '2.0']
+      High cardinality: 43 unique values
+      Numeric stats: min=1.00, max=45.00, mean=10.69, count=880
+
+    Tab: 'Sprint RSP2 Feb26' (as 'recharge done')
+      Fill rate: 69.4%
+      Data type: integer
+      Samples: ['27.0', '24.0', '27.0', '24.0', '26.0']
+      High cardinality: 43 unique values
+      Numeric stats: min=1.00, max=42.00, mean=11.81, count=777
+
+    Tab: 'Sprint RSP3 Feb26' (as 'recharge done')
+      Fill rate: 100.0%
+      Data type: integer [mixed: integer(196), text(4)]
+      Samples: ['16.0', '16.0', '3.0', '#N/A', '24.0']
+      High cardinality: 48 unique values
+      Numeric stats: min=1.00, max=47.00, mean=13.10, count=904
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: '# of tickets in last 3 months' (Support ticket count)
+    Found in 5/5 tabs:
+
+    Tab: 'Sprint 7 Oct25' (as '# of tickets in last 3 months')
+      Fill rate: 56.2%
+      Data type: integer
+      Samples: ['24.0', '2.0', '3.0', '7.0', '5.0']
+      Full value distribution (14 unique):
+        '1.0' = 178 (40.7%)
+        '2.0' = 93 (21.3%)
+        '3.0' = 65 (14.9%)
+        '4.0' = 35 (8.0%)
+        '5.0' = 22 (5.0%)
+        '6.0' = 17 (3.9%)
+        '7.0' = 8 (1.8%)
+        '9.0' = 6 (1.4%)
+        '8.0' = 6 (1.4%)
+        '10.0' = 3 (0.7%)
+        '24.0' = 1 (0.2%)
+        '11.0' = 1 (0.2%)
+        '13.0' = 1 (0.2%)
+        '16.0' = 1 (0.2%)
+
+    Tab: 'Sprint 14 Jan26' (as '# of tickets in last 3 months')
+      Fill rate: 56.8%
+      Data type: integer
+      Samples: ['1.0', '7.0', '4.0', '4.0', '1.0']
+      Full value distribution (13 unique):
+        '1.0' = 158 (38.2%)
+        '2.0' = 71 (17.1%)
+        '3.0' = 66 (15.9%)
+        '4.0' = 38 (9.2%)
+        '5.0' = 33 (8.0%)
+        '6.0' = 18 (4.3%)
+        '7.0' = 13 (3.1%)
+        '10.0' = 6 (1.4%)
+        '9.0' = 4 (1.0%)
+        '8.0' = 4 (1.0%)
+        '15.0' = 1 (0.2%)
+        '12.0' = 1 (0.2%)
+        '13.0' = 1 (0.2%)
+
+    Tab: 'Sprint RSP1 Feb26' (as '# of tickets in last 3 months')
+      Fill rate: 71.9%
+      Data type: numeric
+      Samples: ['2', '1', '4', '1', '1']
+      Full value distribution (16 unique):
+        '1' = 196 (30.0%)
+        '2' = 129 (19.8%)
+        '3' = 96 (14.7%)
+        '4' = 75 (11.5%)
+        '5' = 60 (9.2%)
+        '6' = 32 (4.9%)
+        '7' = 18 (2.8%)
+        '9' = 13 (2.0%)
+        '8' = 10 (1.5%)
+        '10' = 9 (1.4%)
+        '11' = 4 (0.6%)
+        '14' = 3 (0.5%)
+        '13' = 3 (0.5%)
+        '12' = 3 (0.5%)
+        '23' = 1 (0.2%)
+        '16' = 1 (0.2%)
+
+    Tab: 'Sprint RSP2 Feb26' (as '# of tickets in last 3 months')
+      Fill rate: 42.5%
+      Data type: integer
+      Samples: ['2.0', '20.0', '2.0', '1.0', '3.0']
+      Full value distribution (15 unique):
+        '1.0' = 157 (32.0%)
+        '2.0' = 104 (21.2%)
+        '3.0' = 64 (13.1%)
+        '4.0' = 50 (10.2%)
+        '5.0' = 34 (6.9%)
+        '6.0' = 31 (6.3%)
+        '8.0' = 16 (3.3%)
+        '7.0' = 13 (2.7%)
+        '10.0' = 6 (1.2%)
+        '9.0' = 6 (1.2%)
+        '12.0' = 4 (0.8%)
+        '11.0' = 2 (0.4%)
+        '20.0' = 1 (0.2%)
+        '18.0' = 1 (0.2%)
+        '23.0' = 1 (0.2%)
+
+    Tab: 'Sprint RSP3 Feb26' (as '# of tickets in last 3 months')
+      Fill rate: 63.2%
+      Data type: integer
+      Samples: ['1.0', '4.0', '2.0', '1.0', '2.0']
+      Full value distribution (17 unique):
+        '1.0' = 175 (29.5%)
+        '2.0' = 149 (25.1%)
+        '3.0' = 94 (15.8%)
+        '4.0' = 64 (10.8%)
+        '5.0' = 42 (7.1%)
+        '6.0' = 29 (4.9%)
+        '8.0' = 13 (2.2%)
+        '7.0' = 12 (2.0%)
+        '9.0' = 5 (0.8%)
+        '13.0' = 3 (0.5%)
+        '15.0' = 2 (0.3%)
+        '17.0' = 1 (0.2%)
+        '21.0' = 1 (0.2%)
+        '19.0' = 1 (0.2%)
+        '10.0' = 1 (0.2%)
+        '14.0' = 1 (0.2%)
+        '11.0' = 1 (0.2%)
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: '# of tx in last 3 months' (Support ticket count (alternate name))
+    NOT FOUND in any of the target tabs
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'Device Type' (Router/device type)
+    Found in 5/5 tabs:
+
+    Tab: 'Sprint 7 Oct25' (as 'Device Type')
+      Fill rate: 94.1%
+      Data type: text
+      Samples: ['GX', 'SY', 'SY', 'GX', 'SY']
+      Full value distribution (3 unique):
+        'GX' = 379 (51.8%)
+        'SY' = 254 (34.7%)
+        'TP' = 98 (13.4%)
+
+    Tab: 'Sprint 14 Jan26' (as 'Device type')
+      Fill rate: 97.5%
+      Data type: text
+      Samples: ['GX', 'GX', 'GX', 'GX', 'GX']
+      Full value distribution (3 unique):
+        'GX' = 389 (54.7%)
+        'SY' = 249 (35.0%)
+        'TP' = 73 (10.3%)
+
+    Tab: 'Sprint RSP1 Feb26' (as 'Device type')
+      Fill rate: 96.9%
+      Data type: text
+      Samples: ['GX', 'GX', 'GX', 'GX', 'SY']
+      Full value distribution (3 unique):
+        'GX' = 521 (59.2%)
+        'SY' = 279 (31.7%)
+        'TP' = 80 (9.1%)
+
+    Tab: 'Sprint RSP2 Feb26' (as 'Device type')
+      Fill rate: 67.4%
+      Data type: text
+      Samples: ['SY', 'TP', 'SY', 'SY', 'TP']
+      Full value distribution (3 unique):
+        'GX' = 434 (55.9%)
+        'SY' = 267 (34.4%)
+        'TP' = 76 (9.8%)
+
+    Tab: 'Sprint RSP3 Feb26' (as 'Device type')
+      Fill rate: 96.2%
+      Data type: text
+      Samples: ['GX', 'SY', 'GX', 'TP', 'GX']
+      Full value distribution (3 unique):
+        'GX' = 491 (54.3%)
+        'SY' = 306 (33.8%)
+        'TP' = 107 (11.8%)
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'Device type' (Router/device type (alternate case))
+    Found in 5/5 tabs:
+
+    Tab: 'Sprint 7 Oct25' (as 'Device Type')
+      Fill rate: 94.1%
+      Data type: text
+      Samples: ['GX', 'SY', 'SY', 'GX', 'SY']
+      Full value distribution (3 unique):
+        'GX' = 379 (51.8%)
+        'SY' = 254 (34.7%)
+        'TP' = 98 (13.4%)
+
+    Tab: 'Sprint 14 Jan26' (as 'Device type')
+      Fill rate: 97.5%
+      Data type: text
+      Samples: ['GX', 'GX', 'GX', 'GX', 'GX']
+      Full value distribution (3 unique):
+        'GX' = 389 (54.7%)
+        'SY' = 249 (35.0%)
+        'TP' = 73 (10.3%)
+
+    Tab: 'Sprint RSP1 Feb26' (as 'Device type')
+      Fill rate: 96.9%
+      Data type: text
+      Samples: ['GX', 'GX', 'GX', 'GX', 'SY']
+      Full value distribution (3 unique):
+        'GX' = 521 (59.2%)
+        'SY' = 279 (31.7%)
+        'TP' = 80 (9.1%)
+
+    Tab: 'Sprint RSP2 Feb26' (as 'Device type')
+      Fill rate: 67.4%
+      Data type: text
+      Samples: ['SY', 'TP', 'SY', 'SY', 'TP']
+      Full value distribution (3 unique):
+        'GX' = 434 (55.9%)
+        'SY' = 267 (34.4%)
+        'TP' = 76 (9.8%)
+
+    Tab: 'Sprint RSP3 Feb26' (as 'Device type')
+      Fill rate: 96.2%
+      Data type: text
+      Samples: ['GX', 'SY', 'GX', 'TP', 'GX']
+      Full value distribution (3 unique):
+        'GX' = 491 (54.3%)
+        'SY' = 306 (33.8%)
+        'TP' = 107 (11.8%)
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'Device' (Device model)
+    Found in 5/5 tabs:
+
+    Tab: 'Sprint 7 Oct25' (as 'Device')
+      Fill rate: 100.0%
+      Data type: text [mixed: text(175), integer(25)]
+      Samples: ['GX101065', 'SY24729', 'SY8472', 'GX33604', 'SY11023']
+      High cardinality: 732 unique values
+
+    Tab: 'Sprint 14 Jan26' (as 'Device')
+      Fill rate: 100.0%
+      Data type: text [mixed: text(172), numeric(28)]
+      Samples: ['GX75141', 'GX70136', 'GX15979', 'GX26448', 'GX29595']
+      High cardinality: 712 unique values
+
+    Tab: 'Sprint RSP1 Feb26' (as 'Device')
+      Fill rate: 100.0%
+      Data type: text [mixed: text(183), integer(17)]
+      Samples: ['GX124682', 'GX57023', 'GX103221', 'GX125840', 'SY095487']
+      High cardinality: 881 unique values
+
+    Tab: 'Sprint RSP2 Feb26' (as 'Device')
+      Fill rate: 69.4%
+      Data type: text [mixed: text(188), integer(12)]
+      Samples: ['SY044580', '156392.0', 'SY070317', 'SY15270', '171605.0']
+      High cardinality: 778 unique values
+
+    Tab: 'Sprint RSP3 Feb26' (as 'Device')
+      Fill rate: 100.0%
+      Data type: text [mixed: text(169), integer(31)]
+      Samples: ['GX61678', 'SY069757', 'GX104729', '#N/A', '164325.0']
+      High cardinality: 905 unique values
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'Zone' (Geographic zone)
+    Found in 5/5 tabs:
+
+    Tab: 'Sprint 7 Oct25' (as 'Zone')
+      Fill rate: 100.0%
+      Data type: text
+      Samples: ['Agra,Saurabh,V2', 'East Delhi 1,AM-Himanshu Bhardwaj', 'East Delhi 1,AM-Himanshu Bhardwaj', 'East Delhi 2,AM-Danish Ansari', 'South Delhi,AM-Banke Bihari']
+      High cardinality: 125 unique values
+
+    Tab: 'Sprint 14 Jan26' (as 'Zone')
+      Fill rate: 100.0%
+      Data type: text
+      Samples: ['North Delhi,AM-Deepak Mittal', 'East Delhi 2 + Noida,AM-Khemanand', 'North Delhi,AM-Rahul Singh', 'East Delhi 1,AM-Jaswant Singh', 'East Delhi 2 + Noida,AM-Khemanand']
+      High cardinality: 120 unique values
+
+    Tab: 'Sprint RSP1 Feb26' (as 'Zone')
+      Fill rate: 100.0%
+      Data type: text
+      Samples: ['East Delhi 2,AM-Wasim', 'East Delhi 1 + Ghaziabad,AM-Arvind Diwakar', 'North Delhi + Centre Delhi,AM-Ankit Kumar', 'East Delhi 2,AM-Pankaj Tomar', 'West Delhi + Gurgaon,AM-Amit Ojha,V2']
+      High cardinality: 108 unique values
+
+    Tab: 'Sprint RSP2 Feb26' (as 'Zone')
+      Fill rate: 69.4%
+      Data type: text
+      Samples: ['West Delhi,AM-Saurabh Singh', 'Centre Mumbai,AM-Avinash', 'East Delhi 1,AM-Pramendra Yadav', 'East Delhi 2 + Ghaziabad,AM-Wasim', 'North Delhi,AM-Veer Chand']
+      High cardinality: 104 unique values
+
+    Tab: 'Sprint RSP3 Feb26' (as 'Zone')
+      Fill rate: 100.0%
+      Data type: text
+      Samples: ['East Delhi 1,AM-Himanshu Bhardwaj', 'South Delhi,AM-Vivekanand', 'East Delhi 2 + Noida,AM-Khemanand,V2', '#N/A', 'South Delhi,AM-Vivekanand']
+      High cardinality: 108 unique values
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'ALT mobile' (Alternate mobile number)
+    Found in 3/5 tabs:
+
+    Tab: 'Sprint 7 Oct25' (as 'ALT mobile')
+      Fill rate: 0.0%
+      Data type: empty
+      Samples: []
+
+    Tab: 'Sprint 14 Jan26' (as 'ALT mobile')
+      Fill rate: 0.0%
+      Data type: empty
+      Samples: []
+
+    Tab: 'Sprint RSP1 Feb26' (as 'ALT mobile')
+      Fill rate: 0.0%
+      Data type: empty
+      Samples: []
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'Devices on 2.4g' (Count of 2.4GHz devices)
+    Found in 5/5 tabs:
+
+    Tab: 'Sprint 7 Oct25' (as 'Devices on 2.4g')
+      Fill rate: 67.8%
+      Data type: integer
+      Samples: ['3.0', '1.0', '0.0', '0.0', '2.0']
+      Full value distribution (9 unique):
+        '0.0' = 191 (36.2%)
+        '1.0' = 151 (28.7%)
+        '2.0' = 95 (18.0%)
+        '3.0' = 54 (10.2%)
+        '4.0' = 22 (4.2%)
+        '5.0' = 5 (0.9%)
+        '6.0' = 4 (0.8%)
+        '9.0' = 3 (0.6%)
+        '7.0' = 2 (0.4%)
+
+    Tab: 'Sprint 14 Jan26' (as 'Devices on 2.4g')
+      Fill rate: 76.1%
+      Data type: integer
+      Samples: ['2.0', '4.0', '0.0', '1.0', '3.0']
+      Full value distribution (10 unique):
+        '1.0' = 180 (32.4%)
+        '0.0' = 172 (31.0%)
+        '2.0' = 111 (20.0%)
+        '3.0' = 48 (8.6%)
+        '4.0' = 27 (4.9%)
+        '5.0' = 9 (1.6%)
+        '7.0' = 4 (0.7%)
+        '9.0' = 2 (0.4%)
+        '10.0' = 1 (0.2%)
+        '6.0' = 1 (0.2%)
+
+    Tab: 'Sprint RSP1 Feb26' (as 'Devices on 2.4g')
+      Fill rate: 94.8%
+      Data type: numeric
+      Samples: ['4', '7', '4', '3', '4']
+      Full value distribution (16 unique):
+        '3' = 176 (20.4%)
+        '4' = 163 (18.9%)
+        '2' = 155 (18.0%)
+        '5' = 117 (13.6%)
+        '1' = 68 (7.9%)
+        '6' = 62 (7.2%)
+        '7' = 39 (4.5%)
+        '8' = 24 (2.8%)
+        '9' = 19 (2.2%)
+        '0' = 18 (2.1%)
+        '10' = 11 (1.3%)
+        '11' = 4 (0.5%)
+        '13' = 2 (0.2%)
+        '15' = 1 (0.1%)
+        '14' = 1 (0.1%)
+        '12' = 1 (0.1%)
+
+    Tab: 'Sprint RSP2 Feb26' (as 'Devices on 2.4g')
+      Fill rate: 66.8%
+      Data type: integer [mixed: integer(199), numeric(1)]
+      Samples: ['1', '3.0', '7.0', '3.0', '3.0']
+      Full value distribution (16 unique):
+        '3.0' = 182 (23.7%)
+        '4.0' = 147 (19.1%)
+        '5.0' = 108 (14.0%)
+        '2.0' = 100 (13.0%)
+        '6.0' = 69 (9.0%)
+        '7.0' = 48 (6.2%)
+        '1.0' = 43 (5.6%)
+        '8.0' = 33 (4.3%)
+        '9.0' = 17 (2.2%)
+        '0.0' = 6 (0.8%)
+        '12.0' = 6 (0.8%)
+        '11.0' = 3 (0.4%)
+        '13.0' = 3 (0.4%)
+        '10.0' = 2 (0.3%)
+        '1' = 1 (0.1%)
+        '72.0' = 1 (0.1%)
+
+    Tab: 'Sprint RSP3 Feb26' (as 'Devices on 2.4g')
+      Fill rate: 94.0%
+      Data type: integer
+      Samples: ['3.0', '3.0', '5.0', '0.0', '2.0']
+      Full value distribution (14 unique):
+        '3.0' = 186 (21.0%)
+        '2.0' = 163 (18.4%)
+        '4.0' = 157 (17.8%)
+        '5.0' = 102 (11.5%)
+        '1.0' = 86 (9.7%)
+        '6.0' = 74 (8.4%)
+        '7.0' = 43 (4.9%)
+        '8.0' = 22 (2.5%)
+        '0.0' = 18 (2.0%)
+        '10.0' = 13 (1.5%)
+        '9.0' = 11 (1.2%)
+        '11.0' = 5 (0.6%)
+        '13.0' = 3 (0.3%)
+        '14.0' = 1 (0.1%)
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'Devices on 5g' (Count of 5GHz devices)
+    Found in 5/5 tabs:
+
+    Tab: 'Sprint 7 Oct25' (as 'Devices on 5g')
+      Fill rate: 67.8%
+      Data type: integer
+      Samples: ['1.0', '4.0', '3.0', '1.0', '0.0']
+      Full value distribution (7 unique):
+        '0.0' = 222 (42.1%)
+        '1.0' = 154 (29.2%)
+        '2.0' = 97 (18.4%)
+        '3.0' = 36 (6.8%)
+        '4.0' = 9 (1.7%)
+        '5.0' = 7 (1.3%)
+        '7.0' = 2 (0.4%)
+
+    Tab: 'Sprint 14 Jan26' (as 'Devices on 5g')
+      Fill rate: 76.1%
+      Data type: integer
+      Samples: ['1.0', '1.0', '2.0', '0.0', '1.0']
+      Full value distribution (8 unique):
+        '0.0' = 201 (36.2%)
+        '1.0' = 197 (35.5%)
+        '2.0' = 105 (18.9%)
+        '3.0' = 31 (5.6%)
+        '4.0' = 15 (2.7%)
+        '5.0' = 4 (0.7%)
+        '6.0' = 1 (0.2%)
+        '21.0' = 1 (0.2%)
+
+    Tab: 'Sprint RSP1 Feb26' (as 'Devices on 5g')
+      Fill rate: 94.8%
+      Data type: numeric
+      Samples: ['2', '6', '8', '2', '3']
+      Full value distribution (14 unique):
+        '2' = 205 (23.8%)
+        '3' = 181 (21.0%)
+        '4' = 164 (19.0%)
+        '1' = 98 (11.4%)
+        '5' = 95 (11.0%)
+        '6' = 49 (5.7%)
+        '0' = 24 (2.8%)
+        '7' = 22 (2.6%)
+        '8' = 14 (1.6%)
+        '9' = 5 (0.6%)
+        '13' = 1 (0.1%)
+        '12' = 1 (0.1%)
+        '11' = 1 (0.1%)
+        '10' = 1 (0.1%)
+
+    Tab: 'Sprint RSP2 Feb26' (as 'Devices on 5g')
+      Fill rate: 66.8%
+      Data type: integer [mixed: integer(199), numeric(1)]
+      Samples: ['4', '3.0', '3.0', '4.0', '5.0']
+      Full value distribution (14 unique):
+        '3.0' = 194 (25.2%)
+        '4.0' = 179 (23.3%)
+        '2.0' = 130 (16.9%)
+        '5.0' = 98 (12.7%)
+        '1.0' = 66 (8.6%)
+        '6.0' = 46 (6.0%)
+        '7.0' = 29 (3.8%)
+        '0.0' = 10 (1.3%)
+        '8.0' = 9 (1.2%)
+        '10.0' = 3 (0.4%)
+        '13.0' = 2 (0.3%)
+        '4' = 1 (0.1%)
+        '238.0' = 1 (0.1%)
+        '9.0' = 1 (0.1%)
+
+    Tab: 'Sprint RSP3 Feb26' (as 'Devices on 5g')
+      Fill rate: 94.0%
+      Data type: integer
+      Samples: ['5.0', '0.0', '1.0', '3.0', '3.0']
+      Full value distribution (14 unique):
+        '3.0' = 223 (25.2%)
+        '4.0' = 183 (20.7%)
+        '2.0' = 164 (18.6%)
+        '5.0' = 113 (12.8%)
+        '1.0' = 103 (11.7%)
+        '6.0' = 45 (5.1%)
+        '0.0' = 23 (2.6%)
+        '7.0' = 15 (1.7%)
+        '10.0' = 4 (0.5%)
+        '9.0' = 4 (0.5%)
+        '8.0' = 4 (0.5%)
+        '13.0' = 1 (0.1%)
+        '12.0' = 1 (0.1%)
+        '16.0' = 1 (0.1%)
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'Payment_issue
+Tickets Flag' (Payment issue ticket flag)
+    Found in 3/5 tabs:
+
+    Tab: 'Sprint RSP1 Feb26' (as 'Payment_issue
+Tickets Flag')
+      Fill rate: 71.9%
+      Data type: numeric
+      Samples: ['1', '0', '0', '0', '1']
+      Full value distribution (5 unique):
+        '0' = 556 (85.1%)
+        '1' = 72 (11.0%)
+        '2' = 16 (2.5%)
+        '3' = 6 (0.9%)
+        '4' = 3 (0.5%)
+
+    Tab: 'Sprint RSP2 Feb26' (as 'Payment_issue
+Tickets Flag')
+      Fill rate: 47.8%
+      Data type: integer
+      Samples: ['1.0', '2.0', '0.0', '0.0', '0.0']
+      Full value distribution (6 unique):
+        '0.0' = 458 (83.1%)
+        '1.0' = 74 (13.4%)
+        '2.0' = 15 (2.7%)
+        '3.0' = 2 (0.4%)
+        '5.0' = 1 (0.2%)
+        '4.0' = 1 (0.2%)
+
+    Tab: 'Sprint RSP3 Feb26' (as 'Payment_issue
+Tickets Flag')
+      Fill rate: 66.3%
+      Data type: integer
+      Samples: ['0.0', '0.0', '0.0', '0.0', '0.0']
+      Full value distribution (5 unique):
+        '0.0' = 520 (83.5%)
+        '1.0' = 74 (11.9%)
+        '2.0' = 19 (3.0%)
+        '4.0' = 6 (1.0%)
+        '3.0' = 4 (0.6%)
+----------------------------------------------------------------------------------------------------
+
+  COLUMN: 'Number of Devices on Wiom Net' (Total devices connected)
+    Found in 5/5 tabs:
+
+    Tab: 'Sprint 7 Oct25' (as 'Device')
+      Fill rate: 100.0%
+      Data type: text [mixed: text(175), integer(25)]
+      Samples: ['GX101065', 'SY24729', 'SY8472', 'GX33604', 'SY11023']
+      High cardinality: 732 unique values
+
+    Tab: 'Sprint 14 Jan26' (as 'Device')
+      Fill rate: 100.0%
+      Data type: text [mixed: text(172), numeric(28)]
+      Samples: ['GX75141', 'GX70136', 'GX15979', 'GX26448', 'GX29595']
+      High cardinality: 712 unique values
+
+    Tab: 'Sprint RSP1 Feb26' (as 'Device')
+      Fill rate: 100.0%
+      Data type: text [mixed: text(183), integer(17)]
+      Samples: ['GX124682', 'GX57023', 'GX103221', 'GX125840', 'SY095487']
+      High cardinality: 881 unique values
+
+    Tab: 'Sprint RSP2 Feb26' (as 'Device')
+      Fill rate: 69.4%
+      Data type: text [mixed: text(188), integer(12)]
+      Samples: ['SY044580', '156392.0', 'SY070317', 'SY15270', '171605.0']
+      High cardinality: 778 unique values
+
+    Tab: 'Sprint RSP3 Feb26' (as 'Device')
+      Fill rate: 100.0%
+      Data type: text [mixed: text(169), integer(31)]
+      Samples: ['GX61678', 'SY069757', 'GX104729', '#N/A', '164325.0']
+      High cardinality: 905 unique values
+
+====================================================================================================
+>>> CROSS-TAB CONSISTENCY ANALYSIS <<<
+====================================================================================================
+
+  Total unique extra columns (normalized): 47
+  Present in ALL 5 tabs: 17
+  Present in SOME tabs (2-4): 18
+  Present in only ONE tab: 12
+
+  COLUMNS PRESENT IN ALL 5 TABS (universal):
+  Column Name                                    Avg Fill% Name Variants
+  --------------------------------------------- ---------- ----------------------------------------
+  # of tickets in last 3 months                      58.1% # of tickets in last 3 months
+  channel                                            93.9% Channel
+  city                                               90.4% City
+  data usage amount                                  76.6% Data Usage amount
+  data usage days                                    76.6% Data Usage Days
+  data usage percentile                               0.0% Data Usage Percentile
+  device                                             93.9% Device
+  device type                                        90.4% ['Device type', 'Device Type']
+  devices on 2.4g                                    79.9% Devices on 2.4g
+  devices on 5g                                      79.9% Devices on 5g
+  first time user?                                   92.4% First time user?
+  last recharge done - when?                         90.8% Last recharge done - when?
+  optical power                                      77.8% Optical Power
+  optical range                                      11.8% Optical Range
+  recharge done                                      93.9% recharge done
+  tenure                                             92.7% Tenure
+  zone                                               93.9% Zone
+
+  COLUMNS PRESENT IN SOME TABS (partial):
+  Column Name                                    In Tabs  Avg Fill% Present In
+  --------------------------------------------- -------- ---------- ----------------------------------------
+  nps reason - primary                              4/5      62.0% ['S14', 'SRSP1', 'SRSP2', 'SRSP3']
+  nps reason - secondary                            4/5      25.7% ['S14', 'SRSP1', 'SRSP2', 'SRSP3']
+  nps reason tertiary                               4/5      22.8% ['S14', 'SRSP1', 'SRSP2', 'SRSP3']
+  comments                                          4/5      25.3% ['S14', 'SRSP1', 'SRSP2', 'SRSP3']
+  cash/ online                                      3/5     100.0% ['S7', 'S14', 'SRSP1']
+  alt mobile                                        3/5       0.0% ['S7', 'S14', 'SRSP1']
+  plan expiry date                                  3/5      66.7% ['S7', 'S14', 'SRSP1']
+  plan expiry window                                3/5       0.0% ['S7', 'S14', 'SRSP1']
+  caller                                            3/5       1.1% ['S14', 'SRSP2', 'SRSP3']
+  status                                            3/5       1.1% ['S14', 'SRSP2', 'SRSP3']
+  current exp - any additional context on rating?     3/5       0.7% ['S14', 'SRSP2', 'SRSP3']
+  what do they do when they face a prob?            3/5       0.1% ['S14', 'SRSP2', 'SRSP3']
+  payment_issue tickets flag                        3/5      62.0% ['SRSP1', 'SRSP2', 'SRSP3']
+  partner                                           3/5      33.3% ['SRSP1', 'SRSP2', 'SRSP3']
+  sla                                               3/5      33.3% ['SRSP1', 'SRSP2', 'SRSP3']
+  install date                                      2/5      98.4% ['S14', 'SRSP1']
+  installation date                                 2/5      79.7% ['SRSP2', 'SRSP3']
+  tenure // install                                 2/5      79.7% ['SRSP2', 'SRSP3']
+
+  COLUMNS PRESENT IN ONLY ONE TAB:
+  Column Name                                                         Tab    Fill%
+  --------------------------------------------- ------------------------- --------
+  1.0                                                         SRSP3 Feb26     0.4%
+  2.0                                                         SRSP3 Feb26     1.0%
+  data usage / day                                               S7 Oct25     0.0%
+  good partner/ techinician support                           SRSP3 Feb26     1.0%
+  match?                                                        S14 Jan26   100.0%
+  nps reason                                                     S7 Oct25     9.4%
+  pay g?                                                      SRSP3 Feb26     0.0%
+  payment_issue  tickets flag                                   S14 Jan26    38.8%
+  perf metrics                                                  S14 Jan26   100.0%
+  prev nps                                                      S14 Jan26   100.0%
+  px                                                            S14 Jan26   100.0%
+  tenure - install                                            SRSP1 Feb26    98.1%
+
+====================================================================================================
+>>> CONSOLIDATED TAB EQUIVALENTS CHECK <<<
+====================================================================================================
+
+  Consolidated tab has 38 columns:
+    Col  1: Cycle ID
+    Col  2: Sprint ID
+    Col  3: Sprint Start Date
+    Col  4: Sprint End Date
+    Col  5: Phone Number
+    Col  6: NPS
+    Col  7: NPS Group
+    Col  8: OE
+    Col  9: NPS Reason - Primary
+    Col 10: NPS Reason - Secondary
+    Col 11: NPS Reason - Tertiary
+    Col 12: Primary Category
+    Col 13: Secondary Category
+    Col 14: Tertiary Category
+    Col 15: Channel
+    Col 16: First Time wifi?
+    Col 17: Smart Tv?
+    Col 18: आपका Wi-Fi internet कैसे चलता है
+    Col 19: WiFi की स्पीड कैसी है?
+    Col 20: समस्या के समाधान का अनुवभ कैसे है?
+    Col 21: Jab dikkat aayi toh kya kia?
+    Col 22: Tenure
+    Col 23: Number of recharges before end of sprint?
+    Col 24: Active/ Churn - overall
+    Col 25: Number of tickets post sprint date?
+    Col 26: Number of tickets before 3M sprint date?
+    Col 27: how many recharges post sprint date?
+    Col 28: City
+    Col 29: City core
+    Col 30: churn recharge bucket
+    Col 31: None
+    Col 32: None
+    Col 33: None
+    Col 34: None
+    Col 35: None
+    Col 36: None
+    Col 37: None
+    Col 38: Install Date
+
+  MAPPING: Sprint Extra Columns -> Consolidated Equivalents
+  Sprint Column                                 Consolidated Equivalent                  Match Type
+  --------------------------------------------- ---------------------------------------- ---------------
+  # of tickets in last 3 months                 ---                                      NONE (in 5/5 tabs)
+  1.0                                           ---                                      NONE (in 1/5 tabs)
+  2.0                                           ---                                      NONE (in 1/5 tabs)
+  ALT mobile                                    ---                                      NONE (in 3/5 tabs)
+  Caller                                        ---                                      NONE (in 3/5 tabs)
+  cash/ online                                  ---                                      NONE (in 3/5 tabs)
+  Channel                                       Channel                                  exact (in 5/5 tabs)
+  City                                          City                                     exact (in 5/5 tabs)
+  Comments                                      ---                                      NONE (in 4/5 tabs)
+  Current Exp - Any additional context on rating? ---                                      NONE (in 3/5 tabs)
+  Data Usage / Day                              ---                                      NONE (in 1/5 tabs)
+  Data Usage amount                             ---                                      NONE (in 5/5 tabs)
+  Data Usage Days                               ---                                      NONE (in 5/5 tabs)
+  Data Usage Percentile                         ---                                      NONE (in 5/5 tabs)
+  Device                                        ---                                      NONE (in 5/5 tabs)
+  Device Type                                   ---                                      NONE (in 5/5 tabs)
+  Devices on 2.4g                               ---                                      NONE (in 5/5 tabs)
+  Devices on 5g                                 ---                                      NONE (in 5/5 tabs)
+  First time user?                              ---                                      NONE (in 5/5 tabs)
+  Good Partner/ Techinician Support             ---                                      NONE (in 1/5 tabs)
+  Install Date                                  Install Date                             exact (in 2/5 tabs)
+  Installation Date                             ---                                      NONE (in 2/5 tabs)
+  Last recharge done - when?                    churn recharge bucket                    keyword (in 5/5 tabs)
+  MATCH?                                        ---                                      NONE (in 1/5 tabs)
+  NPS Reason                                    NPS                                      partial (in 1/5 tabs)
+  NPS Reason - primary                          NPS Reason - Primary                     exact (in 4/5 tabs)
+  NPS Reason - secondary                        NPS Reason - Secondary                   exact (in 4/5 tabs)
+  NPS reason tertiary                           NPS                                      partial (in 4/5 tabs)
+  Optical Power                                 ---                                      NONE (in 5/5 tabs)
+  Optical Range                                 ---                                      NONE (in 5/5 tabs)
+  Partner                                       ---                                      NONE (in 3/5 tabs)
+  pay g?                                        ---                                      NONE (in 1/5 tabs)
+  Payment_issue
+ Tickets Flag                   ---                                      NONE (in 1/5 tabs)
+  Payment_issue
+Tickets Flag                    ---                                      NONE (in 3/5 tabs)
+  perf metrics                                  ---                                      NONE (in 1/5 tabs)
+  Plan Expiry Date                              ---                                      NONE (in 3/5 tabs)
+  Plan Expiry Window                            ---                                      NONE (in 3/5 tabs)
+  PREV NPS                                      NPS                                      partial (in 1/5 tabs)
+  px                                            ---                                      NONE (in 1/5 tabs)
+  recharge done                                 churn recharge bucket                    keyword (in 5/5 tabs)
+  SLA                                           ---                                      NONE (in 3/5 tabs)
+  Status                                        ---                                      NONE (in 3/5 tabs)
+  Tenure                                        Tenure                                   exact (in 5/5 tabs)
+  Tenure - install                              Tenure                                   partial (in 1/5 tabs)
+  Tenure // Install                             Tenure                                   partial (in 2/5 tabs)
+  What do they do when they face a prob?        ---                                      NONE (in 3/5 tabs)
+  Zone                                          ---                                      NONE (in 5/5 tabs)
+
+====================================================================================================
+>>> MODELING-USEFUL COLUMNS SUMMARY <<<
+====================================================================================================
+
+  These extra columns from sprint tabs are potentially useful as features for NPS
+  prediction/analysis. They appear to come from the database (not manually enriched).
+
+  CATEGORIES OF USEFUL FEATURES:
+  
+  CUSTOMER PROFILE:
+    - Tenure (fill: 93%, in 5/5 tabs)
+    - ALT mobile (fill: 0%, in 3/5 tabs)
+    - Install Date (fill: 98%, in 2/5 tabs)
+    - Tenure - install (fill: 98%, in 1/5 tabs)
+    - Installation Date (fill: 80%, in 2/5 tabs)
+    - Tenure // Install (fill: 80%, in 2/5 tabs)
+
+  PAYMENT & BILLING:
+    - recharge done (fill: 94%, in 5/5 tabs)
+    - cash/ online (fill: 100%, in 3/5 tabs)
+    - Last recharge done - when? (fill: 91%, in 5/5 tabs)
+    - Payment_issue
+ Tickets Flag (fill: 39%, in 1/5 tabs)
+    - Payment_issue
+Tickets Flag (fill: 62%, in 3/5 tabs)
+    - pay g? (fill: 0%, in 1/5 tabs)
+
+  NETWORK & TECHNICAL:
+    - Optical Power (fill: 78%, in 5/5 tabs)
+    - Devices on 2.4g (fill: 80%, in 5/5 tabs)
+    - Devices on 5g (fill: 80%, in 5/5 tabs)
+    - Optical Range (fill: 12%, in 5/5 tabs)
+
+  GEOGRAPHY:
+    - City (fill: 90%, in 5/5 tabs)
+    - Zone (fill: 94%, in 5/5 tabs)
+
+  SUPPORT / TICKETS:
+    - # of tickets in last 3 months (fill: 58%, in 5/5 tabs)
+
+  DEVICE INFO:
+    - Device Type (fill: 90%, in 5/5 tabs)
+    - Device (fill: 94%, in 5/5 tabs)
+
+  ENGAGEMENT / BEHAVIOR:
+    - NPS Reason (fill: 9%, in 1/5 tabs)
+    - PREV NPS (fill: 100%, in 1/5 tabs)
+    - NPS Reason - primary (fill: 62%, in 4/5 tabs)
+    - NPS Reason - secondary (fill: 26%, in 4/5 tabs)
+    - NPS reason tertiary (fill: 23%, in 4/5 tabs)
+    - Comments (fill: 25%, in 4/5 tabs)
+
+  CALLING / OUTREACH:
+    - Caller (fill: 1%, in 3/5 tabs)
+
+  UNKNOWN / OTHER:
+    - Data Usage amount (fill: 77%, in 5/5 tabs)
+    - Data Usage Days (fill: 77%, in 5/5 tabs)
+    - Data Usage Percentile (fill: 0%, in 5/5 tabs)
+    - First time user? (fill: 92%, in 5/5 tabs)
+    - Plan Expiry Date (fill: 67%, in 3/5 tabs)
+    - Plan Expiry Window (fill: 0%, in 3/5 tabs)
+    - Channel (fill: 94%, in 5/5 tabs)
+    - Data Usage / Day (fill: 0%, in 1/5 tabs)
+    - MATCH? (fill: 100%, in 1/5 tabs)
+    - Status (fill: 1%, in 3/5 tabs)
+    - Current Exp - Any additional context on rating? (fill: 1%, in 3/5 tabs)
+    - What do they do when they face a prob? (fill: 0%, in 3/5 tabs)
+    - px (fill: 100%, in 1/5 tabs)
+    - perf metrics (fill: 100%, in 1/5 tabs)
+    - Partner (fill: 33%, in 3/5 tabs)
+    - SLA (fill: 33%, in 3/5 tabs)
+    - Good Partner/ Techinician Support (fill: 1%, in 1/5 tabs)
+    - 1.0 (fill: 0%, in 1/5 tabs)
+    - 2.0 (fill: 1%, in 1/5 tabs)
+
+
+====================================================================================================
+>>> ROWS 1-13 SUMMARY AREA STRUCTURE <<<
+====================================================================================================
+  (Rows 1-13 contain pre-computed analysis tables above the data)
+
+  Sample from 'Sprint RSP3 Feb26' rows 1-13:
+    Row  1: ['Overall NPS', '940', '', '', 'tenure by recharge', 'D', 'P', 'Grand Total', 'NPS']
+    Row  2: ['Promoter', '385', '0.4095744681', '', '1–2 months', '14', '11', '27', '-0.1111111111']
+    Row  3: ['Passive', '63', '0.0670212766', '', '3–6 months', '111', '116', '242', '0.02066115702']
+    Row  4: ['Detractor', '492', '0.5234042553', '', '6+ months', '344', '248', '635', '-0.1511811024']
+    Row  5: ['', '', '-0.1138297872', '', '', '', '', '', '']
+    Row  7: ['Type of device', 'D', 'P', 'Grand Total', 'NPS', '', 'City', 'D', 'P']
+    Row  8: ['GX', '251', '211', '491', '-0.08146639511', '', 'Delhi', '402', '325']
+    Row  9: ['SY', '165', '115', '306', '-0.1633986928', '', 'UP', '33', '25']
+    Row 10: ['TP', '53', '49', '107', '-0.03738317757', '', 'Mumbai', '34', '25']
+
+====================================================================================================
+>>> FINAL SUMMARY & KEY FINDINGS <<<
+====================================================================================================
+
+  TABS ANALYZED: 5
+  TOTAL EXTRA COLUMNS FOUND (unique, normalized): 47
+
+  KEY FINDINGS:
+  1. Universal columns (in all tabs): 17
+  2. Partial columns (in some tabs):  18
+  3. Tab-specific columns:            12
+
+  HIGH-VALUE FEATURES FOR MODELING (from DB, not manual):
+  - Tenure: customer duration (categorical: 1-2 months, 3-6 months, 6+ months)
+  - City: geography for regional analysis
+  - Zone: geographic zone grouping
+  - Device Type: router model (GX, SY, TP, etc.)
+  - Optical Power: fiber signal strength (continuous)
+  - Recharge Done: payment behavior flag
+  - Cash/Online: payment mode
+  - # Tickets: support burden measure
+  - Devices on 2.4g / 5g: network usage complexity
+  - Payment Issue Tickets: billing-specific support
+
+  CRITICAL NOTE: The user confirms these columns are NOT manually enriched.
+  They come from the database, making them reliable features for modeling.
+  They can be joined to any NPS response via the Mobile/phone number.

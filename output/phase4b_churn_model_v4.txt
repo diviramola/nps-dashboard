@@ -1,0 +1,261 @@
+================================================================================
+PHASE 4B v4: CHURN PREDICTION MODEL -- CLEAN & COMPREHENSIVE
+Started: 2026-03-18 21:11:39
+================================================================================
+
+[LOAD] Rows: 13045, Columns: 299
+  Churn: 3057/13045 (23.4%)
+
+================================================================================
+FEATURE EXCLUSION LIST (v4)
+================================================================================
+  Excluded features: 57
+  Key v4 changes:
+    - REMOVED: sprint_num (right-censoring artifact, was #3 in v3 at 12.3%)
+    - REMOVED: OUTBOUND_CALLS only (reverse causality); kept inbound/response CX signals
+    - REMOVED: tickets_post_sprint (temporal leakage)
+    - KEPT: FAILURE_RATE_PCT (experience quality metric)
+
+================================================================================
+FILL RATE AUDIT
+================================================================================
+  SAFE features (< 10pp gap):        135
+  RECOVERABLE features (gap shrinks): 21
+  RISKY features (persistent gap):    47
+
+  Recoverable features (new in v4):
+    WiFi की स्पीड कैसी है?                   Overall: 18%/31% (-13pp) | Late: 0%/0% (+0pp)
+    cis_avg_customer_uptime_pct              Overall: 100%/45% (+55pp) | Late: 100%/98% (+2pp)
+    cis_avg_peak_uptime_pct                  Overall: 100%/45% (+55pp) | Late: 100%/98% (+2pp)
+    cis_avg_stable_ping_ratio                Overall: 100%/42% (+58pp) | Late: 100%/94% (+6pp)
+    cis_peak_interruption_rate               Overall: 100%/45% (+55pp) | Late: 100%/98% (+2pp)
+    comment_quality                          Overall: 45%/34% (+11pp) | Late: 59%/58% (+1pp)
+    customer_uptime_tier                     Overall: 100%/45% (+55pp) | Late: 100%/98% (+2pp)
+    data_usage_amount                        Overall: 53%/39% (+13pp) | Late: 73%/68% (+5pp)
+    data_usage_days                          Overall: 53%/39% (+13pp) | Late: 73%/68% (+5pp)
+    detected_language                        Overall: 45%/34% (+11pp) | Late: 59%/58% (+1pp)
+    emotion                                  Overall: 45%/34% (+11pp) | Late: 59%/58% (+1pp)
+    first_time_user                          Overall: 50%/25% (+25pp) | Late: 92%/84% (+8pp)
+    mentions_28day                           Overall: 45%/34% (+11pp) | Late: 59%/58% (+1pp)
+    mentions_amount                          Overall: 45%/34% (+11pp) | Late: 59%/58% (+1pp)
+    mentions_competitor                      Overall: 45%/34% (+11pp) | Late: 59%/58% (+1pp)
+    peak_uptime_gap                          Overall: 100%/45% (+55pp) | Late: 100%/98% (+2pp)
+    primary_theme_score                      Overall: 45%/34% (+11pp) | Late: 59%/58% (+1pp)
+    score_sentiment_mismatch                 Overall: 45%/34% (+11pp) | Late: 59%/58% (+1pp)
+    secondary_theme_score                    Overall: 45%/34% (+11pp) | Late: 59%/58% (+1pp)
+    आपका Wi-Fi internet कैसे चलता है         Overall: 18%/31% (-13pp) | Late: 0%/0% (+0pp)
+    समस्या के समाधान का अनुवभ कैसे है?       Overall: 18%/31% (-13pp) | Late: 0%/0% (+0pp)
+
+================================================================================
+NEW FEATURE CANDIDATES (v4 additions)
+================================================================================
+
+  Feature                             |     Active |    Churned |    Diff% |   Fill
+  ----------------------------------- | ---------- | ---------- | -------- | ------
+  DISPATCH_DECLINE_RATE_PCT           |      3.975 |      4.885 |     +23% | 100%
+  DROPPED_CALLS                       |      0.078 |      0.138 |     +78% | 100%
+  MAX_TICKETS_SAME_ISSUE              |      4.743 |      3.625 |     -24% | 100%
+  HAS_REPEAT_COMPLAINT                |      0.682 |      0.805 |     +18% | 100%
+  TICKETS_REOPENED_ONCE               |      1.000 |      0.633 |     -37% | 100%
+  TICKETS_REOPENED_3PLUS              |      0.147 |      0.101 |     -31% | 100%
+  MAX_TIMES_REOPENED                  |      0.864 |      0.630 |     -27% | 100%
+  DISTINCT_ISSUE_TYPES                |      4.752 |      4.654 |      -2% | 100%
+  FCR_RATE                            |     92.230 |     94.718 |      +3% | 100%
+  INBOUND_UNANSWERED                  |      8.465 |      7.492 |     -11% | 99%
+
+  Features added to v4 model: 10
+    + DISPATCH_DECLINE_RATE_PCT
+    + DROPPED_CALLS
+    + MAX_TICKETS_SAME_ISSUE
+    + HAS_REPEAT_COMPLAINT
+    + TICKETS_REOPENED_ONCE
+    + TICKETS_REOPENED_3PLUS
+    + MAX_TIMES_REOPENED
+    + DISTINCT_ISSUE_TYPES
+    + FCR_RATE
+    + INBOUND_UNANSWERED
+
+================================================================================
+FEATURE MATRIX CONSTRUCTION
+================================================================================
+
+--- TRACK 1: SAFE + NEW FEATURES (all sprints, no fill-rate leakage) ---
+  Features: 144, Samples: 13045
+
+--- TRACK 2: SAFE + RECOVERABLE on LATE SPRINTS (7-13) ---
+    Dropping 3 all-NaN columns: ['WiFi की स्पीड कैसी है?', 'आपका Wi-Fi internet कैसे चलता है', 'समस्या के समाधान का अनुवभ कैसे है?']
+  Features: 169, Samples: 5251 (late sprints only)
+  Churn rate: 11.1%
+
+--- TRACK 3: ALL FEATURES on COMPLETE-DATA subset ---
+  Features: 191, Samples: 9607
+  Churn rate: 15.8%
+
+================================================================================
+MODEL TRAINING -- 5-FOLD CV
+================================================================================
+
+--- TRACK 1: Safe + New (all sprints, no sprint_num) ---
+
+  Track 1 (n=13045, churn=3057/13045 = 23.4%):
+    RF  AUC: 0.8944 (+/- 0.0024)
+    GB  AUC: 0.9347 (+/- 0.0019)
+    LR  AUC: 0.9010 (+/- 0.0031)
+    Best: GB (0.9347)
+
+--- TRACK 2: Safe + Recoverable (late sprints 7-13) ---
+
+  Track 2 (n=5251, churn=581/5251 = 11.1%):
+    RF  AUC: 0.8906 (+/- 0.0160)
+    GB  AUC: 0.9349 (+/- 0.0092)
+    LR  AUC: 0.8857 (+/- 0.0250)
+    Best: GB (0.9349)
+
+--- TRACK 3: All features on complete-data subset ---
+
+  Track 3 (n=9607, churn=1516/9607 = 15.8%):
+    RF  AUC: 0.9614 (+/- 0.0055)
+    GB  AUC: 0.9747 (+/- 0.0038)
+    LR  AUC: 0.9427 (+/- 0.0060)
+    Best: GB (0.9747)
+
+================================================================================
+TOP FEATURE IMPORTANCES (GB)
+================================================================================
+
+  Track 1 — Top 20:
+     1. avg_uptime_pct                          : 0.3154 (31.5%)
+     2. sc_avg_rxpower_in_range                 : 0.1468 (14.7%)
+     3. first_time_wifi_Unknown                 : 0.0580 (5.8%)
+     4. tk_sla_compliance                       : 0.0514 (5.1%)
+     5. TOTAL_IVR_CALLS                         : 0.0446 (4.5%)
+     6. FAILURE_RATE_PCT                        : 0.0341 (3.4%)
+     7. AVG_ANSWERED_SECONDS                    : 0.0340 (3.4%)
+     8. MISSED_CALLS                            : 0.0283 (2.8%)
+     9. autopay_ratio                           : 0.0238 (2.4%)
+    10. avg_resolution_hours                    : 0.0233 (2.3%)
+    11. avg_resolution_hours_w                  : 0.0226 (2.3%)
+    12. AVG_TICKETS_PER_ISSUE                   : 0.0187 (1.9%)
+    13. INBOUND_CALLS                           : 0.0140 (1.4%)
+    14. sc_avg_weekly_data_gb                   : 0.0130 (1.3%)
+    15. sc_avg_rxpower                          : 0.0105 (1.1%)
+    16. ANSWERED_CALLS                          : 0.0100 (1.0%)
+    17. optical_power                           : 0.0099 (1.0%)
+    18. stddev_uptime                           : 0.0086 (0.9%)
+    19. ticket_severity                         : 0.0085 (0.8%)
+    20. sc_avg_speed_in_range                   : 0.0081 (0.8%)
+
+  Track 2 — Top 20:
+     1. avg_uptime_pct                          : 0.1843 (18.4%)
+     2. cis_peak_interruption_rate              : 0.1536 (15.4%) [NEW in v4]
+     3. cis_avg_customer_uptime_pct             : 0.0878 (8.8%) [NEW in v4]
+     4. sc_avg_rxpower_in_range                 : 0.0729 (7.3%)
+     5. cis_avg_peak_uptime_pct                 : 0.0680 (6.8%) [NEW in v4]
+     6. peak_uptime_gap                         : 0.0662 (6.6%) [NEW in v4]
+     7. cis_avg_stable_ping_ratio               : 0.0623 (6.2%) [NEW in v4]
+     8. FAILURE_RATE_PCT                        : 0.0193 (1.9%)
+     9. data_usage_days                         : 0.0161 (1.6%) [NEW in v4]
+    10. tk_sla_compliance                       : 0.0152 (1.5%)
+    11. AVG_ANSWERED_SECONDS                    : 0.0144 (1.4%)
+    12. avg_resolution_hours_w                  : 0.0139 (1.4%)
+    13. sc_avg_weekly_data_gb                   : 0.0130 (1.3%)
+    14. tenure_days                             : 0.0125 (1.3%)
+    15. city_Unknown_True                       : 0.0119 (1.2%)
+    16. optical_power                           : 0.0107 (1.1%)
+    17. autopay_ratio                           : 0.0105 (1.1%)
+    18. avg_resolution_hours                    : 0.0104 (1.0%)
+    19. customer_uptime_tier_good               : 0.0102 (1.0%)
+    20. data_usage_amount                       : 0.0100 (1.0%) [NEW in v4]
+
+  Track 3 — Top 20:
+     1. cis_peak_interruption_rate              : 0.3182 (31.8%) [NEW in v4]
+     2. sc_avg_rxpower_in_range                 : 0.1210 (12.1%)
+     3. cis_avg_customer_uptime_pct             : 0.1115 (11.2%) [NEW in v4]
+     4. customer_uptime_tier_good               : 0.0999 (10.0%)
+     5. cis_avg_stable_ping_ratio               : 0.0675 (6.7%) [NEW in v4]
+     6. peak_uptime_gap                         : 0.0629 (6.3%) [NEW in v4]
+     7. tk_avg_resolution_mins                  : 0.0624 (6.2%)
+     8. cis_avg_peak_uptime_pct                 : 0.0294 (2.9%) [NEW in v4]
+     9. tk_sla_compliance                       : 0.0276 (2.8%)
+    10. tk_tickets_disconnect                   : 0.0148 (1.5%)
+    11. tk_tickets_resolved                     : 0.0085 (0.8%)
+    12. sc_avg_weekly_data_gb                   : 0.0073 (0.7%)
+    13. tk_tickets_freq_disconnect              : 0.0058 (0.6%)
+    14. partner_sla_compliance                  : 0.0049 (0.5%)
+    15. network_quality_index                   : 0.0041 (0.4%)
+    16. TOTAL_IVR_CALLS                         : 0.0034 (0.3%)
+    17. FAILURE_RATE_PCT                        : 0.0033 (0.3%)
+    18. AVG_ANSWERED_SECONDS                    : 0.0023 (0.2%)
+    19. resolution_vs_partner                   : 0.0022 (0.2%)
+    20. partner_avg_resolution_hours            : 0.0020 (0.2%)
+
+================================================================================
+TEMPORAL HOLDOUT VALIDATION
+(Train: Sprints 1-7, Test: Sprints 8-11, Exclude: 12-13 right-censored)
+================================================================================
+
+  Train: Sprints 1-7, n=8552, churn=30.9%
+  Test:  Sprints 8-11, n=3022, churn=12.9%
+    Dropping 1 all-NaN columns: ['payment_issue_tickets_flag']
+
+  Out-of-Time AUC:
+    GB:       0.8878
+    RF:       0.8620
+    Ensemble: 0.8832
+
+  Confusion Matrix (threshold=0.5):
+    Predicted:    Active    Churn
+    Actual Active:  2349      283
+    Actual Churn:    122      268
+
+    Accuracy:  86.6%
+    Precision: 48.6%
+    Recall:    68.7%
+    F1:        57.0%
+
+  Threshold Sensitivity:
+     Thresh |   Prec | Recall |     F1 |    Acc
+        0.3 |  36.1% |  83.1% |  50.3% |  78.8%
+        0.4 |  41.6% |  73.3% |  53.1% |  83.3%
+        0.5 |  48.6% |  68.7% |  57.0% |  86.6%
+        0.6 |  53.5% |  60.3% |  56.7% |  88.1%
+        0.7 |  60.8% |  48.5% |  53.9% |  89.3%
+
+  Out-of-Time Feature Importances (GB, top 15):
+     1. avg_uptime_pct                          : 0.3205 (32.0%)
+     2. sc_avg_rxpower_in_range                 : 0.1481 (14.8%)
+     3. tk_sla_compliance                       : 0.0620 (6.2%)
+     4. TOTAL_IVR_CALLS                         : 0.0455 (4.6%)
+     5. FAILURE_RATE_PCT                        : 0.0407 (4.1%)
+     6. MISSED_CALLS                            : 0.0317 (3.2%)
+     7. AVG_ANSWERED_SECONDS                    : 0.0305 (3.0%)
+     8. AVG_TICKETS_PER_ISSUE                   : 0.0301 (3.0%)
+     9. avg_resolution_hours_w                  : 0.0298 (3.0%)
+    10. avg_resolution_hours                    : 0.0248 (2.5%)
+    11. autopay_ratio                           : 0.0203 (2.0%)
+    12. sc_avg_rxpower                          : 0.0174 (1.7%)
+    13. sc_avg_weekly_data_gb                   : 0.0155 (1.5%)
+    14. INBOUND_CALLS                           : 0.0144 (1.4%)
+    15. sc_avg_speed_in_range                   : 0.0109 (1.1%)
+
+================================================================================
+v3 vs v4 COMPARISON
+================================================================================
+
+  v3 (leakage-free):
+    - CV AUC (GB): 0.9339
+    - Top features: avg_uptime_pct (31.5%), sc_avg_rxpower_in_range (14.6%), sprint_num (12.3%)
+    - Included sprint_num (right-censoring artifact, 12.3% importance)
+    - Included OUTBOUND_CALLS, all call features
+    - OOT Ensemble AUC: 0.8634
+
+  v4 (clean & comprehensive):
+    - CV AUC (GB): 0.9347
+    - Removed sprint_num (right-censoring artifact)
+    - Removed OUTBOUND_CALLS only (reverse causality); kept inbound CX signals
+    - Added: 10 new features (DISPATCH_DECLINE_RATE_PCT, DROPPED_CALLS, MAX_TICKETS_SAME_ISSUE, HAS_REPEAT_COMPLAINT, TICKETS_REOPENED_ONCE)
+    - OOT Ensemble AUC: 0.8832
+
+  KEY QUESTION: Did removing sprint_num + cleaning call features hurt or help?
+  - v3 OOT AUC (with all calls, with sprint_num): 0.8634
+  - v4 OOT AUC (no OUTBOUND, no sprint_num):      0.8832

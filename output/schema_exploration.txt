@@ -1,0 +1,555 @@
+
+============================================================
+TABLE: prod_db.PUBLIC.SERVICE_TICKET_MODEL
+============================================================
+  SHARD                                          TEXT
+  TICKET_ID                                      TEXT
+  TASK_ID                                        TEXT
+  KAPTURE_TICKET_ID                              TEXT
+  TICKET_SOURCE                                  TEXT
+  IVR_ID                                         TEXT
+  TICKET_TYPE                                    NUMBER
+  LATEST_EVENT                                   TEXT
+  TICKET_TYPE_FINAL                              NUMBER
+  FIRST_TITLE                                    TEXT
+  LAST_TITLE                                     TEXT
+  TICKET_ADDED_TIME                              TIMESTAMP_NTZ
+  CREATED_BY_ACCOUNT_ID                          TEXT
+  LCO_ACCOUNT_ID                                 TEXT
+  CUSTOMER_MOBILE                                TEXT
+  CUSTOMER_ACCOUNT_ID                            TEXT
+  CURRENT_PARTNER_ACCOUNT_ID                     FLOAT
+  CURRENT_PARTNER_NAME                           TEXT
+  ROUTER_NAS_ID                                  TEXT
+  DEVICE_ID                                      TEXT
+  ZONE                                           TEXT
+  LAST_MODIFIED_TIME                             TIMESTAMP_NTZ
+  FIRST_ALLOCATION_TIME                          TIMESTAMP_NTZ
+  LATEST_ALLOCATION_TIME                         TIMESTAMP_NTZ
+  FIRST_TICKET_ASSIGNED_ID                       TEXT
+  FIRST_TICKET_ASSIGNED_NAME                     TEXT
+  FIRST_TICKET_ASSIGNED_ROLE                     TEXT
+  FIRST_TICKET_ASSIGNED_TIME                     TIMESTAMP_NTZ
+  FIRST_RESOLVED_TIME                            TIMESTAMP_NTZ
+  FIRST_RESOLVED_BY_ACCOUNT_ID                   TEXT
+  FIRST_RESOLVED_NAME                            TEXT
+  FIRST_RESOLVED_ROLE                            TEXT
+  FIRST_RESOLVED_USER_ID                         TEXT
+  CURRENT_TICKET_ASSIGNED_ID                     TEXT
+  CURRENT_TICKET_ASSIGNED_NAME                   TEXT
+  CURRENT_TICKET_ASSIGNED_ROLE                   TEXT
+  CURRENT_PERSON_ASSIGNED_NAME                   TEXT
+  CURRENT_TICKET_STATUS                          TEXT
+  FINAL_RESOLVED_TIME                            TIMESTAMP_NTZ
+  FINAL_RESOLVED_USER_ID                         TEXT
+  FINAL_RESOLVED_ASSIGNED_ACCOUNT_ID             TEXT
+  FINAL_RESOLVED_NAME                            TEXT
+  FINAL_RESOLVED_ROLE                            TEXT
+  IS_RESOLVED                                    NUMBER
+  ISPINGRESOLVED                                 NUMBER
+  RESOLUTION_TYPE                                NUMBER
+  FIRST_REOPENED_TIME                            TIMESTAMP_NTZ
+  FIRST_REOPENED_BY_ACCOUNT_ID                   TEXT
+  FIRST_REOPENED_BY_NAME                         TEXT
+  FIRST_REOPENED_BY_ROLE                         TEXT
+  TIMES_REOPENED                                 NUMBER
+  TIMES_REOPENED_POSTCLOSURE                     NUMBER
+  ALLOCATIONTAT_MINS_CALENDARHRS                 NUMBER
+  TOTALTAT_TILLNOW_MINS_WORKINGHRS               NUMBER
+  TOTALTAT_TILLNOW_MINS_CALENDARHRS              NUMBER
+  RESOLUTION_PERIOD_MINS_WORKINGHRS              NUMBER
+  RESOLUTION_PERIOD_MINS_CALENDARHRS             NUMBER
+  RESOLUTION_TO_REOPENING                        NUMBER
+  RESOLUTION_PERIOD_MINS_WORKINGHRS_EXCL_RESOLUTION_TO_REOPENING  NUMBER
+  RESOLUTION_PERIOD_MINS_CALENDARHRS_EXCL_RESOLUTION_TO_REOPENING  NUMBER
+  LAST_SYSTEM_CLOSURE_TIME                       TIMESTAMP_NTZ
+  LAST_CUSTOMER_CLOSURE_TIME                     TIMESTAMP_NTZ
+  REOPENING_TIME_WINDOW_MINS_CALENDARHRS         NUMBER
+  LAST_SYSTEM_CLOSING_WINDOW_MINS_CALENDARHRS    NUMBER
+  CX_PX                                          TEXT
+  RESOLUTION_TAT_BUCKET                          TEXT
+  CLOSED_BY                                      TEXT
+  REOPENED_POST_LAST_CLOSING                     NUMBER
+  RATING_SCORE_BY_CUSTOMER                       NUMBER
+  NO_TIMES_CUSTOMER_CALLED                       NUMBER
+  NO_TIMES_PARTNER_CALLED                        NUMBER
+  IS_PARTNERASSIGNED                             NUMBER
+  IS_WIOMASSIGNED                                NUMBER
+  EXTRA_DATA                                     TEXT
+  LATEST_SENT_TO_WIOM                            TIMESTAMP_NTZ
+  FIRST_SENT_TO_WIOM                             TIMESTAMP_NTZ
+  LAST_TICKET_TYPE_CHANGED_TIME                  TIMESTAMP_NTZ
+  CURRENT_QUEUE                                  TEXT
+
+============================================================
+TABLE: prod_db.PUBLIC.TATA_IVR_EVENTS
+============================================================
+  TIMESTAMP                                      TIMESTAMP_NTZ
+  DATASOURCE_ID                                  TEXT
+  CALL_ID                                        TEXT
+  UUID                                           TEXT
+  DATE                                           TIMESTAMP_NTZ
+  TIME                                           TEXT
+  END_STAMP                                      TIMESTAMP_NTZ
+  MISSED_AGENTS                                  TEXT
+  STATUS                                         TEXT
+  DIRECTION                                      TEXT
+  CALL_DURATION                                  FLOAT
+  ANSWERED_SECONDS                               FLOAT
+  MINUTES_CONSUMED                               FLOAT
+  BROADCAST_ID                                   TEXT
+  DTMF_INPUT                                     TEXT
+  CLIENT_NUMBER                                  TEXT
+  HANGUP_CAUSE                                   TEXT
+  DID_NUMBER                                     TEXT
+  CONTACT_DETAILS                                TEXT
+  RECORDING_URL                                  TEXT
+  SERVICE                                        TEXT
+  PROPERTIES                                     TEXT
+
+============================================================
+TABLE: prod_db.PUBLIC.PARTNER_INFLUX_SUMMARY
+============================================================
+  PARTNER_ID                                     FLOAT
+  BASE_CUSTOMER_COUNT                            NUMBER
+  TOTAL_PINGS_RECEIVED                           NUMBER
+  TOTAL_EXPECTED_PINGS                           NUMBER
+  TOTAL_STABLE_PINGS                             NUMBER
+  PEAK_HOUR_PINGS_RECEIVED                       NUMBER
+  PEAK_HOUR_STABLE_PINGS                         NUMBER
+  PEAK_HOUR_EXPECTED_PINGS                       NUMBER
+  ACTIVE_CUSTOMERS_TODAY                         NUMBER
+  CUSTOMERS_WITH_PEAK_INTERRUPTIONS              NUMBER
+  APPENDED_DATE                                  DATE
+
+============================================================
+TABLE: prod_db.PUBLIC.DATA_USAGE_OKR
+============================================================
+  NASID                                          TEXT
+  DT                                             TEXT
+  TOTAL_DATA_USED                                FLOAT
+
+============================================================
+TABLE: prod_db.PUBLIC.PAYMENT_LOGS
+============================================================
+  table                                          TEXT
+  TASK_ID                                        TEXT
+  DATASOURCE_ID                                  TEXT
+  KEY                                            TEXT
+  ADDED_TIME                                     TIMESTAMP_NTZ
+  MOBILE                                         TEXT
+  SOURCE_FLAG                                    TEXT
+  ACCOUNT_ID                                     TEXT
+  EVENT_NAME                                     TEXT
+  DATA                                           TEXT
+
+============================================================
+TABLE: prod_db.PUBLIC.T_ROUTER_USER_MAPPING
+============================================================
+  ID                                             NUMBER
+  OTP_ISSUED_TIME                                TIMESTAMP_NTZ
+  TRANSACTION_ID                                 TEXT
+  OTP_EXPIRY_TIME                                TIMESTAMP_NTZ
+  ENTRYUNIXEPOCH                                 NUMBER
+  DEVICE_LIMIT                                   NUMBER
+  MOBILE                                         TEXT
+  AUTH_STATE                                     NUMBER
+  OTP                                            TEXT
+  DATA_PLAN                                      NUMBER
+  CREATED_BY                                     NUMBER
+  SELECTED_PLAN_ID                               NUMBER
+  PLAN_INCREASED_IN_SEC                          NUMBER
+  CHARGES                                        FLOAT
+  ROUTER_NAS_ID                                  NUMBER
+  CREATED_ON                                     TIMESTAMP_NTZ
+  EXTRA_DATA                                     TEXT
+  STORE_GROUP_ID                                 NUMBER
+  TIME_PLAN                                      NUMBER
+  UPDATED_BY                                     NUMBER
+  STATUS                                         TEXT
+  SHARD                                          TEXT
+  RECHARGE_ISP                                   BOOLEAN
+  IS_COMMISSION_ELIGIBLE                         BOOLEAN
+
+============================================================
+TABLE: prod_db.PUBLIC.T_WG_CUSTOMER
+============================================================
+  ACCOUNT_ID                                     NUMBER
+  MANDATE_STATUS                                 TEXT
+  NASID                                          NUMBER
+  ADDED_TIME                                     TIMESTAMP_NTZ
+  ADDRESS                                        TEXT
+  APP_VERSION                                    NUMBER
+  DEVICE_ID                                      TEXT
+  WIOM_MEMBER                                    TEXT
+  WG_STATUS                                      TEXT
+  MOBILE                                         TEXT
+  PLAN_EXPIRY_TIME                               TIMESTAMP_NTZ
+  LCO_ACCOUNT_ID                                 NUMBER
+  GOOGLE_ADDRESS_ID                              NUMBER
+  CLUSTER_ID                                     NUMBER
+  NAME                                           TEXT
+  LEAD_TYPE                                      TEXT
+  RENEWAL_COUNT                                  NUMBER
+  FIRMWARE                                       TEXT
+  LEAD_ID                                        NUMBER
+  INSTALLER_USERID                               NUMBER
+  PLAN_ID                                        NUMBER
+  _FIVETRAN_DELETED                              BOOLEAN
+  _FIVETRAN_SYNCED                               TIMESTAMP_TZ
+  SHARD                                          TEXT
+
+============================================================
+TABLE: prod_db.PUBLIC.TASKVANILLA_AUDIT
+============================================================
+  MOBILE                                         TEXT
+  ADDED_TIME                                     TIMESTAMP_NTZ
+  LATEST_ADDED_TIME                              TIMESTAMP_NTZ
+  EVENT_NAME                                     TEXT
+  KEY                                            TEXT
+  DATASOURCE_ID                                  TEXT
+  SOURCE_FLAG                                    TEXT
+  ACCOUNT_ID                                     TEXT
+  ADDRESS                                        TEXT
+  ADVERTISING_ID                                 TEXT
+  ALLOCATE                                       TEXT
+  AMOUNT                                         FLOAT
+  APP_VERSION                                    TEXT
+  ASSIGNEE                                       TEXT
+  ASSIGNEE_NAME                                  TEXT
+  BDO_ACCOUNT_ID                                 TEXT
+  BDO_USER_ID                                    TEXT
+  BDO_USERNAME                                   TEXT
+  CREATED_TIME                                   TEXT
+  DEVICE_ID                                      TEXT
+  DISCOUNT                                       NUMBER
+  ERROR                                          TEXT
+  EVENT                                          TEXT
+  EXTRADATA                                      TEXT
+  GINIE_RESPONSE                                 TEXT
+  ID                                             TEXT
+  INSTALLATION_AMOUNT_PAID                       TEXT
+  INSTALLATION_PAYMENT_MODE                      TEXT
+  INSTALLATION_STEP                              TEXT
+  LAT                                            TEXT
+  LCO_ACCOUNT_ID                                 TEXT
+  LEAD_ID                                        TEXT
+  LNG                                            TEXT
+  MEMBERSHIP                                     NUMBER
+  NAME                                           TEXT
+  NAS_ID                                         TEXT
+  OLD_LEAD_ADDEDTIME                             TEXT
+  OLD_LEAD_ADDRESS                               TEXT
+  OLD_LEAD_BOOKINGFEE                            NUMBER
+  OLD_LEAD_BOOKINGFEEREFUNDEDDATE                TEXT
+  OLD_LEAD_BOOKINGPAYMENT                        NUMBER
+  OLD_LEAD_CANCELREASON                          TEXT
+  OLD_LEAD_CANCELLATIONBOOKINGDATE               TEXT
+  OLD_LEAD_GOOGLEADDRESSID                       NUMBER
+  OLD_LEAD_HASPAIDONLINE                         NUMBER
+  OLD_LEAD_INSTALLATIONPAYMENT                   NUMBER
+  OLD_LEAD_INSTALLATIONREWARD                    NUMBER
+  OLD_LEAD_INSTALLATIONSTEP                      TEXT
+  OLD_LEAD_MOBILE                                TEXT
+  OLD_LEAD_MODIFIEDTIME                          TEXT
+  OLD_LEAD_NAME                                  TEXT
+  OLD_LEAD_OTP                                   TEXT
+  OLD_LEAD_PAYMENTSTATUS                         NUMBER
+  OLD_LEAD_PLANID                                NUMBER
+  OLD_LEAD_PREF_INST_DATE                        TEXT
+  OLD_LEAD_SETTINGID                             NUMBER
+  OLD_LEAD_SSID                                  TEXT
+  OLD_LEAD_STATUS                                NUMBER
+  OLD_LEAD_SUBSCRIPTION                          NUMBER
+  OLD_LEAD_TASK_ID                               NUMBER
+  OLD_LEAD_WIFIPASS                              TEXT
+  OLD_LEAD_WIOMMEMBER                            NUMBER
+  OTP                                            TEXT
+  PARENT_ID                                      TEXT
+  PARTNER_ID                                     TEXT
+  PARTNERS                                       TEXT
+  PARTNERS_COUNT                                 TEXT
+  PARTNERS_LIST                                  TEXT
+  PAYLOAD_LEAD_ID                                TEXT
+  PAYLOAD_PAYLOAD_LEAD_ID                        TEXT
+  PAYMENTMODE                                    TEXT
+  PLAN                                           TEXT
+  PLAN_START_TIME                                TEXT
+  PREF_INSTL_DATE                                TEXT
+  REMAINING_BALANCE                              FLOAT
+  REMARKS                                        TEXT
+  REPORTER                                       TEXT
+  RESCHEDULE_DATE_TIME                           TIMESTAMP_NTZ
+  SOURCE                                         TEXT
+  SSID                                           TEXT
+  STATE                                          TEXT
+  STATUS                                         TEXT
+  SUBSCRIPTION                                   NUMBER
+  TASK_ID                                        TEXT
+  TRANSACTIONID                                  TEXT
+  TRANSACTION_ID                                 TEXT
+  TYPE                                           TEXT
+  TICKET_ID                                      TEXT
+  TASK_FRAMEWORK                                 TEXT
+  LOCKED_STATUS                                  TEXT
+  INSTALLATION_STATUS                            TEXT
+  MESSAGEID                                      TEXT
+  DEVICEID                                       TEXT
+  CONNECTIONTYPE                                 TEXT
+  PLANID                                         TEXT
+  SETTINGID                                      TEXT
+  ASSIGNED_TASK_ID                               TEXT
+  USERNAME                                       TEXT
+  PASSWORD                                       TEXT
+  SERVICENAME                                    TEXT
+  AADHAR_FRONT                                   TEXT
+  AADHAR_BACK                                    TEXT
+  DEVICE_PHOTO                                   TEXT
+  WIRING_PHOTO                                   TEXT
+  INSTALLATION_TAT_TIME                          TEXT
+  IMAGE                                          TEXT
+  RATING                                         TEXT
+  CUSTOMER_ACCOUNT_ID                            TEXT
+  CUSTOMER_USER_ID                               TEXT
+  PLANSPEED                                      TEXT
+  LAST_BILL_DUE                                  TEXT
+  AGENT_ID                                       TEXT
+  PARTNER_NAME                                   TEXT
+  TICKET_SOURCE                                  TEXT
+  QUEUE_NAME                                     TEXT
+  ASSIGNED_TO_NAME                               TEXT
+  STATUS_KEY                                     TEXT
+  DIRECTION                                      TEXT
+  ALTERNATE_NUMBER                               TEXT
+  AGENT_NAME                                     TEXT
+  ADDITIONAL_INFO                                TEXT
+  WIFIPASS                                       TEXT
+  COMMENT                                        TEXT
+  SPEED                                          TEXT
+  OPTICALPOWER                                   TEXT
+  TAGS                                           TEXT
+  PHOTO_PATH                                     TEXT
+  LATITUDE                                       TEXT
+  LONGITUDE                                      TEXT
+  RESOLUTIONTYPE                                 TEXT
+  IPADDRESS                                      TEXT
+  IPNETMASK                                      TEXT
+  IP4GATEWAY                                     TEXT
+  PRIMARYDNS                                     TEXT
+  SECONDARYDNS                                   TEXT
+  DHCP                                           TEXT
+  REOPEN_COUNT                                   TEXT
+  PHNO                                           TEXT
+  CALLEDBYINDU                                   TEXT
+  ASSIGNEDACCOUNTID                              TEXT
+  ASSIGNEDUSERID                                 TEXT
+  PARTNERCALLEDCUSTOMER                          TEXT
+  ALTERNATENUMBER                                TEXT
+  ASSIGNEE_MOBILE                                TEXT
+  CALLEDCUSTOMER                                 TEXT
+  ASSIGNED_USER_ID                               TEXT
+  SERVICE                                        TEXT
+
+============================================================
+TABLE: prod_db.PUBLIC.BOOKING_LOGS
+============================================================
+  table                                          TEXT
+  TASK_ID                                        TEXT
+  DATASOURCE_ID                                  TEXT
+  KEY                                            TEXT
+  ADDED_TIME                                     TIMESTAMP_NTZ
+  MOBILE                                         TEXT
+  SOURCE_FLAG                                    TEXT
+  ACCOUNT_ID                                     TEXT
+  EVENT_NAME                                     TEXT
+  DATA                                           TEXT
+
+============================================================
+TABLE: prod_db.PUBLIC.PROFILE_LEAD_MODEL
+============================================================
+  SHARD                                          TEXT
+  LEAD_ID                                        TEXT
+  MOBILE                                         TEXT
+  BREAK_KEY                                      NUMBER
+  JOURNEY_START                                  TIMESTAMP_NTZ
+  JOURNEY_END                                    TIMESTAMP_LTZ
+  CUSTOMER_NAME                                  TEXT
+  CUSTOMER_ACCOUNT_ID                            TEXT
+  CITY                                           TEXT
+  STATE                                          TEXT
+  PINCODE                                        TEXT
+  CLUSTER                                        TEXT
+  ADDRESS                                        TEXT
+  GOOGLE_ADDRESS_ID                              TEXT
+  LAT                                            TEXT
+  LNG                                            TEXT
+  BDO_FIRST_INTERACTION                          TIMESTAMP_NTZ
+  CC_FIRST_INTERACTION                           TEXT
+  BRANCH_INTERACTION                             TEXT
+  BDO_ACCOUNT_ID                                 TEXT
+  LEAD_SOURCE                                    TEXT
+  APP_VERSION                                    TEXT
+  LEAD_CREATION_TIME                             TIMESTAMP_NTZ
+  MODIFICATION_TIME                              TIMESTAMP_NTZ
+  LEAD_FIRST_OTP_VERIFICATION_TIME               TIMESTAMP_NTZ
+  LEAD_FIRST_VERIFICATION_TIME                   TIMESTAMP_NTZ
+  PREFERRED_INSTALL_TIME                         TEXT
+  RESCHEDULE_DATE_TIME                           TIMESTAMP_NTZ
+  LEAD_CURRENT_STATUS                            TEXT
+  FIRST_BOOKING_PAYMENT_TIME                     TIMESTAMP_NTZ
+  LAST_BOOKING_PAYMENT_TIME                      TIMESTAMP_NTZ
+  TIME_BOOKING_FEE_PAID                          NUMBER
+  BOOKING_FEE_AMOUNT                             TEXT
+  INSTALLATION_PAYMENT_STATUS                    TEXT
+  CURRENT_LEAD_ALLOCATION_STATUS                 TEXT
+  LEAD_FIRST_ALLOCATED_TIME                      TIMESTAMP_NTZ
+  LEAD_FIRST_PARTNER_ID                          TEXT
+  LOGICAL_GROUP_FIRST                            TEXT
+  CITY_FIRST_NOTIFIED_PARTNER                    TEXT
+  LEAD_FIRST_PARTNER_NAME                        TEXT
+  LEAD_LAST_ALLOCATION_TIME                      TIMESTAMP_NTZ
+  LEAD_LAST_ALLOTTED_PARTNER_ID                  TEXT
+  LOGICAL_GROUP_LAST                             TEXT
+  CITY_LAST_NOTIFIED_PARTNER                     TEXT
+  LEAD_LAST_PARTNER_NAME                         TEXT
+  LEAD_FIRST_ACCEPTANCE_TIME                     TIMESTAMP_NTZ
+  LEAD_FIRST_PARTNER_ACCEPTANCE_ACCOUNT_ID       NUMBER
+  LEAD_FIRST_PARTNER_ACCEPTANCE_NAME             TEXT
+  LEAD_LAST_ACCEPTANCE_TIME                      TIMESTAMP_NTZ
+  INSTALLATION_STATUS                            TEXT
+  LEAD_INSTALLATION_TIME                         TIMESTAMP_NTZ
+  PARTNER_ACCOUNT_ID                             TEXT
+  INSTALLATION_ROHIT_NAME                        TEXT
+  INSTALLATION_ROHIT_ACCOUNT_ID                  TEXT
+  INSTALLATION_OTP                               NUMBER
+  FIRST_PING_POST_INSTALLATION                   TEXT
+  INSTALLATION_RATING_CUSTOMER_TO_PARTNER        NUMBER
+  RATING_SUBMISSION_TIME                         TIMESTAMP_NTZ
+  INSTALLATION_RATING_PARTNER_TO_CUSTOMER        TEXT
+  LEAD_INSTALLATION_TAT                          NUMBER
+  LEAD_INSTALLATION_TAT_LAST                     NUMBER
+  ROUTER_NAS_ID                                  TEXT
+  DEVICE_ID                                      TEXT
+  FIRMWARE                                       TEXT
+  MEMBERSHIP                                     TEXT
+  MANDATE_START_OR_NOT                           TEXT
+  LTP_DURING_INSTALLATION                        TEXT
+  TRANSACTION_ID_BFEE                            TEXT
+  TRANSACTION_ID_INSTALLATION                    TEXT
+  PLAN_DETAILS                                   TEXT
+  PREFERRED_PLAN                                 TEXT
+  PLAN_BOUGHT_FINALLY                            NUMBER
+  MOP_BFEE                                       TEXT
+  INSTALLATION_AMOUNT                            TEXT
+  FIRST_ASSIGNED_ROHIT_ID                        TEXT
+  AGENT_ASSIGNED_TIME                            TIMESTAMP_NTZ
+  FIRST_ASSIGNED_ROLE                            TEXT
+  SERVICEABLE_TIME                               TIMESTAMP_NTZ
+  UNSERVICEABLE_TIME_GENIE                       TIMESTAMP_NTZ
+  CUS_CANCELLED_TIME                             TIMESTAMP_NTZ
+  UNSERVICEABLE_TIME_COPS                        TIMESTAMP_NTZ
+  BOOKING_FEE_CAPTURED                           TIMESTAMP_NTZ
+  LEAD_FIRST_BOOKING_CONF_TIME                   TIMESTAMP_NTZ
+  LEAD_LAST_BOOKING_CONF_TIME                    TIMESTAMP_NTZ
+  BONUS_CONF_LEAD                                NUMBER
+  SUPPLY_CONFIRM_TIME                            TIMESTAMP_NTZ
+  FIRST_MANUAL_NOTIF_TIME                        TIMESTAMP_NTZ
+  LOCATION_CAPTURED                              TIMESTAMP_NTZ
+  CALL_TO_CUSTOMER_TIME                          TIMESTAMP_NTZ
+  SOURCE_ACC_LEAD_CREATED                        TEXT
+  ATTRIBUTION_ACC_LEAD_CREATED                   TEXT
+  SOURCE_ACC_BOOKING_CONF                        TEXT
+  ATTRIBUTION_ACC_BOOKING_CONF                   TEXT
+  ALL_PARTNERS_DECLINED                          NUMBER
+
+============================================================
+TABLE: prod_db.PUBLIC.T_DEVICE_AUDIT
+============================================================
+  ID                                             NUMBER
+  DEVICE_ID                                      TEXT
+  MAC                                            TEXT
+  LCO_ACCOUNT_ID                                 NUMBER
+  USER_ACCOUNT_ID                                NUMBER
+  MODIFIED_TIME                                  TIMESTAMP_NTZ
+  NAS_ID                                         NUMBER
+  LAST_PING_TIME                                 TIMESTAMP_NTZ
+  LATITUDE                                       FLOAT
+  LONGITUDE                                      FLOAT
+  SERIAL                                         TEXT
+  VERSION                                        TEXT
+  MODEL                                          TEXT
+  CHALLAN                                        TEXT
+  TYPE                                           TEXT
+  PRODUCT                                        TEXT
+  INVENTORY_REQUEST_ID                           NUMBER
+  ADDED_TIME                                     TIMESTAMP_NTZ
+  EXTRA_DATA                                     TEXT
+  SHARD_ID                                       NUMBER
+  ACTION                                         TEXT
+  DEVICE_TYPE                                    TEXT
+  FIRMWARE_VERSION                               TEXT
+  GATEWAY_INFO                                   TEXT
+  SS_MAC                                         TEXT
+  _FIVETRAN_DELETED                              BOOLEAN
+  _FIVETRAN_SYNCED                               TIMESTAMP_TZ
+
+============================================================
+TABLE: prod_db.PUBLIC.T_PLAN_CONFIGURATION
+============================================================
+  ID                                             NUMBER
+  SPEED_LIMIT_MBPS                               NUMBER
+  VERSION_NO                                     NUMBER
+  ADDED_TIME                                     TIMESTAMP_NTZ
+  TIME_LIMIT                                     NUMBER
+  DATA_LIMIT                                     NUMBER
+  PLAN_CODE                                      TEXT
+  DISCOUNT                                       NUMBER
+  ACTIVE                                         BOOLEAN
+  CONCURRENT_DEVICES                             NUMBER
+  EXTRA_DATA                                     TEXT
+  PRICE                                          FLOAT
+  COMBINED_SETTING_ID                            NUMBER
+  OFFERING                                       TEXT
+  NAME                                           TEXT
+  UPDATED_BY                                     NUMBER
+  COST_PRICE                                     FLOAT
+  _FIVETRAN_DELETED                              BOOLEAN
+  _FIVETRAN_SYNCED                               TIMESTAMP_TZ
+  SHARD                                          TEXT
+
+============================================================
+TABLE: PROD_DB.BUSINESS_EFFICIENCY_ROUTER_OUTAGE_DETECTION_PUBLIC.IMPACTED_DEVICES
+============================================================
+  CTID_FIVETRAN_ID                               TEXT
+  ID                                             NUMBER
+  ALERT_ID                                       NUMBER
+  PARTNER_ID                                     NUMBER
+  DEVICE_ID                                      TEXT
+  WINDOW_TIMESTAMP                               NUMBER
+  WINDOW_DATETIME                                TIMESTAMP_NTZ
+  CREATED_AT                                     TIMESTAMP_NTZ
+  CONSECUTIVE_SUCCESS_COUNT                      NUMBER
+  DEVICE_RECOVERY_STATE                          TEXT
+  RECOVERY_TIMESTAMP                             NUMBER
+  CLOSURE_NOTIFICATION_SENT                      BOOLEAN
+  _FIVETRAN_DELETED                              BOOLEAN
+  _FIVETRAN_SYNCED                               TIMESTAMP_TZ
+  RECOVERY_DATETIME                              TIMESTAMP_NTZ
+
+============================================================
+TABLE: PROD_DB.BUSINESS_EFFICIENCY_ROUTER_OUTAGE_DETECTION_PUBLIC.PARTNER_OUTAGE_ALERTS
+============================================================
+  CTID_FIVETRAN_ID                               TEXT
+  ID                                             NUMBER
+  PARTNER_ID                                     NUMBER
+  PORTFOLIO_TYPE                                 TEXT
+  CONSECUTIVE_MISS_COUNT                         NUMBER
+  OUTAGE_START_TIMESTAMP                         NUMBER
+  PREVIOUS_WINDOW_PING_COUNT                     NUMBER
+  CURRENT_WINDOW_PING_COUNT                      NUMBER
+  PING_DROP_PERCENTAGE                           NUMBER
+  ALERT_STATUS                                   TEXT
+  CREATED_AT                                     TIMESTAMP_NTZ
+  UPDATED_AT                                     TIMESTAMP_NTZ
+  _FIVETRAN_DELETED                              BOOLEAN
+  _FIVETRAN_SYNCED                               TIMESTAMP_TZ

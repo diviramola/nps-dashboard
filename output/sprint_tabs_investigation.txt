@@ -1,0 +1,953 @@
+==========================================================================================
+SPRINT TABS INVESTIGATION REPORT (v2 - fixed Mobile column detection)
+Generated: 2026-03-18 10:24:47
+Source: C:\Users\nikhi\Downloads\NPS Verma Parivar.xlsx
+==========================================================================================
+
+Loading workbook...
+
+Total sheets in workbook: 54
+
+All sheet names:
+    1. 'P40, P50 & P90'
+    2. 'NPS Trends'
+    3. 'Consolidated'
+    4. 'Tags'
+    5. 'det callin'
+    6. 'Sheet30'
+    7. 'fw - net lingo'
+    8. 'NPS City-Wise'
+    9. 'Sprint 7 Oct25'
+   10. 'Sprint 8 Oct25'
+   11. 'Sprint 9 Nov25'
+   12. 'Sprint 10 Nov25'
+   13. 'Sprint 11 Dec25'
+   14. 'Sprint 12 Dec25'
+   15. 'Sprint 13 Jan26'
+   16. 'Sprint 14 Jan26'
+   17. 'Sheet47'
+   18. 'Sprint RSP1 Feb26'
+   19. 'Sprint RSP2 Feb26'
+   20. 'Sprint RSP3 Feb26'
+   21. 'sprint_dump'
+   22. 'install date dump'
+   23. 'Pivot Table 2'
+   24. 'sprint 15 dump'
+   25. 'Sheet42'
+   26. 'sprint14 dump data'
+   27. 'sprint13 dump data'
+   28. 'payment_issue_tickets_'
+   29. 'sprint12 dump data'
+   30. 'sprint11 dump data'
+   31. 'First-time WiFi'
+   32. 'sprint10 dump data'
+   33. 'sprint9 dump data'
+   34. 'Comment Language'
+   35. 'Sprint 6 Sep'
+   36. 'Sprint 5 Sep'
+   37. 'Sprint 4 Aug'
+   38. 'Sprint 2 rNPS_July25'
+   39. 'Sprint 3 Aug CT'
+   40. 'Sprint 1 July25'
+   41. 'sprint 8 dump data'
+   42. 'Calling Script - det'
+   43. 'sprint 7 dump'
+   44. 'dump sprint 5'
+   45. 'dump sprint 6'
+   46. 'Sheet10'
+   47. 'Aug825.'
+   48. 'dump'
+   49. 'April 23 - Aug 24'
+   50. 'Customer Mapping July25'
+   51. 'Calling Script'
+   52. 'Dump Sprint RSP2 Feb26'
+   53. 'Template'
+   54. 'Raw Data Nov 24'
+==========================================================================================
+
+SHEET CLASSIFICATION:
+  Consolidated tab : 'Consolidated'
+  Sprint DATA tabs : 17
+  Other tabs       : 36
+
+  Sprint DATA sheets (primary analysis targets):
+    - 'Sprint 7 Oct25'
+    - 'Sprint 8 Oct25'
+    - 'Sprint 9 Nov25'
+    - 'Sprint 10 Nov25'
+    - 'Sprint 11 Dec25'
+    - 'Sprint 12 Dec25'
+    - 'Sprint 13 Jan26'
+    - 'Sprint 14 Jan26'
+    - 'Sprint RSP1 Feb26'
+    - 'Sprint RSP2 Feb26'
+    - 'Sprint RSP3 Feb26'
+    - 'Sprint 6 Sep'
+    - 'Sprint 5 Sep'
+    - 'Sprint 4 Aug'
+    - 'Sprint 2 rNPS_July25'
+    - 'Sprint 3 Aug CT'
+    - 'Sprint 1 July25'
+==========================================================================================
+
+>>> CONSOLIDATED TAB ANALYSIS <<<
+------------------------------------------------------------------------------------------
+  Sheet: 'Consolidated'
+  Header row: 1
+  Key columns: ['Cycle ID', 'Sprint ID', 'Sprint Start Date', 'Sprint End Date', 'Phone Number', 'NPS', 'NPS Group', 'OE', 'NPS Reason - Primary', 'NPS Reason - Secondary', 'NPS Reason - Tertiary', 'Primary Category', 'Secondary Category', 'Tertiary Category', 'Channel']...
+  Total columns: 52
+  Data rows: 13045
+  Phone column: 'Phone Number'
+  Unique phones (normalized 10-digit): 12290
+  NPS Classification distribution:
+    Promoter: 6011
+    Detractor: 6007
+    Passive: 1027
+  Sprint IDs in Consolidated: ['Sprint 1', 'Sprint 10', 'Sprint 11', 'Sprint 12', 'Sprint 13', 'Sprint 2', 'Sprint 3', 'Sprint 4', 'Sprint 5', 'Sprint 6', 'Sprint 7', 'Sprint 8', 'Sprint 9']
+==========================================================================================
+
+>>> INDIVIDUAL SPRINT DATA TAB ANALYSIS <<<
+==========================================================================================
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint 7 Oct25'
+  ~~~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 791 rows x 42 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 35
+    Extra cols: ['Device Type', 'Tenure', 'City', 'Device', 'recharge done', 'Zone', 'cash/ online', 'ALT mobile', 'Optical Power', '# of tickets in last 3 months']...
+  Data rows: 777
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 777
+  Phones NOT in Consolidated: 18
+  NPS distribution:
+    Detractor: 386
+    Promoter: 342
+    Passive: 49
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 0.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: Auto pay band karo mera
+      TIMESTAMP: 2025-10-12T19:06:25+05:30
+      Mobile: 9084705404.0
+    Row 2:
+      USER_ID: __c2f8b69da066458482bbc026657fa5f0
+      PROFILE_ALL_IDENTITIES: ["+919350535145","9350535145"]
+      USER_RATING: 1.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: Recharge karne mein bahut dikkat Hoti Hai plan khatm hone...
+      TIMESTAMP: 2025-10-11 22:38:00
+      Mobile: 9350535145.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint 8 Oct25'
+  ~~~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 1000 rows x 41 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 34
+    Extra cols: ['Device Type', 'Tenure', 'City', 'Device', 'recharge done', 'Zone', 'cash/ online', 'ALT mobile', 'Optical Power', '# of tickets in last 3 months']...
+  Data rows: 985
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 985
+  Phones NOT in Consolidated: 32
+  NPS distribution:
+    Detractor: 460
+    Promoter: 444
+    Passive: 81
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 10.0
+      NPS_CLASSIFICATION: Promoter
+      COMMENT: 28 din ka net, 2 din ka kam net
+      TIMESTAMP: 2025-10-24T10:44:01+05:30
+      Mobile: 9873185187.0
+    Row 2:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 0.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: Different types of internet packs are not available. Only...
+      TIMESTAMP: 2025-10-24T17:30:39+05:30
+      Mobile: 9971225811.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint 9 Nov25'
+  ~~~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 657 rows x 42 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 35
+    Extra cols: ['Device Type', 'Tenure', 'City', 'Device', 'recharge done', 'Zone', 'cash/ online', 'ALT mobile', 'Optical Power', '# of tickets in last 3 months']...
+  Data rows: 641
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 367
+  Phones NOT in Consolidated: 0
+  NPS distribution:
+    Promoter: 307
+    Detractor: 285
+    Passive: 49
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 10.0
+      NPS_CLASSIFICATION: Promoter
+      COMMENT: Kyuki wiom ki service ko dekhe to apne aap main bhut hi b...
+      TIMESTAMP: <empty>
+      Mobile: 9999792343.0
+    Row 2:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 0.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: "इंटरनेट काम ही नहीं करता।"
+      TIMESTAMP: <empty>
+      Mobile: 9999747635.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint 10 Nov25'
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 774 rows x 43 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 36
+    Extra cols: ['Device Type', 'Tenure', 'City', 'Device', 'recharge done', 'Zone', 'cash/ online', 'ALT mobile', 'Optical Power', '# of tickets in last 3 months']...
+  Data rows: 757
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 757
+  Phones NOT in Consolidated: 19
+  NPS distribution:
+    Promoter: 370
+    Detractor: 338
+    Passive: 49
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 0.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: Ismein Kisi Ko block karne ka option nahin hai isliye
+      TIMESTAMP: 2025-11-24T14:56:38+05:30
+      Mobile: 9289034776.0
+    Row 2:
+      USER_ID: __d2bc981a0e2d4d318ac4999b2e8777c7
+      PROFILE_ALL_IDENTITIES: ["7678454639","+917678454639"]
+      USER_RATING: 8.0
+      NPS_CLASSIFICATION: Passive
+      COMMENT: Ekdam dhan canteen neend ghante enema thake gnana ghanta
+      TIMESTAMP: 2025-11-26 10:14:00
+      Mobile: 7678454639.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint 11 Dec25'
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 728 rows x 43 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 36
+    Extra cols: ['Device Type', 'Tenure', 'City', 'Device', 'recharge done', 'Zone', 'cash/ online', 'ALT mobile', 'Optical Power', '# of tickets in last 3 months']...
+  Data rows: 714
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 714
+  Phones NOT in Consolidated: 13
+  NPS distribution:
+    Detractor: 334
+    Promoter: 329
+    Passive: 51
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 3.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: <empty>
+      TIMESTAMP: 2025-12-09T18:04:02+05:30
+      Mobile: 9794012790.0
+    Row 2:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 0.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: “क्योंकि हमारा टीवी नहीं चल रहा है, इसलिए हमें अगले महीने...
+      TIMESTAMP: 2025-12-09T20:38:03+05:30
+      Mobile: 8368861590.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint 12 Dec25'
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 705 rows x 43 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 36
+    Extra cols: ['Device Type', 'Tenure', 'City', 'Device', 'recharge done', 'Zone', 'cash/ online', 'ALT mobile', 'Optical Power', '# of tickets in last 3 months']...
+  Data rows: 691
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 691
+  Phones NOT in Consolidated: 14
+  NPS distribution:
+    Detractor: 326
+    Promoter: 319
+    Passive: 46
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: __ed7819e60f3c4453a87ac4be5e3a46e5
+      PROFILE_ALL_IDENTITIES: ["6395010407","+916395010407"]
+      USER_RATING: 5.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: <empty>
+      TIMESTAMP: 2025-12-15 17:02:00
+      Mobile: 6395010407.0
+    Row 2:
+      USER_ID: __d1aafafdff7e4514b443ea62eb4fb4c9
+      PROFILE_ALL_IDENTITIES: ["8826279758","+918826279758"]
+      USER_RATING: 0.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: connectivity sahi nahi h
+      TIMESTAMP: 2025-12-17 19:32:00
+      Mobile: 8826279758.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint 13 Jan26'
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 830 rows x 43 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 36
+    Extra cols: ['Device type', 'Tenure', 'City', 'Device', 'recharge done', 'Zone', 'cash/ online', 'ALT mobile', 'Optical Power', '# of tickets in last 3 months']...
+  Data rows: 816
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 816
+  Phones NOT in Consolidated: 18
+  NPS distribution:
+    Promoter: 375
+    Detractor: 361
+    Passive: 80
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: __d50c912b91ef422b974c8efccf90cbd1
+      PROFILE_ALL_IDENTITIES: ["7042877280","+917042877280"]
+      USER_RATING: 10.0
+      NPS_CLASSIFICATION: Promoter
+      COMMENT: <empty>
+      TIMESTAMP: 2026-01-06 19:04:00
+      Mobile: 7042877280.0
+    Row 2:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 8.0
+      NPS_CLASSIFICATION: Passive
+      COMMENT: Very good company no fraud I am think
+      TIMESTAMP: 2026-01-06T11:55:40+05:30
+      Mobile: 9555920414.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint 14 Jan26'
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 743 rows x 55 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 48
+    Extra cols: ['Device type', 'Tenure', 'City', 'Device', 'recharge done', 'Zone', 'cash/ online', 'ALT mobile', 'Optical Power', '# of tickets in last 3 months']...
+  Data rows: 729
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 728
+  Phones NOT in Consolidated: 630
+  NPS distribution:
+    Promoter: 357
+    Detractor: 318
+    Passive: 36
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 10.0
+      NPS_CLASSIFICATION: Promoter
+      COMMENT: ok
+      TIMESTAMP: 2026-01-21T08:33:18+05:30
+      Mobile: 9891511204.0
+    Row 2:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 0.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: Ahi nhi chalta net
+      TIMESTAMP: 2026-01-21T12:08:33+05:30
+      Mobile: 7065789001.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint RSP1 Feb26'
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 922 rows x 48 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 41
+    Extra cols: ['Device type', 'Tenure', 'City', 'Device', 'recharge done', 'Zone', 'cash/ online', 'ALT mobile', 'Optical Power', '# of tickets in last 3 months']...
+  Data rows: 908
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 908
+  Phones NOT in Consolidated: 807
+  NPS distribution:
+    Detractor: 429
+    Promoter: 417
+    Passive: 62
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: __6d8c0f72850d498286619d3c15f9b5eb
+      PROFILE_ALL_IDENTITIES: ["+919971898504","9971898504"]
+      USER_RATING: 0.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: Bola haya tha mahine ka recharge milega 
+ Lekin 28 din ka...
+      TIMESTAMP: 2026-02-06 12:37:00
+      Mobile: 9971898504.0
+    Row 2:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 0.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: Nhi dunga kyu ki service apki sahi nahi hai. .. 
+Her comp...
+      TIMESTAMP: 2026-02-04T13:44:13+05:30
+      Mobile: 9818647188.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint RSP2 Feb26'
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 1350 rows x 48 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 41
+    Extra cols: ['Device type', 'Tenure', 'City', 'Device', 'recharge done', 'Zone', 'Optical Power', '# of tickets in last 3 months', 'Payment_issue\nTickets Flag', 'Devices on 2.4g']...
+  Data rows: 1152
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 800
+  Phones NOT in Consolidated: 665
+  NPS distribution:
+    Detractor: 397
+    Promoter: 343
+    Passive: 60
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 0.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: Net acha nhi chlta ab
+      TIMESTAMP: 2026-02-23T18:05:10+05:30
+      Mobile: 7011752568.0
+    Row 2:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 10.0
+      NPS_CLASSIFICATION: Promoter
+      COMMENT: <empty>
+      TIMESTAMP: 2026-02-24T14:17:44+05:30
+      Mobile: 7709650826.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint RSP3 Feb26'
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 954 rows x 63 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 56
+    Extra cols: ['Device type', 'Tenure', 'City', 'Device', 'recharge done', 'Zone', 'Optical Power', '# of tickets in last 3 months', 'Payment_issue\nTickets Flag', 'Devices on 2.4g']...
+  Data rows: 940
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 940
+  Phones NOT in Consolidated: 812
+  NPS distribution:
+    Detractor: 492
+    Promoter: 385
+    Passive: 63
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: __c792a10ec9e544bb91b54cf5feeb5534
+      PROFILE_ALL_IDENTITIES: ["+919990416652","9990416652"]
+      USER_RATING: 7.0
+      NPS_CLASSIFICATION: Passive
+      COMMENT: <empty>
+      TIMESTAMP: 2026-03-10 23:38:00
+      Mobile: 9990416652.0
+    Row 2:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 6.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: <empty>
+      TIMESTAMP: 2026-03-09T14:05:59+05:30
+      Mobile: 9310868532.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint 6 Sep'
+  ~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 872 rows x 38 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 31
+    Extra cols: ['Device Type', 'Tenure', 'City', 'Device', 'recharge done', 'Zone', 'cash/ online', 'ALT mobile', 'Optical Power', '# of tickets in last 3 months']...
+  Data rows: 858
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 846
+  Phones NOT in Consolidated: 25
+  NPS distribution:
+    Promoter: 397
+    Detractor: 387
+    Passive: 74
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: Retry-1-NPS_VP_Sep23_25
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 10.0
+      NPS_CLASSIFICATION: Promoter
+      COMMENT: Good service
+      TIMESTAMP: 2025-09-24T11:10:40+05:30
+      Mobile: 6391415805.0
+    Row 2:
+      USER_ID: Retry-1-NPS_VP_Sep23_25
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 0.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: Network sahi se nahin Aate Hain
+      TIMESTAMP: 2025-09-24T11:17:49+05:30
+      Mobile: 9136401437.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint 5 Sep'
+  ~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 1021 rows x 38 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 31
+    Extra cols: ['Device Type', 'Tenure', 'City', 'Device', 'recharge done', 'Zone', 'cash/ online', 'ALT mobile', 'Optical Power', '# of tickets in last 3 months']...
+  Data rows: 957
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 957
+  Phones NOT in Consolidated: 2
+  NPS distribution:
+    Promoter: 446
+    Detractor: 446
+    Passive: 65
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 7.0
+      NPS_CLASSIFICATION: Passive
+      COMMENT: <empty>
+      TIMESTAMP: 2025-09-06T13:25:31+05:30
+      Mobile: 7082906536.0
+    Row 2:
+      USER_ID: <empty>
+      PROFILE_ALL_IDENTITIES: <empty>
+      USER_RATING: 10.0
+      NPS_CLASSIFICATION: Promoter
+      COMMENT: <empty>
+      TIMESTAMP: 2025-09-06T08:54:27+05:30
+      Mobile: 9536910423.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint 4 Aug'
+  ~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 1156 rows x 38 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 31
+    Extra cols: ['Device Type', 'Tenure', 'City', 'Device', 'recharge done', 'Zone', 'cash/ online', 'ALT mobile', 'Optical Power', '# of tx in last 3 months']...
+  Data rows: 1065
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 1050
+  Phones NOT in Consolidated: 10
+  NPS distribution:
+    Detractor: 523
+    Promoter: 481
+    Passive: 61
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: 2025-08-24T15:38:15+05:30
+      PROFILE_ALL_IDENTITIES: 919267946270.0
+      USER_RATING: 0.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: <empty>
+      TIMESTAMP: 2025-08-23T08:00:15+05:30
+      Mobile: 9267946270.0
+    Row 2:
+      USER_ID: 2025-08-23T10:33:25+05:30
+      PROFILE_ALL_IDENTITIES: 919818594623.0
+      USER_RATING: 10.0
+      NPS_CLASSIFICATION: Promoter
+      COMMENT: <empty>
+      TIMESTAMP: 2025-08-23T08:00:16+05:30
+      Mobile: 9818594623.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint 2 rNPS_July25'
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 768 rows x 25 cols
+  Header row: 26
+  Core columns (1-7): ['Timestamp', 'व्योम के साथ रजिस्टरड फ़ोन नंबर दर्ज करें: (Phone Number): \n(फोन नंबर गोपनीय रखा जाएगा।)', 'City', 'Tenure', 'Device Type', 'Payment Mode', 'NPS Group']
+  Extra analysis columns: 18
+    Extra cols: ['क्या आप व्योम ( Wiom Internet ) को अपने दोस्तों या रिश्तेदारों को सुझाएंगे? (0 - 10 )?', 'DETRACTOR- आपने जो स्कोर दिया, उसकी सबसे बड़ी वजह क्या थी?-', '# Devices on 5G', '# Devices on 2.4G', '# Devices on Wiom net', 'Optical Power', 'DETRACTOR- कोई और वजह (कृपया बताएं) -', 'PASSIVE- आपने जो स्कोर दिया, उसकी सबसे बड़ी वजह क्या थी?', 'PASSIVE- कोई और वजह (कृपया बताएं)', 'PROMOTER- आपने जो स्कोर दिया, उसकी सबसे बड़ी वजह क्या थी?']...
+  Data rows: 742
+  Phone column: 'व्योम के साथ रजिस्टरड फ़ोन नंबर दर्ज करें: (Phone Number): 
+(फोन नंबर गोपनीय रखा जाएगा।)'
+  NPS score column: 'None'
+  NPS classification column: 'NPS Group'
+  Unique phones: 719
+  Phones NOT in Consolidated: 34
+  NPS distribution:
+    Detractor: 402
+    Promoter: 282
+    Passive: 58
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      Timestamp: 2025-07-24 09:12:38
+      व्योम के साथ रजिस्टरड फ़ोन नंबर दर्ज करें: (Phone Number): 
+(फोन नंबर गोपनीय रखा जाएगा।): 1.0
+      City: #N/A
+      Tenure: #N/A
+      Device Type: #N/A
+      Payment Mode: #N/A
+      NPS Group: Detractor
+    Row 2:
+      Timestamp: 2025-07-24 12:10:10
+      व्योम के साथ रजिस्टरड फ़ोन नंबर दर्ज करें: (Phone Number): 
+(फोन नंबर गोपनीय रखा जाएगा।): 10.0
+      City: #N/A
+      Tenure: #N/A
+      Device Type: #N/A
+      Payment Mode: #N/A
+      NPS Group: Promoter
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint 3 Aug CT'
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 1641 rows x 31 cols
+  Header row: 14
+  Core columns (1-7): ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  Extra analysis columns: 24
+    Extra cols: ['Device Type', 'Tenure', 'City', 'Device', 'recharge done', 'city', 'cash/ online', 'ALT mobile', 'Optical Power', '# of tx in last 3 months']...
+  Data rows: 1627
+  Phone column: 'Mobile'
+  NPS score column: 'USER_RATING'
+  NPS classification column: 'NPS_CLASSIFICATION'
+  Unique phones: 1627
+  Phones NOT in Consolidated: 22
+  NPS distribution:
+    Promoter: 792
+    Detractor: 718
+    Passive: 117
+
+  Sample data (first 2 rows, core cols only):
+    Row 1:
+      USER_ID: __bd5e15c99f5c4d1592207317bdcc0dc7
+      PROFILE_ALL_IDENTITIES: ["9999980732","+919999980732"]
+      USER_RATING: 0.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: <empty>
+      TIMESTAMP: 2025-08-10 13:45:00
+      Mobile: 9999980732.0
+    Row 2:
+      USER_ID: __2c05c11ef61e4236af4a56e2e93ba4f4
+      PROFILE_ALL_IDENTITIES: ["8368547041"]
+      USER_RATING: 0.0
+      NPS_CLASSIFICATION: Detractor
+      COMMENT: 0
+ Nahi kahenge kyo ki aap ki recharge Bahut mehnge hai o...
+      TIMESTAMP: 2025-08-11 19:02:00
+      Mobile: 8368547041.0
+------------------------------------------------------------------------------------------
+
+  SHEET: 'Sprint 1 July25'
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  Raw dimensions: 2711 rows x 24 cols
+
+  WARNING: No header row found in first 60 rows.
+  Showing first 15 rows to understand structure:
+    Row   1: ['tenure', 'D', 'N', 'P', 'Grand Total', 'NPS', '']
+    Row   2: ['1-2 months', '331.0', '79.0', '537.0', '947.0', '0.2175290391', '']
+    Row   3: ['3-6 months', '411.0', '91.0', '364.0', '866.0', '-0.05427251732', '']
+    Row   4: ['6+ months', '438.0', '92.0', '336.0', '866.0', '-0.1177829099', '']
+    Row   5: ['Grand Total', '1180.0', '262.0', '1237.0', '2679.0', '0.02127659574', '']
+    Row   6: ['', '', '', '', '', '', '']
+    Row   7: ['', '', '', '', '', '', '']
+    Row   8: ['Type of device ', 'D', 'N', 'P', 'Grand Total', 'NPS', '']
+    Row   9: ['GX', '619.0', '141.0', '698.0', '1458.0', '0.05418381344', '']
+    Row  10: ['SY', '418.0', '87.0', '428.0', '933.0', '0.01071811361', '']
+    Row  11: ['TP', '143.0', '34.0', '111.0', '288.0', '-0.1111111111', '']
+    Row  12: ['Grand Total', '1180.0', '262.0', '1237.0', '2679.0', '0.02127659574', '']
+    Row  13: ['', '', '', '', '', '', '']
+    Row  14: ['2. WiFi की स्पीड कैसी है? (WiFi Spe', '', '', '', '', '', '']
+    Row  15: ['Score', 'Promoters', 'Detractors', 'Passives', '', '', '']
+==========================================================================================
+
+>>> SPECIAL FOCUS: 'Sprint RSP...' TABS <<<
+------------------------------------------------------------------------------------------
+  Found 3 RSP tab(s): ['Sprint RSP1 Feb26', 'Sprint RSP2 Feb26', 'Sprint RSP3 Feb26']
+
+  'Sprint RSP1 Feb26':
+    Header row: 14
+    Data rows: 908
+    Unique phones: 908
+    Phones NOT in Consolidated: 807
+    Phone column detected: 'Mobile'
+    Core columns: ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+    Extra columns count: 41
+    NPS distribution: {'Detractor': 429, 'Promoter': 417, 'Passive': 62}
+
+    Column comparison (core) vs 'Sprint 7 Oct25':
+      Reference core cols: ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+      RSP core cols:       ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+      MATCH: Core columns are identical
+
+  'Sprint RSP2 Feb26':
+    Header row: 14
+    Data rows: 1152
+    Unique phones: 800
+    Phones NOT in Consolidated: 665
+    Phone column detected: 'Mobile'
+    Core columns: ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+    Extra columns count: 41
+    NPS distribution: {'Detractor': 397, 'Promoter': 343, 'Passive': 60}
+
+    Column comparison (core) vs 'Sprint 7 Oct25':
+      Reference core cols: ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+      RSP core cols:       ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+      MATCH: Core columns are identical
+
+  'Sprint RSP3 Feb26':
+    Header row: 14
+    Data rows: 940
+    Unique phones: 940
+    Phones NOT in Consolidated: 812
+    Phone column detected: 'Mobile'
+    Core columns: ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+    Extra columns count: 56
+    NPS distribution: {'Passive': 63, 'Detractor': 492, 'Promoter': 385}
+
+    Column comparison (core) vs 'Sprint 7 Oct25':
+      Reference core cols: ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+      RSP core cols:       ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+      MATCH: Core columns are identical
+==========================================================================================
+
+>>> SPECIAL FOCUS: 'Sprint 14 Jan26' TAB <<<
+------------------------------------------------------------------------------------------
+  Sheet: 'Sprint 14 Jan26'
+  Header row: 14
+  Data rows: 729
+  Unique phones: 728
+  Phones NOT in Consolidated: 630
+  Core columns: ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+  NPS distribution: {'Promoter': 357, 'Detractor': 318, 'Passive': 36}
+==========================================================================================
+
+>>> SUMMARY <<<
+==========================================================================================
+
+  CONSOLIDATED TAB:
+    Data rows: 13045
+    Unique phones (10-digit normalized): 12290
+
+  ALL SPRINT DATA TABS COMBINED:
+    Sprint data tabs analyzed: 17
+    Total data rows across sprints: 14359
+    Unique phones across all sprints: 12860
+
+  GAP ANALYSIS:
+    Phones in sprint tabs but NOT in Consolidated: 3080
+    Phones in Consolidated but NOT in any sprint tab: 2510
+    Phones in BOTH: 9780
+
+  PER-TAB BREAKDOWN:
+  Sheet Name                       Rows  Phones  Missing  In Consol
+  ------------------------------ ------ ------- -------- ----------
+  Sprint 7 Oct25                    777     777       18        759
+  Sprint 8 Oct25                    985     985       32        953
+  Sprint 9 Nov25                    641     367        0        367
+  Sprint 10 Nov25                   757     757       19        738
+  Sprint 11 Dec25                   714     714       13        701
+  Sprint 12 Dec25                   691     691       14        677
+  Sprint 13 Jan26                   816     816       18        798
+  Sprint 14 Jan26                   729     728      630         98
+  Sprint RSP1 Feb26                 908     908      807        101
+  Sprint RSP2 Feb26                1152     800      665        135
+  Sprint RSP3 Feb26                 940     940      812        128
+  Sprint 6 Sep                      858     846       25        821
+  Sprint 5 Sep                      957     957        2        955
+  Sprint 4 Aug                     1065    1050       10       1040
+  Sprint 2 rNPS_July25              742     719       34        685
+  Sprint 3 Aug CT                  1627    1627       22       1605
+  Sprint 1 July25                     0       0        0          0
+
+  TOTAL additional unique phones from sprint tabs: 3080
+
+  ESTIMATED ADDITIONAL ROWS:
+    'Sprint 7 Oct25': ~18 rows (2% of phones are new)
+    'Sprint 8 Oct25': ~32 rows (3% of phones are new)
+    'Sprint 10 Nov25': ~19 rows (3% of phones are new)
+    'Sprint 11 Dec25': ~13 rows (2% of phones are new)
+    'Sprint 12 Dec25': ~14 rows (2% of phones are new)
+    'Sprint 13 Jan26': ~18 rows (2% of phones are new)
+    'Sprint 14 Jan26': ~630 rows (87% of phones are new)
+    'Sprint RSP1 Feb26': ~807 rows (89% of phones are new)
+    'Sprint RSP2 Feb26': ~957 rows (83% of phones are new)
+    'Sprint RSP3 Feb26': ~812 rows (86% of phones are new)
+    'Sprint 6 Sep': ~25 rows (3% of phones are new)
+    'Sprint 5 Sep': ~2 rows (0% of phones are new)
+    'Sprint 4 Aug': ~10 rows (1% of phones are new)
+    'Sprint 2 rNPS_July25': ~35 rows (5% of phones are new)
+    'Sprint 3 Aug CT': ~22 rows (1% of phones are new)
+
+  TOTAL estimated additional rows: ~3414
+==========================================================================================
+
+>>> DUPLICATE PHONE CHECK ACROSS SPRINT TABS <<<
+------------------------------------------------------------------------------------------
+  Phones appearing in MULTIPLE sprint tabs: 758
+    Phones in exactly 2 tabs: 702
+    Phones in exactly 3 tabs: 52
+    Phones in exactly 4 tabs: 2
+    Phones in exactly 6 tabs: 2
+==========================================================================================
+
+>>> COLUMN STRUCTURE COMPARISON <<<
+------------------------------------------------------------------------------------------
+
+  Unique CORE column structures: 2
+
+  Structure 1 (used by 15 tab(s)):
+    Tabs: ['Sprint 7 Oct25', 'Sprint 8 Oct25', 'Sprint 9 Nov25', 'Sprint 10 Nov25', 'Sprint 11 Dec25', 'Sprint 12 Dec25', 'Sprint 13 Jan26', 'Sprint 14 Jan26', 'Sprint RSP1 Feb26', 'Sprint RSP2 Feb26', 'Sprint RSP3 Feb26', 'Sprint 6 Sep', 'Sprint 5 Sep', 'Sprint 4 Aug', 'Sprint 3 Aug CT']
+    Core headers: ['USER_ID', 'PROFILE_ALL_IDENTITIES', 'USER_RATING', 'NPS_CLASSIFICATION', 'COMMENT', 'TIMESTAMP', 'Mobile']
+
+  Structure 2 (used by 1 tab(s)):
+    Tabs: ['Sprint 2 rNPS_July25']
+    Core headers: ['Timestamp', 'व्योम के साथ रजिस्टरड फ़ोन नंबर दर्ज करें: (Phone Number): \n(फोन नंबर गोपनीय रखा जाएगा।)', 'City', 'Tenure', 'Device Type', 'Payment Mode', 'NPS Group']
+
+  Consolidated columns (for merge reference):
+      1. Cycle ID
+      2. Sprint ID
+      3. Sprint Start Date
+      4. Sprint End Date
+      5. Phone Number
+      6. NPS
+      7. NPS Group
+      8. OE
+      9. NPS Reason - Primary
+     10. NPS Reason - Secondary
+     11. NPS Reason - Tertiary
+     12. Primary Category
+     13. Secondary Category
+     14. Tertiary Category
+     15. Channel
+     16. First Time wifi?
+     17. Smart Tv?
+     18. आपका Wi-Fi internet कैसे चलता है
+     19. WiFi की स्पीड कैसी है?
+     20. समस्या के समाधान का अनुवभ कैसे है?
+     21. Jab dikkat aayi toh kya kia?
+     22. Tenure
+     23. Number of recharges before end of sprint?
+     24. Active/ Churn - overall
+     25. Number of tickets post sprint date?
+     26. Number of tickets before 3M sprint date?
+     27. how many recharges post sprint date?
+     28. City
+     29. City core
+     30. churn recharge bucket
+    ... and 22 more
+==========================================================================================
+
+>>> RECOMMENDATIONS <<<
+------------------------------------------------------------------------------------------
+
+  FINDING: 3080 unique phone numbers exist in sprint tabs
+  but are MISSING from the Consolidated tab.
+
+  TABS WITH MISSING DATA (sorted by impact):
+    'Sprint RSP3 Feb26': 812 missing phones (940 total rows)
+    'Sprint RSP1 Feb26': 807 missing phones (908 total rows)
+    'Sprint RSP2 Feb26': 665 missing phones (1152 total rows)
+    'Sprint 14 Jan26': 630 missing phones (729 total rows)
+    'Sprint 2 rNPS_July25': 34 missing phones (742 total rows)
+    'Sprint 8 Oct25': 32 missing phones (985 total rows)
+    'Sprint 6 Sep': 25 missing phones (858 total rows)
+    'Sprint 3 Aug CT': 22 missing phones (1627 total rows)
+    'Sprint 10 Nov25': 19 missing phones (757 total rows)
+    'Sprint 7 Oct25': 18 missing phones (777 total rows)
+    'Sprint 13 Jan26': 18 missing phones (816 total rows)
+    'Sprint 12 Dec25': 14 missing phones (691 total rows)
+    'Sprint 11 Dec25': 13 missing phones (714 total rows)
+    'Sprint 4 Aug': 10 missing phones (1065 total rows)
+    'Sprint 5 Sep': 2 missing phones (957 total rows)
+
+  COLUMN MAPPING for merge:
+    Sprint core columns -> Consolidated columns:
+      USER_ID              -> (no direct match)
+      PROFILE_ALL_IDENTITIES -> (no direct match)
+      USER_RATING          -> NPS
+      NPS_CLASSIFICATION   -> NPS Group
+      COMMENT              -> OE
+      TIMESTAMP            -> (Sprint Start/End Date)
+      Mobile               -> Phone Number
+
+  RECOMMENDED NEXT STEPS:
+    1. Build merge script to extract missing phone rows from sprint tabs
+    2. Map sprint columns to Consolidated schema
+    3. Derive Sprint ID from sheet name
+    4. Append to create expanded dataset
+    5. Re-run NPS analysis on expanded data
+
+==========================================================================================
+END OF INVESTIGATION REPORT
+==========================================================================================

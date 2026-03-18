@@ -1,0 +1,259 @@
+======================================================================
+PHASE 4B: CHURN PREDICTION MODEL v2
+Framing: NPS + Comments + Experience → Churn
+Started: 2026-03-18 17:32:08
+======================================================================
+
+[LOAD] C:\Users\nikhi\wiom-nps-analysis\data\nps_enriched_v2.csv
+  Rows: 13045, Columns: 298
+
+  Churn column: is_churned
+  Values: {0: 9988, 1: 3057}
+  Binary churn: {0: 9988, 1: 3057}
+  Churn rate: 23.4%
+  NPS score column: nps_score
+  NPS group column: nps_group
+  Tenure column: tenure_days
+
+  Feature counts:
+    Scorecard (speed/power): 11
+    Influx (uptime): 6
+    Usage L1 (sessions): 11
+    Ticket (enriched): 16
+    Derived: 6
+
+======================================================================
+FEATURE PREPARATION
+======================================================================
+  Dropped (low fill 0.8%): tk_avg_customer_calls
+  Dropped (low fill 0.8%): tk_avg_partner_calls
+  Dropped (low fill 0.0%): tk_avg_ticket_rating
+
+  Excluded as leaky/self-fulfilling:
+    - PAYMENT_SUCCESSES
+    - alt_mobile
+    - autopay_payments
+    - cash_payments
+    - churn_binary
+    - cis_active_day_ratio
+    - cis_influx_data_days
+    - days_since_last_recharge
+    - device_id
+    - is_churned
+    - lng_nas
+    - phone_number
+    - profile_all_identities
+    - recharge_regularity
+    - response_id
+    - sc_plan_active_ratio
+    - sc_scorecard_ticket_count
+    - sc_scorecard_weeks
+    - timestamp
+    - total_payments
+    - total_recharges
+    - ul1_usage_data_days
+    - user_id
+
+  Valid experience features: 54
+  Numeric: 51
+  Categorical: 3
+  NPS features: ['nps_score', 'nps_group']
+  Theme features found: ['primary_theme', 'secondary_theme', 'NPS Reason - Primary', 'Primary Category', 'sentiment_polarity', 'sentiment_intensity']
+
+======================================================================
+BUILDING 3-TIER FEATURE MATRICES
+======================================================================
+  Tier A (Ops only): 62 features
+  Tier B (Ops + NPS): 65 features
+  Tier C (Ops + NPS + Themes): 105 features
+
+  Valid samples for modeling: 13045/13045
+
+======================================================================
+MODEL TRAINING — 5-FOLD CV, 3 TIERS
+======================================================================
+
+  Tier A: Experience Only:
+    Random Forest AUC:     0.9823 (+/- 0.0014)
+    Gradient Boosting AUC: 0.9845 (+/- 0.0013)
+    Logistic Regression:   0.9508 (+/- 0.0045)
+    Best: GB (AUC 0.9845)
+
+  Tier B: Experience + NPS:
+    Random Forest AUC:     0.9825 (+/- 0.0017)
+    Gradient Boosting AUC: 0.9845 (+/- 0.0012)
+    Logistic Regression:   0.9510 (+/- 0.0046)
+    Best: GB (AUC 0.9845)
+
+  Tier C: Experience + NPS + Themes:
+    Random Forest AUC:     0.9816 (+/- 0.0015)
+    Gradient Boosting AUC: 0.9846 (+/- 0.0013)
+    Logistic Regression:   0.9502 (+/- 0.0050)
+    Best: GB (AUC 0.9846)
+
+======================================================================
+3-TIER MODEL COMPARISON
+======================================================================
+
+  Tier                                     |     RF AUC |     GB AUC |     LR AUC |       Best |     Lift
+  ---------------------------------------- | ---------- | ---------- | ---------- | ---------- | --------
+  Tier A: Experience Only                  |     0.9823 |     0.9845 |     0.9508 |     0.9845 | baseline
+  Tier B: Experience + NPS                 |     0.9825 |     0.9845 |     0.9510 |     0.9845 |  -0.00pp
+  Tier C: Experience + NPS + Themes        |     0.9816 |     0.9846 |     0.9502 |     0.9846 |  +0.01pp
+
+======================================================================
+TOP 30 FEATURE IMPORTANCES (per tier)
+======================================================================
+
+  Tier A: Experience Only:
+  Rank  Feature                                        Importance     Cumul
+  ----  ---------------------------------------------  ----------  --------
+     1  ul1_avg_daily_devices                              0.1038    10.4%
+     2  ul1_avg_active_hours                               0.0901    19.4%
+     3  ul1_avg_daily_data_gb                              0.0838    27.8%
+     4  ul1_avg_daily_sessions                             0.0806    35.8%
+     5  ul1_avg_distinct_ips                               0.0803    43.8%
+     6  ul1_avg_peak_hour_ratio                            0.0781    51.7%
+     7  ul1_avg_session_hours                              0.0733    59.0%
+     8  ul1_avg_usage_volatility                           0.0691    65.9%
+     9  ul1_avg_night_day_ratio                            0.0677    72.7%
+    10  connection_instability                             0.0647    79.1%
+    11  avg_uptime_pct                                     0.0277    81.9%
+    12  cis_avg_peak_uptime_pct                            0.0160    83.5%
+    13  tk_sla_compliance                                  0.0159    85.1%
+    14  cis_avg_customer_uptime_pct                        0.0158    86.7%
+    15  total_tickets                                      0.0147    88.2%
+    16  has_tickets                                        0.0134    89.5%
+    17  avg_resolution_hours                               0.0123    90.7%
+    18  cis_peak_interruption_rate                         0.0116    91.9%
+    19  customer_uptime_tier_good                          0.0115    93.0%
+    20  peak_uptime_gap                                    0.0112    94.2%
+    21  tk_avg_resolution_mins                             0.0102    95.2%
+    22  cis_avg_stable_ping_ratio                          0.0092    96.1%
+    23  stddev_uptime                                      0.0089    97.0%
+    24  ticket_severity                                    0.0040    97.4%
+    25  sla_compliance_pct                                 0.0040    97.8%
+    26  sc_avg_rxpower_in_range                            0.0027    98.1%
+    27  sc_avg_rxpower                                     0.0016    98.2%
+    28  tk_tickets_disconnect                              0.0016    98.4%
+    29  sc_avg_latest_speed                                0.0015    98.5%
+    30  sc_avg_weekly_data_gb                              0.0015    98.7%
+
+  Tier B: Experience + NPS:
+  Rank  Feature                                        Importance     Cumul
+  ----  ---------------------------------------------  ----------  --------
+     1  ul1_avg_distinct_ips                               0.1052    10.5%
+     2  ul1_avg_daily_devices                              0.1013    20.7%
+     3  ul1_avg_active_hours                               0.0986    30.5%
+     4  ul1_avg_session_hours                              0.0928    39.8%
+     5  ul1_avg_usage_volatility                           0.0772    47.5%
+     6  ul1_avg_peak_hour_ratio                            0.0761    55.1%
+     7  ul1_avg_daily_sessions                             0.0760    62.7%
+     8  ul1_avg_daily_data_gb                              0.0636    69.1%
+     9  connection_instability                             0.0634    75.4%
+    10  ul1_avg_night_day_ratio                            0.0617    81.6%
+    11  avg_uptime_pct                                     0.0212    83.7%
+    12  customer_uptime_tier_good                          0.0181    85.5%
+    13  total_tickets                                      0.0145    87.0%
+    14  peak_uptime_gap                                    0.0126    88.2%
+    15  cis_avg_peak_uptime_pct                            0.0123    89.5%
+    16  has_tickets                                        0.0117    90.6%
+    17  cis_avg_customer_uptime_pct                        0.0108    91.7%
+    18  tk_avg_resolution_mins                             0.0101    92.7%
+    19  avg_resolution_hours                               0.0099    93.7%
+    20  tk_sla_compliance                                  0.0096    94.7%
+    21  cis_peak_interruption_rate                         0.0095    95.6%
+    22  stddev_uptime                                      0.0066    96.3%
+    23  cis_avg_stable_ping_ratio                          0.0063    96.9%
+    24  ticket_severity                                    0.0051    97.4%
+    25  sla_compliance_pct                                 0.0039    97.8%
+    26  sc_avg_rxpower_in_range                            0.0030    98.1%
+    27  tk_tickets_disconnect                              0.0018    98.3%
+    28  px_tickets                                         0.0016    98.5%
+    29  sc_avg_rxpower                                     0.0015    98.6%
+    30  sc_avg_latest_speed                                0.0014    98.7%
+
+  Tier C: Experience + NPS + Themes:
+  Rank  Feature                                        Importance     Cumul
+  ----  ---------------------------------------------  ----------  --------
+     1  ul1_avg_daily_data_gb                              0.0893     8.9%
+     2  ul1_avg_session_hours                              0.0857    17.5%
+     3  ul1_avg_daily_devices                              0.0814    25.6%
+     4  ul1_avg_daily_sessions                             0.0807    33.7%
+     5  ul1_avg_distinct_ips                               0.0797    41.7%
+     6  ul1_avg_active_hours                               0.0777    49.5%
+     7  ul1_avg_peak_hour_ratio                            0.0746    56.9%
+     8  ul1_avg_night_day_ratio                            0.0709    64.0%
+     9  ul1_avg_usage_volatility                           0.0620    70.2%
+    10  connection_instability                             0.0570    75.9%
+    11  avg_uptime_pct                                     0.0288    78.8%
+    12  customer_uptime_tier_good                          0.0268    81.5%
+    13  tk_sla_compliance                                  0.0217    83.6%
+    14  has_tickets                                        0.0161    85.3%
+    15  peak_uptime_gap                                    0.0150    86.8%
+    16  cis_avg_customer_uptime_pct                        0.0147    88.2%
+    17  cis_peak_interruption_rate                         0.0133    89.6%
+    18  cis_avg_stable_ping_ratio                          0.0127    90.8%
+    19  cis_avg_peak_uptime_pct                            0.0121    92.0%
+    20  total_tickets                                      0.0115    93.2%
+    21  tk_avg_resolution_mins                             0.0108    94.3%
+    22  avg_resolution_hours                               0.0105    95.3%
+    23  stddev_uptime                                      0.0085    96.2%
+    24  sla_compliance_pct                                 0.0063    96.8%
+    25  ticket_severity                                    0.0045    97.2%
+    26  sc_avg_rxpower_in_range                            0.0040    97.6%
+    27  px_tickets                                         0.0026    97.9%
+    28  tk_tickets_disconnect                              0.0019    98.1%
+    29  sc_avg_weekly_data_gb                              0.0015    98.2%
+    30  tk_tickets_internet_down                           0.0014    98.4%
+
+======================================================================
+TENURE-STRATIFIED CHURN MODEL
+======================================================================
+  tenure_days populated: 13045/13045 (100.0%)
+
+  Using fine-grained tenure_days for stratification:
+  Tenure Bucket             |      N |  Churn% |      AUC | Top 5 Features
+  ------------------------- | ------ | ------- | -------- | ------------------------------------------------------------
+  Onboarding (0-30d)        |     82 | N/A    | N/A      | Too few samples
+  Early Life (31-90d)       |    117 |    0.0% | N/A      | Imbalanced classes
+  Establishing (91-180d)    |    149 |    0.0% | N/A      | Imbalanced classes
+  Mature (180d+)            |  12697 |   24.1% |   0.9805 | ul1_avg_daily_devices(0.098), ul1_avg_distinct_ips(0.086), ul1_avg_session_hours(0.084), ul1_avg_daily_data_gb(0.083), ul1_avg_active_hours(0.082)
+
+======================================================================
+BUSINESS INSIGHTS SUMMARY
+======================================================================
+
+  NEW FEATURES IN TOP-20 CHURN PREDICTORS:
+    ul1_avg_daily_data_gb                        : 0.0893 *** NEW ***
+    ul1_avg_session_hours                        : 0.0857 *** NEW ***
+    ul1_avg_daily_devices                        : 0.0814 *** NEW ***
+    ul1_avg_daily_sessions                       : 0.0807 *** NEW ***
+    ul1_avg_distinct_ips                         : 0.0797 *** NEW ***
+    ul1_avg_active_hours                         : 0.0777 *** NEW ***
+    ul1_avg_peak_hour_ratio                      : 0.0746 *** NEW ***
+    ul1_avg_night_day_ratio                      : 0.0709 *** NEW ***
+    ul1_avg_usage_volatility                     : 0.0620 *** NEW ***
+    connection_instability                       : 0.0570 *** NEW ***
+    avg_uptime_pct                               : 0.0288
+    customer_uptime_tier_good                    : 0.0268 *** NEW ***
+    tk_sla_compliance                            : 0.0217 *** NEW ***
+    has_tickets                                  : 0.0161
+    peak_uptime_gap                              : 0.0150 *** NEW ***
+    cis_avg_customer_uptime_pct                  : 0.0147 *** NEW ***
+    cis_peak_interruption_rate                   : 0.0133 *** NEW ***
+    cis_avg_stable_ping_ratio                    : 0.0127 *** NEW ***
+    cis_avg_peak_uptime_pct                      : 0.0121 *** NEW ***
+    total_tickets                                : 0.0115
+
+  INTERPRETATION:
+  - Customer-level uptime predicts churn — infrastructure issues directly drive attrition
+  - Enriched ticket metrics (reopens, TAT, customer calls) predict churn beyond simple ticket count
+
+  NPS LIFT: Adding NPS score gives -0.00 percentage points AUC improvement
+    → NPS adds NO additional predictive power — ops metrics already capture churn risk
+  THEME LIFT: Adding comment themes gives +0.01 percentage points AUC improvement
+
+======================================================================
+PHASE 4B COMPLETE — 2026-03-18 17:36:42
+======================================================================

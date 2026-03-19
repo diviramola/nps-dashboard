@@ -1,15 +1,15 @@
 """
-Score All Active Wiom Customers with Churn Risk
-=================================================
+Score Wiom Customers Due for Recharge (Next 7 Days) with Churn Risk
+====================================================================
 1. Retrain population churn model from saved training data
-2. Pull all currently active Home WiFi customers from Snowflake
+2. Pull customers due for recharge in next 7 days (last recharge 21-28 days ago)
 3. Compute operational features (same pipeline as population model)
 4. Score each customer with churn probability
 5. Identify top 3 risk drivers per customer
 6. Export to Google Sheets (+ local CSV backup)
 
 Output: Google Sheet URL + output/churn_risk_scores.csv
-Runtime: ~50-60 minutes
+Runtime: ~15-20 minutes (smaller customer set)
 """
 
 import sys, io, os, warnings, time, json
@@ -38,47 +38,29 @@ os.makedirs(OUTPUT, exist_ok=True)
 
 RISK_THRESHOLD = 0.5  # Default threshold — customers above this are "at risk"
 
+# Persistent Google Sheet — daily runs add a new tab (named by date) to this sheet.
+# Model Summary and Definitions tabs live here permanently.
+GSHEET_ID = '1ewGLfhlizAGVURMjYSE52EsWLGZFysf2L_aAP5Is2Nk'
+
 # Human-readable labels for features
+# Only features actually used in the model (no volume-biased, broken, or duplicates)
 FEATURE_LABELS = {
-    'PEAK_VS_OVERALL_GAP': 'Peak-Hour Uptime Degradation',
-    'resolution_rate': 'Ticket Resolution Rate',
-    'avg_resolution_hours_w': 'Avg Resolution Time (hrs)',
-    'avg_resolution_hours': 'Avg Resolution Time (hrs)',
-    'SC_AVG_RXPOWER_IN_RANGE': 'Optical Signal Quality (%)',
-    'ivr_calls_per_month': 'Support Calls/Month',
-    'AVG_ANSWERED_SECONDS': 'Avg Call Hold Time (sec)',
-    'answered_calls_per_month': 'Answered Calls/Month',
+    'OVERALL_UPTIME_PCT': 'Overall Uptime (%)',
     'STDDEV_UPTIME': 'Uptime Variability',
-    'SLA_COMPLIANCE_PCT': 'SLA Compliance (%)',
-    'tk_sla_compliance': 'Ticket SLA Compliance (%)',
-    'ticket_severity': 'Ticket Severity Score',
-    'tickets_per_month': 'Tickets/Month',
-    'cx_tickets_per_month': 'Customer Tickets/Month',
-    'px_tickets_per_month': 'Partner Tickets/Month',
-    'missed_calls_per_month': 'Missed Calls/Month',
-    'missed_call_ratio': 'Missed Call Ratio',
-    'SC_AVG_WEEKLY_DATA_GB': 'Weekly Data Usage (GB)',
+    'SC_AVG_RXPOWER_IN_RANGE': 'Optical Signal Quality (%)',
     'SC_AVG_RXPOWER': 'Optical Power (dBm)',
-    'SC_SPEED_GAP_PCT': 'Speed Gap vs Plan (%)',
+    'SC_AVG_OPTICALPOWER_IN_RANGE': 'Optical Power In Range (%)',
     'SC_AVG_LATEST_SPEED': 'Avg Actual Speed (Mbps)',
     'SC_AVG_SPEED_IN_RANGE': 'Speed In Range (%)',
+    'SC_SPEED_GAP_PCT': 'Speed Gap vs Plan (%)',
     'SC_AVG_PLAN_SPEED': 'Plan Speed (Mbps)',
-    'SC_AVG_OPTICALPOWER_IN_RANGE': 'Optical Power In Range (%)',
-    'AVG_UPTIME_PCT': 'Avg Uptime (%)',
-    'OVERALL_UPTIME_PCT': 'Overall Uptime (%)',
-    'PEAK_UPTIME_PCT': 'Peak-Hour Uptime (%)',
-    'has_tickets': 'Has Raised Tickets',
-    'DROPPED_CALLS': 'Dropped Calls',
-    'AVG_CUSTOMER_CALLS': 'Avg Calls Per Ticket',
-    'AVG_TICKET_RATING': 'Ticket Rating By Customer',
+    'SC_AVG_WEEKLY_DATA_GB': 'Weekly Data Usage (GB)',
+    'avg_resolution_hours': 'Avg Resolution Time (hrs)',
+    'SLA_COMPLIANCE_PCT': 'SLA Compliance (%)',
+    'AVG_ANSWERED_SECONDS': 'Avg Call Duration (sec)',
+    'missed_call_ratio': 'Missed Call Ratio',
+    'resolution_rate': 'Ticket Resolution Rate',
     'autopay_ratio': 'Autopay Ratio',
-    'inbound_calls_per_month': 'Inbound Calls/Month',
-    'inbound_answered_per_month': 'Inbound Answered/Month',
-    'inbound_unanswered_per_month': 'Inbound Unanswered/Month',
-    'distinct_issues_per_month': 'Distinct Issues/Month',
-    'reopened_once_per_month': 'Reopened Tickets/Month',
-    'max_reopened_per_month': 'Max Reopened/Month',
-    'install_attempts_per_month': 'Install Attempts/Month',
 }
 
 report = []
@@ -143,7 +125,7 @@ def batch_query(id_list, sql_template, batch_size=500, id_col='MOBILE', timeout=
 
 
 rpt("=" * 100)
-rpt("WIOM CHURN RISK SCORING — ALL ACTIVE CUSTOMERS")
+rpt("WIOM CHURN RISK SCORING — CUSTOMERS DUE FOR RECHARGE (NEXT 7 DAYS)")
 rpt(f"Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 rpt("=" * 100)
 
@@ -155,7 +137,7 @@ rpt("\n" + "=" * 100)
 rpt("STEP 1: RETRAIN POPULATION CHURN MODEL")
 rpt("=" * 100)
 
-pop_file = os.path.join(DATA, "population_ops_features.csv")
+pop_file = os.path.join(DATA, "population_ops_features_50k.csv")
 if not os.path.exists(pop_file):
     rpt(f"FATAL: Training data not found at {pop_file}")
     rpt("Run phase4b_population_churn_model.py first.")
@@ -164,23 +146,33 @@ if not os.path.exists(pop_file):
 df_train = pd.read_csv(pop_file, low_memory=False)
 rpt(f"  Loaded training data: {len(df_train)} rows × {len(df_train.columns)} cols")
 
-# Feature list — same as population model Step 9
+# Clean feature list — removed:
+#   BROKEN: PEAK_UPTIME_PCT (all-NaN — PARTNER_INFLUX_SUMMARY is daily, no hourly data),
+#           PEAK_VS_OVERALL_GAP (derived from broken PEAK_UPTIME_PCT)
+#   VOLUME-BIASED CALL METRICS (r>0.7 correlated, missed_call_ratio already captures quality):
+#           ivr_calls_per_month, missed_calls_per_month, answered_calls_per_month,
+#           inbound_calls_per_month, inbound_answered_per_month, inbound_unanswered_per_month,
+#           DROPPED_CALLS
+#   VOLUME-BIASED TICKET METRICS (r>0.7 correlated):
+#           tickets_per_month, cx_tickets_per_month, px_tickets_per_month,
+#           distinct_issues_per_month, reopened_once_per_month, max_reopened_per_month,
+#           has_tickets, install_attempts_per_month, ticket_severity
+#   DUPLICATES: avg_resolution_hours_w (dup of avg_resolution_hours),
+#               tk_sla_compliance (r=1.0 with SLA_COMPLIANCE_PCT),
+#               AVG_CUSTOMER_CALLS (volume-biased)
 POP_FEATURES = [
-    'AVG_UPTIME_PCT', 'OVERALL_UPTIME_PCT', 'PEAK_UPTIME_PCT', 'PEAK_VS_OVERALL_GAP',
-    'STDDEV_UPTIME',
+    # Uptime (from PARTNER_INFLUX_SUMMARY — daily level)
+    'OVERALL_UPTIME_PCT', 'STDDEV_UPTIME',
+    # Network quality (from NETWORK_SCORECARD)
     'SC_AVG_RXPOWER_IN_RANGE', 'SC_AVG_RXPOWER', 'SC_AVG_OPTICALPOWER_IN_RANGE',
     'SC_AVG_LATEST_SPEED', 'SC_AVG_SPEED_IN_RANGE', 'SC_SPEED_GAP_PCT', 'SC_AVG_PLAN_SPEED',
     'SC_AVG_WEEKLY_DATA_GB',
-    'avg_resolution_hours', 'avg_resolution_hours_w', 'SLA_COMPLIANCE_PCT',
-    'tk_sla_compliance', 'AVG_ANSWERED_SECONDS', 'AVG_CUSTOMER_CALLS',
-    'DROPPED_CALLS', 'missed_call_ratio', 'AVG_TICKET_RATING',
-    'has_tickets', 'ticket_severity', 'resolution_rate',
+    # Service quality (quality ratios, not raw counts)
+    'avg_resolution_hours', 'SLA_COMPLIANCE_PCT',
+    'AVG_ANSWERED_SECONDS', 'missed_call_ratio',
+    'resolution_rate',
+    # Behavior
     'autopay_ratio',
-    'ivr_calls_per_month', 'missed_calls_per_month', 'inbound_calls_per_month',
-    'answered_calls_per_month', 'inbound_answered_per_month', 'inbound_unanswered_per_month',
-    'tickets_per_month', 'cx_tickets_per_month', 'px_tickets_per_month',
-    'distinct_issues_per_month', 'reopened_once_per_month', 'max_reopened_per_month',
-    'install_attempts_per_month',
 ]
 
 # Find available features (handle case variations)
@@ -248,14 +240,16 @@ rpt("  Healthy baselines computed for driver explanation")
 # STEP 2: PULL ALL ACTIVE CUSTOMERS
 # ══════════════════════════════════════════════════════════════════════════════
 rpt("\n" + "=" * 100)
-rpt("STEP 2: PULL ALL ACTIVE CUSTOMERS (recharged within 28 days)")
+rpt("STEP 2: PULL CUSTOMERS DUE FOR RECHARGE (plan expires within 7 days)")
 rpt("=" * 100)
 
-# First, count active customers to determine partition size
+# Count customers whose current plan expires within the next 7 days
+# This captures both M+ (28-day) and PayG (<28-day) plans via otp_expiry_time
 count_sql = """
 WITH deduped_recharges AS (
     SELECT mobile,
            TO_DATE(DATEADD(minute, 330, created_on)) AS recharge_date,
+           TO_DATE(DATEADD(minute, 330, otp_expiry_time)) AS plan_expiry_date,
            ROW_NUMBER() OVER (PARTITION BY transaction_id ORDER BY id) AS rn1,
            ROW_NUMBER() OVER (PARTITION BY mobile, router_nas_id, charges,
                TO_DATE(DATEADD(minute, 330, created_on)) ORDER BY id) AS rn2
@@ -264,17 +258,22 @@ WITH deduped_recharges AS (
       AND TO_DATE(DATEADD(minute, 330, created_on)) >= '2025-01-01'
 ),
 valid_recharges AS (
-    SELECT mobile, recharge_date FROM deduped_recharges WHERE rn1 = 1 AND rn2 = 1
+    SELECT mobile, recharge_date, plan_expiry_date FROM deduped_recharges WHERE rn1 = 1 AND rn2 = 1
+),
+latest_per_customer AS (
+    SELECT mobile, MAX(plan_expiry_date) AS plan_expiry
+    FROM valid_recharges
+    GROUP BY mobile
 )
-SELECT COUNT(DISTINCT mobile) AS active_count
-FROM valid_recharges
-WHERE recharge_date >= DATEADD(DAY, -28, CURRENT_DATE())
+SELECT COUNT(*) AS due_count
+FROM latest_per_customer
+WHERE plan_expiry BETWEEN CURRENT_DATE() AND DATEADD(DAY, 7, CURRENT_DATE())
 """
 
-rpt("  Counting active customers...")
+rpt("  Counting customers due for recharge (plan expiry within 7 days)...")
 df_count = run_query(count_sql, timeout=600)
 active_count = int(df_count.iloc[0, 0]) if len(df_count) > 0 else 0
-rpt(f"  Active customers (28-day window): {active_count:,}")
+rpt(f"  Customers due for recharge: {active_count:,}")
 
 if active_count == 0:
     rpt("FATAL: No active customers found")
@@ -291,6 +290,8 @@ for p in range(N_PARTITIONS):
     WITH deduped_recharges AS (
         SELECT mobile,
                TO_DATE(DATEADD(minute, 330, created_on)) AS recharge_date,
+               TO_DATE(DATEADD(minute, 330, otp_expiry_time)) AS plan_expiry_date,
+               ROUND(DATEDIFF(hour, otp_issued_time, otp_expiry_time) / 24.0) AS plan_days,
                ROW_NUMBER() OVER (PARTITION BY transaction_id ORDER BY id) AS rn1,
                ROW_NUMBER() OVER (PARTITION BY mobile, router_nas_id, charges,
                    TO_DATE(DATEADD(minute, 330, created_on)) ORDER BY id) AS rn2
@@ -299,33 +300,44 @@ for p in range(N_PARTITIONS):
           AND TO_DATE(DATEADD(minute, 330, created_on)) >= '2025-01-01'
     ),
     valid_recharges AS (
-        SELECT mobile, recharge_date FROM deduped_recharges WHERE rn1 = 1 AND rn2 = 1
+        SELECT mobile, recharge_date, plan_expiry_date, plan_days
+        FROM deduped_recharges WHERE rn1 = 1 AND rn2 = 1
     ),
-    active_now AS (
-        SELECT mobile, MAX(recharge_date) AS last_recharge_date
+    latest_recharge AS (
+        SELECT mobile, recharge_date, plan_expiry_date, plan_days,
+               ROW_NUMBER() OVER (PARTITION BY mobile ORDER BY recharge_date DESC) AS rn
         FROM valid_recharges
-        WHERE recharge_date >= DATEADD(DAY, -28, CURRENT_DATE())
-        GROUP BY mobile
+    ),
+    due_customers AS (
+        SELECT mobile, recharge_date AS last_recharge_date, plan_expiry_date AS plan_expiry,
+               plan_days,
+               CASE WHEN plan_days >= 28 THEN 'M+' ELSE 'PayG' END AS plan_type
+        FROM latest_recharge
+        WHERE rn = 1
+          AND plan_expiry_date BETWEEN CURRENT_DATE() AND DATEADD(DAY, 7, CURRENT_DATE())
     ),
     first_ever AS (
         SELECT mobile, MIN(recharge_date) AS first_recharge_ever
-        FROM valid_recharges WHERE mobile IN (SELECT mobile FROM active_now)
+        FROM valid_recharges WHERE mobile IN (SELECT mobile FROM due_customers)
         GROUP BY mobile
     ),
     recharge_stats AS (
         SELECT mobile, COUNT(*) AS recharge_count
-        FROM valid_recharges WHERE mobile IN (SELECT mobile FROM active_now)
+        FROM valid_recharges WHERE mobile IN (SELECT mobile FROM due_customers)
         GROUP BY mobile
     )
-    SELECT a.mobile AS MOBILE, r.recharge_count AS RECHARGE_COUNT,
+    SELECT d.mobile AS MOBILE, r.recharge_count AS RECHARGE_COUNT,
            fe.first_recharge_ever AS FIRST_RECHARGE_EVER,
-           a.last_recharge_date AS LAST_RECHARGE_DATE,
+           d.last_recharge_date AS LAST_RECHARGE_DATE,
+           d.plan_expiry AS PLAN_EXPIRY,
+           d.plan_type AS PLAN_TYPE,
+           d.plan_days AS PLAN_DAYS,
            DATEDIFF(DAY, fe.first_recharge_ever, CURRENT_DATE()) AS TENURE_DAYS,
-           DATEDIFF(DAY, a.last_recharge_date, CURRENT_DATE()) AS DAYS_SINCE_LAST
-    FROM active_now a
-    JOIN first_ever fe ON a.mobile = fe.mobile
-    JOIN recharge_stats r ON a.mobile = r.mobile
-    WHERE ABS(HASH(a.mobile)) % {N_PARTITIONS} = {p}
+           DATEDIFF(DAY, d.last_recharge_date, CURRENT_DATE()) AS DAYS_SINCE_LAST
+    FROM due_customers d
+    JOIN first_ever fe ON d.mobile = fe.mobile
+    JOIN recharge_stats r ON d.mobile = r.mobile
+    WHERE ABS(HASH(d.mobile)) % {N_PARTITIONS} = {p}
     """
     try:
         df_p = run_query(sql, timeout=600)
@@ -347,13 +359,15 @@ if len(df_active) == 0:
     rpt("FATAL: No active customers pulled")
     sys.exit(1)
 
-for c in ['RECHARGE_COUNT', 'TENURE_DAYS', 'DAYS_SINCE_LAST']:
+for c in ['RECHARGE_COUNT', 'TENURE_DAYS', 'DAYS_SINCE_LAST', 'PLAN_DAYS']:
     if c in df_active.columns:
         df_active[c] = pd.to_numeric(df_active[c], errors='coerce')
 
 rpt(f"  Avg tenure: {df_active['TENURE_DAYS'].mean():.0f} days")
 rpt(f"  Median recharges: {df_active['RECHARGE_COUNT'].median():.0f}")
 rpt(f"  Avg days since last: {df_active['DAYS_SINCE_LAST'].mean():.1f}")
+if 'PLAN_TYPE' in df_active.columns:
+    rpt(f"  Plan type split: {df_active['PLAN_TYPE'].value_counts().to_dict()}")
 
 phone_list = df_active['MOBILE'].astype(str).str.strip().tolist()
 
@@ -400,11 +414,8 @@ if len(partner_ids) > 0:
         partner_str = ",".join(f"'{p}'" for p in batch_partners)
         sql_uptime = f"""
         SELECT partner_id AS PARTNER_LNG_ID,
-               AVG(TOTAL_PINGS_RECEIVED * 1.0 / NULLIF(TOTAL_EXPECTED_PINGS, 0)) * 100 AS AVG_UPTIME_PCT,
-               STDDEV(TOTAL_PINGS_RECEIVED * 1.0 / NULLIF(TOTAL_EXPECTED_PINGS, 0)) * 100 AS STDDEV_UPTIME,
-               AVG(CASE WHEN HOUR(DATEADD(minute, 330, appended_date)) BETWEEN 19 AND 23
-                   THEN TOTAL_PINGS_RECEIVED * 1.0 / NULLIF(TOTAL_EXPECTED_PINGS, 0) END) * 100 AS PEAK_UPTIME_PCT,
-               AVG(TOTAL_PINGS_RECEIVED * 1.0 / NULLIF(TOTAL_EXPECTED_PINGS, 0)) * 100 AS OVERALL_UPTIME_PCT
+               AVG(TOTAL_PINGS_RECEIVED * 1.0 / NULLIF(TOTAL_EXPECTED_PINGS, 0)) * 100 AS OVERALL_UPTIME_PCT,
+               STDDEV(TOTAL_PINGS_RECEIVED * 1.0 / NULLIF(TOTAL_EXPECTED_PINGS, 0)) * 100 AS STDDEV_UPTIME
         FROM prod_db.public.PARTNER_INFLUX_SUMMARY
         WHERE partner_id IN ({partner_str})
           AND DATEADD(day, -1, appended_date) >= DATEADD(DAY, -90, CURRENT_DATE())
@@ -420,11 +431,11 @@ if len(partner_ids) > 0:
 
     if uptime_frames:
         df_uptime = pd.concat(uptime_frames, ignore_index=True)
-        for c in ['AVG_UPTIME_PCT', 'STDDEV_UPTIME', 'PEAK_UPTIME_PCT', 'OVERALL_UPTIME_PCT']:
+        for c in ['OVERALL_UPTIME_PCT', 'STDDEV_UPTIME']:
             if c in df_uptime.columns:
                 df_uptime[c] = pd.to_numeric(df_uptime[c], errors='coerce')
         df_active = df_active.merge(df_uptime, on='PARTNER_LNG_ID', how='left')
-        rpt(f"  Uptime match: {df_active['AVG_UPTIME_PCT'].notna().mean()*100:.1f}%")
+        rpt(f"  Uptime match: {df_active['OVERALL_UPTIME_PCT'].notna().mean()*100:.1f}%")
 
 # --- 3c: Network Scorecard ---
 rpt("\n  3c. Network Scorecard...")
@@ -557,32 +568,14 @@ rpt("=" * 100)
 df_active['TENURE_DAYS'] = pd.to_numeric(df_active['TENURE_DAYS'], errors='coerce').fillna(30)
 tenure_months = np.maximum(df_active['TENURE_DAYS'].values / 30.0, 1.0)
 
-NORMALIZE_MAP = {
-    'TOTAL_IVR_CALLS':       'ivr_calls_per_month',
-    'MISSED_CALLS':          'missed_calls_per_month',
-    'INBOUND_CALLS':         'inbound_calls_per_month',
-    'ANSWERED_CALLS':        'answered_calls_per_month',
-    'INBOUND_ANSWERED':      'inbound_answered_per_month',
-    'INBOUND_UNANSWERED':    'inbound_unanswered_per_month',
-    'TOTAL_TICKETS':         'tickets_per_month',
-    'CX_TICKETS':            'cx_tickets_per_month',
-    'PX_TICKETS':            'px_tickets_per_month',
-    'DISTINCT_ISSUE_TYPES':  'distinct_issues_per_month',
-    'TICKETS_REOPENED_ONCE': 'reopened_once_per_month',
-    'MAX_TIMES_REOPENED':    'max_reopened_per_month',
-    'INSTALL_ATTEMPTS':      'install_attempts_per_month',
-}
+# No per-month normalization needed — volume-biased count features removed from model.
+# Quality ratios (missed_call_ratio, resolution_rate, SLA_COMPLIANCE_PCT) are already normalized.
+NORMALIZE_MAP = {}
 
 for orig, normed in NORMALIZE_MAP.items():
     if orig in df_active.columns:
         raw = pd.to_numeric(df_active[orig], errors='coerce').fillna(0).values
         df_active[normed] = raw / tenure_months
-
-# Uptime-derived features
-if 'PEAK_UPTIME_PCT' in df_active.columns and 'OVERALL_UPTIME_PCT' in df_active.columns:
-    df_active['PEAK_VS_OVERALL_GAP'] = (
-        df_active['PEAK_UPTIME_PCT'].fillna(0) - df_active['OVERALL_UPTIME_PCT'].fillna(0)
-    )
 
 # autopay_ratio placeholder
 if 'autopay_ratio' not in df_active.columns:
@@ -624,7 +617,7 @@ df_active['RISK_SCORE'] = ensemble_proba
 df_active['RISK_TIER'] = pd.cut(
     ensemble_proba, bins=[0, 0.4, 0.6, 1.01],
     labels=['Low', 'Medium', 'High'], include_lowest=True
-)
+).astype(str)
 df_active['AT_RISK'] = np.where(ensemble_proba >= RISK_THRESHOLD, 'YES', 'NO')
 
 rpt(f"  Scored {len(df_active):,} customers")
@@ -712,10 +705,17 @@ rpt("STEP 7: EXPORT TO GOOGLE SHEETS + CSV")
 rpt("=" * 100)
 
 # Prepare output dataframe
+# Compute "Recharge Due In" = days until plan expiry
+if 'PLAN_EXPIRY' in df_active.columns:
+    plan_exp = pd.to_datetime(df_active['PLAN_EXPIRY'], errors='coerce', utc=True).dt.tz_localize(None).dt.normalize()
+    today = pd.Timestamp.now().normalize()
+    df_active['RECHARGE_DUE_IN'] = (plan_exp - today).dt.days
+
 output_cols = [
     'MOBILE', 'RISK_SCORE', 'RISK_TIER', 'AT_RISK',
     'DRIVER_1', 'DRIVER_2', 'DRIVER_3',
-    'CITY', 'TENURE_DAYS', 'DAYS_SINCE_LAST', 'RECHARGE_COUNT', 'LAST_RECHARGE_DATE',
+    'PLAN_TYPE', 'PLAN_EXPIRY', 'RECHARGE_DUE_IN', 'CITY', 'TENURE_DAYS',
+    'DAYS_SINCE_LAST', 'RECHARGE_COUNT', 'LAST_RECHARGE_DATE',
 ]
 # Only include columns that exist
 output_cols = [c for c in output_cols if c in df_active.columns]
@@ -733,6 +733,9 @@ col_rename = {
     'DRIVER_1': 'Driver 1',
     'DRIVER_2': 'Driver 2',
     'DRIVER_3': 'Driver 3',
+    'PLAN_TYPE': 'Plan Type',
+    'PLAN_EXPIRY': 'Plan Expiry',
+    'RECHARGE_DUE_IN': 'Recharge Due In (Days)',
     'CITY': 'City',
     'TENURE_DAYS': 'Tenure (Days)',
     'DAYS_SINCE_LAST': 'Days Since Last Recharge',
@@ -755,12 +758,6 @@ try:
     import gspread
     if not os.path.exists(GSPREAD_CREDS):
         rpt(f"\n  Google Sheets: credentials.json not found at {GSPREAD_CREDS}")
-        rpt("  To set up Google Sheets export:")
-        rpt("    1. Go to console.cloud.google.com → APIs & Services")
-        rpt("    2. Enable Google Sheets API + Google Drive API")
-        rpt("    3. Create OAuth 2.0 Client ID (Desktop type)")
-        rpt("    4. Download credentials.json")
-        rpt(f"    5. Save to {GSPREAD_CREDS}")
         rpt("  Skipping Google Sheets — CSV exported successfully.")
     else:
         rpt("\n  Connecting to Google Sheets...")
@@ -769,12 +766,27 @@ try:
             authorized_user_filename=GSPREAD_TOKEN
         )
 
-        sheet_name = f"Wiom Churn Risk Scores - {datetime.now().strftime('%Y-%m-%d')}"
-        sh = gc.create(sheet_name)
-        rpt(f"  Created sheet: {sheet_name}")
+        # Open the persistent sheet (Model Summary + Definitions tabs live here)
+        sh = gc.open_by_key(GSHEET_ID)
+        rpt(f"  Opened sheet: {sh.title}")
 
-        ws = sh.sheet1
-        ws.update_title("Risk Scores")
+        # Tab name = today's date
+        tab_name = datetime.now().strftime('%Y-%m-%d')
+
+        # If a tab with today's date already exists, clear and reuse it
+        try:
+            ws = sh.worksheet(tab_name)
+            ws.clear()
+            rpt(f"  Reusing existing tab: {tab_name}")
+        except gspread.exceptions.WorksheetNotFound:
+            # Add new tab at position 0 (leftmost, before Model Summary/Definitions)
+            ws = sh.add_worksheet(title=tab_name, rows=len(df_output) + 1, cols=len(df_output.columns))
+            # Move to first position so latest run is the first tab
+            sh.reorder_worksheets([ws] + [s for s in sh.worksheets() if s.id != ws.id])
+            rpt(f"  Created new tab: {tab_name}")
+
+        # Resize to fit data
+        ws.resize(rows=len(df_output) + 1, cols=len(df_output.columns))
 
         # Write header
         headers = df_output.columns.tolist()
@@ -786,21 +798,18 @@ try:
         for start in range(0, total_rows, BATCH_ROWS):
             end = min(start + BATCH_ROWS, total_rows)
             chunk = df_output.iloc[start:end].fillna('').values.tolist()
-            # Convert numpy types to native Python
             chunk = [[str(v) if not isinstance(v, (int, float, str)) else v for v in row] for row in chunk]
-            cell_range = f'A{start + 2}'  # +2 because row 1 is header, gsheets is 1-indexed
+            cell_range = f'A{start + 2}'
             ws.update(range_name=cell_range, values=chunk)
             rpt(f"    Uploaded rows {start+1:,}-{end:,}/{total_rows:,}")
-            time.sleep(1)  # Rate limiting
+            time.sleep(1)
 
-        # Basic formatting — bold header
-        ws.format('A1:L1', {'textFormat': {'bold': True}})
+        # Bold header row
+        ws.format(f'A1:{chr(64 + len(headers))}1', {'textFormat': {'bold': True}})
 
-        # Share (anyone with link can view)
-        sh.share('', perm_type='anyone', role='reader')
         sheet_url = sh.url
         rpt(f"\n  Google Sheet URL: {sheet_url}")
-        rpt("  Shared: anyone with link can view")
+        rpt(f"  Tab: {tab_name}")
 
 except ImportError:
     rpt("  gspread not installed — skipping Google Sheets export")

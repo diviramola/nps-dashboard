@@ -1,0 +1,134 @@
+====================================================================================================
+WIOM CHURN RISK SCORING — CUSTOMERS DUE FOR RECHARGE (NEXT 7 DAYS)
+Started: 2026-03-19 12:52:47
+====================================================================================================
+
+====================================================================================================
+STEP 1: RETRAIN POPULATION CHURN MODEL
+====================================================================================================
+  Loaded training data: 44566 rows × 32 cols
+  Features available: 16/16
+  Training matrix: 44566 rows × 16 features
+  Training churn rate: 50.2%
+  Models trained (GB + RF)
+  Top 5 drivers: resolution_rate, OVERALL_UPTIME_PCT, avg_resolution_hours, SLA_COMPLIANCE_PCT, AVG_ANSWERED_SECONDS
+  Healthy baselines computed for driver explanation
+
+====================================================================================================
+STEP 2: PULL CUSTOMERS DUE FOR RECHARGE (plan expires within 7 days)
+====================================================================================================
+  Counting customers due for recharge (plan expiry within 7 days)...
+  Customers due for recharge: 31,049
+  Using 21 hash partitions (~1478 per partition)
+    Partition 20/21: 29,562 customers so far
+    Partition 21/21: 31,050 customers so far
+
+  Total active customers pulled: 31,050
+  Avg tenure: 285 days
+  Median recharges: 10
+  Avg days since last: 24.2
+  Plan type split: {'M+': 30502, 'PayG': 548}
+
+====================================================================================================
+STEP 3: COMPUTE OPERATIONAL FEATURES
+====================================================================================================
+
+  3a. Partner Mapping...
+    Partner batch 10/32: 9925 rows so far
+    Partner batch 20/32: 19853 rows so far
+    Partner batch 30/32: 29771 rows so far
+    Partner batch 32/32: 30815 rows so far
+  Partner match: 99.2%
+
+  3b. Partner Uptime...
+  Unique partners: 1241
+  Uptime match: 99.2%
+
+  3c. Network Scorecard...
+    Scorecard batch 10/32: 9950 rows so far
+    Scorecard batch 20/32: 19887 rows so far
+    Scorecard batch 30/32: 29830 rows so far
+    Scorecard batch 32/32: 30871 rows so far
+  Scorecard match: 99.4%
+
+  3d. Service Tickets...
+  Device IDs available: 30814
+    Tickets batch 10/62: 4155 rows so far
+    Tickets batch 20/62: 8341 rows so far
+    Tickets batch 30/62: 12462 rows so far
+    Tickets batch 40/62: 16602 rows so far
+    Tickets batch 50/62: 20762 rows so far
+    Tickets batch 60/62: 24867 rows so far
+    Tickets batch 62/62: 25546 rows so far
+  Ticket match: 82.3%
+
+  3e. IVR Calls...
+    IVR batch 10/32: 8783 rows so far
+    IVR batch 20/32: 17514 rows so far
+    IVR batch 30/32: 26244 rows so far
+    IVR batch 32/32: 27163 rows so far
+  IVR match: 87.5%
+
+  3f. Install TAT...
+    Install batch 10/32: 8925 rows so far
+    Install batch 20/32: 17885 rows so far
+    Install batch 30/32: 26922 rows so far
+    Install batch 32/32: 27866 rows so far
+  Install match: 89.7%
+
+====================================================================================================
+STEP 4: NORMALIZE + ENGINEER FEATURES
+====================================================================================================
+  Feature engineering complete: 31050 rows × 53 cols
+
+====================================================================================================
+STEP 5: SCORE ALL CUSTOMERS
+====================================================================================================
+  Scored 31,050 customers
+  Score distribution:
+    P10: 0.036
+    P25: 0.060
+    P50: 0.135
+    P75: 0.364
+    P90: 0.690
+    P95: 0.844
+  Mean risk score: 0.252
+  At risk (>=0.5): 5,669 (18.3%)
+  Risk tiers: High=4,273, Medium=2,827, Low=23,950
+
+====================================================================================================
+STEP 6: IDENTIFY TOP 3 RISK DRIVERS PER CUSTOMER
+====================================================================================================
+  Computing drivers for all customers...
+  Drivers computed for 31,050 customers
+
+====================================================================================================
+STEP 7: EXPORT TO GOOGLE SHEETS + CSV
+====================================================================================================
+  CSV saved: C:\Users\nikhi\wiom-nps-analysis\output\churn_risk_scores.csv
+  Rows: 31,050
+
+  Connecting to Google Sheets...
+  Opened sheet: Wiom Churn Risk Predictor
+  Reusing existing tab: 2026-03-19
+    Uploaded rows 1-5,000/31,050
+    Uploaded rows 5,001-10,000/31,050
+    Uploaded rows 10,001-15,000/31,050
+    Uploaded rows 15,001-20,000/31,050
+    Uploaded rows 20,001-25,000/31,050
+    Uploaded rows 25,001-30,000/31,050
+    Uploaded rows 30,001-31,050/31,050
+
+  Google Sheet URL: https://docs.google.com/spreadsheets/d/1ewGLfhlizAGVURMjYSE52EsWLGZFysf2L_aAP5Is2Nk
+  Tab: 2026-03-19
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+  Total active customers scored: 31,050
+  At risk (score >= 0.5): 5,669
+  High risk (>= 0.6): 4,273
+  Medium risk (0.4-0.6): 2,827
+  Low risk (< 0.4): 23,950
+  Mean risk score: 0.252
+  CSV: C:\Users\nikhi\wiom-nps-analysis\output\churn_risk_scores.csv

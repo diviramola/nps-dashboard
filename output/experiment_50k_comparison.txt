@@ -1,0 +1,161 @@
+====================================================================================================
+EXPERIMENT: LARGE TRAINING SET (50K) vs BASELINE (15K)
+Started: 2026-03-19 11:48:00
+====================================================================================================
+
+====================================================================================================
+STEP 1: SAMPLE ~50K CUSTOMERS
+====================================================================================================
+  Sprint  1 (2025-07-07):  4000 new customers, churn=33.3%
+  Sprint  2 (2025-07-21):  3851 new customers, churn=33.2%
+  Sprint  3 (2025-08-04):  3742 new customers, churn=38.3%
+  Sprint  4 (2025-08-18):  3626 new customers, churn=65.8%
+  Sprint  5 (2025-09-01):  2991 new customers, churn=61.9%
+  Sprint  6 (2025-09-15):  3531 new customers, churn=55.5%
+  Sprint  7 (2025-09-29):  3368 new customers, churn=99.9%
+  Sprint  8 (2025-10-13):  2909 new customers, churn=59.5%
+  Sprint  9 (2025-10-27):  3276 new customers, churn=37.4%
+  Sprint 10 (2025-11-10):  3347 new customers, churn=38.4%
+  Sprint 11 (2025-11-24):  3278 new customers, churn=42.7%
+  Sprint 12 (2025-12-08):  3414 new customers, churn=60.8%
+  Sprint 13 (2026-01-05):  3233 new customers, churn=32.9%
+
+  Total: 44,566 customers from 13 sprints
+  Churn rate: 50.2%
+
+====================================================================================================
+STEP 2: COMPUTE FEATURES
+====================================================================================================
+  2a. Partner Mapping...
+    Partner batch 20/45: 15606 rows so far
+    Partner batch 40/45: 29222 rows so far
+    Partner batch 45/45: 33231 rows so far
+  Partner match: 74.6%
+
+  2b. Partner Uptime...
+  Unique partners: 1324
+  Uptime match: 74.5%
+
+  2c. Network Scorecard...
+    Scorecard batch 20/45: 19985 rows so far
+    Scorecard batch 40/45: 39972 rows so far
+    Scorecard batch 45/45: 44531 rows so far
+  Scorecard match: 99.9%
+
+  2d. Service Tickets...
+  Device IDs: 32905
+    Tickets batch 20/110: 4962 rows so far
+    Tickets batch 40/110: 10111 rows so far
+    Tickets batch 60/110: 15494 rows so far
+    Tickets batch 80/110: 20651 rows so far
+    Tickets batch 100/110: 25846 rows so far
+    Tickets batch 110/110: 28323 rows so far
+  Ticket match: 64.1%
+
+  2e. IVR Calls...
+    IVR batch 20/45: 17296 rows so far
+    IVR batch 40/45: 35519 rows so far
+    IVR batch 45/45: 39323 rows so far
+  IVR match: 88.2%
+
+  Feature engineering complete: 44566 rows x 32 cols
+
+====================================================================================================
+STEP 3: TRAIN MODEL AND COMPARE
+====================================================================================================
+
+  Loading 15K baseline training data...
+  Baseline: 14,985 rows, churn rate: 36.7%
+
+  Training baseline (15K) model...
+
+  [15K Baseline] Training on 14,985 x 16 features, churn=36.7%
+  [15K Baseline] GB 5-fold AUC: 0.9479 (+/- 0.0053)
+  [15K Baseline] RF 5-fold AUC: 0.9433 (+/- 0.0050)
+
+  Training expanded (50K) model...
+
+  [50K Expanded] Training on 44,566 x 16 features, churn=50.2%
+  [50K Expanded] GB 5-fold AUC: 0.9733 (+/- 0.0008)
+  [50K Expanded] RF 5-fold AUC: 0.9672 (+/- 0.0009)
+
+  Saved 50K training data: C:\Users\nikhi\wiom-nps-analysis\data\population_ops_features_50k.csv
+
+====================================================================================================
+STEP 4: COMPARATIVE REPORT
+====================================================================================================
+
+  --------------------------------------------------------------------------------
+  MODEL PERFORMANCE
+  --------------------------------------------------------------------------------
+  Metric                            15K Baseline    50K Expanded      Delta
+  ------------------------------ --------------- --------------- ----------
+  Training rows                           14,985          44,566           
+  Churn rate                               36.7%           50.2%    +13.5pp
+  GB CV AUC                               0.9479          0.9733    +0.0254
+  RF CV AUC                               0.9433          0.9672    +0.0239
+
+  --------------------------------------------------------------------------------
+  FEATURE IMPORTANCE COMPARISON (Gradient Boosting)
+  --------------------------------------------------------------------------------
+  Feature                             15K      50K    Delta    Direction
+  ------------------------------ -------- -------- -------- ------------
+  Overall Uptime (%)                41.8%    27.0%   -14.8%         DOWN
+  Ticket Resolution Rate            24.5%    27.7%    +3.2%           UP
+  Avg Resolution Time (hrs)         20.3%    15.3%    -5.0%         DOWN
+  Uptime Variability                 4.3%     1.4%    -2.9%         DOWN
+  Optical Signal Quality (%)         3.7%     1.6%    -2.1%         DOWN
+  Avg Call Duration (sec)            1.1%     4.8%    +3.7%           UP
+  SLA Compliance (%)                 0.9%    14.9%   +14.0%           UP
+  Optical Power (dBm)                0.8%     3.3%    +2.5%           UP
+  Missed Call Ratio                  0.7%     1.1%    +0.4%        ~same
+  Weekly Data Usage (GB)             0.7%     2.0%    +1.3%           UP
+  Speed Gap vs Plan (%)              0.5%     0.1%    -0.4%        ~same
+  Avg Actual Speed (Mbps)            0.4%     0.1%    -0.2%        ~same
+  Speed In Range (%)                 0.2%     0.5%    +0.3%        ~same
+  Plan Speed (Mbps)                  0.0%     0.0%    -0.0%        ~same
+  Optical Power In Range (%)         0.0%     0.0%    +0.0%        ~same
+  Autopay Ratio                      0.0%     0.0%    +0.0%        ~same
+
+  --------------------------------------------------------------------------------
+  HEALTHY MEDIANS COMPARISON
+  --------------------------------------------------------------------------------
+  Feature                          15K Median   50K Median      Delta
+  ------------------------------ ------------ ------------ ----------
+  Overall Uptime (%)                    71.25        70.53      -0.72
+  Ticket Resolution Rate                 1.00         1.00      +0.00
+  Avg Resolution Time (hrs)             10.82        11.37      +0.54
+  Uptime Variability                    33.59        34.37      +0.77
+  Optical Signal Quality (%)             1.00         1.00      +0.00
+  Avg Call Duration (sec)              151.00       122.17     -28.83
+  SLA Compliance (%)                     0.80         0.79      -0.01
+  Optical Power (dBm)                  -21.53       -21.55      -0.02
+  Missed Call Ratio                      0.60         0.57      -0.03
+  Weekly Data Usage (GB)                 0.79         0.87      +0.08
+  Speed Gap vs Plan (%)                 -0.11        -0.09      +0.01
+  Avg Actual Speed (Mbps)               91.92        89.66      -2.26
+  Speed In Range (%)                     1.00         1.00      +0.00
+  Plan Speed (Mbps)                     50.00        50.00      +0.00
+  Optical Power In Range (%)             1.00         1.00      +0.00
+  Autopay Ratio                          0.00         0.00      +0.00
+
+====================================================================================================
+KEY FINDINGS
+====================================================================================================
+
+  Feature importance shifts > 2pp:
+    Overall Uptime (%): 41.8% -> 27.0% (-14.8pp)
+    Ticket Resolution Rate: 24.5% -> 27.7% (+3.2pp)
+    Avg Resolution Time (hrs): 20.3% -> 15.3% (-5.0pp)
+    Uptime Variability: 4.3% -> 1.4% (-2.9pp)
+    Optical Signal Quality (%): 3.7% -> 1.6% (-2.1pp)
+    Avg Call Duration (sec): 1.1% -> 4.8% (+3.7pp)
+    SLA Compliance (%): 0.9% -> 14.9% (+14.0pp)
+    Optical Power (dBm): 0.8% -> 3.3% (+2.5pp)
+
+  Healthy median shifts > 10%:
+    Avg Call Duration (sec): 151.00 -> 122.17 (-19.1%)
+    Weekly Data Usage (GB): 0.79 -> 0.87 (+10.1%)
+    Speed Gap vs Plan (%): -0.11 -> -0.09 (+10.8%)
+
+  AUC improved by +0.0254 — larger training set helps model discrimination.

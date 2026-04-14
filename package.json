@@ -1,0 +1,26 @@
+{
+  "name": "wiom-nps-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port ${PORT:-4173}",
+    "start": "npm run build && npm run preview",
+    "deploy:gh": "vite build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "papaparse": "^5.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.12.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "gh-pages": "^6.1.1",
+    "vite": "^5.4.0"
+  }
+}

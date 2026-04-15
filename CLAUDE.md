@@ -34,7 +34,7 @@ wiom-nps-analysis/
         constants.js            Sprint mappings, REASON_TO_THEME, theme config
 
   data/
-    sprints/                    Raw sprint CSVs (18 sprints: Sprint 1-14, RSP1-3, RSP5)
+    sprints/                    Raw sprint CSVs (19 sprints: Sprint 1-14, RSP1-5)
     config/
       nps_tags_taxonomy.json    Canonical NPS tag taxonomy (source of truth)
     enrichment/                 Metabase enrichment data
@@ -115,7 +115,7 @@ Tags map to 12 dashboard themes via `REASON_TO_THEME` in `dashboard/src/utils/co
 
 ## Sprint Data
 
-18 sprints covering Jul 2025 – Apr 2026:
+19 sprints covering Jul 2025 – Apr 2026:
 
 | Sprint | Period | Quarter |
 |--------|--------|---------|
@@ -127,10 +127,10 @@ Tags map to 12 dashboard themes via `REASON_TO_THEME` in `dashboard/src/utils/co
 | Sprint 11-12 | Dec '25 | Q2 FY26 |
 | Sprint 13-14 | Jan '26 | Q3 FY26 |
 | RSP1-2 | Feb '26 | Q3 FY26 |
-| RSP3 | Mar '26 | Q3 FY26 |
+| RSP3-4 | Mar '26 | Q3 FY26 |
 | RSP5 | Apr '26 | Q1 FY27 |
 
-Total: ~17,300 responses across all sprints.
+Total: ~18,200 responses across all sprints.
 
 ## Data Schema (Sprint CSVs)
 
@@ -166,8 +166,9 @@ This repo is the NPS analysis UI and data pipeline. The broader qualitative rese
 ## Known Issues
 
 - Score 0 = ~20% of responses (possible response bias or survey UX issue) — treated as valid
-- tenure_days = 0 for Sprints 13-14, RSP1-3, RSP5 — needs Metabase enrichment
+- tenure_days = 0 for Sprints 13-14, RSP1-5 — needs Metabase enrichment (run `python scripts/enrich_from_metabase.py` from local machine where Metabase is reachable)
 - City empty in CSVs — needs Metabase enrichment via phone number
 - ~33% of comments unclassifiable by theme keywords — shown as "Unclassified"
 - Sprint 1 has 0 feedback/reason values
+- Sprint RSP4 has only 25/906 rows tagged (rest were #REF! broken formulas in the source sheet)
 - Feedback contains Hindi (Devanagari), Hinglish, and English — preserved as-is

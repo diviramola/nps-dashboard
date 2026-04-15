@@ -1,943 +1,929 @@
-respondent_id,score,feedback,nps_reason_primary,nps_reason_secondary,primary_category,plan_type,city,tenure_days,source,sprint_id,sprint_start
-b9344b908cb8,7,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-da47e1677383,6,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f10b04d4c8db,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ddf185a08f16,9,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-79f0caa1e477,1,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a22ed6364de1,2,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-b696357c8282,5,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ac259982beba,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a1d3dbc48356,6,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-1aad826bcc67,5,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-b286f644675d,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a2119cd9ec2e,5,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0562e74134d4,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-d51ccef5749b,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-00c349057328,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-b66e0c0e6465,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2691a8437cb5,10,10 dosth,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1877bedff5a1,0,0 wifi calling support nhi har kuch time par net chalna bandd,Bad Customer Support - Call Centre ,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-dfc5bfce002e,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6d43c2ef1f56,10,10 good ji,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-58a86f619d43,10,Theek hai ,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-0764f0cef904,1,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f05a3d33c915,10,ठीक-ठाक chal raha hai achcha hi chal raha hai Jim Wi-Fi achcha chal raha hai koi problem nahin ho raha hai abhi sab filhal problem nahin Ho Raha Hai pahle pahle hua do char din,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-494c41218ede,1,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f6072f5b505f,10,अच्छा सुविधा,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-49e73f8532f7,7,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5ef3b6723950,3,1 din pura net nhi chala uper se 28 ki jagah 27 din dye h,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-b19c618550cc,10,अच्छा और सस्ता भी है,Affordable,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1c3d5ed2d02b,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-cdd137d05137,5,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a7e9b231a3b9,0,"15 din bhi continue sahi se net nahi chalta bohot hi kharab service h wiom ki.
- Har 15 din m 3 se 5 baar koi na koi problem aati h. 😡😡",Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-168a9b8fe95b,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-dfc37c45c949,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9e3dd3e0ac05,9,"किफायती है, और हमेशा काम करता है लगभग",Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e2846a853f2a,6,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-10663108c1bf,0,"2,3 m hmesa net band ho jata hai.
- Bad staff and net",Frequent Disconnections,Bad Customer Support - Call Centre ,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c288a916def4,0,28 days and poor service,28-Day Plan Issue,General Bad Service,,Verma,,0,CT,Sprint RSP3,2026-03-01
-0210701cc401,7,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-1e46487a3b49,0,30 din me 10 din net hi nhi chalta or app log Puri recharge ki payment lete hai,Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-10894e0aa480,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-25f789b29b94,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e87a52d4e528,1,30 din mein 20 din chalta hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-1c94df9a931f,6,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-cfdac9ec2db6,5,4g speed very slow,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-045b9d97b9e4,0,6hr se alredy net nhi chlra h or abhi call Kiya to 24hr me problem resolve krenge asi srvc rhegi to kisi ko Q bolenge ki wiom lgvao hum khud htadenge asi srvc rhegi to,Internet Down,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6616346f7745,0,"अगर हम आज रिचार्ज करते है तो इंटरनेट चलता है उसके 5 दिन बाद, 28 डेज तो मिलता है, 5 डेज आप लोग खा जाते हो, 23 डेज मैं भी कभी चलता है नेट कभी नहीं, सबसे बेकार service hai wiom ki, मैं तो कहता हु कि आप लोग अपनी कंपनी को बंद कर दे, और लोगों को लूटना बंद कर दे, जब हम रिचार्ज करते है, तो नेट उसके 10 min बाद ही शुरू हो जाना चाहिए, पर आप लोग, 5 से 6 दिन लगा देते हो, हमें ऐसी servicing की जरूरत नहीं है, आप लोग अपना roughter उखाड़ के ले जा सकते होअगर हम आज रिचार्ज करते है तो इंटरनेट चलता है उसके 5 दिन बाद, 28 डेज तो मिलता है, 5 डेज आप लोग खा जाते हो, 23 डेज मैं भी कभी चलता है नेट कभी नहीं, सबसे बेकार service hai wiom ki, मैं तो कहता हु कि आप लोग अपनी कंपनी को बंद कर दे, और लोगों को लूटना बंद कर दे, जब हम रिचार्ज करते है, तो नेट उसके 10 min बाद ही शुरू हो जाना चाहिए, पर आप लोग, 5 से 6 दिन लगा देते हो, हमें ऐसी servicing की जरूरत नहीं है, आप लोग अपना roughter उखाड़ के ले जा सकते हो","RDNI (Recharge Done, No Internet)",,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6192334d0d64,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-785aa8004f62,0,अगर लाइन में कोई दिक्क़त होती है ya 4 5 दिन के लिए बंद हो हो जाता है तो हमारा पैसा काट लिया जाता है ना तो उसमें आगे के लिए टाइम बढ़ाया जाता है और हर महीने की ये दिक्कत होनी ही है हर महीने कूपन की बोलते है उसमें 2 या 5 रुपये से जायदा नहीं देते,No/Late Complaint Resolution,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7856a850481c,4,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-266bafc7edfc,10,नेट सही है,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-19e67eb08e60,8,100% संतुष्टि नहीं है,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-168dde52dc6a,0,"""छुट कुछ भी नहीं है 500 का बता कर 575 के लिए जाते हैं""",Expensive,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ee41de109e1d,4,"""आप का नेट बहुत स्लो है""",Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-3b82d818e79b,10,सर्विस अच्छा है,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e4127afa52b8,5,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5fbdf3b18a24,0,"""आपका नेटवर्क बहुत ही खराब है""",General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5a1a620fa00e,10,सब कुछ ठीक-ठाक है बटर एक्सपीरियंस,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-64757055b4a5,0,आपके सर्विस अच्छी नहीं है स्टार किया एक महिने में पूरा चलता नहीं है उसके बजे से स्टार दिया गया है,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-f57b98eef755,0,कभी भी रुक जाता है चलता नहीं है ठीक से,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c26f792dd659,0,"कोई परेशानी को सुनने वाला नहीं, आपका कोई कस्टमर केयर नंबर नहीं",Bad Customer Support - Call Centre ,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-409b9b3f4816,10,मेरा इंटरनेट नहीं चल रहा है,Internet Down,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-42a3d6d9c8c3,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2d2e27c7f79b,0,नहीं ,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-1643b10abd4f,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-dacf3beceeb8,6,नेट कभी कभी बंद हो जाता है,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9def992d4ed2,5,नेट की स्पीड कोई खास नहीं है,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-dcdc8bb51b8e,0, नेट सही से नहीं चलता है ,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9d1d20b09439,5,नेट स्पीड बहुत ही स्लो है और रुक रुक कर चलता है Need improve ,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-172c0085e9a5,9,बढ़िया सर्विस।,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-b07a729aa0a9,10,बहुत बढ़िया काम कर रहा है,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-71800bef8d17,10,बहुत-बहुत chalta hai,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a5d269180c0e,0,नेट बिल्कुल सही नहीं चलता और बार बार रुकता भी है ये नेट,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a96de013ad41,0, नेट बहुत धीमी चल रहा है Poor speed,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-957e8e8e3243,3,सर्विस बहुत ही ज्यादा खराब रहती है 1 महीने में कम से कम 20 दिन तो कहीं न कहीं दिक्कत ही रहती है कहीं फाइबर कट गया कहीं आंधी तूफान आ गया कहीं मेन स्विच ही रात में बंद हो जाता है कहीं तकनीशियन न तो कॉल करता है और,Frequent Disconnections,Bad Customer Support - Technician,,Verma,,0,CT,Sprint RSP3,2026-03-01
-4be73311a42a,10,बेहतर सेवा,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a90fcd60ad4c,0,"बिलकुल अच्छा नहीं है सर्विस बिलकुल फालतू सर्विस है
-",General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-693be0e46e84,10,"प्रिय Wiom टीम,
+﻿respondent_id,score,feedback,nps_reason_primary,nps_reason_secondary,primary_category,plan_type,city,tenure_days,source,sprint_id,sprint_start,device
+9990416652,7,,,,,Verma,,440,CT,Sprint RSP3,2026-03-01,
+9310868532,6,,,,,Verma,,433,WA,Sprint RSP3,2026-03-01,
+7599900099,0,,,,,Verma,,75,CT,Sprint RSP3,2026-03-01,
+7683098291,9,,,,,Verma,,663,CT,Sprint RSP3,2026-03-01,
+9354599159,1,,,,,Verma,,218,WA,Sprint RSP3,2026-03-01,
+9899613477,2,,,,,Verma,,396,WA,Sprint RSP3,2026-03-01,
+9999498857,5,,,,,Verma,,460,WA,Sprint RSP3,2026-03-01,
+9667867459,10,,,,,Verma,,406,WA,Sprint RSP3,2026-03-01,
+8920674385,6,,,,,Verma,,825,WA,Sprint RSP3,2026-03-01,
+9625553056,5,,,,,Verma,,389,CT,Sprint RSP3,2026-03-01,
+8569922206,0,,,,,Verma,,319,WA,Sprint RSP3,2026-03-01,
+6394990632,5,,,,,Verma,,76,WA,Sprint RSP3,2026-03-01,
+9999796423,10,,,,,Verma,,105,CT,Sprint RSP3,2026-03-01,
+9711788959,10,,,,,Verma,,860,CT,Sprint RSP3,2026-03-01,
+7302807660,10,,,,,Verma,,124,CT,Sprint RSP3,2026-03-01,
+9324986576,10,,,,,Verma,,620,CT,Sprint RSP3,2026-03-01,
+9716393835,10,10 dosth,General Good Service,,,Verma,,95,CT,Sprint RSP3,2026-03-01,
+7366946556,0,0 wifi calling support nhi har kuch time par net chalna bandd,Bad Customer Support - Call Centre,,,Verma,,226,CT,Sprint RSP3,2026-03-01,
+7903376061,10,,,,,Verma,,806,WA,Sprint RSP3,2026-03-01,
+9953470921,10,10 good ji,General Good Service,,,Verma,,718,CT,Sprint RSP3,2026-03-01,
+9211334789,10,Theek hai ,General Good Service,,,Verma,,701,CT,Sprint RSP3,2026-03-01,
+7838495436,1,,,,,Verma,,173,WA,Sprint RSP3,2026-03-01,
+8617464470,10,à¤ à¥€à¤•-à¤ à¤¾à¤• chal raha hai achcha hi chal raha hai Jim Wi-Fi achcha chal raha hai koi problem nahin ho raha hai abhi sab filhal problem nahin Ho Raha Hai pahle pahle hua do char din,General Good Service,,,Verma,,80,CT,Sprint RSP3,2026-03-01,
+8527273699,1,,,,,Verma,,581,WA,Sprint RSP3,2026-03-01,
+9771477186,10,अच्छा सुविधा,General Good Service,,,Verma,,876,WA,Sprint RSP3,2026-03-01,
+9911942216,7,,,,,Verma,,433,WA,Sprint RSP3,2026-03-01,
+9654660020,3,1 din pura net nhi chala uper se 28 ki jagah 27 din dye h,General Bad Service,,,Verma,,490,WA,Sprint RSP3,2026-03-01,
+8983253634,10,अच्छा और सस्ता भी है,Affordable,,,Verma,,180,CT,Sprint RSP3,2026-03-01,
+9718043980,10,,,,,Verma,,857,WA,Sprint RSP3,2026-03-01,
+8076312607,5,,,,,Verma,,934,WA,Sprint RSP3,2026-03-01,
+9667969921,0,"15 din bhi continue sahi se net nahi chalta bohot hi kharab service h wiom ki.
+ Har 15 din m 3 se 5 baar koi na koi problem aati h. ðŸ˜¡ðŸ˜¡",Frequent Disconnections,,,Verma,,362,WA,Sprint RSP3,2026-03-01,
+9625862617,10,,,,,Verma,,393,WA,Sprint RSP3,2026-03-01,
+8383009838,10,,,,,Verma,,114,WA,Sprint RSP3,2026-03-01,
+9555049393,9,"किफायती है, और हमेशा काम करता है लगभग",Affordable,,,Verma,,166,WA,Sprint RSP3,2026-03-01,
+9818892569,6,,,,,Verma,,595,WA,Sprint RSP3,2026-03-01,
+9315345066,0,"2,3 m hmesa net band ho jata hai.
+ Bad staff and net",Frequent Disconnections,Bad Customer Support - Call Centre,,Verma,,601,CT,Sprint RSP3,2026-03-01,
+9810432021,0,28 days and poor service,28-Day Plan Issue,General Bad Service,,Verma,,577,CT,Sprint RSP3,2026-03-01,
+9953065424,7,,,,,Verma,,840,WA,Sprint RSP3,2026-03-01,
+9999844341,0,30 din me 10 din net hi nhi chalta or app log Puri recharge ki payment lete hai,Frequent Disconnections,,,Verma,,309,CT,Sprint RSP3,2026-03-01,
+7310157316,0,,,,,Verma,,246,WA,Sprint RSP3,2026-03-01,
+8448753707,10,,,,,Verma,,73,WA,Sprint RSP3,2026-03-01,
+7303512960,1,30 din mein 20 din chalta hai,Frequent Disconnections,,,Verma,,118,WA,Sprint RSP3,2026-03-01,
+8851959463,6,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01,
+9254444618,5,4g speed very slow,Slow Speed,,,Verma,,86,WA,Sprint RSP3,2026-03-01,
+9968402032,0,6hr se alredy net nhi chlra h or abhi call Kiya to 24hr me problem resolve krenge asi srvc rhegi to kisi ko Q bolenge ki wiom lgvao hum khud htadenge asi srvc rhegi to,Internet Down,,,Verma,,84,CT,Sprint RSP3,2026-03-01,
+9650340050,0,"अगर हम आज रिचार्ज करते है तो इंटरनेट चलता है उसके 5 दिन बाद, 28 डेज तो मिलता है, 5 डेज आप लोग खा जाते हो, 23 डेज मैं भी कभी चलता है नेट कभी नहीं, सबसे बेकार service hai wiom ki, मैं तो कहता हु कि आप लोग अपनी कंपनी को बंद कर दे, और लोगों को लूटना बंद कर दे, जब हम रिचार्ज करते है, तो नेट उसके 10 min बाद ही शुरू हो जाना चाहिए, पर आप लोग, 5 से 6 दिन लगा देते हो, हमें ऐसी servicing की जरूरत नहीं है, आप लोग अपना roughter उखाड़ के ले जा सकते होअगर हम आज रिचार्ज करते है तो इंटरनेट चलता है उसके 5 दिन बाद, 28 डेज तो मिलता है, 5 डेज आप लोग खा जाते हो, 23 डेज मैं भी कभी चलता है नेट कभी नहीं, सबसे बेकार service hai wiom ki, मैं तो कहता हु कि आप लोग अपनी कंपनी को बंद कर दे, और लोगों को लूटना बंद कर दे, जब हम रिचार्ज करते है, तो नेट उसके 10 min बाद ही शुरू हो जाना चाहिए, पर आप लोग, 5 से 6 दिन लगा देते हो, हमें ऐसी servicing की जरूरत नहीं है, आप लोग अपना roughter उखाड़ के ले जा सकते हो","RDNI (Recharge Done, No Internet)",,,Verma,,151,WA,Sprint RSP3,2026-03-01,
+9792109280,10,,,,,Verma,,433,WA,Sprint RSP3,2026-03-01,
+9873553349,0,अगर लाइन में कोई दिक्क़त होती है ya 4 5 दिन के लिए बंद हो हो जाता है तो हमारा पैसा काट लिया जाता है ना तो उसमें आगे के लिए टाइम बढ़ाया जाता है और हर महीने की ये दिक्कत होनी ही है हर महीने कूपन की बोलते है उसमें 2 या 5 रुपये से जायदा नहीं देते,No/Late Complaint Resolution,,,Verma,,380,WA,Sprint RSP3,2026-03-01,
+9310104367,4,,,,,Verma,,203,WA,Sprint RSP3,2026-03-01,
+7678487807,10,नेट सही है,General Good Service,,,Verma,,292,WA,Sprint RSP3,2026-03-01,
+9837013844,8,100% संतुष्टि नहीं है,General Bad Service,,,Verma,,178,CT,Sprint RSP3,2026-03-01,
+9205422484,0,"""छुट कुछ भी नहीं है 500 का बता कर 575 के लिए जाते हैं""",Expensive,,,Verma,,419,WA,Sprint RSP3,2026-03-01,
+9599672122,4,"""आप का नेट बहुत स्लो है""",Slow Speed,,,Verma,,404,WA,Sprint RSP3,2026-03-01,
+9987104382,10,सर्विस अच्छा है,General Good Service,,,Verma,,224,WA,Sprint RSP3,2026-03-01,
+7048987691,5,,,,,Verma,,621,WA,Sprint RSP3,2026-03-01,
+9911865698,0,"""आपका नेटवर्क बहुत ही खराब है""",General Bad Service,,,Verma,,969,WA,Sprint RSP3,2026-03-01,
+8285837145,10,सब कुछ ठीक-ठाक है बटर एक्सपीरियंस,General Good Service,,,Verma,,212,CT,Sprint RSP3,2026-03-01,
+9920033142,0,आपके सर्विस अच्छी नहीं है स्टार किया एक महिने में पूरा चलता नहीं है उसके बजे से स्टार दिया गया है,General Bad Service,,,Verma,,546,CT,Sprint RSP3,2026-03-01,
+7053223013,0,कभी भी रुक जाता है चलता नहीं है ठीक से,General Bad Service,,,Verma,,1276,CT,Sprint RSP3,2026-03-01,
+9717286657,0,"कोई परेशानी को सुनने वाला नहीं, आपका कोई कस्टमर केयर नंबर नहीं",Bad Customer Support - Call Centre,,,Verma,,539,WA,Sprint RSP3,2026-03-01,
+9625614585,10,मेरा इंटरनेट नहीं चल रहा है,Internet Down,,,Verma,,124,WA,Sprint RSP3,2026-03-01,
+8860315829,0,,,,,Verma,,323,WA,Sprint RSP3,2026-03-01,
+9324473477,0,नहीं ,General Bad Service,,,Verma,,94,WA,Sprint RSP3,2026-03-01,
+8750232715,10,,,,,Verma,,740,WA,Sprint RSP3,2026-03-01,
+9915182450,6,नेट कभी कभी बंद हो जाता है,Frequent Disconnections,,,Verma,,146,WA,Sprint RSP3,2026-03-01,
+7678684329,5,नेट की स्पीड कोई खास नहीं है,Slow Speed,,,Verma,,322,WA,Sprint RSP3,2026-03-01,
+9899395094,0, नेट सही से नहीं चलता है ,Slow Speed,,,Verma,,1279,WA,Sprint RSP3,2026-03-01,
+9210806769,5,नेट स्पीड बहुत ही स्लो है और रुक रुक कर चलता है Need improve ,Slow Speed,,,Verma,,57,WA,Sprint RSP3,2026-03-01,
+7738337864,9,बढ़िया सर्विस।,General Good Service,,,Verma,,161,WA,Sprint RSP3,2026-03-01,
+8853998998,10,बहुत बढ़िया काम कर रहा है,General Good Service,,,Verma,,184,WA,Sprint RSP3,2026-03-01,
+8700925511,10,बहुत-बहुत chalta hai,General Good Service,,,Verma,,269,WA,Sprint RSP3,2026-03-01,
+7678414684,0,नेट बिल्कुल सही नहीं चलता और बार बार रुकता भी है ये नेट,Slow Speed,,,Verma,,185,WA,Sprint RSP3,2026-03-01,
+9899024731,0, नेट बहुत धीमी चल रहा है Poor speed,Slow Speed,,,Verma,,55,CT,Sprint RSP3,2026-03-01,
+9984649095,3,सर्विस बहुत ही ज्यादा खराब रहती है 1 महीने में कम से कम 20 दिन तो कहीं न कहीं दिक्कत ही रहती है कहीं फाइबर कट गया कहीं आंधी तूफान आ गया कहीं मेन स्विच ही रात में बंद हो जाता है कहीं तकनीशियन न तो कॉल करता है और,Frequent Disconnections,Bad Customer Support - Technician,,Verma,,245,CT,Sprint RSP3,2026-03-01,
+9136818179,10,बेहतर सेवा,General Good Service,,,Verma,,234,WA,Sprint RSP3,2026-03-01,
+7666667010,0,"बिलकुल अच्छा नहीं है सर्विस बिलकुल फालतू सर्विस है
+",General Bad Service,,,Verma,,545,WA,Sprint RSP3,2026-03-01,
+8445806299,10,"प्रिय Wiom टीम,
 
  मैं आपकी Wiom इंटरनेट सेवा का उपयोग कर रहा हूं। अब तक मेरा अनुभव बहुत अच्छा रहा है। इंटरनेट की स्पीड और सर्विस क्वालिटी अच्छी है, इसलिए मैं अपने दोस्तों और रिश्तेदारों को भी Wiom इंटरनेट लगाने की सलाह दूंगा। अच्छी सेवा देने के लिए धन्यवाद। 
 
-सादर Rahul",General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a76a8b4c9bbf,0,"बहुत ही खराब है आप लोगो का नेटवर्क
-",General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-06647a44515e,1,"बहुत ही बुरा Network है, हर वक़्त गायब हो जाता है
-",General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d77a9eedec51,0,बहुत ज्यादा दिक्कत आती है नेट नहीं चलता है अच्छी तरह से सबसे घटिया रेट है यह जिओ का और इसे को कोई भी ना लगवाएं,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2c295bbf19b6,8,आज कल थोड़ा कम चल रहा है वे से पहले ठीक चलता था,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f04c934e96a8,10,Accha service hai,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1a934a4b757d,10,Acha chalta hai,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-889bd2c8c0ca,9,Acha hai,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2a167792734b,0,"बेकार नेटवर्क आता ही नहीं है
-",General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-67c5010b05e7,10,Acha hai,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d919d5d376ff,10,Acha he,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-a15a250e6fdd,5,"दो तीन महीने से नेट में लगातार परेशानी आ रही हैं fluctuation हो रही हैं
-",Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-553cb212ae38,10,Achcha 👍,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-725a13e5f3c5,4,"हर दूसरे दिन तो नेट बंद हो जाते है आपका अपने सिग्नल ठीक करो एक महीने में दस दिन चलता नहीं हे
-",Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-8d7895286270,1,"व्योम (Wiom) नेट की सेवायें प्रति माह कम से कम 10 दिन बाधित रहती हैं मैं अशोक कुमार शरद सिटी कॉलोनी निवासी लोनी में पिछले 7 महीने से इस समस्या का सामना कर रहा हूं कभी कभी तो परेशान होकर व्योम (Wiom) नेट की सेवायें बंद करने का मन करता है
-",Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-3461f6c01035,7,कभी कभी स्लो चलता हे... रिचार्ज करने पर तुरंत नहीं कही घंटे बाद या फिर दुसरे दीन सर्विस चालू होती हे!,"RDNI (Recharge Done, No Internet)",,,Verma,,0,WA,Sprint RSP3,2026-03-01
-88423e620c79,10,Achcha network hai,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-78e6ec7b0147,0,व्योम का सर्विस बहुत खराब है नेट बंद होने पर जल्दी सही नहीं होता है घंटों इंतजार करना पड़ता है,No/Late Complaint Resolution,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9379c0d2373b,10,Achi service,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5e131fe19282,0,Aap ki service bhi teek nahi hain. And application me bhi kuch show nahi karta aur na hi complaint ho pati hai,Bad Application,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-7a44519ee2c8,0,Aap ki service third class hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-54e7d0a5b435,8,नेट की स्पीड अच्छी आती है पर 1 महीने में कभी भी 2-3 बार बंद तो होता ही है वो शिकायत करने पर चल जाता है पर कोई मीटिंग में हो और एक दम से नेट बंद हो जाए तो उसके लिए बहुत दिक्कत की बात है इसके लिए मैंने 8 स्टार दिए|,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5b67ff2c63f3,0,Aapka net bahut slow chalta hai,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-bc1b5b214298,0,Aapka net bar bar band hota hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e3a0832e51ac,5,Aapka service Sahi Nahin Hai बार-बार network kharab Hota Hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5a2b4a4ba2c9,9,After 10 to 15 days wifi has stopped it's happens every month,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-02a746a245cb,7,"महीने में 3-4 बार Wiom नेट सेवायें अपने आप बैंड हो जाती हैं, जिससे बहुत परेशानी होती है। ये 5 से 24 घंटे तक के लिए बंद रहती हैं।",Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0c92e15bebe2,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2b0546ee2176,0,Aapki service bhut kharab hai kyuki mahine me kitni baar mujhe dikkato ka samna karna padta hai har mahine chalte chalte net band ho jata hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5c98235898cd,8,Aap ka appp tik nahi hai recharge ma probal aati hai,Bad Application,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d3450ca3ab3c,7,Aapki Jo service Hai vah acchi hai,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d84b87313a3a,2,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-12271b5a9ba1,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-cba15169a116,10,aise hi bus,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-13b78693e6a1,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-fa901d0e8413,10,Bad net oooooooooooooook,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c9c42cc0e23f,10,badiya chal raha hai hamara net kabi kabi dikkat aati hai par todi dar mai thik ho jati hai good net,Fast Complaint Resolution,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6bac859c83b0,0,aaye din eska network problem hota hai theek se net nhi chalta,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ece3f5c1ae08,0,About net speed and it's customer care server and service,Slow Speed,Bad Customer Support - Call Centre ,,Verma,,0,WA,Sprint RSP3,2026-03-01
-bfc98194d7d8,0,"Absolutely useless service, even though I recharged for two days, the internet is still down. There was an important match yesterday.If you call, who doesn't answer on time?",Internet Down,Bad Customer Support - Call Centre ,,Verma,,0,WA,Sprint RSP3,2026-03-01
-34568f2d59a0,5,"Achi sarvice hain 
- But Autopay bs ek saal ka hain..",,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-b82ba98fdc8e,0,Any time network issue,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c8ef0841791b,0,Apka net chalta nhi hai uper se last 4 days se net not working hai koi response nhi hai ap logo ki side se. recharge waste hora hai feed back se phele wifi thik karwao ya nikal ke le jao,Internet Down,Bad Customer Support - Call Centre ,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a922f05ac83f,0,Apka net kabhi bhi chala jata hai khaas kr raat mein aur costumer care cll nahi pick krte,Bad Customer Support - Call Centre ,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d66787263409,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-77439d3f9f99,3,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-17d9c11149ab,0,"Apke jo distuber hai wo bahut bekar hai 
+सादर Rahul",General Good Service,,,Verma,,1083,WA,Sprint RSP3,2026-03-01,
+8108433730,0,"बहुत ही खराब है आप लोगो का नेटवर्क
+",General Bad Service,,,Verma,,669,WA,Sprint RSP3,2026-03-01,
+9711107587,1,"बहुत ही बुरा Network है, हर वक़्त गायब हो जाता है
+",General Bad Service,,,Verma,,465,WA,Sprint RSP3,2026-03-01,
+9968228390,0,बहुत ज्यादा दिक्कत आती है नेट नहीं चलता है अच्छी तरह से सबसे घटिया रेट है यह जिओ का और इसे को कोई भी ना लगवाएं,General Bad Service,,,Verma,,344,WA,Sprint RSP3,2026-03-01,
+9811446820,8,आज कल थोड़ा कम चल रहा है वे से पहले ठीक चलता था,Slow Speed,,,Verma,,811,WA,Sprint RSP3,2026-03-01,
+6395898564,10,Accha service hai,General Good Service,,,Verma,,1051,CT,Sprint RSP3,2026-03-01,
+8287201494,10,Acha chalta hai,General Good Service,,,Verma,,205,WA,Sprint RSP3,2026-03-01,
+9627694166,9,Acha hai,General Good Service,,,Verma,,100,WA,Sprint RSP3,2026-03-01,
+9310773733,0,"बेकार नेटवर्क आता ही नहीं है
+",General Bad Service,,,Verma,,724,CT,Sprint RSP3,2026-03-01,
+9211165310,10,Acha hai,General Good Service,,,Verma,,88,WA,Sprint RSP3,2026-03-01,
+9643632569,10,Acha he,General Good Service,,,Verma,,178,CT,Sprint RSP3,2026-03-01,
+9899824457,5,"दो तीन महीने से नेट में लगातार परेशानी आ रही हैं fluctuation हो रही हैं
+",Frequent Disconnections,,,Verma,,1295,WA,Sprint RSP3,2026-03-01,
+9311131154,10,Achcha ðŸ‘_x008d_,General Good Service,,,Verma,,373,CT,Sprint RSP3,2026-03-01,
+9136141500,4,"हर दूसरे दिन तो नेट बंद हो जाते है आपका अपने सिग्नल ठीक करो एक महीने में दस दिन चलता नहीं हे
+",Frequent Disconnections,,,Verma,,667,CT,Sprint RSP3,2026-03-01,
+9818696519,1,"व्योम (Wiom) नेट की सेवायें प्रति माह कम से कम 10 दिन बाधित रहती हैं मैं अशोक कुमार शरद सिटी कॉलोनी निवासी लोनी में पिछले 7 महीने से इस समस्या का सामना कर रहा हूं कभी कभी तो परेशान होकर व्योम (Wiom) नेट की सेवायें बंद करने का मन करता है
+",Frequent Disconnections,,,Verma,,275,WA,Sprint RSP3,2026-03-01,
+9768674830,7,कभी कभी स्लो चलता हे... रिचार्ज करने पर तुरंत नहीं कही घंटे बाद या फिर दुसरे दीन सर्विस चालू होती हे!,"RDNI (Recharge Done, No Internet)",,,Verma,,189,WA,Sprint RSP3,2026-03-01,
+8700884140,10,Achcha network hai,General Good Service,,,Verma,,5,WA,Sprint RSP3,2026-03-01,
+9868983471,0,व्योम का सर्विस बहुत खराब है नेट बंद होने पर जल्दी सही नहीं होता है घंटों इंतजार करना पड़ता है,No/Late Complaint Resolution,,,Verma,,661,WA,Sprint RSP3,2026-03-01,
+9560390953,10,Achi service,General Good Service,,,Verma,,398,WA,Sprint RSP3,2026-03-01,
+7011193028,0,Aap ki service bhi teek nahi hain. And application me bhi kuch show nahi karta aur na hi complaint ho pati hai,Bad Application,,,Verma,,469,CT,Sprint RSP3,2026-03-01,
+8882873386,0,Aap ki service third class hai,General Bad Service,,,Verma,,459,WA,Sprint RSP3,2026-03-01,
+7678459585,8,नेट की स्पीड अच्छी आती है पर 1 महीने में कभी भी 2-3 बार बंद तो होता ही है वो शिकायत करने पर चल जाता है पर कोई मीटिंग में हो और एक दम से नेट बंद हो जाए तो उसके लिए बहुत दिक्कत की बात है इसके लिए मैंने 8 स्टार दिए|,Frequent Disconnections,,,Verma,,234,WA,Sprint RSP3,2026-03-01,
+9313160945,0,Aapka net bahut slow chalta hai,Slow Speed,,,Verma,,933,WA,Sprint RSP3,2026-03-01,
+9967624838,0,Aapka net bar bar band hota hai,Frequent Disconnections,,,Verma,,111,WA,Sprint RSP3,2026-03-01,
+9821202775,5,Aapka service Sahi Nahin Hai à¤¬à¤¾à¤°-à¤¬à¤¾à¤° network kharab Hota Hai,General Bad Service,,,Verma,,54,WA,Sprint RSP3,2026-03-01,
+9599094004,9,After 10 to 15 days wifi has stopped it's happens every month,Frequent Disconnections,,,Verma,,1035,WA,Sprint RSP3,2026-03-01,
+9310032455,7,"महीने में 3-4 बार Wiom नेट सेवायें अपने आप बैंड हो जाती हैं, जिससे बहुत परेशानी होती है। ये 5 से 24 घंटे तक के लिए बंद रहती हैं।",Frequent Disconnections,,,Verma,,657,WA,Sprint RSP3,2026-03-01,
+8700980668,0,,,,,Verma,,180,WA,Sprint RSP3,2026-03-01,
+7065723110,0,Aapki service bhut kharab hai kyuki mahine me kitni baar mujhe dikkato ka samna karna padta hai har mahine chalte chalte net band ho jata hai,Frequent Disconnections,,,Verma,,123,WA,Sprint RSP3,2026-03-01,
+9835929818,8,Aap ka appp tik nahi hai recharge ma probal aati hai,Bad Application,,,Verma,,311,WA,Sprint RSP3,2026-03-01,
+9910023058,7,Aapki Jo service Hai vah acchi hai,General Good Service,,,Verma,,830,WA,Sprint RSP3,2026-03-01,
+9939504391,2,,,,,Verma,,202,WA,Sprint RSP3,2026-03-01,
+8920773529,10,,,,,Verma,,284,WA,Sprint RSP3,2026-03-01,
+9717318729,10,aise hi bus,General Good Service,,,Verma,,745,WA,Sprint RSP3,2026-03-01,
+9267927526,0,,,,,Verma,,195,WA,Sprint RSP3,2026-03-01,
+7900191640,10,Bad net oooooooooooooook,General Bad Service,,,Verma,,524,CT,Sprint RSP3,2026-03-01,
+7906173243,10,badiya chal raha hai hamara net kabi kabi dikkat aati hai par todi dar mai thik ho jati hai good net,Fast Complaint Resolution,,,Verma,,327,WA,Sprint RSP3,2026-03-01,
+8851772407,0,aaye din eska network problem hota hai theek se net nhi chalta,General Bad Service,,,Verma,,151,CT,Sprint RSP3,2026-03-01,
+6264286503,0,About net speed and it's customer care server and service,Slow Speed,Bad Customer Support - Call Centre,,Verma,,665,WA,Sprint RSP3,2026-03-01,
+8805054607,0,"Absolutely useless service, even though I recharged for two days, the internet is still down. There was an important match yesterday.If you call, who doesn't answer on time?",Internet Down,Bad Customer Support - Call Centre,,Verma,,116,WA,Sprint RSP3,2026-03-01,
+7503208446,5,"Achi sarvice hain 
+ But Autopay bs ek saal ka hain..",,,,Verma,,541,WA,Sprint RSP3,2026-03-01,
+8800265774,0,Any time network issue,Frequent Disconnections,,,Verma,,591,WA,Sprint RSP3,2026-03-01,
+8882819029,0,Apka net chalta nhi hai uper se last 4 days se net not working hai koi response nhi hai ap logo ki side se. recharge waste hora hai feed back se phele wifi thik karwao ya nikal ke le jao,Internet Down,Bad Customer Support - Call Centre,,Verma,,411,WA,Sprint RSP3,2026-03-01,
+9643775533,0,Apka net kabhi bhi chala jata hai khaas kr raat mein aur costumer care cll nahi pick krte,Bad Customer Support - Call Centre,,,Verma,,56,WA,Sprint RSP3,2026-03-01,
+7011653050,10,,,,,Verma,,278,WA,Sprint RSP3,2026-03-01,
+8869087175,3,,,,,Verma,,55,WA,Sprint RSP3,2026-03-01,
+9582902002,0,"Apke jo distuber hai wo bahut bekar hai 
  Apki WiFi ki service or bekar week me 2 din to band hi rahta hai no network Wi-Fi shift Krna ho to high amount btate hai 
- Isse acha to dusra network le lenge",Bad Customer Support - Technician,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f19fce44d0f9,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c791d225b3b9,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ca19ea7d9825,10,Bcoz it's a worth it,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-b87f55b2ebfb,0,App ka network sahi kaam nahi karta ha speed nahi aati ha,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-82a0ec727c41,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c9944971629a,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-fc4c15848d3e,0,"Baar baar net ka taar tut jana , bahut time lagta hai problem solve hone me",Frequent Disconnections,No/Late Complaint Resolution,,Verma,,0,CT,Sprint RSP3,2026-03-01
-06fbaa2f2a61,10,Bdia h,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-30e0a3295e4b,0,Baar baar net ruk jata h,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c75f7a29be67,0,Bad connectivity,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-4b0cc6bd77e3,0,Bad internet service not worth it,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6cfde3bd72d5,4,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d38539626e86,0,Bad network bad service,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-7c44bbcd7564,0,Bad service,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d470a5d18202,0,Bad service,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d541f40c25f8,0,Bad service,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-11cd01f32753,10,Because affordable plan and also available prepaid plans,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e8eb231d7f03,0,Bad service bad experience I am,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-630f3c1bf4ee,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-16dab74b8fc8,1,Bahut achcha,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-bb254378603f,0,Bahut ghatiya hai isase badhiya to aur koi net hai aadhe Din to yah Bandhi rahata Hai Kabhi iski wire cut Jaati Hai Ek Mahina bol kar 28 Din deta hai main to bilkul Nahin kahunga Kisi Ko Bhi Lagane ke liye recharge bhi bahut mahanga hai iska Aaye Din ismein bahut dikkat Aati Hai bahut bekar net chalta hai iska Majburi thi isliye lagwa liya na to yah ghatiya hi hai aur ghatiya rahega Jo Koi Bhi yah lagvata hai chutiya hi kahlata hai isase badhiya jio lagvaen per Airtel lagvaen Humko to bilkul na lagvaen sakh,Expensive,28-Day Plan Issue,,Verma,,0,CT,Sprint RSP3,2026-03-01
-9033d510d34e,7,Acha hai,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-994e038d32a6,7,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7db4ba3edb4a,0,"Bahut hi bekar sarvis h,, koi b mt lena",General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-20245d95ebec,0,Bahut karab hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-3d007feaf906,0,Bahut slow chalta h kabhi bhi band ho jata h,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-df9a5fdc6a9e,0,Bahut slow net hai,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-df72a18c3914,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-39b865c20267,7,Disconnecting issue and buffer bhut krata h,Frequent Disconnections,Slow Speed,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ea602235141e,7,Evenings after 7pm internet connectivity breaks or can say lag hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-bb8e064133de,0,Bakwas h jb kabhi bhi chalte chalte net rukh jata h kbhi bohot zyada slow ho jata h,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d6dd2a3e2ab7,1,Bakwas service,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-852f1c3c9b6b,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7f49c12922a2,1,Bar bar conection out ho jata hai net speed sahi nahi hai network issue bhout jeyada drop hai is problem ko bhout jaldi sahi karo 👍,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-dfad0256d56f,4,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6e829212cda0,0,Be disconnect again and again in a day,Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-25473032276b,0,Because I am also not happy with this wifi,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9e47989060c6,8,Good,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-73216d95e8f1,10,Because it is very little prize,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9f749f2e5df4,10,Best,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f84a1192a28c,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-23f642e4f284,2,Because it stop any time with no internet problem and waste very time,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-bb25ef94630e,6,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5b9b149c4884,5,Because sometimes the internet goes off and it is very annoying and sometimes internet speed is too slow,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7824fc23f0d9,2,"Because this has never happened before, this time they shut down the internet without any problem, after filing so many complaints and making so many calls, today after three days they have started the internet.",No/Late Complaint Resolution,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c8606196345a,10,Best,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-245fb06149bf,5,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ef18ebf355de,10,Best h,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d4c3d9877a94,0,Because wiom wifi stops frequently every month. We have to complain every time and then it gets resolved but there is no compensation given for the days the wifi doesn't work,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2eddbdde129c,7,Good network and service,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-808081f688b2,10,Best network,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-06dc9bbf2076,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-eb1eab18dd5e,10,Best product best service,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-baf55a99f3bf,10,Best sarvice and free router recharge khatam hone se pehle mi aap batate is liye taplik ny hoti,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-79297a95a1d5,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e8bd12e760e4,0,Bed expirians bed service,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-8412a5987157,0,Bekar haii company band krdo,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-dd922c2881bc,3,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a2f88129e7bf,0,Bekar service 30 din m 10 din hi chlta h,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-cb5aec050147,9,Best service,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a5df9371db8f,7,Good👍,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7b496c4def97,10,best servise,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c2ffe0a8d92a,1,Bekar wifi isme wifi calling ka signal nahi milta hai dusre wifi mai mil jata hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d5ed4ac4e538,6,Best' sarvice,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6ebdcf14b94a,0,Bhot kharab nat ata hai or jitne br bhi bolo koye fark nahi parta,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6dedb69b9309,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-bb855134e74d,0,Bhot kharab sarvis,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-fac58051fe1d,1,Bhot slow chlta h,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6ce018e8433f,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-deb33b39a34c,10,Best Speed,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-800409970f5d,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-120fc8c0bc59,10,Best speed affordable,Affordable,Good Speed,,Verma,,0,CT,Sprint RSP3,2026-03-01
-67ab866b99f5,0,Bhot slow network speed hai wiom,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-5dc6528e0dd3,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-97380173bdd6,0,Bht dikkat aati h net use krne me bar bar net ruk jata h .,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0b6c59e37f81,0,Bht ganda network h,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7132a72abcb9,0,Bhut ganda h koi mt lgwana tola pe kelog,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-667887dec558,4,Bich bich mai band ho jata hai dusre kamre tak wifi nahi aata,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-b35deb76ead2,1,Bich bich me bnd ho jata h me ise replace karne ka plan kr rha hu,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-41ccb790aa0e,0,Bilkul kharab net chalata hain speed nahi deta,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2a76d5b768eb,3,Bkwaas h bikul,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-9f500168a7a4,10,"Best wiom wifi hai ,service and network 🛜 very nice.",General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-3da0c1077f1e,10,Bhaut he acha rejalat hai,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5dcb22542f37,10,Bhtar suvidha Bhtar net👍,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7fad878ddff5,0,Bohot bekar wifi h,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7c5bc832b9c5,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-35ad0de853ab,5,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f1c4df58d27d,10,Bhut badia,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6b9254587c5f,10,Bina rukawat k chalta h wiom net,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1494356df80c,10,Buts you gives me a offer,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-b74b3b5e76ea,10,Cheapest,Affordable,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-09fc05353d00,9,Excellent,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0f6e870e7573,0,chalta hi nhi h,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-87019132401e,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-1280f2750647,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ab15bcb59d91,0,Chalta nahi service man aata nahi bulane pe or ek mahina wifi pura band raha hai,Bad Customer Support - Technician,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-607446fd9a17,10,Family budget mei hai,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-fab4b48328de,5,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-594f2797164b,0,Chalta nhi theek se Billkul bhi kavi chalta hain to kavi nhi or what's up ki call to theek se hoti hi nhi hain,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c6a3813fd82d,0,Complain kre hue 4 din hogye h koi kisi trha ki sunwai nhi h,No/Late Complaint Resolution,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-25213d810f91,10,fast network speed,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7af3e4e0ce20,5,Complaint per koi response nahi hai,Bad Customer Support - Call Centre ,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-bf78926718ec,9,Good,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-316cdb95c789,1,Connection chla jata h jab jab hum recharge krte hai disconnect ho jayega uper se sahi se network bhi nhi aata,Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-562a522208f8,0,Costumer ghar nhi aya shi karne problem hum yeh wifi hata denge aisa hi rhega to,Bad Customer Support - Technician,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f11d8b1bc88b,1,"Daily wifi band ho jata hai, service providers 00",Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-102b2fbf409e,10,Good,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-42bdbe84fe50,0,Difficult in changing password I dont like this.,Bad Application,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6c98db30b2dc,3,Diktak aati ha jada,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7798a1dc994e,0,Ekdm Bakwaas,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-54e76fc936ed,8,I love the service of wiom and one of the best thing whenever there is issue they restore it asap,Fast Complaint Resolution,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6673895c17cf,10,Good after sale service,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-b1b437aba41a,10,Good Internet quality,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-b8e933db74da,10,Good nat he isliy,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-bf8b9dadd31f,10,Good network,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7e603610f74b,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-66210f183580,3,Everyday some problem or the other keep coming up,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6b4ed3ce4ff1,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-32b8775981a4,10,Good network,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ebdf0725e959,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d1892a481e1e,5,Fast network and best wiom app hai,Good Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2590158fb45e,10,Good network experience we suggest people for this connection.,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7a94e4bfd4df,6,Frequently net goes very slow,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d3466aa001f6,9,Good network service but not good technical support service so please increase your technical and customer support service 👍 best of luck,General Good Service,Bad Customer Support - Call Centre ,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d52ad8cc356e,0,Ghatiya service network,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-3a28f901cb4d,3,Ghtia sarves hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ec3f4483bf14,10,Good service,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-3733bcb0624b,8,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-07b0cd9a6cd8,10,good service,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-96b0fa541d35,1,Good,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-78e5a16db6e2,10,Good service,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-943c1e97b62e,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-df4c37816fd1,4,Ha,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-199d5e372fe7,7,I want to shift my wifi connection to my new flat which is only 400 metre away from current wifi connection,Shifting not Feasible,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a0a94bbc5f66,0,Hame apne family vale ke lava kisi ko nhi dena,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5be58b0b0249,10,Good Service,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d63dc2aa3ccf,10,Good service,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-029429c35598,0,Har 3-4 din baad iska wifi nahi chalta hai,Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-76679d1b4b02,7,I would give 10 but the speed is slow that's why I am giving it 7,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-4ce6fdf0359d,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-3b16271ba559,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9c4028412551,0,Har aathve din hamara hi net hafte mein do bar kharab rahata Hai to Kya bataenge dusron ko,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2fd3a9873508,8,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-78df942b54cb,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-96e9de74b31d,1,Har das din baad modem me laal bati jalne lag jaati hai.nha jaldi theek karwa dete nhai. lekin problum jyada rahti hai.our app bhi poora nahi dikhta hai.,Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-54289a4e4e27,0,Har dusre din internet cable kahi na kahi cut ho jati hai. Month me 28 days milte hai internet use krne ke liye jisme se 15 din bhi sahi se use nahi kr pate. Waste of money hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-3f88f0097ae6,0,Har dusre din wifi nahi chalta usme red light showhoti h,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a0f80dec92ee,5,In between network disruption is common and no further compensation for that is provided,Bad Customer Support - Call Centre ,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0df4bd7eec02,1,Internet नहीं चलता है सही से हर सप्ताह इंटरनेट कट हो जाता है slow speed,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6c30f76520ce,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c6cf83d61007,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7992a0129b89,3,Internet ka hoti log signal aate Hain aur har EK do din mein net nahin chalta,Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ff388a8443c8,5,"Internet loos ki bahut problem ho rhi h 
+ Isse acha to dusra network le lenge",Bad Customer Support - Technician,,,Verma,,316,WA,Sprint RSP3,2026-03-01,
+9761253633,10,,,,,Verma,,72,WA,Sprint RSP3,2026-03-01,
+9372694732,10,,,,,Verma,,664,WA,Sprint RSP3,2026-03-01,
+8595561073,10,Bcoz it's a worth it,Affordable,,,Verma,,125,WA,Sprint RSP3,2026-03-01,
+9358650377,0,App ka network sahi kaam nahi karta ha speed nahi aati ha,Slow Speed,,,Verma,,176,WA,Sprint RSP3,2026-03-01,
+9318417020,10,,,,,Verma,,54,WA,Sprint RSP3,2026-03-01,
+8279326618,10,,,,,Verma,,427,WA,Sprint RSP3,2026-03-01,
+8586804864,0,"Baar baar net ka taar tut jana , bahut time lagta hai problem solve hone me",Frequent Disconnections,No/Late Complaint Resolution,,Verma,,248,CT,Sprint RSP3,2026-03-01,
+7303205884,10,Bdia h,General Good Service,,,Verma,,139,WA,Sprint RSP3,2026-03-01,
+8130262434,0,Baar baar net ruk jata h,Slow Speed,,,Verma,,187,CT,Sprint RSP3,2026-03-01,
+8126343388,0,Bad connectivity,General Bad Service,,,Verma,,360,WA,Sprint RSP3,2026-03-01,
+8595351475,0,Bad internet service not worth it,General Bad Service,,,Verma,,276,WA,Sprint RSP3,2026-03-01,
+9084300472,4,,,,,Verma,,299,WA,Sprint RSP3,2026-03-01,
+8742959687,0,Bad network bad service,General Bad Service,,,Verma,,101,CT,Sprint RSP3,2026-03-01,
+7709574591,0,Bad service,General Bad Service,,,Verma,,435,WA,Sprint RSP3,2026-03-01,
+9911965366,0,Bad service,General Bad Service,,,Verma,,574,WA,Sprint RSP3,2026-03-01,
+7678547100,0,Bad service,General Bad Service,,,Verma,,659,WA,Sprint RSP3,2026-03-01,
+9718566947,10,Because affordable plan and also available prepaid plans,Affordable,,,Verma,,21,WA,Sprint RSP3,2026-03-01,
+9619634780,0,Bad service bad experience I am,General Bad Service,,,Verma,,656,CT,Sprint RSP3,2026-03-01,
+8585932424,0,,,,,Verma,,539,WA,Sprint RSP3,2026-03-01,
+9319340448,1,Bahut achcha,,,,Verma,,257,WA,Sprint RSP3,2026-03-01,
+8368500255,0,Bahut ghatiya hai isase badhiya to aur koi net hai aadhe Din to yah Bandhi rahata Hai Kabhi iski wire cut Jaati Hai Ek Mahina bol kar 28 Din deta hai main to bilkul Nahin kahunga Kisi Ko Bhi Lagane ke liye recharge bhi bahut mahanga hai iska Aaye Din ismein bahut dikkat Aati Hai bahut bekar net chalta hai iska Majburi thi isliye lagwa liya na to yah ghatiya hi hai aur ghatiya rahega Jo Koi Bhi yah lagvata hai chutiya hi kahlata hai isase badhiya jio lagvaen per Airtel lagvaen Humko to bilkul na lagvaen sakh,Expensive,28-Day Plan Issue,,Verma,,433,CT,Sprint RSP3,2026-03-01,
+9667138353,7,Acha hai,General Good Service,,,Verma,,114,WA,Sprint RSP3,2026-03-01,
+8882068867,7,,,,,Verma,,110,WA,Sprint RSP3,2026-03-01,
+9557244566,0,"Bahut hi bekar sarvis h,, koi b mt lena",General Bad Service,,,Verma,,369,WA,Sprint RSP3,2026-03-01,
+8826062930,0,Bahut karab hai,General Bad Service,,,Verma,,3,WA,Sprint RSP3,2026-03-01,
+9717350847,0,Bahut slow chalta h kabhi bhi band ho jata h,Slow Speed,,,Verma,,243,WA,Sprint RSP3,2026-03-01,
+7400240768,0,Bahut slow net hai,Slow Speed,,,Verma,,61,WA,Sprint RSP3,2026-03-01,
+7827620942,10,,,,,Verma,,507,WA,Sprint RSP3,2026-03-01,
+8929314658,7,Disconnecting issue and buffer bhut krata h,Frequent Disconnections,Slow Speed,,Verma,,235,WA,Sprint RSP3,2026-03-01,
+7011005654,7,Evenings after 7pm internet connectivity breaks or can say lag hai,Frequent Disconnections,,,Verma,,144,WA,Sprint RSP3,2026-03-01,
+8527760702,0,Bakwas h jb kabhi bhi chalte chalte net rukh jata h kbhi bohot zyada slow ho jata h,Slow Speed,,,Verma,,545,WA,Sprint RSP3,2026-03-01,
+9310865016,1,Bakwas service,General Bad Service,,,Verma,,555,CT,Sprint RSP3,2026-03-01,
+8860771955,10,,,,,Verma,,160,WA,Sprint RSP3,2026-03-01,
+9871639147,1,Bar bar conection out ho jata hai net speed sahi nahi hai network issue bhout jeyada drop hai is problem ko bhout jaldi sahi karo ðŸ‘_x008d_,Slow Speed,,,Verma,,323,WA,Sprint RSP3,2026-03-01,
+8447166330,4,,,,,Verma,,721,WA,Sprint RSP3,2026-03-01,
+9717930920,0,Be disconnect again and again in a day,Frequent Disconnections,,,Verma,,1031,CT,Sprint RSP3,2026-03-01,
+7428770382,0,Because I am also not happy with this wifi,General Bad Service,,,Verma,,209,WA,Sprint RSP3,2026-03-01,
+7011085018,8,Good,General Good Service,,,Verma,,635,WA,Sprint RSP3,2026-03-01,
+7042812013,10,Because it is very little prize,Affordable,,,Verma,,431,WA,Sprint RSP3,2026-03-01,
+9310428071,10,Best,General Good Service,,,Verma,,908,WA,Sprint RSP3,2026-03-01,
+7065906595,10,,,,,Verma,,1015,WA,Sprint RSP3,2026-03-01,
+8595227516,2,Because it stop any time with no internet problem and waste very time,Frequent Disconnections,,,Verma,,953,WA,Sprint RSP3,2026-03-01,
+9873174983,6,,,,,Verma,,643,WA,Sprint RSP3,2026-03-01,
+9871856653,5,Because sometimes the internet goes off and it is very annoying and sometimes internet speed is too slow,Slow Speed,,,Verma,,944,WA,Sprint RSP3,2026-03-01,
+7827986262,2,"Because this has never happened before, this time they shut down the internet without any problem, after filing so many complaints and making so many calls, today after three days they have started the internet.",No/Late Complaint Resolution,,,Verma,,297,WA,Sprint RSP3,2026-03-01,
+7011516751,10,Best,General Good Service,,,Verma,,556,CT,Sprint RSP3,2026-03-01,
+9811276959,5,,,,,Verma,,537,WA,Sprint RSP3,2026-03-01,
+9259562569,10,Best h,General Good Service,,,Verma,,254,WA,Sprint RSP3,2026-03-01,
+9990886857,0,Because wiom wifi stops frequently every month. We have to complain every time and then it gets resolved but there is no compensation given for the days the wifi doesn't work,Frequent Disconnections,,,Verma,,274,WA,Sprint RSP3,2026-03-01,
+9871484661,7,Good network and service,General Good Service,,,Verma,,195,WA,Sprint RSP3,2026-03-01,
+8802220188,10,Best network,General Good Service,,,Verma,,1126,CT,Sprint RSP3,2026-03-01,
+9076334339,0,,,,,Verma,,276,WA,Sprint RSP3,2026-03-01,
+8799765639,10,Best product best service,General Good Service,,,Verma,,305,CT,Sprint RSP3,2026-03-01,
+8976729757,10,Best sarvice and free router recharge khatam hone se pehle mi aap batate is liye taplik ny hoti,Affordable,,,Verma,,210,WA,Sprint RSP3,2026-03-01,
+7065207095,0,,,,,Verma,,139,WA,Sprint RSP3,2026-03-01,
+9069060041,0,Bed expirians bed service,General Bad Service,,,Verma,,75,CT,Sprint RSP3,2026-03-01,
+9654093809,0,Bekar haii company band krdo,General Bad Service,,,Verma,,498,WA,Sprint RSP3,2026-03-01,
+8169691625,3,,,,,Verma,,527,WA,Sprint RSP3,2026-03-01,
+9897900902,0,Bekar service 30 din m 10 din hi chlta h,Frequent Disconnections,,,Verma,,889,WA,Sprint RSP3,2026-03-01,
+8076662356,9,Best service,General Good Service,,,Verma,,510,WA,Sprint RSP3,2026-03-01,
+9711753452,7,GoodðŸ‘_x008d_,General Good Service,,,Verma,,396,WA,Sprint RSP3,2026-03-01,
+9582087786,10,best servise,General Good Service,,,Verma,,106,WA,Sprint RSP3,2026-03-01,
+9990909421,1,Bekar wifi isme wifi calling ka signal nahi milta hai dusre wifi mai mil jata hai,General Bad Service,,,Verma,,107,WA,Sprint RSP3,2026-03-01,
+8826676406,6,Best' sarvice,,,,Verma,,264,WA,Sprint RSP3,2026-03-01,
+7860952786,0,Bhot kharab nat ata hai or jitne br bhi bolo koye fark nahi parta,General Bad Service,,,Verma,,299,CT,Sprint RSP3,2026-03-01,
+9870592974,10,,,,,Verma,,1066,WA,Sprint RSP3,2026-03-01,
+9654083540,0,Bhot kharab sarvis,General Bad Service,,,Verma,,503,CT,Sprint RSP3,2026-03-01,
+8755463659,1,Bhot slow chlta h,Slow Speed,,,Verma,,881,WA,Sprint RSP3,2026-03-01,
+8368096203,10,,,,,Verma,,321,WA,Sprint RSP3,2026-03-01,
+6395658557,10,Best Speed,Good Speed,,,Verma,,435,WA,Sprint RSP3,2026-03-01,
+9716888481,10,,,,,Verma,,404,WA,Sprint RSP3,2026-03-01,
+9540262513,10,Best speed affordable,Affordable,Good Speed,,Verma,,52,CT,Sprint RSP3,2026-03-01,
+8130440252,0,Bhot slow network speed hai wiom,Slow Speed,,,Verma,,167,CT,Sprint RSP3,2026-03-01,
+7042582513,10,,,,,Verma,,344,WA,Sprint RSP3,2026-03-01,
+8860416907,0,Bht dikkat aati h net use krne me bar bar net ruk jata h .,Slow Speed,,,Verma,,346,WA,Sprint RSP3,2026-03-01,
+7210662261,0,Bht ganda network h,General Bad Service,,,Verma,,638,WA,Sprint RSP3,2026-03-01,
+8800311624,0,Bhut ganda h koi mt lgwana tola pe kelog,General Bad Service,,,Verma,,161,CT,Sprint RSP3,2026-03-01,
+9311506472,4,Bich bich mai band ho jata hai dusre kamre tak wifi nahi aata,Frequent Disconnections,,,Verma,,107,WA,Sprint RSP3,2026-03-01,
+9915658017,1,Bich bich me bnd ho jata h me ise replace karne ka plan kr rha hu,Frequent Disconnections,,,Verma,,318,WA,Sprint RSP3,2026-03-01,
+8744846874,0,Bilkul kharab net chalata hain speed nahi deta,Slow Speed,,,Verma,,72,WA,Sprint RSP3,2026-03-01,
+7065626916,3,Bkwaas h bikul,General Bad Service,,,Verma,,564,CT,Sprint RSP3,2026-03-01,
+9310385233,10,"Best wiom wifi hai ,service and network ðŸ›œ very nice.",General Good Service,,,Verma,,27,WA,Sprint RSP3,2026-03-01,
+9990541344,10,Bhaut he acha rejalat hai,General Good Service,,,Verma,,391,WA,Sprint RSP3,2026-03-01,
+9717264471,10,Bhtar suvidha Bhtar netðŸ‘_x008d_,General Good Service,,,Verma,,338,WA,Sprint RSP3,2026-03-01,
+7827675700,0,Bohot bekar wifi h,General Bad Service,,,Verma,,797,WA,Sprint RSP3,2026-03-01,
+9717848084,10,,,,,Verma,,12,WA,Sprint RSP3,2026-03-01,
+8178673681,5,,,,,Verma,,117,WA,Sprint RSP3,2026-03-01,
+7701893035,10,Bhut badia,General Good Service,,,Verma,,101,CT,Sprint RSP3,2026-03-01,
+8368642885,10,Bina rukawat k chalta h wiom net,General Good Service,,,Verma,,179,CT,Sprint RSP3,2026-03-01,
+9627179967,10,Buts you gives me a offer,General Good Service,,,Verma,,199,CT,Sprint RSP3,2026-03-01,
+9582004936,10,Cheapest,Affordable,,,Verma,,115,CT,Sprint RSP3,2026-03-01,
+8882182735,9,Excellent,General Good Service,,,Verma,,387,WA,Sprint RSP3,2026-03-01,
+7701884844,0,chalta hi nhi h,General Bad Service,,,Verma,,101,WA,Sprint RSP3,2026-03-01,
+9557264098,10,,,,,Verma,,573,WA,Sprint RSP3,2026-03-01,
+8279375436,10,,,,,Verma,,192,WA,Sprint RSP3,2026-03-01,
+9818758951,0,Chalta nahi service man aata nahi bulane pe or ek mahina wifi pura band raha hai,Bad Customer Support - Technician,,,Verma,,188,WA,Sprint RSP3,2026-03-01,
+7827401055,10,Family budget mei hai,Affordable,,,Verma,,53,WA,Sprint RSP3,2026-03-01,
+7217606267,5,,,,,Verma,,180,WA,Sprint RSP3,2026-03-01,
+9953276792,0,Chalta nhi theek se Billkul bhi kavi chalta hain to kavi nhi or what's up ki call to theek se hoti hi nhi hain,General Bad Service,,,Verma,,1270,WA,Sprint RSP3,2026-03-01,
+9760272709,0,Complain kre hue 4 din hogye h koi kisi trha ki sunwai nhi h,No/Late Complaint Resolution,,,Verma,,328,WA,Sprint RSP3,2026-03-01,
+9873677936,10,fast network speed,Good Speed,,,Verma,,125,WA,Sprint RSP3,2026-03-01,
+9354497206,5,Complaint per koi response nahi hai,Bad Customer Support - Call Centre,,,Verma,,73,WA,Sprint RSP3,2026-03-01,
+9873424105,9,Good,General Good Service,,,Verma,,272,WA,Sprint RSP3,2026-03-01,
+8802426319,1,Connection chla jata h jab jab hum recharge krte hai disconnect ho jayega uper se sahi se network bhi nhi aata,Frequent Disconnections,,,Verma,,1232,CT,Sprint RSP3,2026-03-01,
+8595232526,0,Costumer ghar nhi aya shi karne problem hum yeh wifi hata denge aisa hi rhega to,Bad Customer Support - Technician,,,Verma,,402,WA,Sprint RSP3,2026-03-01,
+7987042557,1,"Daily wifi band ho jata hai, service providers 00",Frequent Disconnections,,,Verma,,364,CT,Sprint RSP3,2026-03-01,
+9999217632,10,Good,General Good Service,,,Verma,,753,WA,Sprint RSP3,2026-03-01,
+7827973772,0,Difficult in changing password I dont like this.,Bad Application,,,Verma,,895,CT,Sprint RSP3,2026-03-01,
+8595753420,3,Diktak aati ha jada,General Bad Service,,,Verma,,597,WA,Sprint RSP3,2026-03-01,
+9456455910,0,Ekdm Bakwaas,General Bad Service,,,Verma,,655,WA,Sprint RSP3,2026-03-01,
+9811124162,8,I love the service of wiom and one of the best thing whenever there is issue they restore it asap,Fast Complaint Resolution,,,Verma,,65,WA,Sprint RSP3,2026-03-01,
+8920850879,10,Good after sale service,General Good Service,,,Verma,,89,WA,Sprint RSP3,2026-03-01,
+8368494032,10,Good Internet quality,General Good Service,,,Verma,,72,WA,Sprint RSP3,2026-03-01,
+7011974817,10,Good nat he isliy,General Good Service,,,Verma,,270,WA,Sprint RSP3,2026-03-01,
+8860910807,10,Good network,General Good Service,,,Verma,,82,WA,Sprint RSP3,2026-03-01,
+6397251032,10,,,,,Verma,,225,WA,Sprint RSP3,2026-03-01,
+7827955414,3,Everyday some problem or the other keep coming up,General Bad Service,,,Verma,,949,WA,Sprint RSP3,2026-03-01,
+9508362320,10,,,,,Verma,,406,WA,Sprint RSP3,2026-03-01,
+9899385570,10,Good network,General Good Service,,,Verma,,826,CT,Sprint RSP3,2026-03-01,
+9891274739,10,,,,,Verma,,169,WA,Sprint RSP3,2026-03-01,
+7738716684,5,Fast network and best wiom app hai,Good Speed,,,Verma,,447,CT,Sprint RSP3,2026-03-01,
+9871934118,10,Good network experience we suggest people for this connection.,General Good Service,,,Verma,,252,WA,Sprint RSP3,2026-03-01,
+7045650083,6,Frequently net goes very slow,Frequent Disconnections,,,Verma,,209,WA,Sprint RSP3,2026-03-01,
+8287742991,9,Good network service but not good technical support service so please increase your technical and customer support service ðŸ‘_x008d_ best of luck,General Good Service,Bad Customer Support - Call Centre,,Verma,,321,WA,Sprint RSP3,2026-03-01,
+9891400588,0,Ghatiya service network,General Bad Service,,,Verma,,416,WA,Sprint RSP3,2026-03-01,
+8750095008,3,Ghtia sarves hai,General Bad Service,,,Verma,,759,WA,Sprint RSP3,2026-03-01,
+8800893365,10,Good service,General Good Service,,,Verma,,373,WA,Sprint RSP3,2026-03-01,
+8735953691,8,,,,,Verma,,147,WA,Sprint RSP3,2026-03-01,
+8376873219,10,good service,General Good Service,,,Verma,,88,WA,Sprint RSP3,2026-03-01,
+8178241222,1,Good,,,,Verma,,296,WA,Sprint RSP3,2026-03-01,
+8375846190,10,Good service,General Good Service,,,Verma,,236,WA,Sprint RSP3,2026-03-01,
+9911879081,10,,,,,Verma,,481,WA,Sprint RSP3,2026-03-01,
+8929602733,4,Ha,,,,Verma,,100,CT,Sprint RSP3,2026-03-01,
+9708066707,7,I want to shift my wifi connection to my new flat which is only 400 metre away from current wifi connection,Shifting not Feasible,,,Verma,,55,WA,Sprint RSP3,2026-03-01,
+9953691784,0,Hame apne family vale ke lava kisi ko nhi dena,,,,Verma,,190,WA,Sprint RSP3,2026-03-01,
+9213116043,10,Good Service,General Good Service,,,Verma,,112,WA,Sprint RSP3,2026-03-01,
+8826067211,10,Good service,General Good Service,,,Verma,,57,CT,Sprint RSP3,2026-03-01,
+9027256435,0,Har 3-4 din baad iska wifi nahi chalta hai,Frequent Disconnections,,,Verma,,189,CT,Sprint RSP3,2026-03-01,
+9654538113,7,I would give 10 but the speed is slow that's why I am giving it 7,Slow Speed,,,Verma,,85,WA,Sprint RSP3,2026-03-01,
+9694414349,10,,,,,Verma,,300,WA,Sprint RSP3,2026-03-01,
+9910198442,0,,,,,Verma,,530,WA,Sprint RSP3,2026-03-01,
+9891893536,0,Har aathve din hamara hi net hafte mein do bar kharab rahata Hai to Kya bataenge dusron ko,Frequent Disconnections,,,Verma,,624,WA,Sprint RSP3,2026-03-01,
+9021939253,8,,,,,Verma,,279,WA,Sprint RSP3,2026-03-01,
+9833044550,10,,,,,Verma,,227,WA,Sprint RSP3,2026-03-01,
+9873080002,1,Har das din baad modem me laal bati jalne lag jaati hai.nha jaldi theek karwa dete nhai. lekin problum jyada rahti hai.our app bhi poora nahi dikhta hai.,Frequent Disconnections,,,Verma,,411,CT,Sprint RSP3,2026-03-01,
+9599638577,0,Har dusre din internet cable kahi na kahi cut ho jati hai. Month me 28 days milte hai internet use krne ke liye jisme se 15 din bhi sahi se use nahi kr pate. Waste of money hai,Frequent Disconnections,,,Verma,,409,WA,Sprint RSP3,2026-03-01,
+8375086625,0,Har dusre din wifi nahi chalta usme red light showhoti h,Frequent Disconnections,,,Verma,,138,WA,Sprint RSP3,2026-03-01,
+8448235080,5,In between network disruption is common and no further compensation for that is provided,Bad Customer Support - Call Centre,,,Verma,,287,WA,Sprint RSP3,2026-03-01,
+8210797746,1,Internet नहीं चलता है सही से हर सप्ताह इंटरनेट कट हो जाता है slow speed,Frequent Disconnections,,,Verma,,63,WA,Sprint RSP3,2026-03-01,
+8826393831,10,,,,,Verma,,93,WA,Sprint RSP3,2026-03-01,
+9310855123,10,,,,,Verma,,422,WA,Sprint RSP3,2026-03-01,
+8510007412,3,Internet ka hoti log signal aate Hain aur har EK do din mein net nahin chalta,Frequent Disconnections,,,Verma,,311,CT,Sprint RSP3,2026-03-01,
+8506825382,5,"Internet loos ki bahut problem ho rhi h 
  Month me 4-5 time to 100% problem aana
- Kbhi wire toot jati h",Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-4a390079b9ef,5,Internet runs very slow,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-3be529b7d8e9,8,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-dc98cfe7802d,0,Internet sahi se nhi chaltaa hai,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-a38ac1b5275c,10,Good Speed and flawless connectivity,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-1d5b25c504c2,1,Internet speed bahut jyada ghatiya hai,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-b6ed080de415,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0c93622e0650,2,Isko service achi nahi hai aur bahut jaldi kharab ho jata hai aur jaldi se thik bhi nahi ho pata 2 ya 4 din tak wait kerna padtaa hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7c8e0b05c3b1,0,Isme net ki range bot kam hai,Range Issue,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-f5313f2e973b,10,Good speed and sevice,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6808e774aee6,9,good technical support.,Good Partner/ Techinician Support ,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ceea5dbc6794,0,It is not reliable . The internet service stops working at any time without any default and also speed is not upto the mark and I also thinking to change this company after this plan duration.Hope you will understand.,Frequent Disconnections,Slow Speed,,Verma,,0,WA,Sprint RSP3,2026-03-01
-fb903bb386cf,9,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-00ef03b65d91,4,It is useless it wouldn’t work properly,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0468011304c7,7,Internet to sahi hai pr kabhi kabhi bahut khatab ho jata hai lekin sahi hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2d792148bb5b,7,Kabhi kabhi internet issues jyada hi hote h and call krne me 1 din me sahi bhi nhi hota h,No/Late Complaint Resolution,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-af296e5a8d41,5,Jada achi speed nhi aati or range bhout kam hai,Slow Speed,Range Issue,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2ff5fc8b7b9a,10,Ha,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-1d3bd59f85bb,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-cd3e01742d89,10,Haan pehela net h,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-3800b9505613,10,Ham dosto ko logo ko salah dege,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c9a52f47b104,2,Jada khas nhi chalta net,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-837b35cc4a52,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-495dc7854ec4,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-171bbcdefcf1,1,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-17dd4e671407,0,Jara bhi sahi nahi be fiber net bolke copar lagate ho Jhut q bolna sath batao ५०० me copar net lagaoge mFmd,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-4bbe8670c4f1,4,"Kabhi bhi band ho jata h
- Ache se nhi chalta",Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2a990673d1a8,10,High Speed,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c8164d4671e1,1,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-32b99ca2cd82,5,Kabhi bhi slow ho jata hai,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-84c4b18492a3,5,Kabhi kabhi net problem krta hai or 5G speed nhi aati hai sirf or sirf 4G,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-4fdd64a525df,10,Hme is plan me koi problem nhi hui iski speed vi wchi hai,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e8ac9264d194,0,Kabhi net chalta he nhi hai saii se,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5b7b514592eb,7,Kabhi kabhi net bilkul chala jata hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-09a207af1c0f,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-829a59824d3b,10,Hshshs,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-71bcdfcf0207,10,Internet freezing commonly,Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c9e94c2daf50,0,Kharab service. Router kharab hone ke baad bhi na change kiya na koi visit,No/Late Complaint Resolution,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2262e3dc116d,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-fe12c0cf3352,9,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0406e5947a4c,10,Internet service is good,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-18cea583ef0d,0,Koi Help nhi mil rahi h wifi is not working,Internet Down,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ee3c5f4296f3,8,Kabhi kabhi network problem ho jati hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-94d63335d29f,1,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-34a6cf65c794,0,Koi sunavai nhi har di 5 ghante net band rehta h baar baar complaint krne ke baad bhi koi sunne wala nhi h 25 din se pareshan hu abki baar me recharge nhi karaunga hatwa dunga bahut bura,Frequent Disconnections,No/Late Complaint Resolution,,Verma,,0,WA,Sprint RSP3,2026-03-01
-61ced870c15c,10,Iska net hum delhi me kahi pe b uss kar sakte h,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-61e29d8dcb7f,10,Iski service bahut hi achi h . Isliye,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9250726d4a7a,10,It works good.,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-bab50ea90a05,0,Koi Technician nahi aata kuch thik karne or koi complaint karo to dubra hum baat nahi kar sakte,Bad Customer Support - Technician,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7b9da7f5d90b,10,Ji,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-34709f168ed3,10,Kyoki isme koi dikat nhi hi,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0f9711d1d94e,9,Kyoki mera net mast chalta hai,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f8749ace2992,10,Kyoki wiom ka net acha h or agr kuch bhi problem hoti h to thik bhi jldi ho jata h vese to jldi problem aati nhi h,Fast Complaint Resolution,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-128fc6c697ee,10,Kyu ki wiom net bhaut accha chalta hai and usse har chiz aasani se chal jaati hai jese telivision mobile laptop aur any issue ek hi time me bhaut sare phone chal sakte hai ye net sasta bhi hai aur acha bhi hai. Aap bhi ise lgva sakte hai hme to yeh net bhaut pasand aya,Affordable,Good Speed,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2c42387bc8d2,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-59e635a8561f,1,Kuch nahi,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-bc66e952d329,0,Kyu ki iska network apna ap kabhi bhi network chla jata h par itna bhi bakar nahi h par kabhi kabhi bohot dikkt karta hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-632f1ff2abb7,10,Kyuki yeh kam budget me ek accha option hia or students ke liye ek kafi accha rasta hai,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-495d9c652dfc,0,"Kyu ki net bahot slow he aur barbar disknet ho jata he 
- Bhahot kharab chal rha he net",Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d7037305de4f,10,Lag sake wiom,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-41764ec099ba,1,Kyuki apka net bhot slow chalata hai or jis time jarurat hoti hai usi time nhi chalta hai,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ff4a2a5636c4,3,Kyuki bich bich mai iska net chala jata hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7bf7c828c5fd,0,Kyuki humne wiom ka net remove krdiya h No customer service and. Very cheap quality,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-1481648d0a04,1,"Kyuki Internet is not constant and Red Light Issue is Permanent from last 7 months and also to resolve the issue it tooks too much time, Which Causes loss of Customer",Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a3ea912f19f7,0,Kyuki muje wifi ki bilkul bhi speed nh milti h,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-76605ce5c858,5,"Kyuki net ruk ruk kar kar chalta h 
+ Kbhi wire toot jati h",Frequent Disconnections,,,Verma,,657,WA,Sprint RSP3,2026-03-01,
+7065601602,5,Internet runs very slow,Slow Speed,,,Verma,,236,WA,Sprint RSP3,2026-03-01,
+8587813641,8,,,,,Verma,,190,WA,Sprint RSP3,2026-03-01,
+9372826602,0,Internet sahi se nhi chaltaa hai,General Bad Service,,,Verma,,526,CT,Sprint RSP3,2026-03-01,
+9654998118,10,Good Speed and flawless connectivity,Good Speed,,,Verma,,371,WA,Sprint RSP3,2026-03-01,
+9811914136,1,Internet speed bahut jyada ghatiya hai,Slow Speed,,,Verma,,383,WA,Sprint RSP3,2026-03-01,
+8743874837,0,,,,,Verma,,684,WA,Sprint RSP3,2026-03-01,
+9311250787,2,Isko service achi nahi hai aur bahut jaldi kharab ho jata hai aur jaldi se thik bhi nahi ho pata 2 ya 4 din tak wait kerna padtaa hai,Frequent Disconnections,,,Verma,,670,WA,Sprint RSP3,2026-03-01,
+8882246817,0,Isme net ki range bot kam hai,Range Issue,,,Verma,,287,CT,Sprint RSP3,2026-03-01,
+9548014328,10,Good speed and sevice,Good Speed,,,Verma,,453,WA,Sprint RSP3,2026-03-01,
+8743084884,9,good technical support.,Good Partner/ Techinician Support,,,Verma,,591,WA,Sprint RSP3,2026-03-01,
+7827134258,0,It is not reliable . The internet service stops working at any time without any default and also speed is not upto the mark and I also thinking to change this company after this plan duration.Hope you will understand.,Frequent Disconnections,Slow Speed,,Verma,,144,WA,Sprint RSP3,2026-03-01,
+7503629170,9,,,,,Verma,,420,WA,Sprint RSP3,2026-03-01,
+8174860665,4,It is useless it wouldnâ€™t work properly,General Bad Service,,,Verma,,1106,WA,Sprint RSP3,2026-03-01,
+7701897218,7,Internet to sahi hai pr kabhi kabhi bahut khatab ho jata hai lekin sahi hai,General Bad Service,,,Verma,,672,WA,Sprint RSP3,2026-03-01,
+8076177975,7,Kabhi kabhi internet issues jyada hi hote h and call krne me 1 din me sahi bhi nhi hota h,No/Late Complaint Resolution,,,Verma,,498,WA,Sprint RSP3,2026-03-01,
+7217621179,5,Jada achi speed nhi aati or range bhout kam hai,Slow Speed,Range Issue,,Verma,,354,WA,Sprint RSP3,2026-03-01,
+9643319949,10,Ha,General Good Service,,,Verma,,876,WA,Sprint RSP3,2026-03-01,
+9818461557,0,,,,,Verma,,838,WA,Sprint RSP3,2026-03-01,
+8076950547,10,Haan pehela net h,,,,Verma,,98,CT,Sprint RSP3,2026-03-01,
+9871337984,10,Ham dosto ko logo ko salah dege,General Good Service,,,Verma,,104,WA,Sprint RSP3,2026-03-01,
+7982162937,2,Jada khas nhi chalta net,General Bad Service,,,Verma,,814,WA,Sprint RSP3,2026-03-01,
+9990986603,10,,,,,Verma,,203,WA,Sprint RSP3,2026-03-01,
+9411663928,0,,,,,Verma,,153,WA,Sprint RSP3,2026-03-01,
+7902162939,1,,,,,Verma,,153,WA,Sprint RSP3,2026-03-01,
+9082626843,0,Jara bhi sahi nahi be fiber net bolke copar lagate ho Jhut q bolna sath batao à¥«à¥¦à¥¦ me copar net lagaoge mFmd,,,,Verma,,114,CT,Sprint RSP3,2026-03-01,
+7982603618,4,"Kabhi bhi band ho jata h
+ Ache se nhi chalta",Frequent Disconnections,,,Verma,,595,CT,Sprint RSP3,2026-03-01,
+9540671740,10,High Speed,Good Speed,,,Verma,,1052,WA,Sprint RSP3,2026-03-01,
+9899308262,1,,,,,Verma,,712,WA,Sprint RSP3,2026-03-01,
+9810737266,5,Kabhi bhi slow ho jata hai,Slow Speed,,,Verma,,849,WA,Sprint RSP3,2026-03-01,
+8287827767,5,Kabhi kabhi net problem krta hai or 5G speed nhi aati hai sirf or sirf 4G,Slow Speed,,,Verma,,365,WA,Sprint RSP3,2026-03-01,
+9927435477,10,Hme is plan me koi problem nhi hui iski speed vi wchi hai,Good Speed,,,Verma,,603,WA,Sprint RSP3,2026-03-01,
+8182014466,0,Kabhi net chalta he nhi hai saii se,General Bad Service,,,Verma,,242,WA,Sprint RSP3,2026-03-01,
+9211868425,7,Kabhi kabhi net bilkul chala jata hai,Frequent Disconnections,,,Verma,,353,WA,Sprint RSP3,2026-03-01,
+9210866051,10,,,,,Verma,,97,WA,Sprint RSP3,2026-03-01,
+7678372708,10,Hshshs,,,,Verma,,588,CT,Sprint RSP3,2026-03-01,
+6396921194,10,Internet freezing commonly,Frequent Disconnections,,,Verma,,689,CT,Sprint RSP3,2026-03-01,
+8377872369,0,Kharab service. Router kharab hone ke baad bhi na change kiya na koi visit,No/Late Complaint Resolution,,,Verma,,443,WA,Sprint RSP3,2026-03-01,
+9891001133,0,,,,,Verma,,309,WA,Sprint RSP3,2026-03-01,
+9654750636,9,,,,,Verma,,694,WA,Sprint RSP3,2026-03-01,
+9837151097,10,Internet service is good,General Good Service,,,Verma,,189,WA,Sprint RSP3,2026-03-01,
+8882161348,0,Koi Help nhi mil rahi h wifi is not working,Internet Down,,,Verma,,392,WA,Sprint RSP3,2026-03-01,
+8383089976,8,Kabhi kabhi network problem ho jati hai,General Bad Service,,,Verma,,330,WA,Sprint RSP3,2026-03-01,
+8368138318,1,,,,,Verma,,1110,WA,Sprint RSP3,2026-03-01,
+9310236093,0,Koi sunavai nhi har di 5 ghante net band rehta h baar baar complaint krne ke baad bhi koi sunne wala nhi h 25 din se pareshan hu abki baar me recharge nhi karaunga hatwa dunga bahut bura,Frequent Disconnections,No/Late Complaint Resolution,,Verma,,176,WA,Sprint RSP3,2026-03-01,
+9213101610,10,Iska net hum delhi me kahi pe b uss kar sakte h,General Good Service,,,Verma,,85,CT,Sprint RSP3,2026-03-01,
+8802801693,10,Iski service bahut hi achi h . Isliye,General Good Service,,,Verma,,858,WA,Sprint RSP3,2026-03-01,
+7717309477,10,It works good.,General Good Service,,,Verma,,414,WA,Sprint RSP3,2026-03-01,
+9667540948,0,Koi Technician nahi aata kuch thik karne or koi complaint karo to dubra hum baat nahi kar sakte,Bad Customer Support - Technician,,,Verma,,595,WA,Sprint RSP3,2026-03-01,
+8287481951,10,Ji,General Good Service,,,Verma,,128,WA,Sprint RSP3,2026-03-01,
+9315457509,10,Kyoki isme koi dikat nhi hi,General Good Service,,,Verma,,802,WA,Sprint RSP3,2026-03-01,
+7065575834,9,Kyoki mera net mast chalta hai,General Good Service,,,Verma,,70,WA,Sprint RSP3,2026-03-01,
+9310433947,10,Kyoki wiom ka net acha h or agr kuch bhi problem hoti h to thik bhi jldi ho jata h vese to jldi problem aati nhi h,Fast Complaint Resolution,,,Verma,,712,WA,Sprint RSP3,2026-03-01,
+9211477486,10,Kyu ki wiom net bhaut accha chalta hai and usse har chiz aasani se chal jaati hai jese telivision mobile laptop aur any issue ek hi time me bhaut sare phone chal sakte hai ye net sasta bhi hai aur acha bhi hai. Aap bhi ise lgva sakte hai hme to yeh net bhaut pasand aya,Affordable,Good Speed,,Verma,,113,WA,Sprint RSP3,2026-03-01,
+9372365835,0,,,,,Verma,,158,WA,Sprint RSP3,2026-03-01,
+7738284611,1,Kuch nahi,,,,Verma,,403,WA,Sprint RSP3,2026-03-01,
+9717085224,0,Kyu ki iska network apna ap kabhi bhi network chla jata h par itna bhi bakar nahi h par kabhi kabhi bohot dikkt karta hai,Frequent Disconnections,,,Verma,,136,WA,Sprint RSP3,2026-03-01,
+7011160871,10,Kyuki yeh kam budget me ek accha option hia or students ke liye ek kafi accha rasta hai,Affordable,,,Verma,,380,WA,Sprint RSP3,2026-03-01,
+8810490621,0,"Kyu ki net bahot slow he aur barbar disknet ho jata he 
+ Bhahot kharab chal rha he net",Slow Speed,,,Verma,,204,WA,Sprint RSP3,2026-03-01,
+9811524035,10,Lag sake wiom,,,,Verma,,565,WA,Sprint RSP3,2026-03-01,
+8448940659,1,Kyuki apka net bhot slow chalata hai or jis time jarurat hoti hai usi time nhi chalta hai,Slow Speed,,,Verma,,71,WA,Sprint RSP3,2026-03-01,
+8447398496,3,Kyuki bich bich mai iska net chala jata hai,Frequent Disconnections,,,Verma,,1042,WA,Sprint RSP3,2026-03-01,
+8851581932,0,Kyuki humne wiom ka net remove krdiya h No customer service and. Very cheap quality,General Bad Service,,,Verma,,56,WA,Sprint RSP3,2026-03-01,
+7011250163,1,"Kyuki Internet is not constant and Red Light Issue is Permanent from last 7 months and also to resolve the issue it tooks too much time, Which Causes loss of Customer",Frequent Disconnections,,,Verma,,223,WA,Sprint RSP3,2026-03-01,
+9560663644,0,Kyuki muje wifi ki bilkul bhi speed nh milti h,Slow Speed,,,Verma,,447,WA,Sprint RSP3,2026-03-01,
+9053886568,5,"Kyuki net ruk ruk kar kar chalta h 
  Complane karne bad bhi kabhi sahi 
- Chalta h kabhi nhi range acchi nhi h",Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-cfa435a2115a,10,Maine ek ka net lagva Diya Hai,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9a51f56e2340,8,Kai baar network m bht issue hota h,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9940fffd6f2d,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0b751b3b344e,5,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-1475bbb2c639,7,late problem solved,No/Late Complaint Resolution,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-97d4f76b6efb,10,mene Net lekar 5 monts ho gaye..lekin kabhi bhi abhi tak dokha nahi diya hai isliye 10,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-86672d19d83d,5,Kyuki network stable nhi rhte,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e4c450268e97,1,Kyuki recharge ki serivce lene k baad wifi chalna band ho jata hain aur copun bhi nhi milte hain,"RDNI (Recharge Done, No Internet)",,,Verma,,0,WA,Sprint RSP3,2026-03-01
-be6f87b93186,0,Kyunki aapka net sahi nhi chalta kabhi bhi band ho jaata hai kabhi kuch kaam hai toh net chala jaata hai jo ki kaafi pareshaan krta hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-65536b9fb7cb,5,Kyunki sabse sasta or sahi chalta hai,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0d5ae96323b1,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-fdb9c846417b,0,Lack of Connectivity Worst connection,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2961031b05e6,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d6e8f330d8ab,10,Muje sarvice achi lagi,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-de3f1cf72c42,0,Local engineer call pick ni karta n bet issue baar baar ata h,Bad Customer Support - Technician,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-9ced23631d4f,10,Mujhe internet speed Exllent h as a family wiom ki service vale bhaiya 1-2 ghante ke ander koi bhi wifi issue solve kr dete hai Thanku for best service ❤️🔝,General Good Service,Fast Complaint Resolution,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e775cea7303e,3,Local service provider to much bad,Bad Customer Support - Technician,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ae072bbb1365,10,My oewn experience,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ef6858e7eae2,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7223d1a73c8f,10,Net acha chalta hai service achi hai company ki,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f473dbfe7383,7,Mera network bhut accha hai aur service bahut tej hai,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-157872ec83d2,1,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-1c7aeb4920e4,6,Low cost,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f9947e90ced6,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-18305a18043e,10,Net achha chalta hai,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-97de41d49a5d,8,Mera Wi-Fi 24 ghante Se Jyada disconnect raha tha,Internet Down,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-4ebd9b128b17,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9bb4acc65ab9,5,Low Range,Range Issue,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e7df0dce2dd9,0,Lowest network service.,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5e2da1591e1d,7,Net sabse fast chalta hai,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-db1cd117c096,6,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-09d9979200cd,7,Net service well but some time⌚ slow down working otherwise no issues,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-33efc925ee84,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-1278bcda4c82,10,Net bahut bsdiya chalta hai,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6d655fd62614,8,"Net speed sahi hai 
+ Chalta h kabhi nhi range acchi nhi h",Slow Speed,,,Verma,,69,WA,Sprint RSP3,2026-03-01,
+7827607724,10,Maine ek ka net lagva Diya Hai,,,,Verma,,889,WA,Sprint RSP3,2026-03-01,
+9811955158,8,Kai baar network m bht issue hota h,General Bad Service,,,Verma,,165,WA,Sprint RSP3,2026-03-01,
+8920406426,10,,,,,Verma,,903,WA,Sprint RSP3,2026-03-01,
+8178368508,5,,,,,Verma,,747,WA,Sprint RSP3,2026-03-01,
+9758308057,7,late problem solved,No/Late Complaint Resolution,,,Verma,,232,WA,Sprint RSP3,2026-03-01,
+9702429420,10,mene Net lekar 5 monts ho gaye..lekin kabhi bhi abhi tak dokha nahi diya hai isliye 10,General Good Service,,,Verma,,253,WA,Sprint RSP3,2026-03-01,
+8210349076,5,Kyuki network stable nhi rhte,Frequent Disconnections,,,Verma,,671,WA,Sprint RSP3,2026-03-01,
+7292060503,1,Kyuki recharge ki serivce lene k baad wifi chalna band ho jata hain aur copun bhi nhi milte hain,"RDNI (Recharge Done, No Internet)",,,Verma,,478,WA,Sprint RSP3,2026-03-01,
+9311470320,0,Kyunki aapka net sahi nhi chalta kabhi bhi band ho jaata hai kabhi kuch kaam hai toh net chala jaata hai jo ki kaafi pareshaan krta hai,Frequent Disconnections,,,Verma,,390,WA,Sprint RSP3,2026-03-01,
+9871560186,5,Kyunki sabse sasta or sahi chalta hai,Affordable,,,Verma,,1289,WA,Sprint RSP3,2026-03-01,
+9811396910,10,,,,,Verma,,508,WA,Sprint RSP3,2026-03-01,
+8860138875,0,Lack of Connectivity Worst connection,General Bad Service,,,Verma,,482,CT,Sprint RSP3,2026-03-01,
+9650894385,10,,,,,Verma,,316,WA,Sprint RSP3,2026-03-01,
+9560001427,10,Muje sarvice achi lagi,General Good Service,,,Verma,,76,CT,Sprint RSP3,2026-03-01,
+9818883568,0,Local engineer call pick ni karta n bet issue baar baar ata h,Bad Customer Support - Technician,,,Verma,,270,CT,Sprint RSP3,2026-03-01,
+9267905299,10,Mujhe internet speed Exllent h as a family wiom ki service vale bhaiya 1-2 ghante ke ander koi bhi wifi issue solve kr dete hai Thanku for best service â_x009d_¤ï¸_x008f_ðŸ”_x009d_,General Good Service,Fast Complaint Resolution,,Verma,,406,WA,Sprint RSP3,2026-03-01,
+9582188503,3,Local service provider to much bad,Bad Customer Support - Technician,,,Verma,,463,WA,Sprint RSP3,2026-03-01,
+8595448387,10,My oewn experience,General Good Service,,,Verma,,727,WA,Sprint RSP3,2026-03-01,
+9711297235,10,,,,,Verma,,1178,WA,Sprint RSP3,2026-03-01,
+8700896150,10,Net acha chalta hai service achi hai company ki,General Good Service,,,Verma,,77,WA,Sprint RSP3,2026-03-01,
+9313502936,7,Mera network bhut accha hai aur service bahut tej hai,Good Speed,,,Verma,,928,WA,Sprint RSP3,2026-03-01,
+8287826433,1,,,,,Verma,,249,WA,Sprint RSP3,2026-03-01,
+8800727765,6,Low cost,Affordable,,,Verma,,325,WA,Sprint RSP3,2026-03-01,
+9761496800,10,,,,,Verma,,306,WA,Sprint RSP3,2026-03-01,
+8809340964,10,Net achha chalta hai,General Good Service,,,Verma,,286,CT,Sprint RSP3,2026-03-01,
+9205522429,8,Mera Wi-Fi 24 ghante Se Jyada disconnect raha tha,Internet Down,,,Verma,,130,WA,Sprint RSP3,2026-03-01,
+9355113545,10,,,,,Verma,,308,WA,Sprint RSP3,2026-03-01,
+9891489128,5,Low Range,Range Issue,,,Verma,,81,CT,Sprint RSP3,2026-03-01,
+8076580843,0,Lowest network service.,General Bad Service,,,Verma,,408,WA,Sprint RSP3,2026-03-01,
+8882625930,7,Net sabse fast chalta hai,Good Speed,,,Verma,,221,WA,Sprint RSP3,2026-03-01,
+9911205515,6,,,,,Verma,,349,WA,Sprint RSP3,2026-03-01,
+9137946751,7,Net service well but some timeâŒš slow down working otherwise no issues,Slow Speed,,,Verma,,190,WA,Sprint RSP3,2026-03-01,
+9650979071,10,,,,,Verma,,125,WA,Sprint RSP3,2026-03-01,
+9212993984,10,Net bahut bsdiya chalta hai,General Good Service,,,Verma,,160,WA,Sprint RSP3,2026-03-01,
+6394107736,8,"Net speed sahi hai 
  Value of money hai
- Plan change krne ka option nhi hota esliye thodi problem hoti hai",Affordable,Good Speed,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d9acd73812c9,10,Net bhut badiya chalta hai ap ka,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a92eafb2b4dc,0,Mai toh pasta hi raha hu or dusro ko bhi bolu lene ko taki wo gali de itna bekar network hai or range bhi kam hai,Range Issue,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-a2dd34f02d0b,9,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-422da1d33afa,10,Net bohat accha h sarvice bhi good boy sarfaraz very very good sarvice,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-eebf0adcf4a1,9,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c15efe15d1d5,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-056519bab57b,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7ce14c3c56c8,10,Net is good and costumes sarvice good,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-138e115c718a,10,Net kafi achcha hai coverage bahut achcha hai,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-4f92c07c70ca,8,Not up to mark,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e81f46d2a169,10,Net Sahi chal raha hai per कभी-कभी slow ho raha hai abhi,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0265a7243fc2,0,many network issues,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-d21f4132e87f,0,"Mein pichle 3,4 din se bhot pareshan hoon wifi bilkul kaam nahi kar raha 24 ghante pehele complain bhi kari thi no response from wiom team still yet or han mujhe 1 maheena ho gaya mere ghr pe lagaye hue daily speed issue hota hai kabhi chalta hai kabhi nahi 0 service in last 1 month",No/Late Complaint Resolution,Slow Speed,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a8a780241f4e,10,Net shi chalta h,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-5f34c99057c5,10,Net speed achi or plan bhi sasta,Good Speed,Affordable,,Verma,,0,WA,Sprint RSP3,2026-03-01
-71dc5742b7b7,7,Rechage rate Thik hi he,Expensive,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ece9d0f9dcc8,9,Net speed is good,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-af77e73f4159,0,Mene recharge Kiya recharge khatam hone se ek din pehle advance me fir b mera net band. Kar diya jiski wajah se muje pure ek mera wifi nai chala,"RDNI (Recharge Done, No Internet)",,,Verma,,0,WA,Sprint RSP3,2026-03-01
-22d1559b92c8,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9a95038e2801,0,Mera internet chal hi nhi rha hai or koi bhi Complan nhi ho rhi he na call receive ho rhi h,Bad Customer Support - Call Centre ,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-740dadd512aa,0,Mera phone bahut bufrin karta hai,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-319132e5f626,0,Mera wifi lost hai aur maine visit ke liye request Kari hai but koi response nahi hai aapke yaha par team ka,No/Late Complaint Resolution,Bad Customer Support - Call Centre ,,Verma,,0,WA,Sprint RSP3,2026-03-01
-be6699e0dd74,5,Month m 7 din net ki problem rehti h,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6e3606c3d66b,0,Month mai 4-5 bar net band padta hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-faa509bfc0a6,10,Network acche aate Hain,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d98dfe62653a,0,"Muze 2 mahine me bahot gandha experience aya hei...
+ Plan change krne ka option nhi hota esliye thodi problem hoti hai",Affordable,Good Speed,,Verma,,123,WA,Sprint RSP3,2026-03-01,
+7210405022,10,Net bhut badiya chalta hai ap ka,General Good Service,,,Verma,,238,WA,Sprint RSP3,2026-03-01,
+8298609360,0,Mai toh pasta hi raha hu or dusro ko bhi bolu lene ko taki wo gali de itna bekar network hai or range bhi kam hai,Range Issue,,,Verma,,180,CT,Sprint RSP3,2026-03-01,
+9599252722,9,,,,,Verma,,230,WA,Sprint RSP3,2026-03-01,
+8800953376,10,Net bohat accha h sarvice bhi good boy sarfaraz very very good sarvice,General Good Service,,,Verma,,847,WA,Sprint RSP3,2026-03-01,
+9599498653,9,,,,,Verma,,739,WA,Sprint RSP3,2026-03-01,
+9811646757,0,,,,,Verma,,732,WA,Sprint RSP3,2026-03-01,
+9711503518,0,,,,,Verma,,376,WA,Sprint RSP3,2026-03-01,
+8802713296,10,Net is good and costumes sarvice good,General Good Service,,,Verma,,812,CT,Sprint RSP3,2026-03-01,
+9958790236,10,Net kafi achcha hai coverage bahut achcha hai,General Good Service,,,Verma,,63,WA,Sprint RSP3,2026-03-01,
+9560585533,8,Not up to mark,General Bad Service,,,Verma,,357,WA,Sprint RSP3,2026-03-01,
+7289018654,10,Net Sahi chal raha hai per à¤•à¤­à¥€-à¤•à¤­à¥€ slow ho raha hai abhi,General Good Service,,,Verma,,341,WA,Sprint RSP3,2026-03-01,
+9015603113,0,many network issues,General Bad Service,,,Verma,,641,CT,Sprint RSP3,2026-03-01,
+8076038174,0,"Mein pichle 3,4 din se bhot pareshan hoon wifi bilkul kaam nahi kar raha 24 ghante pehele complain bhi kari thi no response from wiom team still yet or han mujhe 1 maheena ho gaya mere ghr pe lagaye hue daily speed issue hota hai kabhi chalta hai kabhi nahi 0 service in last 1 month",No/Late Complaint Resolution,Slow Speed,,Verma,,397,WA,Sprint RSP3,2026-03-01,
+9871438820,10,Net shi chalta h,General Good Service,,,Verma,,1036,CT,Sprint RSP3,2026-03-01,
+9999730266,10,Net speed achi or plan bhi sasta,Good Speed,Affordable,,Verma,,121,WA,Sprint RSP3,2026-03-01,
+8285444270,7,Rechage rate Thik hi he,Expensive,,,Verma,,155,WA,Sprint RSP3,2026-03-01,
+8076138531,9,Net speed is good,Good Speed,,,Verma,,649,WA,Sprint RSP3,2026-03-01,
+8800873249,0,Mene recharge Kiya recharge khatam hone se ek din pehle advance me fir b mera net band. Kar diya jiski wajah se muje pure ek mera wifi nai chala,"RDNI (Recharge Done, No Internet)",,,Verma,,106,WA,Sprint RSP3,2026-03-01,
+9211558080,10,,,,,Verma,,55,WA,Sprint RSP3,2026-03-01,
+9305257697,0,Mera internet chal hi nhi rha hai or koi bhi Complan nhi ho rhi he na call receive ho rhi h,Bad Customer Support - Call Centre,,,Verma,,290,CT,Sprint RSP3,2026-03-01,
+9667311289,0,Mera phone bahut bufrin karta hai,Slow Speed,,,Verma,,450,WA,Sprint RSP3,2026-03-01,
+8700390036,0,Mera wifi lost hai aur maine visit ke liye request Kari hai but koi response nahi hai aapke yaha par team ka,No/Late Complaint Resolution,Bad Customer Support - Call Centre,,Verma,,84,WA,Sprint RSP3,2026-03-01,
+9650324522,5,Month m 7 din net ki problem rehti h,Frequent Disconnections,,,Verma,,692,WA,Sprint RSP3,2026-03-01,
+8828594833,0,Month mai 4-5 bar net band padta hai,Frequent Disconnections,,,Verma,,617,WA,Sprint RSP3,2026-03-01,
+9911799490,10,Network acche aate Hain,Good Speed,,,Verma,,188,WA,Sprint RSP3,2026-03-01,
+7350979653,0,"Muze 2 mahine me bahot gandha experience aya hei...
  Jabhi bhi racharge karta hu. 1 din ke liye net band ho jata hei.. Uske liye alag se ticket talna padta hei..
- Bahot hi bakvas service hei apaki","RDNI (Recharge Done, No Internet)",,,Verma,,0,WA,Sprint RSP3,2026-03-01
-04bcc064118e,0,Na kabhi chalta hai na kabhi sare paise waste ho jate m to such raha hu is wifi ko hatwa du,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-46aab6aa55be,2,Nahi,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c67ea7db967d,10,Network acha hai but speed slow hai apko or acha kam karna hoga,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-b3a759aceeaa,10,Network ache h,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f96d227b0fad,0,Nahi,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-32e4a547c0a6,0,Nahi degr,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-31b5400213d7,3,Nahin kabhi nahinNahin kabhi nahin,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-8ca0c820b296,0,Net achha nahi h,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-96739a2a5a69,0,Net bahut rukta hai,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-075f9e86b511,10,network very good,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-74a4e529d9a6,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d4067a2bf581,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-cc2f968ae6f6,6,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9c1a9f2f8b6e,0,"Net bahut slow hai, agr do phone mei chal rha hai speed aue low ho jati hai",Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6a7f6ea68a34,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-501cbec664cb,3,Net band ho jata h,Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-60573b62e54f,0,net breaking,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ea130c6c3adc,10,Nice,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e0624a36489d,1,Net goes down every time specially in peak time when required,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-b7fea38d7ba0,0,Net issue,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-92f0ec6fc0b6,0,Net kabi bhi chala jata hai,Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ec7f1de2b1aa,6,Net me bar bar problem aati rehti hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-53f1908ccf7e,1,Net nahi chlra,Internet Down,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-31e5fc37b8a7,0,Net nhi chal rha h bhot slow connectivity h,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-269b0fd5e282,0,Net not working every time,Internet Down,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-834add426f73,5,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-3ad8901dc470,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-58a27355ca26,0,Net not working hata do isa,Internet Down,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-214988e1f6f9,0,Net problem,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a6d1c6458e57,0,Net problem ati hai,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c32a180e44de,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a6225ee07a93,0,"Net problem, staff problem, and etc.",General Bad Service,Bad Customer Support - Call Centre ,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a2a7dd112dcc,0,Net sahi nahi hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-68a712961688,0,Net sahi nhi chalta hai. 28 din me 10 din net ka problem rahta hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-57d836daff5b,4,Net slow,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7320b6352061,0,Net slow aur speed issue and proper net nhi chalta,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ce3de42c377a,10,Nice,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-cf73062a5cd7,9,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ee8ac15162dd,10,Nice service of wifi,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-4354fcbf86d2,0,Net slow chl raha hai bohot,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2694c78696d0,10,Ok,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-00c7590377b1,10,Padhai,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-701c5e074fba,0,Net slow hota baar baar,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-179a33c0a1a0,6,Net speed achi nahi hai,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-68998c6311b6,8,Sarvice,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-039ca2462bc2,10,Pahla net he he ghar mein koi aur nhi 5ha,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1bf4f27ed238,10,Plan 499,Affordable,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-71fcd8958215,10,Price low,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9714f609a8c1,3,Net speed slow,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d0532b8cf2b8,8,Sasta hai,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9b7a1dd244d5,8,"Sastaa hai, or service v thik-thak hi hai.",Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-fe880ed9b5be,8,Signals range can be improved and should send prior information about any repairing work which affect customer signals (cutoff),Range Issue,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e93306606e3a,3,Net very slow,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-280f0dcf2f40,2,Netwok kafi bar band ho jata hai 2 din bhj lag jate hai apke care pe bat krte karte apni service Sahi karo other wise WiFi our bhi hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e32aa130b309,9,Raat ko nahi chalta ha sabsa jada,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9f27b33a7554,6,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-8481a5ebb5ae,5,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-72defd92b569,0,Network disconnect frequently,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-095dcc250e43,0,Network issue bahut rahata hai network bahut gande Hain Wi-Fi Kam nahin karta to main dusron ko kaise suggestion karunga,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ba95097fb418,3,Network issue hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-1a9281ef5b26,0,Network issue hain speed to bohot slow ho jaati hain,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1098d23d9c62,9,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-4db22cf632d8,0,Network issue har mahine hota hai or,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6c54c4c5675d,5,"Network issue many times
- Speed is also not good",Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d32b5690a592,10,Reasonable & affordable,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ba0f9828b5f4,0,Network issue net speed low,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e2f596de640c,0,Network issue Rehta hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-4ab28dee20d9,3,Network lost hota h bar bar,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f5da4e6f61d7,10,Sabse sasta achcha,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-269984de6830,0,Network mai bhut dikkat hai mai khidh hi kuch dino mai airtel ka wifi lagwa lunga,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-75aa44ecd5b7,0,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0e7b6bf06af5,0,Network nahin aata customer care per baat karne ke bad bhi Sahi nahin hota,Bad Customer Support - Call Centre ,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ebd60f27acbc,1,Network problem,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a93e3dc41556,10,Sarvice bhut acchi h,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-13a0daffed9d,0,Network problem 100mbs ki jagha 20 mbs ki speed b,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-18ee2bee03db,1,Network problem hai complain karo to bhi nahin solve hota Hai aur pahle se mahnga kar Diya bina bataye customer ko din me 4 se 5 baar complaint karna padta hai,No/Late Complaint Resolution,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-4c77ed61d443,9,Sarvice good,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-4c2a4101bf4f,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ddf1fa2b7e74,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-80fcc3bc53ce,0,"Network problem hai, router kaam nahi kar rha",General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-b4f3fb434c97,10,Sarvis achchi hai,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2485d00e8e1d,6,Network proper nahi aata kabhi bhi signal chale jate hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-dda0ff414ccc,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d76362341bde,7,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-8fbd37d0165a,10,"Sasta bhadya he or net bi sai chalta he 
- Bas ek Kami he night me chata jata he",Affordable,Frequent Disconnections,,Verma,,0,CT,Sprint RSP3,2026-03-01
-9bde1f6f1172,10,Sasta or badiya,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-3a96ed213bdc,5,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5c9864de44d9,5,Network sahhi nhi aate h router baar baar on off Krna pdta h then wifi connect hota h phone me,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c6d4b7300911,0,Network speed,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-079715cc4d92,0,Network theek nahin Hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-82b2861a31f7,0,Nhi,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-73d3131c5690,10,Service acchi,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2d0f74e78b63,10,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9e36d05fa571,0,Nhi,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a2bf214e5cbd,0,No customer support,Bad Customer Support - Call Centre ,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-824f87e1801d,10,Service and low price to start,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-da73772d184d,0,No no,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a48e0fe70651,8,"Sometime internet is very slow, even not working",Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-22fa3ac2ca87,5,,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c5b244f066d5,1,No no no pe hi lijiyega no no,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-a12afae790aa,0,Not problem solve payment hogi h phir bhi net nhi arha h very bad service phone bhi nhi receive kar rahe,Internet Down,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2f99d96e2490,6,On daily basis showing no internet and automatically disconnected getting slow internet speed,Frequent Disconnections,Slow Speed,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5a0932cfa2d9,7,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e4a4a4e2153e,7,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-fefa48496494,1,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-79c2cf9bc6dc,2,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-f768d1431f32,10,Service fast h Wiom ki,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f396f0e61953,7,Theak h bajat mea bhe h,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-079abcfaa602,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-60821872cbbf,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-09f4dd9ffc76,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-8021e8aab9b5,10,Service good,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e1aeb6481a1d,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2f0a33cb93ff,0,Par services,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-7cf29507e7c2,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1286ddafbe5b,5,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1ef38d150932,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-64a8ecad3fc0,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-fd4363b40ec2,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-7211f4f4cb3e,0,POOR CUSTOMER SERVICE,Bad Customer Support - Call Centre ,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-74743dee7ff0,0,Poor service,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-db4332214963,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-f5bf9f930832,1,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-07bcdec228e3,9,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-10c3d045673a,10,Service is good,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d3523053d8ec,1,poor services,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-7b4b62479c9e,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-85e0caaff78a,10,Service is good,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2ea4962b79e7,1,Raat ko Wi-Fi nahin chalta yah,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ceab02470c6f,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e82f1e895eb0,5,Range Bhot kam hai,Range Issue,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ce48c0129a0e,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6c1acac46994,10,Service is gud,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-97ace8d3d41a,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-b5a152b8747b,6,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-0aca9c1e070a,3,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-b9907678739a,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-9a7a9783abbd,5,Range kafi kam hai,Range Issue,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d7471973e28c,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-503fe877d746,1,Raouter m pourt kam hai,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-40f709b24612,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-d2a51336f08d,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-0a46b2a65bdf,0,Recharge bhot mehnga h or network speed achhi nhi h,Expensive,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-60fa3bf65714,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-04405122161a,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6b93ecbdfe84,10,service is very nice,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-339e5cfae4aa,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1c07a410456d,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-602209274eb3,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-340d6d589b0b,3,Recharge hone ke baad bich bich mein pura din net band ho jata hai aur red light show hoti hai,"RDNI (Recharge Done, No Internet)",,,Verma,,0,WA,Sprint RSP3,2026-03-01
-bd09f4749be1,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-f285bb490e55,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1f9b0d5cc85f,8,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-aead79264c0c,5,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e359d363b423,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-58684be2edd7,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-bc2f6d1f124e,0,Recharge ke baad net ni chala ek din bhi,"RDNI (Recharge Done, No Internet)",,,Verma,,0,CT,Sprint RSP3,2026-03-01
-fc41021c247a,10,Service very good,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-41f6f2f27997,5,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2ac394ab20c6,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-9328311ca333,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2a0a90c88823,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2035893efbec,3,Recharge khatm hota hai turant Kat band kar dete Ho,"RDNI (Recharge Done, No Internet)",,,Verma,,0,WA,Sprint RSP3,2026-03-01
-1ed86cd51cc1,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e88ded6c4ee5,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c50b4fc543d4,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-be9772120305,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-543bddcaa488,9,Smooth experience so far except internet not working issue faced few times.,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-b8b80c4a59d5,0,Recharge mahanga hai,Expensive,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0bae8762eca4,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ec0a753fb806,8,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-3086d513c523,5,Representatives gud behavir gud talking,Good Partner/ Techinician Support ,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-065930e031bc,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-8bae7d722418,10,Speed achi h,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-528b2dad73ce,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-cca0af50a12d,10,Speed achi hai net ki,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-05138e677a31,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-f85d7e660d32,8,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-8d34b2f6f72f,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-0ba80e1aa5bc,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1c1c5fbdc65d,0,Roj net ruk kar chalta h or kabhi nhi chalta bhut bekar h,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-316f60d9f04b,10,Speed fast h,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-3cddd6b966a4,10,Speed is good,Good Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-fd98bb91b043,10,Speed service,Good Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2b9c6044ecc1,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-24eca69b7593,6,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-44477a2c55ed,9,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-623afb5ddbb4,10,Stability & Speed,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2cc2f857c10d,5,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-f44c69f176ce,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c7fb4f3f0c16,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ee55e12def5a,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1d094e58a835,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-55709a42a4f7,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-5125b0f196d2,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-0929740c8257,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-a04663d1d882,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-255848ebe165,0,Roj net use karne mai dikkat hoti hai chlta hi nhi hai or abhi bhi nhi chl rha hai koi use mat kro bhai wiom ka net,Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-075cc271e272,2,Ruk ruk ke chlta h kyuki,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6e62da180586,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-8d9c1eb68a71,10,Super internet,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-798d43c010cd,0,Sabse bekar hai recharge kare huye mahina pura hogya but net nhi chal rha bekar hai wiom,Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-3a4721b2fc69,0,Sabse bekar wifi hai 0 internet speed har dusre din band ho jata h,Slow Speed,Frequent Disconnections,,Verma,,0,CT,Sprint RSP3,2026-03-01
-f99046ec769c,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-0c99efc9ce43,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-db4ead82fede,1,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-416d805661d9,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c94ba786e9c6,10,Superb 😘 xlent network no issues,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0da6ccf2b4cc,0,Sabse Ganda Hai Aapka system Har din Har ghante Mein kharab ho jata hai Sahi Nahin chalta hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5cf3d516bb70,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-81fb70738e39,1,Sabse ghatiya service ho chuki hai ab phle thik hai service providers ko change karo brna dhree dhree jo customer aaye hai wo bhi leave karke jayenge because technician ka behaviour aur baat karne ka tarika bhut kharab hai extra charge late hai aur mare abhi tak isse resolve nhi hua hai haar 2 din me mare net issue ho raha hai ab agar nhi service de sakte ho achi to koi nhi judge ek achi service ke liya customer judte hai wahi bekar hai ab apki thik kro isse aur service providers ko change karke ache ko do,Bad Customer Support - Technician,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-db0504011ac1,5,Sasta he,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5ffad59d4203,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-9ba5b3b154cc,6,security concerns,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e4f917ce3b58,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1f92d86f7c1b,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-d9fa44ee7110,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c88e9d283f38,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-bb6f68388e0d,8,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-dcbc954f073f,5,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-fd9aca01d686,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-5c65e2086141,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-bba1795dc3bf,0,Service,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-cb3656b07912,0,Service bahut bekar hai net chalta nahin Hai bilkul bhi Kisi bhi time band ho jata hai chalna,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-de9527990536,0,Service bhaut bekar hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-060137b0ed49,0,Service bohot kharab ha time pa kuch nhi hota ha,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-f8444c9ed036,3,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2d3f69685c23,10,Superb speed,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ad59a20aa16a,0,Service not available,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e3a86f5851c8,10,Test,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-97cb703146df,4,Service or network problem,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-73b0a0e10a78,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e67ceec29348,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2a70b8f25e44,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-fc095da3d2c1,5,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-376844305072,2,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-639f816e8c7e,0,Services is not on time means late complaint,No/Late Complaint Resolution,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c8f91e7f5977,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-89dc13a8d47a,10,The best reason is your perfectly service,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-56d94bebd216,8,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1b04404f85ab,9,"The internet is working well so far, and if any issue comes up, it gets resolved quickly. Thank you wiom👍",Fast Complaint Resolution,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ce6ba2f5c6ff,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-641cd3f0a4fa,0,Shi se chal ta nhi h aaj bi band h raat se,Internet Down,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-10302e39f393,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-984c96291b2a,0,Sir 30 din ka recharge kara do,28-Day Plan Issue,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-fb15895649a0,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-50b28d61d334,1,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-5b390131ccff,1,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-12d4a158f59d,10,"The net works very well, I mean very nice.",General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e42f00410d18,9,Theek hai lekin bich bich mein band Ho jata Hai yah taklif hai,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f93a3490f790,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-9cae1e5fe42e,1,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-4751c81568a3,9,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-407e0a6e05f0,1,Sir speed tej kr do prosisng hoti ha vivideo dekhene ma,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d67e42c24b25,5,Slow internet speed,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-57d943c16673,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-0501d138ea87,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-d6f0f30a8c73,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-9107d1c6d401,0,Slow net,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7f6bd196bba7,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-87543126de00,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-62c191ddae81,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-3828234c39d7,0,Slow net,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-161839ebdec7,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-d1ad330b4416,0,Slow network,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f1c8bfec9488,8,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-109bdd1a4135,0,Slow network,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5d13a830211f,6,Slow networks,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-387067781bea,0,Slow speed,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-fe5e9667e458,0,So pooor service no. Netwrk. So much netwrk issue,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9fd4de389224,7,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-21f855fb82ab,2,Some time very poor conncetivity,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-60b04c05c878,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-33da5f033db9,5,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e41719cf4e70,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2ac8f6b982bb,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-3d8aef89240f,10,Thik hai,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-527ed2e69cd6,8,"Vaise to speed network sabh budget ke hisab se sahi hai par sabhki apni soch hoti hai to vo konsa wifi lagaye ye to nahi pta per recommend karunga,Mena 8 isliye diya kyuki iske sath koi ott platform wala pack nahi milta if they solve this problem I would give 10 out of 10","OTT Request, No OTT complaint",Affordable,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9c54afcd87ce,1,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-4e68bc834f9e,5,"Some time wifi would be slow and doesnot give properly good speed and in 24 hours it need 2-3 times refresh 
- So thats why",Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d7a7092571d4,2,Speed bahut slow a rahi hai,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-07677596d153,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-bbceefd451bc,10,Thik hai Womi Wifi basa kabhi kabhi internet issue aa ta sa,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c293ccd37672,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-cb37413ce868,9,Thik vhala,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e5ec43df16b8,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-67893aeaf878,7,Wiom is a very good internet provider and the plans are also budget friendly but the customer care and after service is not good. I think they have to work on it,Affordable,Bad Customer Support - Call Centre ,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0566b69bf9e8,0,Speed bilkul nakali net Tak sahi se nahin chalta,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-362693cc4913,10,This network is best,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-63985eb483e6,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-b34b8282846b,0,Speed bohot kam aati hai 50 mbps bolte hai aati hai 25 complaint karo to us time sahi kar dete hai baad m phir slow ho jaati hai,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-8b4a44b53024,4,"Speed full aane ke baad bhi Ping bahut High rehta h
+ Bahot hi bakvas service hei apaki","RDNI (Recharge Done, No Internet)",,,Verma,,115,WA,Sprint RSP3,2026-03-01,
+9899561080,0,Na kabhi chalta hai na kabhi sare paise waste ho jate m to such raha hu is wifi ko hatwa du,Frequent Disconnections,,,Verma,,956,WA,Sprint RSP3,2026-03-01,
+9873357686,2,Nahi,General Bad Service,,,Verma,,959,WA,Sprint RSP3,2026-03-01,
+8800457313,10,Network acha hai but speed slow hai apko or acha kam karna hoga,Slow Speed,,,Verma,,124,CT,Sprint RSP3,2026-03-01,
+9871862701,10,Network ache h,General Good Service,,,Verma,,237,WA,Sprint RSP3,2026-03-01,
+9756008008,0,Nahi,General Bad Service,,,Verma,,325,WA,Sprint RSP3,2026-03-01,
+8373992966,0,Nahi degr,General Bad Service,,,Verma,,754,WA,Sprint RSP3,2026-03-01,
+9650621171,3,Nahin kabhi nahinNahin kabhi nahin,General Bad Service,,,Verma,,527,WA,Sprint RSP3,2026-03-01,
+8882183146,0,Net achha nahi h,General Bad Service,,,Verma,,177,WA,Sprint RSP3,2026-03-01,
+8920292262,0,Net bahut rukta hai,Slow Speed,,,Verma,,327,CT,Sprint RSP3,2026-03-01,
+8742946140,10,network very good,General Good Service,,,Verma,,202,WA,Sprint RSP3,2026-03-01,
+9810467948,10,,,,,Verma,,688,WA,Sprint RSP3,2026-03-01,
+7827256276,10,,,,,Verma,,56,WA,Sprint RSP3,2026-03-01,
+9650664505,6,,,,,Verma,,230,WA,Sprint RSP3,2026-03-01,
+9582461029,0,"Net bahut slow hai, agr do phone mei chal rha hai speed aue low ho jati hai",Slow Speed,,,Verma,,686,WA,Sprint RSP3,2026-03-01,
+9312990009,10,,,,,Verma,,1180,WA,Sprint RSP3,2026-03-01,
+8929236931,3,Net band ho jata h,Frequent Disconnections,,,Verma,,137,CT,Sprint RSP3,2026-03-01,
+9808567756,0,net breaking,General Bad Service,,,Verma,,199,CT,Sprint RSP3,2026-03-01,
+9702130426,10,Nice,General Good Service,,,Verma,,173,WA,Sprint RSP3,2026-03-01,
+9718890998,1,Net goes down every time specially in peak time when required,Frequent Disconnections,,,Verma,,99,WA,Sprint RSP3,2026-03-01,
+9310022778,0,Net issue,General Bad Service,,,Verma,,233,CT,Sprint RSP3,2026-03-01,
+9760644640,0,Net kabi bhi chala jata hai,Frequent Disconnections,,,Verma,,366,CT,Sprint RSP3,2026-03-01,
+9716924759,6,Net me bar bar problem aati rehti hai,Frequent Disconnections,,,Verma,,789,WA,Sprint RSP3,2026-03-01,
+7042216850,1,Net nahi chlra,Internet Down,,,Verma,,218,WA,Sprint RSP3,2026-03-01,
+9310134437,0,Net nhi chal rha h bhot slow connectivity h,Slow Speed,,,Verma,,234,CT,Sprint RSP3,2026-03-01,
+8851507892,0,Net not working every time,Internet Down,,,Verma,,154,WA,Sprint RSP3,2026-03-01,
+9050873454,5,,,,,Verma,,99,WA,Sprint RSP3,2026-03-01,
+9910921653,0,,,,,Verma,,339,WA,Sprint RSP3,2026-03-01,
+8510944086,0,Net not working hata do isa,Internet Down,,,Verma,,318,CT,Sprint RSP3,2026-03-01,
+7065874471,0,Net problem,General Bad Service,,,Verma,,82,WA,Sprint RSP3,2026-03-01,
+7088158534,0,Net problem ati hai,General Bad Service,,,Verma,,237,CT,Sprint RSP3,2026-03-01,
+7011058645,10,,,,,Verma,,265,WA,Sprint RSP3,2026-03-01,
+7065664739,0,"Net problem, staff problem, and etc.",General Bad Service,Bad Customer Support - Call Centre,,Verma,,216,WA,Sprint RSP3,2026-03-01,
+9336520730,0,Net sahi nahi hai,General Bad Service,,,Verma,,126,WA,Sprint RSP3,2026-03-01,
+9818948046,0,Net sahi nhi chalta hai. 28 din me 10 din net ka problem rahta hai,Frequent Disconnections,,,Verma,,554,WA,Sprint RSP3,2026-03-01,
+9654759003,4,Net slow,Slow Speed,,,Verma,,398,WA,Sprint RSP3,2026-03-01,
+9716181893,0,Net slow aur speed issue and proper net nhi chalta,Slow Speed,,,Verma,,247,WA,Sprint RSP3,2026-03-01,
+8947935359,10,Nice,General Good Service,,,Verma,,124,WA,Sprint RSP3,2026-03-01,
+9821988324,9,,,,,Verma,,346,WA,Sprint RSP3,2026-03-01,
+8076238770,10,Nice service of wifi,General Good Service,,,Verma,,776,CT,Sprint RSP3,2026-03-01,
+7289975289,0,Net slow chl raha hai bohot,Slow Speed,,,Verma,,10,WA,Sprint RSP3,2026-03-01,
+8271193995,10,Ok,,,,Verma,,577,CT,Sprint RSP3,2026-03-01,
+7217819014,10,Padhai,,,,Verma,,71,CT,Sprint RSP3,2026-03-01,
+8218069915,0,Net slow hota baar baar,Slow Speed,,,Verma,,216,CT,Sprint RSP3,2026-03-01,
+9311829539,6,Net speed achi nahi hai,Slow Speed,,,Verma,,392,CT,Sprint RSP3,2026-03-01,
+9891161460,8,Sarvice,General Bad Service,,,Verma,,189,WA,Sprint RSP3,2026-03-01,
+8860878087,10,Pahla net he he ghar mein koi aur nhi 5ha,,,,Verma,,232,CT,Sprint RSP3,2026-03-01,
+8920222155,10,Plan 499,Affordable,,,Verma,,1291,CT,Sprint RSP3,2026-03-01,
+9457181676,10,Price low,Affordable,,,Verma,,279,WA,Sprint RSP3,2026-03-01,
+8595788113,3,Net speed slow,Slow Speed,,,Verma,,297,WA,Sprint RSP3,2026-03-01,
+9199351808,8,Sasta hai,Affordable,,,Verma,,911,WA,Sprint RSP3,2026-03-01,
+8851527586,8,"Sastaa hai, or service v thik-thak hi hai.",Affordable,,,Verma,,599,WA,Sprint RSP3,2026-03-01,
+8448303352,8,Signals range can be improved and should send prior information about any repairing work which affect customer signals (cutoff),Range Issue,,,Verma,,282,WA,Sprint RSP3,2026-03-01,
+9555979053,3,Net very slow,Slow Speed,,,Verma,,562,WA,Sprint RSP3,2026-03-01,
+9873518661,2,Netwok kafi bar band ho jata hai 2 din bhj lag jate hai apke care pe bat krte karte apni service Sahi karo other wise WiFi our bhi hai,Frequent Disconnections,,,Verma,,596,WA,Sprint RSP3,2026-03-01,
+8178889636,9,Raat ko nahi chalta ha sabsa jada,Frequent Disconnections,,,Verma,,151,WA,Sprint RSP3,2026-03-01,
+9958745691,6,,,,,Verma,,750,WA,Sprint RSP3,2026-03-01,
+8802553019,5,,,,,Verma,,651,WA,Sprint RSP3,2026-03-01,
+9873998875,0,Network disconnect frequently,General Bad Service,,,Verma,,78,CT,Sprint RSP3,2026-03-01,
+9718439254,0,Network issue bahut rahata hai network bahut gande Hain Wi-Fi Kam nahin karta to main dusron ko kaise suggestion karunga,General Bad Service,,,Verma,,482,CT,Sprint RSP3,2026-03-01,
+9711763070,3,Network issue hai,General Bad Service,,,Verma,,251,WA,Sprint RSP3,2026-03-01,
+9711652702,0,Network issue hain speed to bohot slow ho jaati hain,Slow Speed,,,Verma,,647,CT,Sprint RSP3,2026-03-01,
+8920131925,9,,,,,Verma,,1291,WA,Sprint RSP3,2026-03-01,
+8527221368,0,Network issue har mahine hota hai or,General Bad Service,,,Verma,,109,CT,Sprint RSP3,2026-03-01,
+7507814127,5,"Network issue many times
+ Speed is also not good",Slow Speed,,,Verma,,393,WA,Sprint RSP3,2026-03-01,
+9211240569,10,Reasonable & affordable,Affordable,,,Verma,,107,WA,Sprint RSP3,2026-03-01,
+9318476353,0,Network issue net speed low,Slow Speed,,,Verma,,598,CT,Sprint RSP3,2026-03-01,
+9599300329,0,Network issue Rehta hai,General Bad Service,,,Verma,,663,WA,Sprint RSP3,2026-03-01,
+7217860858,3,Network lost hota h bar bar,Frequent Disconnections,,,Verma,,251,WA,Sprint RSP3,2026-03-01,
+9818229890,10,Sabse sasta achcha,Affordable,,,Verma,,488,WA,Sprint RSP3,2026-03-01,
+9289591858,0,Network mai bhut dikkat hai mai khidh hi kuch dino mai airtel ka wifi lagwa lunga,Frequent Disconnections,,,Verma,,395,WA,Sprint RSP3,2026-03-01,
+9717674513,0,,,,,Verma,,275,WA,Sprint RSP3,2026-03-01,
+8447490332,0,Network nahin aata customer care per baat karne ke bad bhi Sahi nahin hota,Bad Customer Support - Call Centre,,,Verma,,489,WA,Sprint RSP3,2026-03-01,
+8700491376,1,Network problem,General Bad Service,,,Verma,,56,WA,Sprint RSP3,2026-03-01,
+7982715717,10,Sarvice bhut acchi h,General Good Service,,,Verma,,252,WA,Sprint RSP3,2026-03-01,
+8383041545,0,Network problem 100mbs ki jagha 20 mbs ki speed b,Slow Speed,,,Verma,,423,WA,Sprint RSP3,2026-03-01,
+9920093108,1,Network problem hai complain karo to bhi nahin solve hota Hai aur pahle se mahnga kar Diya bina bataye customer ko din me 4 se 5 baar complaint karna padta hai,No/Late Complaint Resolution,,,Verma,,743,CT,Sprint RSP3,2026-03-01,
+9811815757,9,Sarvice good,General Good Service,,,Verma,,108,WA,Sprint RSP3,2026-03-01,
+9540422380,10,,,,,Verma,,109,WA,Sprint RSP3,2026-03-01,
+8700510581,10,,,,,Verma,,627,WA,Sprint RSP3,2026-03-01,
+9999026202,0,"Network problem hai, router kaam nahi kar rha",General Bad Service,,,Verma,,1269,WA,Sprint RSP3,2026-03-01,
+9923486172,10,Sarvis achchi hai,General Good Service,,,Verma,,436,WA,Sprint RSP3,2026-03-01,
+9911704999,6,Network proper nahi aata kabhi bhi signal chale jate hai,Frequent Disconnections,,,Verma,,217,WA,Sprint RSP3,2026-03-01,
+9560432649,10,,,,,Verma,,485,WA,Sprint RSP3,2026-03-01,
+7208726275,7,,,,,Verma,,646,WA,Sprint RSP3,2026-03-01,
+9205512705,10,"Sasta bhadya he or net bi sai chalta he 
+ Bas ek Kami he night me chata jata he",Affordable,Frequent Disconnections,,Verma,,324,CT,Sprint RSP3,2026-03-01,
+8587001216,10,Sasta or badiya,Affordable,,,Verma,,101,WA,Sprint RSP3,2026-03-01,
+9625273963,5,,,,,Verma,,500,WA,Sprint RSP3,2026-03-01,
+8287690910,5,Network sahhi nhi aate h router baar baar on off Krna pdta h then wifi connect hota h phone me,Frequent Disconnections,,,Verma,,84,WA,Sprint RSP3,2026-03-01,
+8802962417,0,Network speed,Slow Speed,,,Verma,,317,WA,Sprint RSP3,2026-03-01,
+9634195324,0,Network theek nahin Hai,General Bad Service,,,Verma,,380,WA,Sprint RSP3,2026-03-01,
+7017565862,0,Nhi,General Bad Service,,,Verma,,71,WA,Sprint RSP3,2026-03-01,
+9891257030,10,Service acchi,General Good Service,,,Verma,,296,WA,Sprint RSP3,2026-03-01,
+9278019211,10,,,,,Verma,,423,WA,Sprint RSP3,2026-03-01,
+7500124607,0,Nhi,General Bad Service,,,Verma,,450,WA,Sprint RSP3,2026-03-01,
+7988499443,0,No customer support,Bad Customer Support - Call Centre,,,Verma,,217,WA,Sprint RSP3,2026-03-01,
+8882985550,10,Service and low price to start,Affordable,,,Verma,,532,WA,Sprint RSP3,2026-03-01,
+8851690710,0,No no,General Bad Service,,,Verma,,24,WA,Sprint RSP3,2026-03-01,
+9050883639,8,"Sometime internet is very slow, even not working",Slow Speed,,,Verma,,220,WA,Sprint RSP3,2026-03-01,
+7738512558,5,,,,,Verma,,125,WA,Sprint RSP3,2026-03-01,
+9798203030,1,No no no pe hi lijiyega no no,General Bad Service,,,Verma,,387,CT,Sprint RSP3,2026-03-01,
+8375833031,0,Not problem solve payment hogi h phir bhi net nhi arha h very bad service phone bhi nhi receive kar rahe,Internet Down,,,Verma,,243,CT,Sprint RSP3,2026-03-01,
+9811665028,6,On daily basis showing no internet and automatically disconnected getting slow internet speed,Frequent Disconnections,Slow Speed,,Verma,,50,WA,Sprint RSP3,2026-03-01,
+8595350920,7,,,,,Verma,,571,CT,Sprint RSP3,2026-03-01,
+9599172150,7,,,,,Verma,,789,CT,Sprint RSP3,2026-03-01,
+8279418192,1,,,,,Verma,,325,CT,Sprint RSP3,2026-03-01,
+9555038951,2,,,,,Verma,,926,CT,Sprint RSP3,2026-03-01,
+7011876601,10,Service fast h Wiom ki,General Good Service,,,Verma,,214,WA,Sprint RSP3,2026-03-01,
+9990609009,7,Theak h bajat mea bhe h,Affordable,,,Verma,,873,WA,Sprint RSP3,2026-03-01,
+9837639161,0,,,,,Verma,,274,CT,Sprint RSP3,2026-03-01,
+7208336630,10,,,,,Verma,,618,CT,Sprint RSP3,2026-03-01,
+9368744643,10,,,,,Verma,,269,CT,Sprint RSP3,2026-03-01,
+8850353528,10,Service good,General Good Service,,,Verma,,543,WA,Sprint RSP3,2026-03-01,
+7289899140,10,,,,,Verma,,252,CT,Sprint RSP3,2026-03-01,
+9015188842,0,Par services,General Bad Service,,,Verma,,794,CT,Sprint RSP3,2026-03-01,
+8700610031,0,,,,,Verma,,182,CT,Sprint RSP3,2026-03-01,
+9873862893,5,,,,,Verma,,423,CT,Sprint RSP3,2026-03-01,
+9315818833,10,,,,,Verma,,849,CT,Sprint RSP3,2026-03-01,
+7456911158,10,,,,,Verma,,287,CT,Sprint RSP3,2026-03-01,
+8766232020,10,,,,,Verma,,178,CT,Sprint RSP3,2026-03-01,
+8178055464,0,POOR CUSTOMER SERVICE,Bad Customer Support - Call Centre,,,Verma,,517,WA,Sprint RSP3,2026-03-01,
+9457117387,0,Poor service,General Bad Service,,,Verma,,115,WA,Sprint RSP3,2026-03-01,
+8307288293,10,,,,,Verma,,315,CT,Sprint RSP3,2026-03-01,
+9891215492,1,,,,,Verma,,19,CT,Sprint RSP3,2026-03-01,
+8527286685,9,,,,,Verma,,299,CT,Sprint RSP3,2026-03-01,
+9045280770,10,Service is good,General Good Service,,,Verma,,273,WA,Sprint RSP3,2026-03-01,
+7678269970,1,poor services,General Bad Service,,,Verma,,613,CT,Sprint RSP3,2026-03-01,
+7683093340,0,,,,,Verma,,467,CT,Sprint RSP3,2026-03-01,
+7791994222,10,Service is good,General Good Service,,,Verma,,563,CT,Sprint RSP3,2026-03-01,
+8178357675,1,Raat ko Wi-Fi nahin chalta yah,Frequent Disconnections,,,Verma,,1016,WA,Sprint RSP3,2026-03-01,
+7291929371,10,,,,,Verma,,127,CT,Sprint RSP3,2026-03-01,
+8595803825,5,Range Bhot kam hai,Range Issue,,,Verma,,596,WA,Sprint RSP3,2026-03-01,
+9389883079,10,,,,,Verma,,271,CT,Sprint RSP3,2026-03-01,
+9953681157,10,Service is gud,General Good Service,,,Verma,,243,WA,Sprint RSP3,2026-03-01,
+7703939154,10,,,,,Verma,,73,CT,Sprint RSP3,2026-03-01,
+9911527315,6,,,,,Verma,,926,CT,Sprint RSP3,2026-03-01,
+7703919397,3,,,,,Verma,,16,CT,Sprint RSP3,2026-03-01,
+7974037440,0,,,,,Verma,,778,CT,Sprint RSP3,2026-03-01,
+7065213346,5,Range kafi kam hai,Range Issue,,,Verma,,401,WA,Sprint RSP3,2026-03-01,
+8527225992,10,,,,,Verma,,218,CT,Sprint RSP3,2026-03-01,
+9996864647,1,Raouter m pourt kam hai,,,,Verma,,51,WA,Sprint RSP3,2026-03-01,
+7303432274,10,,,,,Verma,,128,CT,Sprint RSP3,2026-03-01,
+9958706288,10,,,,,Verma,,313,CT,Sprint RSP3,2026-03-01,
+9319486144,0,Recharge bhot mehnga h or network speed achhi nhi h,Expensive,,,Verma,,73,CT,Sprint RSP3,2026-03-01,
+8368207681,10,,,,,Verma,,132,CT,Sprint RSP3,2026-03-01,
+8920977124,10,,,,,Verma,,853,CT,Sprint RSP3,2026-03-01,
+8076567103,10,service is very nice,General Good Service,,,Verma,,208,WA,Sprint RSP3,2026-03-01,
+7011281302,0,,,,,Verma,,197,CT,Sprint RSP3,2026-03-01,
+7028530040,10,,,,,Verma,,106,CT,Sprint RSP3,2026-03-01,
+9389722653,10,,,,,Verma,,206,CT,Sprint RSP3,2026-03-01,
+7982508108,3,Recharge hone ke baad bich bich mein pura din net band ho jata hai aur red light show hoti hai,"RDNI (Recharge Done, No Internet)",,,Verma,,345,WA,Sprint RSP3,2026-03-01,
+9310647381,10,,,,,Verma,,159,CT,Sprint RSP3,2026-03-01,
+8929025138,10,,,,,Verma,,255,CT,Sprint RSP3,2026-03-01,
+9076175303,8,,,,,Verma,,329,CT,Sprint RSP3,2026-03-01,
+9540273891,5,,,,,Verma,,512,CT,Sprint RSP3,2026-03-01,
+8707045763,0,,,,,Verma,,129,CT,Sprint RSP3,2026-03-01,
+7887869525,0,,,,,Verma,,320,CT,Sprint RSP3,2026-03-01,
+8899866611,0,Recharge ke baad net ni chala ek din bhi,"RDNI (Recharge Done, No Internet)",,,Verma,,1167,CT,Sprint RSP3,2026-03-01,
+9958686680,10,Service very good,General Good Service,,,Verma,,413,WA,Sprint RSP3,2026-03-01,
+8750611494,5,,,,,Verma,,337,CT,Sprint RSP3,2026-03-01,
+8447600825,0,,,,,Verma,,178,CT,Sprint RSP3,2026-03-01,
+7654023735,0,,,,,Verma,,21,CT,Sprint RSP3,2026-03-01,
+9971379035,10,,,,,Verma,,88,CT,Sprint RSP3,2026-03-01,
+8527885729,3,Recharge khatm hota hai turant Kat band kar dete Ho,"RDNI (Recharge Done, No Internet)",,,Verma,,596,WA,Sprint RSP3,2026-03-01,
+9220446289,0,,,,,Verma,,301,CT,Sprint RSP3,2026-03-01,
+9560545522,10,,,,,Verma,,714,CT,Sprint RSP3,2026-03-01,
+8527226290,10,,,,,Verma,,210,CT,Sprint RSP3,2026-03-01,
+7982660068,10,,,,,Verma,,14,CT,Sprint RSP3,2026-03-01,
+9145695556,9,Smooth experience so far except internet not working issue faced few times.,General Good Service,,,Verma,,365,WA,Sprint RSP3,2026-03-01,
+9971073241,0,Recharge mahanga hai,Expensive,,,Verma,,541,WA,Sprint RSP3,2026-03-01,
+7836028281,10,,,,,Verma,,665,CT,Sprint RSP3,2026-03-01,
+9716500986,8,,,,,Verma,,466,CT,Sprint RSP3,2026-03-01,
+9910760181,5,Representatives gud behavir gud talking,Good Partner/ Techinician Support,,,Verma,,55,WA,Sprint RSP3,2026-03-01,
+9557684701,10,,,,,Verma,,269,CT,Sprint RSP3,2026-03-01,
+7048912702,10,Speed achi h,Good Speed,,,Verma,,266,WA,Sprint RSP3,2026-03-01,
+8449461203,10,,,,,Verma,,383,CT,Sprint RSP3,2026-03-01,
+8750100080,10,Speed achi hai net ki,Good Speed,,,Verma,,73,WA,Sprint RSP3,2026-03-01,
+9210302872,10,,,,,Verma,,261,CT,Sprint RSP3,2026-03-01,
+8750503688,8,,,,,Verma,,509,CT,Sprint RSP3,2026-03-01,
+7065956928,10,,,,,Verma,,413,CT,Sprint RSP3,2026-03-01,
+9821881684,0,,,,,Verma,,446,CT,Sprint RSP3,2026-03-01,
+9599494650,0,Roj net ruk kar chalta h or kabhi nhi chalta bhut bekar h,Frequent Disconnections,,,Verma,,601,WA,Sprint RSP3,2026-03-01,
+8860475603,10,Speed fast h,Good Speed,,,Verma,,633,WA,Sprint RSP3,2026-03-01,
+8851398576,10,Speed is good,Good Speed,,,Verma,,189,CT,Sprint RSP3,2026-03-01,
+8799871061,10,Speed service,Good Speed,,,Verma,,216,CT,Sprint RSP3,2026-03-01,
+9873989587,10,,,,,Verma,,351,CT,Sprint RSP3,2026-03-01,
+8448752643,6,,,,,Verma,,649,CT,Sprint RSP3,2026-03-01,
+8595307723,9,,,,,Verma,,488,CT,Sprint RSP3,2026-03-01,
+9045420626,10,Stability & Speed,Good Speed,,,Verma,,802,WA,Sprint RSP3,2026-03-01,
+7678142204,5,,,,,Verma,,609,CT,Sprint RSP3,2026-03-01,
+7042923550,10,,,,,Verma,,1176,CT,Sprint RSP3,2026-03-01,
+9582850550,10,,,,,Verma,,101,CT,Sprint RSP3,2026-03-01,
+8585932463,10,,,,,Verma,,66,CT,Sprint RSP3,2026-03-01,
+8744997602,10,,,,,Verma,,264,CT,Sprint RSP3,2026-03-01,
+9210034950,10,,,,,Verma,,644,CT,Sprint RSP3,2026-03-01,
+9310932899,10,,,,,Verma,,848,CT,Sprint RSP3,2026-03-01,
+9792222262,0,,,,,Verma,,249,CT,Sprint RSP3,2026-03-01,
+8767165953,0,,,,,Verma,,582,CT,Sprint RSP3,2026-03-01,
+8595400810,0,Roj net use karne mai dikkat hoti hai chlta hi nhi hai or abhi bhi nhi chl rha hai koi use mat kro bhai wiom ka net,Frequent Disconnections,,,Verma,,689,CT,Sprint RSP3,2026-03-01,
+7065627848,2,Ruk ruk ke chlta h kyuki,Slow Speed,,,Verma,,146,WA,Sprint RSP3,2026-03-01,
+8860743500,10,,,,,Verma,,63,CT,Sprint RSP3,2026-03-01,
+9718160737,10,Super internet,General Good Service,,,Verma,,819,WA,Sprint RSP3,2026-03-01,
+9968539920,0,Sabse bekar hai recharge kare huye mahina pura hogya but net nhi chal rha bekar hai wiom,Frequent Disconnections,,,Verma,,475,CT,Sprint RSP3,2026-03-01,
+6283792810,0,Sabse bekar wifi hai 0 internet speed har dusre din band ho jata h,Slow Speed,Frequent Disconnections,,Verma,,270,CT,Sprint RSP3,2026-03-01,
+8802993984,0,,,,,Verma,,590,CT,Sprint RSP3,2026-03-01,
+9540767703,10,,,,,Verma,,10,CT,Sprint RSP3,2026-03-01,
+8588077542,1,,,,,Verma,,223,CT,Sprint RSP3,2026-03-01,
+8800986433,10,,,,,Verma,,610,CT,Sprint RSP3,2026-03-01,
+9315191964,10,Superb ðŸ˜˜ xlent network no issues,General Good Service,,,Verma,,517,WA,Sprint RSP3,2026-03-01,
+8743003033,0,Sabse Ganda Hai Aapka system Har din Har ghante Mein kharab ho jata hai Sahi Nahin chalta hai,Frequent Disconnections,,,Verma,,152,WA,Sprint RSP3,2026-03-01,
+9992442751,0,,,,,Verma,,207,CT,Sprint RSP3,2026-03-01,
+9958496848,1,Sabse ghatiya service ho chuki hai ab phle thik hai service providers ko change karo brna dhree dhree jo customer aaye hai wo bhi leave karke jayenge because technician ka behaviour aur baat karne ka tarika bhut kharab hai extra charge late hai aur mare abhi tak isse resolve nhi hua hai haar 2 din me mare net issue ho raha hai ab agar nhi service de sakte ho achi to koi nhi judge ek achi service ke liya customer judte hai wahi bekar hai ab apki thik kro isse aur service providers ko change karke ache ko do,Bad Customer Support - Technician,,,Verma,,238,CT,Sprint RSP3,2026-03-01,
+9810808489,5,Sasta he,Affordable,,,Verma,,241,WA,Sprint RSP3,2026-03-01,
+8882093371,0,,,,,Verma,,261,CT,Sprint RSP3,2026-03-01,
+9571081499,6,security concerns,,,,Verma,,177,CT,Sprint RSP3,2026-03-01,
+7982232823,10,,,,,Verma,,243,CT,Sprint RSP3,2026-03-01,
+8882621915,10,,,,,Verma,,192,CT,Sprint RSP3,2026-03-01,
+9654356213,10,,,,,Verma,,1177,CT,Sprint RSP3,2026-03-01,
+8057881690,10,,,,,Verma,,189,CT,Sprint RSP3,2026-03-01,
+8920364752,8,,,,,Verma,,48,CT,Sprint RSP3,2026-03-01,
+9998641351,5,,,,,Verma,,420,CT,Sprint RSP3,2026-03-01,
+8882695749,10,,,,,Verma,,134,CT,Sprint RSP3,2026-03-01,
+7495063071,0,,,,,Verma,,53,CT,Sprint RSP3,2026-03-01,
+8299607026,0,Service,General Bad Service,,,Verma,,363,WA,Sprint RSP3,2026-03-01,
+8527069150,0,Service bahut bekar hai net chalta nahin Hai bilkul bhi Kisi bhi time band ho jata hai chalna,General Bad Service,,,Verma,,657,WA,Sprint RSP3,2026-03-01,
+8743994227,0,Service bhaut bekar hai,General Bad Service,,,Verma,,709,WA,Sprint RSP3,2026-03-01,
+9654708832,0,Service bohot kharab ha time pa kuch nhi hota ha,General Bad Service,,,Verma,,471,CT,Sprint RSP3,2026-03-01,
+7983366713,3,,,,,Verma,,234,CT,Sprint RSP3,2026-03-01,
+8920217446,10,Superb speed,Good Speed,,,Verma,,143,WA,Sprint RSP3,2026-03-01,
+9354147451,0,Service not available,General Bad Service,,,Verma,,101,WA,Sprint RSP3,2026-03-01,
+9717057785,10,Test,,,,Verma,,189,CT,Sprint RSP3,2026-03-01,
+9205524278,4,Service or network problem,General Bad Service,,,Verma,,67,CT,Sprint RSP3,2026-03-01,
+9958114399,10,,,,,Verma,,583,CT,Sprint RSP3,2026-03-01,
+9310473339,0,,,,,Verma,,57,CT,Sprint RSP3,2026-03-01,
+9311532481,0,,,,,Verma,,100,CT,Sprint RSP3,2026-03-01,
+8826779525,5,,,,,Verma,,412,CT,Sprint RSP3,2026-03-01,
+9717180386,2,,,,,Verma,,225,CT,Sprint RSP3,2026-03-01,
+7289858213,0,Services is not on time means late complaint,No/Late Complaint Resolution,,,Verma,,1016,WA,Sprint RSP3,2026-03-01,
+9871760238,10,,,,,Verma,,521,CT,Sprint RSP3,2026-03-01,
+8286317593,10,The best reason is your perfectly service,General Good Service,,,Verma,,242,WA,Sprint RSP3,2026-03-01,
+8448657224,8,,,,,Verma,,18,CT,Sprint RSP3,2026-03-01,
+9654706658,9,"The internet is working well so far, and if any issue comes up, it gets resolved quickly. Thank you wiomðŸ‘_x008d_",Fast Complaint Resolution,,,Verma,,349,WA,Sprint RSP3,2026-03-01,
+9999369021,0,,,,,Verma,,112,CT,Sprint RSP3,2026-03-01,
+8178666239,0,Shi se chal ta nhi h aaj bi band h raat se,Internet Down,,,Verma,,940,CT,Sprint RSP3,2026-03-01,
+8448463057,10,,,,,Verma,,1270,CT,Sprint RSP3,2026-03-01,
+8130512672,0,Sir 30 din ka recharge kara do,28-Day Plan Issue,,,Verma,,365,CT,Sprint RSP3,2026-03-01,
+9354581407,0,,,,,Verma,,13,CT,Sprint RSP3,2026-03-01,
+9045339571,1,,,,,Verma,,124,CT,Sprint RSP3,2026-03-01,
+9953191625,1,,,,,Verma,,186,CT,Sprint RSP3,2026-03-01,
+8448025159,10,"The net works very well, I mean very nice.",General Good Service,,,Verma,,216,WA,Sprint RSP3,2026-03-01,
+8291768413,9,Theek hai lekin bich bich mein band Ho jata Hai yah taklif hai,Frequent Disconnections,,,Verma,,540,WA,Sprint RSP3,2026-03-01,
+8595754332,0,,,,,Verma,,437,CT,Sprint RSP3,2026-03-01,
+9773570850,1,,,,,Verma,,721,CT,Sprint RSP3,2026-03-01,
+7972256191,9,,,,,Verma,,223,CT,Sprint RSP3,2026-03-01,
+7210768137,1,Sir speed tej kr do prosisng hoti ha vivideo dekhene ma,Slow Speed,,,Verma,,312,WA,Sprint RSP3,2026-03-01,
+9702169428,5,Slow internet speed,Slow Speed,,,Verma,,274,WA,Sprint RSP3,2026-03-01,
+9792545536,10,,,,,Verma,,383,CT,Sprint RSP3,2026-03-01,
+8882719827,0,,,,,Verma,,134,CT,Sprint RSP3,2026-03-01,
+9555899467,10,,,,,Verma,,70,CT,Sprint RSP3,2026-03-01,
+9211773307,0,Slow net,Slow Speed,,,Verma,,171,WA,Sprint RSP3,2026-03-01,
+7011823129,0,,,,,Verma,,979,CT,Sprint RSP3,2026-03-01,
+9310661519,0,,,,,Verma,,87,CT,Sprint RSP3,2026-03-01,
+9315196354,0,,,,,Verma,,222,CT,Sprint RSP3,2026-03-01,
+7503445386,0,Slow net,Slow Speed,,,Verma,,81,CT,Sprint RSP3,2026-03-01,
+9958324369,10,,,,,Verma,,603,CT,Sprint RSP3,2026-03-01,
+8368563274,0,Slow network,Slow Speed,,,Verma,,639,WA,Sprint RSP3,2026-03-01,
+9990999925,8,,,,,Verma,,351,CT,Sprint RSP3,2026-03-01,
+7011512617,0,Slow network,Slow Speed,,,Verma,,121,WA,Sprint RSP3,2026-03-01,
+9841568781,6,Slow networks,Slow Speed,,,Verma,,508,CT,Sprint RSP3,2026-03-01,
+7289901981,0,Slow speed,Slow Speed,,,Verma,,413,WA,Sprint RSP3,2026-03-01,
+9560425039,0,So pooor service no. Netwrk. So much netwrk issue,General Bad Service,,,Verma,,223,WA,Sprint RSP3,2026-03-01,
+9873254343,7,,,,,Verma,,110,CT,Sprint RSP3,2026-03-01,
+9761616499,2,Some time very poor conncetivity,General Bad Service,,,Verma,,65,WA,Sprint RSP3,2026-03-01,
+7836881211,10,,,,,Verma,,442,CT,Sprint RSP3,2026-03-01,
+9773953285,5,,,,,Verma,,124,CT,Sprint RSP3,2026-03-01,
+9310538340,10,,,,,Verma,,774,CT,Sprint RSP3,2026-03-01,
+8860162784,10,,,,,Verma,,684,CT,Sprint RSP3,2026-03-01,
+8851781718,10,Thik hai,General Good Service,,,Verma,,71,CT,Sprint RSP3,2026-03-01,
+8810573955,8,"Vaise to speed network sabh budget ke hisab se sahi hai par sabhki apni soch hoti hai to vo konsa wifi lagaye ye to nahi pta per recommend karunga,Mena 8 isliye diya kyuki iske sath koi ott platform wala pack nahi milta if they solve this problem I would give 10 out of 10","OTT Request, No OTT complaint",Affordable,,Verma,,157,WA,Sprint RSP3,2026-03-01,
+9452449195,1,,,,,Verma,,128,CT,Sprint RSP3,2026-03-01,
+8826861156,5,"Some time wifi would be slow and doesnot give properly good speed and in 24 hours it need 2-3 times refresh 
+ So thats why",Slow Speed,,,Verma,,735,WA,Sprint RSP3,2026-03-01,
+7530998556,2,Speed bahut slow a rahi hai,Slow Speed,,,Verma,,798,WA,Sprint RSP3,2026-03-01,
+9546546102,0,,,,,Verma,,97,CT,Sprint RSP3,2026-03-01,
+8448818070,10,Thik hai Womi Wifi basa kabhi kabhi internet issue aa ta sa,General Bad Service,,,Verma,,72,CT,Sprint RSP3,2026-03-01,
+9625323195,10,,,,,Verma,,147,CT,Sprint RSP3,2026-03-01,
+7225897859,9,Thik vhala,General Good Service,,,Verma,,182,CT,Sprint RSP3,2026-03-01,
+8750605982,0,,,,,Verma,,701,CT,Sprint RSP3,2026-03-01,
+9310150117,7,Wiom is a very good internet provider and the plans are also budget friendly but the customer care and after service is not good. I think they have to work on it,Affordable,Bad Customer Support - Call Centre,,Verma,,126,WA,Sprint RSP3,2026-03-01,
+7011443271,0,Speed bilkul nakali net Tak sahi se nahin chalta,Slow Speed,,,Verma,,51,WA,Sprint RSP3,2026-03-01,
+8076247507,10,This network is best,General Good Service,,,Verma,,20,WA,Sprint RSP3,2026-03-01,
+9076217252,0,,,,,Verma,,431,CT,Sprint RSP3,2026-03-01,
+9582760483,0,Speed bohot kam aati hai 50 mbps bolte hai aati hai 25 complaint karo to us time sahi kar dete hai baad m phir slow ho jaati hai,Slow Speed,,,Verma,,442,CT,Sprint RSP3,2026-03-01,
+8700742005,4,"Speed full aane ke baad bhi Ping bahut High rehta h
   what's app pe calling me issue aata h 
- Aur roj subh 6 bje Internet 10- 15 min ke leye band ho jata h",Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f934e482fd92,1,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-3520ee4725a5,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-d572cb9c5d26,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-d3ccbc03332f,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ff47b73a2125,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-30d0743be46e,5,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-bb3e9a21bdfc,10,Ttyufgyfyiguut,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-7b36716f2c18,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-446fb0400409,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-07b5565ae3be,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-209545e7a014,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-d5fe0f18232c,0,"Speed issues.
+ Aur roj subh 6 bje Internet 10- 15 min ke leye band ho jata h",Slow Speed,,,Verma,,220,WA,Sprint RSP3,2026-03-01,
+9599308076,1,,,,,Verma,,226,CT,Sprint RSP3,2026-03-01,
+7666014910,0,,,,,Verma,,528,CT,Sprint RSP3,2026-03-01,
+8130527891,10,,,,,Verma,,165,CT,Sprint RSP3,2026-03-01,
+8826217416,10,,,,,Verma,,619,CT,Sprint RSP3,2026-03-01,
+7584929449,0,,,,,Verma,,146,CT,Sprint RSP3,2026-03-01,
+7763052903,5,,,,,Verma,,693,CT,Sprint RSP3,2026-03-01,
+7210924449,10,Ttyufgyfyiguut,,,,Verma,,449,CT,Sprint RSP3,2026-03-01,
+8383962045,10,,,,,Verma,,269,CT,Sprint RSP3,2026-03-01,
+9818615364,10,,,,,Verma,,219,CT,Sprint RSP3,2026-03-01,
+7045384867,10,,,,,Verma,,785,CT,Sprint RSP3,2026-03-01,
+9568599031,10,,,,,Verma,,172,CT,Sprint RSP3,2026-03-01,
+8920755429,0,"Speed issues.
  Stupid working frequently 
- No response from customer support",Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ebf8db054ef7,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-13106fbc7037,5,Speed km hai,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-8b59ae86d9c1,3,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c33053479b96,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2bbf1629fa7a,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-1be96fa02672,10,Unlimited connection,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0274e52442d0,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2d082beac8bb,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-bb6aedc84116,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-67bb54b91f7c,5,Speed n connection issue,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-cf30703f158e,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-7f72b35ea965,5,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-fc395e194cef,3,Speed problem,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-b5a1aa292a45,10,Vaise to theek hai kabhi kbar net mein bahut problem aati Hai slow ho jata hai do phone connect nahin Ho paate proper tarike se Baki nice ek number vyom,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0bb4b53d4173,1,Speed Sahi nahin a Raha,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-45d3ee51d6e2,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ae3f52057172,9,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-60ad4908167f,5,Speed slow,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-42d571993662,2,Speed slow + network slow,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-947c388c1c68,10,Vary comfortable wifi is wiom wifi ha thode issue hai but solve bhi jaldi ho jate hai,Fast Complaint Resolution,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-430d2c9222f8,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-b0a716186342,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-eeb1061c06e2,5,"Suggestion Dena chahta hu kiunki price reasonable hai 
- Suggestion nahi dena chahata kiunki connection issues bohot hota h",Frequent Disconnections,Affordable,,Verma,,0,WA,Sprint RSP3,2026-03-01
-b6c0ee57be52,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-56de9fcfa3dd,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-cfbac13595cd,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-052d31979b17,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2831c17af49d,9,Very good सर,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-bc7dd6c8d6cf,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-a7372535f3e5,0,"The internet is so bad that I don't know what to say, you should change it, I don't get time, so talk to some other operator, otherwise my family members are giving me a very bad experience with it.",General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-1681dee18034,0,There are two reasons for this: 1. The speed isnt as per the plan. 2. Complaints arent taken seriously,Slow Speed,Bad Customer Support - Call Centre ,,Verma,,0,CT,Sprint RSP3,2026-03-01
-90428b1a9efd,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c02dcd5ca7ca,5,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-8aef304b707b,2,There isnno proper internet flow during working hours and always stuck. So I really have bad experience with this wifi,Slow Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-abce4cab07d5,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-fb8547792db6,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-5424de664e38,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-49f45fdd05ca,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-48086ccdb1ab,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-49ff53145ee3,3,Thik hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-3583e6e026e3,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-d923245e11ef,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-4a09c26b617e,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ccbe4f79c895,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-0ea34bf5f763,8,Yes,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-11a2dd9668fc,6,Thik thak chlta hai net,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-cfceb2f45857,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-b7bd772397a5,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-4b9c3a7d6833,9,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-b1f910705f13,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-5e0f715dbf85,4,This is cheap,Affordable,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-76e11b58ad1c,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-0c742329c590,4,"This month the net speed of viom is decreasing very much, viom should first solve this problem",Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-dfe79937cb46,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-75029ce724c1,0,Use less,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-02cb4927defa,8,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-14aa04fd912f,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-a0c67f8a40de,8,Kabhi kabhi bich Mai problem hoti h network ki aur jis amount mai yeh laga tha har kuch month baad amount bhad gaya tha,Expensive,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-d62ca6452dae,0,Uska apne aap auto internet band ho jata hai kabhi bhi kisi bhi time isliye,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-4a383cc9615e,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-3e4ddb855cd7,1,Very bad,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6b02b80e1739,0,Very bad network,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-49d4711079aa,10,Very good service,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0d819a5b2927,10,Very good service,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5fcbde2864d1,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-7dc90d65f00d,0,Very bas servise har mahine m 5 se 6 baar to net band hona hi hai,Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-cbe30fe0f425,10,Very gy,General Good Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6b8a3f1b93f6,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-4d362377df5c,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-80395fb966b9,10,Very happy,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-21b3ac329569,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-73231da4481e,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-40a1733da30a,2,Very good,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-23780e6f90dc,0,Very poor facility,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f26266556890,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-26ea83318b53,8,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-8be36664d8d1,0,Very poor service,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-537e694a49ba,0,Very poor service & solution,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-4d29f7da61dc,0,Very slow,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6f643b4d8188,9,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-f4ec8a46cd82,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-80fcd86acfaa,3,Very slow speed,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-fc196b03ffc6,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-56caecc3de73,10,Very nice,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-510d5f6a0931,10,Wifi speed,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5294e9539f0e,0,very slow speed and and not working properly.,Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-447f462809d9,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e4c80f39c7a6,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-a830df90d81b,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-4bb9e79be04b,0,Very very Worst service 🫩,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6aaf413a3114,10,Wiom is good,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6c5ab5c95b32,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e4decc44136f,10,Wiom ka net aur iska recharge sahi hai,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-d6329c9f6f17,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-bf35b86b12d2,4,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-18732698a3a5,0,"Viom's service is very bad, the internet was disconnected 10 times in one month and there is no response from the customer care and technician also. Worst service ever . I'll never recommend wiom networks to anyone.",Frequent Disconnections,No/Late Complaint Resolution,,Verma,,0,WA,Sprint RSP3,2026-03-01
-0d27511a9f47,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-582c960caf0b,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-a51e7101c1b6,10,Wiom ka net bahut acha h iska network bahut acha h or iska price bhi bahut acha h,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-876e757e5de9,10,Wiom ka net fast chalta hai,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-091de4448662,0,Vyom net Sahi nahin chalta kharab hai,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6794973e36e6,0,"Whenever I recharge my WiFi, it starts working after 2 days but ends on the billing date. I have talked to customer care many times but did not get any solution, they just say they will give me a coupon, some say they will extend the plan by 1 day but nothing happened.","RDNI (Recharge Done, No Internet)",,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f2ca24157e95,2,Wifi aata hi nhi hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-cbaf8a977e00,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c2e7b9c0581a,6,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-51d0595fae28,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-9261cf89cd17,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6fe7c2f518a0,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-b395cc37c979,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-5ed22aaf7d30,10,Wiom ka network acha hai,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-8f8fcf016276,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-b7b33b4d89a2,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-fd8f18052908,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-768cee1ffd52,1,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-31c365c8bb0e,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e3196d74436b,10,"Wiom ka network 🛜 ka price low bhi hai aur ye har jagah available hai, servicing jaldi ho jati hai",Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-7cdeaa4652a5,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e5b2ecc7283b,9,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e1ef010ac006,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-5dfce6b904ae,0,Wifi auto pay se 24 hours band ho jata hai pichle 10 month se koi solution nahi kiya y,"RDNI (Recharge Done, No Internet)",,,Verma,,0,WA,Sprint RSP3,2026-03-01
-2d364214d59c,10,Wiom net sabse jyada kharab hai service Badi ya nahin hai,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-95707df67c22,10,wiom net sashta or achchha h net speed bhi sahi aati h,Affordable,Good Speed,,Verma,,0,WA,Sprint RSP3,2026-03-01
-addb406495f0,10,Wiom no 1 ha,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-cb3fdc00663b,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-8ce13f83437c,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-0e04f8280f1b,8,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-a01eacaed903,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-a6f69cba1726,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-91c825f1dc27,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ef5e0801b1ac,10,Wiom router ka wifi best h speed achi h or speed achi hone se picture quality bhi achi aati h .so I will advise the own relatives should be taken.,Good Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e607254f9065,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6cd8dc46b0a9,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-7c7dcb275dcf,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-33234edfe177,1,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-342a8dcbbaa7,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-8a61ef5d5d90,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-55644fb686e9,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-04ef271225b8,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6c85ac9cd7a2,0,"Wifi Connection always cut off rapidly in my locality. Customer care giving same dialogue "" technical glitch, issue would be resolved within 24 hours""",Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-faac3ba66dcc,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-799836f3d526,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-fae2c06b1be2,3,Wifi dont start immediately after recharge,"RDNI (Recharge Done, No Internet)",,,Verma,,0,CT,Sprint RSP3,2026-03-01
-27dc79092f03,10,Wiom sabhi jagah acha nhi chalta par mera experience acha raha h isliye mai logo ko jarur recommend karunga kyuki ise lagwane ki cost zero h aur hume sirf recharge ke paise dene hote h mai iski internet speed se bhi khush hu,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-16076219bf62,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6807b5d93665,0,"Wifi speed is not stable and most of the it show no internet connection despite wifi is recharges, Serval time complain log with customer care but no resolution, Wiom team need to improve service quality",Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-bff2b3483785,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-e9e61eabeac2,10,Wiyun y fi bahut achha chalta hai.,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9f33d428e98d,0,Wiom is unable to provide me a stable internet connection i am facing frequent disconnection,Frequent Disconnections,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-8a65f6032afe,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-a3fe6c2276e0,2,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-332026705c13,4,"Wiom ka net aache se chal hi nhi raha h beech beech me ruk ja raha h.
- Agar recharge khatam hone ke kuch din baad recharge karo to 1 hafte Tak net hi nhi chalta h.",Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-6a80bac30096,0,Wiom ka network problem bahut bura hai,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-35ca19bb0484,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6b26c70c2ddb,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-0bc9a524dae5,0,Wiom ki service bahut jyada kharab he,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-9fc4903b5bc3,5,"Wiom net acha or affordable hai but kouch kami bhi hai 
+ No response from customer support",Slow Speed,,,Verma,,575,WA,Sprint RSP3,2026-03-01,
+9654028827,10,,,,,Verma,,850,CT,Sprint RSP3,2026-03-01,
+9873505302,5,Speed km hai,Slow Speed,,,Verma,,108,WA,Sprint RSP3,2026-03-01,
+8448050232,3,,,,,Verma,,148,CT,Sprint RSP3,2026-03-01,
+9717564792,10,,,,,Verma,,630,CT,Sprint RSP3,2026-03-01,
+9654883779,10,,,,,Verma,,500,CT,Sprint RSP3,2026-03-01,
+8920111048,10,Unlimited connection,General Good Service,,,Verma,,418,WA,Sprint RSP3,2026-03-01,
+8700289442,0,,,,,Verma,,384,CT,Sprint RSP3,2026-03-01,
+8851601070,10,,,,,Verma,,60,CT,Sprint RSP3,2026-03-01,
+9717682922,0,,,,,Verma,,102,CT,Sprint RSP3,2026-03-01,
+9999263534,5,Speed n connection issue,Slow Speed,,,Verma,,319,WA,Sprint RSP3,2026-03-01,
+9718966106,10,,,,,Verma,,656,CT,Sprint RSP3,2026-03-01,
+9990764748,5,,,,,Verma,,58,CT,Sprint RSP3,2026-03-01,
+9773781838,3,Speed problem,Slow Speed,,,Verma,,652,CT,Sprint RSP3,2026-03-01,
+9990216384,10,Vaise to theek hai kabhi kbar net mein bahut problem aati Hai slow ho jata hai do phone connect nahin Ho paate proper tarike se Baki nice ek number vyom,Slow Speed,,,Verma,,460,WA,Sprint RSP3,2026-03-01,
+7557575721,1,Speed Sahi nahin a Raha,Slow Speed,,,Verma,,66,WA,Sprint RSP3,2026-03-01,
+8826724630,10,,,,,Verma,,130,CT,Sprint RSP3,2026-03-01,
+8882382769,9,,,,,Verma,,389,CT,Sprint RSP3,2026-03-01,
+9990911844,5,Speed slow,Slow Speed,,,Verma,,80,WA,Sprint RSP3,2026-03-01,
+8340373248,2,Speed slow + network slow,Slow Speed,,,Verma,,450,WA,Sprint RSP3,2026-03-01,
+9137765680,10,Vary comfortable wifi is wiom wifi ha thode issue hai but solve bhi jaldi ho jate hai,Fast Complaint Resolution,,,Verma,,239,CT,Sprint RSP3,2026-03-01,
+7042020283,10,,,,,Verma,,814,CT,Sprint RSP3,2026-03-01,
+9899770452,0,,,,,Verma,,816,CT,Sprint RSP3,2026-03-01,
+8595760412,5,"Suggestion Dena chahta hu kiunki price reasonable hai 
+ Suggestion nahi dena chahata kiunki connection issues bohot hota h",Frequent Disconnections,Affordable,,Verma,,185,WA,Sprint RSP3,2026-03-01,
+9334051450,0,,,,,Verma,,388,CT,Sprint RSP3,2026-03-01,
+9911664745,10,,,,,Verma,,876,CT,Sprint RSP3,2026-03-01,
+9910527047,10,,,,,Verma,,82,CT,Sprint RSP3,2026-03-01,
+9315121577,10,,,,,Verma,,466,CT,Sprint RSP3,2026-03-01,
+8767827211,9,Very good à¤¸à¤°,General Good Service,,,Verma,,73,CT,Sprint RSP3,2026-03-01,
+9958169428,10,,,,,Verma,,219,CT,Sprint RSP3,2026-03-01,
+9718103381,0,"The internet is so bad that I don't know what to say, you should change it, I don't get time, so talk to some other operator, otherwise my family members are giving me a very bad experience with it.",General Bad Service,,,Verma,,330,WA,Sprint RSP3,2026-03-01,
+8542915172,0,There are two reasons for this: 1. The speed isnt as per the plan. 2. Complaints arent taken seriously,Slow Speed,Bad Customer Support - Call Centre,,Verma,,143,CT,Sprint RSP3,2026-03-01,
+9310321051,10,,,,,Verma,,64,CT,Sprint RSP3,2026-03-01,
+8655793758,5,,,,,Verma,,526,CT,Sprint RSP3,2026-03-01,
+9582549076,2,There isnno proper internet flow during working hours and always stuck. So I really have bad experience with this wifi,Slow Speed,,,Verma,,443,CT,Sprint RSP3,2026-03-01,
+9927198080,10,,,,,Verma,,103,CT,Sprint RSP3,2026-03-01,
+9871596569,10,,,,,Verma,,694,CT,Sprint RSP3,2026-03-01,
+9917545590,10,,,,,Verma,,463,CT,Sprint RSP3,2026-03-01,
+9654791473,0,,,,,Verma,,253,CT,Sprint RSP3,2026-03-01,
+8076068507,10,,,,,Verma,,867,CT,Sprint RSP3,2026-03-01,
+9625815152,3,Thik hai,General Bad Service,,,Verma,,450,WA,Sprint RSP3,2026-03-01,
+9888340338,10,,,,,Verma,,105,CT,Sprint RSP3,2026-03-01,
+9718888344,0,,,,,Verma,,205,CT,Sprint RSP3,2026-03-01,
+8454932823,0,,,,,Verma,,106,CT,Sprint RSP3,2026-03-01,
+9759957338,10,,,,,Verma,,213,CT,Sprint RSP3,2026-03-01,
+7065293328,8,Yes,,,,Verma,,779,CT,Sprint RSP3,2026-03-01,
+8383075594,6,Thik thak chlta hai net,General Bad Service,,,Verma,,546,WA,Sprint RSP3,2026-03-01,
+9990092877,0,,,,,Verma,,1098,CT,Sprint RSP3,2026-03-01,
+7317505706,10,,,,,Verma,,944,CT,Sprint RSP3,2026-03-01,
+8178815701,9,,,,,Verma,,79,CT,Sprint RSP3,2026-03-01,
+9310529644,0,,,,,Verma,,349,CT,Sprint RSP3,2026-03-01,
+8700871383,4,This is cheap,Affordable,,,Verma,,657,CT,Sprint RSP3,2026-03-01,
+8285651827,0,,,,,Verma,,391,CT,Sprint RSP3,2026-03-01,
+7042408276,4,"This month the net speed of viom is decreasing very much, viom should first solve this problem",Slow Speed,,,Verma,,412,WA,Sprint RSP3,2026-03-01,
+9156213897,10,,,,,Verma,,89,CT,Sprint RSP3,2026-03-01,
+7678140404,0,Use less,General Bad Service,,,Verma,,662,CT,Sprint RSP3,2026-03-01,
+9315441601,8,,,,,Verma,,233,CT,Sprint RSP3,2026-03-01,
+9310691715,0,,,,,Verma,,103,CT,Sprint RSP3,2026-03-01,
+8766364471,8,Kabhi kabhi bich Mai problem hoti h network ki aur jis amount mai yeh laga tha har kuch month baad amount bhad gaya tha,Expensive,,,Verma,,749,CT,Sprint RSP3,2026-03-01,
+9811318664,0,Uska apne aap auto internet band ho jata hai kabhi bhi kisi bhi time isliye,,,,Verma,,733,CT,Sprint RSP3,2026-03-01,
+9953665046,0,,,,,Verma,,554,CT,Sprint RSP3,2026-03-01,
+8708237955,1,Very bad,General Bad Service,,,Verma,,201,WA,Sprint RSP3,2026-03-01,
+9725843868,0,Very bad network,General Bad Service,,,Verma,,17,CT,Sprint RSP3,2026-03-01,
+9953537149,10,Very good service,General Good Service,,,Verma,,501,WA,Sprint RSP3,2026-03-01,
+9810805048,10,Very good service,General Good Service,,,Verma,,723,WA,Sprint RSP3,2026-03-01,
+9810906337,10,,,,,Verma,,718,CT,Sprint RSP3,2026-03-01,
+9971459029,0,Very bas servise har mahine m 5 se 6 baar to net band hona hi hai,Frequent Disconnections,,,Verma,,354,CT,Sprint RSP3,2026-03-01,
+8929925776,10,Very gy,General Good Service,,,Verma,,72,CT,Sprint RSP3,2026-03-01,
+9102725967,0,,,,,Verma,,191,CT,Sprint RSP3,2026-03-01,
+9953562823,0,,,,,Verma,,515,CT,Sprint RSP3,2026-03-01,
+9643916851,10,Very happy,General Good Service,,,Verma,,105,WA,Sprint RSP3,2026-03-01,
+9910781680,0,,,,,Verma,,1031,CT,Sprint RSP3,2026-03-01,
+9022069223,10,,,,,Verma,,168,CT,Sprint RSP3,2026-03-01,
+9958276079,2,Very good,,,,Verma,,154,WA,Sprint RSP3,2026-03-01,
+7827981733,0,Very poor facility,General Bad Service,,,Verma,,477,WA,Sprint RSP3,2026-03-01,
+9814276649,10,,,,,Verma,,70,CT,Sprint RSP3,2026-03-01,
+9891113094,8,,,,,Verma,,937,CT,Sprint RSP3,2026-03-01,
+9990069866,0,Very poor service,General Bad Service,,,Verma,,1071,WA,Sprint RSP3,2026-03-01,
+8287778453,0,Very poor service & solution,General Bad Service,,,Verma,,828,WA,Sprint RSP3,2026-03-01,
+9958911709,0,Very slow,Slow Speed,,,Verma,,197,WA,Sprint RSP3,2026-03-01,
+8802269682,9,,,,,Verma,,647,CT,Sprint RSP3,2026-03-01,
+8130239788,0,,,,,Verma,,636,CT,Sprint RSP3,2026-03-01,
+7988003063,3,Very slow speed,Slow Speed,,,Verma,,182,WA,Sprint RSP3,2026-03-01,
+8700067655,10,,,,,Verma,,104,CT,Sprint RSP3,2026-03-01,
+8130086682,10,Very nice,General Good Service,,,Verma,,103,WA,Sprint RSP3,2026-03-01,
+9654177691,10,Wifi speed,Good Speed,,,Verma,,176,WA,Sprint RSP3,2026-03-01,
+9582158451,0,very slow speed and and not working properly.,Slow Speed,,,Verma,,223,WA,Sprint RSP3,2026-03-01,
+9911212214,0,,,,,Verma,,370,CT,Sprint RSP3,2026-03-01,
+9716864218,0,,,,,Verma,,378,CT,Sprint RSP3,2026-03-01,
+9821166303,10,,,,,Verma,,91,CT,Sprint RSP3,2026-03-01,
+9315904929,0,Very very Worst service ðŸ«©,General Bad Service,,,Verma,,303,WA,Sprint RSP3,2026-03-01,
+9717290331,10,Wiom is good,General Good Service,,,Verma,,619,WA,Sprint RSP3,2026-03-01,
+9354470985,10,,,,,Verma,,129,CT,Sprint RSP3,2026-03-01,
+9811542806,10,Wiom ka net aur iska recharge sahi hai,Affordable,,,Verma,,149,WA,Sprint RSP3,2026-03-01,
+9319127404,10,,,,,Verma,,984,CT,Sprint RSP3,2026-03-01,
+9599568805,4,,,,,Verma,,205,CT,Sprint RSP3,2026-03-01,
+9953647726,0,"Viom's service is very bad, the internet was disconnected 10 times in one month and there is no response from the customer care and technician also. Worst service ever . I'll never recommend wiom networks to anyone.",Frequent Disconnections,No/Late Complaint Resolution,,Verma,,75,WA,Sprint RSP3,2026-03-01,
+8860182600,0,,,,,Verma,,350,CT,Sprint RSP3,2026-03-01,
+9582245149,10,,,,,Verma,,129,CT,Sprint RSP3,2026-03-01,
+8076230694,10,Wiom ka net bahut acha h iska network bahut acha h or iska price bhi bahut acha h,Affordable,,,Verma,,227,WA,Sprint RSP3,2026-03-01,
+9220623685,10,Wiom ka net fast chalta hai,Good Speed,,,Verma,,83,WA,Sprint RSP3,2026-03-01,
+8586998228,0,Vyom net Sahi nahin chalta kharab hai,General Bad Service,,,Verma,,644,CT,Sprint RSP3,2026-03-01,
+9315626066,0,"Whenever I recharge my WiFi, it starts working after 2 days but ends on the billing date. I have talked to customer care many times but did not get any solution, they just say they will give me a coupon, some say they will extend the plan by 1 day but nothing happened.","RDNI (Recharge Done, No Internet)",,,Verma,,163,WA,Sprint RSP3,2026-03-01,
+8506994522,2,Wifi aata hi nhi hai,General Bad Service,,,Verma,,544,WA,Sprint RSP3,2026-03-01,
+9315060373,10,,,,,Verma,,138,CT,Sprint RSP3,2026-03-01,
+9999395778,6,,,,,Verma,,555,CT,Sprint RSP3,2026-03-01,
+9899180024,10,,,,,Verma,,134,CT,Sprint RSP3,2026-03-01,
+7217770173,10,,,,,Verma,,883,CT,Sprint RSP3,2026-03-01,
+8447859513,10,,,,,Verma,,342,CT,Sprint RSP3,2026-03-01,
+9315843160,10,,,,,Verma,,811,CT,Sprint RSP3,2026-03-01,
+9773752371,10,Wiom ka network acha hai,Good Speed,,,Verma,,86,WA,Sprint RSP3,2026-03-01,
+9917619075,10,,,,,Verma,,192,CT,Sprint RSP3,2026-03-01,
+9873896993,10,,,,,Verma,,206,CT,Sprint RSP3,2026-03-01,
+8076233810,0,,,,,Verma,,229,CT,Sprint RSP3,2026-03-01,
+9729882699,1,,,,,Verma,,325,CT,Sprint RSP3,2026-03-01,
+9019991370,10,,,,,Verma,,71,CT,Sprint RSP3,2026-03-01,
+8468892687,10,"Wiom ka network ðŸ›œ ka price low bhi hai aur ye har jagah available hai, servicing jaldi ho jati hai",Affordable,,,Verma,,679,WA,Sprint RSP3,2026-03-01,
+7531940460,10,,,,,Verma,,163,CT,Sprint RSP3,2026-03-01,
+9599165345,9,,,,,Verma,,336,CT,Sprint RSP3,2026-03-01,
+9557514399,0,,,,,Verma,,184,CT,Sprint RSP3,2026-03-01,
+9467267717,0,Wifi auto pay se 24 hours band ho jata hai pichle 10 month se koi solution nahi kiya y,"RDNI (Recharge Done, No Internet)",,,Verma,,301,WA,Sprint RSP3,2026-03-01,
+9891398063,10,Wiom net sabse jyada kharab hai service Badi ya nahin hai,General Bad Service,,,Verma,,65,CT,Sprint RSP3,2026-03-01,
+9718937849,10,wiom net sashta or achchha h net speed bhi sahi aati h,Affordable,Good Speed,,Verma,,215,WA,Sprint RSP3,2026-03-01,
+9953052575,10,Wiom no 1 ha,General Good Service,,,Verma,,212,WA,Sprint RSP3,2026-03-01,
+9289739548,10,,,,,Verma,,129,CT,Sprint RSP3,2026-03-01,
+7827300637,0,,,,,Verma,,593,CT,Sprint RSP3,2026-03-01,
+6395176557,8,,,,,Verma,,218,CT,Sprint RSP3,2026-03-01,
+9528235875,0,,,,,Verma,,58,CT,Sprint RSP3,2026-03-01,
+8439110036,10,,,,,Verma,,177,CT,Sprint RSP3,2026-03-01,
+8368095660,10,,,,,Verma,,212,CT,Sprint RSP3,2026-03-01,
+9870308504,10,Wiom router ka wifi best h speed achi h or speed achi hone se picture quality bhi achi aati h .so I will advise the own relatives should be taken.,Good Speed,,,Verma,,359,WA,Sprint RSP3,2026-03-01,
+9310244416,10,,,,,Verma,,338,CT,Sprint RSP3,2026-03-01,
+7992388709,10,,,,,Verma,,126,CT,Sprint RSP3,2026-03-01,
+9927335937,10,,,,,Verma,,198,CT,Sprint RSP3,2026-03-01,
+7982244088,1,,,,,Verma,,355,CT,Sprint RSP3,2026-03-01,
+9217827290,0,,,,,Verma,,413,CT,Sprint RSP3,2026-03-01,
+7290944794,10,,,,,Verma,,350,CT,Sprint RSP3,2026-03-01,
+8630966491,10,,,,,Verma,,228,CT,Sprint RSP3,2026-03-01,
+8800501501,10,,,,,Verma,,426,CT,Sprint RSP3,2026-03-01,
+9612499504,0,"Wifi Connection always cut off rapidly in my locality. Customer care giving same dialogue "" technical glitch, issue would be resolved within 24 hours""",Frequent Disconnections,,,Verma,,505,WA,Sprint RSP3,2026-03-01,
+9315711281,10,,,,,Verma,,507,CT,Sprint RSP3,2026-03-01,
+9310459630,0,,,,,Verma,,633,CT,Sprint RSP3,2026-03-01,
+9873551687,3,Wifi dont start immediately after recharge,"RDNI (Recharge Done, No Internet)",,,Verma,,917,CT,Sprint RSP3,2026-03-01,
+8595411836,10,Wiom sabhi jagah acha nhi chalta par mera experience acha raha h isliye mai logo ko jarur recommend karunga kyuki ise lagwane ki cost zero h aur hume sirf recharge ke paise dene hote h mai iski internet speed se bhi khush hu,Affordable,,,Verma,,346,WA,Sprint RSP3,2026-03-01,
+9958925114,10,,,,,Verma,,214,CT,Sprint RSP3,2026-03-01,
+9653408208,0,"Wifi speed is not stable and most of the it show no internet connection despite wifi is recharges, Serval time complain log with customer care but no resolution, Wiom team need to improve service quality",Slow Speed,,,Verma,,318,WA,Sprint RSP3,2026-03-01,
+8451008275,10,,,,,Verma,,98,CT,Sprint RSP3,2026-03-01,
+9711554018,10,Wiyun y fi bahut achha chalta hai.,General Good Service,,,Verma,,108,WA,Sprint RSP3,2026-03-01,
+8923315878,0,Wiom is unable to provide me a stable internet connection i am facing frequent disconnection,Frequent Disconnections,,,Verma,,345,CT,Sprint RSP3,2026-03-01,
+9219266570,10,,,,,Verma,,213,CT,Sprint RSP3,2026-03-01,
+9599142369,2,,,,,Verma,,211,CT,Sprint RSP3,2026-03-01,
+7080849269,4,"Wiom ka net aache se chal hi nhi raha h beech beech me ruk ja raha h.
+ Agar recharge khatam hone ke kuch din baad recharge karo to 1 hafte Tak net hi nhi chalta h.",Frequent Disconnections,,,Verma,,164,WA,Sprint RSP3,2026-03-01,
+7601948658,0,Wiom ka network problem bahut bura hai,General Bad Service,,,Verma,,106,CT,Sprint RSP3,2026-03-01,
+7740074824,10,,,,,Verma,,84,CT,Sprint RSP3,2026-03-01,
+7042559841,10,,,,,Verma,,185,CT,Sprint RSP3,2026-03-01,
+9319700884,0,Wiom ki service bahut jyada kharab he,General Bad Service,,,Verma,,490,CT,Sprint RSP3,2026-03-01,
+9654536233,5,"Wiom net acha or affordable hai but kouch kami bhi hai 
  Har mahine recharge ke baad bhi net sevice baad ho jati hai or buffring bhi hoti hai jab tak complain na ki jaye 
- Or complain karne ke bhi 1/2 se 1 hour m start hoti hai","RDNI (Recharge Done, No Internet)",Affordable,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e28e335325a6,0,Worst experience.,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-111cee253b60,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-80ed01b9d99d,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-306315258541,9,Ye achha hai pr kbhi kbhi nhi chalta kaam karne wale agar ise upyog mai lenge to kuch samay ke liye kaam band ho jayega,Frequent Disconnections,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-f8418c468f55,5,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ca03c742f9b0,0,Worst service and internet speed,General Bad Service,Slow Speed,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ee79095c1b6b,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-fa2bf9321b7c,9,Yes,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-4b8b27008c28,0,Worst wifi/internet service ever I will not suggest my friends and family to use wiom service,General Bad Service,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-011ff6ea2370,4,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-0481bc27871b,1,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-32e4674ab8ac,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-04b1826dbca8,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-ecab09991013,2,Ye network sbse sasta h or acha bhi,Affordable,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-a226538368f6,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-0febfe710ea1,0,Yeh score dene ki sabse badi wajah iski connectivity aur iska network issue hai sirf 3 se 4 logo ke halke se net ka use karte hi yeh sahi se chalna band kar deta hai aur dheere dheere chalne lagta hai,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-dcf3a41d9dfa,9,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-48d82d215a21,9,Yes,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-e65789fea5a8,2,Yes,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-8dd77395379c,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-025227d8a6fc,1,Yes,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ba9104176f91,5,Yess,,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-5183151b4f50,2,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-2e009b483302,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-c36e1fd0d4d4,1,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-fedc5924cc35,0,Your internet is not working properly,General Bad Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-c27df223852c,3,"Your service is below average.
- Your 4g wifi option didn't not work properly even for 1day properly. And my pc support only 4ghz wifi",Slow Speed,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ac04890ba114,10,Yes but m apne relative ko di h wiom ki salah but vha us location par service nhi thi,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-ea6c50cc0a2c,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-6fd9cea472dd,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-eaeee9e216b7,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-f85bc8249310,7,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-b0d0b98e82cf,0,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-a4a6a17185fd,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-12180de36790,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-3c0489282a7f,10,Yes good net speed,Good Speed,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-828e9c024829,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-16a7b59a8a31,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-51ceb302a930,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-d27b78e8d5f0,10,Yes ok services hy,General Good Service,,,Verma,,0,WA,Sprint RSP3,2026-03-01
-9539d571d624,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
-f6f47d856a53,10,,,,,Verma,,0,CT,Sprint RSP3,2026-03-01
+ Or complain karne ke bhi 1/2 se 1 hour m start hoti hai","RDNI (Recharge Done, No Internet)",Affordable,,Verma,,142,WA,Sprint RSP3,2026-03-01,
+9320198139,0,Worst experience.,General Bad Service,,,Verma,,63,WA,Sprint RSP3,2026-03-01,
+9928428321,10,,,,,Verma,,56,CT,Sprint RSP3,2026-03-01,
+9891472793,10,,,,,Verma,,547,CT,Sprint RSP3,2026-03-01,
+8851659778,9,Ye achha hai pr kbhi kbhi nhi chalta kaam karne wale agar ise upyog mai lenge to kuch samay ke liye kaam band ho jayega,Frequent Disconnections,,,Verma,,19,WA,Sprint RSP3,2026-03-01,
+9560613478,5,,,,,Verma,,391,CT,Sprint RSP3,2026-03-01,
+9716289852,0,Worst service and internet speed,General Bad Service,Slow Speed,,Verma,,816,CT,Sprint RSP3,2026-03-01,
+9871274358,10,,,,,Verma,,108,CT,Sprint RSP3,2026-03-01,
+8448738604,9,Yes,General Good Service,,,Verma,,587,WA,Sprint RSP3,2026-03-01,
+8448418521,0,Worst wifi/internet service ever I will not suggest my friends and family to use wiom service,General Bad Service,,,Verma,,200,CT,Sprint RSP3,2026-03-01,
+7454809421,4,,,,,Verma,,138,CT,Sprint RSP3,2026-03-01,
+9211677608,1,,,,,Verma,,165,CT,Sprint RSP3,2026-03-01,
+7817074913,10,,,,,Verma,,501,CT,Sprint RSP3,2026-03-01,
+7060048760,10,,,,,Verma,,328,CT,Sprint RSP3,2026-03-01,
+8447212804,2,Ye network sbse sasta h or acha bhi,Affordable,,,Verma,,1134,WA,Sprint RSP3,2026-03-01,
+9810810167,10,,,,,Verma,,1048,CT,Sprint RSP3,2026-03-01,
+8178319672,0,Yeh score dene ki sabse badi wajah iski connectivity aur iska network issue hai sirf 3 se 4 logo ke halke se net ka use karte hi yeh sahi se chalna band kar deta hai aur dheere dheere chalne lagta hai,General Bad Service,,,Verma,,129,WA,Sprint RSP3,2026-03-01,
+8851961690,9,,,,,Verma,,98,CT,Sprint RSP3,2026-03-01,
+9899139655,9,Yes,General Good Service,,,Verma,,295,WA,Sprint RSP3,2026-03-01,
+8076968619,2,Yes,,,,Verma,,1,WA,Sprint RSP3,2026-03-01,
+9718842624,10,,,,,Verma,,112,CT,Sprint RSP3,2026-03-01,
+9650396051,1,Yes,,,,Verma,,133,WA,Sprint RSP3,2026-03-01,
+9311627074,5,Yess,,,,Verma,,57,WA,Sprint RSP3,2026-03-01,
+7292090521,2,,,,,Verma,,19,CT,Sprint RSP3,2026-03-01,
+8600039756,0,,,,,Verma,,419,CT,Sprint RSP3,2026-03-01,
+8287920151,1,,,,,Verma,,145,CT,Sprint RSP3,2026-03-01,
+9599070459,0,Your internet is not working properly,General Bad Service,,,Verma,,389,WA,Sprint RSP3,2026-03-01,
+9311463064,3,"Your service is below average.
+ Your 4g wifi option didn't not work properly even for 1day properly. And my pc support only 4ghz wifi",Slow Speed,,,Verma,,783,WA,Sprint RSP3,2026-03-01,
+9315769805,10,Yes but m apne relative ko di h wiom ki salah but vha us location p,,,,,,,,,,

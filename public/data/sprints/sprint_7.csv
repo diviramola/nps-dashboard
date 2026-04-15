@@ -1,797 +1,786 @@
-respondent_id,score,feedback,nps_reason_primary,nps_reason_secondary,primary_category,plan_type,city,tenure_days,source,sprint_id,sprint_start
-0963c4194101,5,28days internet,28-Day Plan Issue,,Offering/ Plan Dissatisfaction,Verma,,45,WA,Sprint 7,2026-10-01
-abc75d720ee3,10,Amount theek hai isliye,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-ea65cc07a682,4,"Because no extra cost Only five 
- Hundred",Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-6083c30fda3f,8,Best network and in budget,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-5585cb2a916e,1,budget mein,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-498143e4ee93,10,Cheap and best,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-c01c664fe8d9,10,"Come pricing me achha net 
- connection",Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-9c23cb782678,10,Fast service and price plan,Affordable,Good Speed,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-50f17694b209,10,Free router and installation aap kar ke dete hain.,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-1af5d572c73f,10,Good service in low price,Affordable,General Good Service,Good Price,Verma,,45,WA,Sprint 7,2026-10-01
-e32a0d0d8df4,5,It's good and reasonable price,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-4a7dd9315f32,10,Km price me installation,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-209545e7a014,10,Kyoki 550 rupees me lagta hai koi outer ka charge nahi,Affordable,,Good Price,Verma,,45,WA,Sprint 7,2026-10-01
-ad3d801c2f24,10,Kyuki y sasta h or achi range bhi deta h,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-32216d022085,10,"Kyunki iska network accha hai, badhiya net hai kam paiso mein.",Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-ca3770ad14ef,10,"Mahina 500,or chalta bhi badiya hai,dusra koi karcha nahi",Affordable,,Good Price,Verma,,45,WA,Sprint 7,2026-10-01
-0bdfaf0de400,8,peice and speed,Affordable,Good Speed,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-1d275d7eff1e,4,Price only 500,Affordable,,Good Price,Verma,,45,WA,Sprint 7,2026-10-01
-db965b6ce557,10,Sabse kam paise meain lagta hai net bhi thik hai,Affordable,,Good Price,Verma,,45,WA,Sprint 7,2026-10-01
-cfbd48e43ff4,10,Sasta aur kifaayati mein unlimited data.,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-c429f0b7464b,10,sasta internet,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-03fe15b338ad,10,"Shuruat mein Vyom net lagane mein kam kharch va achha network aur munasib kharch, kul milakar sab kuch accha hai.",Affordable,General Good Service,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-f3a64f14f2bf,8,"Speed is good when connected, genuine pricing and service is good",Affordable,Good Speed,Good Price,Verma,,45,WA,Sprint 7,2026-10-01
-4c70c7d48c21,10,Ye wifi kam price me hai or achi speed me chalta h 👍🏻,Affordable,Good Speed,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-7f772b6cf42f,10,Yeh sasta h or acha internet connection h,Affordable,,Good Price,Verma,,45,WA,Sprint 7,2026-10-01
-02f9b66a63fc,10,"Magr recharge krne me or
+﻿respondent_id,score,feedback,nps_reason_primary,nps_reason_secondary,primary_category,plan_type,city,tenure_days,source,sprint_id,sprint_start,device
+9716160660,5,28days internet,28-Day Plan Issue,,Offering/ Plan Dissatisfaction,Verma,,45,WA,Sprint 7,2026-10-01,
+9971871814,10,Amount theek hai isliye,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+7417991937,4,"Because no extra cost Only five 
+ Hundred",Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+8459814433,8,Best network and in budget,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+8802777803,1,budget mein,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+9213744674,10,Cheap and best,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+7531951322,10,"Come pricing me achha net 
+ connection",Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+9557868188,10,Fast service and price plan,Affordable,Good Speed,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+9819166657,10,Free router and installation aap kar ke dete hain.,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+9811620347,10,Good service in low price,Affordable,General Good Service,Good Price,Verma,,45,WA,Sprint 7,2026-10-01,
+8920808091,5,It's good and reasonable price,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+9625605054,10,Km price me installation,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+9568599031,10,Kyoki 550 rupees me lagta hai koi outer ka charge nahi,Affordable,,Good Price,Verma,,45,WA,Sprint 7,2026-10-01,
+9911820065,10,Kyuki y sasta h or achi range bhi deta h,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+8287136949,10,"Kyunki iska network accha hai, badhiya net hai kam paiso mein.",Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+7507604616,10,"Mahina 500,or chalta bhi badiya hai,dusra koi karcha nahi",Affordable,,Good Price,Verma,,45,WA,Sprint 7,2026-10-01,
+8826648700,8,peice and speed,Affordable,Good Speed,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+9911879008,4,Price only 500,Affordable,,Good Price,Verma,,45,WA,Sprint 7,2026-10-01,
+7982351795,10,Sabse kam paise meain lagta hai net bhi thik hai,Affordable,,Good Price,Verma,,45,WA,Sprint 7,2026-10-01,
+9654337119,10,Sasta aur kifaayati mein unlimited data.,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+9560285101,10,sasta internet,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+9760971366,10,"Shuruat mein Vyom net lagane mein kam kharch va achha network aur munasib kharch, kul milakar sab kuch accha hai.",Affordable,General Good Service,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+9911347134,8,"Speed is good when connected, genuine pricing and service is good",Affordable,Good Speed,Good Price,Verma,,45,WA,Sprint 7,2026-10-01,
+7678287493,10,Ye wifi kam price me hai or achi speed me chalta h ðŸ‘_x008d_ðŸ_x008f_»,Affordable,Good Speed,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+9643292272,10,Yeh sasta h or acha internet connection h,Affordable,,Good Price,Verma,,45,WA,Sprint 7,2026-10-01,
+9372973725,10,"Magr recharge krne me or
  Number change krne me 
  Or wiom ka app use kne me 
- Bhat problem h",Bad Application,,Application/ Tech ,Verma,,270,WA,Sprint 7,2026-10-01
-20f10e0dee3b,1,Recharge karne mein bahut dikkat Hoti Hai plan khatm hone ke bad make it easy,Bad Application,,Application/ Tech ,Verma,,270,CT,Sprint 7,2026-10-01
-ba3effd4d8b4,0,Internet provider not given proper solution.,Bad Customer Support - Call Centre,,Bad Cx Support,Verma,,135,WA,Sprint 7,2026-10-01
-20de231b0384,1,Koi custmor care reply nahi hai,Bad Customer Support - Call Centre,,Bad Cx Support,Verma,,270,WA,Sprint 7,2026-10-01
-e813d5cd294d,1,Mera pehle sahi chlta tha ab sahi se nhi chlta esliye ab me nhi dunga advices kisi ko ab meri reels bhi bich me ruk jati h ese solve kardo,Bad Customer Support - Call Centre,,Bad Cx Support,Verma,,270,WA,Sprint 7,2026-10-01
-fd0889c77768,0,Service acchi nhi h na koi sunvai karta h na koi elaction phone pic kerte h,Bad Customer Support - Call Centre,,Bad Cx Support,Verma,,270,WA,Sprint 7,2026-10-01
-4e689990678e,0,Yah score Dene ki Sabse Badi vajah yahi hai ki aapka net Sahi dhang Se Kam nahin Karta aapki service bilkul bhi acchi nahin Hai kyunki jab kabhi pareshani aati Hai to Koi technician theek karne nahin aata aur ticket close kar di jaati Hai aur har teesre chauthe din internet ruk jata hai 3-3 din tak pareshani ka Anubhav karna padta hai yah problem ek bar nahin mahine mein pata nahin तीन-चार bar Ho jaati Hai hamara 28 din ka manth hota Hai usmein se 20 din hi internet chal pata hai Baki ka hamara loss hi hota ha 20 ke coupon se kuchh nahin hota thoda bada coupon dijiye agar apni galti sudhar nahin,Bad Customer Support - Technician,No/ Late Complaint Resolution,Bad Cx Support,Verma,,135,WA,Sprint 7,2026-10-01
-47b921420961,0,Mahga h 575 ka recharge h,Expensive,,Offering/ Plan Dissatisfaction,Verma,,270,WA,Sprint 7,2026-10-01
-c83f7be1cf24,10,Aapka net Sahi chalta hai complaint ho to turant theek karta hai,Fast Complaint Resolution,,Good Cx Support,Verma,,270,WA,Sprint 7,2026-10-01
-a80d05368cb3,10,Chalta to acha hai lekin bar bar connection slow ho jata hai lekin samasya jaldi solve ho jati hai,Fast Complaint Resolution,Good Customer Support - Call Centre,Good Cx Support,Verma,,270,WA,Sprint 7,2026-10-01
-b8590e0ebceb,10,The service is so good and if any problem comes so it's solve as soon as in Short words the service is fabulous,Fast Complaint Resolution,Good Customer Support - Call Centre,Good Cx Support,Verma,,270,WA,Sprint 7,2026-10-01
-5f950f3edad9,8,“इसमें कई बार डेटा चलते-चलते रुक जाता है।”,Frequent Disconnections,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-cad1b290d1a0,1,"“मैं खुद ही इससे चला कर बहुत परेशान हूँ। मेरा खुद का दो-तीन दिन में एक बार नेट भाग जाता है, तो मैं ऐसे में और किसी को कैसे इससे लगवाने के लिए बोल सकता हूँ। और मैंने इस चीज़ की कई बार कंप्लेन भी की है, पर मुझे अभी तक इसका कोई हल नहीं मिला।”",Frequent Disconnections,No/ Late Complaint Resolution,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01
-b9cccdf650c9,0,30 dino me 15 din net kam ni krta,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-0b1facd9deec,9,5 net bhoth bar band rhta h,Frequent Disconnections,,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01
-3c51c952ed32,1,Aap wio net service good he lekin service bich me run Jatin he,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-69d80296554d,10,This network is perfect for my work,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-ae2d655722fa,10,Ba hu problem ho ta hai kabhi network problem hota hai or kabhi network ata hi nhi hai,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1fd75cf8765c,1,Baar baar problem aati rahti hai kabhi net nhi chalta kabhi router se connect nhi hota Mera recharge khatam hone ke baad mai bhi iska connection band karva dunga,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-0c2b18bd4764,6,Bahut time Tak aaplog ka internet chalta nahi hai 24hours ka time dete ho usme tho hamara day tho waste gaya usme aap 20rs coupon add kardete ho usse kya hota hai sir....aisa ek baar nahi bahut baar hua hai isliye wiom we don't like chalare hai sirf naam keliye see airtel jio wifi services sir much better than wiom....,Frequent Disconnections,No/ Late Complaint Resolution,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-efc12459e638,0,Bar bar dikkat aata h netwark problems har dusre din aata h,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-42f69002e119,0,Bar bar no internet,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-98f0d4a81738,0,Because net is close down every second day,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-fcf76f331050,5,"Beech mein net ka bhaag jaana baar-baar kat jaana, kai baar on-off karna padta hai. Complaint karne ke baad operator samay par nahin pahunchta. Dhanyavaad.",Frequent Disconnections,No/ Late Complaint Resolution,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-4b613fe7d11b,2,Theek se kaam nhi kr rha hai,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-c5526799dbb6,8,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-04bb516d89fd,6,"Dena to hum 10 mein 10 chahte the parantu aajkal jo hai iska jo hai bahut theek nahi aa raha hai. Dilli ka hai ki jo hai do-chaar minute ke liye kam se kam din bhar mein 8-10 baar zaroor kaatata hai. Continuous nahi aata hai, jiski wajah se mujhe dikkat hai.",Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-6a018b8ff557,0,Har dusare din disturb ho jata hai net,Frequent Disconnections,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-19a4be12adaf,0,Hrrr dusre din net connection band ho jata h,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-3f7ecd5a1114,0,Internet service kabhi band ho jati 28 din m mostly 12-13 internet band rhte h service bahot beker h customer care ki,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1ad3bdbe110c,7,It's a good network but he bich bich main gayab ho jate hai to thoda abhi settle aur karna chahiye,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-7e8e46c41e2f,6,"Its good, but not that much.
+ Bhat problem h",Bad Application,,Application/ Tech ,Verma,,270,WA,Sprint 7,2026-10-01,
+9350535145,1,Recharge karne mein bahut dikkat Hoti Hai plan khatm hone ke bad make it easy,Bad Application,,Application/ Tech ,Verma,,270,CT,Sprint 7,2026-10-01,
+8851298356,0,Internet provider not given proper solution.,Bad Customer Support - Call Centre,,Bad Cx Support,Verma,,135,WA,Sprint 7,2026-10-01,
+8587094783,1,Koi custmor care reply nahi hai,Bad Customer Support - Call Centre,,Bad Cx Support,Verma,,270,WA,Sprint 7,2026-10-01,
+8383023184,1,Mera pehle sahi chlta tha ab sahi se nhi chlta esliye ab me nhi dunga advices kisi ko ab meri reels bhi bich me ruk jati h ese solve kardo,Bad Customer Support - Call Centre,,Bad Cx Support,Verma,,270,WA,Sprint 7,2026-10-01,
+8527316340,0,Service acchi nhi h na koi sunvai karta h na koi elaction phone pic kerte h,Bad Customer Support - Call Centre,,Bad Cx Support,Verma,,270,WA,Sprint 7,2026-10-01,
+9711135173,0,Yah score Dene ki Sabse Badi vajah yahi hai ki aapka net Sahi dhang Se Kam nahin Karta aapki service bilkul bhi acchi nahin Hai kyunki jab kabhi pareshani aati Hai to Koi technician theek karne nahin aata aur ticket close kar di jaati Hai aur har teesre chauthe din internet ruk jata hai 3-3 din tak pareshani ka Anubhav karna padta hai yah problem ek bar nahin mahine mein pata nahin à¤¤à¥€à¤¨-à¤šà¤¾à¤° bar Ho jaati Hai hamara 28 din ka manth hota Hai usmein se 20 din hi internet chal pata hai Baki ka hamara loss hi hota ha 20 ke coupon se kuchh nahin hota thoda bada coupon dijiye agar apni galti sudhar nahin,Bad Customer Support - Technician,No/Late Complaint Resolution,Bad Cx Support,Verma,,135,WA,Sprint 7,2026-10-01,
+9971388373,0,Mahga h 575 ka recharge h,Expensive,,Offering/ Plan Dissatisfaction,Verma,,270,WA,Sprint 7,2026-10-01,
+9211341678,10,Aapka net Sahi chalta hai complaint ho to turant theek karta hai,Fast Complaint Resolution,,Good Cx Support,Verma,,270,WA,Sprint 7,2026-10-01,
+8383950583,10,Chalta to acha hai lekin bar bar connection slow ho jata hai lekin samasya jaldi solve ho jati hai,Fast Complaint Resolution,Good customer Support - call centre,Good Cx Support,Verma,,270,WA,Sprint 7,2026-10-01,
+9821518210,10,The service is so good and if any problem comes so it's solve as soon as in Short words the service is fabulous,Fast Complaint Resolution,Good customer Support - call centre,Good Cx Support,Verma,,270,WA,Sprint 7,2026-10-01,
+8527780507,8,“इसमें कई बार डेटा चलते-चलते रुक जाता है।”,Frequent Disconnections,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+8630525985,1,"“मैं खुद ही इससे चला कर बहुत परेशान हूँ। मेरा खुद का दो-तीन दिन में एक बार नेट भाग जाता है, तो मैं ऐसे में और किसी को कैसे इससे लगवाने के लिए बोल सकता हूँ। और मैंने इस चीज़ की कई बार कंप्लेन भी की है, पर मुझे अभी तक इसका कोई हल नहीं मिला।”",Frequent Disconnections,No/Late Complaint Resolution,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01,
+9258255508,0,30 dino me 15 din net kam ni krta,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8447352595,9,5 net bhoth bar band rhta h,Frequent Disconnections,,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01,
+9315636631,1,Aap wio net service good he lekin service bich me run Jatin he,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7053604453,10,This network is perfect for my work,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8377978598,10,Ba hu problem ho ta hai kabhi network problem hota hai or kabhi network ata hi nhi hai,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9899050955,1,Baar baar problem aati rahti hai kabhi net nhi chalta kabhi router se connect nhi hota Mera recharge khatam hone ke baad mai bhi iska connection band karva dunga,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8104869692,6,Bahut time Tak aaplog ka internet chalta nahi hai 24hours ka time dete ho usme tho hamara day tho waste gaya usme aap 20rs coupon add kardete ho usse kya hota hai sir....aisa ek baar nahi bahut baar hua hai isliye wiom we don't like chalare hai sirf naam keliye see airtel jio wifi services sir much better than wiom....,Frequent Disconnections,No/Late Complaint Resolution,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8851462934,0,Bar bar dikkat aata h netwark problems har dusre din aata h,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9136380500,0,Bar bar no internet,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7982469813,0,Because net is close down every second day,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9873133526,5,"Beech mein net ka bhaag jaana baar-baar kat jaana, kai baar on-off karna padta hai. Complaint karne ke baad operator samay par nahin pahunchta. Dhanyavaad.",Frequent Disconnections,No/Late Complaint Resolution,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8987674094,2,Theek se kaam nhi kr rha hai,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+7304224925,8,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9454377027,6,"Dena to hum 10 mein 10 chahte the parantu aajkal jo hai iska jo hai bahut theek nahi aa raha hai. Dilli ka hai ki jo hai do-chaar minute ke liye kam se kam din bhar mein 8-10 baar zaroor kaatata hai. Continuous nahi aata hai, jiski wajah se mujhe dikkat hai.",Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9125734464,0,Har dusare din disturb ho jata hai net,Frequent Disconnections,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+8178989058,0,Hrrr dusre din net connection band ho jata h,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8802247200,0,Internet service kabhi band ho jati 28 din m mostly 12-13 internet band rhte h service bahot beker h customer care ki,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8375986641,7,It's a good network but he bich bich main gayab ho jate hai to thoda abhi settle aur karna chahiye,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9999228959,6,"Its good, but not that much.
  
  biggest issues 
  
  1. frequent Line cut
  2. several times receive law speed(in KBs)
  3. why 28 days .... why not wiom giving complete one month in current rental plans 
- 4. Always complaint resolution time given atleast 6 to 12 hours.",Frequent Disconnections,28-Day Plan Issue,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-a8c020f1e541,8,Kabhi kabhi internet rook jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-94adf32607d4,3,Kabhi kabhi no internet btata hai 3-3 ghante k liye no internet btata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-fc0c7f282b10,5,Kabhi kanhi data ruk jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-9ebbb695f7da,5,Kbi kbi internet Chala jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-efe6f6941b97,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-031f70ef7e85,0,Kyonki mujhe bahut hi bura experience mila hai jab bhi recharge kra leta hun mera net har 2 sare din kharab ho jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-7277aa8194f9,5,Mahinon mein chaar-chaar baar internet vyavdhan hona.,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-3c709e663ef2,0,Network sahi se nhi aate or internet bahut slow h,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-fa83f661ab1f,0,Net Bar bar kat jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-71cf94e654ee,0,Net ruk jata hai bar bar,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-f2cc1c17701a,10,Best service provider wiom and and wiom sporting team 👍,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-bb21bdda8c1a,0,Network issue or Btane ke bad nahi anaa jaldi se,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-30976922cb7b,0,Network kabhi bhi band ho jata hy aur daily night mein aur morning mein 1 hour ke liye buffring krta hy,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-8741d3d4542f,7,roz net chala jata hai abhi nahi aa raha,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-e87010520726,5,"Sahi bhi laga nhi bhi
- Kmonth mein after 5 to 6 day network issue ho Raha hai",Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-556ff3dd2b45,0,Server down most of the time without any prior notice,Frequent Disconnections,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-2805367746fb,6,Sudden in 3 to 5 days not working properly,Frequent Disconnections,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-af34b0e7b795,0,Theek sa nhai chalta baar baar phone kar na padhatha hai kabhi kabhi to band hai jo jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-675c81b1719f,10,Vaise yah Wi-Fi bahut achcha h per बीच-बीच mein iske network atak jate h ya FIR loss ho jata hai aur network to ful acche milte Hain bus कभी-कभी mausam ki vajah se ho jata hai Varna yah Wi-Fi bahut badhiya hai aur hamen recharge karne ki jarurat bhi nahin padati Hai automatic ho jata hai aur yah Koi froad nahin Hai yah bahut achcha real Wi-Fi hai hamen is WiFi Se Koi shikayat nahin Hai thank you wiom company😊,Frequent Disconnections,General Good Service,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-f142f89fc598,0,"When Wi-Fi was installed, the internet was quite good but now Wi-Fi's response is gradually becoming poor. Please, the internet is getting overloaded when we are doing some important work. Internet nhi aata pls is true k",Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-15533d88b336,6,Wifi baar baar band ho jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-cf9321494812,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-f387ee0eabf7,5,"Yah ruk ruk kar network ?? chala jaata hai, jisse humein takneeki dikkatons ka saamna karna padta hai. Network sahi na hone ke kaaran hum yeh score diya hai — yahi wajah hai.",Frequent Disconnections,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-d76c50d36864,0,Ye wifi kbhi bhi band ho jata he jo office workers jo wfh wale he unhe dikat hoti he. din me 2 -3 baar apne aap hi bnd ho jata he. pricing sahi he 450 ya 500 me unlimited data. but kbhi bhi bnd ho jana ye problem he. ex - conneted to device but can't provide interent problem. if this problem fix permanently i will recommend it ti my friend and relative. And apni services ko acha bnane ke liye jyda se jyda mbps provide kijea. apka sbse bada competitor exictel he jiska interent kbhi bhi stop nahi hota he and aapbhi ye issue fix kare ye problem har month hoti he.,Frequent Disconnections,Slow Speed,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-b68a92bbbd40,1,You internet connectivity is very poor evry-time your tower or connection has intruptions.,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-91c89275540c,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-0982bc2731c2,0,“बहुत बेकार सर्विस है।”,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-61e16dd45286,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-355e129739fd,0,Apka sahi work nhi karta,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-598a0077016b,0,Auto pay band karo mera,,,,Verma,,135,WA,Sprint 7,2026-10-01
-02c40083332e,0,Bad network service and customer support,General Bad Service,Bad Customer Support - Call Centre,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-e9a684801dca,0,Bad service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-f7db462f1970,0,"Bahut-bahut kharaab service, internet ki koi sunvaai nahin ho rahi.",General Bad Service,Bad Customer Support - Call Centre,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-775ed9267192,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-184e3d3a37ad,0,Mera net nhi chlta h me pareshan hota rheta hu hmesa,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-303aaf6177b3,0,Bekar,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-e743bd9da961,0,Bekar h ek dun bhot problem h isme,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-b96f1aec6750,0,Bekar hai,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-2a76d5b768eb,0,Bhot hi ghtyia net service h m bhi ktwa ra hu...services bhot hi gndi bat krne ki kisi ko bhi tmiz nhi h,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-2f2e99a63c44,0,Iski range bhot kam hai ek room se jada dur tak nhi chlta,Range Issue,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-33ed33b6e388,0,Bhut hi chutiya net h sala chalte chalte band ho jata h ghatiya service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-9112143c6019,0,Wi-Fi ki range kam hai,Range Issue,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-fb6fd30aba34,0,Bilkul bekar,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-6c273d078e37,1,Internet speed is very poor,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-97990a2168d5,2,HamarA wifi ache sa nahi chal raha hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-2e532f9a17e0,1,Internet barara nei chalta,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-ef90a7df754e,1,Internet issue hota hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-d1e185867cd7,5,Kabhi kabhi wifi internet access nahi hota hai,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-7327db58d902,0,Kharab hai,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-115b9d3f75d1,8,Need to have more options,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-494de7ff4cea,0,Net chalta he nhi hai,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-a05d3c641e3b,4,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-03bc76b83ef0,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-d41d361e04c6,0,Network bekar chalta hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-ce83f26fd43e,4,Network is very bad some time,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-420ee3c140c4,8,Network issue,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1c8c9d63f607,6,Lagane mein bahut zyada samay lagaaya.,Bad Customer Support - Technician,,Bad Cx Support,Verma,,45,WA,Sprint 7,2026-10-01
-5e4fe4584fec,1,Net nhi chalta,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-29a2ce58a347,0,Network sahi nahi ate,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-b77f6ed0a147,0,Network Sahi nahin Hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-287950217fa7,0,No best internet and sevices,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-0c92f753e41a,0,Not satisfy with your service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-bfd1fd414868,1,"Speed Bahut Kam Hai service Achchi nahin Hai, recharge Ke Paise Jada Hai",Slow Speed,Expensive,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-b1c48d1a2527,0,Out put achha nahi hai,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-f6cdeb1c4ee4,2,Poor service,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-7c4bf6d8abcb,0,Poor Service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-a760dfd8f2f5,6,Router loss his connection many time,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-f71fff2d200f,0,Sabse ghatiya net,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1e83ad554d9b,0,Sarvice,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-34585c2bcf9a,0,Sbse ghatiya service hai wiom ki,General Bad Service,,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01
-5878ce3036a4,0,Service,General Bad Service,,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-f837f459a579,0,"Service bhot kharab hai 
- Tecnician call nahi uthata hai , rating pahle hi mang kar kaam nahi karta hai hai , barish tez hoti hai to connection chala jata hai ,kharab hojata hai ,phir sara kaam ruk jata hai",General Bad Service,Bad Customer Support - Technician,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-fb65f5feb021,0,Service bilkul bekar hai,General Bad Service,,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-fb7618f0b9f3,0,Service is not good,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-ae7179faa283,0,Service kharaab.,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-b3179cc4fb65,3,Service not good,General Bad Service,,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-248f591c05d0,0,Service not good,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-0b1a03fbe087,0,Service problem,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-4b1260f35f51,8,Thik h service shi network aate h,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-ef0322284d4f,0,TV mein network nhi pakdt is liye phn me ata hai bas,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-c4e5c0ddfe2e,0,Unstable connection,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-039157643e7e,0,Very baad service,General Bad Service,,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-67f75d88419b,0,Very bad service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-bfb678991c9d,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-0fe259fd1ef7,0,Very poor services,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-42df2a7e54a2,0,Bar bar net ki problem aati h signal down rahta hai,General Bad Service,Frequent Disconnections,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01
-1339b50ee8c2,0,Week me 2 se 3 baar complaint krni pad Rahi Hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-f1c8405b9f65,5,Well 👍,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-376fe6f5491f,0,Wifi conetion not good,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-cdca47c37d01,0,Wiom ek bekar kampani hai,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-0113a1de7ee2,0,Worst network 🛜 if weather is good wiom service not working at all,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-1431e950c648,0,Wrost service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-592be47c94b6,9,Good service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1ec9e104dde7,10,“Wiom का अच्छा नेटवर्क है।”,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-749cc63a5a90,1,Very poor service,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-ddaa7f3641c6,10,10 nice,General Good Service,,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-da7e746e8084,1,"Aap ka wiom N, 1 he",General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-c0e060102bca,10,Aapka Wi-Fi theek hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-07df12efc886,10,Ab service thik ho gai hai pehle se,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-ea62a07a482c,0,Your net is slow and so is the service.,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-4b1dd05e752d,5,Accha hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-7916e05bf1fa,10,Accha hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-bc2233b0a915,10,Accha network rahta hai koi problem nahi karta,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-2e838cef6459,10,"Accha network, nice service.",General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-9d25c2a7fb83,10,Acche service hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-33b757a3971d,2,Bohot baar complaint kri koi solution nhi nikala.. apne aap ruk jaata h bich bich m . Or downloading speed Kam h Boht . Starting m bola tha 100 mbps speed hogi but aaati 5 ya 6 hi h . Complaint krte krte thak gye,Frequent Disconnections,No/ Late Complaint Resolution,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-67d6b7a20931,10,Acha hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-f91d8b8fa346,8,Acha hai netwark,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-07ba7615b317,10,Acha net hai ye,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-b45d93f6690a,9,Network is good,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-4944150c72f6,10,Achcha Laga,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-0c66325ab8ed,10,Achchi service,General Good Service,,Good Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01
-435cadd5d455,10,Achha h,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-9216b6e6d9c7,9,Achha Sarvice hai aapka.,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-03420033cf9d,10,Achhi net chalti hai.,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-33706f5acfab,10,All good but charges high as compared to others,General Good Service,Expensive,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-5ef7c790fa31,10,Aunlimit mza hi mza,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-81e9df73b6f4,4,Help ke liye bilkul bekar ha wiom app or kbhi kbhi network bhttt issue hota ha ott use karne me,Bad Customer Support - Call Centre,,Bad Cx Support,Verma,,45,WA,Sprint 7,2026-10-01
-b7a8c0d2b185,0,Slow internet,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-0af69daba7ed,10,Badiya h wiom,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-0bb7942918e1,10,Bahut acchi service hai.,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-2cc5c790f812,10,Bahut acha h,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-7b94e64e2b7b,10,Best internet service best,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-5f0638bdf08e,1,Best service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-8d4f0ca7b761,10,Best service & Best price,General Good Service,Affordable,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-7f53aee765e4,10,Better service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-ef42326f4eea,1,Bhot acha hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-44e9777ca51b,1,Bht acha,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-58d0f1b2c44f,10,Bhut acha,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-d70286992f41,10,Excellent,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-604f3e074f4c,10,Good,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-16138495c2df,10,Good,General Good Service,,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-0f0059a7207a,7,Good,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-4a9b3e17e88a,9,Good connectivity and so more,General Good Service,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-0f69ef119844,0,Kabhi bhi net band ho jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-017f02d67d04,10,Good Internet,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-752654b95354,10,Good Job 👍,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-b90ebe73dc5d,10,Good network,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-5f82e54256ed,10,Good network,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-d85f35a67a6a,8,Good network,General Good Service,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-d3b82bbaa449,10,Wiom ki internet speed kafi acchi hai aur yah monthly ki recharge mein bhi ho sakta hai.,Good Speed,Affordable,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-ad895dfceeb9,0,Bilkul nahi galti se bhi nahi me apna bhi hatwa dunga is mahine ke baad,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-80bcb6a0e29e,10,Good service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-fdafe9f001c9,10,Good service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-318a18cab765,10,Good service,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-53bca09f197e,10,Great service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-040d7ce24e1d,10,Hi Speed hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-d741385ec331,10,Internet good quality,General Good Service,,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-39f5c5bc1dfa,10,"It is best network 
- And it work very fast",General Good Service,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-3a2e6ecaed31,10,It's good,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-f3df4b06b292,10,"Jab Bhi Koi Wiom Wifi Lagwane 
+ 4. Always complaint resolution time given atleast 6 to 12 hours.",Frequent Disconnections,28-Day Plan Issue,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9319926985,8,Kabhi kabhi internet rook jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9354489323,3,Kabhi kabhi no internet btata hai 3-3 ghante k liye no internet btata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8076943709,5,Kabhi kanhi data ruk jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8750904205,5,Kbi kbi internet Chala jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9999631764,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8700635264,0,Kyonki mujhe bahut hi bura experience mila hai jab bhi recharge kra leta hun mera net har 2 sare din kharab ho jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7065477425,5,Mahinon mein chaar-chaar baar internet vyavdhan hona.,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+7503375340,0,Network sahi se nhi aate or internet bahut slow h,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9324536865,0,Net Bar bar kat jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+7533995590,0,Net ruk jata hai bar bar,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+7505884871,10,Best service provider wiom and and wiom sporting team ðŸ‘_x008d_,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9650890272,0,Network issue or Btane ke bad nahi anaa jaldi se,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8700549366,0,Network kabhi bhi band ho jata hy aur daily night mein aur morning mein 1 hour ke liye buffring krta hy,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9690009496,7,roz net chala jata hai abhi nahi aa raha,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9999364687,5,"Sahi bhi laga nhi bhi
+ Kmonth mein after 5 to 6 day network issue ho Raha hai",Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8595878422,0,Server down most of the time without any prior notice,Frequent Disconnections,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+9560104168,6,Sudden in 3 to 5 days not working properly,Frequent Disconnections,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+9315688337,0,Theek sa nhai chalta baar baar phone kar na padhatha hai kabhi kabhi to band hai jo jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9625958449,10,Vaise yah Wi-Fi bahut achcha h per à¤¬à¥€à¤š-à¤¬à¥€à¤š mein iske network atak jate h ya FIR loss ho jata hai aur network to ful acche milte Hain bus à¤•à¤­à¥€-à¤•à¤­à¥€ mausam ki vajah se ho jata hai Varna yah Wi-Fi bahut badhiya hai aur hamen recharge karne ki jarurat bhi nahin padati Hai automatic ho jata hai aur yah Koi froad nahin Hai yah bahut achcha real Wi-Fi hai hamen is WiFi Se Koi shikayat nahin Hai thank you wiom companyðŸ˜Š,Frequent Disconnections,General Good Service,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9990389389,0,"When Wi-Fi was installed, the internet was quite good but now Wi-Fi's response is gradually becoming poor. Please, the internet is getting overloaded when we are doing some important work. Internet nhi aata pls is true k",Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9650763619,6,Wifi baar baar band ho jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+7530914310,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8700780812,5,"Yah ruk ruk kar network ?? chala jaata hai, jisse humein takneeki dikkatons ka saamna karna padta hai. Network sahi na hone ke kaaran hum yeh score diya hai — yahi wajah hai.",Frequent Disconnections,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8368503063,0,Ye wifi kbhi bhi band ho jata he jo office workers jo wfh wale he unhe dikat hoti he. din me 2 -3 baar apne aap hi bnd ho jata he. pricing sahi he 450 ya 500 me unlimited data. but kbhi bhi bnd ho jana ye problem he. ex - conneted to device but can't provide interent problem. if this problem fix permanently i will recommend it ti my friend and relative. And apni services ko acha bnane ke liye jyda se jyda mbps provide kijea. apka sbse bada competitor exictel he jiska interent kbhi bhi stop nahi hota he and aapbhi ye issue fix kare ye problem har month hoti he.,Frequent Disconnections,Slow Speed,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8439533629,1,You internet connectivity is very poor evry-time your tower or connection has intruptions.,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7599150486,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+7505850448,0,“बहुत बेकार सर्विस है।”,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+7701888272,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8826267860,0,Apka sahi work nhi karta,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9084705404,0,Auto pay band karo mera,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9761250550,0,Bad network service and customer support,General Bad Service,Bad Customer Support - Call Centre,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8743965062,0,Bad service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8273126364,0,"Bahut-bahut kharaab service, internet ki koi sunvaai nahin ho rahi.",General Bad Service,Bad Customer Support - Call Centre,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+7754970153,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9911733954,0,Mera net nhi chlta h me pareshan hota rheta hu hmesa,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9012322929,0,Bekar,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9354807028,0,Bekar h ek dun bhot problem h isme,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9990126858,0,Bekar hai,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7065626916,0,Bhot hi ghtyia net service h m bhi ktwa ra hu...services bhot hi gndi bat krne ki kisi ko bhi tmiz nhi h,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9870827604,0,Iski range bhot kam hai ek room se jada dur tak nhi chlta,Range Issue,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8595140644,0,Bhut hi chutiya net h sala chalte chalte band ho jata h ghatiya service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7678309328,0,Wi-Fi ki range kam hai,Range Issue,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9675312240,0,Bilkul bekar,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9410055943,1,Internet speed is very poor,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8448148767,2,HamarA wifi ache sa nahi chal raha hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8527484273,1,Internet barara nei chalta,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9625931041,1,Internet issue hota hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+7983226194,5,Kabhi kabhi wifi internet access nahi hota hai,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8742918437,0,Kharab hai,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8097529336,8,Need to have more options,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9354514357,0,Net chalta he nhi hai,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9540750433,4,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+7838643797,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+7906920080,0,Network bekar chalta hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+7065276033,4,Network is very bad some time,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9871896914,8,Network issue,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9312349354,6,Lagane mein bahut zyada samay lagaaya.,Bad Customer Support - Technician,,Bad Cx Support,Verma,,45,WA,Sprint 7,2026-10-01,
+8868868538,1,Net nhi chalta,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9568367365,0,Network sahi nahi ate,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9897508385,0,Network Sahi nahin Hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+7291918642,0,No best internet and sevices,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9720119403,0,Not satisfy with your service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7977152046,1,"Speed Bahut Kam Hai service Achchi nahin Hai, recharge Ke Paise Jada Hai",Slow Speed,Expensive,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8299635377,0,Out put achha nahi hai,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8368711649,2,Poor service,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9654626427,0,Poor Service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8287656124,6,Router loss his connection many time,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9953858765,0,Sabse ghatiya net,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7900062188,0,Sarvice,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+9582064842,0,Sbse ghatiya service hai wiom ki,General Bad Service,,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01,
+9026182301,0,Service,General Bad Service,,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+8777643879,0,"Service bhot kharab hai 
+ Tecnician call nahi uthata hai , rating pahle hi mang kar kaam nahi karta hai hai , barish tez hoti hai to connection chala jata hai ,kharab hojata hai ,phir sara kaam ruk jata hai",General Bad Service,Bad Customer Support - Technician,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8448428413,0,Service bilkul bekar hai,General Bad Service,,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+9140973083,0,Service is not good,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+8447183454,0,Service kharaab.,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8859350833,3,Service not good,General Bad Service,,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+9893097352,0,Service not good,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8750018009,0,Service problem,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+9267989924,8,Thik h service shi network aate h,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9873981782,0,TV mein network nhi pakdt is liye phn me ata hai bas,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9170860850,0,Unstable connection,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9868515156,0,Very baad service,General Bad Service,,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+9873878881,0,Very bad service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7985855113,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8383850078,0,Very poor services,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8002738330,0,Bar bar net ki problem aati h signal down rahta hai,General Bad Service,Frequent Disconnections,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01,
+8800260712,0,Week me 2 se 3 baar complaint krni pad Rahi Hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8750563573,5,Well ðŸ‘_x008d_,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+7462955201,0,Wifi conetion not good,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+7379165088,0,Wiom ek bekar kampani hai,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9650297230,0,Worst network ðŸ›œ if weather is good wiom service not working at all,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+7290936448,0,Wrost service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8076625913,9,Good service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9266393466,10,“Wiom का अच्छा नेटवर्क है।”,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8076679469,1,Very poor service,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+8826832757,10,10 nice,General Good Service,,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+9555241814,1,"Aap ka wiom N, 1 he",General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8447885736,10,Aapka Wi-Fi theek hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+7906731023,10,Ab service thik ho gai hai pehle se,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8448210588,0,Your net is slow and so is the service.,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8587014519,5,Accha hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8595455162,10,Accha hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9648699939,10,Accha network rahta hai koi problem nahi karta,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9819775434,10,"Accha network, nice service.",General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8810312342,10,Acche service hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8130193738,2,Bohot baar complaint kri koi solution nhi nikala.. apne aap ruk jaata h bich bich m . Or downloading speed Kam h Boht . Starting m bola tha 100 mbps speed hogi but aaati 5 ya 6 hi h . Complaint krte krte thak gye,Frequent Disconnections,No/Late Complaint Resolution,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+7021848984,10,Acha hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9911684542,8,Acha hai netwark,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9716408207,10,Acha net hai ye,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8130607974,9,Network is good,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7530863471,10,Achcha Laga,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9319242373,10,Achchi service,General Good Service,,Good Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01,
+8287508310,10,Achha h,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8700803397,9,Achha Sarvice hai aapka.,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9310313890,10,Achhi net chalti hai.,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7065081982,10,All good but charges high as compared to others,General Good Service,Expensive,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8057938111,10,Aunlimit mza hi mza,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8527172698,4,Help ke liye bilkul bekar ha wiom app or kbhi kbhi network bhttt issue hota ha ott use karne me,Bad Customer Support - Call Centre,,Bad Cx Support,Verma,,45,WA,Sprint 7,2026-10-01,
+8178557492,0,Slow internet,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7827045878,10,Badiya h wiom,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7906034037,10,Bahut acchi service hai.,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9911677166,10,Bahut acha h,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9250862579,10,Best internet service best,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7982147722,1,Best service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9266327373,10,Best service & Best price,General Good Service,Affordable,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8585983995,10,Better service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9599334919,1,Bhot acha hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9205771323,1,Bht acha,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9873025091,10,Bhut acha,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9795936963,10,Excellent,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+7304633090,10,Good,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7982006774,10,Good,General Good Service,,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+8429273534,7,Good,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8173956864,9,Good connectivity and so more,General Good Service,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+9310426984,0,Kabhi bhi net band ho jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8879373866,10,Good Internet,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8791611456,10,Good Job ðŸ‘_x008d_,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9560510172,10,Good network,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9873954233,10,Good network,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8171818429,8,Good network,General Good Service,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+8368000936,10,Wiom ki internet speed kafi acchi hai aur yah monthly ki recharge mein bhi ho sakta hai.,Good Speed,Affordable,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8700499729,0,Bilkul nahi galti se bhi nahi me apna bhi hatwa dunga is mahine ke baad,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9284844434,10,Good service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9555473750,10,Good service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9811332137,10,Good service,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8287780531,10,Great service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9953421771,10,Hi Speed hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9818932183,10,Internet good quality,General Good Service,,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+8652893444,10,"It is best network 
+ And it work very fast",General Good Service,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+8294077258,10,It's good,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9811322138,10,"Jab Bhi Koi Wiom Wifi Lagwane 
  Ki Baat Karega To Usee Me Wiom 
- Wifi Lagwane Ka Mashwara Dunga",General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-18647ed7dd01,9,Kabhi-kabhi to har ek mein dikkat aati hai.,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-6d1a28e9340f,10,Koi problem nhi ati network bhi acha he kabhi server down ka bahana nhi hota. Best he,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-772e898bff88,10,Kwiom ek bhdiya wifi he,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-8341aacbc25c,10,Kyoki yai best connection hai or iske network bhtt ache hai kbhi koi problem nahi aati or sbse Maine point hai sbse sasta hai sabse,General Good Service,Affordable,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-4d91c8da9d60,10,"Kyuki y bohot acha chlta h but 
+ Wifi Lagwane Ka Mashwara Dunga",General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9990369994,9,Kabhi-kabhi to har ek mein dikkat aati hai.,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8882354608,10,Koi problem nhi ati network bhi acha he kabhi server down ka bahana nhi hota. Best he,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9555961025,10,Kwiom ek bhdiya wifi he,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8799747503,10,Kyoki yai best connection hai or iske network bhtt ache hai kbhi koi problem nahi aati or sbse Maine point hai sbse sasta hai sabse,General Good Service,Affordable,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+7838835517,10,"Kyuki y bohot acha chlta h but 
  Kabhi kabhi bnd ho jata h but y zada net or zada best h sabky 
- Liy",General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-689582a8cbe2,10,Kyunki aapki service bahut acchi hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-5b6ebfe613de,10,Mast internet,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-41f03f2e5dcd,10,Me wiom se khus hu bus,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-e0cb72918cdb,10,Mujhe achha laga es liye,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-13d5d59dbaa6,10,Network 24 hours,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-5c3f516473f8,10,Nice,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-70d248ac1b99,10,ok bahut achcha,General Good Service,,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-d819432eaf36,9,Service,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-fcf8ff53013c,10,Service acchi hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-9e56d427c486,10,Service achhi hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-b13323aa8d2d,10,service achi hai or jyada mahanga nhi hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-6d27747fd45f,10,service badhiya Chal Rahi Hai iski wiom service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-2e51d5dd364f,10,Service Good hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-bed44e7ca0cd,10,Service is very good for us,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1a7251f84988,6,"Service to bahut badhiya hai aur kisi 1 saal puraane customer ko kam se kam 5 din chhoot milni chahiye recharge karne ke liye. Uska Wiom band nahi hona chahiye.
+ Liy",General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9310359837,10,Kyunki aapki service bahut acchi hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9717807251,10,Mast internet,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8448452036,10,Me wiom se khus hu bus,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9899380325,10,Mujhe achha laga es liye,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8826574652,10,Network 24 hours,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7982053022,10,Nice,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9319403692,10,ok bahut achcha,General Good Service,,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+8802234146,9,Service,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9818379581,10,Service acchi hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9971476051,10,Service achhi hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8860369052,10,service achi hai or jyada mahanga nhi hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9311902340,10,service badhiya Chal Rahi Hai iski wiom service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8826888353,10,Service Good hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7838663164,10,Service is very good for us,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9891482739,6,"Service to bahut badhiya hai aur kisi 1 saal puraane customer ko kam se kam 5 din chhoot milni chahiye recharge karne ke liye. Uska Wiom band nahi hona chahiye.
  
- Dhanyavaad.",General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-370adf80c337,8,Services its all about good.,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-51b83db702e4,10,Superb network,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-7d581430f8f0,9,Superb Nice,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-3aad0b5fb62f,10,The opportunity is better then other wifi opportunity...wiom network is best,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-d83b24a2563b,9,Uninterrupted internet,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-41ddb8d520ac,10,Services & sever,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-3242309bd254,8,Very good,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-b673ab3a2bbf,10,Very good,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-0494365357b8,10,Very good network,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-f591268d5a91,10,Very good Service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-5084835a796a,10,Very good service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-594a2ecc04ab,10,Very good service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-c650c221908d,2,Vyom suvidha bahut accha laga.,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-655920163e38,10,WiFi acha hai humara tv aur phones ache se chal jate hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-d6856ca87906,10,Bahut badhiya,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-70752a062d7d,10,Wiom best service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-f2110d1e88ab,10,Wiom good,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-dfbc8b2b9cc3,10,Wiom good internet working,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-8a9fd834a5bc,10,Wiom Hamen bahut Achcha lagta hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-fe3b2582d3d9,10,Wiom ke sarvice,General Good Service,,Good Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01
-c739944f5718,10,Wiom network is better then other network,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-826225d1a45c,10,Wiom service's good.,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1ca0da053986,10,Wiom signal is very good plns is so good or network bhi Good,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-386caa1b1b3b,10,Wiom wifi dest hai phale ki wifi se,General Good Service,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-bd27ba393fce,10,Work properly,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-5096762e7f83,10,Yeh accha hai.,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1d4406cbfb5c,10,10 number dene ki vajah hai aapane hamari complaint ko sunvaee ki abhi yah Sahi chal raha hai,Good Customer Support - Call Centre,Fast Complaint Resolution,Good Cx Support,Verma,,270,WA,Sprint 7,2026-10-01
-1945e6f721ab,10,Network accha aata hai koi problem hone par call karte to turant thik krte hai 👌,Good Customer Support - Call Centre,Fast Complaint Resolution,Good Cx Support,Verma,,45,WA,Sprint 7,2026-10-01
-642f60caa1a6,7,Problem solving team plus good customer support,Good Customer Support - Call Centre,,Good Cx Support,Verma,,135,WA,Sprint 7,2026-10-01
-6da1ab87dbbe,10,Yeh bhut achi service dete hai or ek call pe solution bhi dete hai yeh best of best hai,Good Customer Support - Call Centre,Fast Complaint Resolution,Good Cx Support,Verma,,135,WA,Sprint 7,2026-10-01
-327f5eea7749,10,Yes denge kyuki koi network me problam hoti ni h hoti h to problem solve ho jaathi h,Good Customer Support - Call Centre,Fast Complaint Resolution,Good Cx Support,Verma,,45,WA,Sprint 7,2026-10-01
-a2662d6dec6e,10,Achha network hai speed achhi hai,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-4b01570b820f,10,Achi speed or kabhi band nahi hota he,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-089b43754164,10,Acilent wifi or speed best,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-847292ed4f2d,10,Bhadiya net speed hai aur bina rukawat kai chalta hai,Good Speed,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-1b97b7d59abe,10,Bhut acha speed hai wiom me,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-4ae9b97b3c1e,10,Connectivity and speed is good,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-d2d60637ef6b,10,Fast service,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-e6565377ea60,10,Fast speed,Good Speed,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-efa40fc28576,10,Good internet speed and reasonable price,Good Speed,Affordable,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-8b84939f8699,10,"Good speed ,no glitch,service is too good",Good Speed,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-58bb838cc211,10,Good wifi speed budget friendly no installation charge over all good service,Good Speed,Affordable,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-2e50f94a7b54,10,Good. Speed,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-20dd2c8715c4,10,High speed and fastest network,Good Speed,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-e8121dab3983,10,Net fast chalta hai aur net rukta nahin Hai customer service hi acchi hai Wi-Fi ka rate bhi kam hai lagwane mein jyada paise nahin Lage te Hain aur bhi bahut Si aisi chijen Hain jinke hamen inko WiFi achcha Laga,Good Speed,Good Customer Support - Call Centre,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-e938626c7e6c,10,speed,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-9a052095adcd,10,Speed best hai,Good Speed,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-25597d3e05c2,10,Speeed,Good Speed,,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-8d9c1eb68a71,10,Super fast batter network,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-dc6dad13a5d4,10,Very good speed,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-219259e857b7,10,Wiom internet speed,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-81ccc2ca7f72,10,"Wiom network is a best network and best speed and in it 4g and 5g network available 
- It isa best speed network",Good Speed,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-7a7d8554005c,10,Yes but mostly low speed,Good Speed,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-50e240d719b3,1,Internet Speed not fast working,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-18bd31a170bb,0,Network problem,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-317c9e285144,2,Service is not good and very expensive,General Bad Service,Expensive,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-b2b0995f29ea,0,Very bad service,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-59cad45b7716,10,Thik h naya h abhi to acha chal raha h but bich m ek do din net ruk gaya tha ek ek do do ghante ke liye but dekho aage kitna acha chalta h net,Internet Down,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-e818744c773e,10,Bilkul bataenge,,,,Verma,,135,WA,Sprint 7,2026-10-01
-99e6e69db58a,10,Bilkul denge aapane Ham rishtedaron Ko bilkul denge Salah ki Wi-Fi bhi Ham ka lagaen,,,,Verma,,135,WA,Sprint 7,2026-10-01
-7ffbdecad172,10,Denge,,,,Verma,,45,WA,Sprint 7,2026-10-01
-fb52c7910db2,6,Fair,,,,Verma,,135,WA,Sprint 7,2026-10-01
-a14b466facb4,7,Gaming wife bano,,,,Verma,,135,WA,Sprint 7,2026-10-01
-318b7a191500,5,Ha bhi aur nahi bhi,,,,Verma,,270,WA,Sprint 7,2026-10-01
-64cbbe10a33b,10,I have a joint family in this there are 10 members,,,,Verma,,45,WA,Sprint 7,2026-10-01
-66956144df93,10,Kuch nahi,,,,Verma,,270,WA,Sprint 7,2026-10-01
-f7c26d08c305,10,Kuch ni,,,,Verma,,270,WA,Sprint 7,2026-10-01
-ee76524d781b,10,Maine apne 4 family members ko apke wiow lagva diye hai,,,,Verma,,270,WA,Sprint 7,2026-10-01
-4a1419e3d112,10,Nothing,,,,Verma,,45,WA,Sprint 7,2026-10-01
-9ee26e38494e,10,Osam,,,,Verma,,270,WA,Sprint 7,2026-10-01
-2e299b519540,10,Recharge ke liye kabhi kabhi daily hota hai toh app discount mat katiye every month recharge lagta hai humble request please,,,,Verma,,135,WA,Sprint 7,2026-10-01
-e0b092ee5f65,10,Self,,,,Verma,,270,WA,Sprint 7,2026-10-01
-6aa8ed89f450,10,Good plan with Internet,General Good Service,,Good Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01
-82a0a606ecd8,8,Wifi is fine,,,,Verma,,45,WA,Sprint 7,2026-10-01
-9528c86f09ce,0,Ye sahi nahi hai,,,,Verma,,270,WA,Sprint 7,2026-10-01
-3aa95bd37e17,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-8b60d8e2d41b,1,"Nahi denge sabse faltu network hai.es ka network problem hai es ka net sabse faltu hai mobile mai, bhi kam nahi karta sahi se,wifi 
- Ke samne baithna ke kaam karo tab par bhi nahi hota,10 bar to Complain bhi kar koi sunwai nahi.",No/ Late Complaint Resolution,,Bad Cx Support,Verma,,135,WA,Sprint 7,2026-10-01
-4370cbd0c735,10,Kyunki jaldi installation Ho Gaya,Quick Installation,,Good Cx Support,Verma,,45,WA,Sprint 7,2026-10-01
-52c935ad0740,0,Poor range,Range Issue,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-e55f0c960a39,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-6910b1980ebe,3,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-9548469485eb,5,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-dd527f3bc8f0,2,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-692fee27ef43,1,Kharaab network.,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-836e229ce3f6,0,"Humein hi connectivity sahi nahi mil rahi hai, aur na hi speed sahi aati hai. Aksar net kharaab hi rehta hai.",Slow Speed,Frequent Disconnections,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-5c758a23d857,1,Ghatiya internet service net chalta hi nahi,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-1df44466baf5,0,Inter are very slow and not working internet,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-8c4fbe8fcbf6,5,"Because it's runing to slow sometimes , sometimes it's automatically turned of and shown no internet connection. But somewhere I like it a bit. But it is my honest answer to you that please improve your service , if it is not then I don't prefer it to anymore, and I use some other wifi service,",Frequent Disconnections,Slow Speed,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-5f23495ad7aa,0,Internet ki speed bahut bekar hai,Slow Speed,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-fbea8ad6e8c4,0,Bhot ki bekar h Har 4 din me net nhi chlta bar bar customer support ko bolna pdta h application bhi sahi se kaam nhi krti,Frequent Disconnections,Bad Application,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-8d3aa7cd627c,6,Internet speed bahut he jyada slow hai,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-feaad6288eaf,0,Kbhi bhi band ho jata ha orr ak damm net slow ho jata ha 😐,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1a356d597f46,0,Kyoki net ki speed kam hai or range bhi kam hai,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-1a70934f96ec,5,"Mera plan 100 mbps hai... But muskil se 60 70 bhi ajaye wo bhi bhot hai.... 
+ Dhanyavaad.",General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8810369764,8,Services its all about good.,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8130609082,10,Superb network,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8376890688,9,Superb Nice,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9354205855,10,The opportunity is better then other wifi opportunity...wiom network is best,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9540982627,9,Uninterrupted internet,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8430341708,10,Services & sever,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7982611053,8,Very good,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9990941563,10,Very good,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+6306120872,10,Very good network,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+7678196131,10,Very good Service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8882298857,10,Very good service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9690038706,10,Very good service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8092403194,2,Vyom suvidha bahut accha laga.,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9643830684,10,WiFi acha hai humara tv aur phones ache se chal jate hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8447236505,10,Bahut badhiya,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9911067807,10,Wiom best service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9205849115,10,Wiom good,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9999744166,10,Wiom good internet working,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8826025194,10,Wiom Hamen bahut Achcha lagta hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8595056671,10,Wiom ke sarvice,General Good Service,,Good Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01,
+9873498615,10,Wiom network is better then other network,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9354333353,10,Wiom service's good.,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8745812945,10,Wiom signal is very good plns is so good or network bhi Good,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+7982654979,10,Wiom wifi dest hai phale ki wifi se,General Good Service,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+9319348961,10,Work properly,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9711004121,10,Yeh accha hai.,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9871603154,10,10 number dene ki vajah hai aapane hamari complaint ko sunvaee ki abhi yah Sahi chal raha hai,Good customer Support - call centre,Fast Complaint Resolution,Good Cx Support,Verma,,270,WA,Sprint 7,2026-10-01,
+8743896700,10,Network accha aata hai koi problem hone par call karte to turant thik krte hai ðŸ‘Œ,Good customer Support - call centre,Fast Complaint Resolution,Good Cx Support,Verma,,45,WA,Sprint 7,2026-10-01,
+7982814046,7,Problem solving team plus good customer support,Good customer Support - call centre,,Good Cx Support,Verma,,135,WA,Sprint 7,2026-10-01,
+7830998149,10,Yeh bhut achi service dete hai or ek call pe solution bhi dete hai yeh best of best hai,Good customer Support - call centre,Fast Complaint Resolution,Good Cx Support,Verma,,135,WA,Sprint 7,2026-10-01,
+9266723785,10,Yes denge kyuki koi network me problam hoti ni h hoti h to problem solve ho jaathi h,Good customer Support - call centre,Fast Complaint Resolution,Good Cx Support,Verma,,45,WA,Sprint 7,2026-10-01,
+6263813124,10,Achha network hai speed achhi hai,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9702904348,10,Achi speed or kabhi band nahi hota he,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7412870390,10,Acilent wifi or speed best,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9220989906,10,Bhadiya net speed hai aur bina rukawat kai chalta hai,Good Speed,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8285940627,10,Bhut acha speed hai wiom me,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7017677992,10,Connectivity and speed is good,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8447173000,10,Fast service,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9717352415,10,Fast speed,Good Speed,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+7838583476,10,Good internet speed and reasonable price,Good Speed,Affordable,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9911615178,10,"Good speed ,no glitch,service is too good",Good Speed,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8287563134,10,Good wifi speed budget friendly no installation charge over all good service,Good Speed,Affordable,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9821730165,10,Good. Speed,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9627067041,10,High speed and fastest network,Good Speed,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+9811312608,10,Net fast chalta hai aur net rukta nahin Hai customer service hi acchi hai Wi-Fi ka rate bhi kam hai lagwane mein jyada paise nahin Lage te Hain aur bhi bahut Si aisi chijen Hain jinke hamen inko WiFi achcha Laga,Good Speed,Good customer Support - call centre,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8920483714,10,speed,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8810203303,10,Speed best hai,Good Speed,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+7678464496,10,Speeed,Good Speed,,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+9718160737,10,Super fast batter network,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7291943009,10,Very good speed,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8533997800,10,Wiom internet speed,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8607929342,10,"Wiom network is a best network and best speed and in it 4g and 5g network available 
+ It isa best speed network",Good Speed,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8448972040,10,Yes but mostly low speed,Good Speed,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8104221001,1,Internet Speed not fast working,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8595697550,0,Network problem,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8826697220,2,Service is not good and very expensive,General Bad Service,Expensive,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+9318431735,0,Very bad service,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9871410446,10,Thik h naya h abhi to acha chal raha h but bich m ek do din net ruk gaya tha ek ek do do ghante ke liye but dekho aage kitna acha chalta h net,Internet Down,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8285371936,10,Bilkul bataenge,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9911890258,10,Bilkul denge aapane Ham rishtedaron Ko bilkul denge Salah ki Wi-Fi bhi Ham ka lagaen,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9935399792,10,Denge,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+8375052648,6,Fair,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8882053534,7,Gaming wife bano,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9354243122,5,Ha bhi aur nahi bhi,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9627679307,10,I have a joint family in this there are 10 members,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+8126264175,10,Kuch nahi,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8527534059,10,Kuch ni,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8860044289,10,Maine apne 4 family members ko apke wiow lagva diye hai,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9819504002,10,Nothing,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+9953127710,10,Osam,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+7303939328,10,Recharge ke liye kabhi kabhi daily hota hai toh app discount mat katiye every month recharge lagta hai humble request please,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8865957700,10,Self,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8595905489,10,Good plan with Internet,General Good Service,,Good Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01,
+8810588415,8,Wifi is fine,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+8287371695,0,Ye sahi nahi hai,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8630382334,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8700428572,1,"Nahi denge sabse faltu network hai.es ka network problem hai es ka net sabse faltu hai mobile mai, bhi kam nahi karta sahi se,wifi 
+ Ke samne baithna ke kaam karo tab par bhi nahi hota,10 bar to Complain bhi kar koi sunwai nahi.",No/Late Complaint Resolution,,Bad Cx Support,Verma,,135,WA,Sprint 7,2026-10-01,
+7011047030,10,Kyunki jaldi installation Ho Gaya,Quick Installation,,Good Cx Support,Verma,,45,WA,Sprint 7,2026-10-01,
+8882906103,0,Poor range,Range Issue,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7351854691,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+7388345218,3,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+7703817837,5,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9717836261,2,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8799704009,1,Kharaab network.,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9410000371,0,"Humein hi connectivity sahi nahi mil rahi hai, aur na hi speed sahi aati hai. Aksar net kharaab hi rehta hai.",Slow Speed,Frequent Disconnections,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8799728466,1,Ghatiya internet service net chalta hi nahi,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+7827090613,0,Inter are very slow and not working internet,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9958537439,5,"Because it's runing to slow sometimes , sometimes it's automatically turned of and shown no internet connection. But somewhere I like it a bit. But it is my honest answer to you that please improve your service , if it is not then I don't prefer it to anymore, and I use some other wifi service,",Frequent Disconnections,Slow Speed,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7011143630,0,Internet ki speed bahut bekar hai,Slow Speed,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+7053292754,0,Bhot ki bekar h Har 4 din me net nhi chlta bar bar customer support ko bolna pdta h application bhi sahi se kaam nhi krti,Frequent Disconnections,Bad Application,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+9315239300,6,Internet speed bahut he jyada slow hai,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9650946266,0,Kbhi bhi band ho jata ha orr ak damm net slow ho jata ha ðŸ˜_x0090_,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8826210148,0,Kyoki net ki speed kam hai or range bhi kam hai,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8076011920,5,"Mera plan 100 mbps hai... But muskil se 60 70 bhi ajaye wo bhi bhot hai.... 
  
  Jaha par router laga hai
  Theek uske upar chat hai... Waha bhi network nahi aata.... Upar se 570 rupaye monthly hai... Wo bhi 28 days ke liye... Me khud 
- Jald is ko hathane wala hu",Slow Speed,28-Day Plan Issue,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-bfff68e30914,0,"My internet runs very slow and often gets disconnected. Once, the data didn’t work at all for 10 days straight, and the red light kept blinking. Even after making a complaint, no solution was provided. I was told I would get extra data, but I never received it.",Slow Speed,Internet Down,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01
-7fdb741491a3,0,Net bilkul he slow chalta hai upar sai service bekar hai,Slow Speed,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-07bcf2f60301,0,Net kabhi bhi chalna band ho jata h or speed nhi aati h.,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-bca39ebd6d75,1,Network problem jada hai bahut hi me paresan ho jata hu kabhi kabhi to Maan karta hai ki hata du esko,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-4f0d9f95b012,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-690e732867d7,0,"Network issue 
+ Jald is ko hathane wala hu",Slow Speed,28-Day Plan Issue,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8510960522,0,"My internet runs very slow and often gets disconnected. Once, the data didnâ€™t work at all for 10 days straight, and the red light kept blinking. Even after making a complaint, no solution was provided. I was told I would get extra data, but I never received it.",Slow Speed,Internet Down,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01,
+7037645083,0,Net bilkul he slow chalta hai upar sai service bekar hai,Slow Speed,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+7505153947,0,Net kabhi bhi chalna band ho jata h or speed nhi aati h.,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8700885933,1,Network problem jada hai bahut hi me paresan ho jata hu kabhi kabhi to Maan karta hai ki hata du esko,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8800292498,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9911622096,0,"Network issue 
  Internet slow 
  Supply down 
  Hundred problem 
- Work karte time",Slow Speed,Frequent Disconnections,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-f9bfd5b3f110,10,"Wiom 👌 
- Wiom ko mare pass ek sal hone wale ha bhut hi acha wifi ha",General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-7a2e41e6164b,10,Network problem hai selow Speed ho jati hai daily,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-9dacb72860dc,10,Par is m net slow chal raha hai,Slow Speed,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-831f1670b864,0,Service slow h,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-e1283830262d,10,Slow chal rha h wi fi,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-d2026f1c2823,0,Slow internet speed and bad customer service Internet speed fluctuate all day.,Slow Speed,Bad Customer Support - Call Centre,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-c1856f4abff2,1,Slow net,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-2b8147ab4d02,1,Slowed speed,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-adcf42fe19c5,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-d8512d7c4472,0,Net slow hai,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1612a22477b7,10,Maine apne brother ke lagwaya hai,,,,Verma,,270,WA,Sprint 7,2026-10-01
-6a301e0da3fb,1,"On of the worst and shoddy service 
- Kabhi bi network chale jate hain office work kar rahe hain network range chali jati hain",Range Issue,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-5c916eb7e89d,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-87a9e116686a,0,Kyui net ki speed bahut selow aa rahi hai,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-b0fd3df66b90,0,Internet Sahi nahin chal raha hai bahut slow chalta hai,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-e42b61c20d6c,10,Speed kam hai 26 din k reached hota hai 28 din ka recharge,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-bc90dc39bdca,0,Speed Na aana,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-1976d854e9bf,4,Speed problem,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-3a7453dceee1,0,Speed problem and daily no internet issue,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-47a3fba4b7f5,5,Speed problm,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-c95319292768,0,Speed slow,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-8876f5277da8,0,Internet not working good most of the time my all divice discounted and wifi name not show in any divice. I am complete most of the time but my problem not solved.,Frequent Disconnections,No/ Late Complaint Resolution,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-3dc7922d585c,10,Speed thik hai,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-d832f7bcd1f5,0,Wifi recharge date se 2 din phele he slow kr dete h,Slow Speed,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-5ee7d5458626,0,Wiom is slow internet,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-0ec0f9f62bcd,7,Yahi ki ek to bina bataye 475 rupees per months se 550 rupees Karwa diye. And ab wifi pehle jaisa nahi chal raha. Buffering jyada hone lagi hai last 2-3 months we. Kabhi kabhi to net hi nahi chalta.,Slow Speed,Expensive,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-b7acdfcfe39c,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-1e6522e3054c,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-a58e047011a8,0,Speed slow hai,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-c0433f69fce9,3,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-f11901efab2a,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-1969d220ef4d,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-fb73746c1fc8,3,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-b48a91f03044,1,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-0dab02535a2a,1,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-e97098a09a4d,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-6cd111d04c88,1,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-019a1587e3c4,1,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-f5393d4314d3,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-6274becd54ae,4,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-e2b31e33d7d6,10,Achi service h,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-4bc8929d1db8,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-81a2cde2adc4,5,The internet goes down at times,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-844862167642,0,Network speed hai aapki,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-51ddff218d8f,4,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-edfb99ea98a2,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-6bb21861c9a6,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-6941769a8989,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-fc03082b92c7,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-f72f55a61a7a,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-c86cd9d7082d,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-5496101acd43,10,Ha ji,,,,Verma,,270,WA,Sprint 7,2026-10-01
-70bcb3a287b8,7,Net Sahi chalta hai or price sahi hai,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-debc20793134,5,Other internet provider increase price wion,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01
-66ee46d91d26,5,Kabhi-kabhi internet break ho jaata hai.,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-dea3ffe65986,0,Pack ki cost poor connection,Expensive,,Offering/ Plan Dissatisfaction,Verma,,45,WA,Sprint 7,2026-10-01
-4a6e21f6f491,8,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-4b61a71a47b8,5,Internet issue,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-5187417a0573,2,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-703d1d6863e9,0,Net speed kab Ana bar bar disconnect hona application bohot ruk ruk kar chalti hai,Frequent Disconnections,Bad Application,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-fcfea0e03ed1,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-43b8005a6ab3,0,Aapki service bilkul acche nahin Hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-cdc148821cc6,0,Bad sarvice,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-4f73355b15a4,5,Bar bar internet cut hona,General Bad Service,Frequent Disconnections,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-b49f7f56b127,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-2f14d3ab09d0,1,Bht halka chalta h wiom ka net ab bht zada dikkat ati h me bht bht pareshan hogaya hu is bar me wiom ko hata kar airtel ka wifi lagwaoga,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-54842c542766,0,Sometimes connections are lost in between and they offer package for 28 days only,28-Day Plan Issue,,Offering/ Plan Dissatisfaction,Verma,,270,WA,Sprint 7,2026-10-01
-8ebf8d92d091,0,Sala diya tha wo log ne bandh kiya..our abhi mai bhi is month mai bandh karne wala hu,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-acbc799403e0,6,Sarvice acchi nhi hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-cebc44f05979,1,Singnal loss parmanent wire crack,General Bad Service,,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01
-bf2101286a5b,7,Ek accha vikalp hai.,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-c9c2d1e562e7,4,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-edea19a48747,10,Good,General Good Service,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-ffe49b150b5f,10,Hamara internet bahut accha hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-a9d0bc8bdc11,10,I am using now,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-1d17a7f297b5,10,Mast calta hai wiom net,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-82a3f6575f98,8,Mujhe sahi laga,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-7fa7864f1442,10,Network Suvidha bahut best hai aur customer care service bhi,Good Customer Support - Call Centre,,Good Cx Support,Verma,,270,WA,Sprint 7,2026-10-01
-1ebc33fd8d79,10,Fast sarvice,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-aee97bad04ed,10,Speed,Good Speed,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-eaa937d22467,2,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-0b6d7de0ba55,1,WiFi reange issue,Range Issue,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-7829c2a5e180,10,Chef and bast,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-e8edbe5e6833,4,Good service and best speed and nature,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-13c7b8c4d87e,0,Wifi ache se kaam nahi karta,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-9fb89ff3c13f,2,Slowed network,Slow Speed,,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-729b16a76271,10,Badiya network,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-0c6fa8931872,0,Speed ni hai bilkul bhi bhot slow chalta hai m downloads m bhot preshn hota hu you tube par video bhi ruk ruk Kar chalti hai or 100mbps ka recharge hai iss liye,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-42aacf43d7c1,5,Hamara net nhi chal network bhut slow a rha h kabhi kabhi bilkul gayab ho jta h,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-2cd3d2c34226,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-baadcfaa74b1,10,Good service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-fdfc84b1541b,3,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-c572e9399ac4,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-1a549f6629e8,0,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-5afa43def2a1,5,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-4192a5fc4366,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-b66a953890ea,0,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-76f20c49abd6,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-a33e864990b0,0,Seva Sahi nahin Hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-15b3656c3d6f,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-c5a6ee9f9f9f,0,Kiu ki kabhi bhi wifi chalna Band ho jata h achanak se agar kuch work karte raho,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-c4b9a9c6f0f4,1,Wiom company ko mai kahna chahunga ki aapki sewa kaafi acchi hai mai khush hu aapki sewa se but ek cheez aapko improve krna chaahiyai aapka wifi continuesly chalte huwai ruk Jaata hai isko aap improve kariyai please I request to wiom team,Frequent Disconnections,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-1de70b9984d9,10,Acchi service sab kuchh thik hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1be3d8afd3dc,10,Performing bast,General Good Service,,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-f7511ff6a69f,4,Mere network nhi aa rhe 15dino se,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-79f0caa1e477,2,Bahut rukh rukh ke chalta hai,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-34344b46d2f0,0,Signal problem.,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-759215f79ffa,0,Very bad service,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-fd29377c0b86,6,Wifi sab thik h bas complete par jaldi kam start nhi hota h,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-1bbdd76d439f,0,3 mobile jodne ke bad speed bahot km ho jata hai,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-be66504a7d1c,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-009047994bfe,5,Good sarvice,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-baa91aa77f23,5,Thik he,,,,Verma,,135,WA,Sprint 7,2026-10-01
-fb698393870e,10,Good wifi connection and service,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-7b047ae4406c,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-07ec683c8a82,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-a4a29dfa57ff,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-a9130219be2f,8,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-3b71fbd6c617,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-2063185a85f3,3,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-f3c73164d7ea,5,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-d36b4e3a4a3e,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-6553b4ea4aa6,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-57a62dddb288,1,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-dcdfd50fd167,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-23cb156b8ff4,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-8d45cabff88a,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-83fc68fd96fb,2,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-9fb2603c8e2f,0,Apka wifi bhut slow chlta h Or complain resolve hone me 48 se 72 ghnte ka time lgta h jb apka wifi band hota h to bsss fr to wait krte rho chlta hi nhi h,Slow Speed,No/ Late Complaint Resolution,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-9b8bffe8f6d4,0,Bhut slow chalta hai wiom ka wifi kabhi kabar ata bhi nahi hai chala jata hai aa jata hai,Slow Speed,Frequent Disconnections,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1b684dae2ee2,0,Internet Speed is slow,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1a6a9b770dad,10,Good internet kam recharge plan pura Ghar ke liya accha internet .,Affordable,,Good Price,Verma,,45,CT,Sprint 7,2026-10-01
-308e43e405fd,1,Net work sahi nahi hai aur mehenga bhi hai.,Expensive,,Offering/ Plan Dissatisfaction,Verma,,270,WA,Sprint 7,2026-10-01
-f432336db616,6,Sometimes connection stops and run after few minutes and it's frequent. price should be less or speed should bee high.,Slow Speed,Frequent Disconnections,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-02d00295cb41,2,Hafte mey e din band,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-078a61a0b89a,1,Internet bhot bekar h chalta h fir band ho jata h or tumara engg b achi serive nahi deta,Frequent Disconnections,Bad Customer Support - Technician,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-fa823cab0c5a,1,"Internet fluctuations, only 15 days working in a month",Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-50341f5eb858,1,Speed is very slow,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-21a94975d67c,3,Net kbhi bhi thk nh chlta jb hume zarurat hoti hai jbhi ruk jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-d1484c528761,10,Wiom internet very best,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-17b6a5e4b976,0,“बहुत खराब कंपनी।”,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-8c00e72178fc,0,1% achcha nahin Hai,General Bad Service,,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-538066f73ef8,0,Bad sarvice,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-d7080a729d10,0,Bad service,General Bad Service,,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-e078fc2f0f77,1,Bad service,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-543a2fbe58fe,0,Bahut gatiya sarvir hai apki,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-756c305ff38d,2,"While driving, the WiFi gets disconnected from the phone and the speed is very low.",Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-6bdba5c20553,0,Internet aapka Sahi nahin chalta hai,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-9636dd1451a0,0,Kaam thik s nhi krta aap ka net or aap ka staff bhi kaam nhi krta,General Bad Service,Bad Customer Support - Call Centre,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-9d0eac238c9b,1,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-5d1b8ff436a8,0,Net problem,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-dc520a6feea5,5,Network problem hoti rehti hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-38924427c664,5,Server problem ho rhi h,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-cd2372782249,0,Service,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-06fa3c5d60f5,0,Service not good,General Bad Service,,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01
-d6d41e789846,0,Very bad internet,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-7243d1dc8155,0,Your plan for 28 days and services,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-2210bfbef66a,2,10 din se recharge kar rkha hai or fir bhi nhi cla net,"RDNI (Recharge Done, No Internet)",,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-888eb9b2ff16,10,Aap ka net bilkul bhi nahi chltha hai is mare,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-c0f3eeabe745,10,Achha calta hai wiom WIFi,General Good Service,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-9fa2ab02d3ef,10,Best internet service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-bce86827e295,10,Good service,General Good Service,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-9c213a201897,10,Good service and fast internet,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-9cbe5e43fed6,0,Wrost wifi network no service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-cd1ec083c910,10,Net sahi hai,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-c5e84ce23143,10,Super 👍🏼,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-e069ec55de1c,8,Sometimes the internet speed is slow,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-3ffab4890800,7,Speed,Good Speed,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01
-6011e9d4d94f,0,Ham apna wiom ka Wi-Fi lagwaye Hain Ham agale mahine recharge kiye the pura Mahina net nahin Chala bahut pareshan Ho Gaye Hain Ham jab phone karte Hain Koi uthata bhi nahin Hai,Internet Down,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1787099c36bf,10,"Ye score dene ki yeh wajah hai ki yeh kabhi bhi jaldi se band nahi hota, tab bhi lekin isme red light bahut jaldi aa jaati hai.",General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-854e8f6aaec9,0,Mera wifi kharab hu rha ha abhi tak koy response nhi a rha 1 wik se problem hu rhi ha,Internet Down,No/ Late Complaint Resolution,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-53d5b9f60447,0,Kharab service,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-9f994b49a13b,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-d67620127a24,0,"Sabse badi wajah yeh hai ki aap mere aadhar card pe kisi aur ke yahan Wi-Fi connection chala rahe hain.
+ Work karte time",Slow Speed,Frequent Disconnections,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9534757425,10,"Wiom ðŸ‘Œ 
+ Wiom ko mare pass ek sal hone wale ha bhut hi acha wifi ha",General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9211652875,10,Network problem hai selow Speed ho jati hai daily,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8700740351,10,Par is m net slow chal raha hai,Slow Speed,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+8076130543,0,Service slow h,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9540196433,10,Slow chal rha h wi fi,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8860906171,0,Slow internet speed and bad customer service Internet speed fluctuate all day.,Slow Speed,Bad Customer Support - Call Centre,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8595422317,1,Slow net,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9818702397,1,Slowed speed,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8809009054,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9873241292,0,Net slow hai,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8810579091,10,Maine apne brother ke lagwaya hai,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8595838910,1,"On of the worst and shoddy service 
+ Kabhi bi network chale jate hain office work kar rahe hain network range chali jati hain",Range Issue,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8979662233,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9193063392,0,Kyui net ki speed bahut selow aa rahi hai,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9958360525,0,Internet Sahi nahin chal raha hai bahut slow chalta hai,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8929635145,10,Speed kam hai 26 din k reached hota hai 28 din ka recharge,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9837391946,0,Speed Na aana,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9837177811,4,Speed problem,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+6398062836,0,Speed problem and daily no internet issue,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+7503745745,5,Speed problm,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8859333092,0,Speed slow,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8851153012,0,Internet not working good most of the time my all divice discounted and wifi name not show in any divice. I am complete most of the time but my problem not solved.,Frequent Disconnections,No/Late Complaint Resolution,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7529908576,10,Speed thik hai,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9310963305,0,Wifi recharge date se 2 din phele he slow kr dete h,Slow Speed,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+8130609613,0,Wiom is slow internet,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9911656556,7,Yahi ki ek to bina bataye 475 rupees per months se 550 rupees Karwa diye. And ab wifi pehle jaisa nahi chal raha. Buffering jyada hone lagi hai last 2-3 months we. Kabhi kabhi to net hi nahi chalta.,Slow Speed,Expensive,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8860937859,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9311508107,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8527234773,0,Speed slow hai,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8850993847,3,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9643526152,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8800321508,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9639200887,3,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9315857065,1,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9717990816,1,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8057711228,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8375801671,1,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8446000603,1,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9266539447,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8383019417,4,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+8882499852,10,Achi service h,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9315843737,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8920526796,5,The internet goes down at times,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8929714484,0,Network speed hai aapki,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+7838467945,4,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8448115489,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8527506179,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+8586036035,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+8597544823,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9672947991,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+9818116445,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9990119802,10,Ha ji,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9540161854,7,Net Sahi chalta hai or price sahi hai,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+8447479800,5,Other internet provider increase price wion,Affordable,,Good Price,Verma,,270,WA,Sprint 7,2026-10-01,
+9044996264,5,Kabhi-kabhi internet break ho jaata hai.,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9045847495,0,Pack ki cost poor connection,Expensive,,Offering/ Plan Dissatisfaction,Verma,,45,WA,Sprint 7,2026-10-01,
+7037136325,8,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9084824122,5,Internet issue,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9120482714,2,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9315036390,0,Net speed kab Ana bar bar disconnect hona application bohot ruk ruk kar chalti hai,Frequent Disconnections,Bad Application,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9136493888,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9921501206,0,Aapki service bilkul acche nahin Hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8104592659,0,Bad sarvice,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9871857192,5,Bar bar internet cut hona,General Bad Service,Frequent Disconnections,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9137307889,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+9818328310,1,Bht halka chalta h wiom ka net ab bht zada dikkat ati h me bht bht pareshan hogaya hu is bar me wiom ko hata kar airtel ka wifi lagwaoga,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7860588048,0,Sometimes connections are lost in between and they offer package for 28 days only,28-Day Plan Issue,,Offering/ Plan Dissatisfaction,Verma,,270,WA,Sprint 7,2026-10-01,
+8999120277,0,Sala diya tha wo log ne bandh kiya..our abhi mai bhi is month mai bandh karne wala hu,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7300926209,6,Sarvice acchi nhi hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9625293738,1,Singnal loss parmanent wire crack,General Bad Service,,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01,
+7983572675,7,Ek accha vikalp hai.,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9205353790,4,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+8744810359,10,Good,General Good Service,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+8864807595,10,Hamara internet bahut accha hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8800607506,10,I am using now,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9625437629,10,Mast calta hai wiom net,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7500520601,8,Mujhe sahi laga,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7210820408,10,Network Suvidha bahut best hai aur customer care service bhi,Good customer Support - call centre,,Good Cx Support,Verma,,270,WA,Sprint 7,2026-10-01,
+7900549507,10,Fast sarvice,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8448166025,10,Speed,Good Speed,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+7303831461,2,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+7678989811,1,WiFi reange issue,Range Issue,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8750528131,10,Chef and bast,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9871201416,4,Good service and best speed and nature,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8799754552,0,Wifi ache se kaam nahi karta,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9811340320,2,Slowed network,Slow Speed,,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+8851095974,10,Badiya network,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9891981269,0,Speed ni hai bilkul bhi bhot slow chalta hai m downloads m bhot preshn hota hu you tube par video bhi ruk ruk Kar chalti hai or 100mbps ka recharge hai iss liye,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9899437200,5,Hamara net nhi chal network bhut slow a rha h kabhi kabhi bilkul gayab ho jta h,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9594833715,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9278304558,10,Good service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8920150434,3,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9013926480,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9289261591,0,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+9599803014,5,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9654977481,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8826417983,0,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+9310209278,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9310435996,0,Seva Sahi nahin Hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9473022664,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9695295234,0,Kiu ki kabhi bhi wifi chalna Band ho jata h achanak se agar kuch work karte raho,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9318383944,1,Wiom company ko mai kahna chahunga ki aapki sewa kaafi acchi hai mai khush hu aapki sewa se but ek cheez aapko improve krna chaahiyai aapka wifi continuesly chalte huwai ruk Jaata hai isko aap improve kariyai please I request to wiom team,Frequent Disconnections,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9643187423,10,Acchi service sab kuchh thik hai,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9354243319,10,Performing bast,General Good Service,,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+9315726804,4,Mere network nhi aa rhe 15dino se,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9354599159,2,Bahut rukh rukh ke chalta hai,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8800618812,0,Signal problem.,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8755680077,0,Very bad service,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+8368165510,6,Wifi sab thik h bas complete par jaldi kam start nhi hota h,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8882315165,0,3 mobile jodne ke bad speed bahot km ho jata hai,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9368578424,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9211686378,5,Good sarvice,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8860258849,5,Thik he,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9529377620,10,Good wifi connection and service,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+7248845329,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+7268826251,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+7428124887,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+7481894011,8,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+7503556081,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8447599059,3,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8588016570,5,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8800155162,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9311652960,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9315936658,1,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9650594591,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9793485074,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9971995634,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8169320766,2,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9560323203,0,Apka wifi bhut slow chlta h Or complain resolve hone me 48 se 72 ghnte ka time lgta h jb apka wifi band hota h to bsss fr to wait krte rho chlta hi nhi h,Slow Speed,No/Late Complaint Resolution,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+9310662851,0,Bhut slow chalta hai wiom ka wifi kabhi kabar ata bhi nahi hai chala jata hai aa jata hai,Slow Speed,Frequent Disconnections,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8376029439,0,Internet Speed is slow,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9350001004,10,Good internet kam recharge plan pura Ghar ke liya accha internet .,Affordable,,Good Price,Verma,,45,CT,Sprint 7,2026-10-01,
+7982727725,1,Net work sahi nahi hai aur mehenga bhi hai.,Expensive,,Offering/ Plan Dissatisfaction,Verma,,270,WA,Sprint 7,2026-10-01,
+8076623755,6,Sometimes connection stops and run after few minutes and it's frequent. price should be less or speed should bee high.,Slow Speed,Frequent Disconnections,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8700910115,2,Hafte mey e din band,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8700807078,1,Internet bhot bekar h chalta h fir band ho jata h or tumara engg b achi serive nahi deta,Frequent Disconnections,Bad Customer Support - Technician,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7507988465,1,"Internet fluctuations, only 15 days working in a month",Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+7428411503,1,Speed is very slow,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9717896911,3,Net kbhi bhi thk nh chlta jb hume zarurat hoti hai jbhi ruk jata hai,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9625301654,10,Wiom internet very best,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8076951986,0,“बहुत खराब कंपनी।”,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9369813815,0,1% achcha nahin Hai,General Bad Service,,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+9971079818,0,Bad sarvice,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+8433478272,0,Bad service,General Bad Service,,Bad Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+9136248898,1,Bad service,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+8375948296,0,Bahut gatiya sarvir hai apki,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+9643056768,2,"While driving, the WiFi gets disconnected from the phone and the speed is very low.",Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9873140120,0,Internet aapka Sahi nahin chalta hai,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7451999744,0,Kaam thik s nhi krta aap ka net or aap ka staff bhi kaam nhi krta,General Bad Service,Bad Customer Support - Call Centre,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8130745662,1,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9999044872,0,Net problem,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9927865981,5,Network problem hoti rehti hai,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8506034104,5,Server problem ho rhi h,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9897625606,0,Service,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8882151435,0,Service not good,General Bad Service,,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01,
+9315534215,0,Very bad internet,General Bad Service,,Bad Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+7982532379,0,Your plan for 28 days and services,General Bad Service,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8077383926,2,10 din se recharge kar rkha hai or fir bhi nhi cla net,"RDNI (Recharge Done, No Internet)",,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9310337637,10,Aap ka net bilkul bhi nahi chltha hai is mare,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7355625518,10,Achha calta hai wiom WIFi,General Good Service,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+9599542594,10,Best internet service,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9867838231,10,Good service,General Good Service,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+8595248174,10,Good service and fast internet,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8368652211,0,Wrost wifi network no service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9891776679,10,Net sahi hai,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9773715284,10,Super ðŸ‘_x008d_ðŸ_x008f_¼,General Good Service,,Good Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8392831700,8,Sometimes the internet speed is slow,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9654285231,7,Speed,Good Speed,,Good Internet Experience,Verma,,45,CT,Sprint 7,2026-10-01,
+9137496648,0,Ham apna wiom ka Wi-Fi lagwaye Hain Ham agale mahine recharge kiye the pura Mahina net nahin Chala bahut pareshan Ho Gaye Hain Ham jab phone karte Hain Koi uthata bhi nahin Hai,Internet Down,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9654851740,10,"Ye score dene ki yeh wajah hai ki yeh kabhi bhi jaldi se band nahi hota, tab bhi lekin isme red light bahut jaldi aa jaati hai.",General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7210969646,0,Mera wifi kharab hu rha ha abhi tak koy response nhi a rha 1 wik se problem hu rhi ha,Internet Down,No/Late Complaint Resolution,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+7060038272,0,Kharab service,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9667142100,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8899977969,0,"Sabse badi wajah yeh hai ki aap mere aadhar card pe kisi aur ke yahan Wi-Fi connection chala rahe hain.
  
  Kripya account band karvaane ki kripya karein.
  Anya tha mujhe iske khilaaf consumer court jaana padega.
  
- Dhanyavaad.",,,,Verma,,270,WA,Sprint 7,2026-10-01
-60804dd07caf,5,Theek-thaak hai,,,,Verma,,135,WA,Sprint 7,2026-10-01
-d755a1901de7,0,"“सर्विस सही नहीं है, प्रॉब्लम सॉल्व नहीं होती। दो-तीन महीने हो जाते हैं, टेक्निकल टीम वाला आता ही नहीं।”",No/ Late Complaint Resolution,General Bad Service,Bad Cx Support,Verma,,270,CT,Sprint 7,2026-10-01
-c934fd8af882,0,Bilkul ghatiya service bht he ghatiya network 15 din phle complaint ki roz koi na koi call karta hai par aaj tak Aya koi nhi isme Jada ghatiya service to kisi ki nhi dekhi it's just a scam,No/ Late Complaint Resolution,,Bad Cx Support,Verma,,45,WA,Sprint 7,2026-10-01
-1aa527b20f63,0,Meri sikayat par bhi koi nhi aaya hai is liye mene ye kahan hai,No/ Late Complaint Resolution,,Bad Cx Support,Verma,,45,CT,Sprint 7,2026-10-01
-4ce45b3bc5c8,0,Network range kharab hai,Range Issue,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-8422df26b518,1,Acchi ki vajah se kiya,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-1509faa7f3c3,0,"AAP service bahut, Jayada kharab hai AAP. Log pareshaan karte h* sabko ek bar, complaint, karne ke baad bhi paanch, paanch, din Tak aapka net, nahin chalta isliye aapki service, sabse, Jayada kharab, sabse, Jayada kharab. Ise kahte Hain Toh isliye main Toh galti se bhi. Jis rishtedaar yarishtedaar ko aapka. Refer nahin karunga or Mavi apna. What are you Maine apna, recharge, Karaya tha Vichar karane ke baad bhi aath, din, Tak Mera net nahin Chala? Uske baad, mere kaise, refund kar diye. Kya aapka net thik nahin hoga isliye unhone mere paise refund , karbi ab wo mera setup box , clinically bolne","RDNI (Recharge Done, No Internet)",No/ Late Complaint Resolution,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-ffdca73778fe,0,Service bht burii h kbhi bhi network nhi aate h aur recharge krne k baad ek dum recharge nhi aata h,"RDNI (Recharge Done, No Internet)",,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-cbfd69985e07,0,Internet bahut slow hai mera pela vala ka hi thik tha to aapp solution krenge to aage continue kr skta hu baki to muskil lg rha hai,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-4d406329adf9,0,Internet very slow,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-36e86399cec6,5,It's very slow and not reachable,Slow Speed,Range Issue,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-8deacd22baf9,2,Range bahut kam hai aur speed bhi kam hai.,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-cd846336b312,5,Kyuki mere connection do se teen baar band ho gya tha aapka customer care usko thik karne me bahot time lagata hai,No/ Late Complaint Resolution,Bad Customer Support - Call Centre,Bad Cx Support,Verma,,135,WA,Sprint 7,2026-10-01
-823e0b4fdf6b,0,Speed achi nhi hai,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-8f3509023fd0,4,Speed and connectivity and downloading not godd,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-302ee6a4b129,6,Speed is not as expected,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-9ee388d2fb5f,0,Worst service ever received wifi network is too poor I’m not satisfy with your wifi speed and connection,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-65bc7b13a999,0,Daily network issue,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-3c147c3677df,0,Speed nahi aati bilkul bhi,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-0f486b2eadd3,0,Wiom ki sercice bohot buri he isliye me kise ko salah nhi dunga lagwane ko or iska network bhi bohot bekar he or ye shi bhi karni nhi aate or isme bohot sare technical issue aate he isliye ham ye is hi mahine hatwa denge apki service bohot bekar he thankyou or agar inhe call kro theek karne ka liye toh 1 hafte baad aate he or call pe kehte rehte he bs bhej rhe he or ye 600 me 100 mbps deta nhi he inhone basss likhrakha he bhai jis ke bhi ghar par inka wifi he please hatwalo or koi dusra lagwalo ok,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-db039f8ece3d,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-742495262e59,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-34e1965a5ec7,5,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-e1bd473e95d9,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-c8abfa4c3379,5,Acha nhi chlta net slow Aata h,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-7906fce74d32,0,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-f33049b91481,4,Next month start hote hi wiom bill bharne ke liye bolta he isliye pura month bhi nhi hota tab bhi,28-Day Plan Issue,,Offering/ Plan Dissatisfaction,Verma,,270,WA,Sprint 7,2026-10-01
-f7086cb8e273,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-941cfdd1bd88,8,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-c3075c870e3f,5,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-e3b4134b9a4c,8,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-c6b4d15762c6,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-b9bc319a92e1,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-fe1333332092,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-31fbba183a48,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-71f15d169c91,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-54706454139a,9,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-e606a5f6635f,0,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-459b621b53ed,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-bc4d4bd5f41e,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-d7f1436a55c2,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-08070b6c94d5,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-75029ce724c1,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-b91b7aac1d5c,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-56fc3d132a73,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-f8f96c2b4938,7,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-487900f9000a,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-7a55565b59c7,9,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-a53c4b80b803,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-a0d5a16a2200,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-53984208773d,9,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-756045adc1ca,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-f4e108a2ffaa,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-2728d8bc26f0,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-fa71fcaaaedc,1,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-00fbe8aab951,9,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-9761f42224aa,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-5a68cc291153,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-91cb5bcfebd4,3,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-f771031dc1f2,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-880f86656108,2,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-fc247b25bb72,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-6dd898fac08e,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-80d2cf906e10,5,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-5cbe000de2dc,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-b22997538159,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-8f500997d563,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-989c2cce6075,1,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-ae1fa6432f5f,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-6db989c4c8eb,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-d20036237984,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-5b4a9edd8b07,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-e13e1201d18a,3,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-d217beca2e26,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-ed3a757ff5e5,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-94e36d18fe63,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-b1d95a8b4be9,8,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-f95387c1cb61,3,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-084d6f3b824f,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-0b031117ce0a,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-c2bfda0cd527,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-1528762d2844,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-5b25586e36ba,4,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-acc37dd91dc1,5,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-c0f8f1df1832,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-3a5262bb03af,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-bb391fe8b7b4,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-158c7f86234c,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-1bcfe1cf575d,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-fa1d5d2975ec,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-20629f9f1fcc,9,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-7774be349ad7,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-894a1a2b3a50,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-33901d997b59,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-5523f97d5885,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-da81556ca1b0,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-d8b88fe8b0ea,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-45cda00f7c82,5,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-dffb51713322,6,Net connection is down 1/2 in a month always,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01
-a30c538574e4,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-2056f7b6251d,5,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-e24147f758a7,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-d555bd3e21b8,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-d13e7fdd69d2,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-58507801b2b6,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-a8b1d03b1824,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-b7e5a2d413ed,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-7525ce3a46e6,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-decf8eb203f5,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-a90a4a85d2a2,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-eb93a6d6e6dd,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-6631ac819163,7,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-f9d2ae2ba132,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-822ec6716704,1,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-567e18dc9a4f,6,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-661ac5aaebce,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-31735d9d07e9,8,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-52639383ad2f,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-5ea04ded2116,3,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-5fedf4071deb,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-a314b618bd14,5,Pehele se accha nhi chal rha hai net kirpiya is aacha kare,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-01c2335bafb5,8,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-2d88573063a3,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-4872808e46a9,9,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-e882854aca63,2,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-6ef43b0ab9ee,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-3048b9700944,9,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-ad9ce20eee26,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-03001ec3c422,7,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-ed1d2edd5d84,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-07c999f2b652,3,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-7e5d266cf09d,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-489745782d54,2,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-1ffc21b29abe,1,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-a149eefb07db,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-ee60e6ad087b,8,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-3b25431bd7eb,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-880137baf9e9,1,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-467a03129ad4,8,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-426b4518d0a0,3,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-393a0dea1f59,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-dbe7dff47879,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-3174b13e7aad,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-576ced6964d3,7,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-07fbb908e1a6,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-81e600dfe75c,5,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-857349821f0c,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-2e2e2765cff5,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-a9450c74d594,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-d3ae52b57429,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-7fb317360921,3,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-de7a1a891188,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-b8f11fdede69,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-b443586de4cb,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-f2611396668f,8,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-2b06e6b75037,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-be05e479621d,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-8cb36d2588fe,8,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-5fbe5de22e84,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-a33d991e11b3,8,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-d671c6a608b3,5,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-0bc086308afd,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-eb6c130c480b,6,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-eb5b18cd1b35,2,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-7cdb2266492d,8,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-78861e88c98a,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-224b578c21ce,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-8affc7c88d9a,3,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-ed02b062bc56,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-c841b30cb20a,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-aa7b5b6685bc,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-f2cb2a696e7b,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-a480be4bc546,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-12411b9ecf21,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-e65dd40bdffc,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-3b5c0349d10a,7,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-95b7c176f413,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-5f3959cfacbf,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-2d89ba2ca88f,2,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-5a064c95f623,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-e0883dc198bb,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-dcddfb637b4f,7,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-e36f4e93fceb,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-4d726f483a20,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-93f8f67de164,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-8e650505f4c6,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-04e67d8fca3b,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-c331156119c0,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-1b9df79e3900,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-f7f30a1c7070,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-e6371eb908d4,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-7e5b9bf021b7,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-d67029ec24fc,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-a0dcca499ec2,0,Slow network buffering karta hai,Slow Speed,,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01
-4318ae314b35,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-6cbf07e04898,7,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-36be7ad66de4,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-bbfffb3c578b,5,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-5883794e13c8,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-a1824e5211a2,0,Not good service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-a97e4d93edc8,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-a1b2b80a829c,5,Abhi kuch din pehle hi lagwaya hai shuru me sabhi company achchi sevice deti hai baab me bekar ho jaati hai,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-f5f165487e8a,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-40450241c98e,4,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-61cd70c88bd0,2,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-b9645b8cc145,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-dcda61985747,10,Internet speed is very good,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-32d836417401,10,Wi-Fi ki service acchi hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
-04bb5bba1863,8,Kabhi kabhi,,,,Verma,,135,WA,Sprint 7,2026-10-01
-fae933218e46,10,Good internet,General Good Service,,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01
-71465c64af1e,0,Net nhi chalta,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01
-76b46bba6be1,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-e6f3908b3c0b,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-8a7effbf9d3e,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-937bb6753fd5,9,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-481aaa06ff3a,4,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-14180b1909d2,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-84ec87c91b98,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-3dd8d3a13e42,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-e55e5055dc48,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01
-f5548c490cef,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-06c44ce2a7b0,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-acd13c517319,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-e0d1cb6d094a,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-0894c68bb7dd,0,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-0b80169ff093,7,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-5c606f268451,1,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-ccc34f581cfa,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-d3cb4473c6b1,9,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-288b40aa5c09,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-909528e0aa4d,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-5863f805a24b,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-0446f9536aaa,2,,,,,Verma,,135,WA,Sprint 7,2026-10-01
-886ea0536258,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-77dac4c27dd0,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-34f4842e615f,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-f517d896a168,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-795aaedad74d,7,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-17c644989c77,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-452883312518,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-f31c03537db4,4,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-ec9903791e32,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-9c7eadc79d17,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-5b014dda8427,0,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-6f39f2ffc803,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-15cd400634d7,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-e7f461a96d04,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-19c4a791f19d,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-b26b38f3af7f,5,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-8be45bb9fee6,9,,,,,Verma,,45,WA,Sprint 7,2026-10-01
-7293e8cfe44d,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01
-2a19249fc0c0,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01
-4aaf446ab314,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-17ecb62431bd,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-79a686c1c510,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01
-739f37a4d5bd,1,Sbse pehle ye 3din pehle finish kr dete h uske bad bahut slow chalta h uske bad kabhi bhi network chle jate h koi na lagwaye mai yahi kahunga,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01
+ Dhanyavaad.",,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9718821186,5,Theek-thaak hai,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9811625542,0,"“सर्विस सही नहीं है, प्रॉब्लम सॉल्व नहीं होती। दो-तीन महीने हो जाते हैं, टेक्निकल टीम वाला आता ही नहीं।”",No/Late Complaint Resolution,General Bad Service,Bad Cx Support,Verma,,270,CT,Sprint 7,2026-10-01,
+9818606531,0,Bilkul ghatiya service bht he ghatiya network 15 din phle complaint ki roz koi na koi call karta hai par aaj tak Aya koi nhi isme Jada ghatiya service to kisi ki nhi dekhi it's just a scam,No/Late Complaint Resolution,,Bad Cx Support,Verma,,45,WA,Sprint 7,2026-10-01,
+8171873185,0,Meri sikayat par bhi koi nhi aaya hai is liye mene ye kahan hai,No/Late Complaint Resolution,,Bad Cx Support,Verma,,45,CT,Sprint 7,2026-10-01,
+9811808795,0,Network range kharab hai,Range Issue,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9711038428,1,Acchi ki vajah se kiya,General Good Service,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9310864278,0,"AAP service bahut, Jayada kharab hai AAP. Log pareshaan karte h* sabko ek bar, complaint, karne ke baad bhi paanch, paanch, din Tak aapka net, nahin chalta isliye aapki service, sabse, Jayada kharab, sabse, Jayada kharab. Ise kahte Hain Toh isliye main Toh galti se bhi. Jis rishtedaar yarishtedaar ko aapka. Refer nahin karunga or Mavi apna. What are you Maine apna, recharge, Karaya tha Vichar karane ke baad bhi aath, din, Tak Mera net nahin Chala? Uske baad, mere kaise, refund kar diye. Kya aapka net thik nahin hoga isliye unhone mere paise refund , karbi ab wo mera setup box , clinically bolne","RDNI (Recharge Done, No Internet)",No/Late Complaint Resolution,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9548312532,0,Service bht burii h kbhi bhi network nhi aate h aur recharge krne k baad ek dum recharge nhi aata h,"RDNI (Recharge Done, No Internet)",,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9113880298,0,Internet bahut slow hai mera pela vala ka hi thik tha to aapp solution krenge to aage continue kr skta hu baki to muskil lg rha hai,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8586853264,0,Internet very slow,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8810384682,5,It's very slow and not reachable,Slow Speed,Range Issue,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+7310537647,2,Range bahut kam hai aur speed bhi kam hai.,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9716123045,5,Kyuki mere connection do se teen baar band ho gya tha aapka customer care usko thik karne me bahot time lagata hai,No/Late Complaint Resolution,Bad Customer Support - Call Centre,Bad Cx Support,Verma,,135,WA,Sprint 7,2026-10-01,
+8755596786,0,Speed achi nhi hai,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9053269411,4,Speed and connectivity and downloading not godd,Slow Speed,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9582857544,6,Speed is not as expected,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9717099585,0,Worst service ever received wifi network is too poor Iâ€™m not satisfy with your wifi speed and connection,Slow Speed,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9717253381,0,Daily network issue,Frequent Disconnections,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8868899775,0,Speed nahi aati bilkul bhi,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8595614467,0,Wiom ki sercice bohot buri he isliye me kise ko salah nhi dunga lagwane ko or iska network bhi bohot bekar he or ye shi bhi karni nhi aate or isme bohot sare technical issue aate he isliye ham ye is hi mahine hatwa denge apki service bohot bekar he thankyou or agar inhe call kro theek karne ka liye toh 1 hafte baad aate he or call pe kehte rehte he bs bhej rhe he or ye 600 me 100 mbps deta nhi he inhone basss likhrakha he bhai jis ke bhi ghar par inka wifi he please hatwalo or koi dusra lagwalo ok,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9891741982,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9897605874,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9718460254,5,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+7060170749,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8920393827,5,Acha nhi chlta net slow Aata h,Slow Speed,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+9128207351,0,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+9810848066,4,Next month start hote hi wiom bill bharne ke liye bolta he isliye pura month bhi nhi hota tab bhi,28-Day Plan Issue,,Offering/ Plan Dissatisfaction,Verma,,270,WA,Sprint 7,2026-10-01,
+9811855183,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9818504235,8,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+6206663894,5,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+6387936378,8,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+6392791589,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+7011034240,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+7011559641,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+7042518558,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+7065328268,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+7249955854,9,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+7289960090,0,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+7291046824,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+7428750229,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+7428890325,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+7533002917,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+7678140404,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+7678298136,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+7683052079,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+7701984897,7,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+7738505123,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+7739398874,9,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+7765030071,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+7827580474,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+7834885962,9,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+7836996016,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+7838085146,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+7838425634,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+7983303332,1,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8076912524,9,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8081256576,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8090962421,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8115620735,3,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8130956288,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8171633753,2,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8178168605,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8178255811,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8178477844,5,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8178654635,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8285949467,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8285978128,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8286770740,1,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8287125198,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+8287213059,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8287325327,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+8368256881,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8368994177,3,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8369934704,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8376833147,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8383885709,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8383985007,8,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+8447040078,3,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+8447103312,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+8447108738,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+8506818584,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8510927930,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8512842338,4,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8527023268,5,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+8527438430,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8527562996,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8527817435,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8588038264,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8595802687,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8657109130,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8690019054,9,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8700258051,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8700449386,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8750140651,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8750742388,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8766269013,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+8802707736,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8808233444,5,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9870066855,6,Net connection is down 1/2 in a month always,Frequent Disconnections,,Bad Internet Experience,Verma,,135,WA,Sprint 7,2026-10-01,
+8810519804,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8810675366,5,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8826234937,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8826431864,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8826594156,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8826883328,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8826904464,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8828788368,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8851074799,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8851224730,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8851451101,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+8851565100,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8863024848,7,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8882204207,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8882746756,1,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8920091672,6,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8920313117,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+8920537873,8,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8920631987,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9004327178,3,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9082632865,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9870758069,5,Pehele se accha nhi chal rha hai net kirpiya is aacha kare,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9210339757,8,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9211180531,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9211623122,9,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9211972407,2,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9250388633,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9266142457,9,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9266665560,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9268146568,7,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9289484306,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9310467889,3,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9311474780,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9315113759,2,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9315505416,1,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9318473403,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9354188941,8,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9354282247,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9354962498,1,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9457133007,8,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9458740980,3,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9521869698,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9528603077,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+9540620453,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9540902757,7,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9540936544,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9555033427,5,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9555512217,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9555737151,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+9557181279,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9582379608,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9582605147,3,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9582914353,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9625956235,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9627799192,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9634055066,8,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9643717897,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9650669450,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9711490323,8,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9716533253,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9716923714,8,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9717181339,5,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9717465753,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9717901055,6,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9718088551,2,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+9718425209,8,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9759964113,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9773638515,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9804201314,3,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9810641524,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9811405256,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9817156554,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9818731372,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9818847894,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9818856343,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+9873199821,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9873396136,7,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+9873852739,0,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9873893149,0,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9873989393,2,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9891247331,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9891517770,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9897864736,7,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9910357516,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9910561991,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9910702686,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9910732003,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9910853037,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9911272379,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9927455554,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9968361003,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+9987259042,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9990357236,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9990434158,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9582145951,0,Slow network buffering karta hai,Slow Speed,,Bad Internet Experience,Verma,,135,CT,Sprint 7,2026-10-01,
+9990695136,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+9997161489,7,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9999102017,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9999295954,5,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9999991353,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9873192036,0,Not good service,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+8108727933,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9873697116,5,Abhi kuch din pehle hi lagwaya hai shuru me sabhi company achchi sevice deti hai baab me bekar ho jaati hai,General Bad Service,,Bad Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+8287963358,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9310211142,4,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9728723122,2,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9810330095,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9911297560,10,Internet speed is very good,Good Speed,,Good Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9911774415,10,Wi-Fi ki service acchi hai,General Good Service,,Good Internet Experience,Verma,,45,WA,Sprint 7,2026-10-01,
+9927788788,8,Kabhi kabhi,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+9968689922,10,Good internet,General Good Service,,Good Internet Experience,Verma,,270,CT,Sprint 7,2026-10-01,
+9990239092,0,Net nhi chalta,General Bad Service,,Bad Internet Experience,Verma,,270,WA,Sprint 7,2026-10-01,
+9990717852,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+6299085133,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+7011241760,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+7017211101,9,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+7251064297,4,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+7457858657,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+7703933496,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+7715010076,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+7827939823,10,,,,,Verma,,270,WA,Sprint 7,2026-10-01,
+7836070694,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+7976519739,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+7990799596,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8010387298,0,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+8076959010,0,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+8149095993,7,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8287023732,1,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+8355973432,10,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8368528925,9,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+8368827442,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+8375955316,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+8527099907,10,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+8630019975,2,,,,,Verma,,135,WA,Sprint 7,2026-10-01,
+8630247349,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8826247549,0,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+8860051553,0,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8860095807,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+8882906216,7,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9012930581,10,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9034559559,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9142733853,4,,,,,Verma,,270,CT,Sprint 7,2026-10-01,
+9540473141,10,,,,,Verma,,135,CT,Sprint 7,2026-10-01,
+9560188951,10,,,,,Verma,,45,CT,Sprint 7,2026-10-01,
+9650582855,0,,,,,Verma,,45,WA,Sprint 7,2026-10-01,
+9718466540,0,,,,,Verma,,45,CT,Sprint 7,20,

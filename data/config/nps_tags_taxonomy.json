@@ -1,0 +1,182 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-04-15",
+  "source": "NPS Verma Parivar Google Sheet - Tags tab",
+  "description": "Canonical NPS reason tags used by call center agents for manual tagging of survey responses. Single source of truth for all NPS reason validation and normalization.",
+  "categories": {
+    "Bad Internet Experience": {
+      "nps_group": "Detractor",
+      "tags": {
+        "General Bad Service": {
+          "trigger": "Mentions that service/company is bad, not working, or poor — general negative remarks. Response just says service and is a detractor. No specific issue mentioned.",
+          "examples_hi": ["Bahut kharab company hai.", "Service theek se kaam nahi karta.", "Bekar network."]
+        },
+        "Slow Speed": {
+          "trigger": "Mentions of slow, speed kam, speed nahi aati, selow, low speed, buffering.",
+          "examples_hi": ["Speed bahut kam hai.", "Internet slow hai."]
+        },
+        "Frequent Disconnections": {
+          "trigger": "Mentions of bar-bar band hota hai, kabhi-kabhi rukta hai, disconnects, net chala jaata hai, unstable.",
+          "examples_hi": ["Kabhi bhi net band ho jaata hai.", "Har dusare din ruk jaata hai."]
+        }
+      }
+    },
+    "Bad Cx Support": {
+      "nps_group": "Detractor",
+      "tags": {
+        "No/Late Complaint Resolution": {
+          "trigger": "Mentions of problems not resolved, no response after complaint, or late fixing.",
+          "examples_hi": ["Complaint ke baad koi jawab nahi.", "Problem solve nahi hoti.", "Sunvai nahi hoti"]
+        },
+        "Bad Customer Support - Call Centre": {
+          "trigger": "Mentions of customer care, or staff not helping / not responding, customer care call not going through.",
+          "examples_hi": ["Customer care call nahi uthata."]
+        },
+        "Bad Customer Support - Technician": {
+          "trigger": "Mentions of technician, or staff not helping / doing bad work / not coming on time / anything related to technician's behaviours, work ethic.",
+          "examples_hi": []
+        }
+      }
+    },
+    "Offering/ Plan Dissatisfaction": {
+      "nps_group": "Detractor",
+      "tags": {
+        "Expensive": {
+          "trigger": "Mentions of mehenga, costly, price high, bahut paisa lagta hai.",
+          "examples_hi": ["Pack costly hai.", "Mehenga wifi.", "paise thode kam karo"]
+        },
+        "28-Day Plan Issue": {
+          "trigger": "Mentions of 28-day plan, monthly expectation, or validity duration.",
+          "examples_hi": ["28 din ka plan sahi nahi."]
+        },
+        "Shifting not Feasible": {
+          "trigger": "Mentions of having to remove wiom connection due to shifting of connection issues.",
+          "examples_hi": []
+        },
+        "OTT Request, No OTT complaint": {
+          "trigger": "Mentions of people complaining about no TV, add-on OTT services or requesting it.",
+          "examples_hi": []
+        }
+      }
+    },
+    "Application/ Tech": {
+      "nps_group": "Detractor",
+      "tags": {
+        "Bad Application": {
+          "trigger": "Mentions of app problems — not opening, recharge option missing, crashing, hanging.",
+          "examples_hi": ["App khul nahi raha.", "Recharge option nahi milta."]
+        }
+      }
+    },
+    "Bad Service": {
+      "nps_group": "Detractor",
+      "tags": {
+        "RDNI (Recharge Done, No Internet)": {
+          "trigger": "Mentions of having done recharge/payment but internet not working afterwards.",
+          "examples_hi": ["Recharge ke baad net nahi chala.", "Payment ho gaya par net nahi."]
+        },
+        "Range Issue": {
+          "trigger": "Mentions of weak range, limited range.",
+          "examples_hi": ["Range bahut kam hai.", "Doosre kamre tak range nahi aati.", "Router ke paas hi chalta hai bas"]
+        },
+        "Internet Down": {
+          "trigger": "Mentions of server down, server problem, or long service outage.",
+          "examples_hi": ["Server down rehta hai.", "Net band without notice.", "do din band tha"]
+        }
+      }
+    },
+    "NA": {
+      "nps_group": "Any",
+      "tags": {
+        "N/A": {
+          "trigger": "Only for irrelevant or non-Wiom comments (greetings, short fillers, self-reference, blanks).",
+          "examples_hi": ["Hi", "Ok", "Yes", "Nothing", "Self", "Hii"]
+        }
+      }
+    },
+    "Good Price": {
+      "nps_group": "Promoter",
+      "tags": {
+        "Affordable": {
+          "trigger": "Mentions of sasta, budget, cheap, or appreciation of low price.",
+          "examples_hi": ["Sasta aur accha wifi."]
+        }
+      }
+    },
+    "Good Internet Experience": {
+      "nps_group": "Promoter",
+      "tags": {
+        "General Good Service": {
+          "trigger": "Generic positive comments about service — acchi service, badiya service, best service, not specifying speed or range. Response just says service and is a promoter. Generic positive comments with accha, badiya, best, mast, good, etc. Mentions of brand colour and aesthetics.",
+          "examples_hi": ["Badiya service.", "Acha lagta hai.", "Acha"]
+        },
+        "Good Speed": {
+          "trigger": "Explicit positive mentions of speed achhi, fast, high speed, or best speed.",
+          "examples_hi": ["Speed bahut acchi hai.", "Net fast hai."]
+        },
+        "Quick Installation": {
+          "trigger": "Mentions of quick or easy installation.",
+          "examples_hi": ["Jaldi installation ho gaya."]
+        }
+      }
+    },
+    "Good Cx Support": {
+      "nps_group": "Promoter",
+      "tags": {
+        "Good customer Support - call centre": {
+          "trigger": "Positive mentions of customer care or call center support.",
+          "examples_hi": []
+        },
+        "Good Partner/ Techinician Support": {
+          "trigger": "Positive mentions of partner or technician support.",
+          "examples_hi": []
+        },
+        "Fast Complaint Resolution": {
+          "trigger": "Mentions of quick complaint resolution or fast problem fixing.",
+          "examples_hi": []
+        }
+      }
+    }
+  },
+  "normalization_map": {
+    "General Bad Servie": "General Bad Service",
+    "Frequent Disconnection": "Frequent Disconnections",
+    "Frequent Disconnetions": "Frequent Disconnections",
+    "No/ Late Complaint Resolution": "No/Late Complaint Resolution",
+    "Bad Customer Support - Call Center": "Bad Customer Support - Call Centre",
+    "Good Customer Support - Call Centre": "Good customer Support - call centre",
+    "Shifting Not Feasible": "Shifting not Feasible",
+    "RDNI": "RDNI (Recharge Done, No Internet)",
+    "Bad Speed": "Slow Speed",
+    "??": "N/A",
+    "Flexibility": "Affordable",
+    "Autopay": "N/A",
+    "No iPhone App": "Bad Application",
+    "Good Application": "General Good Service",
+    "Bad Partner/ Techinician Support": "Bad Customer Support - Technician"
+  },
+  "reason_to_theme": {
+    "Slow Speed": "speed_quality",
+    "Good Speed": "speed_quality",
+    "Frequent Disconnections": "reliability",
+    "Internet Down": "reliability",
+    "RDNI (Recharge Done, No Internet)": "reliability",
+    "Affordable": "pricing_value",
+    "Expensive": "pricing_value",
+    "28-Day Plan Issue": "pricing_value",
+    "No/Late Complaint Resolution": "customer_support",
+    "Fast Complaint Resolution": "customer_support",
+    "Bad Customer Support - Call Centre": "customer_support",
+    "Good customer Support - call centre": "customer_support",
+    "Bad Customer Support - Technician": "technician_service",
+    "Good Partner/ Techinician Support": "technician_service",
+    "Range Issue": "network_coverage",
+    "General Good Service": "general_satisfaction",
+    "General Bad Service": "general_satisfaction",
+    "Bad Application": "content_usage",
+    "OTT Request, No OTT complaint": "content_usage",
+    "Shifting not Feasible": "installation",
+    "Quick Installation": "installation",
+    "N/A": "unclassified"
+  }
+}

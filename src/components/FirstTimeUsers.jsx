@@ -230,7 +230,7 @@ export default function FirstTimeUsers({ records, sprints }) {
           <div className="chart-container">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={trendData} margin={{ top: 10, right: 20, left: 0, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#eee" />
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
                 <XAxis dataKey="label" fontSize={10} interval={0} />
                 <YAxis fontSize={11} domain={[-60, 60]} />
                 <Tooltip
@@ -331,7 +331,7 @@ export default function FirstTimeUsers({ records, sprints }) {
                 layout="vertical"
                 margin={{ top: 5, right: 30, left: 140, bottom: 5 }}
               >
-                <CartesianGrid strokeDasharray="3 3" stroke="#eee" horizontal={false} />
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" horizontal={false} />
                 <XAxis type="number" fontSize={10} tickFormatter={v => `${v}%`} />
                 <YAxis type="category" dataKey="theme" fontSize={11} width={135} />
                 <Tooltip formatter={(val, name) => [`${val}%`, name]} contentStyle={{ fontSize: 12 }} />

@@ -355,8 +355,8 @@ export default function SegmentComparison({ records, sprints, sources }) {
               </thead>
               <tbody>
                 {heatmap.rows.map((rv, ri) => (
-                  <tr key={rv} style={{ background: ri % 2 === 0 ? '#fff' : '#fafafa' }}>
-                    <td style={{ padding: '5px 10px', fontWeight: 600, fontSize: 11, color: '#333', borderRight: '1px solid #eee', position: 'sticky', left: 0, background: ri % 2 === 0 ? '#fff' : '#fafafa', zIndex: 1 }}>
+                  <tr key={rv} style={{ background: ri % 2 === 0 ? 'var(--surface)' : 'var(--bg)' }}>
+                    <td style={{ padding: '5px 10px', fontWeight: 600, fontSize: 11, color: 'var(--text)', borderRight: '1px solid var(--border)', position: 'sticky', left: 0, background: ri % 2 === 0 ? 'var(--surface)' : 'var(--bg)', zIndex: 1 }}>
                       {rv}
                     </td>
                     {heatmap.cols.map(cv => {

@@ -12,7 +12,7 @@ export const SPRINT_MONTH_MAP = {
   'Sprint 11': "Dec-1H '25", 'Sprint 12': "Dec-2H '25",
   'Sprint 13': "Jan-1H '26", 'Sprint 14': "Jan-2H '26",
   'Sprint RSP1': "Feb-1H '26", 'Sprint RSP2': "Feb-2H '26",
-  'Sprint RSP3': "Mar-1H '26", 'Sprint RSP5': "Apr-1H '26",
+  'Sprint RSP3': "Mar-1H '26", 'Sprint RSP4': "Mar-2H '26", 'Sprint RSP5': "Apr-1H '26",
 };
 
 // Short tick labels for chart x-axes (saves horizontal space)
@@ -25,7 +25,7 @@ export const SPRINT_SHORT_MAP = {
   'Sprint 11': 'Dec-1H', 'Sprint 12': 'Dec-2H',
   'Sprint 13': 'Jan-1H', 'Sprint 14': 'Jan-2H',
   'Sprint RSP1': 'Feb-1H', 'Sprint RSP2': 'Feb-2H',
-  'Sprint RSP3': 'Mar-1H', 'Sprint RSP5': 'Apr-1H',
+  'Sprint RSP3': 'Mar-1H', 'Sprint RSP4': 'Mar-2H', 'Sprint RSP5': 'Apr-1H',
 };
 
 // Sprint → month aggregation
@@ -38,7 +38,7 @@ export const SPRINT_TO_MONTH = {
   'Sprint 11': "Dec '25", 'Sprint 12': "Dec '25",
   'Sprint 13': "Jan '26", 'Sprint 14': "Jan '26",
   'Sprint RSP1': "Feb '26", 'Sprint RSP2': "Feb '26",
-  'Sprint RSP3': "Mar '26", 'Sprint RSP5': "Apr '26",
+  'Sprint RSP3': "Mar '26", 'Sprint RSP4': "Mar '26", 'Sprint RSP5': "Apr '26",
 };
 
 // Sprint → quarter aggregation
@@ -51,7 +51,7 @@ export const SPRINT_TO_QUARTER = {
   'Sprint 11': "Q2 FY26 (Oct-Dec '25)", 'Sprint 12': "Q2 FY26 (Oct-Dec '25)",
   'Sprint 13': "Q3 FY26 (Jan-Mar '26)", 'Sprint 14': "Q3 FY26 (Jan-Mar '26)",
   'Sprint RSP1': "Q3 FY26 (Jan-Mar '26)", 'Sprint RSP2': "Q3 FY26 (Jan-Mar '26)",
-  'Sprint RSP3': "Q3 FY26 (Jan-Mar '26)", 'Sprint RSP5': "Q1 FY27 (Apr '26+)",
+  'Sprint RSP3': "Q3 FY26 (Jan-Mar '26)", 'Sprint RSP4': "Q3 FY26 (Jan-Mar '26)", 'Sprint RSP5': "Q1 FY27 (Apr '26+)",
 };
 
 export const QUARTER_ORDER = [
@@ -65,6 +65,8 @@ export const MONTH_ORDER = [
 ];
 
 // Pre-coded nps_reason_primary → theme mapping
+// Source of truth: data/config/nps_tags_taxonomy.json (from Google Sheet Tags tab)
+// Normalized: all typo variants resolved in sprint CSVs, only canonical tags remain
 export const REASON_TO_THEME = {
   'Slow Speed': 'speed_quality',
   'Good Speed': 'speed_quality',
@@ -74,18 +76,20 @@ export const REASON_TO_THEME = {
   'Affordable': 'pricing_value',
   'Expensive': 'pricing_value',
   '28-Day Plan Issue': 'pricing_value',
-  'No/ Late Complaint Resolution': 'customer_support',
   'No/Late Complaint Resolution': 'customer_support',
   'Fast Complaint Resolution': 'customer_support',
   'Bad Customer Support - Call Centre': 'customer_support',
-  'Good Customer Support - Call Centre': 'customer_support',
+  'Good customer Support - call centre': 'customer_support',
   'Bad Customer Support - Technician': 'technician_service',
+  'Good Partner/ Techinician Support': 'technician_service',
   'Range Issue': 'network_coverage',
   'General Good Service': 'general_satisfaction',
   'General Bad Service': 'general_satisfaction',
   'Bad Application': 'content_usage',
   'OTT Request, No OTT complaint': 'content_usage',
   'Shifting not Feasible': 'installation',
+  'Quick Installation': 'installation',
+  'N/A': 'unclassified',
 };
 
 export const THEME_LABELS = {

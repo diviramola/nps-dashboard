@@ -32,6 +32,13 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('overview');
   const [fileLog, setFileLog] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [darkMode, setDarkMode] = useState(() => {
+    try { return window.matchMedia('(prefers-color-scheme: dark)').matches; } catch { return false; }
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', darkMode);
+  }, [darkMode]);
 
   // Auto-load bundled sprint CSVs on startup
   useEffect(() => {
@@ -132,6 +139,12 @@ export default function App() {
       <div className="app">
         <header className="header">
           <h1>Wiom NPS Dashboard</h1>
+          <div className="header-right">
+            <button className="theme-toggle" onClick={() => setDarkMode(d => !d)} title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}>
+              <span className="theme-toggle-icon">{darkMode ? '☀️' : '🌙'}</span>
+              {darkMode ? 'Light' : 'Dark'}
+            </button>
+          </div>
         </header>
         <main className="main" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh' }}>
           <div style={{ textAlign: 'center', color: 'var(--text-secondary)' }}>
@@ -153,6 +166,10 @@ export default function App() {
               {records.length.toLocaleString()} responses &middot; {sprints.length} sprints
             </span>
           )}
+          <button className="theme-toggle" onClick={() => setDarkMode(d => !d)} title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}>
+            <span className="theme-toggle-icon">{darkMode ? '☀️' : '🌙'}</span>
+            {darkMode ? 'Light' : 'Dark'}
+          </button>
         </div>
       </header>
 

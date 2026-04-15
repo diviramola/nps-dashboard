@@ -84,7 +84,7 @@ export default function ScoreTrends({ records, sprints }) {
         <div className="chart-container">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={trendData} margin={{ top: 10, right: 20, left: 0, bottom: 5 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#eee" />
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
               <XAxis dataKey="label" fontSize={10} interval={0} tickMargin={4} />
               <YAxis fontSize={11} domain={[-30, 30]} ticks={[-30, -20, -10, 0, 10, 20, 30]} />
               <Tooltip
@@ -114,7 +114,7 @@ export default function ScoreTrends({ records, sprints }) {
         <div className="chart-container">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={distData} margin={{ top: 10, right: 20, left: 0, bottom: 5 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#eee" />
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
               <XAxis dataKey="label" fontSize={10} interval={0} tickMargin={4} />
               <YAxis fontSize={11} domain={[0, 100]} tickFormatter={v => `${v}%`} />
               <Tooltip

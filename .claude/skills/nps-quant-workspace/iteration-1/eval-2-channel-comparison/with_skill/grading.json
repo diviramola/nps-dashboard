@@ -1,0 +1,29 @@
+{
+  "eval_id": 2,
+  "eval_name": "channel-comparison",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Shows NPS for both WhatsApp and CleverTap per sprint",
+      "passed": true,
+      "evidence": "NPS shown for both channels across RSP1, RSP2, RSP3: WhatsApp (-8.5, -17.1, -17.8), CleverTap (5.6, 7.2, -0.8)"
+    },
+    {
+      "text": "Includes CIs and sample sizes for each channel-sprint combination",
+      "passed": true,
+      "evidence": "All 6 channel-sprint combinations include CI ranges and sample sizes (e.g., WhatsApp RSP1: CI [-17.0, -0.0] n=484)"
+    },
+    {
+      "text": "States which channel performs better with evidence",
+      "passed": true,
+      "evidence": "Executive summary: 'CleverTap consistently outperforms WhatsApp across all three sprints' with per-sprint differences and p-values"
+    },
+    {
+      "text": "Runs significance test on the channel difference",
+      "passed": true,
+      "evidence": "P-values for each sprint comparison: RSP1 p=0.050 (not sig), RSP2 p=0.001 (sig), RSP3 p=0.010 (sig)"
+    }
+  ],
+  "pass_rate": 1.0,
+  "notes": "Excellent output. Includes cross-sprint trend analysis showing WhatsApp declining and CleverTap stable-to-declining. Summary table is clean. Data quality notes appropriate."
+}

@@ -1,0 +1,34 @@
+{
+  "eval_id": 1,
+  "eval_name": "sprint-comparison",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Includes NPS score for RSP3 with 95% CI and sample size",
+      "passed": true,
+      "evidence": "RSP3: NPS -10.4 [CI: -16.7, -4.1] (n=904, High confidence)"
+    },
+    {
+      "text": "Includes NPS score for RSP2 with 95% CI and sample size",
+      "passed": true,
+      "evidence": "RSP2: NPS -7.1 [CI: -13.8, -0.3] (n=777, High confidence)"
+    },
+    {
+      "text": "Runs significance test with p-value",
+      "passed": true,
+      "evidence": "Change: -3.3 pts (p=0.479), Z-statistic: 0.7074"
+    },
+    {
+      "text": "States whether change is or is not statistically significant",
+      "passed": true,
+      "evidence": "Explicitly states 'not statistically significant at the 95% confidence level'"
+    },
+    {
+      "text": "Includes confidence level assessment (high/medium/low)",
+      "passed": true,
+      "evidence": "Both sprints labeled 'High confidence' based on n>=100 and CI width"
+    }
+  ],
+  "pass_rate": 1.0,
+  "notes": "All assertions pass. Output is well-structured with clear NPS values, CIs, significance test, and caveats about data quality (tenure unavailable, score=0 prevalence)."
+}

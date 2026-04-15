@@ -1,6 +1,10 @@
-# Data files (too large for git, contain customer data)
-data/*.csv
+# Data files (contain customer PII like phone numbers)
+data/**/*.csv
 data/*.xlsx
+data/enrichment/
+
+# Dashboard bundled data is OK to commit (phone numbers SHA256-hashed)
+!dashboard/public/data/**
 
 # Output files with customer data
 output/churn_risk_scores.csv

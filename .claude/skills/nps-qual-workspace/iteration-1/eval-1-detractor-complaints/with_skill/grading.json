@@ -1,0 +1,34 @@
+{
+  "eval_id": 1,
+  "eval_name": "detractor-complaints",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Shows theme distribution for detractors ranked by count",
+      "passed": true,
+      "evidence": "Table with 13 themes ranked by count: Slow Speed (48), Frequent Disconnections (44), General Negative (41), down to Bad Technician (1) and Unclassified (58)"
+    },
+    {
+      "text": "Presents 3-5 verbatims per top theme",
+      "passed": true,
+      "evidence": "Slow Speed: 5 verbatims, Frequent Disconnections: 7 verbatims, General Negative: 6 verbatims, Complaint Resolution: 5 verbatims, Internet Down: 4 verbatims"
+    },
+    {
+      "text": "Preserves original Hindi/Hinglish language in verbatims",
+      "passed": true,
+      "evidence": "All Hindi/Hinglish verbatims preserved in original script with English translations in parentheses. Includes both Devanagari and romanized Hindi."
+    },
+    {
+      "text": "Each verbatim includes score, channel, theme metadata",
+      "passed": true,
+      "evidence": "Every verbatim prefixed with [NPS X | Detractor | Theme | Sprint 14 | Channel] format"
+    },
+    {
+      "text": "Notes sample size and data source",
+      "passed": true,
+      "evidence": "Header: 'Sample Size: 241 detractors (scores 0-6) with feedback'. Methodology section notes evocativeness formula and language preservation approach."
+    }
+  ],
+  "pass_rate": 1.0,
+  "notes": "Strong qualitative output. Sentiment Highlights section adds genuine analytical value beyond just listing verbatims. Evocativeness scoring formula correctly cited. 24% unclassified rate honestly reported."
+}

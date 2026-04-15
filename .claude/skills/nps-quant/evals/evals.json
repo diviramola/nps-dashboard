@@ -1,0 +1,23 @@
+{
+  "skill_name": "nps-quant",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "What's the NPS for Sprint RSP3? How does it compare to RSP2 — is the change significant?",
+      "expected_output": "NPS score for RSP3 with CI, NPS for RSP2 with CI, delta with p-value and significance conclusion. Should show sample sizes for both.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Show me NPS by channel (WhatsApp vs CleverTap) for the last 3 sprints. Which channel is performing better?",
+      "expected_output": "NPS broken down by WhatsApp and CleverTap for Sprint 14, RSP1-3 (or similar), with CIs and sample sizes. Should note if difference is significant.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Give me the quarterly NPS trend for FY26. Are we improving quarter over quarter?",
+      "expected_output": "NPS for Q1, Q2, Q3 FY26 with CIs, sample sizes, and significance tests between consecutive quarters. Should aggregate sprints correctly into quarters.",
+      "files": []
+    }
+  ]
+}

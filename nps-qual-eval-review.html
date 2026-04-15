@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eval Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" integrity="sha384-EnyY0/GSHQGSxSgMwaIPzSESbqoOLSexfnSMN2AP+39Ckmn92stwABZynq1JyzdT" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --surface: #ffffff;
+      --border: #e8e6dc;
+      --text: #141413;
+      --text-muted: #b0aea5;
+      --accent: #d97757;
+      --accent-hover: #c4613f;
+      --green: #788c5d;
+      --green-bg: #eef2e8;
+      --red: #c44;
+      --red-bg: #fceaea;
+      --header-bg: #141413;
+      --header-text: #faf9f5;
+      --radius: 6px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .header .instructions {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 0.25rem;
+    }
+    .header .progress {
+      font-size: 0.875rem;
+      opacity: 0.8;
+      text-align: right;
+    }
+
+    /* ---- Main content ---- */
+    .main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* ---- Sections ---- */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      flex-shrink: 0;
+    }
+    .section-header {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .section-body {
+      padding: 1rem;
+    }
+
+    /* ---- Config badge ---- */
+    .config-badge {
+      display: inline-block;
+      padding: 0.2rem 0.625rem;
+      border-radius: 9999px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-left: 0.75rem;
+      vertical-align: middle;
+    }
+    .config-badge.config-primary {
+      background: rgba(33, 150, 243, 0.12);
+      color: #1976d2;
+    }
+    .config-badge.config-baseline {
+      background: rgba(255, 193, 7, 0.15);
+      color: #f57f17;
+    }
+
+    /* ---- Prompt ---- */
+    .prompt-text {
+      white-space: pre-wrap;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ---- Outputs ---- */
+    .output-file {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .output-file + .output-file {
+      margin-top: 1rem;
+    }
+    .output-file-header {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .output-file-header .dl-btn {
+      font-size: 0.7rem;
+      color: var(--accent);
+      text-decoration: none;
+      cursor: pointer;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+    .output-file-header .dl-btn:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .output-file-content {
+      padding: 0.75rem;
+      overflow-x: auto;
+    }
+    .output-file-content pre {
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .output-file-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .output-file-content iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    .output-file-content table {
+      border-collapse: collapse;
+      font-size: 0.8125rem;
+      width: 100%;
+    }
+    .output-file-content table td,
+    .output-file-content table th {
+      border: 1px solid var(--border);
+      padding: 0.375rem 0.5rem;
+      text-align: left;
+    }
+    .output-file-content table th {
+      background: var(--bg);
+      font-weight: 600;
+    }
+    .output-file-content .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+    .output-file-content .download-link:hover {
+      background: var(--border);
+    }
+    .empty-state {
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* ---- Feedback ---- */
+    .prev-feedback {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.625rem 0.75rem;
+      margin-top: 0.75rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .prev-feedback-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.25rem;
+      color: var(--text-muted);
+    }
+    .feedback-textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      resize: vertical;
+      color: var(--text);
+    }
+    .feedback-textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    .feedback-status {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      min-height: 1.1em;
+    }
+
+    /* ---- Grades (collapsible) ---- */
+    .grades-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .grades-toggle:hover {
+      color: var(--accent);
+    }
+    .grades-toggle .arrow {
+      margin-right: 0.5rem;
+      transition: transform 0.15s;
+      font-size: 0.75rem;
+    }
+    .grades-toggle .arrow.open {
+      transform: rotate(90deg);
+    }
+    .grades-content {
+      display: none;
+      margin-top: 0.75rem;
+    }
+    .grades-content.open {
+      display: block;
+    }
+    .grades-summary {
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .grade-badge {
+      display: inline-block;
+      padding: 0.125rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .grade-pass { background: var(--green-bg); color: var(--green); }
+    .grade-fail { background: var(--red-bg); color: var(--red); }
+    .assertion-list {
+      list-style: none;
+    }
+    .assertion-item {
+      padding: 0.625rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8125rem;
+    }
+    .assertion-item:last-child { border-bottom: none; }
+    .assertion-status {
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+    .assertion-status.pass { color: var(--green); }
+    .assertion-status.fail { color: var(--red); }
+    .assertion-evidence {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+      padding-left: 1.5rem;
+    }
+
+    /* ---- View tabs ---- */
+    .view-tabs {
+      display: flex;
+      gap: 0;
+      padding: 0 2rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .view-tab {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.625rem 1.25rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--text-muted);
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .view-tab:hover { color: var(--text); }
+    .view-tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .view-panel { display: none; }
+    .view-panel.active { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+
+    /* ---- Benchmark view ---- */
+    .benchmark-view {
+      padding: 1.5rem 2rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .benchmark-table {
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.8125rem;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .benchmark-table th, .benchmark-table td {
+      padding: 0.625rem 0.75rem;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    .benchmark-table th {
+      font-family: 'Poppins', sans-serif;
+      background: var(--header-bg);
+      color: var(--header-text);
+      font-weight: 500;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .benchmark-table tr:hover { background: var(--bg); }
+    .benchmark-table tr.benchmark-row-with { background: rgba(33, 150, 243, 0.06); }
+    .benchmark-table tr.benchmark-row-without { background: rgba(255, 193, 7, 0.06); }
+    .benchmark-table tr.benchmark-row-with:hover { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-without:hover { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-table tr.benchmark-row-avg { font-weight: 600; border-top: 2px solid var(--border); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-with { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-without { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-delta-positive { color: var(--green); font-weight: 600; }
+    .benchmark-delta-negative { color: var(--red); font-weight: 600; }
+    .benchmark-notes {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    .benchmark-notes h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+    }
+    .benchmark-notes ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+    .benchmark-notes li {
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      margin-bottom: 0.375rem;
+    }
+    .benchmark-empty {
+      color: var(--text-muted);
+      font-style: italic;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    /* ---- Navigation ---- */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      flex-shrink: 0;
+    }
+    .nav-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: all 0.15s;
+    }
+    .nav-btn:hover:not(:disabled) {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .nav-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .done-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .done-btn:hover {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .done-btn.ready {
+      border: none;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+    }
+    .done-btn.ready:hover {
+      background: var(--accent-hover);
+    }
+    /* ---- Done overlay ---- */
+    .done-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    .done-overlay.visible {
+      display: flex;
+    }
+    .done-card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 2rem 3rem;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+    }
+    .done-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .done-card p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .done-card .btn-row {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .done-card button {
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+    .done-card button:hover {
+      background: var(--bg);
+    }
+    /* ---- Toast ---- */
+    .toast {
+      position: fixed;
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 0.625rem 1.25rem;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 200;
+    }
+    .toast.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" style="height:100vh; display:flex; flex-direction:column;">
+    <div class="header">
+      <div>
+        <h1>Eval Review: <span id="skill-name"></span></h1>
+        <div class="instructions">Review each output and leave feedback below. Navigate with arrow keys or buttons. When done, copy feedback and paste into Claude Code.</div>
+      </div>
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <!-- View tabs (only shown when benchmark data exists) -->
+    <div class="view-tabs" id="view-tabs" style="display:none;">
+      <button class="view-tab active" onclick="switchView('outputs')">Outputs</button>
+      <button class="view-tab" onclick="switchView('benchmark')">Benchmark</button>
+    </div>
+
+    <!-- Outputs panel (qualitative review) -->
+    <div class="view-panel active" id="panel-outputs">
+    <div class="main">
+      <!-- Prompt -->
+      <div class="section">
+        <div class="section-header">Prompt <span class="config-badge" id="config-badge" style="display:none;"></span></div>
+        <div class="section-body">
+          <div class="prompt-text" id="prompt-text"></div>
+        </div>
+      </div>
+
+      <!-- Outputs -->
+      <div class="section">
+        <div class="section-header">Output</div>
+        <div class="section-body" id="outputs-body">
+          <div class="empty-state">No output files found</div>
+        </div>
+      </div>
+
+      <!-- Previous Output (collapsible) -->
+      <div class="section" id="prev-outputs-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="togglePrevOutputs()">
+            <span class="arrow" id="prev-outputs-arrow">&#9654;</span>
+            Previous Output
+          </div>
+        </div>
+        <div class="grades-content" id="prev-outputs-content"></div>
+      </div>
+
+      <!-- Grades (collapsible) -->
+      <div class="section" id="grades-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="toggleGrades()">
+            <span class="arrow" id="grades-arrow">&#9654;</span>
+            Formal Grades
+          </div>
+        </div>
+        <div class="grades-content" id="grades-content"></div>
+      </div>
+
+      <!-- Feedback -->
+      <div class="section">
+        <div class="section-header">Your Feedback</div>
+        <div class="section-body">
+          <textarea
+            class="feedback-textarea"
+            id="feedback"
+            placeholder="What do you think of this output? Any issues, suggestions, or things that look great?"
+          ></textarea>
+          <div class="feedback-status" id="feedback-status"></div>
+          <div class="prev-feedback" id="prev-feedback" style="display:none;">
+            <div class="prev-feedback-label">Previous feedback</div>
+            <div id="prev-feedback-text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav" id="outputs-nav">
+      <button class="nav-btn" id="prev-btn" onclick="navigate(-1)">&#8592; Previous</button>
+      <button class="done-btn" id="done-btn" onclick="showDoneDialog()">Submit All Reviews</button>
+      <button class="nav-btn" id="next-btn" onclick="navigate(1)">Next &#8594;</button>
+    </div>
+    </div><!-- end panel-outputs -->
+
+    <!-- Benchmark panel (quantitative stats) -->
+    <div class="view-panel" id="panel-benchmark">
+      <div class="benchmark-view" id="benchmark-content">
+        <div class="benchmark-empty">No benchmark data available. Run a benchmark to see quantitative results here.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Done overlay -->
+  <div class="done-overlay" id="done-overlay">
+    <div class="done-card">
+      <h2>Review Complete</h2>
+      <p>Your feedback has been saved. Go back to your Claude Code session and tell Claude you're done reviewing.</p>
+      <div class="btn-row">
+        <button onclick="closeDoneDialog()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ---- Embedded data (injected by generate_review.py) ----
+    const EMBEDDED_DATA = {"skill_name": "nps-qual", "runs": [{"id": "eval-1-detractor-complaints-with_skill", "prompt": "What are the top complaints from detractors in Sprint 14? Show me the actual verbatims \u2014 I want to hear customer voice.", "eval_id": 1, "outputs": [{"name": "answer.md", "type": "text", "content": "# Top Detractor Complaints \u2014 Sprint 14\n\n**Data Source:** Sprint 14 survey responses | **Sample Size:** 241 detractors (scores 0\u20136) with feedback | **Method:** Pre-coded theme mapping + evocativeness scoring\n\n---\n\n## Theme Distribution\n\n| Theme | Count | % of Total | Composition |\n|-------|-------|-----------|-------------|\n| **Slow Speed** | 48 | 19.9% | Buffering, low throughput, speed issues |\n| **Frequent Disconnections** | 44 | 18.3% | Drops, \"baar baar band\", unstable connection |\n| **General Negative** | 41 | 17.0% | Non-specific \"bad\", \"bekar\", poor service complaints |\n| **Internet Down/Outage** | 11 | 4.6% | Complete outages, \"net nahi chal raha\" |\n| **Complaint Resolution (Bad)** | 10 | 4.1% | Unresolved tickets, \"complaint ka koi fayda nahi\" |\n| **28-Day Billing** | 6 | 2.5% | Calendar vs 28-day plan frustration |\n| **Range/Coverage** | 5 | 2.1% | Weak signal, dead zones |\n| **Call Centre (Bad)** | 4 | 1.7% | Can't reach support, unhelpful agents |\n| **Pricing \u2014 Expensive** | 3 | 1.2% | \"Mehnga\", value concerns |\n| **OTT/Content** | 3 | 1.2% | Limited streaming channels, content requests |\n| **RDNI (Recharge \u2192 No Internet)** | 2 | 0.8% | Recharge done but net won't start |\n| **Bad Technician/Partner** | 1 | 0.4% | Late, rude service personnel |\n| **Unclassified** | 58 | 24.1% | Generic feedback, blank responses |\n\n**Key Finding:** Speed and reliability issues dominate. 38.2% of coded detractors cite either slow speed or disconnections. Almost one-in-four responses are unclassified (low-signal feedback like \"ok\", \"kutch nii\", or blanks).\n\n---\n\n## Most Evocative Verbatims by Theme\n\n### Slow Speed \u2014 48 mentions\n\n[NPS 0 | Detractor | Slow Speed | Sprint 14 | WhatsApp]\n\"Starting mein iske network bahut acche the but ab iske bahut bekar network ho gaye hain aur iska network net chalta bhi nahin hai bahut slow chalta hai\"\n(The network was good initially, but now it's terrible and the internet barely works, it's very slow)\n\n[NPS 0 | Detractor | Slow Speed | Sprint 14 | WhatsApp]\n\"The internet speed is veru slow even with a 100 mbps plan. I cannot even stream YouTube without buffering\"\n(Speed complaint despite premium plan)\n\n[NPS 0 | Detractor | Slow Speed | Sprint 14 | WhatsApp]\n\"Aap bolte hai apka wiom ki speed 5g hai or ye chalta 2g ki taraha hai or kai baar to ye apne aap hi band ho jata hai to apne kisi friend ko kyu wiom ka wifi lagwane ki salha dunga.\"\n(You claim 5G speed but it runs like 2G and disconnects on its own \u2014 why would I recommend it to friends?)\n\n[NPS 0 | Detractor | Slow Speed | Sprint 14 | WhatsApp]\n\"Net bilkul slow chalat hai game mera kabhi kabhi lag hone lagta hai kuch vakt se net bhi kam aatah hai or mahine mai eek bar nahi aat hai net\"\n(Internet is completely slow; games lag and sometimes net is barely available)\n\n[NPS 0 | Detractor | Slow Speed | Sprint 14 | WhatsApp]\n\"Full network nahi aata badhiya nahi chalta slow slow chalta hai\"\n(No full signal, doesn't work well, very slow)\n\n---\n\n### Frequent Disconnections \u2014 44 mentions\n\n[NPS 0 | Detractor | Frequent Disconnections | Sprint 14 | WhatsApp]\n\"Wiom network issue Not working Any time problem face\"\n(Network always problematic, unreliable)\n\n[NPS 0 | Detractor | Frequent Disconnections | Sprint 14 | WhatsApp]\n\"27 din konsa net data hai kawal wiom. Or 3 sa 5 bj k bich ma band hota hai jabki raat ko 12 bj din complete hota hai\"\n(What data for 27 days? Net drops between 3\u20135 PM but runs fine at midnight)\n\n[NPS 2 | Detractor | Frequent Disconnections | Sprint 14 | WhatsApp]\n\"VM Seva net Ek Din Mein teesre Char bar rok rok ke chalta hai\"\n(VM service \u2014 the net stops and starts 3\u20134 times in a single day)\n\n[NPS 0 | Detractor | Frequent Disconnections | Sprint 14 | WhatsApp]\n\"It is often not running,\"\n(Consistent outage pattern)\n\n[NPS 0 | Detractor | Frequent Disconnections | Sprint 14 | CleverTap]\n\"Bekaar service , baar baar network issue\"\n(Terrible service, repeated network failures)\n\n[NPS 0 | Detractor | Frequent Disconnections | Sprint 14 | WhatsApp]\n\"Network nhi aate sbse badi problm\"\n(No network \u2014 the biggest problem)\n\n[NPS 0 | Detractor | Frequent Disconnections | Sprint 14 | WhatsApp]\n\"Bar bar net chala jatta hai..net ki problem bohot jyda hai..kabhibhi lost network aa jatte hai..isse aacha kisi other company ki service le li jaye\"\n(Net keeps dropping constantly... lots of network problems... lose signal all the time... should switch to another company)\n\n---\n\n### General Negative \u2014 41 mentions\n\n[NPS 0 | Detractor | General Bad Service | Sprint 14 | WhatsApp]\n\"Sbse bekar h wiom pase lene bdi jldi aate ho lekin net kbhi shi se ni chlta h\"\n(Worst service \u2014 you're quick to collect money but the net never works properly)\n\n[NPS 0 | Detractor | General Bad Service | Sprint 14 | WhatsApp]\n\"Ahi nhi chalta net\"\n(Internet doesn't work here)\n\n[NPS 2 | Detractor | General Bad Service | Sprint 14 | WhatsApp]\n\"Bekar\"\n(Useless)\n\n[NPS 0 | Detractor | General Bad Service | Sprint 14 | WhatsApp]\n\"Very very bad service\"\n(Unambiguous dissatisfaction)\n\n[NPS 0 | Detractor | General Bad Service | Sprint 14 | WhatsApp]\n\"Kabhi pura ek Mahina bina kisi problem ke Net chala hi nahi. Kabhi kuch error, kabhi kuch. Abhi jab ye form fill kar rha hu abhi bhi Internet nahi chal rha hai.\"\n(Sometimes a whole month goes by without the net working. Always some error or another. Even right now while filling this form, the internet isn't working.)\n\n[NPS 0 | Detractor | General Bad Service | Sprint 14 | WhatsApp]\n\"Very bad service . Poor connection every time . Always stop internet . Please Do better for internet . Than you\"\n(Chronic reliability issues)\n\n---\n\n### Complaint Resolution (Bad) \u2014 10 mentions\n\n[NPS 0 | Detractor | Complaint Resolution Bad | Sprint 14 | WhatsApp]\n\"\u092e\u0947\u0930\u0947 \u092c\u093f\u0932\u093f\u0902\u0917 \u0921\u0947\u091f \u0938\u0947 \u092a\u0939\u0932\u0947 \u0939\u0940 \u092e\u0947\u0930\u093e \u0935\u093e\u0908-\u092b\u093e\u0908 \u092c\u0902\u0926 \u0915\u0930 \u0926\u0947\u0924\u0947 \u0939\u0948\u0902, \u0907\u0938\u0932\u093f\u090f \u092e\u0948\u0902 rating \u0915\u092e \u0926\u0947 \u0930\u0939\u093e \u0939\u0942\u0901\u0964 \u0939\u0930 \u092c\u093e\u0930 \u092c\u094b\u0932\u0928\u093e \u092a\u0921\u093c\u0924\u093e \u0939\u0948, \u0924\u092c \u091c\u093e\u0915\u0930 \u092e\u0947\u0930\u093e \u0935\u093e\u0908-\u092b\u093e\u0908 \u091a\u093e\u0932\u0942 \u0939\u094b\u0924\u093e \u0939\u0948\u0964 \u092e\u0948\u0902\u0928\u0947 \u0915\u0908 \u092c\u093e\u0930 \u0915\u0902\u092a\u094d\u0932\u0947\u0902\u091f \u0915\u0930 \u0926\u0940 \u0939\u0948, \u092a\u0930 \u0905\u092d\u0940 \u0924\u0915 \u092e\u0941\u091d\u0947 \u0915\u094b\u0908 \u0938\u0949\u0932\u094d\u092f\u0942\u0936\u0928 \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u093e \u0939\u0948\u0964 \u0939\u0930 \u092c\u093e\u0930 \u092f\u0939\u0940 \u092c\u094b\u0932\u0924\u0947 \u0939\u0948\u0902 \u0915\u093f '\u0905\u0917\u0932\u0940 \u092c\u093e\u0930 \u0938\u0947 \u0928\u0939\u0940\u0902 \u0939\u094b\u0917\u093e', \u092a\u0930 \u0905\u0917\u0932\u0940 \u092c\u093e\u0930 \u092d\u0940 \u092e\u0941\u091d\u0947 \u0915\u0949\u0932 \u0915\u0930\u0928\u0940 \u092a\u0921\u093c\u0924\u0940 \u0939\u0948 \u0915\u093f \u092e\u0947\u0930\u093e \u0935\u093e\u0908-\u092b\u093e\u0908 \u092c\u0902\u0926 \u0939\u094b \u0917\u092f\u093e \u0939\u0948\u0964\"\n(My Wi-Fi shuts off before billing date \u2014 that's why I'm rating low. Have to call every time to turn it back on. Complained many times but no solution yet. They always say \"won't happen next time\" but I have to keep calling. Validity only 2 days left.)\n\n[NPS 0 | Detractor | Complaint Resolution Bad | Sprint 14 | WhatsApp]\n\"11 din ho gaye lekin koi sunvai nahi ho ti\"\n(11 days have passed and no one has listened to my complaint)\n\n[NPS 0 | Detractor | Complaint Resolution Bad | Sprint 14 | WhatsApp]\n\"Humesa network issue rehta hai. Mene harbaar iski complaint ki hai sahi se resolution nahi mila.\"\n(Always network issues. Complained repeatedly but never got proper resolution.)\n\n[NPS 0 | Detractor | Complaint Resolution Bad | Sprint 14 | WhatsApp]\n\"Because it's not good,i complaint multiple time, Not solved yet\"\n(Multiple complaints, zero resolution)\n\n[NPS 0 | Detractor | Complaint Resolution Bad | Sprint 14 | WhatsApp]\n\"Because the costomer help service is too slow.\"\n(Support team is lethargic)\n\n---\n\n### Internet Down/Outage \u2014 11 mentions\n\n[NPS 0 | Detractor | Internet Down/Outage | Sprint 14 | WhatsApp]\n\"Internet nahi chal Raha hai\"\n(Internet isn't working at all)\n\n[NPS 0 | Detractor | Internet Down/Outage | Sprint 14 | WhatsApp]\n\"3 din se network problem\"\n(Network down for 3 days)\n\n[NPS 0 | Detractor | Internet Down/Outage | Sprint 14 | WhatsApp]\n\"2 din ho gy bnd pda h wifi cl hi nhi rha red light jal rhi h 2 din se complete kri koi nhi aya koi dines name k he jo y wifi lga k gy the unko call kri bo bhi nhi ay\"\n(Down for 2 days, WiFi not working, red light on, technician (Dines) who installed it won't answer)\n\n[NPS 0 | Detractor | Internet Down/Outage | Sprint 14 | WhatsApp]\n\"Months ke 30 din mai se 20 din net band hi rehta hai aur paise pure months ke dene padte hai\"\n(Of 30 days in a month, net is down for 20 days but I pay for the full month)\n\n---\n\n### 28-Day Billing \u2014 6 mentions\n\n[NPS 0 | Detractor | 28-Day Billing | Sprint 14 | WhatsApp]\n\"Recharge m koi discount Nahin Milta uper se recharge only 28 days ka hain\"\n(No discount on recharge, and it's only for 28 days)\n\n[NPS 1 | Detractor | 28-Day Billing | Sprint 14 | WhatsApp]\n\"I didn't choose because I ll pay 500rs you can recharge for 28 days thats not fair I think you should the recharge for 30 days\"\n(Why charge for 28 days when a month has 30? Unfair billing)\n\n[NPS 6 | Detractor | 28-Day Billing | Sprint 14 | WhatsApp]\n\"Deta to m 10 lekin jab hum recharge karte h recharge khatam hone kai baad to net nhi chalta call karni padti h baar baar ise sahi kardo bas\"\n(Would give 10, but after recharge net stops working. Have to call repeatedly. Fix this!)\n\n---\n\n### RDNI (Recharge Done, No Internet) \u2014 2 mentions\n\n[NPS 6 | Detractor | RDNI | Sprint 14 | WhatsApp]\n\"Wiom net sahi chalta hai pr jb bhi recharge karate h uske baad 1 hafte Tak chalna band ho jata h aur bhot br complent bhi kr chuke h is pr thoda dihan dena chahiye\"\n(Net works fine until recharge, then stops for a week after. Complained many times \u2014 needs urgent attention.)\n\n---\n\n### Range/Coverage \u2014 5 mentions\n\n[NPS 0 | Detractor | Range/Coverage | Sprint 14 | WhatsApp]\n\"Hamare riste dar dor rehte hai\"\n(Our house is too far away for coverage)\n\n[NPS 2 | Detractor | Range/Coverage | Sprint 14 | CleverTap]\n\"Range km h bohot\"\n(Range is very limited)\n\n[NPS 3 | Detractor | Range/Coverage | Sprint 14 | WhatsApp]\n\"Kyuki ya net kabhi bhi band ho jave chalta nahi hai or fir ya net hamari chatt tak bhi na jata ham dhuki ho jave jab ya dhang sa na chalta bekar hai ya wiom\"\n(Net goes down, and doesn't even reach my roof \u2014 frustrating)\n\n---\n\n### Pricing \u2014 Expensive \u2014 3 mentions\n\n[NPS 0 | Detractor | Expensive | Sprint 14 | WhatsApp]\n\"Mehnga bohot he 350 rs me sabke yaha chal rha he\"\n(Too expensive \u2014 everyone else offers it at 350 Rs)\n\n---\n\n## Sentiment Highlights\n\n**Pain Points in Customer Voice:**\n\n1. **Broken promise of speed**: Customers explicitly compare Wiom's claimed speeds to competitors and feel misled. The phrase \"2G ki tarah\" (like 2G) is used repeatedly despite premium plans.\n\n2. **Monthly recurring failures**: Patterns of network drops every 1\u20132 weeks, or consistently 10\u201320 days of monthly downtime, signal systemic reliability issues.\n\n3. **Support fatigue**: Multiple customers mention calling 10\u201315 times for the same issue with no resolution. The phrase \"complaint ka koi fayda nahi\" captures abandonment of hope.\n\n4. **Billing-to-service mismatch**: Two distinct pain points collide:\n   - 28-day billing = perceived unfairness vs calendar month\n   - RDNI (recharge done, net won't start) = money spent, service absent\n\n5. **Location-based dead zones**: Range complaints suggest geographic inequality \u2014 some areas work, others don't.\n\n6. **The competitor shadow**: \"Airtel ka WiFi hai\" and \"should switch to another company\" indicate active churn risk.\n\n---\n\n## Methodology Notes\n\n- **Sample**: 241 detractors (NPS 0\u20136) with feedback out of total respondents\n- **Evocativeness scoring formula**: `min(text_length, 300) + |score - 5| \u00d7 20` \u2014 prioritizes longer, more specific rants and extreme scores (0\u20132, 5\u20136 boundary cases)\n- **Language preservation**: Hindi and Hinglish verbatims kept in original form for authenticity; English translations in parentheses for clarity\n- **Unclassified (58 responses, 24%)**: Includes blanks, single-word answers (\"ok\", \"kutch nii\"), and low-signal feedback. Reflects real customer effort variance in qualitative surveys\n"}], "grading": {"eval_id": 1, "eval_name": "detractor-complaints", "configuration": "with_skill", "expectations": [{"text": "Shows theme distribution for detractors ranked by count", "passed": true, "evidence": "Table with 13 themes ranked by count: Slow Speed (48), Frequent Disconnections (44), General Negative (41), down to Bad Technician (1) and Unclassified (58)"}, {"text": "Presents 3-5 verbatims per top theme", "passed": true, "evidence": "Slow Speed: 5 verbatims, Frequent Disconnections: 7 verbatims, General Negative: 6 verbatims, Complaint Resolution: 5 verbatims, Internet Down: 4 verbatims"}, {"text": "Preserves original Hindi/Hinglish language in verbatims", "passed": true, "evidence": "All Hindi/Hinglish verbatims preserved in original script with English translations in parentheses. Includes both Devanagari and romanized Hindi."}, {"text": "Each verbatim includes score, channel, theme metadata", "passed": true, "evidence": "Every verbatim prefixed with [NPS X | Detractor | Theme | Sprint 14 | Channel] format"}, {"text": "Notes sample size and data source", "passed": true, "evidence": "Header: 'Sample Size: 241 detractors (scores 0-6) with feedback'. Methodology section notes evocativeness formula and language preservation approach."}], "pass_rate": 1.0, "notes": "Strong qualitative output. Sentiment Highlights section adds genuine analytical value beyond just listing verbatims. Evocativeness scoring formula correctly cited. 24% unclassified rate honestly reported."}}, {"id": "eval-3-promoter-pricing-with_skill", "prompt": "What are promoters saying about pricing across all sprints? I want to understand why people think we're affordable.", "eval_id": 3, "outputs": [{"name": "answer.md", "type": "text", "content": "# Promoter Pricing Insights: Why Customers Think Wiom is Affordable\n\n## Overview\n\nThis analysis synthesizes qualitative feedback from promoters (NPS scores 9\u201310) across all 17 sprints who cite pricing as a key reason for their positive sentiment. The three pricing-related reasons tracked are:\n- **Affordable** (primary): Service is good value for money\n- **28-Day Plan Issue** (primary): Customers explicitly mention the 28-day plan as a pricing/value concern\n- **Expensive** (secondary): Mentioned alongside satisfaction, indicating trade-offs\n\n**Total records analyzed:** 17 sprints (Sprint 2 through Sprint 14, RSP1-RSP3)\n**Data source:** Pre-coded `nps_reason_primary` column + `feedback` text field\n**Classification method:** Human-coded reasons (reliable, coarse-grained) combined with feedback verbatims\n\n---\n\n## Key Themes: Why Promoters Find Wiom Affordable\n\n### 1. **Budget-Friendly Pricing (\"Sasta\" / Low Cost)**\nPromoters consistently emphasize that Wiom's plan pricing is low compared to their income level and alternatives.\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 3 | Call Centre]**\n\"Budget mein bhi hai achcha bhi hai\"  \n(It's within budget AND it's also good)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 3 | Call Centre]**\n\"Good budget me isse acha koi wi fi nahi hai\"  \n(For this budget, there's no better WiFi than this)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 11 | WhatsApp]**\n\"Wiom ka wifi price kafi achha he....or yaha jo per month discount milta he voto or bhi achha he....ek middle class person ke liye kafi affordable he\"  \n(Wiom's WiFi price is quite good... and the monthly discount makes it even better... for a middle-class person it's quite affordable)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 11 | WhatsApp]**\n\"Sasta aur behtar\"  \n(Cheap and better)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 11 | WhatsApp]**\n\"Wiom sabse sasta or badiya hai\"  \n(Wiom is the cheapest and the best)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 3 | Call Centre]**\n\"Sasta hai theek hai Baki yaar to you are chacha\"  \n(It's cheap, it's good, otherwise you're great)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 3 | Call Centre]**\n\"Sasta sasta our sab sa acha\"  \n(Cheap, cheap and the best of all)\n\n### 2. **Quality + Low Price Combination**\nCustomers emphasize value: they're getting good internet quality at low cost.\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 11 | WhatsApp]**\n\"\u092e\u0941\u091d\u0947 Wiom \u092c\u0939\u0941\u0924 \u092a\u0938\u0902\u0926 \u0939\u0948 \u0915\u094d\u092f\u094b\u0902\u0915\u093f \u092f\u0939 \u092c\u0939\u0941\u0924 \u0915\u092e \u0930\u0941\u092a\u092f\u094b\u0902 \u092e\u0947\u0902 \u092e\u093f\u0932\u0924\u093e \u0939\u0948 \u0914\u0930 \u0907\u0902\u091f\u0930\u0928\u0947\u091f \u0938\u0947\u0935\u093e \u0915\u093e\u092b\u093c\u0940 \u0905\u091a\u094d\u091b\u0940 \u0939\u094b\u0924\u0940 \u0939\u0948\u0964\"  \n(I like Wiom a lot because it's available at very low cost and the internet service is quite good)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 11 | WhatsApp]**\n\"\u092f\u0939 \u092c\u0939\u0941\u0924 \u0938\u0938\u094d\u0924\u093e \u0914\u0930 \u092d\u0930\u094b\u0938\u0947\u092e\u0902\u0926 \u0939\u0948\u0964\"  \n(It's very cheap and reliable)\n\n**[NPS 9 | Promoter | Pricing \u2014 Affordable | Sprint 11 | WhatsApp]**\n\"\u0915\u092e \u092a\u0948\u0938\u094b\u0902 \u092e\u0947\u0902 \u0905\u091a\u094d\u091b\u0940 \u0938\u0930\u094d\u0935\u093f\u0938 \u0926\u0947 \u0930\u0939\u093e \u0939\u0948\u0964\"  \n(It's providing good service at low cost)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 11 | WhatsApp]**\n\"Unlimited internet and affordable\"  \n(Explicit English statement emphasizing unlimited data at low cost)\n\n**[NPS 9 | Promoter | Pricing \u2014 Affordable | Sprint 12 | WhatsApp]**\n\"Speed, service, cost effective\"  \n(Lists cost-effectiveness as one of three key value drivers)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 2 | Call Centre]**\n\"ACHa network hai aur kya hai - amount jo hai monthly amount hai wo bhi sahi hai - router ke liye paisa nahi lere - koi issue bhi nahi hora hai toh solve ho jaata hai\"  \n(Good network, and what else \u2014 the monthly amount is also reasonable \u2014 no charge for router \u2014 any issue gets resolved)\n\n### 3. **Zero Installation Cost / No Hidden Charges**\nA strong differentiator: no setup fees make the service more accessible upfront.\n\n**[NPS 9 | Promoter | Pricing \u2014 Affordable | Sprint 11 | Call Centre]**\n\"Same day installation. Without any charge\"  \n(Emphasizes speed and zero-cost installation)\n\n**[NPS 9 | Promoter | Pricing \u2014 Affordable | Sprint 3 | Call Centre]**\n\"Without Installation charges We can use this internet \ud83d\udedc\"  \n(Relief and gratitude about no installation charge)\n\n**[NPS 9 | Promoter | Pricing \u2014 Affordable | Sprint 11 | WhatsApp]**\n\"Kyuki ye bahut acha aur free mai bhi laga hai isi wajah se\"  \n(Because it's very good and also installed for free, that's why)\n\n**[NPS 8 | Promoter | Pricing \u2014 Affordable | Sprint 11 | WhatsApp]**\n\"Affordable price and zero connection fee, quick and responsive support. The only this is sometimes I'm facing low network connectivity. Although everything is perfect I would recommend Wiom WiFi to every known.\"  \n(Comprehensive endorsement citing affordable price AND zero connection fee as key factors)\n\n### 4. **Value for Money / Unlimited Data**\nCustomers feel they're getting excellent data value compared to price point.\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 11 | WhatsApp]**\n\"Value for money\"  \n(Direct endorsement of value proposition)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 2 | G-Form WhatsApp]**\n\"Nice sabse sasta sabse achhaa\"  \n(Nicely: cheapest and best)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 2 | WhatsApp]**\n\"Discuant bhi milta hai\"  \n(Discounts are also available)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 2 | Call Centre]**\n\"hamare ghar pr ab net na rehne ki problem nahi rehti hai - medium class ke liye sahi hai. budget wagerah mein sab. kabhi baarish mein network chale jaate hai aur koi problem nahi hai\"  \n(Our home no longer has the problem of no internet \u2014 it's suitable for middle class \u2014 everything is within budget \u2014 sometimes network drops in rain but there's no issue)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 2 | G-Form WhatsApp]**\n\"Low budget good Internet\"  \n(Simple, direct statement of value: low budget = good internet)\n\n### 5. **Middle-Class Accessibility**\nPromoters explicitly state that Wiom fits their economic segment.\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 3 | Call Centre]**\n\"Bahut hi sasta plan hai or customer service bhi achi hai\"  \n(Very cheap plan and also good customer service)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 11 | WhatsApp]**\n\"Wiom ka wifi price kafi achha he....or yaha jo per month discount milta he voto or bhi achha he....ek middle class person ke liye kafi affordable he\"  \n(Specifically calls out affordability for middle-class segment)\n\n### 6. **Comparison Context: Better Than Competitors**\nSome promoters implicitly acknowledge competitive positioning.\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 2 | Call Centre]**\n\"Plan ka price bhi thik hai\"  \n(Plan pricing is just right)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 2 | G-Form WhatsApp]**\n\"The plan is cheap and Fast Problem resolving\"  \n(Combines low price with service quality)\n\n**[NPS 10 | Promoter | Pricing \u2014 Affordable | Sprint 11 | WhatsApp]**\n\"Aapke Rs theek hai / Network theek hai phone TV vagaira sab kuchh chal jaate Hain\"  \n(Your Rs [pricing] is fine / Network is fine / everything works \u2014 phone, TV, etc.)\n\n---\n\n## 28-Day Plan Issue: Promoters' Nuanced View\n\nInterestingly, some promoters mention the 28-day billing cycle in context of value perception:\n\n**[NPS 10 | Promoter | Pricing \u2014 28-Day Plan Issue | Sprint 2 | G-Form WhatsApp]**\n\"Apne 449 se 500 to kar diya kya apne iske sath aap logo ne internet increment kiya jese aap chahte to 28 days 30 days kar sakte hana taki customer acha lagta thank you..!\"  \n(You increased from 449 to 500, did you? Along with that you also increased internet. If you want, you could change 28 days to 30 days so customers feel good. Thank you!)  \n*Note: This is score 10 but mentions 28-day as an improvement opportunity, not a complaint*\n\n**[NPS 10 | Promoter | Pricing \u2014 28-Day Plan Issue | Sprint 2 | G-Form WhatsApp]**\n\"aap 28 din ka plan hai montlhy - normally sab log telecom log sab 30 days ka dete hai. mujhe yhi problem hai bas. mujhe yaha par 2 mahine hi lena tha - toh maine 2 mahine ke liye adjust krne ke liye wiom lia hai.\"  \n(You have a 28-day plan monthly \u2014 normally all telecom companies give 30 days. That's my only issue. I only wanted 2 months \u2014 so I adjusted for 2 months and took Wiom.)  \n*Note: Promoter adjusted their expectations and accepted the 28-day cycle*\n\n---\n\n## Expense Mentions Among Promoters (Secondary Reason)\n\nA few promoters rated 10 despite mentioning high rates, suggesting trade-offs:\n\n**[NPS 10 | Promoter | Pricing \u2014 Expensive (secondary) | Sprint 10 | WhatsApp]**\n\"Rate highest h lekin services fast h ye mera experience h\"  \n(Rate is highest but service is fast \u2014 that's my experience)  \n*Willing to pay premium for speed*\n\n**[NPS 10 | Promoter | Pricing \u2014 Expensive (secondary) | Sprint 2 | G-Form WhatsApp]**\n\"Plan amount should be lesser\"  \n(Wishes cost were lower, but still scores 10)\n\n---\n\n## Summary: Core Affordability Messages\n\nPromoters consistently communicate that Wiom is affordable because:\n\n1. **Low absolute pricing** suitable for middle-class households (\"budget mein,\" \"sasta\")\n2. **No installation fee** removes barriers to entry and perceived total cost\n3. **Good quality at low price** = strong value perception (unlimited data, decent speed)\n4. **Monthly discounts** enhance the perception of savings\n5. **Accessibility** \u2014 positioned as option for those with lower disposable income\n6. **Willingness to accept trade-offs** (28-day cycles, minor issues) because the price is right\n\nThe language is intimate and vernacular (\"sasta,\" \"badhiya,\" \"budget-friendly\"), suggesting genuine, organic satisfaction rather than scripted feedback.\n\n---\n\n## Data Quality Notes\n\n- **Sprint 1 excluded:** No qualitative data available\n- **Total promoter records with pricing reasons:** 48+ across all sprints\n- **Affordable (primary):** ~35 records scored 9\u201310\n- **28-Day Plan Issue (primary):** 3 records scored 9\u201310\n- **Expensive (secondary):** 5 records scored 10\n- **Classification method:** Pre-coded `nps_reason_primary` (human-tagged, reliable)\n- **Feedback fill rate:** ~70% of records had verbatim text\n- **Languages:** Hinglish (60%), Hindi Devanagari (25%), English (15%)\n\n---\n\n## Methodology\n\n**Evocativeness scoring** (per skill instructions): `min(text_length, 300) + |score \u2212 5| \u00d7 20`\n\nVerbatims selected prioritized:\n- Longer, more specific feedback (length bonus)\n- Extreme scores (9\u201310 = highest signal)\n- Original language preservation (authentic voice)\n- Diversity of sentiment articulation\n\n**Source:** All 17 sprint CSVs in `/data/sprints/` read and filtered for scores 9\u201310 with nps_reason_primary in [Affordable, Expensive, 28-Day Plan Issue]\n"}], "grading": {"eval_id": 3, "eval_name": "promoter-pricing", "configuration": "with_skill", "expectations": [{"text": "Filters to promoters (score 9-10) with pricing theme", "passed": true, "evidence": "Explicitly filters for scores 9-10 with nps_reason_primary in [Affordable, Expensive, 28-Day Plan Issue]. All verbatims show NPS 9 or 10."}, {"text": "Presents verbatims explaining affordability perception", "passed": true, "evidence": "30+ verbatims organized into 6 thematic clusters: Budget-Friendly, Quality+Low Price, Zero Installation Cost, Value for Money, Middle-Class Accessibility, Better Than Competitors"}, {"text": "Preserves Hindi/Hinglish language", "passed": true, "evidence": "Hindi/Hinglish verbatims preserved in original form with English translations. Mix of romanized Hindi and Devanagari script maintained."}, {"text": "Shows volume context (count across sprints)", "passed": true, "evidence": "Data Quality Notes: '48+ across all sprints', broken down by reason type (Affordable ~35, 28-Day ~3, Expensive ~5). 17 sprints analyzed."}], "pass_rate": 1.0, "notes": "Rich qualitative analysis. Goes beyond listing verbatims to identify sub-themes within pricing perception. Nuanced treatment of 28-day billing mentions by promoters and 'expensive' secondary reasons. Methodology section properly documents evocativeness scoring."}}], "previous_feedback": {}, "previous_outputs": {}, "benchmark": {"metadata": {"skill_name": "nps-qual", "skill_path": "<path/to/skill>", "executor_model": "<model-name>", "analyzer_model": "<model-name>", "timestamp": "2026-04-13T13:49:45Z", "evals_run": [], "runs_per_configuration": 3}, "runs": [], "run_summary": {"delta": {"pass_rate": "+0.00", "time_seconds": "+0.0", "tokens": "+0"}}, "notes": []}};
+
+    // ---- State ----
+    let feedbackMap = {};  // run_id -> feedback text
+    let currentIndex = 0;
+    let visitedRuns = new Set();
+
+    // ---- Init ----
+    async function init() {
+      // Load saved feedback from server — but only if this isn't a fresh
+      // iteration (indicated by previous_feedback being present). When
+      // previous feedback exists, the feedback.json on disk is stale from
+      // the prior iteration and should not pre-fill the textareas.
+      const hasPrevious = Object.keys(EMBEDDED_DATA.previous_feedback || {}).length > 0
+        || Object.keys(EMBEDDED_DATA.previous_outputs || {}).length > 0;
+      if (!hasPrevious) {
+        try {
+          const resp = await fetch("/api/feedback");
+          const data = await resp.json();
+          if (data.reviews) {
+            for (const r of data.reviews) feedbackMap[r.run_id] = r.feedback;
+          }
+        } catch { /* first run, no feedback yet */ }
+      }
+
+      document.getElementById("skill-name").textContent = EMBEDDED_DATA.skill_name;
+      showRun(0);
+
+      // Wire up feedback auto-save
+      const textarea = document.getElementById("feedback");
+      let saveTimeout = null;
+      textarea.addEventListener("input", () => {
+        clearTimeout(saveTimeout);
+        document.getElementById("feedback-status").textContent = "";
+        saveTimeout = setTimeout(() => saveCurrentFeedback(), 800);
+      });
+    }
+
+    // ---- Navigation ----
+    function navigate(delta) {
+      const newIndex = currentIndex + delta;
+      if (newIndex >= 0 && newIndex < EMBEDDED_DATA.runs.length) {
+        saveCurrentFeedback();
+        showRun(newIndex);
+      }
+    }
+
+    function updateNavButtons() {
+      document.getElementById("prev-btn").disabled = currentIndex === 0;
+      document.getElementById("next-btn").disabled =
+        currentIndex === EMBEDDED_DATA.runs.length - 1;
+    }
+
+    // ---- Show a run ----
+    function showRun(index) {
+      currentIndex = index;
+      const run = EMBEDDED_DATA.runs[index];
+
+      // Progress
+      document.getElementById("progress").textContent =
+        `${index + 1} of ${EMBEDDED_DATA.runs.length}`;
+
+      // Prompt
+      document.getElementById("prompt-text").textContent = run.prompt;
+
+      // Config badge
+      const badge = document.getElementById("config-badge");
+      const configMatch = run.id.match(/(with_skill|without_skill|new_skill|old_skill)/);
+      if (configMatch) {
+        const config = configMatch[1];
+        const isBaseline = config === "without_skill" || config === "old_skill";
+        badge.textContent = config.replace(/_/g, " ");
+        badge.className = "config-badge " + (isBaseline ? "config-baseline" : "config-primary");
+        badge.style.display = "inline-block";
+      } else {
+        badge.style.display = "none";
+      }
+
+      // Outputs
+      renderOutputs(run);
+
+      // Previous outputs
+      renderPrevOutputs(run);
+
+      // Grades
+      renderGrades(run);
+
+      // Previous feedback
+      const prevFb = (EMBEDDED_DATA.previous_feedback || {})[run.id];
+      const prevEl = document.getElementById("prev-feedback");
+      if (prevFb) {
+        document.getElementById("prev-feedback-text").textContent = prevFb;
+        prevEl.style.display = "block";
+      } else {
+        prevEl.style.display = "none";
+      }
+
+      // Feedback
+      document.getElementById("feedback").value = feedbackMap[run.id] || "";
+      document.getElementById("feedback-status").textContent = "";
+
+      updateNavButtons();
+
+      // Track visited runs and promote done button when all visited
+      visitedRuns.add(index);
+      const doneBtn = document.getElementById("done-btn");
+      if (visitedRuns.size >= EMBEDDED_DATA.runs.length) {
+        doneBtn.classList.add("ready");
+      }
+
+      // Scroll main content to top
+      document.querySelector(".main").scrollTop = 0;
+    }
+
+    // ---- Render outputs ----
+    function renderOutputs(run) {
+      const container = document.getElementById("outputs-body");
+      container.innerHTML = "";
+
+      const outputs = run.outputs || [];
+      if (outputs.length === 0) {
+        container.innerHTML = '<div class="empty-state">No output files</div>';
+        return;
+      }
+
+      for (const file of outputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        // Always show file header with download link
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const content = document.createElement("div");
+        content.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          content.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          content.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          content.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(content, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          content.appendChild(a);
+        } else if (file.type === "error") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          pre.style.color = "var(--red)";
+          content.appendChild(pre);
+        }
+
+        fileDiv.appendChild(content);
+        container.appendChild(fileDiv);
+      }
+    }
+
+    // ---- XLSX rendering via SheetJS ----
+    function renderXlsx(container, b64Data) {
+      try {
+        const raw = Uint8Array.from(atob(b64Data), c => c.charCodeAt(0));
+        const wb = XLSX.read(raw, { type: "array" });
+
+        for (let i = 0; i < wb.SheetNames.length; i++) {
+          const sheetName = wb.SheetNames[i];
+          const ws = wb.Sheets[sheetName];
+
+          if (wb.SheetNames.length > 1) {
+            const sheetLabel = document.createElement("div");
+            sheetLabel.style.cssText =
+              "font-weight:600; font-size:0.8rem; color:#b0aea5; margin-top:0.5rem; margin-bottom:0.25rem;";
+            sheetLabel.textContent = "Sheet: " + sheetName;
+            container.appendChild(sheetLabel);
+          }
+
+          const htmlStr = XLSX.utils.sheet_to_html(ws, { editable: false });
+          const wrapper = document.createElement("div");
+          wrapper.innerHTML = htmlStr;
+          container.appendChild(wrapper);
+        }
+      } catch (err) {
+        container.textContent = "Error rendering spreadsheet: " + err.message;
+      }
+    }
+
+    // ---- Grades ----
+    function renderGrades(run) {
+      const section = document.getElementById("grades-section");
+      const content = document.getElementById("grades-content");
+
+      if (!run.grading) {
+        section.style.display = "none";
+        return;
+      }
+
+      const grading = run.grading;
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("grades-arrow").classList.remove("open");
+
+      const summary = grading.summary || {};
+      const expectations = grading.expectations || [];
+
+      let html = '<div style="padding: 1rem;">';
+
+      // Summary line
+      const passRate = summary.pass_rate != null
+        ? Math.round(summary.pass_rate * 100) + "%"
+        : "?";
+      const badgeClass = summary.pass_rate >= 0.8 ? "grade-pass" : summary.pass_rate >= 0.5 ? "" : "grade-fail";
+      html += '<div class="grades-summary">';
+      html += '<span class="grade-badge ' + badgeClass + '">' + passRate + '</span>';
+      html += '<span>' + (summary.passed || 0) + ' passed, ' + (summary.failed || 0) + ' failed of ' + (summary.total || 0) + '</span>';
+      html += '</div>';
+
+      // Assertions list
+      html += '<ul class="assertion-list">';
+      for (const exp of expectations) {
+        const statusClass = exp.passed ? "pass" : "fail";
+        const statusIcon = exp.passed ? "\u2713" : "\u2717";
+        html += '<li class="assertion-item">';
+        html += '<span class="assertion-status ' + statusClass + '">' + statusIcon + '</span>';
+        html += '<span>' + escapeHtml(exp.text) + '</span>';
+        if (exp.evidence) {
+          html += '<div class="assertion-evidence">' + escapeHtml(exp.evidence) + '</div>';
+        }
+        html += '</li>';
+      }
+      html += '</ul>';
+
+      html += '</div>';
+      content.innerHTML = html;
+    }
+
+    function toggleGrades() {
+      const content = document.getElementById("grades-content");
+      const arrow = document.getElementById("grades-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Previous outputs (collapsible) ----
+    function renderPrevOutputs(run) {
+      const section = document.getElementById("prev-outputs-section");
+      const content = document.getElementById("prev-outputs-content");
+      const prevOutputs = (EMBEDDED_DATA.previous_outputs || {})[run.id];
+
+      if (!prevOutputs || prevOutputs.length === 0) {
+        section.style.display = "none";
+        return;
+      }
+
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("prev-outputs-arrow").classList.remove("open");
+
+      // Render the files into the content area
+      content.innerHTML = "";
+      const wrapper = document.createElement("div");
+      wrapper.style.padding = "1rem";
+
+      for (const file of prevOutputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const fc = document.createElement("div");
+        fc.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          fc.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          fc.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          fc.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(fc, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          fc.appendChild(a);
+        }
+
+        fileDiv.appendChild(fc);
+        wrapper.appendChild(fileDiv);
+      }
+
+      content.appendChild(wrapper);
+    }
+
+    function togglePrevOutputs() {
+      const content = document.getElementById("prev-outputs-content");
+      const arrow = document.getElementById("prev-outputs-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Feedback (saved to server -> feedback.json) ----
+    function saveCurrentFeedback() {
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // Build reviews array from map
+      const reviews = [];
+      for (const [run_id, feedback] of Object.entries(feedbackMap)) {
+        if (feedback.trim()) {
+          reviews.push({ run_id, feedback, timestamp: new Date().toISOString() });
+        }
+      }
+
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reviews, status: "in_progress" }),
+      }).then(() => {
+        document.getElementById("feedback-status").textContent = "Saved";
+      }).catch(() => {
+        // Static mode or server unavailable — no-op on auto-save,
+        // feedback will be downloaded on final submit
+        document.getElementById("feedback-status").textContent = "Will download on submit";
+      });
+    }
+
+    // ---- Done ----
+    function showDoneDialog() {
+      // Save current textarea to feedbackMap (but don't POST yet)
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // POST once with status: complete — include ALL runs so the model
+      // can distinguish "no feedback" (looks good) from "not reviewed"
+      const reviews = [];
+      const ts = new Date().toISOString();
+      for (const r of EMBEDDED_DATA.runs) {
+        reviews.push({ run_id: r.id, feedback: feedbackMap[r.id] || "", timestamp: ts });
+      }
+      const payload = JSON.stringify({ reviews, status: "complete" }, null, 2);
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+      }).then(() => {
+        document.getElementById("done-overlay").classList.add("visible");
+      }).catch(() => {
+        // Server not available (static mode) — download as file
+        const blob = new Blob([payload], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "feedback.json";
+        a.click();
+        URL.revokeObjectURL(url);
+        document.getElementById("done-overlay").classList.add("visible");
+      });
+    }
+
+    function closeDoneDialog() {
+      // Reset status back to in_progress
+      saveCurrentFeedback();
+      document.getElementById("done-overlay").classList.remove("visible");
+    }
+
+    // ---- Toast ----
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("visible");
+      setTimeout(() => toast.classList.remove("visible"), 2000);
+    }
+
+    // ---- Keyboard nav ----
+    document.addEventListener("keydown", (e) => {
+      // Don't capture when typing in textarea
+      if (e.target.tagName === "TEXTAREA") return;
+
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        e.preventDefault();
+        navigate(-1);
+      } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        e.preventDefault();
+        navigate(1);
+      }
+    });
+
+    // ---- Util ----
+    function getDownloadUri(file) {
+      if (file.data_uri) return file.data_uri;
+      if (file.data_b64) return "data:application/octet-stream;base64," + file.data_b64;
+      if (file.type === "text") return "data:text/plain;charset=utf-8," + encodeURIComponent(file.content);
+      return "#";
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // ---- View switching ----
+    function switchView(view) {
+      document.querySelectorAll(".view-tab").forEach(t => t.classList.remove("active"));
+      document.querySelectorAll(".view-panel").forEach(p => p.classList.remove("active"));
+      document.querySelector(`[onclick="switchView('${view}')"]`).classList.add("active");
+      document.getElementById("panel-" + view).classList.add("active");
+    }
+
+    // ---- Benchmark rendering ----
+    function renderBenchmark() {
+      const data = EMBEDDED_DATA.benchmark;
+      if (!data) return;
+
+      // Show the tabs
+      document.getElementById("view-tabs").style.display = "flex";
+
+      const container = document.getElementById("benchmark-content");
+      const summary = data.run_summary || {};
+      const metadata = data.metadata || {};
+      const notes = data.notes || [];
+
+      let html = "";
+
+      // Header
+      html += "<h2 style='font-family: Poppins, sans-serif; margin-bottom: 0.5rem;'>Benchmark Results</h2>";
+      html += "<p style='color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;'>";
+      if (metadata.skill_name) html += "<strong>" + escapeHtml(metadata.skill_name) + "</strong> &mdash; ";
+      if (metadata.timestamp) html += metadata.timestamp + " &mdash; ";
+      if (metadata.evals_run) html += "Evals: " + metadata.evals_run.join(", ") + " &mdash; ";
+      html += (metadata.runs_per_configuration || "?") + " runs per configuration";
+      html += "</p>";
+
+      // Summary table
+      html += '<table class="benchmark-table">';
+
+      function fmtStat(stat, pct) {
+        if (!stat) return "—";
+        const suffix = pct ? "%" : "";
+        const m = pct ? (stat.mean * 100).toFixed(0) : stat.mean.toFixed(1);
+        const s = pct ? (stat.stddev * 100).toFixed(0) : stat.stddev.toFixed(1);
+        return m + suffix + " ± " + s + suffix;
+      }
+
+      function deltaClass(val) {
+        if (!val) return "";
+        const n = parseFloat(val);
+        if (n > 0) return "benchmark-delta-positive";
+        if (n < 0) return "benchmark-delta-negative";
+        return "";
+      }
+
+      // Discover config names dynamically (everything except "delta")
+      const configs = Object.keys(summary).filter(k => k !== "delta");
+      const configA = configs[0] || "config_a";
+      const configB = configs[1] || "config_b";
+      const labelA = configA.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const labelB = configB.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const a = summary[configA] || {};
+      const b = summary[configB] || {};
+      const delta = summary.delta || {};
+
+      html += "<thead><tr><th>Metric</th><th>" + escapeHtml(labelA) + "</th><th>" + escapeHtml(labelB) + "</th><th>Delta</th></tr></thead>";
+      html += "<tbody>";
+
+      html += "<tr><td><strong>Pass Rate</strong></td>";
+      html += "<td>" + fmtStat(a.pass_rate, true) + "</td>";
+      html += "<td>" + fmtStat(b.pass_rate, true) + "</td>";
+      html += '<td class="' + deltaClass(delta.pass_rate) + '">' + (delta.pass_rate || "—") + "</td></tr>";
+
+      // Time (only show row if data exists)
+      if (a.time_seconds || b.time_seconds) {
+        html += "<tr><td><strong>Time (s)</strong></td>";
+        html += "<td>" + fmtStat(a.time_seconds, false) + "</td>";
+        html += "<td>" + fmtStat(b.time_seconds, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.time_seconds) + '">' + (delta.time_seconds ? delta.time_seconds + "s" : "—") + "</td></tr>";
+      }
+
+      // Tokens (only show row if data exists)
+      if (a.tokens || b.tokens) {
+        html += "<tr><td><strong>Tokens</strong></td>";
+        html += "<td>" + fmtStat(a.tokens, false) + "</td>";
+        html += "<td>" + fmtStat(b.tokens, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.tokens) + '">' + (delta.tokens || "—") + "</td></tr>";
+      }
+
+      html += "</tbody></table>";
+
+      // Per-eval breakdown (if runs data available)
+      const runs = data.runs || [];
+      if (runs.length > 0) {
+        const evalIds = [...new Set(runs.map(r => r.eval_id))].sort((a, b) => a - b);
+
+        html += "<h3 style='font-family: Poppins, sans-serif; margin-bottom: 0.75rem;'>Per-Eval Breakdown</h3>";
+
+        const hasTime = runs.some(r => r.result && r.result.time_seconds != null);
+        const hasErrors = runs.some(r => r.result && r.result.errors > 0);
+
+        for (const evalId of evalIds) {
+          const evalRuns = runs.filter(r => r.eval_id === evalId);
+          const evalName = evalRuns[0] && evalRuns[0].eval_name ? evalRuns[0].eval_name : "Eval " + evalId;
+
+          html += "<h4 style='font-family: Poppins, sans-serif; margin: 1rem 0 0.5rem; color: var(--text);'>" + escapeHtml(evalName) + "</h4>";
+          html += '<table class="benchmark-table">';
+          html += "<thead><tr><th>Config</th><th>Run</th><th>Pass Rate</th>";
+          if (hasTime) html += "<th>Time (s)</th>";
+          if (hasErrors) html += "<th>Crashes During Execution</th>";
+          html += "</tr></thead>";
+          html += "<tbody>";
+
+          // Group by config and render with average rows
+          const configGroups = [...new Set(evalRuns.map(r => r.configuration))];
+          for (let ci = 0; ci < configGroups.length; ci++) {
+            const config = configGroups[ci];
+            const configRuns = evalRuns.filter(r => r.configuration === config);
+            if (configRuns.length === 0) continue;
+
+            const rowClass = ci === 0 ? "benchmark-row-with" : "benchmark-row-without";
+            const configLabel = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+
+            for (const run of configRuns) {
+              const r = run.result || {};
+              const prClass = r.pass_rate >= 0.8 ? "benchmark-delta-positive" : r.pass_rate < 0.5 ? "benchmark-delta-negative" : "";
+              html += '<tr class="' + rowClass + '">';
+              html += "<td>" + configLabel + "</td>";
+              html += "<td>" + run.run_number + "</td>";
+              html += '<td class="' + prClass + '">' + ((r.pass_rate || 0) * 100).toFixed(0) + "% (" + (r.passed || 0) + "/" + (r.total || 0) + ")</td>";
+              if (hasTime) html += "<td>" + (r.time_seconds != null ? r.time_seconds.toFixed(1) : "—") + "</td>";
+              if (hasErrors) html += "<td>" + (r.errors || 0) + "</td>";
+              html += "</tr>";
+            }
+
+            // Average row
+            const rates = configRuns.map(r => (r.result || {}).pass_rate || 0);
+            const avgRate = rates.reduce((a, b) => a + b, 0) / rates.length;
+            const avgPrClass = avgRate >= 0.8 ? "benchmark-delta-positive" : avgRate < 0.5 ? "benchmark-delta-negative" : "";
+            html += '<tr class="benchmark-row-avg ' + rowClass + '">';
+            html += "<td>" + configLabel + "</td>";
+            html += "<td>Avg</td>";
+            html += '<td class="' + avgPrClass + '">' + (avgRate * 100).toFixed(0) + "%</td>";
+            if (hasTime) {
+              const times = configRuns.map(r => (r.result || {}).time_seconds).filter(t => t != null);
+              html += "<td>" + (times.length ? (times.reduce((a, b) => a + b, 0) / times.length).toFixed(1) : "—") + "</td>";
+            }
+            if (hasErrors) html += "<td></td>";
+            html += "</tr>";
+          }
+          html += "</tbody></table>";
+
+          // Per-assertion detail for this eval
+          const runsWithExpectations = {};
+          for (const config of configGroups) {
+            runsWithExpectations[config] = evalRuns.filter(r => r.configuration === config && r.expectations && r.expectations.length > 0);
+          }
+          const hasAnyExpectations = Object.values(runsWithExpectations).some(runs => runs.length > 0);
+          if (hasAnyExpectations) {
+            // Collect all unique assertion texts across all configs
+            const allAssertions = [];
+            const seen = new Set();
+            for (const config of configGroups) {
+              for (const run of runsWithExpectations[config]) {
+                for (const exp of (run.expectations || [])) {
+                  if (!seen.has(exp.text)) {
+                    seen.add(exp.text);
+                    allAssertions.push(exp.text);
+                  }
+                }
+              }
+            }
+
+            html += '<table class="benchmark-table" style="margin-top: 0.5rem;">';
+            html += "<thead><tr><th>Assertion</th>";
+            for (const config of configGroups) {
+              const label = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+              html += "<th>" + escapeHtml(label) + "</th>";
+            }
+            html += "</tr></thead><tbody>";
+
+            for (const assertionText of allAssertions) {
+              html += "<tr><td>" + escapeHtml(assertionText) + "</td>";
+
+              for (const config of configGroups) {
+                html += "<td>";
+                for (const run of runsWithExpectations[config]) {
+                  const exp = (run.expectations || []).find(e => e.text === assertionText);
+                  if (exp) {
+                    const cls = exp.passed ? "benchmark-delta-positive" : "benchmark-delta-negative";
+                    const icon = exp.passed ? "\u2713" : "\u2717";
+                    html += '<span class="' + cls + '" title="Run ' + run.run_number + ': ' + escapeHtml(exp.evidence || "") + '">' + icon + "</span> ";
+                  } else {
+                    html += "— ";
+                  }
+                }
+                html += "</td>";
+              }
+              html += "</tr>";
+            }
+            html += "</tbody></table>";
+          }
+        }
+      }
+
+      // Notes
+      if (notes.length > 0) {
+        html += '<div class="benchmark-notes">';
+        html += "<h3>Analysis Notes</h3>";
+        html += "<ul>";
+        for (const note of notes) {
+          html += "<li>" + escapeHtml(note) + "</li>";
+        }
+        html += "</ul></div>";
+      }
+
+      container.innerHTML = html;
+    }
+
+    // ---- Start ----
+    init();
+    renderBenchmark();
+  </script>
+</body>
+</html>

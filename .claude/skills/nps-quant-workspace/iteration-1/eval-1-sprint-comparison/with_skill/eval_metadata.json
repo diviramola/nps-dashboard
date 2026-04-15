@@ -1,0 +1,12 @@
+{
+  "eval_id": 1,
+  "eval_name": "sprint-comparison",
+  "prompt": "What's the NPS for Sprint RSP3? How does it compare to RSP2 — is the change significant?",
+  "assertions": [
+    {"text": "Includes NPS score for RSP3 with 95% CI and sample size", "type": "manual"},
+    {"text": "Includes NPS score for RSP2 with 95% CI and sample size", "type": "manual"},
+    {"text": "Runs significance test with p-value", "type": "manual"},
+    {"text": "States whether change is or is not statistically significant", "type": "manual"},
+    {"text": "Includes confidence level assessment (high/medium/low)", "type": "manual"}
+  ]
+}

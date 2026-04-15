@@ -1,0 +1,12 @@
+{
+  "eval_id": 1,
+  "eval_name": "detractor-complaints",
+  "prompt": "What are the top complaints from detractors in Sprint 14? Show me the actual verbatims — I want to hear customer voice.",
+  "assertions": [
+    {"text": "Shows theme distribution for detractors ranked by count", "type": "manual"},
+    {"text": "Presents 3-5 verbatims per top theme", "type": "manual"},
+    {"text": "Preserves original Hindi/Hinglish language in verbatims", "type": "manual"},
+    {"text": "Each verbatim includes score, channel, theme metadata", "type": "manual"},
+    {"text": "Notes sample size and data source", "type": "manual"}
+  ]
+}

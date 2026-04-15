@@ -1,0 +1,11 @@
+{
+  "eval_id": 3,
+  "eval_name": "promoter-pricing",
+  "prompt": "What are promoters saying about pricing across all sprints? I want to understand why people think we're affordable.",
+  "assertions": [
+    {"text": "Filters to promoters (score 9-10) with pricing theme", "type": "manual"},
+    {"text": "Presents verbatims explaining affordability perception", "type": "manual"},
+    {"text": "Preserves Hindi/Hinglish language", "type": "manual"},
+    {"text": "Shows volume context (count across sprints)", "type": "manual"}
+  ]
+}

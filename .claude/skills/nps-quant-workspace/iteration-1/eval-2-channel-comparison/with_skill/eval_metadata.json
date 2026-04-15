@@ -1,0 +1,11 @@
+{
+  "eval_id": 2,
+  "eval_name": "channel-comparison",
+  "prompt": "Show me NPS by channel (WhatsApp vs CleverTap) for the last 3 sprints. Which channel is performing better?",
+  "assertions": [
+    {"text": "Shows NPS for both WhatsApp and CleverTap per sprint", "type": "manual"},
+    {"text": "Includes CIs and sample sizes for each channel-sprint combination", "type": "manual"},
+    {"text": "States which channel performs better with evidence", "type": "manual"},
+    {"text": "Runs significance test on the channel difference", "type": "manual"}
+  ]
+}

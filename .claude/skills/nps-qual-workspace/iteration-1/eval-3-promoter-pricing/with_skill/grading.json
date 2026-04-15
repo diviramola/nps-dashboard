@@ -1,0 +1,29 @@
+{
+  "eval_id": 3,
+  "eval_name": "promoter-pricing",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Filters to promoters (score 9-10) with pricing theme",
+      "passed": true,
+      "evidence": "Explicitly filters for scores 9-10 with nps_reason_primary in [Affordable, Expensive, 28-Day Plan Issue]. All verbatims show NPS 9 or 10."
+    },
+    {
+      "text": "Presents verbatims explaining affordability perception",
+      "passed": true,
+      "evidence": "30+ verbatims organized into 6 thematic clusters: Budget-Friendly, Quality+Low Price, Zero Installation Cost, Value for Money, Middle-Class Accessibility, Better Than Competitors"
+    },
+    {
+      "text": "Preserves Hindi/Hinglish language",
+      "passed": true,
+      "evidence": "Hindi/Hinglish verbatims preserved in original form with English translations. Mix of romanized Hindi and Devanagari script maintained."
+    },
+    {
+      "text": "Shows volume context (count across sprints)",
+      "passed": true,
+      "evidence": "Data Quality Notes: '48+ across all sprints', broken down by reason type (Affordable ~35, 28-Day ~3, Expensive ~5). 17 sprints analyzed."
+    }
+  ],
+  "pass_rate": 1.0,
+  "notes": "Rich qualitative analysis. Goes beyond listing verbatims to identify sub-themes within pricing perception. Nuanced treatment of 28-day billing mentions by promoters and 'expensive' secondary reasons. Methodology section properly documents evocativeness scoring."
+}

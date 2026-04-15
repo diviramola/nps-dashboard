@@ -1,0 +1,23 @@
+{
+  "skill_name": "nps-qual",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "What are the top complaints from detractors in Sprint 14? Show me the actual verbatims — I want to hear customer voice.",
+      "expected_output": "Theme distribution for detractors in Sprint 14, ranked by count. 3-5 evocative verbatims per top theme, with original Hindi/Hinglish preserved and English translation where needed. Each verbatim tagged with score, channel, theme.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Compare themes between Sprint RSP2 and RSP3 — any emerging issues or things getting resolved?",
+      "expected_output": "Theme comparison showing emerging, resolved, growing, shrinking themes with percentage point changes. Should cite sample sizes and note which sprint has more/fewer themed responses.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "What are promoters saying about pricing across all sprints? I want to understand why people think we're affordable.",
+      "expected_output": "Filter to promoters with pricing_value theme, show verbatims that explain the 'affordable' perception. Should preserve Hindi/Hinglish and provide volume context.",
+      "files": []
+    }
+  ]
+}

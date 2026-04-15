@@ -138,14 +138,45 @@ Each sprint CSV has these columns: respondent_id, score (0-10), feedback (Hindi/
 
 NPS classification: Promoter (9-10), Passive (7-8), Detractor (0-6).
 
-## Credentials
+## Credentials & Metabase Connection
 
-All API keys in `C:\credentials\.env`:
+All API keys live in `C:\credentials\.env` (never committed to version control). To connect to Metabase:
+
+1. **Read the API key** from `C:\credentials\.env` — the key is `METABASE_API_KEY` (starts with `mb_`)
+2. **Base URL**: `https://metabase.wiom.in`
+3. **Database ID**: `1` (Snowflake / Postgres RDS)
+4. **Auth header**: `X-API-Key: <your METABASE_API_KEY value>`
+
+### Metabase API Usage
+
+Query endpoint: `POST https://metabase.wiom.in/api/dataset`
+
+```json
+{
+  "database": 1,
+  "type": "native",
+  "native": {
+    "query": "SELECT PHONE_NUMBER, CITY, DEVICE_TYPE, INSTALL_DATE, DATEDIFF('day', INSTALL_DATE, CURRENT_DATE()) AS TENURE_DAYS FROM POSTGRES_RDS_PUBLIC.ACTIVE_BASE WHERE PHONE_NUMBER IN ('9876543210', '9123456789')"
+  }
+}
 ```
-METABASE_API_KEY=mb_...
-METABASE_URL=https://metabase.wiom.in
-METABASE_DATABASE_ID=1
+
+### Enrichment Script
+
+Run from **local machine** (Metabase is not reachable from sandboxed environments):
+
+```bash
+cd "C:\Users\divir\claude code\wiom-nps-analysis"
+python scripts/enrich_from_metabase.py              # all sprints
+python scripts/enrich_from_metabase.py --sprint sprint_rsp5.csv  # one sprint
+python scripts/enrich_from_metabase.py --dry-run     # preview only
 ```
+
+The script reads phone numbers from sprint CSVs, queries Metabase in batches of 500, and fills in `city`, `tenure_days`, and `device` where missing. It also writes enrichment sidecar JSONs to `data/enrichment/`.
+
+### Network Note
+
+Metabase is only reachable from the local network or VPN. Cowork/sandbox environments cannot reach `metabase.wiom.in` due to egress restrictions. Always run enrichment scripts locally.
 
 ## Relationship to user-insights-agents
 

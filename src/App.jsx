@@ -57,7 +57,7 @@ export default function App() {
 
         for (const fileName of fileNames) {
           try {
-            const result = await loadCSVFromURL(`./data/sprints/${fileName}`);
+            const result = await loadCSVFromURL(`./data/${fileName}`);
             allRecords.push(...result.records);
             log.push({
               name: fileName,

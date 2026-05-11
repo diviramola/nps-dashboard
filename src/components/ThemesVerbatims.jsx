@@ -11,16 +11,99 @@ const GRANULARITY_OPTIONS = [
   { value: 'quarter', label: 'Quarter' },
 ];
 
+const SCORE_BG = {
+  0: '#D04040', 1: '#D04040', 2: '#D44', 3: '#D85050', 4: '#DD6060',
+  5: '#E07020', 6: '#E89820',
+  7: '#E8B818', 8: '#C8B030',
+  9: '#2E9E5E', 10: '#228B4A',
+};
+
+function ScorePill({ score, band }) {
+  return (
+    <span style={{
+      display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+      width: 32, height: 32, borderRadius: '50%',
+      background: SCORE_BG[score] || '#999', color: 'white',
+      fontWeight: 700, fontSize: 13, flexShrink: 0,
+    }}>
+      {score}
+    </span>
+  );
+}
+
+function ThemePill({ theme }) {
+  const label = THEME_LABELS[theme] || theme;
+  const color = THEME_COLORS[theme] || '#999';
+  return (
+    <span style={{
+      display: 'inline-block', padding: '2px 8px', borderRadius: 10,
+      fontSize: 10, fontWeight: 600, letterSpacing: 0.3,
+      background: color + '18', color: color, border: `1px solid ${color}40`,
+    }}>
+      {label}
+    </span>
+  );
+}
+
+function VerbatimCard({ v }) {
+  const borderColor = v.score_band === 'promoter' ? NPS_COLORS.promoter
+    : v.score_band === 'detractor' ? NPS_COLORS.detractor
+    : NPS_COLORS.passive;
+
+  return (
+    <div style={{
+      display: 'flex', gap: 14, padding: '14px 16px',
+      background: 'white', borderRadius: 8,
+      border: '1px solid var(--border)',
+      borderLeft: `4px solid ${borderColor}`,
+      marginBottom: 8,
+      transition: 'box-shadow 0.15s',
+    }}
+    onMouseEnter={e => e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.07)'}
+    onMouseLeave={e => e.currentTarget.style.boxShadow = 'none'}
+    >
+      <ScorePill score={v.score} band={v.score_band} />
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', marginBottom: 6 }}>
+          {v.theme && <ThemePill theme={v.theme} />}
+          {v.nps_reason_primary && v.nps_reason_primary !== 'N/A' && (
+            <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>
+              {v.nps_reason_primary}
+            </span>
+          )}
+          <span style={{ fontSize: 10, color: 'var(--text-muted)', marginLeft: 'auto', whiteSpace: 'nowrap' }}>
+            {SPRINT_MONTH_MAP[v.sprint_id] || v.sprint_id}
+            {v.source ? ` · ${v.source}` : ''}
+          </span>
+        </div>
+        <div style={{
+          color: 'var(--text)', lineHeight: 1.7, fontSize: 13,
+          fontFamily: "'Noto Sans', 'Noto Sans Devanagari', sans-serif",
+        }}>
+          {v.feedback}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ThemesVerbatims({ records, sprints }) {
+  // ─── Default to last 3 sprints ───
+  const last3Sprints = useMemo(() => {
+    return sprints.slice(-3);
+  }, [sprints]);
+
   // ─── Period filter ───
   const [granularity, setGranularity] = useState('sprint');
-  const [selectedPeriod, setSelectedPeriod] = useState('all');
+  const [selectedPeriod, setSelectedPeriod] = useState('recent');
   const [comparePeriod, setComparePeriod] = useState('none');
 
-  // ─── Verbatim-level filters (shown at top of verbatims section) ───
+  // ─── Verbatim-level filters ───
   const [selectedTheme, setSelectedTheme] = useState('all');
   const [selectedBand, setSelectedBand] = useState('all');
   const [searchText, setSearchText] = useState('');
+  const [viewMode, setViewMode] = useState('list'); // 'list' or 'grouped'
+  const [showCount, setShowCount] = useState(30);
 
   // Available periods
   const periods = useMemo(() => {
@@ -32,10 +115,13 @@ export default function ThemesVerbatims({ records, sprints }) {
   // Filter records by period
   const filtered = useMemo(() => {
     if (selectedPeriod === 'all') return records;
+    if (selectedPeriod === 'recent') {
+      return records.filter(r => last3Sprints.includes(r.sprint_id));
+    }
     if (granularity === 'sprint') return records.filter(r => r.sprint_id === selectedPeriod);
     if (granularity === 'month') return records.filter(r => r.month === selectedPeriod);
     return records.filter(r => r.quarter === selectedPeriod);
-  }, [records, selectedPeriod, granularity]);
+  }, [records, selectedPeriod, granularity, last3Sprints]);
 
   const periodLabel = (p) => granularity === 'sprint' ? `${p} (${SPRINT_MONTH_MAP[p] || ''})` : p;
 
@@ -99,14 +185,14 @@ export default function ThemesVerbatims({ records, sprints }) {
     return { positiveThemes, negativeThemes };
   }, [filtered]);
 
-  // ─── Available themes (for verbatim filter dropdown) ───
+  // ─── Available themes (only classified, for filter dropdown) ───
   const availableThemes = useMemo(() => {
     return [...new Set(filtered.filter(r => r.theme).map(r => r.theme))].sort();
   }, [filtered]);
 
   // ─── Theme comparison ───
   const themeChanges = useMemo(() => {
-    if (comparePeriod === 'none' || selectedPeriod === 'all') return null;
+    if (comparePeriod === 'none' || selectedPeriod === 'all' || selectedPeriod === 'recent') return null;
     const filterKey = granularity === 'sprint' ? 'sprint_id' : granularity === 'month' ? 'month' : 'quarter';
     const recs1 = records.filter(r => r[filterKey] === comparePeriod);
     const recs2 = records.filter(r => r[filterKey] === selectedPeriod);
@@ -114,18 +200,36 @@ export default function ThemesVerbatims({ records, sprints }) {
     return getThemeChanges(recs1, recs2);
   }, [records, selectedPeriod, comparePeriod, granularity]);
 
-  // ─── Verbatims with filters ───
+  // ─── Verbatims — ONLY classified (has theme), not unclassified ───
   const verbatims = useMemo(() => {
-    let base = filtered;
+    let base = filtered.filter(r => r.theme && r.theme !== ''); // exclude unclassified
     if (selectedBand !== 'all') base = base.filter(r => r.score_band === selectedBand);
     if (selectedTheme !== 'all') base = base.filter(r => r.theme === selectedTheme);
-    const results = getVerbatims(base, { limit: 40 });
+    const results = getVerbatims(base, { limit: 100 });
     if (searchText.trim()) {
       const q = searchText.toLowerCase().trim();
       return results.filter(v => v.feedback && v.feedback.toLowerCase().includes(q));
     }
     return results;
   }, [filtered, selectedTheme, selectedBand, searchText]);
+
+  // ─── Grouped verbatims (by theme) ───
+  const groupedVerbatims = useMemo(() => {
+    if (viewMode !== 'grouped') return {};
+    const groups = {};
+    verbatims.forEach(v => {
+      const t = v.theme || 'other';
+      if (!groups[t]) groups[t] = [];
+      groups[t].push(v);
+    });
+    // Sort groups by count descending
+    const sorted = Object.entries(groups).sort((a, b) => b[1].length - a[1].length);
+    return Object.fromEntries(sorted);
+  }, [verbatims, viewMode]);
+
+  const recentLabel = last3Sprints.length > 0
+    ? `${SPRINT_MONTH_MAP[last3Sprints[0]] || last3Sprints[0]} – ${SPRINT_MONTH_MAP[last3Sprints[last3Sprints.length - 1]] || last3Sprints[last3Sprints.length - 1]}`
+    : 'Recent';
 
   return (
     <div>
@@ -136,7 +240,7 @@ export default function ThemesVerbatims({ records, sprints }) {
           <div className="toggle-group">
             {GRANULARITY_OPTIONS.map(opt => (
               <button key={opt.value} className={`toggle-btn ${granularity === opt.value ? 'active' : ''}`}
-                onClick={() => { setGranularity(opt.value); setSelectedPeriod('all'); setComparePeriod('none'); }}>
+                onClick={() => { setGranularity(opt.value); setSelectedPeriod(opt.value === 'sprint' ? 'recent' : 'all'); setComparePeriod('none'); }}>
                 {opt.label}
               </button>
             ))}
@@ -145,12 +249,15 @@ export default function ThemesVerbatims({ records, sprints }) {
         <div className="filter-group">
           <span className="filter-label">Period</span>
           <select className="filter-select" value={selectedPeriod}
-            onChange={e => { setSelectedPeriod(e.target.value); setComparePeriod('none'); }}>
-            <option value="all">All</option>
+            onChange={e => { setSelectedPeriod(e.target.value); setComparePeriod('none'); setShowCount(30); }}>
+            {granularity === 'sprint' && (
+              <option value="recent">Last 3 sprints ({recentLabel})</option>
+            )}
+            <option value="all">All Time</option>
             {periods.map(p => <option key={p} value={p}>{periodLabel(p)}</option>)}
           </select>
         </div>
-        {selectedPeriod !== 'all' && (
+        {selectedPeriod !== 'all' && selectedPeriod !== 'recent' && (
           <div className="filter-group">
             <span className="filter-label">Compare With</span>
             <select className="filter-select" value={comparePeriod} onChange={e => setComparePeriod(e.target.value)}>
@@ -270,9 +377,9 @@ export default function ThemesVerbatims({ records, sprints }) {
         </div>
       )}
 
-      {/* ─── Verbatims with own filters at top ─── */}
+      {/* ─── Verbatims Section ─── */}
       <div className="card">
-        {/* Verbatim filter row — NPS type, theme, search */}
+        {/* Verbatim filter row */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center', marginBottom: 14, paddingBottom: 14, borderBottom: '1px solid var(--border)' }}>
           <div className="filter-group" style={{ margin: 0 }}>
             <span className="filter-label">NPS Type</span>
@@ -296,11 +403,21 @@ export default function ThemesVerbatims({ records, sprints }) {
             </select>
           </div>
 
+          <div className="filter-group" style={{ margin: 0 }}>
+            <span className="filter-label">Layout</span>
+            <div className="toggle-group">
+              <button className={`toggle-btn ${viewMode === 'list' ? 'active' : ''}`}
+                onClick={() => setViewMode('list')}>List</button>
+              <button className={`toggle-btn ${viewMode === 'grouped' ? 'active' : ''}`}
+                onClick={() => setViewMode('grouped')}>By Theme</button>
+            </div>
+          </div>
+
           {(selectedTheme !== 'all' || selectedBand !== 'all') && (
             <button
               style={{ fontSize: 11, color: 'var(--wiom-pink)', background: 'none', border: '1px solid var(--wiom-pink)', borderRadius: 'var(--radius-sm)', cursor: 'pointer', padding: '4px 8px' }}
               onClick={() => { setSelectedTheme('all'); setSelectedBand('all'); setSearchText(''); }}>
-              Clear
+              Clear Filters
             </button>
           )}
 
@@ -324,32 +441,67 @@ export default function ThemesVerbatims({ records, sprints }) {
         </div>
 
         {/* Title with count */}
-        <div className="card-title" style={{ marginBottom: 12 }}>
-          Verbatims
+        <div className="card-title" style={{ marginBottom: 14 }}>
+          Customer Voice
           {selectedTheme !== 'all' && ` — ${THEME_LABELS[selectedTheme] || selectedTheme}`}
           {selectedBand !== 'all' && ` — ${selectedBand}s`}
           <span style={{ fontWeight: 400, fontSize: 12, color: 'var(--text-secondary)', marginLeft: 8 }}>
-            ({verbatims.length} shown)
+            {verbatims.length} classified comments
           </span>
         </div>
 
         {verbatims.length === 0 ? (
           <p style={{ color: 'var(--text-secondary)', fontSize: 13, marginTop: 8 }}>
-            No feedback matching the current filters. Try broadening your selection.
+            No classified feedback matching the current filters. Try broadening your selection.
           </p>
-        ) : (
-          verbatims.map((v, i) => (
-            <div key={i} className={`verbatim ${v.score_band}`}>
-              <div className="verbatim-meta">
-                <span className={`badge ${v.score_band}`}>NPS {v.score}</span>
-                {' '}&middot;{' '}
-                {THEME_LABELS[v.theme] || v.nps_reason_primary || 'No theme'}
-                {' '}&middot;{' '}{v.sprint_id}
-                {' '}&middot;{' '}{v.source}
+        ) : viewMode === 'grouped' ? (
+          /* ─── Grouped by Theme ─── */
+          Object.entries(groupedVerbatims).map(([theme, items]) => (
+            <div key={theme} style={{ marginBottom: 20 }}>
+              <div style={{
+                display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10,
+                paddingBottom: 6, borderBottom: `2px solid ${THEME_COLORS[theme] || '#ddd'}`,
+              }}>
+                <span style={{
+                  width: 10, height: 10, borderRadius: '50%',
+                  background: THEME_COLORS[theme] || '#999', flexShrink: 0,
+                }} />
+                <span style={{ fontWeight: 600, fontSize: 14, color: 'var(--text)' }}>
+                  {THEME_LABELS[theme] || theme}
+                </span>
+                <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>
+                  {items.length} comments
+                </span>
               </div>
-              <div className="verbatim-text">{v.feedback}</div>
+              {items.slice(0, 8).map((v, i) => (
+                <VerbatimCard key={i} v={v} />
+              ))}
+              {items.length > 8 && (
+                <div style={{ fontSize: 11, color: 'var(--text-muted)', textAlign: 'center', padding: 6 }}>
+                  + {items.length - 8} more in this theme
+                </div>
+              )}
             </div>
           ))
+        ) : (
+          /* ─── Flat List ─── */
+          <>
+            {verbatims.slice(0, showCount).map((v, i) => (
+              <VerbatimCard key={i} v={v} />
+            ))}
+            {verbatims.length > showCount && (
+              <button
+                onClick={() => setShowCount(s => s + 30)}
+                style={{
+                  display: 'block', width: '100%', padding: '10px',
+                  background: 'var(--bg)', border: '1px solid var(--border)',
+                  borderRadius: 'var(--radius-sm)', cursor: 'pointer',
+                  fontSize: 12, color: 'var(--text-secondary)', marginTop: 8,
+                }}>
+                Show more ({verbatims.length - showCount} remaining)
+              </button>
+            )}
+          </>
         )}
       </div>
     </div>

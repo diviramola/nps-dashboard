@@ -72,8 +72,13 @@ export function parseRow(row, columnMap) {
     ? rawTenureCut
     : assignTenureCut(tenureDays);
 
-  // first_time_user: 'Yes', 'No', or '' (only available in newer sprints)
-  const firstTimeUser = getVal('first_time_user');
+  // first_time_user: normalize varied labels to 'Yes', 'No', or ''
+  const rawFT = getVal('first_time_user').toLowerCase();
+  const firstTimeUser = rawFT.startsWith('yes') || rawFT.includes('first') || rawFT.includes('पहले वाई')
+    ? 'Yes'
+    : rawFT.startsWith('no') || rawFT.startsWith('नहीं') || rawFT.includes('had')
+    ? 'No'
+    : '';
 
   return {
     respondent_id: respondentId,

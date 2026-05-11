@@ -13,6 +13,7 @@ export const SPRINT_MONTH_MAP = {
   'Sprint 13': "Jan-1H '26", 'Sprint 14': "Jan-2H '26",
   'Sprint RSP1': "Feb-1H '26", 'Sprint RSP2': "Feb-2H '26",
   'Sprint RSP3': "Mar-1H '26", 'Sprint RSP4': "Mar-2H '26", 'Sprint RSP5': "Apr-1H '26",
+  'Sprint RSP6': "Apr-2H '26", 'Sprint RSP7': "May-1H '26",
 };
 
 // Short tick labels for chart x-axes (saves horizontal space)
@@ -26,6 +27,7 @@ export const SPRINT_SHORT_MAP = {
   'Sprint 13': 'Jan-1H', 'Sprint 14': 'Jan-2H',
   'Sprint RSP1': 'Feb-1H', 'Sprint RSP2': 'Feb-2H',
   'Sprint RSP3': 'Mar-1H', 'Sprint RSP4': 'Mar-2H', 'Sprint RSP5': 'Apr-1H',
+  'Sprint RSP6': 'Apr-2H', 'Sprint RSP7': 'May-1H',
 };
 
 // Sprint → month aggregation
@@ -39,6 +41,7 @@ export const SPRINT_TO_MONTH = {
   'Sprint 13': "Jan '26", 'Sprint 14': "Jan '26",
   'Sprint RSP1': "Feb '26", 'Sprint RSP2': "Feb '26",
   'Sprint RSP3': "Mar '26", 'Sprint RSP4': "Mar '26", 'Sprint RSP5': "Apr '26",
+  'Sprint RSP6': "Apr '26", 'Sprint RSP7': "May '26",
 };
 
 // Sprint → quarter aggregation
@@ -52,6 +55,7 @@ export const SPRINT_TO_QUARTER = {
   'Sprint 13': "Q3 FY26 (Jan-Mar '26)", 'Sprint 14': "Q3 FY26 (Jan-Mar '26)",
   'Sprint RSP1': "Q3 FY26 (Jan-Mar '26)", 'Sprint RSP2': "Q3 FY26 (Jan-Mar '26)",
   'Sprint RSP3': "Q3 FY26 (Jan-Mar '26)", 'Sprint RSP4': "Q3 FY26 (Jan-Mar '26)", 'Sprint RSP5': "Q1 FY27 (Apr '26+)",
+  'Sprint RSP6': "Q1 FY27 (Apr '26+)", 'Sprint RSP7': "Q1 FY27 (Apr '26+)",
 };
 
 export const QUARTER_ORDER = [
@@ -61,7 +65,7 @@ export const QUARTER_ORDER = [
 
 export const MONTH_ORDER = [
   "Jul '25", "Aug '25", "Sep '25", "Oct '25", "Nov '25", "Dec '25",
-  "Jan '26", "Feb '26", "Mar '26", "Apr '26",
+  "Jan '26", "Feb '26", "Mar '26", "Apr '26", "May '26",
 ];
 
 // Pre-coded nps_reason_primary → theme mapping
@@ -142,7 +146,7 @@ export const TENURE_CUT_ORDER = ['Early (1-2 mo)', 'Mid (3-6 mo)', 'Long (6+ mo)
 
 // Column name aliases for flexible CSV header matching
 export const COLUMN_ALIASES = {
-  score: ['score', 'nps_score', 'nps', 'rating', 'nps_rating'],
+  score: ['score', 'nps_score', 'nps', 'rating', 'nps_rating', 'user_rating'],
   feedback: ['feedback', 'open_text', 'comment', 'comments', 'verbatim', 'text', 'response', 'open_ended', 'why', 'oe'],
   respondent_id: ['respondent_id', 'id', 'user_id', 'customer_id', 'phone', 'mobile', 'phone number'],
   nps_reason_primary: ['nps_reason_primary', 'nps reason - primary', 'primary_reason', 'reason'],
@@ -150,9 +154,9 @@ export const COLUMN_ALIASES = {
   plan_type: ['plan_type', 'plan', 'segment', 'product'],
   city: ['city', 'location', 'geography', 'region'],
   tenure_days: ['tenure_days', 'tenure', 'days_since_activation'],
-  source: ['source', 'channel', 'acquisition_source'],
+  source: ['source', 'channel', 'survey_channel', 'acquisition_source'],
   sprint_id: ['sprint_id', 'sprint', 'cycle'],
   sprint_start: ['sprint_start', 'date', 'timestamp', 'created_at', 'response_date'],
   tenure_cut: ['tenure_cut', 'tenure_bucket', 'tenure_segment'],
-  first_time_user: ['first_time_user', 'first time user?', 'first_time', 'new_to_wifi'],
+  first_time_user: ['first_time_user', 'is_first_time_user', 'first time user?', 'first_time', 'new_to_wifi'],
 };

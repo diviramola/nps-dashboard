@@ -80,6 +80,8 @@ export const REASON_TO_THEME = {
   'Affordable': 'pricing_value',
   'Expensive': 'pricing_value',
   '28-Day Plan Issue': 'pricing_value',
+  'Flexibility': 'pricing_value',
+  'FLEXIBILITY': 'pricing_value',
   'No/Late Complaint Resolution': 'customer_support',
   'Fast Complaint Resolution': 'customer_support',
   'Bad Customer Support - Call Centre': 'customer_support',
